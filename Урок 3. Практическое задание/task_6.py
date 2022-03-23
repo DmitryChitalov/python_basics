@@ -8,3 +8,24 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(x):
+    return x.title()
+
+
+print(int_func('text'))
+
+
+def my_func(x):
+    sp = x.split(' ')
+    all_list = []
+    for i in sp:
+        el = str(i)
+        let = el[:1].upper()
+        word = let + el[1:]
+        all_list.append(word)
+    return all_list
+
+
+print(my_func('march april'))
