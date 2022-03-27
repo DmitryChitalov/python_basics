@@ -18,3 +18,25 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+"""ФИО Суслин Александр"""
+
+proceeds = int(input("Enter business proceeds: "))
+costs = int(input("Enter business costs: "))
+
+if 0 >= proceeds or 0 >= costs:
+    print("Invalid proceeds or costs value.")
+    exit()
+
+if proceeds > costs:
+    print("Successful business.")
+    print(f"Profitability: {(proceeds - costs) / proceeds}")
+    employees_number = int(input("How many employees? "))
+    if 0 >= employees_number:
+        print(f"Invalid employess number: {employees_number}")
+        exit()
+
+    print(f"Profit per employee: {(proceeds - costs) / employees_number}")
+
+else:
+    print("Unprofitable business.")
