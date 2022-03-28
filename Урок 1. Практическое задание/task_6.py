@@ -19,3 +19,16 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+a = int(input("Введите начальный пробег спортсмена (км/день): "))
+b = int(input("Введите желаемый пробег спортсмена (км/день): "))
+
+cur_res = a
+daycount = 1
+
+while cur_res < b:
+    print("{}-й день: {:.2f}".format(daycount, cur_res))
+    daycount += 1
+    cur_res = cur_res * 1.1
+
+print("{}-й день: {:.2f}".format(daycount, cur_res))
+print(f"На {daycount}-й день спортсмен достиг результата - не менее {b} км")
