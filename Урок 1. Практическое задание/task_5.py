@@ -18,3 +18,19 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+revenue = int(input("Введите выручку фирмы: "))
+cost = int(input(" Введите издержки фирмы: "))
+script = 0
+if revenue > cost:
+    print(f"Финансовый реультат - прибыль. ЕЕ величина: {int(revenue) - int(cost)}")
+    script = 1  # для расчета выручки на сотрудника
+elif int(revenue) < int(cost):
+    print(f"Финансовый реультат - убыток. ЕЕ величина: {int(revenue) - int(cost)}")
+else:
+    print("НА плову")
+profitability = int(revenue) / int(cost)
+print(f"Рентабельность выручки = {round(profitability, 2)}")
+staff = int(input("Введите численность сотрудников фирмы: "))
+if script >= 1:
+    print(f"Прибыль фирмы в расчете на одного сотрудника = {round((int(revenue) - int(cost)) / int(staff), 2)}")
+else: print("Не работаем")
