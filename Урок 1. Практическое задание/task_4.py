@@ -19,4 +19,4 @@ else:
         last = n % 10
         if last >= max: max = last
         n = n // 10
-print("Самая большая цифра в числе: ", max)
+print(f"Самая большая цифра в числе: {max}")
