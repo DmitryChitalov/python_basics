@@ -18,3 +18,13 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+vyruchka = int(input("Введите выручку фирмы: "))
+izderzhki = int(input("Введите издержки фирмы: "))
+if vyruchka > izderzhki:
+    finrez = vyruchka - izderzhki
+    print("Финансовый результат - прибыль. Её величина: ", finrez)
+    print("Рентабельность выручки = ", finrez / vyruchka)
+    workers = int(input("Введите численность сотрудников фирмы: "))
+    print("Прибыль фирмы в расчете на одного сотрудника = ", (finrez) / workers)
+else:
+    print("Финансовый результат фирмы - убыток. Её величина: ", vyruchka - izderzhki)
