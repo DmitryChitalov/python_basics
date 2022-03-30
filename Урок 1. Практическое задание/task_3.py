@@ -8,3 +8,14 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+number = int(input("Введите число: "))
+
+s = str(number)
+
+number2 = s + s
+number3 = s + s + s
+
+sum = number + int(number2) + int(number3)
+
+print(f"Сумма чисел: ", sum)
