@@ -18,3 +18,16 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+income = float(input('Введите выручку компании: '))
+costs = float(input('Введите издержки компании: '))
+revenue = income - costs
+rent = revenue / income
+
+if income > costs:
+    print(f"У компании есть прибыль - {revenue}")
+    print(f'Рентабильность выручки - {rent}')
+    staff = int(input('Введите численность штата: '))
+    print(f'Прибыль на одного сотрудника - {revenue / staff}')
+else:
+    print("Компания терпит убытки")
