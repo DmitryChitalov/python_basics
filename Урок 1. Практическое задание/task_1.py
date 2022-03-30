@@ -11,3 +11,14 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+
+
+age = 31
+name = 'Maxim'
+
+print('Hi my name is', name, 'and my age is', age)
+
+user_name = input('What is your name? ')
+user_age = int(input('Your age? '))
+
+print(f'Hello, {user_name}! your age is {user_age}.')
