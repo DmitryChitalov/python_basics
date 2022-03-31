@@ -8,3 +8,10 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+n = int(input("Введите целое положительное число n:"))
+x=n
+y=n*n
+z=n*n*n
+result = x + y +z
+print("сумму чисел n + nn + nnn:", result)
+
