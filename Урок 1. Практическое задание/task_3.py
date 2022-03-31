@@ -16,6 +16,6 @@ s = str(number)
 number2 = s + s
 number3 = s + s + s
 
-sum = number + int(number2) + int(number3)
+sum0 = number + int(number2) + int(number3)
 
-print(f"Сумма чисел: ", sum)
+print(f"Сумма чисел: ", sum0)
