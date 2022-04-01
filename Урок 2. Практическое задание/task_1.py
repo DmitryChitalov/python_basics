@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+li = [23, "23", [1], (2, 3), {3}, {5: 2}, bool(5), bytes(7), bytearray(7), None]
+for el in li:
+    print(el, type(el))
