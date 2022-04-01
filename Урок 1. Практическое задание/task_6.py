@@ -19,3 +19,23 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+input_start_result = input("Please, input start value: ")
+input_current_result = input("Please, input current result: ")
+if str.isdigit(input_start_result) & str.isdigit(input_current_result):
+    start_result = int(input_start_result)
+    current_result = int(input_current_result)
+    iterator = 0
+    progress_ratio = 0.1
+    day_result = start_result
+
+    while(day_result < current_result):
+        print(f"Day {iterator + 1}: {day_result}")
+        day_result = day_result + day_result * progress_ratio
+        iterator += 1
+    
+    print(f"On day {iterator + 1} the athlete reached the result of {current_result} km")
+else:
+    print("Error: start and current result not is integer value")
+
+input()

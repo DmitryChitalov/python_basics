@@ -18,3 +18,23 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+input_revenue = input("Please, input revenue: ")
+input_cost = input("Please, input cost: ")
+if str.isdigit(input_revenue) & str.isdigit(input_cost):
+    revenue = int(input_revenue)
+    cost = int(input_cost)
+    financial_result = revenue - cost
+    if (financial_result > 0):
+        efficiency = financial_result / revenue
+        print(f"Your work is profitable, efficiency: {efficiency}")
+
+        input_personal_count = input("Please, input personal count: ")
+        if str.isdigit(input_personal_count):
+            personal_count = int(input_personal_count)
+            financial_result_for_person = financial_result / personal_count
+            print(f"Revenue for one person: {financial_result_for_person}")
+    else:
+        print("Your work is unprofitable")
+else:
+    print("Error: revenue and cost is not a int value.")
