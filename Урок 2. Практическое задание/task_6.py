@@ -27,6 +27,7 @@
 """
 cont = input("Начать работу (Да/Нет): ")
 list = []
+k1 = []
 while cont == "Да":
     e = input("Введите номер товара: ")
     a = input("Введите название товара: ")
@@ -36,5 +37,16 @@ while cont == "Да":
     list1 = {'название': a, 'цена': b, 'кол-во товара': c, 'единицы': d}
     list.append((e, list1))
     cont = input("Продолжить (Да/Нет): ")
+names = []
+prices = []
+counts = []
+measures = []
 for i in list:
-
+    names.append(i[1].get('название'))
+    prices.append(i[1].get('цена'))
+    counts.append(i[1].get('кол-во товара'))
+    measures.append(i[1].get('единицы'))
+print(f'"название" {names}')
+print(f'"цена" {prices}')
+print(f'"кол-во товара" {counts}')
+print(f'"единицы" {measures}')
