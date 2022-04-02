@@ -15,3 +15,16 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+a = 7
+b = "Пушной зверек"
+c = 3.14
+d = True
+e = None
+f = ['p', '5']
+g = ('r', '3')
+h = {'m1': 'снег', 'm1': 'дождь'}
+
+k = [a, b, c, d, e, f, g, h]
+for i in k:
+    print(f'{i} это {type(i)}')
