@@ -14,3 +14,11 @@
 1. раз
 2. перерефриж
 """
+
+string = input("Enter string: ")
+string_list = string.split()
+count = 1
+
+for it in string_list:
+    print(f"{count}. {it[0:10]}")
+    count += 1

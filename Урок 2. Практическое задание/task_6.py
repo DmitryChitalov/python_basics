@@ -25,3 +25,42 @@
 “ед”: [“шт.”]
 }
 """
+
+items = list(tuple())
+count = 1
+
+while True:
+    name = input("Enter item name: ")
+    cost = int(input("Enter item cost: "))
+    amount = int(input("Enter item amount: "))
+    unit = input("Enter item unit: ")
+
+    items.append((name, cost, amount, unit))
+    print(f"Entered item: {count}, name: {items[count - 1][0]},\
+cost: {items[count - 1][1]}, amount: {items[count - 1][2]},\
+unit: {items[count - 1][3]}")   #Как правильно выполнить перенос?
+    key = input("Enter new item? (y/n) ")
+    if "y" == key:
+        continue
+    elif "n" == key:
+        break
+    else:
+        print(f"Undefined action: {key}")
+        exit()
+
+dict1 = {"name": str(), "cost": str(), "amount": str(), "unit": str()}
+for it in items:
+    dict1["name"] += it[0]
+    dict1["cost"] += str(it[1])
+    dict1["amount"] += str(it[2])
+    dict1["unit"] += it[3]
+
+    dict1["name"] += " "
+    dict1["cost"] += " "
+    dict1["amount"] += " "
+    dict1["unit"] += " "    #Форматирование не верное.
+
+print(dict1)
+
+
+
