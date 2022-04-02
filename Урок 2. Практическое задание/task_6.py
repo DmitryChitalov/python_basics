@@ -25,3 +25,29 @@
 “ед”: [“шт.”]
 }
 """
+
+goods = []
+fs = {'Название': '', 'Цена': '', 'Количество': '', 'Единицы': ''}
+a = {'Название': [], 'Цена': [], 'Количество': [], 'Единицы': []}
+
+count = 0
+fx = None
+control = None
+
+print("Для ввода товара нажмите 'I', для анализа нажмите 'A', для выхода нажмите 'Q'")
+while True:
+    control = input("Ваш выбор? ").upper()
+    if control == 'Q':
+        break
+    count += 1
+    if control == 'I':
+        for f in fs.keys():
+            fx = input(f'Введите "{f}": ')
+            fs[f] = int(fx) if (f == 'price' or f == 'quantity') else fx
+            a[f].append(fs[f])
+        goods.append((count, fs))
+    if control == 'A':
+        print(f'\n                      Текущий анализ \n{"=" * 60}')
+        for key, value in a.items():
+            print(f'{key[:25]:>10}: {value}')
+            print("-" * 60)
