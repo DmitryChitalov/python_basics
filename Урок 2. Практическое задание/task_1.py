@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+s = [154, 'слово', -0.5, False, None, [4, 5, 6], ('one', 'two', 'three'), {'k1': 'kkk', 'k2': 'nnn'}]
+for el in s:
+    print(type(el))

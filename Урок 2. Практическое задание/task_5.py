@@ -15,3 +15,15 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+l = [7, 5, 3, 3, 2]
+print("Существующий рейтинг:", *l)
+k = None
+# for i in range(len(l)):
+while True:
+    k = input("Введите число (exit - завершить): ")
+    if str(k) == "exit":
+        break
+    l.append(int(k))
+    l.sort(reverse=True)
+    print("Обновлённый рейтинг:", *l)
