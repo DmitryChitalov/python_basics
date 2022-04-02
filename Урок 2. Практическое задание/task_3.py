@@ -8,3 +8,9 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+my_number = input("Enter number : ")
+my_list = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+my_dict = {'1': 'jan', '2': 'feb', '3': 'mar', '4': 'apr', '5': 'may', '6': 'jun', '7': 'jul', '8': 'aug', '9': 'sep',
+           '10': 'oct', '11': 'nov', '12': 'dec'}
+print(f"Результат через список : {my_list[int(my_number) - 1]}")
+print(f"Результат через словарь : {my_dict.get(my_number)}")

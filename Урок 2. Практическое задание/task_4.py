@@ -14,3 +14,6 @@
 1. раз
 2. перерефриж
 """
+my_list = list(map(str, (input("Введите слова через пробел: ").split())))
+for my_item, my_value in enumerate(my_list):
+    print(my_item, my_value[:10:])
