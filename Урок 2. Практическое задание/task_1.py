@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+array_elements = [1, "2", 0.14, [1, 2], (1, 2), {1, 4}, False, None]
+for elem in array_elements:
+    print(f"{elem} is {type(elem)}")

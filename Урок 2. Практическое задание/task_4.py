@@ -14,3 +14,9 @@
 1. раз
 2. перерефриж
 """
+
+input_string = input("Please, input your words with delimiter as space: ")
+input_array = input_string.split(" ")
+
+for ndx, el in enumerate(input_array):
+    print(f"{ndx + 1}. {el if len(el) <= 10 else el[:10]}")

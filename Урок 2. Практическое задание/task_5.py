@@ -15,3 +15,28 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+rate = []
+try:
+    while True:
+        rate.append(int(input("Input your rate number or any string for stop: ")))
+except:
+    rate.sort(reverse=True)
+    print(f"Base rate is {rate}")
+    
+    try:
+        while True:
+            user_rate = int(input("Input your rate number or any string for stop: "))
+            if len(rate) == 0:
+                rate.append(user_rate)
+            else:
+                index = 0
+                while user_rate <= rate[index] and index < len(rate) - 1:
+                    index += 1
+                
+                print(f"Add rate in index {index}")
+                rate.insert(index, user_rate)
+
+            print(f"Updated rate is {rate}")
+    except:
+        print(f"Total rate is {rate}")
