@@ -25,3 +25,61 @@
 “ед”: [“шт.”]
 }
 """
+
+car_list = []
+try:
+    index = 1
+    while True:
+        print("Enter a car data or input \"Continue\" for continue work program")
+
+        brand = input("Please, input car brand name - ")
+        if brand == "Continue":
+            break
+
+        model = input("Please, input car model name - ")
+        if model == "Continue":
+            break
+
+        price = int(input("Please, input car price - "))
+        count = int(input("Please, input count cars - "))
+
+        engine = input("Please, input engine type - ")
+        if engine == "Continue":
+            break
+
+        car_list.append((index, {
+            "brand": brand, 
+            "model": model, 
+            "price": price, 
+            "count": count, 
+            "engine": engine}
+            )
+        )
+        print()
+        index += 1
+except:
+    pass
+finally:
+    print("Base data: ")
+    for car in car_list:
+        print(car)
+
+    result = {
+        "brand": [],
+        "model": [],
+        "price": [],
+        "count": [],
+        "engine": []
+    }
+
+    for car in car_list:
+        for key in car[1]:
+            result[key].insert(0, car[1][key])
+
+
+    print("Result:")
+    print("{")
+    for key in result:
+        print(f"  {key}: {list(set(result[key]))},")
+
+    print("}")
