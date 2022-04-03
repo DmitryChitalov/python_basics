@@ -25,3 +25,45 @@
 “ед”: [“шт.”]
 }
 """
+from typing import List, Tuple, Dict, Any
+
+# Формируем список для примера, чтобы много не набирать
+begin_list: list[tuple[int, dict[Any, Any]]] = [
+    (1, {"название": "компьютер", "цена": 20000, "количество": 5, "eд": "шт."}),
+    (2, {"название": "принтер", "цена": 6000, "количество": 2, "eд": "шт."}),
+    (3, {"название": "сканер", "цена": 2000, "количество": 7, "eд": "шт."}),
+    (4, {"название": "плоттер", "цена": 1000, "количество": 3, "eд": "шт."})]
+
+# Переменная need_add показывает, надо ли вводить следующий элемент
+need_add = "Да"
+
+# Переменная для определения начального шага счетчика элементов
+begin_count = len(begin_list)
+
+while need_add != "Нет":
+    begin_count += 1
+    name = input("Введите название: ")
+    price = int(input("Введите цену:"))
+    total = int(input("Введите количество:"))
+    count_type = input("Введите наименование единиц (шт.): ")
+    begin_list.append((begin_count, {"название": name, "цена": price, "количество": total, "eд": count_type}))
+    need_add = input("Хотите добавить следующий товар? (Да/Нет):")
+
+# Формируем словарь для аналитики. В качестве ключей используем список значений
+# из первой строки оригинальной таблицы значения оставляем пустыми списками.
+print("")
+list_item = begin_list[0]
+intro_dict = {}
+
+for ckey in list_item[1].keys():
+    intro_dict[ckey] = []
+
+# Формируем отчетность. Если элемент в списке уже есть, он не добавляется. Ввод регистроЗАВИСИМЫЙ!
+for list_item in begin_list:
+    for dict_item in intro_dict:
+        if intro_dict[dict_item].count(list_item[1][dict_item]) == 0:
+            intro_dict[dict_item].append(list_item[1][dict_item])
+
+# Печатаем отчетность построчно
+for tmp_dict_row in intro_dict.items():
+    print(tmp_dict_row)
