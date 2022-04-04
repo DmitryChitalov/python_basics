@@ -5,3 +5,39 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+def my_func_no_sort(a, b, c):
+    """
+    Функция, принимающая три аргумента и возвращающая сумму наибольших двух из них.
+    Сортировка не используется
+    :param a: Первый аргумент
+    :param b: Второй аргумент
+    :param c: Третий аргумент
+    :return: Сумма наибольших аргументов
+    """
+    min_value = min(a, b, c)
+    return (a + b + c) - min_value
+
+
+def my_func_sort(a, b, c):
+    """
+    Функция, принимающая три аргумента и возвращающая сумму наибольших двух из них.
+    Сортировка используется.
+    :param a: Первый аргумент
+    :param b: Второй аргумент
+    :param c: Третий аргумент
+    :return: Сумма наибольших аргументов
+    """
+    my_list = [a, b, c]
+    my_list.sort()
+    return (my_list[1] + my_list[2])
+
+
+print(my_func_no_sort(1, 2, 3))
+print(my_func_sort(1, 2, 3))
+
+print(my_func_sort(1, 1, 2))
+print(my_func_no_sort(1, 1, 2))
+
+print(my_func_sort(4, 4, 4))
+print(my_func_no_sort(4, 4, 4))
