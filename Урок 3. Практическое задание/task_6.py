@@ -8,3 +8,41 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+def int_func(my_word):
+    """
+    Функция принимает слово из маленьких латинских букв и возвращает его же, но с прописной первой буквой.
+    В функции применяется проверка на состав слова из маленьких латинских букв. Если слово не соответствует
+    критерию функция возвращает слово "Ошибка"
+    :param my_word: Вводимое слово
+    :return:
+    """
+    res_word = ""
+
+    if only_letters(my_word):
+        res_word = my_word.capitalize()
+    else:
+        res_word = "Ошибка."
+
+    return res_word
+
+
+def only_letters(tested_string):
+    """
+    Проверка на состав строки без регулярных выражений. Должны быть только строчные английские символы.
+    :param tested_string: Вводимая строка
+    :return: Выводится True, если строка соответствует условию задачи. Иначе False
+    """
+    for letter in tested_string:
+        if letter not in "abcdefghijklmnopqrstuvwxyz":
+            return False
+    return True
+
+
+my_string = input("Введите строку из слов строчного латинского алфавита с пробелами: ")
+new_string = ""
+
+for cur_word in my_string.split(" "):
+    new_string = new_string + " " + int_func(cur_word)
+
+print(new_string)
