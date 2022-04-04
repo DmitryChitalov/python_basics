@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+my_list = ['Text', 39, 39.9, True, None, ['Obi', 'Yoda', 'Wader'], {'Hulk', 'Stark', 'Tor'}, ('BlackWidow', 'HawkEye')]
+for my_list in my_list:
+    print(f'{my_list} - {type(my_list)}')
