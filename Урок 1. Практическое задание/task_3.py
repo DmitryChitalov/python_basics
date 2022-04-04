@@ -9,5 +9,5 @@
 n + nn + nnn = 369
 """
 digit = int(input("Type your N digit:"))
-solu = digit + digit * 22 + digit * 333
+solu = digit + digit * 11 + digit * 111
 print(f'n + nn + nnn = {solu}')
