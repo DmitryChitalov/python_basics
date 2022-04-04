@@ -12,9 +12,9 @@
 Результат: 2 1 3
 """
 
-lis = list(input("Введите элементы списка (без пробела): "))
-r = 0
-for el in range(int(len(lis) / 2)):
-    lis[r], lis[r + 1] = lis[r + 1], lis[r]
-    r += 2
+lis = input("Введите элементы списка: ").split()
+
+for i in range(0, len(lis)-1, 2):
+    lis[i], lis[i+1] = lis[i+1], lis[i]
+
 print(lis)
