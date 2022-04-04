@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+# функция выводит результат деления двух чисел
+def delenie_chisel(a, b):
+    try:
+        print(f"Результат деления {a} на {b} = {a / b}")
+    except ZeroDivisionError:
+        print("Деление на ноль!")
+
+
+a = int(input("Введите 1 число: "))
+b = int(input("Введите 2 число: "))
+delenie_chisel(a, b)
