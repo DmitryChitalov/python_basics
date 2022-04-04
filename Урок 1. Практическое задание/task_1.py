@@ -11,3 +11,14 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+
+print("Ваша фамилия: ")
+surname = str(input())
+
+print("Ваше имя: ")
+name = str(input())
+
+print("Ваше отчество: ")
+second_name = str(input())
+
+print("Ваше полное имя: {} {} {}" .format(surname, name, second_name))
