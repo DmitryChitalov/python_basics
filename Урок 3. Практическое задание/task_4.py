@@ -5,3 +5,56 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def my_pov(my_value, my_degree):
+    """
+    Функция принимает действительное положительное число и целое отрицательное число. Выполняет возведение
+    первого аргумента в степень второго аргумента. Вариант через умножение
+    :param my_value: Действительное положительное число
+    :param my_degree: Целое отрицательное число
+    :return: Результат возведения в степень
+    """
+    def check_condition(my_value, my_degree):
+        """
+        Функция проверки введенных значений на соответствие условиям задачи. Возвращает True или False
+        :param my_value: Действительное положительное число
+        :param my_degree: Целое отрицательное число
+        :return:
+        """
+        is_correct = False
+
+        if(my_value > 0 and my_degree < 0):
+            is_correct = True
+
+        return is_correct
+
+    res = None
+    if check_condition(my_value, my_degree):
+        iter_count = -my_degree
+        i = 1
+        res = my_value
+        while i < iter_count:
+            res = res * my_value
+            i += 1
+
+        res = 1/res
+    else:
+        res = "Предоставленные числа не удовлетворяют условиям задачи."
+
+    return res
+
+
+# Проверка
+a = 2
+b = -2
+
+print(f"Результат: {my_pov(a, b)}")
+
+a = 2.22
+b = -2
+
+print(f"Результат: {my_pov(a, b)}")
+
+a = 2.22
+b = 2
+
+print(f"Результат: {my_pov(a, b)}")
