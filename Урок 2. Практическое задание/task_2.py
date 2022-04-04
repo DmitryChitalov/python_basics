@@ -11,3 +11,8 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+user_list = list(input('Введите значение списка БЕЗ ПРОБЕЛОВ: '))
+for i in range(1, len(user_list), 2):
+    user_list[i - 1], user_list[i] = user_list[i], user_list[i - 1]
+print(user_list)

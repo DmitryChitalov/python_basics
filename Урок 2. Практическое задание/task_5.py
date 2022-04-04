@@ -15,3 +15,17 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+
+my_list = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 0]
+
+user_number = float(input('Введите число от 0 до 100: '))
+i = 0
+for n in my_list:
+    if user_number <= n:
+        i += 1
+    else:
+        break
+
+my_list.insert(i, user_number)
+print(my_list)
