@@ -5,27 +5,42 @@ Created on Fri Apr  1 03:28:04 2022
 @author: z2- soft developer
 """
 
-# Task6
+# Task 6
 
-goods = []
-count = 1
-name = "name"
-goods_name = ""
-price = "price"
-goods_price = ""
-quantity = "quantity"
-goods_quantity = ""
-units = "units"
-goods_units = "pieces"
-analysis = []
+product_structure = {
+    "Name": str,
+    "Price": int,
+    "Quantity": int,
+    "Units": str,
+}
 
-for i in range(3):
-    goods_name = input("What is it the name of the good which you're interested in?\n")
-    goods_price = input("What price of a good does it available for you?\n")
-    goods_quantity = input("How many pieces d\'you want to buy?\n")
+product_list = []
+product_counter = 1
 
-    goods.append([(count, {name: goods_name, price: goods_price, quantity: goods_quantity, units: goods_units})])
+while True:
+    decision = input(f"Goods = {len(product_list)}, will it be added? [y/n] ").lower()
 
-    count += 1
+    if decision == 'n':
+        break
+    else:
+        product_info = {}
 
-print(goods)
+        for pr_name, pr_type in product_structure.items():
+            user_input = input(f"Fill the field '{pr_name}': ")
+            product_info[pr_name] = pr_type(user_input)
+
+        product_list.append((product_counter, product_info))
+        product_counter += 1
+print(product_list)
+product_analysis = {}
+
+for analysis_key in product_structure.keys():
+    item_list = []
+
+    for product in product_list:
+        item_list.append(product[1][analysis_key])
+
+    product_analysis[analysis_key] = item_list
+
+print(product_analysis)
+
