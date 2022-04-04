@@ -7,7 +7,7 @@ Created on Fri Apr  1 02:48:31 2022
 
 # Task1
 
-myList = [55, "sky", 22.55, b's']
+my_list = [55, "sky", 22.55, b's']
 
-for myList in myList:
-    print(type(myList))
+for my_list in my_list:
+    print(type(my_list))

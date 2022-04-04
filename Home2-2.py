@@ -7,20 +7,10 @@ Created on Fri Apr  1 02:51:16 2022
 
 # Task2
 
-myList = [55, "sky", 22.55, b's']
-
-a = myList[0]
-b = myList[1]
-c = myList[2]
-d = myList[3]
-a, b = b, a
-c, d = d, c
-print(a, b, c, d)
-
-myList = [55, "sky", 22.55, b's', 1, 10, "problem"]
-m = len(myList) - 1
+my_list = [55, "sky", 22.55, b's', 1, 10, "problem"]
+m = len(my_list) - 1
 
 for i in range(0, m, 2):
     next_i = i + 1
-    myList[i], myList[next_i] = myList[next_i], myList[i]
-print(myList)
+    my_list[i], my_list[next_i] = my_list[next_i], my_list[i]
+print(my_list)
