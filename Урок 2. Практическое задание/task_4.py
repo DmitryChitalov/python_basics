@@ -14,3 +14,10 @@
 1. раз
 2. перерефриж
 """
+
+st = str(input("Введите строку из нескольких слов: "))
+st = st.split()
+
+print(st)
+for i, st in enumerate(st):
+    print(i + 1, ".)", st[0:10])
