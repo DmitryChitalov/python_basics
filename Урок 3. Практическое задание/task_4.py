@@ -7,15 +7,18 @@
 """
 
 
-# рекурсивная фунцкция возведения x в степень -y
-def stepen(x, y):
-    if y != 0:
-        return 1 / x * stepen(x, abs(y) - 1)
-    else:
-        return 1
+# рекурсивная фунцкция возведения a в степень -b
+def exponent_by_recur(a, b):
+    try:
+        if b != 0:
+            return 1 / a * exponent_by_recur(a, abs(b) - 1)
+        else:
+            return 1
+    except ZeroDivisionError:
+        print("Деление на 0!")
 
 
-x = float(input("Введите действительное положительное число: "))
+x = abs(float(input("Введите действительное положительное число: ")))
 y = int(input("Введите целое отрицательное число: "))
-z = stepen(x, y)
+z = exponent_by_recur(x, y)
 print(f"{x} в степени {y} = {z}")
