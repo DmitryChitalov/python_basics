@@ -5,3 +5,19 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    x1 = 1
+    y = abs(y)
+    my_number = 0
+    if y != 0:
+        while my_number != y:
+            x1 = x1 * x
+            my_number = my_number + 1
+        return x1
+    else:
+        return x
+
+
+print(round(my_func(float(input("Введите число возводимое в степень:")), int(input("Введите степень : "))), 4))

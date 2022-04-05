@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def my_func(my_var1, my_var2):
+    return my_var1 / my_var2
+
+
+my_input1 = int(input("Введите первое число: "))
+my_input2 = int(input("Введите второе число : "))
+if my_input2 == 0:
+    print(f"Вы что? Пытаетесь делить на 0!")
+else:
+    print(f"Результат деления : {round(my_func(my_input1, my_input2), 2)}")
