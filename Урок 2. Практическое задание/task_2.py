@@ -11,3 +11,15 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+len_lists = int(input('Type your changed digitals: '))
+list = []
+for i in range(1, len_lists + 1):
+    list.append(i)
+print('old =', list)
+
+for i in range(0, len(list), 2):
+    if i + 1 != len(list):
+        list[i], list[i + 1] = list[i + 1], list[i]
+print('new =', list)
+
