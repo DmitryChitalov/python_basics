@@ -17,3 +17,21 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def ch(s_1, s_2):
+    return s_1 / s_2
+
+
+s_1 = input("Введите первое число: ")
+s_2 = input("Введите второе число: ")
+
+try:
+    s_1 = int(s_1)
+    s_2 = int(s_2)
+    res = s_1 / s_2
+except ValueError:
+    print("Вы вводите не числа!")
+except ZeroDivisionError:
+    print("На ноль делить нельзя!")
+else:
+    print("Результат: ", ch(s_1, s_2))

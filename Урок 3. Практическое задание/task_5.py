@@ -6,3 +6,27 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def user_data(*elem):
+    step = 0
+    q = False
+    for el in elem:
+        try:
+            if el:
+                step += float(el)
+        except ValueError:
+            q = True
+    return step, q
+
+
+all_sum = 0
+
+while True:
+    elements = input('Введите числа через пробел: ').split(' ')
+    us_sum, stop = user_data(*elements)
+    all_sum += us_sum
+    print(f'сумма {all_sum}')
+
+    if stop:
+        break
