@@ -12,15 +12,14 @@
 Результат: 2 1 3
 """
 
-a = int(input("Введите количество элементов списка "))
+a = int(input("Введите количество элементов списка: "))
 b = []
 i = 0
 element = 0
 while i < a:
-    b.append(input("Введите значение списка "))
+    b.append(input("Введите значение списка: "))
     i += 1
-
 for elem in range(int(len(b)/2)):
-        b[element], b[element + 1] = b[element + 1], b[element]
-        element += 2
+    b[element], b[element + 1] = b[element + 1], b[element]
+    element += 2
 print(b)

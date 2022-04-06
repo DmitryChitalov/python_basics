@@ -16,19 +16,30 @@
 например, my_list = [7, 5, 3, 3, 2].
 """
 
+#a = [7, 6, 5, 4, 3, 2, 1]
+#print(f"Рейтинг: {a}")
+#b = int(input("Введите число (не больше 1000): "))
+#while b != 000:
+#    for el in range(len(a)):
+#        if a[el] == b:
+#            a.insert(el + 1, b)
+#            break
+#        elif a[0] < b:
+#            a.insert(0, b)
+#        elif a[-1] > b:
+#            a.append(b)
+#        elif a[el] > b and a[el + 1] < b:
+#            a.insert(el + 1, b)
+#    print(f"Новый рейтинг: {a}")
+#    b = int(input("Введите число (не больше 1000): "))
+
 a = [7, 6, 5, 4, 3, 2, 1]
 print(f"Рейтинг: {a}")
-b = int(input("Введите число (не больше 1000): "))
-while b != 000:
-    for el in range(len(a)):
-        if a[el] == b:
-            a.insert(el + 1, b)
-            break
-        elif a[0] < b:
-            a.insert(0, b)
-        elif a[-1] > b:
-            a.append(b)
-        elif a[el] > b and a[el + 1] < b:
-            a.insert(el + 1, b)
-    print(f"Новый рейтинг: {a}")
-    b = int(input("Введите число (не больше 1000): "))
+while True:
+    n = input("Введите число или 'нет' для выхода: ")
+    if n != 'нет':
+        a.append(int(n))
+        a.sort(reverse=True)
+        print(f"Новый рейтинг: {a}")
+    else:
+        break
