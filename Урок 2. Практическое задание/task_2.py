@@ -11,3 +11,22 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+def swap(list, pos1, pos2):
+    list[pos1], list[pos2] = list[pos2], list[pos1]
+    return list
+
+
+mylist = list(map(int, input("Введите целые числа через пробел: ").strip().split()))
+
+thereIsMoreElements = True
+i = 0
+listLen = len(mylist)
+
+while thereIsMoreElements:
+    swap(mylist, i, i + 1)
+    i += 2
+    if i + 1 >= listLen:
+        thereIsMoreElements = False
+
+print(f"Результат: {mylist}")

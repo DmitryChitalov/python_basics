@@ -25,3 +25,42 @@
 “ед”: [“шт.”]
 }
 """
+
+
+tmp = ()
+print(type(tmp))
+
+n = int(input("Введите количество товаров: "))
+Goods = []
+
+for i in range(0, n):
+    tmpDict = {'название': input("Ведите название товара: "), 'цена': int(input("Ведите цену товара: ")),
+               'количество': int(input("Ведите количество товара: ")),
+               'ед.': input("Ведите единицы измерения товара: ")}
+    tmpTuple = (i + 1, tmpDict)
+    Goods.append(tmpTuple)
+
+print(f"\n\n Структара данных:\n{Goods}")
+
+goodsStatistic = {
+    "названия": [],
+    "цены": [],
+    "количества": [],
+    "ед.": []
+}
+
+nameFlag = False
+priceFlag = False
+countFlag = False
+measureFlag = False
+
+for good in Goods:
+    for el in good:
+        if isinstance(el, dict):
+            goodsStatistic["названия"].append(el['название'])
+            goodsStatistic["цены"].append(el['цена'])
+            goodsStatistic["количества"].append(el['количество'])
+            goodsStatistic["ед."].append(el['ед.'])
+
+print(f"\nСтатистика: {goodsStatistic}")
+
