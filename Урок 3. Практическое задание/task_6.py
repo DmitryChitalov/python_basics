@@ -8,3 +8,15 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+def word(word):
+    return word.capitalize()
+
+def line(text):
+    word_list = text.split(' ')
+    for i, el in enumerate(word_list):
+        word_list[i] = word(el)
+    return ' '.join(word_list)
+
+print(word('окно'))
+print(line('верховный суд российской федерации'))

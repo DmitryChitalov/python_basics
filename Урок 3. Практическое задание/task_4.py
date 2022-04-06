@@ -5,3 +5,23 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+def degree(x, y):
+    return x ** y
+print(degree(4, -2))
+
+
+
+def degree1(x1, y1):
+    if y1 >= 0:
+        print(f'Значение переменной должно быть меньше 0, а у вас {y1}!')
+        return None
+    result = 1
+    for i in range(0, y1, -1):
+        result *= x1
+    return 1 / result
+x1 = 4
+y1 = -2
+result = degree1(x1, y1)
+if result:
+    print(f'{x1} в степени {y1} равно {result}')
