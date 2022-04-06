@@ -5,3 +5,20 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+# рекурсивная фунцкция возведения a в степень -b
+def exponent_by_recur(a, b):
+    try:
+        if b != 0:
+            return 1 / a * exponent_by_recur(a, abs(b) - 1)
+        else:
+            return 1
+    except ZeroDivisionError:
+        print("Деление на 0!")
+
+
+x = abs(float(input("Введите действительное положительное число: ")))
+y = int(input("Введите целое отрицательное число: "))
+z = exponent_by_recur(x, y)
+print(f"{x} в степени {y} = {z}")
