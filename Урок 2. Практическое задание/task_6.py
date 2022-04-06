@@ -25,3 +25,30 @@
 “ед”: [“шт.”]
 }
 """
+
+tov = []
+number = 0
+print('Введите строкой название товара, а также его цену, кол. товара и ед. изм. этого товара')
+print('В качестве разделителя используйте символ - запятую')
+print('Цена и кол. товара должны быть целыми числами')
+print('Для завершения нажмите "Enter"')
+while True:
+    number += 1
+    tov_sp = input(f'{number} товар: ').split(',')
+    if tov_sp == ['']:
+        break
+    tov.append((number, {'названия': tov_sp[0],
+                           'цены': int(tov_sp[1]),
+                           'количества': int(tov_sp[2]),
+                           'ед': tov_sp[3]}))
+tov_sl = {}
+for i, el in enumerate(list(tov[0][1].keys())):
+    tov_sl[el] = []
+for i, el in enumerate(tov_sl):
+    sp = []
+    for j, el_tov in enumerate(tov):
+        key_tov = el_tov[1].get(el)
+        if key_tov not in sp:
+            sp.append(key_tov)
+    tov_sl[el] = sp
+print(tov_sl)
