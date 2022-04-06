@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+a = [5, "string", 0.15, True, None] # взяла список из примера
+for el in a:
+    print(el, "-", type(el))
