@@ -21,4 +21,4 @@ name = str(input())
 print("Ваше отчество: ")
 second_name = str(input())
 
-print("Ваше полное имя: {} {} {}" .format(surname, name, second_name))
+print(f"Ваше полное имя: {surname} {name} {second_name}")
