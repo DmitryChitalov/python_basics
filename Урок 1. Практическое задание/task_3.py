@@ -17,4 +17,6 @@ while n % 1 != 0:
     n = float(input())
 
 n = int(n)
-print("{} + {} + {} = {}".format(n, n**2, n**3, n + n**2 + n**3))
+n2 = n*10+n
+n3 = n*100+n*10+n
+print("{} + {} + {} = {}".format(n, n2, n3, n + n2 + n3))
