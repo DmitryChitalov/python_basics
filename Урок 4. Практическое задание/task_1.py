@@ -6,3 +6,26 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+
+file, user, salary_per_hour, total_hours, prize = argv
+
+
+def salary_count():
+    """
+    Функция принимает параметны, переданные скрипту:
+    user - Имя работника
+    salary_per_hour - часовая ставка
+    total_hours - отработано часов
+    prize - премия (в процентах)
+    :return: Возвращает общую сумму.
+    """
+
+    return (int(salary_per_hour) * int(total_hours)) + ((int(salary_per_hour) * int(total_hours)) / 100) * int(prize)
+
+
+print(f"Сотрудник {user} заработал {salary_count()} денег.")
+
+# Параметры в конфигурации: "User 01" 100 160 10
