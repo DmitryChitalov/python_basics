@@ -9,20 +9,30 @@
 Результат через словарь: Осень
 """
 
-if month in winterList:
+month_num = int(input("Введите номрер месяца: "))
+
+# Первый вариант решения с использованием List
+
+winter_list = [1, 2, 12]
+spring_list = [3, 4, 5]
+summer_list = [6, 7, 8]
+autumn_list = [9, 10, 11]
+
+if month_num in winter_list:
     print("Результат через список: зимний")
-elif month in springList:
+elif month_num in spring_list:
     print("Результат через список: весенний")
-elif month in summerList:
+elif month_num in summer_list:
     print("Результат через список: летний")
-elif month in autumnList:
+elif month_num in autumn_list:
     print("Результат через список: осенний")
 
 # Второй вариант решения с использованием Dict
 
-year = {1: "зимний", 2: "зимний", 12: "зимний",
+year_dict = {1: "зимний", 2: "зимний", 12: "зимний",
         3: "весенний", 4: "весенний", 5: "весенний",
         6: "летний", 7: "летний", 8: "летний",
         9: "осенний", 10: "осенний", 11: "осенний", }
 
-print(f"Результат через словарь: {year[month]}")
+print(f"Результат через словарь: {year_dict[month_num]}")
+

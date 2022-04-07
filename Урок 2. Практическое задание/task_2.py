@@ -12,21 +12,21 @@
 Результат: 2 1 3
 """
 
-def swap(list, pos1, pos2):
-    list[pos1], list[pos2] = list[pos2], list[pos1]
-    return list
+def swap(some_list, pos1, pos2):
+    some_list[pos1], some_list[pos2] = some_list[pos2], some_list[pos1]
+    return some_list
 
 
-mylist = list(map(int, input("Введите целые числа через пробел: ").strip().split()))
+num_list = list(map(int, input("Введите целые числа через пробел: ").strip().split()))
 
-thereIsMoreElements = True
+there_is_more_elements = True
 i = 0
-listLen = len(mylist)
+list_len = len(num_list)
 
-while thereIsMoreElements:
-    swap(mylist, i, i + 1)
+while there_is_more_elements:
+    swap(num_list, i, i + 1)
     i += 2
-    if i + 1 >= listLen:
-        thereIsMoreElements = False
+    if i + 1 >= list_len:
+        there_is_more_elements = False
 
-print(f"Результат: {mylist}")
+print(f"Результат: {num_list}")
