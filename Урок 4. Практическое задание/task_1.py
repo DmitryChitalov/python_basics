@@ -6,3 +6,9 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+script_name, vir_ch, st_ch, prem = argv
+print("Имя скрипта:", script_name)
+print("Расчет заработной платы сотрудника:", (int(vir_ch) * int(st_ch)) + int(prem))
