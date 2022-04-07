@@ -12,3 +12,35 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+
+# Итератор, генерирующий целые числа, начиная с указанного,
+
+def iterator(begin_value, end_value):
+    my_list = []
+    for my_el in count(begin_value):
+        if my_el > end_value:
+            break
+        else:
+            my_list.append(my_el)
+    return my_list
+
+
+print(iterator(3, 10))
+
+# Итератор, повторяющий элементы некоторого списка, определенного заранее.
+my_list = [100, 200, 300]
+
+
+def list_repeater(input_list, repeat_count):
+    с = 0
+    for el in cycle(input_list):
+        if с >= repeat_count * len(input_list):
+            break
+        print(el)
+        с += 1
+
+
+list_repeater(my_list, 3)
