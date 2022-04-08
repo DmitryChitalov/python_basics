@@ -7,3 +7,15 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+old_l = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+new_l = []
+for i in range(1, len(old_l)):
+    if old_l[i] > old_l[i - 1]:
+        new_l.append(old_l[i])
+
+print(new_l)
+
+new_l2 = [old_l[i] for i in range(1, len(old_l)) if old_l[i] > old_l[i - 1]]
+
+print(new_l2)
