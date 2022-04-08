@@ -17,3 +17,11 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def exempl():
+    try:
+        a = float(input("Первое число:"))
+        b = float(input("Второе число:"))
+        return a/b
+    except ZeroDivisionError:
+        print("Ау! Делить на ноль нельзя!")
+print(exempl())
