@@ -1,9 +1,9 @@
-spisok = list(input("введите элементы списка"))
+spisok = list(input("введите элементы списка через пробел").split(' '))
 print(spisok)
 i = 0
-l = 0
-while l < int((len(spisok)/2)):
-    spisok[i], spisok[i+1] = spisok[i+1], spisok[i]
-    l += 1
+l = 1
+while l < int(len(spisok)):
+    spisok[i], spisok[l] = spisok[l], spisok[i]
+    l += 2
     i += 2
 print(spisok)
