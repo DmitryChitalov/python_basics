@@ -8,3 +8,10 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+
+def big_print_func(name, surname, birthyear, city, email, phone_number):
+    print(f"{name} {surname} {birthyear} года рождения, проживает в городе {city}\nemal: {email}, телефон: {phone_number}")
+
+
+big_print_func("Иван", "Иванович", "1846", "Москва", "someemail@mail.com", "88005553535")

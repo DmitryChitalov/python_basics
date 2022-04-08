@@ -17,3 +17,20 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def div_of_two(num1, num2):
+    return num1 / num2
+
+
+param1 = float(input("Введите первое число: "))
+flag = True
+while flag:
+    try:
+        param2 = float(input("Введите второе число: "))
+        if param2 == 0:
+            raise ValueError()
+        print(f"Результат деления: {div_of_two(param1, param2)}")
+        flag = False
+    except Exception:
+        print("делить на ноль нельзя, лол, давай еще раз")
