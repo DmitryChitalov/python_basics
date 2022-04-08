@@ -12,3 +12,23 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+try:
+    y = int(input("Введите целое число < 101: "))
+    for i in count(y):
+        if i == 101:
+            break
+        print(i, end=' ')
+except ValueError:
+    print("Ошибка ввода")
+print("\n")
+
+lst = ['a', 'b', 'c', 'd', 'e', 'f']
+j = 0
+for i in cycle(lst):
+    if j > 21:
+        break
+    print(i, end=' ')
+    j += 1
