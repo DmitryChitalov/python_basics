@@ -11,15 +11,9 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
-
-len_lists = int(input('Type your changed digitals: '))
-list = []
-for i in range(1, len_lists + 1):
-    list.append(i)
-print('old =', list)
-
-for i in range(0, len(list), 2):
-    if i + 1 != len(list):
-        list[i], list[i + 1] = list[i + 1], list[i]
-print('new =', list)
+digit = input('Enter digi: ')
+a = [int(i) for i in digit.split()]
+for i in range(1, len(a), 2):
+    a[i-1], a[i] = a[i], a[i-1]
+print(' '.join([str(i) for i in a]))
 

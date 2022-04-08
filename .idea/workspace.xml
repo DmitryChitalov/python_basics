@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6abb4b95-8cd2-4001-81f3-a712d3e675e0" name="Changes" comment="Make change">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 2. Практическое задание/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 2. Практическое задание/task_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 2. Практическое задание/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 2. Практическое задание/task_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 2. Практическое задание/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 2. Практическое задание/task_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 2. Практическое задание/task_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 2. Практическое задание/task_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 2. Практическое задание/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 2. Практическое задание/task_6.py" afterDir="false" />
-    </list>
+    <list default="true" id="6abb4b95-8cd2-4001-81f3-a712d3e675e0" name="Changes" comment="Make change" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +36,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Python.task_6">
+  <component name="RunManager" selected="Python.task_2">
     <configuration name="python_basics" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -180,11 +173,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.task_2" />
         <item itemvalue="Python.task_6" />
         <item itemvalue="Python.task_5" />
         <item itemvalue="Python.task_4 (1)" />
         <item itemvalue="Python.task_3 (1)" />
-        <item itemvalue="Python.task_2" />
       </list>
     </recent_temporary>
   </component>
