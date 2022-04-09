@@ -6,3 +6,20 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+def my_sum ():
+    sum_res = 0
+    ex = False
+    while ex == False:
+        number = input('Введите цифры или "нет" для выхода: ').split()
+        res = 0
+        for el in range(len(number)):
+            if number[el] == 'нет':
+                ex = True
+                break
+            else:
+                res = res + int(number[el])
+        sum_res = sum_res + res
+        print(f'Текущая сумма: {sum_res}')
+    print(f'Итоговая сумма: {sum_res}')
+my_sum()

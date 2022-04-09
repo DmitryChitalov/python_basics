@@ -5,3 +5,20 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+def sum_max(*args):
+    print(f'Сумма двух наибольших аргументов равна: {sum(sorted(list(args), reverse=True)[:2])}')
+sum_max(
+    int(input('Аргумент 1: ')),
+    int(input('Аргумент 2: ')),
+    int(input('Аргумент 3: ')),
+)
+
+def sum_two(arg1, arg2, arg3):
+    print(f'Сумма двух наибольших аргументов равна: {arg1 + arg2 + arg3 - min([arg1, arg2, arg3])}')
+sum_two(
+    int(input('Аргумент 1: ')),
+    int(input('Аргумент 2: ')),
+    int(input('Аргумент 3: ')),
+)
+
