@@ -5,3 +5,11 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+
+def my_func(a, b, c):
+    print(sum((a, b, c)) - min(a, b, c))
+
+
+my_func(a=int(input('Введите первое число - ')), b=int(input('Введите второе число - ')),
+        c=int(input('Введите третье число - ')))
