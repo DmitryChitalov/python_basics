@@ -8,20 +8,22 @@
 
 def degree(x, y):
     return x ** y
-print(degree(4, -2))
+x = 4
+y = -2
+print(f'{x} в степени {y} равно {degree(x, y)}')
 
 
 
-def degree1(x1, y1):
-    if y1 >= 0:
-        print(f'Значение переменной должно быть меньше 0, а у вас {y1}!')
+def degree1(x, y):
+    if y >= 0:
+        print(f'Значение переменной должно быть меньше 0, а у вас {y}!')
         return None
     result = 1
-    for i in range(0, y1, -1):
-        result *= x1
+    for i in range(0, y, -1):
+        result *= x
     return 1 / result
-x1 = 4
-y1 = -2
-result = degree1(x1, y1)
+#x = 4
+#y = -2
+result = degree1(x, y)
 if result:
-    print(f'{x1} в степени {y1} равно {result}')
+    print(f'{x} в степени {y} равно {result}')

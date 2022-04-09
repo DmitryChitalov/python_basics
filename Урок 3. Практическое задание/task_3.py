@@ -5,26 +5,20 @@
 1) используя функцию sort()
 2) без функции sort()
 """
-def sum_two(a, b, c):
-d = [a, b, c]
-d.sort()
-e = int(d[1])
-f = int(d[2])
-k = e + f
-print(f'Сумма двух наибольших аргументов равна: {k}')
-sum_two(
-    a = input('Аргумент 1: '),
-    b = input('Аргумент 2: '),
-    c = input('Аргумент 3: '),
+
+def sum_max(*args):
+    print(f'Сумма двух наибольших аргументов равна: {sum(sorted(list(args), reverse=True)[:2])}')
+sum_max(
+    int(input('Аргумент 1: ')),
+    int(input('Аргумент 2: ')),
+    int(input('Аргумент 3: ')),
 )
 
-
-
-#def sum_two(arg1, arg2, arg3):
-#    print(f'Сумма двух наибольших аргументов равна: {arg1 + arg2 + arg3 - min([arg1, arg2, arg3])}')
-#sum_two(
-#    int(input('Аргумент 1: ')),
-#    int(input('Аргумент 2: ')),
-#    int(input('Аргумент 3: ')),
-#)
+def sum_two(arg1, arg2, arg3):
+    print(f'Сумма двух наибольших аргументов равна: {arg1 + arg2 + arg3 - min([arg1, arg2, arg3])}')
+sum_two(
+    int(input('Аргумент 1: ')),
+    int(input('Аргумент 2: ')),
+    int(input('Аргумент 3: ')),
+)
 
