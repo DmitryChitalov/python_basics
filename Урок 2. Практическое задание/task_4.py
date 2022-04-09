@@ -16,7 +16,7 @@
 """
 a = input("Введите слова через пробел: ")
 a = a.split()
-for b, c in enumerate(a):
+for b, c in enumerate(a, 1):
     if len(c) > 10:
         c = c[:10]
     print(f"{b} {c}")
