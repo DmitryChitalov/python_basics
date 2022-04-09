@@ -17,3 +17,21 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+import string_extension
+
+def number_division(dividend, divider):
+    try:
+        return dividend / divider
+    except:
+        print("Error: cannot be divided by 0")
+
+
+input_dividend = input("Please, input your dividend: ")
+input_divider = input("Please, input your divider: ")
+if string_extension.is_float(input_dividend) and string_extension.is_float(input_divider):
+    dividend = float(input_dividend)
+    divider = float(input_divider)
+    print(f"Division result: {number_division(dividend, divider)}")
+else:
+    print("Error: your input values is not a number")
