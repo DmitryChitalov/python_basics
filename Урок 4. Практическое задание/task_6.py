@@ -12,3 +12,22 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count
+a = 3
+b = 10
+for i in count(a):
+    if i > b:
+        break
+    print(i)
+
+
+from itertools import cycle
+sp = [5, 3, 3, 1, 0, 4, 2, 4, 7, 3]
+c = 15
+repeat_count = 0
+for i in cycle(sp):
+    print(i)
+    repeat_count += 1
+    if repeat_count > c:
+        break
