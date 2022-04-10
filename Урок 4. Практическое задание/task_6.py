@@ -12,3 +12,28 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import cycle, count
+
+start_point = int(input("Введите стартовое число: "))
+stop_point = start_point * 2 + 10 + 1
+
+# a
+for i in count(start_point):
+    if i < stop_point:
+        print(i)
+    else:
+        break
+del i
+
+
+
+# b
+new_list = [i for i in range(stop_point)]
+n_count = 0
+for b in cycle(new_list):
+    if n_count < stop_point + 10:
+        print(b)
+        n_count += 1
+    else:
+        break

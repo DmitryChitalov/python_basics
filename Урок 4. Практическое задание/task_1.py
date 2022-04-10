@@ -6,3 +6,17 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+
+def salary():
+    try:
+        hour = float(input("Выработка в часах: "))
+        bet = int(input("Ставка за час (у.е.): "))
+        premium = int(input("Премия (у.е.): "))
+        calculation = hour * bet + premium
+        print(f"Заработная плата работника составила: {calculation} у.е.")
+    except ValueError:
+        return print("Вводить нужно только числа!")
+
+
+salary()
