@@ -3,3 +3,13 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+my_file = open("my_file05_01.txt", "w")
+
+my_text = input('Введите строку текста: ')
+my_file.write(f"{my_text}\n")
+
+while my_text != "":
+    my_text = input('Введите строку текста: ')
+    my_file.write(f"{my_text}\n")
+
+my_file.close()
