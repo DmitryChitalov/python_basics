@@ -5,3 +5,15 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+import re
+report = {}
+with open('test.txt', 'r', encoding='UTF-8') as tx:
+    text = tx.read()
+    tx.seek(0)
+    for row in tx:
+        row_items = row.split(': ')
+        hours = re.findall(r"\d+", row_items[1])
+        report.update({row_items[0]: sum([int(i) for i in hours])})
+print(f"Текст файла:\n{text}\n")
+print(f"Словарь:\n{report}")
