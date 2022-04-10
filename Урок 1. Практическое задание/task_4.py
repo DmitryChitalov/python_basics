@@ -10,3 +10,11 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+type = int(input('Enter your Digital:'))
+summary = -1
+while type > 10:
+    divide = type % 10
+    type //= 10
+    if divide > summary:
+        summary = divide
+print(summary)
