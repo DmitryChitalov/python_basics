@@ -12,3 +12,22 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+el = int(input(f'введите число : '))
+my_list = []
+my_end = 10
+for my_el in count(el):
+    if my_el > my_end:
+        break
+    else:
+        my_list.append(my_el)
+print(my_list)
+
+my_list = [1, 2, 3]
+my_ans = []
+for my_ind, my_num in enumerate(cycle(my_list)):
+    my_ans.append(my_num)
+    if my_ind == my_end:
+        break
+print(my_ans)
