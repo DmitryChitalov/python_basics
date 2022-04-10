@@ -9,3 +9,31 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+
+from json import dumps
+
+my_dict_firm_profit = {}
+my_dict_average_profit = {}
+
+with open("my_file05_07.txt", "r", encoding='UTF8') as my_file_for_read:
+    my_positive_profit_firms_count = 0
+    my_total_profit = 0
+
+    for my_row in my_file_for_read:
+        if len(my_row) > 1:
+            my_words = my_row.split(" ")
+            my_profit = int(my_words[2]) - int(my_words[3])
+
+        if my_profit >= 0:
+            my_positive_profit_firms_count += 1
+            my_total_profit += my_profit
+
+        my_dict_firm_profit[my_words[0]] = my_profit
+
+    my_dict_average_profit['average_profit'] = round(my_total_profit / my_positive_profit_firms_count, 2)
+
+my_list = [my_dict_firm_profit, my_dict_average_profit]
+json_string = dumps(my_list)
+
+with open("my_file05_07.json", "w", encoding='UTF8') as my_file_for_write:
+    my_file_for_write.write(json_string)
