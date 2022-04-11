@@ -17,3 +17,22 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def dividing(arg_1, arg_2):
+    """
+    Возвращает деление первого аргумента на второй
+
+    arg_1 - int
+    arg_2 - int
+    return - int
+    """
+    try:
+        return arg_1 / arg_2
+    except ZeroDivisionError:
+        return "Ты делаешь что-то не так!"
+
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+print(dividing(a, b))
