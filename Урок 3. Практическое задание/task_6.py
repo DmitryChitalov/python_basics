@@ -8,3 +8,17 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(small_word):
+    """Возвращает слово с заглавной буквы"""
+    return small_word.title()
+
+
+a = input("Введите слово с маленькой буквы: ")
+print(int_func(small_word=a))
+
+b = input("Введите слова маленькими латинскими буквами через пробел: ")
+my_sentence = b.split()
+for el in my_sentence:
+    print(int_func(small_word=el), end=' ')
