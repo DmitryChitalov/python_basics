@@ -7,8 +7,21 @@
 необходимо запускать скрипт с параметрами.
 """
 
+from sys import argv
 
-def salary():
+f_name, w_time, salary, add_bonus = argv
+try:
+    w_time = int(w_time)
+    salary = int(salary)
+    add_bonus = int(add_bonus)
+    result = w_time * salary + add_bonus
+    print(f"Заработная плата работника составила: {result} у.е.")
+except ValueError:
+    print("Вводить нужно только числа!")
+
+
+######
+def sal():
     try:
         hour = float(input("Выработка в часах: "))
         bet = int(input("Ставка за час (у.е.): "))
@@ -19,4 +32,4 @@ def salary():
         return print("Вводить нужно только числа!")
 
 
-salary()
+sal()

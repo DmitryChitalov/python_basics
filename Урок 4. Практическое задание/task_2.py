@@ -8,7 +8,23 @@
 Реализуйте вариант без и с генераторным выражением
 """
 
+# gen
+print(f"Вариант с генератором")
 my_list = [30, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
 my_new_list = [el for num, el in enumerate(my_list) if my_list[num - 1] < my_list[num]]
 print(f"Исходный список: {my_list}")
 print(f"Новый список: {my_new_list}")
+
+# not gen
+print(f"Вариант без генератора")
+my_acc = [30, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+my_acc_new = []
+
+n = 0
+for el in my_acc:
+    if el > my_acc[n - 1]:
+        my_acc_new.append(el)
+    n += 1
+
+print(f"Исходный список:  {my_acc}")
+print(f"Новый список:  {my_acc_new}")
