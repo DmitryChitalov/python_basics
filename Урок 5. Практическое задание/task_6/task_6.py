@@ -5,3 +5,12 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+my_d = {}
+with open("text6.txt", encoding='utf-8') as text:
+    for el in text:
+        name, stats = el.split(':')
+        name_sum = sum(map(int, ''.join([i for i in stats if i == ' ' or ('0' <= i <= '9')]).split()))
+        my_d[name] = name_sum
+
+    print(f"{my_d}")

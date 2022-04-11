@@ -7,3 +7,16 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+zp = {}
+
+with open("text4.txt", "r", encoding="utf-8") as my_file3:
+    for el in my_file3:
+        zp[el.split()[0]] = float(el.split()[1])
+
+print("Меньше 20000 руб. получают сотрудники: ")
+for name, zarp in zp.items():
+    if zarp < 20000:
+        print(name)
+
+print(f"В среднем сотрудники получают {sum(zp.values()) / len(zp)}")
