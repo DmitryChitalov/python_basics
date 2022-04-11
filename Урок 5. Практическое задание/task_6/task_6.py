@@ -5,3 +5,10 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+sub = {}
+with open('file_0.txt', 'r') as init_f:
+    for line in init_f:
+        subject, lecture, practice, lab = line.split()
+        sub[subject] = int(lecture) + int(practice) + int(lab)
+    print(f"Общее количество часов по предмету: \n {sub}")
