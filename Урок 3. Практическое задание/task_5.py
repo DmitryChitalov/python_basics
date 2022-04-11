@@ -6,3 +6,20 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def calculation(a):
+    """Суммирует числа пользователя"""
+    my_list = input("Введите числа через пробел: ").split()
+    for el in range(len(my_list)):
+        if my_list[el] != 'q':
+            a = a + int(my_list[el])
+        else:
+            break
+    if my_list[el] == 'q':
+        exit(f"Ваша сумма - {a}")
+    else:
+        calculation(a)
+
+
+print(calculation(a=0))
