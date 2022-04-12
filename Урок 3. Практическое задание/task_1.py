@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def division(int_1, int_2):
+    try:
+        return int_1 / int_2
+    except:
+        print("Error, division by zero")
+
+int_1 = int(input("Enter first integer: "))
+int_2 = int(input("Enter second integer: "))
+res = division(int_1, int_2)
+
+print(f"Result (int_1 / int_2): {res}")
