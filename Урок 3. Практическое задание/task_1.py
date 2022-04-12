@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def division(divisible, divisor):
+    try:
+        return divisible / divisor
+    except:
+        print("Вы что? Пытаетесь делить на 0!")
+
+
+divisible = int(input("Введите делимое: "))
+divisor = int(input("Введите делитель: "))
+print(f"Частное = ", division(divisible, divisor))
