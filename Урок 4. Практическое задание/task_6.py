@@ -53,6 +53,8 @@ def replicate_list_element_itertools(lst, replication_count):
         else:
             break
 
+
+#Main
 input_str = input("Please, inpur first integer number: ")
 
 if string_extension.is_int(input_str):
