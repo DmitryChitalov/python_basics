@@ -5,3 +5,17 @@
 Необходимо получить результат вычисления произведения всех элементов списка.
 Подсказка: использовать лямбда-функцию и функцию reduce().
 """
+
+some_list = []
+
+for el in range(100, 1001):
+    if el % 2 == 0:
+        some_list.append(el)
+
+result = 1
+f = lambda x, y: x * y
+for el in some_list:
+    result = f(result, el)
+
+print(result)
+# получилось число длиной 1208 символов, чот много

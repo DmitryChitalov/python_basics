@@ -12,3 +12,28 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+start_num = int(input("Введите начальное число генерируемой последовательности: "))
+end_num = int(input("Введите конечное число генерируемой последовательности: "))
+
+some_list = []
+for el in count(start_num):
+    if el <= end_num:
+        some_list.append(el)
+    else:
+        break
+print(f"Полученная последовательность: {some_list}")
+
+example_list = [1, 2, 3, 4, 5]
+cycle_list = []
+count = 0
+for el in cycle(example_list):
+    if count <= 10:
+        cycle_list.append(el)
+    else:
+        break
+    count += 1
+
+print(f"Зацикленный список: {cycle_list}")
