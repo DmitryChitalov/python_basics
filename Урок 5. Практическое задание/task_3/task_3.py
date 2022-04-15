@@ -8,3 +8,10 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+
+
+rus = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
+
+with open('task_3_ru.txt', 'w', encoding='utf-8') as new_perf:
+    with open('task_3.txt', encoding='utf-8') as perf:
+        new_perf.writelines([line.replace(line.split()[0], rus.get(line.split()[0])) for line in perf])
