@@ -5,3 +5,34 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+academic_subject = {}
+
+def subject_time(string):
+    words = string.split()
+    while True:
+        try:
+            words.remove("-")
+        except Exception:
+            break
+
+    hours = []
+    for word in words:
+        num = ""
+        for char in word:
+            if char.isdigit():
+                num += char
+        try:
+            hours.append(int(num))
+        except Exception:
+            continue
+    return sum(hours)
+
+
+with open("info.txt", "r") as f:
+    info = f.readlines()
+    for string in info:
+        words = string.split()
+        academic_subject[words[0]] = subject_time(string)
+
+print(academic_subject)
