@@ -22,40 +22,40 @@ speed, color, name, is_police (булево).
 """
 
 import random
-from typing import List
+from typing import List, Tuple
 
 class Car:
     """
         Машина
     """
-    name = None
+    name:str = None
     """
         Марка
     """
-    color = None
+    color:str = None
     """
         Цвет
     """
-    speed = 0
+    speed:int = 0
     """
         Текущая скорость
     """
-    is_police = False
+    is_police:bool = False
     """
         Принадлежность полиции
     """
 
-    _allowed_speed = 60
+    _allowed_speed:int = 60
     """
         Разрешённая скорость
     """
 
-    __correct_directions = {"left", "right", "reverse"}
+    __correct_directions:Tuple = {"left", "right", "reverse"}
     """
         Возможные направления изменения движения
     """
 
-    def __init__(self, name, color, is_police) -> None:
+    def __init__(self, name:str, color:str, is_police:bool) -> None:
         """
             Машина
             :param str name: Марка
@@ -70,7 +70,7 @@ class Car:
         else:
             raise ValueError("One or more arguments have incorrect type.")
 
-    def go(self, speed) -> None:
+    def go(self, speed:int) -> None:
         """
             Начало движения
             :param int speed: Скорость движения
@@ -89,7 +89,7 @@ class Car:
         self.speed = 0
         print(f"A car {type(self).__name__} with name {self.name} stopped")
 
-    def turn(self, directon) -> None:
+    def turn(self, directon:str) -> None:
         """
             Поворот в указанном направлении
             :param str direction: Направление поворота
@@ -112,7 +112,7 @@ class TownCar(Car):
         Городской автомобиль
     """
 
-    def __init__(self, name, color) -> None:
+    def __init__(self, name:str, color:str) -> None:
         """
             Городской автомобиль
             :param str name: Марка
@@ -135,7 +135,7 @@ class SportCar(Car):
         Спортивный автомобиль
     """
 
-    def __init__(self, name, color) -> None:
+    def __init__(self, name:str, color:str) -> None:
         """
             Спортивный автомобиль
             :param str name: Марка
@@ -147,7 +147,7 @@ class SportCar(Car):
 
 class WorkCar(Car):
 
-    def __init__(self, name, color) -> None:
+    def __init__(self, name:str, color:str) -> None:
         """
             Городской автомобиль
             :param str name: Марка
@@ -171,7 +171,7 @@ class PoliceCar(Car):
         Полицейский автомобиль
     """
 
-    def __init__(self, name) -> None:
+    def __init__(self, name:str) -> None:
         """
             Полицейский автомобиль
             :param str name: Марка

@@ -19,22 +19,23 @@
 import random
 from itertools import cycle
 from time import sleep
+from typing import List
 
 class ColorSetting:
     """
         Настройки цвета
     """
 
-    color = None
+    color:str = None
     """
         Цвет
     """
-    timeout = None
+    timeout:int = None
     """
         Таймаут горения цвета
     """
 
-    def __init__(self, name, timeout) -> None:
+    def __init__(self, name:str, timeout:int) -> None:
         """
             Настройки цвета
             :param str name: Цвет
@@ -49,12 +50,12 @@ class ColorSetting:
 
 
 class TrafficLight:
-    __current_color = None
+    __current_color:ColorSetting = None
     """
         Текущий цвет
     """
 
-    __color_settings = [
+    __color_settings:List[ColorSetting] = [
         ColorSetting('red', 7), 
         ColorSetting('yellow', 2), 
         ColorSetting('green', 5)
@@ -63,7 +64,7 @@ class TrafficLight:
         Настройки цветов светофора
     """
 
-    def running(self, iterations) -> None:
+    def running(self, iterations:int) -> None:
         """
             Переключение светофора
             :param int interations: Количество итераций переключения светофора

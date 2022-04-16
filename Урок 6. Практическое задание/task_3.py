@@ -16,22 +16,25 @@
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
 
+from typing import Dict
+
+
 class Worker:
-    _income = {
+    _income:Dict[str, int] = {
         "wage": 0,
         "bonus": 0
     }
 
-    name = None
-    surname = None
-    position = None
+    name:str = None
+    surname:str = None
+    position:str = None
 
-    def __init__(self, name, surname, position) -> None:
+    def __init__(self, name:str, surname:str, position:str) -> None:
         self.name = name
         self.surname = surname
         self.position = position
 
-    def set_income(self, wage, bonus) -> None:
+    def set_income(self, wage:int, bonus:int) -> None:
         if type(wage) is int:
             self._income["wage"] = wage
 
@@ -40,7 +43,7 @@ class Worker:
 
 class Position(Worker):
 
-    def __init__(self, name, surname, position) -> None:
+    def __init__(self, name:str, surname:str, position:str) -> None:
         super().__init__(name, surname, position)
 
     def get_full_name(self) -> str:

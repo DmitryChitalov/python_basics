@@ -21,25 +21,25 @@ class Road:
     """
         Дорога
     """
-    _length = 0
+    _length:int = 0
     """
         Длина дороги
     """
-    _width = 0
+    _width:int = 0
     """
         Ширина дороги
     """
 
-    weight_per_square = 25
+    weight_per_square:int = 25
     """
         Вес асфальта на 1 кв. метр на 1 см дорожного покрытия
     """
-    height = 0.05
+    height:float = 0.05
     """
         Тодщина дорожного покрытия
     """
 
-    def __init__(self, length, width) -> None:
+    def __init__(self, length:int, width:int) -> None:
         """
             Дорога
             :param int length: Длина дороги

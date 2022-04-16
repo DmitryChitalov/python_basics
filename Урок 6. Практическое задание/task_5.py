@@ -17,9 +17,9 @@
 from typing import List
 
 class Stationery:
-    title = None
+    title:str = None
 
-    def __init__(self, title) -> None:
+    def __init__(self, title:str) -> None:
         if type(title) is str:
             self.title = title
         else:
