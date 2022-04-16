@@ -5,3 +5,14 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+import re
+
+my_dict = {}
+with open('test.txt', 'r', encoding='utf-8') as my_file:
+    for line in my_file:
+        line = line.strip()
+        val1, val2 = line.split(':')
+        val2 = re.findall('\d+', val2)
+        val2 = sum([int(el) for el in val2])
+        my_dict[val1] = val2
+    print(my_dict)
