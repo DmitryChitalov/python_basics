@@ -15,3 +15,31 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from time import sleep
+
+
+class TrafficLight:
+    __color = ["Красный", "Желтый", "Зеленый"]
+
+    def running(self):
+        el = 0
+        while el != 3:
+            if el == 0:
+                print(TrafficLight.__color[el])
+                sleep(7)
+                el += 1
+            elif el == 1:
+                print(TrafficLight.__color[el])
+                sleep(2)
+                el += 1
+            elif el == 2:
+                print(TrafficLight.__color[el])
+                sleep(5)
+                el += 1
+        else:
+            print("Светофор отработал!")
+
+
+t = TrafficLight()
+t.running()
