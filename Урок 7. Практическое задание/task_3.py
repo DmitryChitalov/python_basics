@@ -111,24 +111,24 @@ class Cell:
         return self.sub_cells_count
 
     def __add__(self, other):
-        mess = f"Результат сложения клеток: {(self.sub_cells_count + other.sub_cells_count)}"
+        mess = f"Сумма клеток = ({(self.sub_cells_count + other.sub_cells_count)})"
         return mess
 
     def __sub__(self, other):
         mess = ""
         if (self.sub_cells_count - other.sub_cells_count) < 0:
-            mess = "Вычитание клеток невозможно. В вычитаемой клетке больше ячеек, чем в уменьшаемой!"
+            mess = "Разность отрицательна, поэтому операция не выполняется"
         else:
-            mess = f"Результат вычитания клеток: {(self.sub_cells_count - other.sub_cells_count)}"
+            mess = f"Разность клеток = ({(self.sub_cells_count - other.sub_cells_count)})"
 
         return mess
 
     def __mul__(self, other):
-        mess = f"Результат умножения клеток: {(self.sub_cells_count * other.sub_cells_count)}"
+        mess = f"Умножение клеток = ({(self.sub_cells_count * other.sub_cells_count)})"
         return mess
 
     def __truediv__(self, other):
-        mess = f"Результат деления клеток: {(self.sub_cells_count // other.sub_cells_count)}"
+        mess = f"Деление клеток: ({(self.sub_cells_count // other.sub_cells_count)})"
         return mess
 
     def make_order(self, sub_cells_in_row):
@@ -153,13 +153,36 @@ class Cell:
         return mess
 
 
+print("Создаем объекты клеток")
 cell1 = Cell(30)
-cell2 = Cell(5)
+cell2 = Cell(25)
 
+cell3 = Cell(10)
+cell4 = Cell(15)
+
+print()
+
+print("Складываем")
 print(cell1 + cell2)
-print(cell1 - cell2)
+
+print()
+
+print("Вычитаем")
 print(cell2 - cell1)
-print(cell1 * cell2)
+print(cell4 - cell3)
+
+print()
+
+print("Умножаем")
+print(cell2 * cell1)
+
+print()
+
+print("Делим")
 print(cell1 / cell2)
 
-print(cell1.make_order(4))
+print()
+
+print("Организация ячеек по рядам")
+print(cell1.make_order(5))
+print(cell2.make_order(10))
