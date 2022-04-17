@@ -25,3 +25,51 @@
 
 Два класса: абстрактный и Clothes
 """
+
+from abc import ABC, abstractclassmethod, abstractproperty
+from cgitb import reset
+
+
+class BaseClothes(ABC):
+    _cloth_var:int = 0
+
+    def __init__(self, cloth_var:int) -> None:
+        self._cloth_var = cloth_var
+        super().__init__()
+
+    def __add__(self, obj) -> float:
+        if issubclass(type(obj), BaseClothes):
+            cast_obj:BaseClothes = obj
+            return self.fabric_consumption + cast_obj.fabric_consumption
+
+    @abstractproperty
+    def fabric_consumption():
+        pass
+
+class Costume(BaseClothes):
+    
+    def __init__(self, cloth_var:int) -> None:
+        super().__init__(cloth_var)
+
+    @property
+    def fabric_consumption(self) -> float:
+        result = 2 * self._cloth_var + 0.3
+        print(f"Fabric consumption for costume for height {self._cloth_var} = {result}")
+        return result
+
+class Coat(BaseClothes):
+    
+    def __init__(self, cloth_var:int) -> None:
+        super().__init__(cloth_var)
+
+    @property
+    def fabric_consumption(self) -> float:
+        result = round(self._cloth_var / 6.5 + 0.5, 2)
+        print(f"Fabric consumption for coat with size {self._cloth_var} = {result}")
+        return result
+
+
+costume_1 = Costume(175)
+coat_1 = Coat(50)
+
+print(costume_1 + coat_1)
