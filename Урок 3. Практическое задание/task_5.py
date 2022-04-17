@@ -8,18 +8,18 @@
 """
 
 
-def my_func(my_sum=0):
-    # 1 2 3 - ['1',...]
-    lst = input("Введите числа через пробел: ").split()
-    for el in range(len(lst)):
-        if lst[el] != "q":
-            my_sum = my_sum + int(lst[el])
+def my_func(s=0):
+    x = input("Введите строку чисел через пробел:").split()
+    i = 0
+    while i != len(x):
+        if x[i] != "q":
+            s = s + int(x[i])
+            i = i + 1
         else:
-            break
-    print(my_sum)
-    if "q" in lst:
-        exit("Выход из программы")
-    else:
-        my_func(my_sum)
+            print(s)
+            exit("Выход из программы")
+    print(s)
+    my_func(s)
+
 
 my_func()
