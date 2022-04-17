@@ -7,3 +7,18 @@
 Иванов 23543.12
 Петров 13749.32
 """
+with open("text.txt", "r", encoding="utf-8") as my_file:
+    my_list = []
+    a = 0
+    b = 0
+    for el in my_file:
+        el = el.split()
+        a += float(el[1])
+        b += 1
+        if float(el[1]) < 20000:
+            my_list.append(el[0])
+    c = a / b
+    print(f'Средний доход сотрудников: {c}' "\n"
+          f'Список сотрудников с окладом меньше 20000:')
+    for d in my_list:
+        print(d)
