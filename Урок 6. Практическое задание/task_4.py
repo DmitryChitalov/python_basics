@@ -20,3 +20,62 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+class Car:
+    def __init__(self, *args):
+        self.speed = int(args[0])
+        self.color = args[1]
+        self.name = args[2]
+        self.is_police = args[3]
+
+    def go(self):
+        print(f"Car {self.name} go")
+    def stop(self):
+        print(f"Car {self.name} stop")
+    def turn(self, direction):
+        print(f"Car {self.name} turn to the {direction}")
+    def show_speed(self):
+        return self.speed
+
+class TownCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, False)
+
+    def show_speed(self):
+        if 60 < self.speed:
+            print("Too much speed for town car.")
+        else:
+            return self.speed
+
+class SportCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, False)
+
+class WorkCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, False)
+
+    def show_speed(self):
+        if 40 < self.speed:
+            print("Too much speed for work car.")
+        else:
+            return self.speed
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, True)
+
+TC = TownCar(55, "black", "Prius")
+SC = SportCar(90, "red", "silvia")
+WC = WorkCar(60, "yellow", "hyundai")
+PC = PoliceCar(100, "white", "bmw")
+
+print(TC.name)
+print(SC.name)
+print(WC.name)
+print(PC.name)
+
+print(TC.show_speed())
+print(SC.show_speed())
+print(WC.show_speed())
+print(PC.show_speed())
