@@ -12,3 +12,26 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите последнее число: "))
+
+lst1 = []
+for el in count(a):
+    if el > b:
+        break
+    lst1.append(el)
+
+print(lst1)
+
+lst2 = []
+i = 0
+for el in cycle(lst1):
+    if i > b:
+        break
+    lst2.append(el)
+    i += 1
+
+print(lst2)
