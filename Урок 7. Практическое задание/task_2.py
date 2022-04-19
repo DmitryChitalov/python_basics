@@ -25,3 +25,26 @@
 
 Два класса: абстрактный и Clothes
 """
+
+from abc import ABC, abstractmethod
+class odegda(ABC):
+    def __init__(self, param):
+        self.param = param
+    @abstractmethod
+    def expense(self):
+        pass
+    def __str__(self):
+        return str(self.param)
+class palto(odegda):
+    @property
+    def expense(self):
+        return self.param / 6.5 + 0.5
+class kostum(odegda):
+    @property
+    def expense(self):
+        return self.param * 2 + 0.3
+a = palto(48)
+b = kostum(1.70)
+print(f"Для пальто размера {a} требуется ткани: {a.expense :.2f}")
+print(f"Для костюма роста {b} требуется ткани: {b.expense :.2f}")
+print(f"Всего требуется ткани: {a.expense + b.expense :.2f}")
