@@ -9,3 +9,34 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+
+
+from json import dumps
+
+
+SRC_FILENAME = "text_7.txt"
+DST_FILENAME = "text_7.json"
+
+results = [{}, {}]
+
+
+try:
+    with open(SRC_FILENAME, encoding='utf-8') as fhs:
+        lines = fhs.readlines()
+
+    for line in lines:
+        name, _, proceeds, expenses = line.split()
+        results[0][name] = int(proceeds) - int(expenses)
+
+    results[1]['average_profit'] = round(
+        sum(
+            profit for _, profit in results[0].items() if profit > 0
+        ) / len(results[0])
+    )
+
+    with open(DST_FILENAME, "w", encoding='utf-8') as fhd:
+        fhd.write(dumps(results))
+except IOError as e:
+    print(e)
+except ValueError:
+    print("Неконсистентные даkнные")

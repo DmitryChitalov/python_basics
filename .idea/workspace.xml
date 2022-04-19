@@ -1,20 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6abb4b95-8cd2-4001-81f3-a712d3e675e0" name="Changes" comment="Make change">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/task_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testfolder/info.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testfolder/info2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testfolder/newinfo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testfolder/test5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_1/txtfile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_2/text2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_3/text3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_4/info.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_4/test_3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_5/text.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_6/text_6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_7/text_7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_7/text_7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 6. Практическое задание/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Урок 6. Практическое задание/test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 5. Практическое задание/task_1/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_1/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 5. Практическое задание/task_2/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_2/task_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 5. Практическое задание/task_3/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_3/task_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 5. Практическое задание/task_4/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_4/task_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 5. Практическое задание/task_5/task_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_5/task_5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 5. Практическое задание/task_6/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_6/task_6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 5. Практическое задание/task_7/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 5. Практическое задание/task_7/task_7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 6. Практическое задание/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 6. Практическое задание/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 6. Практическое задание/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 6. Практическое задание/task_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 6. Практическое задание/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 6. Практическое задание/task_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,10 +69,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/python_tests/test_file.py" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.leinardi.pycharm.pylint.PylintConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GBL\Python_Basic\python_basics" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.task_7">
     <configuration name="python_basics" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -67,6 +102,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="task_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Python3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/python_basics/Урок 4. Практическое задание" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/python_basics/Урок 4. Практическое задание/task_1.py" />
+      <option name="PARAMETERS" value="1 2 3" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="task_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -74,12 +130,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Python3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 5. Практическое задание/task_3" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 5. Практическое задание/task_3/task_3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -88,19 +144,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="task_4 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="task_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Python3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 5. Практическое задание/task_4" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 5. Практическое задание/task_4/task_4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,12 +172,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Python3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 5. Практическое задание/task_5" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_5.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 5. Практическое задание/task_5/task_5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,12 +193,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Python3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 5. Практическое задание/task_6" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_6.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 5. Практическое задание/task_6/task_6.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,12 +214,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Python3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 5. Практическое задание/task_7" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_7.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 5. Практическое задание/task_7/task_7.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -174,8 +230,9 @@
     </configuration>
     <list>
       <item itemvalue="Python.python_basics" />
+      <item itemvalue="Python.task_2" />
       <item itemvalue="Python.task_3" />
-      <item itemvalue="Python.task_4 (1)" />
+      <item itemvalue="Python.task_4" />
       <item itemvalue="Python.task_5" />
       <item itemvalue="Python.task_6" />
       <item itemvalue="Python.task_7" />
@@ -183,9 +240,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.task_7" />
+        <item itemvalue="Python.task_4" />
         <item itemvalue="Python.task_6" />
         <item itemvalue="Python.task_5" />
-        <item itemvalue="Python.task_4 (1)" />
         <item itemvalue="Python.task_3" />
       </list>
     </recent_temporary>
@@ -212,6 +269,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="50fd11e4-a387-4855-a7e3-74aaac11dc15">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:E:/GBL/Python_Basic/python_basics/Урок 4. Практическое задание" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -231,10 +313,26 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="50fd11e4-a387-4855-a7e3-74aaac11dc15" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Make change" />
     <option name="LAST_COMMIT_MESSAGE" value="Make change" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
