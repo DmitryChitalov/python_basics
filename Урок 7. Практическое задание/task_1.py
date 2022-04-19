@@ -28,3 +28,35 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, sps):
+        self.sps = sps
+
+    def __str__(self):
+        result = []
+        for i in self.sps:
+            result.append(' '.join([str(j) for j in i]))
+        return '\n'.join(result)
+
+    def __add__(self, other):
+        if len(self.sps) == len(other.sps):
+            res = []
+            for i, j in enumerate(self.sps):
+                lst = list(map(lambda x, y: x + y, j, other.sps[i]))
+                res.append(lst)
+            return Matrix(res)
+        return 'матрицы не подходят для сложения'
+
+
+m1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+m2 = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+mx1 = Matrix(m1)
+mx2 = Matrix(m2)
+mx3 = mx1 + mx2
+
+print(f'матрица 1:\n{mx1}\n')
+print(f'матрица 2:\n{mx2}\n')
+print(f'сумма матриц 1 и 2:\n{mx3}\n')
