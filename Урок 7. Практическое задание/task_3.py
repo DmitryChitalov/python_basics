@@ -100,3 +100,47 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+    def __add__(self, other):
+        return f'При сложении первой и второй клетки в клетке будет ячеек: {self.quantity + other.quantity}'
+    def __sub__(self, other):
+        sub = self.quantity - other.quantity
+        return f'При вычитании из первой клетки второй в клетке будет ячеек: {sub}' if sub > 0 else 'Клетки нет'
+    def __mul__(self, other):
+        return f'При умножении первой клетки на вторую в клетке будет ячеек: {self.quantity * other.quantity}'
+    def __truediv__(self, other):
+        return f'При делении первой клетки на вторую в клетке будет ячеек: {self.quantity // other.quantity}'
+    def make_order(self, row):
+        result = ''
+        for i in range(int(self.quantity / row)):
+            result += '*' * row + '\n'
+        result += '*' * (self.quantity % row) + '\n'
+        return result
+a = 24
+b = 2
+c = 10
+cell = Cell(a)
+cell_2 = Cell(b)
+print(f"В первой клетке ячеек: {a}")
+print(cell.make_order(c))
+print(f"Во второй клетке ячеек: {b}")
+print(cell_2.make_order(c))
+print(cell + cell_2)
+d = a + b
+cell_3 = Cell(d)
+print(cell_3.make_order(c))
+print(cell - cell_2)
+e = a - b
+cell_4 = Cell(e)
+print(cell_4.make_order(c))
+print(cell * cell_2)
+f = a * b
+cell_5 = Cell(f)
+print(cell_5.make_order(c))
+print(cell / cell_2)
+g = a // b
+cell_6 = Cell(g)
+print(cell_6.make_order(c))
