@@ -25,3 +25,34 @@
 
 Два класса: абстрактный и Clothes
 """
+
+from abc import ABC, abstractmethod
+
+
+class MyAbstractClass(ABC):
+    @abstractmethod
+    def kind(self):
+        pass
+
+
+class Clothes(MyAbstractClass):
+
+    def __init__(self, name, param):
+        self.nam = name
+        self.par = float(param)
+
+    @property
+    def kind(self):
+        if self.nam == 'Пальто':
+            return round(self.par / 6.5 + 0.5, 2)
+        if self.nam == 'Костюм':
+            return round(self.par * 2 + 0.3, 2)
+        return 'неверный ввод'
+
+
+p = Clothes('Пальто', 52)
+c = Clothes('Костюм', 180)
+
+print(f'Расход ткани на пальто: {p.kind}')
+print(f'Расход ткани на костюм: {c.kind}')
+print(f'Общий расход ткани: {p.kind + c.kind}')
