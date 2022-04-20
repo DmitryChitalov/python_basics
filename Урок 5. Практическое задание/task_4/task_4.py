@@ -7,3 +7,23 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+# Фамилии тех, кто зарабатывает меньше 20000
+with open('HW5_task4.txt', 'r', encoding='utf-8') as f_obj:
+    for line in f_obj:
+        a = line.replace('\n', '')
+        b = list(a.split())
+        c = float(b[1])
+        if c < 20000.00:
+            print(f"Сотрудник, который получает меньше 20000: {b[0]}")
+# Средний доход на сотрудника
+z = 0
+with open('HW5_task4.txt', 'r', encoding='utf-8') as f_obj:
+    for line in f_obj:
+        a = line.replace('\n', '')
+        z += a.count(' ')
+        b = list(a.split())
+        d = 0
+    for el in range(len(b)):
+        d += float(b[1])
+print(f"Средний доход на сотрудника - {d/z}")
