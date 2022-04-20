@@ -3,3 +3,13 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+
+f_obj = open("HW5_task1.txt", "w", encoding='utf-8')
+my_str = []
+while True:
+    my_str = input("Введите свой текст или нажмите Enter для завершения: ")
+    if my_str != "":
+        f_obj.write(my_str + '\n')
+    if my_str == "":
+        break
+f_obj.close()
