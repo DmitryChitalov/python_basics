@@ -15,3 +15,21 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+
+
+class TrafficLight:
+    __my_color = ["красный", "желтый", 'зеленый']
+
+    def my_func(self):
+        print(TrafficLight.__my_color[0])
+        sleep(7)
+        print(TrafficLight.__my_color[1])
+        sleep(2)
+        print(TrafficLight.__my_color[2])
+        sleep(1)
+        print(f'End programm')
+
+
+t = TrafficLight()
+t.my_func()

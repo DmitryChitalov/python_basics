@@ -20,3 +20,68 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+
+class Car:
+    def __init__(self, speed, color, name, is_police=True):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        return print(f'{self.name} begin drive')
+
+    def stop(self):
+        return print(f'{self.name} Car Stop')
+
+    def turn(self):
+        my_turn = input('Left or Right?: ')
+        if my_turn == 'Left':
+            print(f'{self.name} Turn left')
+        elif my_turn == 'Right':
+            print(f'{self.name} Car TURN RIGHT')
+        else:
+            print(f'{self.name} Car drive forward')
+
+    def police(self):
+        if self.is_police is True:
+            print(f'Police CAR')
+        else:
+            print(f'{self.name} not police(')
+
+    def show_speed(self):
+        return print(f' Car Speed {self.speed()}')
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed > 40:
+            print(f'Speed under limit 40, your speed {self.speed}')
+        else:
+            print(f'Just drive')
+
+
+class TownCar(Car):
+    def show_speed(self):
+        if self.speed > 60:
+            print(f'Speed under limit 60, your speed {self.speed}')
+        else:
+            print(f'Just drive')
+
+
+class SportCar(Car):
+    pass
+
+
+class Police(Car):
+    pass
+
+
+wc = WorkCar(100, 'black', 'Lada', False)
+wc.go(), wc.police(), wc.show_speed(), wc.turn(), wc.stop()
+tc = TownCar(40, "red", 'reno', False)
+tc.go(), tc.show_speed() , tc.stop()
+sc = SportCar(222, 'blue', 'Kia', False)
+p = Police(111, 'Special', 'BMW', True)
+p.police(), p.show_speed()
