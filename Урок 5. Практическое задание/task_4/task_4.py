@@ -8,28 +8,12 @@
 Петров 13749.32
 """
 
+import json
 
-firm = {'Иванов': 23543.12, 'Петров': 13749.32}
-try:
-    file_obj = open("info.txt", 'r')
-    for last_name, salary in firm.items():
-        file_obj.write(last_name + ':' + str(salary) + '\n')
-except IOError:
-    print("Произошла ошибка ввода-вывода!")
-
-finally:
-    file_obj.close()
-summary = 0
-count = 2
-persons = []
-with open("test_3.txt", "r") as file_obj:
-    for line in file_obj:
-        print(line, end="")
-        tokens = line.split(':')
-        if int(tokens[1]) <= 150:
-            persons.append(tokens[0])
-        summary += int(tokens[1])
-        count += 1
-#result = summary / count
-print(f"persons: {persons}")
-#print(f"averate: {result}")
+with open('task_4.json', encoding='utf-8') as obj_j:
+    dict_d = json.load(obj_j)
+    print('See below Staff list with salary which is less 20000$ per year : \n ')
+    for keys, values in dict_d.items():
+        if values < 20000:
+            print(keys)
+    print(f' \n Avarage salary payments \n {sum(dict_d.values())/len(dict_d)}')

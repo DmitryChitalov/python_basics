@@ -48,6 +48,7 @@ def running2():
 
 t1 = threading.Thread(target=running())
 t2 = threading.Thread(target=running2())
+print('You can drive now!')
 
 t1.start()
 t2.start()

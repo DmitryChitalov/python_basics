@@ -39,4 +39,4 @@ try:
 except IOError as e:
     print(e)
 except ValueError:
-    print("Неконсистентные даkнные")
+    print("Неконсистентные данные")
