@@ -16,38 +16,45 @@ length (длина в метрах), width (ширина в метрах).
 
 Например: 20м*5000м*25кг*0.05м = 125000 кг = 125 т
 """
-import time
-import threading
+from typing import Any
 
 
-class TrafficLight:
-    def __init__(self, _colors2, _colors):
-        pass
+class New_road:
+    __length = None
+    __width = None
+    mass = None
+    thin = None
+    def __int__(self, length, width):
+        self.length = length
+        self.widht = width
+        print('Road Builded')
 
-    _color = None
-    _colors2 = ['red']
-    _colors = ['yellow', 'green']
-
-def running():
-    c = 0
-    while c < 1:
-        for element in TrafficLight._colors2:
-            print(element)
-            c += 1
-            time.sleep(7)
-
-
-def running2():
-    c = 0
-    while c < 1:
-        for element in TrafficLight._colors:
-            print(element)
-            c += 1
-            time.sleep(2)
+    def intake(self):
+        self.mass = 25
+        self.thin = 0.05
+        intake = self.length * self.widht * self.mass * self.thin / 1000
+        print(f'print {intake}')
 
 
-t1 = threading.Thread(target=running())
-t2 = threading.Thread(target=running2())
+road_to_v = New_road()
+road_to_v.intake()
 
-t1.start()
-t2.start()
+"""
+class Road:
+    __length = None
+    __width = None
+    weigth = None
+    tickness = None
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+        print('Create road_to_village object')
+
+    def intake(self):
+        self.weigth = 25
+        self.tickness = 0.05
+        intake = self.length * self.width * self.weigth * self.tickness / 1000
+        print(f'Need {intake} ton for the building')
+
+road_to_village = Road(10000, 10)
+road_to_village.intake()"""
