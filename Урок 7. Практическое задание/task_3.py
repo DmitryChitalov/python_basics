@@ -100,3 +100,47 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+    def __init__(self, val):
+        self.val = val
+
+    def __add__(self, other):
+        return self.val + other.val
+
+    def __sub__(self, other):
+        if self.val - other.val > 0:
+            return self.val - other.val
+        else:
+            return print(f'разница отрицатльная')
+
+    def __mul__(self, other):
+        return self.val * other.val
+
+    def __truediv__(self, other):
+        try:
+            return self.val // other.val
+        except ZeroDivisionError:
+            print(f'ZeroDivisionError')
+
+    def make_order(self, row):
+        res = ''
+        for i in range(int(self.val / row)):
+            res += '*' * row + '\n'
+        res += '*' * (self.val % row) + '\n'
+        return res
+
+
+c1 = Cell(12)
+c2 = Cell(11)
+print(f'sum')
+print(c1 + c2)
+print(f'sub')
+print(c1 - c2)
+print(f'mul')
+print(c1 * c2)
+print(f'div')
+print(c1 / c2)
+print(f' make order ')
+print(c1.make_order(5))

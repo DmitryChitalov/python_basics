@@ -25,3 +25,31 @@
 
 Два класса: абстрактный и Clothes
 """
+
+from abc import ABC, abstractmethod
+
+
+class Myabstractclass(ABC):
+    @abstractmethod
+    def result(self):
+        pass
+
+
+class Clothes(Myabstractclass):
+    def __init__(self, name, val):
+        self.name = name
+        self.val = float(val)
+
+    @property
+    def result(self):
+        if self.name == 'Пальто':
+            return round(self.val / 6.5, 2)
+        if self.name == 'Костюм':
+            return round(self.val * 2, 2)
+
+
+p1 = Clothes('Пальто', 44)
+p2 = Clothes("Костюм", 22)
+print(p1.result)
+print(p2.result)
+print(round(p1.result + p2.result, 2))
