@@ -100,3 +100,32 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __add__(self, other):
+        return self.quantity + other.quantity
+
+    def __sub__(self, other):
+        if self.quantity - other.quantity < 0:
+            return print("Число отрицательное")
+        return self.quantity - other.quantity
+
+    def __mul__(self, other):
+        return self.quantity * other.quantity
+
+    def __truediv__(self, other):
+        return self.quantity // other.quantity
+
+
+cell = Cell(3)
+cell_2 = Cell(4)
+cell_3 = Cell(2)
+cell_4 = Cell(6)
+print(cell + cell_2)
+print(cell_4 - cell_3)
+print(cell / cell_2)
+print(cell_3 * cell_4)
