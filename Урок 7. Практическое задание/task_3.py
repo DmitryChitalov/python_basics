@@ -100,3 +100,37 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = quantity
+
+    def __add__(self, other):
+        a = self.quantity + other.quantity
+        return f"Клетка - {Cell(a)}, количество ячеек в результате сложения - {a}"
+
+    def __sub__(self, other):
+        b = self.quantity - other.quantity
+        if b > 0:
+            return f"Клетка - {Cell(b)}, количество ячеек в результате вычитания - {b}"
+        else:
+            return f"Разница ячеек отрицательная"
+
+    def __mul__(self, other):
+        h = self.quantity * other.quantity
+        return f"Клетка - {Cell(h)}, количество ячеек в результате умножения - {h}"
+
+    def __truediv__(self, other):
+        u = round(self.quantity / other.quantity)
+        return f"Клетка - {Cell(u)}, количество ячеек в результате деления - {u}"
+
+c1 = Cell(5)
+c2 = Cell(2)
+print(c1.__add__(c2))
+print(c1.__sub__(c2))
+print(c1.__mul__(c2))
+print(c1.__truediv__(c2))
+
+
+
