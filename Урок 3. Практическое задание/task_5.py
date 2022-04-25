@@ -6,3 +6,20 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+import sys
+
+result = 0
+while True:
+    line = input("Enter numbers and Q for calculate and terminate: ")
+    tokens = line.split(" ")
+    for token in tokens:
+        try:
+            number = float(token)
+            result += number
+        except:
+            if token == 'q':
+                print(f"You sum is {result}. Program is terminated")
+                exit(0)
+            else:
+                print(f"You sum is {result}. Input error", file=sys.stderr)
+                exit(1)
