@@ -15,6 +15,9 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+
+
 import time
 import threading
 
@@ -52,3 +55,5 @@ print('You can drive now!')
 
 t1.start()
 t2.start()
+
+

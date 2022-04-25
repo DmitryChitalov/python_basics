@@ -16,6 +16,35 @@
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
 
-my_list = [20, 'text', 60]
-for element in my_list:
-    print(str(element))
+
+class Worker:
+    name = None
+    surname = None
+    position = None
+    profit = None
+    bonus = None
+
+    def __init__(self, name, surname, positions, profit, bonus):
+        self.name = name
+        self.surname = surname
+        self.position = positions
+        self.profit = profit
+        self.bonus = bonus
+
+
+class Position(Worker):
+    def __init__(self, name, surname, positions, profit, bonus):
+        super().__init__(name, surname, positions, profit, bonus)
+        self.__income = {'Profit is': self.profit, 'Bonus is': self.bonus}
+
+    def get_full_name(self):
+        return self.name + self.surname
+
+    def get_full_profit(self):
+        return self.__income
+
+manager = Position('Mick', 'John', 'Petr' 'Manager', 500, 1000)
+
+
+print(manager.get_full_name())
+print(manager.get_full_profit())
