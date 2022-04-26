@@ -9,3 +9,22 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+
+class ListCheck(Exception):
+    def __init__(self, my_list):
+        self.my_List = my_list
+
+
+my_list = input('Введите числа без пробелов: ')
+for el in range(len(my_list)):
+    try:
+        int(my_list[el]).__class__ != int
+        """
+        Понимаю, что будет выводить встроенное исключение и мое (не знаю, как еще создать триггер)... Наверное,
+        можно было бы как-то перегрузить просто встроенное исключение ValueError: invalid literal for int() with base 10.
+        """
+    except:
+        raise ListCheck("Вы ввели не числа или лишние знаки!")
+else:
+    print(list(my_list))
