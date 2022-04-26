@@ -18,3 +18,26 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+recieve = input('Add your total INCOME per month: ')
+spented = input('Add your total OUTCOME per month: ')
+staff = input('Укажите число сотрудников: ')
+
+res = int(int(recieve) - int(spented))
+
+if res > 0:
+    print(f'Финансовый результат: {res}')
+
+    ren = int(recieve) / int(res)
+    print(f'рентабельность выручки: {ren}')
+
+    staff_count = int(res) / int(staff)
+    print(f'Прибыль фирмы в расчете на одного сотрудника:')
+    print(staff_count)
+
+
+elif res < 0:
+    print(f'Финансовый результат - убыток. Ее величина: {res}')
+
+else:
+    print("Выручка равна издержкам")

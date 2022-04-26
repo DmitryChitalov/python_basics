@@ -5,3 +5,26 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+
+filename = "text_6.txt"
+
+subjects = {}
+
+try:
+    with open(filename, encoding='utf-8') as file:
+        lines = file.readlines()
+
+    for line in lines:
+        data = line.replace('(', ' ').split()
+
+        subjects[data[0][:-1]] = sum(
+            int(i) for i in data if i.isdigit()
+        )
+except IOError as error:
+    print(error)
+except ValueError:
+    print("Неконсистентные данные")
+
+print(subjects)
+
