@@ -26,3 +26,4 @@ var1 = int(input('First number'))
 var2 = int(input('Second number'))
 if var2 == 0:
     raise MyDevZero(var1, var2)
+print()

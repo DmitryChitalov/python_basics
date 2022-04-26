@@ -32,4 +32,5 @@ while  my_var !='q':
         if my_var != 'q':
             my_list.append(my_var)
 
+
 print(my_list)

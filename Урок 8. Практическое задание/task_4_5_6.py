@@ -133,3 +133,5 @@ if __name__ == '__main__':
     print("Списываем 1 устройство")
     del storage[0]
     print(storage)
+    for index, itm in storage.filter_by(department='Отдел ИТ'):
+        print(index, f"{itm}  в ИТ Отделе")
