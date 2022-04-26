@@ -5,3 +5,21 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+
+class MyExcept(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+try:
+    a = float(input('Введите делимое: '))
+    b = float(input('Введите делитель: '))
+    if b == 0:
+        raise MyExcept('Делить на ноль нельзя!')
+except ValueError:
+    print('Вводите числа!')
+except MyExcept as err:
+    print(err)
+else:
+    print(f'Результат деления {a} на {b} = {a / b}')

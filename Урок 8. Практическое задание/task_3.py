@@ -9,3 +9,23 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+import re
+
+
+class MyExcept(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+sp = []
+while True:
+    try:
+        a = input('Введите элемент числовой элемент списка (exit - выход): ')
+        if a == 'exit':
+            print(sp)
+            exit()
+        if not re.findall(r'^[-]?[0-9]*[\.]?[0-9]*$', a):
+            raise MyExcept('Вы ввели не число!')
+        sp.append(a)
+    except MyExcept as err:
+        print(err)
