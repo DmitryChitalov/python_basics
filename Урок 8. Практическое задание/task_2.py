@@ -11,21 +11,15 @@ class MyExcept(Exception):
     def __init__(self, txt):
         self.txt = txt
 
-    @staticmethod
-    def div_err():
-        try:
-            a = float(input('Введите делимое: '))
-            b = float(input('Введите делитель: '))
-            if b == 0:
-                raise MyExcept('Делить на ноль нельзя!')
 
-            res = a / b
-            return res
-        except ValueError:
-            return 'Ошибка ввода!'
-        except Exception as err:
-            return err
-
-
-d = MyExcept
-print('Результат: ', d.div_err())
+try:
+    a = float(input('Введите делимое: '))
+    b = float(input('Введите делитель: '))
+    if b == 0:
+        raise MyExcept('Делить на ноль нельзя!')
+except ValueError:
+    print('Вводите числа!')
+except MyExcept as err:
+    print(err)
+else:
+    print(f'Результат деления {a} на {b} = {a / b}')
