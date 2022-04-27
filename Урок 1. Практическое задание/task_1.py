@@ -11,3 +11,9 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+
+const = 365
+name = input("Please, input your name ")
+age = int(input("Please, input your age "))
+print(f"Your name is {name}, your age is {age}")
+print(f"Program const is {const}")

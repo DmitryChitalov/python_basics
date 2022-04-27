@@ -8,3 +8,16 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+def to_upper_first_char(value) -> str:
+    if type(value) == str and len(value) > 0:
+        return value[0].upper() + value[1:]
+    return ""
+
+
+input_str = input("Please, input words separated by space: ")
+words = input_str.split(" ")
+result = ""
+for element in words:
+    result += f"{to_upper_first_char(element)} "
+print(result)

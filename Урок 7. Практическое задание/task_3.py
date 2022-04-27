@@ -100,3 +100,98 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+class Cell:
+    
+    __quantity:int = 0
+    _cell_name:str = None
+
+    def __init__(self, quantity:int, cell_name:str) -> None:
+        self.__quantity = quantity
+        self._cell_name = cell_name
+        print(f"Born cell with quantity {self.__quantity}")
+
+    def __add__(self, obj) -> None:
+        if issubclass(type(obj), Cell):
+            cell:Cell = obj
+            print(f"Cell {cell._cell_name} added to cell {self._cell_name}")
+            self.quantity = self.quantity + cell.quantity
+            cell.quantity = 0
+
+    def __sub__(self, obj) -> None:
+        if issubclass(type(obj), Cell):
+            cell:Cell = obj
+            print(f"Try subrtract cell {cell._cell_name} from cell {self._cell_name}")
+            if self.quantity >= cell.quantity:
+                print(f"Cell {cell._cell_name} subtracted from cell {self._cell_name}")
+                self.quantity = self.quantity - cell.quantity
+            else:
+                print(f"Can't decrese cell quantity. Base quantity less than target on {cell.quantity - self.quantity}")
+
+    def __mul__(self, obj):
+        if issubclass(type(obj), Cell):
+            cell:Cell = obj
+            print(f"Multiplicate cell {self._cell_name} and {cell._cell_name}")
+            result = Cell(self.quantity * cell.quantity, "cell_mull")
+            self.quantity = 0
+            cell.quantity = 0
+            return result
+
+    def __truediv__(self, obj):
+        if issubclass(type(obj), Cell):
+            cell:Cell = obj
+            print(f"Divide cell {self._cell_name} on {cell._cell_name}")
+            result = Cell(self.quantity // cell.quantity, "cell_truediv")
+            self.quantity = 0
+            cell.quantity = 0
+            return result
+
+    def make_order(self, count_per_row:int) -> str:
+        result = ""
+        ndx = 0
+        ndx_r = 0
+        while ndx < self.quantity:
+            if ndx_r < count_per_row - 1:
+                result += "*"
+                ndx_r += 1
+            else:
+                ndx_r = 0
+                result += "*\n"
+            ndx += 1
+
+        return result
+
+    @property
+    def quantity(self) -> int:
+        return self.__quantity
+
+    @quantity.setter
+    def quantity(self, val:int) -> None:
+        if val >= 0:
+            self.__quantity = val
+            if val == 0:
+                print(f"Cell {self._cell_name} is dead, her quantity is 0")
+            else:
+                print(f"New cell {self._cell_name} quantity is {self.__quantity}")
+        else:
+            print(f"Cell quantity can't be less than 0")
+
+
+cell_1 = Cell(10, "cell1")
+cell_2 = Cell(20, "cell2")
+cell_3 = Cell(5, "cell3")
+cell_4 = Cell(7, "cell4")
+cell_5 = Cell(12, "cell5")
+
+cell_1 + cell_2
+print()
+cell_1 - cell_3
+print()
+cell:Cell = cell_1 / cell_4
+print()
+cell = cell * cell_5
+print()
+
+count_quantity_per_row = 5
+print(f"Show struct cell {cell._cell_name} as {count_quantity_per_row} per row")
+print(cell.make_order(count_quantity_per_row))

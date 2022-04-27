@@ -15,3 +15,50 @@
 П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
+
+from typing import Dict
+
+
+class Worker:
+    _income:Dict[str, int] = {
+        "wage": 0,
+        "bonus": 0
+    }
+
+    name:str = None
+    surname:str = None
+    position:str = None
+
+    def __init__(self, name:str, surname:str, position:str) -> None:
+        self.name = name
+        self.surname = surname
+        self.position = position
+
+    def set_income(self, wage:int, bonus:int) -> None:
+        if type(wage) is int:
+            self._income["wage"] = wage
+
+        if type(bonus) is int:
+            self._income["bonus"] = bonus
+
+class Position(Worker):
+
+    def __init__(self, name:str, surname:str, position:str) -> None:
+        super().__init__(name, surname, position)
+
+    def get_full_name(self) -> str:
+        return f"{self.surname} {self.name}"
+
+    def get_total_income(self) -> int:
+        return self._income["wage"] + self._income["bonus"]
+    
+    def __str__(self) -> str:
+        return str({
+            "fullname": self.get_full_name(),
+            "income": self.get_total_income()
+        })
+
+
+position_1 = Position("Ivan", "Ivanov", "Developer")
+position_1.set_income(50000, 30000)
+print(position_1)

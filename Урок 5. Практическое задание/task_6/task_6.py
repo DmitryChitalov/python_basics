@@ -5,3 +5,30 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+import re
+
+def get_lesson_counts(line):
+    lesson_info = line.split(";")
+    lesson_name = lesson_info[0]
+    lesson_count = 0
+
+    ndx = 1
+    while ndx < len(lesson_info):
+        count_info = re.sub(r"[^0-9]", "", lesson_info[ndx])
+        if str.isdigit(count_info):
+            lesson_count += int(count_info)
+        
+        ndx += 1
+    
+    return lesson_name, lesson_count
+
+lessons = {}
+with open("task6.csv", "r", encoding = "utf-8") as file:
+    line = file.readline()
+    while line != "":
+        lesson_name, lesson_count = get_lesson_counts(line)
+        lessons[lesson_name] = lesson_count
+        line = file.readline()
+
+print(lessons)
