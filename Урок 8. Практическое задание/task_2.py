@@ -5,3 +5,20 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+
+class OwnError(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+inp_a = int(input("Введите числитель: "))
+inp_b = int(input("Введите знаменатель: "))
+
+try:
+    if inp_b == 0:
+        raise OwnError("Вы пытаетесь делить на ноль")
+except OwnError as err:
+    print(err)
+else:
+    print(inp_a / inp_b)
