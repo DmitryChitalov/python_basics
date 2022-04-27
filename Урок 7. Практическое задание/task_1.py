@@ -28,3 +28,24 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, *args):
+        self.my_list = list(args)
+
+    def __str__(self):
+        my_matr = '\n'.join(map(str, self.my_list))
+        my_matr = my_matr.replace(",", "").replace("[", "").replace("]", "")
+        return my_matr
+
+    def __add__(self, other):
+        for i in range(len(self.my_list)):
+            for i_2 in range(len(other.my_list[i])):
+                self.my_list[i][i_2] = self.my_list[i][i_2] + other.my_list[i][i_2]
+        return Matrix.__str__(self)
+
+
+my_m_1 = Matrix([1, 4, 5], [3, 7, 10], [3, 7, 10])
+my_m_2 = Matrix([1, 4, 5], [3, 7, 10], [3, 7, 10])
+print(my_m_1 + my_m_2)
