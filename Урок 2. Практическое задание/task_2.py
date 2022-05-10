@@ -11,3 +11,9 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+digit = input('Enter digi: ')
+a = [int(i) for i in digit.split()]
+for i in range(1, len(a), 2):
+    a[i-1], a[i] = a[i], a[i-1]
+print(' '.join([str(i) for i in a]))
+
