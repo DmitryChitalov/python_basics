@@ -6,3 +6,24 @@
 создав экземпляры класса (комплексные числа) и выполнив сложение и умножение созданных экземпляров.
 Проверьте корректность полученного результата.
 """
+
+class ComplexNumber:
+    def __init__(self, a, b, *args):
+        self.a = a
+        self.b = b
+        self.z = 'a + b * i'
+
+    def __add__(self, other):
+        print(f'Summary Z1 and Z2 same')
+        return f'z = {self.a + other.a} + {self.b + other.b} * i'
+
+    def __mul__(self, other):
+        print('Adding Z1 and Z2 same')
+        return f'z = {self.a} + {self.b} * i'
+
+
+z_1 = ComplexNumber(1, -2)
+z_2 = ComplexNumber(3, 4)
+print(z_1 + z_2)
+print(z_1 * z_2)
+#print(z_1)
