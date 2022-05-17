@@ -1,0 +1,9 @@
+Введите число: 3
+п + нн + ннн = 369
+"""
+n = int (input('Введите число n:'))
+пн = п + п
+nnn = n + n + n
+conc = str(n)+str (nn) + str (nnn)
+print(f'n + nn + nnn = {conc}')
+
