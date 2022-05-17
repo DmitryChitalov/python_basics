@@ -10,7 +10,7 @@
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
 user_time = int(input("Введите время в секундах"))
-hours = (user_time / 3600)
+hours = user_time / 3600
 minut = float((user_time / 60))
 sec = user_time
 print(f"Время в формате ч:м:с - {hours}, {minut}, {sec}")
