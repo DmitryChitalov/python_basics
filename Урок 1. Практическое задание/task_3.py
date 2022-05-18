@@ -1,10 +1,2 @@
-"""
-Задание 3.
-
-Узнайте у пользователя целое положительное число n.
-Найдите сумму чисел n + nn + nnn.
-
-Пример:
-Введите число n: 3
-n + nn + nnn = 369
-"""
+num = input("input positive integer: ")
+print(f"result: {num} + {int(num + num)} + {int(num + num + num)} = {int(num) + int(num + num) + int(num + num + num)}")
