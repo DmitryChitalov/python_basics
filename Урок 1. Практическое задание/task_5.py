@@ -22,9 +22,9 @@ income = float(input('Введите выручку фирмы ==>'))
 spent = float(input('Введите издержки фирмы ==>'))
 result_side = ''
 if income > spent:
-    result = 'прибыль'
+    result_side = 'прибыль'
 else:
-    result = 'убыток'
+    result_side = 'убыток'
 result = abs(income - spent)
 print(f'Финансовый результат - {result_side}. Величина: {result}')
 print(f'Рентабельность выручки = {result / income}')
