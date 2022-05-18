@@ -8,3 +8,6 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+n = int(input('Введите число n: '))
+print('n + nn + nnn = 'f"{n}{n + n}{n + n + n}")
