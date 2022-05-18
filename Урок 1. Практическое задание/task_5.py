@@ -22,7 +22,8 @@
 proceeds = int(input('Введите выручку фирмы: '))
 costs = int(input('Введите издержки фирмы: '))
 employee = int(input('Введите колличество сотрудников '))
-print('Доход = ' + str(proceeds - costs) + ' Прибыль фирмы в расчете на одного сотрудника = ' + str(proceeds / employee))
+print(
+    'Доход = ' + str(proceeds - costs) + ' Прибыль фирмы в расчете на одного сотрудника = ' + str(proceeds / employee))
 if proceeds > costs:
     print('Рентабельность выручки = ' + str(proceeds / costs * 100))
 elif proceeds < costs:
