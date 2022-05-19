@@ -12,10 +12,10 @@
 """
 #Выполнение четвертого задания
 n = int(input('Ведите целое положительное число: '))
-max = 0
+max_num = 0
 while n != 0:
     last_digit = n % 10
-    if last_digit > max:
-        max = last_digit
+    if last_digit > max_num:
+        max_num = last_digit
     n = n // 10
-print(f'Самая большая цифра в числе: {max}')
+print(f'Самая большая цифра в числе: {max_num}')
