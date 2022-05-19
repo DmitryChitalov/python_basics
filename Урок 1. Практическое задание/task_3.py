@@ -9,5 +9,5 @@
 n + nn + nnn = 369
 """
 n = int(input("Введите число n: "))
-r = int(n + n * n + n * n * n)
+r = int(n + (n * 10) + n + (n * 100) + (n * 10) + n)
 print(str(r))
