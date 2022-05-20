@@ -21,7 +21,7 @@
 """
 current_result = float(input('Введите результат пробежки в первый день ==>'))
 target_result = float(input('Введите желаемый результат ==>'))
-count = 0
+count = 1
 while current_result < target_result:
     count += 1
     current_result = current_result * 1.1
