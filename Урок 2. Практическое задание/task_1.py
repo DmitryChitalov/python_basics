@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+a = [12, 'Миша', 12.76]
+for b in a:
+    print(type(b))
