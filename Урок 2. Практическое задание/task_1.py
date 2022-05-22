@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+my_list = [1, 2.0, "string", True, None]
+for el in my_list:
+    print(type(el))
+

@@ -11,3 +11,16 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+list_len = int(input("Введите количество элементов в списке: "))
+count = 0
+my_list = []
+while(count < list_len):
+    my_list.append(int(input(f"Введите {count + 1} элемент: ")))
+    count += 1
+print(my_list)
+count = 0
+while(count < list_len - list_len % 2):
+    my_list[count], my_list[count + 1] = my_list[count + 1], my_list[count]
+    count += 2
+print(my_list)
