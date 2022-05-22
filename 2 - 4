@@ -13,3 +13,4 @@ for element in range(my_string.count(' ') + 1):
     else:
         print(f" {number} {my_word [element] [0:10]}")
         number += 1
+        
