@@ -16,6 +16,6 @@
 <class 'NoneType'>
 """
 
-a = [12, 'Миша', 12.76]
+a = [12, 'Миша', 12.76, 'ОЛег']
 for b in a:
     print(type(b))
