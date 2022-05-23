@@ -15,3 +15,15 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+list6 = [7, 5, 3, 3, 2]
+count = int(input("Сколько цифр хотите ввести: "))
+for c in range(0, count):
+    a = int(input("Введите цифру: "))
+    ind = 0
+    for i, var in enumerate(list6):
+        if (a == var):
+            ind = i
+    list6.insert(ind, a)
+list6.sort(reverse=True)
+print(list6)

@@ -10,3 +10,14 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+
+
+
+total, big = 0, 0
+num = int(input())
+while num > 0:
+    total = num % 10
+    if total > big:
+        big = total
+    num = num // 10
+print(f"Максимальное число {big}")
