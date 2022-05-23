@@ -14,3 +14,11 @@
 1. раз
 2. перерефриж
 """
+
+string = input("input words through space: ").split(' ')
+print(string)
+for ind, el in enumerate(string, 1):
+    if len(el) > 10:
+        print(f"{ind}.  {el[0:10]}")
+    else:
+        print(f"{ind}.  {el}")

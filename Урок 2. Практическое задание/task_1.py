@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+my_list = [10, 'string', 19.2, True, None]
+
+for el in my_list:
+    print(f'type of {el} is {type(el)}')
