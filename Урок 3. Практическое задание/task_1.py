@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+# функция выводит результат деления двух чисел
+def divide_two_num(a, b):
+    try:
+        print(f"Результат деления {a} на {b} = {a / b}")
+    except ZeroDivisionError:
+        print("Деление на ноль!")
+
+
+x = int(input("Введите 1 число: "))
+y = int(input("Введите 2 число: "))
+divide_two_num(x, y)

@@ -25,3 +25,37 @@
 “ед”: [“шт.”]
 }
 """
+
+i = 0
+tovary = []
+names = []
+prices = []
+quantities = []
+units = []
+analitika = {}
+
+while True:
+    try:
+        i += 1
+        print(f"Введите информацию по {i}-му товару : \n")
+        name = input("Название: ")
+        price = int(input("Цена: "))
+        quantity = int(input("Количество: "))
+        unit = input("ед.: ")
+        tovary.append((i, {"Название": name, "Цена": price, "Количество": quantity, "Единица": unit}))
+        if input("Завершить ввод (y)? ") == "y":
+            break
+    except ValueError:
+        print("Ошибка ввода!")
+        break
+print("\nГотовая структура:\n", *tovary)
+
+for i in range(len(tovary)):
+    names.append(tovary[i][1].get("Название"))
+    prices.append(tovary[i][1].get("Цена"))
+    quantities.append(tovary[i][1].get("Количество"))
+    units.append(tovary[i][1].get("Единица"))
+analitika = {"Названия": names, "Цены": prices, "Количества": quantities, "Единицы": units}
+print("\nАналитика: ")
+for k in analitika:
+    print(f"{k}: ", *(sorted(set(analitika[k]))))
