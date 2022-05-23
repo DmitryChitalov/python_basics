@@ -15,7 +15,7 @@ my_sps = input("введите целые числа через пробел: ")
 i, j = 0, 1
 while len(my_sps) > j:
     my_sps[i], my_sps[j] = my_sps[j], my_sps[i]
-    i += 2
-    j += 2
+    i += 4
+    j += 4
     print('Результат:', *my_sps)
 
