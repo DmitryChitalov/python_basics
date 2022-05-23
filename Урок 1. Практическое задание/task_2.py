@@ -9,3 +9,9 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+
+from datetime import datetime, date, time, timezone
+
+print("Введите время в секундах: ")
+time_sec = int(input())
+print("Введенное вами количество секунд составляет {} дней или {} часов или {} минут".format(time_sec/(60**2*24), time_sec/(60**2), time_sec/60))

@@ -8,3 +8,33 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(str_param):
+    tmp = str_param[0]
+    tmp = tmp.upper()
+    str_param = str_param[:0] + tmp + str_param[1:]
+    return str_param
+
+
+print("Первая часть задания:")
+print(f"Было: word\nСтало: {int_func('word')}")
+
+orig_string = "word and some other things"
+
+tmp_word = ""
+result_string = ""
+for el in orig_string:
+    if el != " ":
+        tmp_word += el
+    else:
+        tmp_word = int_func(tmp_word)
+        result_string = result_string + tmp_word + " "
+        tmp_word = ""
+
+if tmp_word != "" or tmp_word != " ":
+    tmp_word = int_func(tmp_word)
+    result_string = result_string + tmp_word + " "
+
+print("\nВторая часть задания:")
+print(f"Было: {orig_string}\nСтало: {result_string}")

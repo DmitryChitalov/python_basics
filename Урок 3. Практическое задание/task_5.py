@@ -6,3 +6,27 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+special_elements_list = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]
+
+
+def some_sum(list_param):
+    global flag
+    result = 0
+    for el in list_param:
+        if el in special_elements_list:
+            flag = False
+            return result
+        print(el)
+        result += int(el)
+    return result
+
+
+flag = True
+my_sum = 0
+while flag:
+    some_list = list(input("Введите какие-нибудь числа через пробел: ").strip().split())
+    my_sum += some_sum(some_list)
+    print(f"Текцщий результат: {my_sum}")
+
+print("Введен специальный символ, заканчиваем выполнение программы")

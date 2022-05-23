@@ -5,3 +5,16 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def tipa_stepen(param1, param2):
+    param2 = abs(param2)
+    result = param1
+    for i in range(1, param2):
+        result = result * param1
+    return 1/result
+
+
+num1 = float(input("Введите действительное положительное число: "))
+num2 = int(input("Введите целое отрицательное число: "))
+print(tipa_stepen(num1, num2))

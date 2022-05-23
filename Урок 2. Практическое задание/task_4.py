@@ -14,3 +14,22 @@
 1. раз
 2. перерефриж
 """
+
+words_str = input("Введите несколько слов через пробел: ")
+words: list = []
+substr = ""
+i = 1
+
+for el in words_str:
+    if el != " ":
+        substr += el
+    elif substr != " " or substr != "" or el == "\n":
+        words.append(substr)
+        substr = ""
+
+if substr != " " or substr != "":
+    words.append(substr)
+
+for word in words:
+    print(f"{i}. {word[:10]}")
+    i += 1

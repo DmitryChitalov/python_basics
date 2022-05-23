@@ -15,3 +15,14 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+my_list = [7, 5, 3, 3, 2]
+input_data = ""
+
+print("Введите показатели рейтинга, когда заакончите - ввидеите !")
+while input_data != "!":
+    print(f"Текцщий рейтинг: {my_list}")
+    inputData = input("Введите целое число:")
+    if inputData.isdigit():
+        my_list.append(int(inputData))
+        my_list.sort(reverse=True)

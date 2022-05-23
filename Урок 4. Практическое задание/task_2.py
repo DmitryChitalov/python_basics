@@ -7,3 +7,13 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+
+input_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55, 66]
+output_list = []
+
+for i in range(1, len(input_list)):
+    if input_list[i-1] < input_list[i]:
+        output_list.append(input_list[i])
+
+print(output_list)
