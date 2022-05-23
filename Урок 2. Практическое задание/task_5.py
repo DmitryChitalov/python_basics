@@ -15,3 +15,17 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+my_list = [7, 5, 3, 3, 2]
+entered_number = int(input("Введите число (-1 - выход): "))
+while entered_number >= 0:
+    insert_index = len(my_list)
+    for i in range(insert_index):
+        if entered_number > my_list[i]:
+            insert_index = i
+            break
+    my_list.insert(insert_index, entered_number)
+    print(f"Пользователь ввел число {entered_number}. Результат: {my_list}")
+    entered_number = int(input("Введите число: "))
+
+print(f"Окончательный список: {my_list}")
