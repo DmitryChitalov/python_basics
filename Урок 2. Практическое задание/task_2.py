@@ -11,3 +11,10 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+arr = list(input('input through space positive integer: ').split(' '))
+ind = 0
+while ind < len(arr) - 1:
+    arr[ind], arr[ind + 1] = arr[ind + 1], arr[ind]
+    ind += 2
+print(arr)
