@@ -15,3 +15,9 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+some_list = [1, 2, 3.14, "PI", False, "SomeString", True, "True", None]
+print(f"List: {some_list}")
+
+for element in some_list:
+    print(f"The value: '{element}' is of '{type(element).__name__}' type")
