@@ -25,3 +25,33 @@
 “ед”: [“шт.”]
 }
 """
+#Выполнение шестого задания
+goods = []
+template = {'название': '', 'цена': '', 'количество': '', 'ед': ''}
+analytics = {'название': [], 'цена': [], 'количество': [], 'ед': []}
+num = 0
+control = None
+line = "-" * 30
+
+while True:
+    control = input("Для выхода нажмите 'В', для продолжения нажмите 'П', для аналитики нажмите 'А': ").upper()
+    if control == 'В':
+        break
+    elif control == 'А':
+        if len(goods) == 0:
+            print("Нет элементов для аналитики")
+            continue
+        print(f'\tТекущая аналитика\n{line}')
+        for key, value in analytics.items():
+            value = list(set(value))
+            print(f'{key[:25]:>10}: {value}\n{line}')
+    elif control == 'П':
+        num += 1
+        good = dict(template)
+        for f in template.keys():
+            feature = input(f'Введите характеристику "{f}": ')
+            good[f] = feature if (f == 'название' or f == 'ед') else int(feature)
+            analytics[f].append(feature)
+        goods.append((num, good))
+    else:
+        print("Неправильный ввод")

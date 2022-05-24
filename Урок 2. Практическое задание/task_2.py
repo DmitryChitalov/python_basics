@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+#Выполнение второго задания
+
+int_list = [int(i) for i in input('Введите целые числа через пробел: ').split()]
+
+for i in range(0, len(int_list) - 1, 2):
+    int_list[i], int_list[i + 1] = int_list[i + 1], int_list[i]
+
+print(f"Результат: {' '.join([str(i) for i in int_list])}")
