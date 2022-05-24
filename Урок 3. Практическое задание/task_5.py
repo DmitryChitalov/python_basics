@@ -6,3 +6,23 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def calculate_sum():
+    total_sum = 0
+    is_executing = True
+    while is_executing:
+        temp_sum = 0
+        numbers = input('Введите цифры или любой символ для выхода - ').split()
+        for elem in numbers:
+            if elem.isalpha():
+                is_executing = False
+                break
+            else:
+                temp_sum += int(elem)
+        total_sum += temp_sum
+        print(f'Текущая сумма {total_sum}')
+    print(f'Окончательная сумма {total_sum}')
+
+
+calculate_sum()
