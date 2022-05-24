@@ -6,3 +6,21 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+my_sum = 0
+quit = False
+while(not quit):
+    my_str = input("Введите строку: ")
+    my_list = my_str.split(" ")
+    for index, val in enumerate(my_list):
+        if(val == 'quit'):
+            quit = True
+            break
+        else:
+            try:
+                my_sum += int(val)
+            except ValueError:
+                print(f"Ошибка преобразования в число {val}")
+    print(f"Промежуточная сумма = {my_sum}")
+print(f"Итого = {my_sum}")
+
