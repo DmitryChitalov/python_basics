@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+a = int(input("input first num: "))
+b = int(input("input second num: "))
+
+
+def my_div(p1, p2):
+    return p1 / p2
+
+
+try:
+    print(f"{a} / {b} = {my_div(a, b)}")
+except ZeroDivisionError:
+    print("[!] - division by zero")
