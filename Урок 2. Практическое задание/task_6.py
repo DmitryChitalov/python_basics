@@ -25,3 +25,19 @@
 “ед”: [“шт.”]
 }
 """
+product = [
+    (1, {"название": "компьютер", "цена": 20000, "количество": 5, "eд": "шт."}),
+    (2, {"название": "принтер", "цена": 6000, "количество": 2, "eд": "шт."}),
+    (3, {"название": "сканер", "цена": 2000, "количество": 7, "eд": "шт."})
+]
+analyze = {}
+for tup in product:
+    for key in tup[1]:
+        analyze.setdefault(key, [])
+        analyze[key].append(tup[1].get(key))
+        analyze[key] = list(set(analyze[key]))
+
+print('{')
+for key in analyze:
+    print(f'"{key}" : {analyze.get(key)}')
+print('}')
