@@ -6,3 +6,17 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def calc():
+    result = 0
+    while True:
+        numbers = input('Введите числа через пробел: ').split()
+        for i in numbers:
+            if i == '!':
+                return result
+            result += int(i)
+        print(result)
+
+
+print(calc())
