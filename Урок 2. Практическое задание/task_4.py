@@ -14,3 +14,7 @@
 1. раз
 2. перерефриж
 """
+a = input().split()
+print(a)
+for number, item in enumerate(a, start=1):
+    print(f'{number}. {item[:10]}')
