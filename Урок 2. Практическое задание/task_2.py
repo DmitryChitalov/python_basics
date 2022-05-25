@@ -11,3 +11,9 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+chisla = input("Введите целые числа через пробел: ").split()
+chisla[:-1:2], chisla[1::2] = chisla[1::2], chisla[:-1:2]
+print(*chisla)
+ch_got = " ".join(chisla)
+print(ch_got)
