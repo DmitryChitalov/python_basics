@@ -14,3 +14,7 @@
 1. раз
 2. перерефриж
 """
+user_string = input('Введите слова через пробел ==>')
+user_dict = user_string.split()
+for item in user_dict:
+    print(f'{user_dict.index(item) + 1}. {item[:10]}')

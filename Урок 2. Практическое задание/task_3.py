@@ -8,3 +8,32 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+
+month = int(input('Введите номер месяца ==>'))
+season = ''
+if month in [12, 1, 2]:
+    season = 'Зима'
+elif month in [3, 4, 5]:
+    season = 'Весна'
+elif month in [6, 7, 8]:
+    season = 'Лето'
+elif month in [9, 10, 11]:
+    season = 'Осень'
+else:
+    print('Incorrect month...')
+print(f'Результат через список: {season}')
+
+season_list = {
+    'Зима': [12, 1, 2],
+    'Весна': [3, 4, 5],
+    'Лето': [6, 7, 8],
+    'Осень': [9, 10, 11]
+}
+
+for item in season_list.items():
+    if month in item:
+        season = item[1]
+print(f'Результат через словарь: {season}')
+
+
+
