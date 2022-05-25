@@ -11,3 +11,9 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+<<<<<<< Updated upstream
+=======
+my_list = input("Введите элементы вашего списка ").split()
+my_list[:-1:2], my_list[1::2] = my_list[1::2], my_list[:-1:2]
+print(my_list)
+>>>>>>> Stashed changes
