@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+perem = [70, False, "ложка", 0.70, None, [9, 6], (7, 4), {2, 3}]
+for el in perem:
+    print(type(el))

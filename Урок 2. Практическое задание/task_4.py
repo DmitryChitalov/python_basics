@@ -14,3 +14,9 @@
 1. раз
 2. перерефриж
 """
+slova = input('Введите слова через пробел: ')
+for count, slova in enumerate(slova.split(), start=1):
+    if len(slova) > 10:
+        print(f'{count}. {slova[:10]}')
+    else:
+        print(f'{count}. {slova}')

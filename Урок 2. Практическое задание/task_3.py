@@ -8,3 +8,23 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+mesyac = int(input('Введите номер месяцав виде целого числа от 1 до 12: '))
+
+if mesyac in [12, 1, 2]:
+    print('Зима')
+elif mesyac in [3, 4, 5]:
+    print('Весна')
+elif mesyac in [6, 7, 8]:
+    print('Лето')
+elif mesyac in [9, 10, 11]:
+    print('Осень')
+
+seasons = {'Зима': (1, 2, 12),
+           'Весна': (3, 4, 5),
+           'Лето': (6, 7, 8),
+           'Осень': (9, 10, 11)
+           }
+month = int(input('Введите номер месяцав виде целого числа от 1 до 12: '))
+for key in seasons.keys():
+    if month in seasons[key]:
+        print(key)
