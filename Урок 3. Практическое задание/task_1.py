@@ -17,3 +17,28 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def division(num_one, num_two):
+    try:
+        return num_one / num_two
+    except ZeroDivisionError:
+        return 'Ошибка. Делить на ноль нельзя!'
+
+
+print(division(int(input('Введите первое число: ')),
+               int(input('Введите второе число: '))))
+
+
+# Можете подсказать, как предпочтительнее запрашивать данные у пользователя?
+# Мне больше нравится вариант ниже, но тогда я не соблюдаю условие задачи, не задаю позиционные аргументы. Как лучше быть?
+def division_2():
+    num_one = int(input('Введите первое число: '))
+    num_two = int(input('Введите второе число: '))
+    try:
+        return num_one / num_two
+    except ZeroDivisionError:
+        return 'Ошибка. Делить на ноль нельзя!'
+
+
+print(division_2())
