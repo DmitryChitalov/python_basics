@@ -7,3 +7,4 @@ a = 'раз'
 print(s[:10])
 print(d[:10])
 print(a[:10])
+
