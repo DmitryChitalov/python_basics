@@ -35,3 +35,4 @@ while n <= goods:
          'ед': my_dict.get('ед')})
 print(my_list)
 print(my_analys)
+
