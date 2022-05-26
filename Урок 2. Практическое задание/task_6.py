@@ -25,3 +25,27 @@
 “ед”: [“шт.”]
 }
 """
+goods = []
+goods_analyse = {
+    'название': [],
+    'цена': [],
+    'количество': [],
+    'ед': []
+}
+count = 1
+while True:
+    name = input('Введите название товара: ')
+    price = int(input('Введите цену товара: '))
+    quantity = int(input('Введите количество товара: '))
+    measure = input('Введите единицу измерения товара: ')
+    goods.append((count, {'название': name, 'цена': price, 'количество': quantity, 'ед': measure}))
+    count = count + 1
+    print('Товары')
+    for good in goods:
+        print(good)
+        for item in good[1].items():
+            if item[1] not in list(goods_analyse.items())[list(good[1].items()).index(item)][1]:
+                list(goods_analyse.items())[list(good[1].items()).index(item)][1].append(item[1])
+    print('Аналитика о товарах')
+    for item in goods_analyse.items():
+        print(item)
