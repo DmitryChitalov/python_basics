@@ -29,7 +29,6 @@ def num_func(num_1,num_2):
 num_1 = int(input('Введите число'))
 num_2 = int(input('Введите число'))
 
-
 print(num_func(num_1, num_2))
 
 

@@ -15,7 +15,6 @@ def inf_func(name, surname, year, city, email, number):
 
 
 
-
 name = input('Enter your name')
 surname = input('Enter surname')
 year = input('Enter your year ')

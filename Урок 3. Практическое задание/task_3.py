@@ -24,9 +24,6 @@ def func(a,b,c):
     lis.sort()
     return lis[-1] + lis[1]
 
-
 print(func(4444,2,1))
-
-
 
 

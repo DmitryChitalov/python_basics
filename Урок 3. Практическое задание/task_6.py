@@ -16,4 +16,5 @@ int_func('text')
 def int_func(*args):
     words = input('enter words')
     return words.title()
+
 print(int_func())

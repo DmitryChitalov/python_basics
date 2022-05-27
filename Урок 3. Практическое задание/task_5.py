@@ -16,7 +16,6 @@ def func(my_sum=0):
     if 'q' in num:
         print('Exit')
     else : func()
-
 func()
 
 
