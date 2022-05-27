@@ -12,3 +12,11 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+#Выполнение шестого задания
+from itertools import count, cycle
+
+count = count(1)
+cycle = cycle('ABC')
+
+for el in range(10):
+    print(next(count), next(cycle))
