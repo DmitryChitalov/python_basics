@@ -8,3 +8,36 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+num = int(input('Введите цифру месяца '))
+winter = [12, 1, 2]
+spring = [3, 4, 5]
+summer = [6, 7, 8]
+fall = [9, 10, 11]
+months = {
+    'winter' : '12' '1' '2',
+    'spring' : '3' '4' '5',
+    'summer' : '6' '7' '8',
+    'fall' : '9' '10' '11'
+
+}
+if num in winter:
+    print('Результат через список: Зима')
+elif num in spring:
+    print('Результат через список: Весна')
+elif num in summer:
+    print('Результат через список: Лето')
+elif num in fall:
+    print('Результат через список: Осень')
+
+if str(num) in months['winter']:
+    print('Результат через словарь: Зима')
+elif str(num) in months['spring']:
+    print('Результат через словарь: Весна')
+elif str(num) in months['summer']:
+    print('Результат через словарь: Лето')
+elif str(num) in months['fall']:
+    print('Результат через словарь: Осень')
+
+
+
+
