@@ -10,3 +10,15 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+# задание №4
+n = input()
+count = len(str(n)) - 1
+big = 0
+while count > 0:
+    if len(str(n)) <= 1:
+        big = int(n)
+    #print(type(count), count, type(n[count]), n[count])
+    if int(n[count]) > int(big):
+        big = n[count]
+    count -= 1
+print(big)

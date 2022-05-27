@@ -11,3 +11,8 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+li = [int(i) for i in input().split()]
+for i in range(0, len(li), 2):
+    if i + 1 < len(li)-1:
+        li[i] = li[i+1]
+print(li)
