@@ -15,3 +15,20 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+ls_1 = [7, 5, 3, 3, 2]
+print(f"Рейтинг - {ls_1}")
+ls_2 = int(input("Введите число (999 - выход) "))
+while ls_2 != 999:
+    for el in range(len(ls_1)):
+        if ls_1[el] == ls_2:
+            ls_1.insert(el + 1, ls_2)
+            break
+        elif ls_1[0] < ls_2:
+            ls_1.insert(0, ls_2)
+        elif ls_1[-1] > ls_2:
+            ls_1.append(ls_2)
+        elif ls_1[el] > ls_2 and ls_1[el + 1] < ls_2:
+            ls_1.insert(el + 1, ls_2)
+    print(f"текущий список - {ls_1}")
+    digit = int(input("Введите число "))
