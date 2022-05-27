@@ -5,19 +5,18 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
 def func(x, y):
-    if x > 0 and y < 0:
-        x = x
-        for i in range (abs(y) - 1):
+    if x > 0 > y:
+        for i in range(abs(y) - 1):
             x = x + x
-        return x
-    else : return "try again"
-print(func(2,-5))
+        return 1 / x
+    else:
+        return "try again"
 
 
-
-
-
+print(func(2, -5))
 
 
 

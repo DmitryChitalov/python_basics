@@ -9,12 +9,17 @@
 Необходимо использовать написанную ранее функцию int_func().
 """
 
+
 def int_func(text):
     print(text.title())
+
+
 int_func('text')
 
-def int_func(*args):
+
+def int_func():
     words = input('enter words')
     return words.title()
+
 
 print(int_func())

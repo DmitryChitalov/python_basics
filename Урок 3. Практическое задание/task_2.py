@@ -9,10 +9,10 @@
 email: jackie@gmail.com, телефон: 01005321456
 """
 
+
 def inf_func(name, surname, year, city, email, number):
     print(f'{name} {surname} {year} года рождения, проживает в городе {city} '
           f'email: {email}, телефон: {number}')
-
 
 
 name = input('Enter your name')

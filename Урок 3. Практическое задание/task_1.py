@@ -19,16 +19,14 @@ Process finished with exit code 0
 """
 
 
-def num_func(num_1,num_2):
+def num_func(num_1, num_2):
     try:
-        return num_1/num_2
+        return num_1 / num_2
     except ZeroDivisionError:
-        print('Вы пытаетесь делить на ноль?')
+        return 'Вы пытаетесь делить на ноль?'
 
 
 num_1 = int(input('Введите число'))
 num_2 = int(input('Введите число'))
 
 print(num_func(num_1, num_2))
-
-
