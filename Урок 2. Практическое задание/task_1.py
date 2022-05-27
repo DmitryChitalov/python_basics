@@ -17,8 +17,5 @@
 """
 
 ll_3 = [5, "string", 0.15, True, None]
-print(type(5))
-print(type("string"))
-print(type(0.15))
-print(type(True))
-print(type(None))
+for el in ll_3:
+    print(type(el))
