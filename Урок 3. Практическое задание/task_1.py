@@ -17,3 +17,13 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+x = int(input('введите делимое: '))
+y = int(input('введите делитель: '))
+def z_func(x, y):
+    try:
+        return x / y
+    except ZeroDivisionError:
+        return "На 0 делить нельзя!"
+    else:
+        return x / y
+print("Результат: ", z_func(x, y))
