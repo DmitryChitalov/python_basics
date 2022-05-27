@@ -4,4 +4,19 @@
 При решении задания необходимо обойтись без встроенной функции возведения числа в степень!
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
+
 """
+
+
+def my_func(x, y):
+    if x == 0 and y != 0:
+        return 0
+    res = 1
+    for i in range(abs(y)):
+        res = res * x if y >= 0 else res / x
+    return res
+
+
+num = float(input('Основание степени: '))
+degree = int(input('Число степени: '))
+print(f'{num} ** {degree} = {my_func(num, degree)}')
