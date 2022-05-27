@@ -19,7 +19,7 @@ el = 0
 for i in range(numbers):  #перебор по указанному пользователем колличеству цифр
     number.append(input('Введите цифру')) #добавление в список number цифр из диапазона перебора
 for i in range(int(len(number)/2)): #перебор в уменьшанном в два раза диапазоне number. /2 для отбрасывания нечетности и использования далее по два элемента
-    number[el], number[el+1] = number[el+1], number[el]
+    number[el], number[el + 1] = number[el + 1], number[el]
     el = el + 2
 print(number)
 
