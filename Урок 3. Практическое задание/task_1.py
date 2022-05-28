@@ -17,3 +17,13 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def divide(a, b):
+    if b == 0:
+        return 'Вы пытаетесь делить на 0'
+    else:
+        return a / b
+
+a = float(input('Введите первое число ==>'))
+b = float(input('Введите второе число ==>'))
+print(divide(a, b))

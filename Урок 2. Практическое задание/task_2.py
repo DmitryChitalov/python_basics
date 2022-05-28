@@ -11,3 +11,14 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+test_arr = input('Введите целые числа через пробел ==>')
+test_arr = test_arr.split()
+
+for x in range(len(test_arr)):
+    if x % 2 != 0:
+        temp = test_arr[x]
+        test_arr[x] = test_arr[x - 1]
+        test_arr[x - 1] = temp
+
+print(test_arr)
