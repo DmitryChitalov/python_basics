@@ -8,3 +8,14 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+def capitalize(word):
+    return word.title()
+
+def capitalize_all(*words):
+    res = ''
+    for item in words:
+        res += f'{item.title()} '
+    return res
+
+words = input('Введите через пробел слова, состоящие из латинских букв в нижнем регистре ==>')
+print(f'Строка со словами в верхнем регистре: {capitalize_all(words)}')
