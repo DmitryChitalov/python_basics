@@ -15,3 +15,17 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+r = int(input("Введите новый элемент рейтинга  "))
+my_list = [7, 5, 3, 3, 2]
+if r in my_list:
+    i = my_list.index(r)
+    my_list.insert(i+1, r)
+else:
+    index = len(my_list)
+    for i in range(len(my_list)):
+        if my_list[i] < r:
+            index = i
+            break
+    my_list.insert(index, r)
+print(my_list)
+
