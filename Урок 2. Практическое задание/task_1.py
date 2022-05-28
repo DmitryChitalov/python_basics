@@ -17,9 +17,6 @@
 """
 
 a1 = [5, "string", 0.15, True, None]
-print(type(a1[0]))
-print(type(a1[1]))
-print(type(a1[2]))
-print(type(a1[3]))
-print(type(a1[4]))
-print(type(a1[5]))
+for el in a1:
+    print(type(el))
+
