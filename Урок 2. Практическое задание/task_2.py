@@ -11,3 +11,12 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+list_number = input("Введите целые числа через пробел: ")
+list_number = list(map(int, list_number.split(' ')))
+
+for idx in range(len(list_number)):
+    if idx % 2 != 0:
+        list_number[idx], list_number[idx - 1] = list_number[idx - 1], list_number[idx]
+
+print(list_number)

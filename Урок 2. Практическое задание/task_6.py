@@ -25,3 +25,59 @@
 “ед”: [“шт.”]
 }
 """
+
+products = []
+tmpl = {'название': '', 'цена': '', 'количество': '', 'ед': ''}
+analytics = {'название': [], 'цена': [], 'количество': [], 'ед': []}
+count = 1
+cont = 0
+
+
+def add_product():
+    name = input('Введите название товара: ')
+    price = input('Введите цену товара: ')
+    quantity = input('Введите количество товара: ')
+    measure = input('Введите единицу измерения товара: ')
+    return {'название': name, 'цена': price, 'количество': quantity, 'ед': measure}
+
+
+def menu():
+    print('---------------------------------')
+    res = input(' Для добавления товара нажмите 1.\n '
+                'Для вывода аналитики нажмите 2.\n '
+                'Для вывода списка продуктов нажмите 3.\n '
+                'Для выхода нажмите 4.\n')
+    print('---------------------------------')
+    return int(res)
+
+
+def add_analytics(product):
+    for f in tmpl.keys():
+        analytics[f].append(product[f])
+
+
+def show_products_list():
+    print('------------Продукты-------------')
+    print(products)
+    print('---------------------------------')
+
+
+def show_analytics():
+    print('------------Аналитика-------------')
+    print(analytics)
+    print('----------------------------------')
+
+
+while cont < 4:
+    cont = menu()
+    if cont == 1:
+        product = add_product()
+        products.append((count, product))
+        count += 1
+        add_analytics(product)
+    elif cont == 2:
+        show_analytics()
+    elif cont == 3:
+        show_products_list()
+    else:
+        break
