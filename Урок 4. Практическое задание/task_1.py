@@ -6,3 +6,9 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+def salary(working, hours, bonus):
+    return (working * hours) + bonus
+
+
+print(salary(180, 1300, 60000))
