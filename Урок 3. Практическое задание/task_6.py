@@ -8,3 +8,21 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(word):
+    return word.title()
+
+
+def int_func_text(*words):
+    result = ''
+    for word in words:
+        result += f'{int_func(word)} '
+    return result
+
+
+word = input('Введите одно слово используя только маленькие латинские буквы: ')
+print(f'Результат работы функции int_func(): {int_func(word)}')
+
+words = input('Введите через пробел слова, состоящие только из маленьких латинских букв: ')
+print(f'Строка со словами в верхнем регистре: {int_func_text(words)}')
