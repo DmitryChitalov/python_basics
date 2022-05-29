@@ -3,7 +3,7 @@
 выполнить подсчет количества строк, количества слов в каждой строке.
 """
 lines = 0
-with open("vv_file.txt", "r", encoding='utf-8') as file:
+with open("input.txt", "r", encoding='utf-8') as file:
     for line in file:
         lines += 1
         words = len(line.split())
