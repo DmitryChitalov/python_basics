@@ -8,3 +8,15 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+def my_func(text):
+    word = text.split()
+    total = []
+    for i in word:
+        string_el = str(i)
+        first_letter = string_el[:1].upper()
+        word = first_letter + string_el[1:]
+        total.append(word)
+    return total
+
+print(my_func('hjdndn jkdjhx jjdnnd')) 
