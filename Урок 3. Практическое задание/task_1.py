@@ -17,3 +17,13 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+x, y = int(input('input a digit ')), int(input('input a digit '))
+def subsr(x, y):
+    try:
+        res = (x/y)
+        print(res)
+
+    except:
+        print('вы пытаетесь делить на ноль или ввели строку')
+
+subsr(x, y)
