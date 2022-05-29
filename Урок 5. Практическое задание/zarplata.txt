@@ -1,0 +1,4 @@
+Ivanov 10255.12
+Petrov 21101.44
+Sidorov 15639.19
+Kozlov 24607.93
