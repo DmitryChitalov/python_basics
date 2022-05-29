@@ -18,3 +18,17 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+profit = float(input("Введите выручку фирмы "))
+costs = float(input("Введите издержки фирмы "))
+ if profit > costs:
+    profitability = profit / costs
+    print("Фирма работает с прибылью")
+    print (f'Рентабельность выручки составляет {profitability}')
+    workers = int(input("Введите количество сотрудников "))
+    prof_on_work = profit / workers
+    print(f'Прибыль в расчете на одного сторудника {prof_on_work}')
+elif profit == costs:
+    print("Фирма работает в ноль")
+else:
+    print("Фирма работает в убыток")

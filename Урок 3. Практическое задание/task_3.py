@@ -5,3 +5,11 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+def my_func(a, b, c):
+    x = [a, b, c]
+    x.remove(min(a, b, c))
+    return sum(x)
+
+    
+print(my_func(-4, 15, 2)) 

@@ -15,3 +15,15 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+new_l = ['стул', 'нога', 25, -25, None]
+print(type(new_l))
+
+
+def my_type(el):
+    for el in range(len(new_l)):
+        print(type(new_l[el]))
+    return
+
+
+my_type(new_l)
