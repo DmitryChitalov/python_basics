@@ -8,3 +8,9 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+# задание №3
+n = str(input())
+summ = 0
+for i in range(1, int(n) + 1):
+    summ += int(n*i)
+print(summ)
