@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce17bf8c-92ad-4c24-9453-3d6475c4472e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_7.py" afterDir="false" />
-    </list>
+    <list default="true" id="ce17bf8c-92ad-4c24-9453-3d6475c4472e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,38 +161,38 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="184" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.875@0.25.1440.875" timestamp="1653839115356" />
-    <state width="1398" height="228" key="GridCell.Tab.0.bottom" timestamp="1653843880084">
+    <state width="1398" height="282" key="GridCell.Tab.0.bottom" timestamp="1653851526953">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1653843880084" />
-    <state width="1398" height="228" key="GridCell.Tab.0.center" timestamp="1653843880083">
+    <state width="1398" height="282" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1653851526953" />
+    <state width="1398" height="282" key="GridCell.Tab.0.center" timestamp="1653851526952">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1653843880083" />
-    <state width="1398" height="228" key="GridCell.Tab.0.left" timestamp="1653843880077">
+    <state width="1398" height="282" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1653851526952" />
+    <state width="1398" height="282" key="GridCell.Tab.0.left" timestamp="1653851526952">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1653843880077" />
-    <state width="1398" height="228" key="GridCell.Tab.0.right" timestamp="1653843880084">
+    <state width="1398" height="282" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1653851526952" />
+    <state width="1398" height="282" key="GridCell.Tab.0.right" timestamp="1653851526953">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="228" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1653843880084" />
-    <state width="1398" height="282" key="GridCell.Tab.1.bottom" timestamp="1653839620255">
+    <state width="1398" height="282" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1653851526953" />
+    <state width="1398" height="282" key="GridCell.Tab.1.bottom" timestamp="1653851526954">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="282" key="GridCell.Tab.1.bottom/0.25.1440.875@0.25.1440.875" timestamp="1653839620255" />
-    <state width="1398" height="282" key="GridCell.Tab.1.center" timestamp="1653839620255">
+    <state width="1398" height="282" key="GridCell.Tab.1.bottom/0.25.1440.875@0.25.1440.875" timestamp="1653851526954" />
+    <state width="1398" height="282" key="GridCell.Tab.1.center" timestamp="1653851526954">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="282" key="GridCell.Tab.1.center/0.25.1440.875@0.25.1440.875" timestamp="1653839620255" />
-    <state width="1398" height="282" key="GridCell.Tab.1.left" timestamp="1653839620255">
+    <state width="1398" height="282" key="GridCell.Tab.1.center/0.25.1440.875@0.25.1440.875" timestamp="1653851526954" />
+    <state width="1398" height="282" key="GridCell.Tab.1.left" timestamp="1653851526953">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="282" key="GridCell.Tab.1.left/0.25.1440.875@0.25.1440.875" timestamp="1653839620255" />
-    <state width="1398" height="282" key="GridCell.Tab.1.right" timestamp="1653839620255">
+    <state width="1398" height="282" key="GridCell.Tab.1.left/0.25.1440.875@0.25.1440.875" timestamp="1653851526953" />
+    <state width="1398" height="282" key="GridCell.Tab.1.right" timestamp="1653851526954">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="282" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1653839620255" />
+    <state width="1398" height="282" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1653851526954" />
     <state width="509" height="445" key="SwitcherDM" timestamp="1653646110940">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
