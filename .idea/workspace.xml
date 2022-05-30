@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ce17bf8c-92ad-4c24-9453-3d6475c4472e" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
@@ -12,6 +13,9 @@
       <change beforePath="$PROJECT_DIR$/Урок 3. Практическое задание/task_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 3. Практическое задание/task_5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Урок 3. Практическое задание/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 3. Практическое задание/task_6.py" afterDir="false" />
     </list>
+=======
+    <list default="true" id="ce17bf8c-92ad-4c24-9453-3d6475c4472e" name="Default Changelist" comment="" />
+>>>>>>> task4_done
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +25,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="29i1EJIiuaZJcTOaTYFPlFM7wiS" />
+<<<<<<< HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+>>>>>>> task4_done
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,8 +38,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.task_6">
     <configuration name="task_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+  <component name="RunManager" selected="Python.task_7">
+    <configuration name="task_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> task4_done
       <module name="python_basics_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -40,11 +52,19 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 3. Практическое задание" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 3. Практическое задание/task_2.py" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_3.py" />
+>>>>>>> task4_done
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -53,7 +73,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="task_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="task_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> task4_done
       <module name="python_basics_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -61,11 +85,19 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 3. Практическое задание" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 3. Практическое задание/task_3.py" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_4.py" />
+>>>>>>> task4_done
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -74,7 +106,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="task_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="task_5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> task4_done
       <module name="python_basics_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -82,11 +118,19 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 3. Практическое задание" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 3. Практическое задание/task_4.py" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_5.py" />
+>>>>>>> task4_done
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -95,7 +139,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="task_5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="task_6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> task4_done
       <module name="python_basics_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -103,11 +151,19 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 3. Практическое задание" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 3. Практическое задание/task_5.py" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_6.py" />
+>>>>>>> task4_done
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,7 +172,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="task_6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="task_7" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> task4_done
       <module name="python_basics_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -124,11 +184,19 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 3. Практическое задание" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 3. Практическое задание/task_6.py" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_7.py" />
+>>>>>>> task4_done
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,19 +206,33 @@
       <method v="2" />
     </configuration>
     <list>
+<<<<<<< HEAD
       <item itemvalue="Python.task_2" />
+=======
+>>>>>>> task4_done
       <item itemvalue="Python.task_3" />
       <item itemvalue="Python.task_4" />
       <item itemvalue="Python.task_5" />
       <item itemvalue="Python.task_6" />
+<<<<<<< HEAD
     </list>
     <recent_temporary>
       <list>
+=======
+      <item itemvalue="Python.task_7" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.task_7" />
+>>>>>>> task4_done
         <item itemvalue="Python.task_6" />
         <item itemvalue="Python.task_5" />
         <item itemvalue="Python.task_4" />
         <item itemvalue="Python.task_3" />
+<<<<<<< HEAD
         <item itemvalue="Python.task_2" />
+=======
+>>>>>>> task4_done
       </list>
     </recent_temporary>
   </component>
@@ -168,6 +250,7 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state width="1398" height="228" key="GridCell.Tab.0.bottom" timestamp="1653830325995">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -200,6 +283,44 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1419" height="282" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1653652244591" />
+=======
+    <state x="184" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1653839115356">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="184" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.875@0.25.1440.875" timestamp="1653839115356" />
+    <state width="1398" height="282" key="GridCell.Tab.0.bottom" timestamp="1653851526953">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1653851526953" />
+    <state width="1398" height="282" key="GridCell.Tab.0.center" timestamp="1653851526952">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1653851526952" />
+    <state width="1398" height="282" key="GridCell.Tab.0.left" timestamp="1653851526952">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1653851526952" />
+    <state width="1398" height="282" key="GridCell.Tab.0.right" timestamp="1653851526953">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1653851526953" />
+    <state width="1398" height="282" key="GridCell.Tab.1.bottom" timestamp="1653851526954">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.1.bottom/0.25.1440.875@0.25.1440.875" timestamp="1653851526954" />
+    <state width="1398" height="282" key="GridCell.Tab.1.center" timestamp="1653851526954">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.1.center/0.25.1440.875@0.25.1440.875" timestamp="1653851526954" />
+    <state width="1398" height="282" key="GridCell.Tab.1.left" timestamp="1653851526953">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.1.left/0.25.1440.875@0.25.1440.875" timestamp="1653851526953" />
+    <state width="1398" height="282" key="GridCell.Tab.1.right" timestamp="1653851526954">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="282" key="GridCell.Tab.1.right/0.25.1440.875@0.25.1440.875" timestamp="1653851526954" />
+>>>>>>> task4_done
     <state width="509" height="445" key="SwitcherDM" timestamp="1653646110940">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -213,4 +334,18 @@
     </state>
     <state x="385" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1653650215216" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+>>>>>>> task4_done
 </project>
