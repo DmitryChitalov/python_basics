@@ -5,3 +5,16 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+subj = {}
+get_value = lambda s: int(s[:s.index('(')]) if '(' in s else 0
+
+with open('file_6.txt', 'r', encoding='utf-8') as file:
+    for line in file:
+        subject, lecture, practice, lab = line.split()
+        subject = subject[:-1]
+        lecture = get_value(lecture)
+        practice = get_value(practice)
+        lab = get_value(lab)
+        subj[subject] = lecture + practice + lab
+    print(f'Total number of hours per subject: {subj}')
