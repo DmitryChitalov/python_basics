@@ -7,3 +7,16 @@
 Иванов 23543.12
 Петров 13749.32
 """
+name_staff = []
+total = 0
+count = 0
+with open("input.txt", "r", encoding='utf-8') as file:
+    for line in file:
+        num = float(line.split()[-1])
+        if num < 20000:
+            name_staff.append(line.split()[0])
+        count += 1
+        total += num
+average = total / count
+print('Сотрудники с окладом ниже 20 тыс.:', *name_staff, sep='\n')
+print(f'Средний доход сотрудников: {average:.2f}')
