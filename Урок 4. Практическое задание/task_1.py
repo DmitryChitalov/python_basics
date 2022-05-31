@@ -6,3 +6,9 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+script_name, production, stavka, prize = argv
+
+print(f"{((float(production) * float(stavka)) + float(prize)):.2f}")

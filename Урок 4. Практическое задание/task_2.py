@@ -7,3 +7,24 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+from sys import argv
+from random import randint
+
+prog_name, gen, count = argv
+
+my_list = []
+if(gen == 'y'):
+    my_list = [randint(0, 1000) for i in range(0, int(count))]
+elif(gen == 'n'):
+    for i in range(0, int(count)):
+        my_list.append(int(input("Введите число: ")))
+
+print(my_list)
+i = 1
+ret_list = []
+while(i < int(count)):
+    if(my_list[i - 1] < my_list[i]):
+        ret_list.append(my_list[i])
+    i += 1
+print(ret_list)
+
