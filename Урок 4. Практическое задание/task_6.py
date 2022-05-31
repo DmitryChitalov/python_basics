@@ -12,3 +12,16 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import  count, cycle
+
+for i in count(int(input('Enter number'))):
+    if i > 10:
+        break
+    else: print(i)
+my_list = ['Max', 'Kate', 'Ann']
+c = 0
+for i in cycle(my_list):
+    if c > 10:
+        break
+    else: print(i)
+    c += 1
