@@ -7,7 +7,7 @@
 """
 
 from functools import reduce
-chetn = [el for el in range(10, 15) if el % 2 == 0]
-print(chetn)
-result = reduce(lambda a, b: a * b, chetn)
+even = [el for el in range(10, 15) if el % 2 == 0]
+print(even)
+result = reduce(lambda a, b: a * b, even)
 print(result)
