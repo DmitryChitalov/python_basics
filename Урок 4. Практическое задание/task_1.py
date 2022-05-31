@@ -6,3 +6,7 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+_, vyrb, stav, prem = argv
+f = int(vyrb) * int(stav) + int(prem)
+print(f)
