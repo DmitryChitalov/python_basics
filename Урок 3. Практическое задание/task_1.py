@@ -17,3 +17,14 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def my_fun(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        print("ОШИБКА: деление на ноль.")
+        quit()
+
+a = float(input("Введите a: "))
+b = float(input("Введите b: "))
+print(f"{my_fun(a, b):.1f}")

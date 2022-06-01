@@ -25,3 +25,32 @@
 “ед”: [“шт.”]
 }
 """
+my_struct = []
+count = 1
+while(True):
+    action = input("Действие 1 - добавить, 2 - выход: ")
+    if(action == "2"):
+        break;
+    elif(action == "1"):
+        my_dict = {}
+        print("Введите:")
+        my_dict.setdefault("Название",   input("Название: "))
+        my_dict.setdefault("Цена",       float(input("Цена: ")))
+        my_dict.setdefault("Количество", int(input("Количество: ")))
+        my_dict.setdefault("Ед",         input("Ед. измерения: "))
+        my_struct.append((count, my_dict))
+        count += 1
+print(my_struct)
+analytics = {}
+for i, val in enumerate(my_struct):
+    # вместо списка [] можно множество set
+    p = analytics.setdefault("Название", [])
+    p.append(val[1].get("Название"))
+    p = analytics.setdefault("Цена", [])
+    p.append(val[1].get("Цена"))
+    p = analytics.setdefault("Количество", [])
+    p.append(val[1].get("Количество"))
+    p = analytics.setdefault("Ед", [])
+    p.append(val[1].get("Ед"))
+print("------------------------")
+print(analytics)

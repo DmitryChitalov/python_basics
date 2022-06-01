@@ -8,3 +8,13 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+
+list1 = ["зима", "весна", "лето", "осень"]
+my_list = []
+my_dict = {}
+for i in range(0, 12):
+    my_list.append(list1[i // 3])
+    my_dict.setdefault(i, list1[i // 3])
+i = int(input("Введите число месяца: ")) - 1
+print(f"Список: {my_list[i]}")
+print(f"Словарь: {my_list[i]}")

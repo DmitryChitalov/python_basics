@@ -12,3 +12,20 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+from random import randint
+
+for val in count(int(input("Введите начальное значение: "))):
+    if(val > randint(0, 100)):
+        break;
+    else:
+        print(val)
+
+count = 0;
+for val in cycle(input("Введите список значение разделенных пробелом: ").split(" ")):
+    if(count > randint(0, 100)):
+        break
+    print(val)
+    count += 1
+

@@ -6,3 +6,14 @@
 Пример исходного списка: [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11].
 Результат: [23, 1, 3, 10, 4, 11]
 """
+
+from random import randint
+
+my_list = [randint(0, 100) for val in range(0, randint(1, 10))]
+print(my_list)
+list2 = []
+for val in my_list:
+    if(my_list.count(val) == 1):
+        list2.append(val)
+print(list2)
+
