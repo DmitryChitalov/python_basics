@@ -6,3 +6,15 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+sum_1, time_1, salary_1, bonus_1 = argv
+try:
+    time_1 = int(time_1)
+    salary_1 = int(salary_1)
+    bonus_1 = int(bonus_1)
+    sum_1 = time_1 * salary_1 + bonus_1
+    print(f'Зарплата  {sum_1}')
+except ValueError:
+    print('None')
