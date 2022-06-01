@@ -6,10 +6,14 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+import sys
+
+f_obj, name_v, work_v, hours_v, bonus_v = sys.argv
 
 
-def salary(working, hours, bonus):
-    return (working * hours) + bonus
+def salary(work, hours, bonus):
+    print(
+        f'Заработная плата сотрудника {name_v} составила: {int(work) * int(hours) + int(bonus)}')
 
 
-print(salary(180, 1300, 60000))
+salary(work_v, hours_v, bonus_v)
