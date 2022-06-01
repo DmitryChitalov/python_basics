@@ -12,3 +12,32 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+
+def script_a(start, finish):
+    res = []
+    for el in count(start):
+        if el > finish:
+            break
+        else:
+            res.append(el)
+    return res
+
+
+lst = ['el_1', 'el_2', 'el_3', 'el_4']
+
+
+def script_b(finish):
+    counter = 0
+    for el in cycle(lst):
+        if counter > finish:
+            break
+        else:
+            print(el)
+            counter += 1
+
+
+print(script_a(3, 10))
+print(script_b(10))

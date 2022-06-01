@@ -6,3 +6,15 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+
+def payment_calc():
+    salary = int(argv[1])
+    time = int(argv[2])
+    bonus = int(argv[3])
+    return time * salary + bonus
+
+
+print(f'Зарплата сотрудника:  {payment_calc()}')
