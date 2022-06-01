@@ -9,4 +9,3 @@ with open('new_f', 'r', encoding='utf-8') as f:
         count = i
     print('количество строк = ', count+1)
 
-
