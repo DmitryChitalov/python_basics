@@ -10,15 +10,18 @@ email: jackie@gmail.com, телефон: 01005321456
 """
 
 
-def s_calc():
-    n_1 = input("Введите имя: ")
-    n_2 = input("Введите фамилию: ")
-    y_1 = input("Введите год рождения: ")
-    s_1 = input("Введите город проживания: ")
-    email = input("Введите email: ")
-    ph_1 = input("Введите телефон : ")
-    return (f"Имя: {n_1} Фамилия: {n_2} Год рождения: {y_1} "
-            f"Город проживания: {s_1} email: {email} Телефон: {ph_1}")
+def user_1(name, surname, year_of_birth, city, email, phone):
+    return print(f'{name} {surname} '
+                 f'{year_of_birth} года рождения, '
+                 f'проживает в городе {city}, '
+                 f'email: {email}, телефон: {phone}')
 
 
-print(s_calc())
+user_1(
+    name=input('Имя: '),
+    surname=input('Фамилия: '),
+    year_of_birth=input('Год рождения: '),
+    city=input('Город проживания: '),
+    email=input('email: '),
+    phone=input('phone: '),
+)

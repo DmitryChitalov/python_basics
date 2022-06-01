@@ -19,7 +19,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Python.task_4">
+  <component name="RunManager" selected="Python.task_2">
     <configuration name="task_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Урок 3. Практическое задание" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -106,9 +106,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.task_4" />
-        <item itemvalue="Python.task_3" />
         <item itemvalue="Python.task_2" />
+        <item itemvalue="Python.task_3" />
+        <item itemvalue="Python.task_4" />
         <item itemvalue="Python.task_1" />
       </list>
     </recent_temporary>
