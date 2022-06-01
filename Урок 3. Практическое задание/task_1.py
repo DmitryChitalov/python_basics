@@ -1,13 +1,7 @@
-def my_func(x, y):
-    try:
-        z = x / y
-        return z
-    except ZeroDivisionError:
-        return "y is'n be a zero"
-    except ValueError:
-        return "enter only number"
+def my_func(name, surname, byear, city, email, phone):
+    print(name, surname, byear, city, email, phone)
 
 
-print(my_func(int(input("Enter x = ")), int(input("Enter y = "))))
-
+my_func(name='sergey', surname='nechaev', byear=1990, city='tver', email='nechaevserega90@gmail.com',
+        phone='8-900-300-10-10')
 
