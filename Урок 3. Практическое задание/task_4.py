@@ -5,3 +5,20 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def ls_3(x, y):
+    if y >= 0:
+        return None
+    result = 1
+    for i in range(0, y, -1):
+        result *= x
+    return 1 / result
+
+
+x = 10
+y = -3
+
+result = ls_3(x, y)
+if result:
+    print(f'{x}, в степени  {y} равно {result}')

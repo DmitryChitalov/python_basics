@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def s_calc(r_val, h_val):
+    try:
+        return r_val / h_val
+    except ZeroDivisionError:
+        return "What are you? Trying to divide by 0! "
+
+
+r_val = float(input("Enter the number: "))
+h_val = float(input("Enter the number: "))
+print(s_calc(r_val, h_val))
