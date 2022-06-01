@@ -6,3 +6,8 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+script_name, hours, price, reward = argv
+
+print(f'Заработная плата сотрудника: {(float(hours) * float(price)) + float(reward)}')
