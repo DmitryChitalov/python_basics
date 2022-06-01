@@ -8,3 +8,16 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+def int_func(text):
+    return text.title()
+
+while(True):
+    my_str = input("Введите стрку: ")
+    if(my_str == "quit"):
+        break
+    else:
+        str_join = ""
+        for val in my_str.split(" "):
+            str_join += int_func(val) + " "
+        print(str_join)
