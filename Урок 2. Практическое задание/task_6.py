@@ -25,3 +25,19 @@
 “ед”: [“шт.”]
 }
 """
+products = [
+    (1, {'название': 'компьютер', 'цена': 20000, 'количество': 5, 'eд': 'шт.'}),
+    (2, {'название': 'принтер', 'цена': 6000, 'количество': 2, 'eд': 'шт.'}),
+    (3, {'название': 'сканер', 'цена': 2000, 'количество': 7, 'eд': 'шт.'})
+]
+
+names_list, prices_list, counts_list, units_list = [], [], [], []
+res_dict = {}
+for i in range(len(products)):
+    names_list.append(products[i][1]['название'])
+    prices_list.append(products[i][1]['название'])
+    counts_list.append(products[i][1]['название'])
+    units_list.append(products[i][1]['название'])
+
+res_dict.update({'названия': names_list, 'цены': prices_list, 'количества': counts_list, 'единицы': units_list})
+print(res_dict)
