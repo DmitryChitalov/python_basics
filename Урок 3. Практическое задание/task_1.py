@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+a = int(input("Введите 1 число: "))
+b = int(input("Введите 2 число: "))
+
+
+def first_second(a, b):
+    try:
+        print(f"Делим {a} на {b} = {a / b}")
+    except:
+        print("На 0 делить нельзя!!")
+
+
+first_second(a, b)
