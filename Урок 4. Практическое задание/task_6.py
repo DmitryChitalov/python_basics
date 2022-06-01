@@ -12,3 +12,18 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count
+from itertools import cycle
+
+for el in count(3):
+    if el > 10:
+        break
+    print(el)
+
+b = 0
+for el in cycle('HELLO '):
+    if b > 10:
+        break
+    print(el)
+    b += 1
