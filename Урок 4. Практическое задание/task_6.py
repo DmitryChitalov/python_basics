@@ -12,3 +12,26 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+
+from itertools import cycle, count
+st_1 = int(input('Start number: '))
+tp_1 = st_1 * 2 + 10 + 1
+ls_1 = [i for i in range(tp_1)]
+for i in count(st_1):
+    if i < tp_1:
+        print(i)
+    else:
+        break
+del i
+
+count = 0
+for c in cycle(ls_1):
+    if count < tp_1 + 10:
+        print(c)
+        count += 1
+    else:
+        break
+
+
+
