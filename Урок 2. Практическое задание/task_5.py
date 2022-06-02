@@ -15,3 +15,8 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_list = [7, 5, 3, 3, 2]
+num = int(input('Номер вашего рейтинга: '))
+my_list.append(num)
+my_list.sort(reverse=True)
+print(my_list)
