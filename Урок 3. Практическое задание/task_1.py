@@ -17,3 +17,18 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def div(num, den):
+    try:
+        return num / den
+    except ZeroDivisionError:
+        return 'Вы что? Пытаетесь делить на 0!'
+
+
+try:
+    input_num = int(input('Введите первое число: '))
+    input_den = int(input('Введите второе число: '))
+    print(div(input_num, input_den))
+except ValueError:
+    print('Пожалуйста, введите числа!')
