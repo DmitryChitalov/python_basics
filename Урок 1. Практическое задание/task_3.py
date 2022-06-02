@@ -10,4 +10,4 @@ n + nn + nnn = 369
 """
 n = int(input('Введите число n: '))
 
-print(f'n + nn + nnn = {n + n ** 2 + n ** 3}')
+print(f'n + nn + nnn = {n + n * 11 + n * 111}')

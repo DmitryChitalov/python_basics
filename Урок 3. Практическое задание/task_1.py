@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+num = int(input('Введите первое число: '))
+den = int(input('Введите второе число: '))
+
+
+def div():
+    try:
+        num / den
+    except ZeroDivisionError:
+        return 'Вы что? Пытаетесь делить на 0!'
+    return num / den
+
+
+print(div())
