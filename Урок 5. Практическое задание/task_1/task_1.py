@@ -11,4 +11,5 @@ with open('xyz.txt', 'w') as f:
         else:
             break
 
-
+with open('xyz.txt', 'r') as f:
+    print(f.read())
