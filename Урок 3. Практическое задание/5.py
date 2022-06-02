@@ -6,3 +6,22 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def el_string_sum(string, ind):
+    arr = string.split(" ")
+    mas = []
+    try:
+        for el in arr:
+            ind = el
+            mas.append(int(el))
+    except ValueError:
+        return sum(mas), ind
+    return sum(mas), ind
+
+
+fin_sum = 0
+index = ''
+while index != 'q':
+    enter = input('Введите ряд цифр раздёлённых пробелом,для выхода нажмите q: ')
+    tmp, index = el_string_sum(enter, index)
+    fin_sum += tmp
+    print(f'sum = {fin_sum}')
