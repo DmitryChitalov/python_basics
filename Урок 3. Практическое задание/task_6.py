@@ -8,3 +8,21 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(my_str):
+    return my_str.title()
+
+
+print(int_func('lorem'))
+
+
+def text_int_func(my_txt):
+    list_words = []
+    lst = my_txt.split()
+    for i in lst:
+        list_words.append(int_func(i))
+    print(*list_words)
+
+
+text_int_func('lorem ipsum is simply dummy text of the printing and typesetting industry')
