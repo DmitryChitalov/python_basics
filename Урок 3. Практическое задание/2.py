@@ -8,23 +8,15 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
-restart = True
-while restart:
-    a = input('Ваше имя: ')
-    b = int(input('Ваш возраст: '))
-    c = int(input('Ваш год рождения: '))
-    d = (str(input('Ваш email: ')))
-    e = int(input('Ваш номер телефона: '))
-
-
-    def questionnaire(a, b, c, d, e):
-        try:
-            print(f"данные вашей накеты: имя:{a}, возраст:{b}, год рождения:{c}, email:{d}, номер телефона:{e}.")
-        finally:
-            print('Спасибо за заполнение анкеты.')
-
-
-    questionnaire(a, b, c, d, e)
-    restart = input("Хотити заполнить анкету снова?(Да/Нет)")
-    if restart == "Нет":
-        restart = False
+def user_data(**user): 
+    print(f"\nДанные вашей анкеты: {user['name']}, {user['year']} "
+          f"года рождения," f" проживает в городе {user['town']}, email: "
+          f"{user['pochta']}, телефон: {user['tel']}") 
+ 
+ 
+a = input("Ваше имя: ") 
+b = input("Ваш год рождения: ") 
+c = input("Ваш город проживания: ") 
+d = input("Ваш email: ") 
+e = input("'Ваш номер телефона:  ") 
+user_data(name=a, year=b, town=c, pochta=d, tel=e)
