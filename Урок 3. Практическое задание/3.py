@@ -10,3 +10,16 @@ def my_func(arg1, arg2, arg3):
 
 
 my_func(int(input("Аргумент 1: ")), int(input("Аргумент 2: ")), int(input("Аргумент 3: ")))
+
+
+####
+def my_func(arg1, arg2, arg3):                                                                                 
+    my_list = [val1, val2, val3]
+    my_list.sort()
+    return my_list[1] + my_list[2]  
+
+arg1 = int(input('Аргумент 1: '))
+arg2 = int(input('Аргумент 2: '))
+arg3 = int(input('Аргумент 3: '))    
+
+print(f"Сумма двух наибольших аргументов равна: {my_func(arg1, arg2, arg3)}")
