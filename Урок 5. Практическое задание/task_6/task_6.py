@@ -5,3 +5,15 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+import re
+
+up = {}
+try:
+    with open("t6.txt", encoding="utf-8") as f_obj:
+        for line in f_obj:
+            name, hours = line.split(':')
+            up[name] = (sum(map(int, re.findall(r'\d+', hours))))
+    print(up)
+except FileNotFoundError:
+    print("Файл не найден!")
