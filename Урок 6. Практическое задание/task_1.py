@@ -15,3 +15,26 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+
+colors = ["Red", "Yellow", "Green"]
+
+
+class TrafficLight:
+    __color: str = ""
+
+    def running(self):
+        for i in range(0, 10):
+            index = i % 3
+            self.__color = colors[index]
+            print(f'The traffic light switches to: {self.__color}')
+            if index == 0:
+                sleep(7)
+            elif index == 1:
+                sleep(2)
+            else:
+                sleep(10)
+
+
+traffic_light = TrafficLight()
+traffic_light.running()
