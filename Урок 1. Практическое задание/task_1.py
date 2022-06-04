@@ -11,3 +11,7 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+name = input('Enter your name ==>')
+passwd = input('Enter your pass ==>')
+age = input('Enter your age ==>')
+print(f'Ваши данные для входа в аккаунт: имя - {name}, пароль - {passwd}, возраст - {age}')

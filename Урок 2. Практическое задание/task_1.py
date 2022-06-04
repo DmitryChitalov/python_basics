@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+data_list = [5, 'string', 0.15, True, None]
+
+for item in data_list:
+    print(type(item))

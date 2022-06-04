@@ -7,3 +7,17 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+initial_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+#Без генератора
+iter_lst = []
+for item in initial_list:
+    if item > initial_list[initial_list.index(item) - 1]:
+        iter_lst.append(item)
+iter_lst.pop(0)
+
+#С генератором
+gen_lst = list([el for el in initial_list if el > initial_list[initial_list.index(el) - 1]])[1:]
+
+print(f'Без генератора: {iter_lst}\nС генератором: {gen_lst}')

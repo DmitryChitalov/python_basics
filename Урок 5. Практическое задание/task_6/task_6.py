@@ -5,3 +5,17 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+with open('Урок 5. Практическое задание/task_6/task_6.txt', 'r', encoding='utf-8') as f:
+    result_dict = {}
+    data = f.readlines()
+    for item in data:
+        total = 0
+        for piece in item.split():
+            num = ''
+            for symbol in piece:
+                if symbol.isdigit():
+                    num += symbol
+            if num:
+                total += int(num)
+        result_dict[item.split()[0][:-1]] = total
+    print(result_dict)

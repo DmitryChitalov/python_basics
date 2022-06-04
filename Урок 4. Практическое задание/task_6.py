@@ -12,3 +12,21 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+#а)
+from itertools import count, cycle
+
+
+for item in count(3):
+    if item > 10:
+        break
+    else:
+        print(item)
+
+#b)
+count = 0
+for item in cycle(['Its', 'endless', 'cycle']):
+    if count > 10:
+        break
+    else:
+        print(item)
+        count += 1
