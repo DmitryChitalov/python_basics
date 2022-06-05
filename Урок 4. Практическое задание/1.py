@@ -8,5 +8,5 @@
 """
 from sys import argv
     script, vyrb, stav, prem = argv
-    f = (int(vyrb) * int(stav)) + int(prem)
+    f = int(vyrb) * int(stav) + int(prem)
 print(f)
