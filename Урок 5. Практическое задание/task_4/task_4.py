@@ -7,3 +7,13 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+import json
+
+with open('employees.json', encoding='utf-8') as read_f:
+    emp_dict = json.load(read_f)
+    print(f'Сотрудники, имеющие оклад менее 20 тыс.: ')
+    for keys, values in emp_dict.items():
+        if values < 20000:
+            print(keys)
+    print(f'\nСредняя величина дохода сотрудников = {sum(emp_dict.values())/len(emp_dict):.2f}')
