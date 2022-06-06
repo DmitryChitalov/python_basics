@@ -25,3 +25,56 @@
 
 Два класса: абстрактный и Clothes
 """
+
+from abc import ABC, abstractmethod
+
+
+class Clothes(ABC):
+    @abstractmethod
+    def calculate_consumption(self):
+        raise NotImplementedError
+
+
+class Coat(Clothes):
+    size: int
+
+    def __init__(self, size: int):
+        self.size = size
+
+    @property
+    def calculate_consumption(self):
+        return round(self.size / 6.5 + 0.5, 2)
+
+
+class Suit(Clothes):
+    _height: float
+
+    def __init__(self, height: float):
+        self.height = height
+
+    @property
+    def calculate_consumption(self):
+        return round(2 * self.height + 0.3, 2)
+
+
+class Composite(Clothes):
+    _children: list
+
+    def __init__(self, children: list):
+        self._children = children
+
+    @property
+    def calculate_consumption(self):
+        total_consumption = 0
+        for item in self._children:
+            total_consumption += item.calculate_consumption
+        return total_consumption
+
+
+coat = Coat(56)
+suit = Suit(1.8)
+composite = Composite([coat, suit])
+
+print(f'The cloth consumption for coat equals: {coat.calculate_consumption} m')
+print(f'The cloth consumption for suit equals: {suit.calculate_consumption} m')
+print(f'The total cloth consumption for all clothes equals: {composite.calculate_consumption}')
