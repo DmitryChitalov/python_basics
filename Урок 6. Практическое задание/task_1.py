@@ -15,6 +15,7 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+"""
 import time
 
 class TrafficLight():
@@ -71,3 +72,18 @@ tl3.running()
 # Инициализируем класс красным цветом, а метод запускаем с желтого
 tl1 = TrafficLight('красный')
 tl1.running('желтый')
+"""
+
+
+class Perv:
+    a = "Русский"
+    b = 100
+
+    def __init__(self, c, d, e):
+        self.c = c
+        self.d = int(d)
+        self.e = e
+
+    def c + d:
+
+    c
