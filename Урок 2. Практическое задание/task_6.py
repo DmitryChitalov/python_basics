@@ -25,3 +25,20 @@
 “ед”: [“шт.”]
 }
 """
+
+goods = []
+char = ['название', 'цена', 'количество', 'ед']
+for id, items in enumerate(range(1, 4)):
+    #print(id, items)
+    lis = []
+    dic = {}
+    for i, k in enumerate(char):
+        dic[k] = input(f'{char[i]}: ')
+    for i in range(1):
+        lis.append(items)
+        lis.append(dic)
+    tup = tuple(lis)
+    goods.append(tup)
+    #print(goods, tup, dic, end= '/n')
+
+print(goods)

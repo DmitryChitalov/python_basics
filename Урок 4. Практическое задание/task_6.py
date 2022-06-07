@@ -12,3 +12,22 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+num = []
+for i in count(3):
+    num.append(i)
+    if i == 10:
+        break
+print(num)
+
+bum = []
+
+for i, k in enumerate(cycle('abc')):
+    #print(i, k, end=' ')
+    bum.append(k)
+    i += 1
+    if i == 10:
+        break
+print(bum)
