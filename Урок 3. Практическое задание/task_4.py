@@ -5,3 +5,13 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+x = int(input())
+y = int(input())
+
+def my_func(x, y):
+    res = x
+    for _ in range(y-1):
+        res = res * x
+    return res
+
+print(my_func(x, y))
