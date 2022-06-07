@@ -1,0 +1,4 @@
+Petrov 12000
+Ivanov 21000
+Andreev 15000
+Antonov 25000
