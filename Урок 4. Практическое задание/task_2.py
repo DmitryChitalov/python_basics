@@ -7,3 +7,14 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+from random import randint as rnd
+
+arr = (rnd(1000) for i in range(20))
+mas = [el for el in arr]
+arr = []
+for i in range(1, len(mas)):
+    if mas[i] > mas[i - 1]:
+        arr.append(mas[i])
+
+print(mas, '\n', arr)

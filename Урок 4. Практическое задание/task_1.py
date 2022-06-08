@@ -6,3 +6,18 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+vyr, stavka, prem = 0, 0, 0
+
+try:
+    vyr = int(argv[1])
+    stavka = int(argv[2])
+    prem = int(argv[3])
+except IndexError:
+    print(f"[!] - argv required")
+    exit(-1)
+
+S = (vyr * stavka) + prem
+print(S)
