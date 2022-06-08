@@ -12,3 +12,21 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import cycle
+from itertools import count
+
+for i in count(int(input("input num: "))):
+    if i > 10:
+        print()
+        break
+    else:
+        print(i, end=" ")
+
+c = 0
+for i in cycle("ABC"):
+    if c > 5:
+        break
+    else:
+        print(i, end=' ')
+        c += 1
