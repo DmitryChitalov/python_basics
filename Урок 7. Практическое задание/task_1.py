@@ -28,3 +28,35 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+
+    def __init__(self, list_1, list_2, list_3):
+        self.list_1 = list_1
+        self.list_2 = list_2
+        self.list_3 = list_3
+        self.my_list = [list_1, list_2, list_3]
+
+    def __str__(self):
+        return '\n'.join(map(str, self.my_list))
+
+    def __add__(self, other):
+        for i in range(len(self.my_list)):
+            for i_2 in range(len(other.my_list[i])):
+                self.my_list[i][i_2] = self.my_list[i][i_2] + other.my_list[i][
+                    i_2]
+        return f'Сумма матриц: \n' \
+               f'{Matrix.__str__(self)}'
+
+
+
+a = Matrix([1, 2, 3], [4, 5, 6], [7, 8, 9])
+b = Matrix([1, 2, 3], [4, 5, 6], [7, 8, 9])
+
+print(a)
+print()
+print(b)
+print(a + b)
+
+
