@@ -18,3 +18,4 @@ try:
     file_input.writelines(result)
 except IOError:
     print("Произошла ошибка ввода-вывода!")
+
