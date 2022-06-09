@@ -8,3 +8,11 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+n = int(input("Введите число n: "))
+c1 = n + n
+c2 = n + n + n
+n = str(n)
+c1 = str(c1)
+c2 = str(c2)
+b = (n + c1 + c2)
+print("Результат равен:", b)
