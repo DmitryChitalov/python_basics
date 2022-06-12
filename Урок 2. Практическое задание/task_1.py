@@ -1,17 +1,26 @@
-"""
-Задание 1. Создать список и заполнить его элементами различных типов данных.
-Реализовать проверку типа данных каждого элемента.
-Использовать функцию type() для проверки типа.
-Элементы списка можно не запрашивать у пользователя,
-а указать явно, в программе.
+my_int = (1)
+print(my_int)
+print(type(my_int))
 
-Пример:
-для списка [5, "string", 0.15, True, None]
-результат
+my_str = "привет"
+print(my_str)
+print(type(my_str))
 
-<class 'int'>
-<class 'str'>
-<class 'float'>
-<class 'bool'>
-<class 'NoneType'>
-"""
+a = 100
+b = 12.5
+c = a + b
+print(a + b)
+print(type(a + b))
+
+a = bool(10)
+print(a)
+print(type(a))
+
+
+def has_no_return():
+    pass
+
+
+has_no_return()
+
+print(type(has_no_return()))
