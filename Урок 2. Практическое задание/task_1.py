@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+list1 = [11, 1.123, 'task', None]
+for el in list1:
+    print(type(el))

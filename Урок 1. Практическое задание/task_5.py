@@ -18,3 +18,28 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+task5:
+
+revenue = int(input('Введите количество выручки фирмы: ' ))
+costs = int(input('Введите количество издержек фирмы: '))
+if revenue > costs:
+    print(f"Прибыль фирмы составляет {revenue - costs}")
+elif revenue < costs:
+    print((f"Убыток фирмы составляет {revenue - costs}"))
+
+
+
+
+task6:
+
+revenue = int(input('Введите количество выручки фирмы: ' ))
+costs = int(input('Введите количество издержек фирмы: '))
+if revenue > costs:
+    profitability = ((revenue - costs) / costs)
+    print(f"Рентабельность фирмы равняется: {profitability}")
+    staff = int(input('Введите количество сотрудников: '))
+    salary = (revenue - costs) / staff
+    print(f"Прибыль одного сотрудника составляет: {salary}")
+else:
+    print((f"Издежки фирмы больше выручки, зарплаты не будет"))
