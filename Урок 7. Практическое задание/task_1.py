@@ -53,5 +53,5 @@ class Matrix():
 test_mtrx = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 m1 = Matrix(test_mtrx)
 m2 = Matrix(test_mtrx)
-m3 = m1.__add__(m2)
+m3 = m1 + m2
 print(m3)
