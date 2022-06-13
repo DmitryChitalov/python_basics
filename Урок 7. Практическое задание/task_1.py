@@ -28,3 +28,30 @@
 8 10 12
 14 16 18
 """
+
+class Matrix:
+    def __init__(self, lis):
+        self.mx = lis
+
+    def __str__(self):
+        s = ''
+        for i in self.mx:
+            for k, item in enumerate(i):
+                s = s + ' ' + str(item)
+                if k == 2 or k == 5:
+                    s = s + '\n'
+        return s
+
+
+
+
+
+a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+b = a.copy()
+
+k = Matrix(a)
+print(k.__dict__)
+print(k)
+
+
+
