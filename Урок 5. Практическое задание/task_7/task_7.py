@@ -15,7 +15,7 @@
 import json
 
 
-def averageProfit(income):
+def average_profit(income):
     summ = 0
     count = 0
     for el in income.values():
@@ -24,7 +24,7 @@ def averageProfit(income):
     return summ / count
 
 
-def firmsIncome(data):
+def firms_income(data):
     res = {}
     for item in data:
         res[item.split()[0]] = float(item.split()[2]) - float(item.split()[3])
@@ -32,11 +32,11 @@ def firmsIncome(data):
 
 
 with open('text.txt', 'r', encoding='utf-8') as f:
-    average_profit = {'average_profit': None}
-    income = firmsIncome(f.readlines())
-    average_profit_value = averageProfit(income)
-    average_profit['average_profit'] = average_profit_value
-    result = [income, average_profit]
+    average_p = {'average_profit': None}
+    income = firms_income(f.readlines())
+    average_profit_value = average_p(income)
+    average_p['average_profit'] = average_profit_value
+    result = [income, average_p]
     with open('result.json', 'w', encoding='utf-8') as res_json:
         json.dump(result, res_json)
 

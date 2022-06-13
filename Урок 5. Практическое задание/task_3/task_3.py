@@ -12,7 +12,7 @@ Four — 4
 dictionary = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
 
 
-def writeToRu(line):
+def write_to_ru(line):
     with open('result.txt', 'a', encoding='utf-8') as f_ru:
         f_ru.write(f'{line}')
 
@@ -21,4 +21,4 @@ with open('text.txt', 'r', encoding='utf-8') as f_en:
     for line in f_en:
         spl = line.split(' ')
         ru_line = line.replace(spl[0], dictionary.get(spl[0]))
-        writeToRu(ru_line)
+        write_to_ru(ru_line)

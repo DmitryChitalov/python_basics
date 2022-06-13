@@ -6,14 +6,14 @@
 import random
 
 
-def writeToFile():
+def write_to_file():
     with open('numbers.txt', 'a', encoding='utf-8') as f_num:
         for num in range(10):
             number = random.randint(0, 10)
             f_num.write(f'{number} ')
 
 
-writeToFile()
+write_to_file()
 with open('numbers.txt', 'r', encoding='utf-8') as file:
     content = file.readline()
     numbers = content.split()
