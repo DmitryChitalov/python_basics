@@ -42,6 +42,17 @@ class Matrix:
                     s = s + '\n'
         return s
 
+    def __add__(self, other):
+        new_li = []
+        for i in range(len(self.mx)):
+            em = []
+            for k in range(len(self.mx[i])):
+                num = self.mx[i][k] + other.mx[i][k]
+                em.append(num)
+            new_li.append(em)
+        return Matrix(new_li)
+
+
 
 
 
@@ -50,8 +61,12 @@ a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 b = a.copy()
 
 k = Matrix(a)
-print(k.__dict__)
+mi = Matrix(b)
+print(k.__dict__, mi.__dict__)
+print(mi)
 print(k)
+
+print(mi + k)
 
 
 
