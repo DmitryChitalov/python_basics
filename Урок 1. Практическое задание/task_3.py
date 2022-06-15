@@ -8,3 +8,13 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+while True:
+    try:
+        n = int(input("Введите число n: "))
+        if n > 0:
+            break
+        print("Число должно быть положительным и отличаться от 0")
+    except ValueError:
+        print("Число не введено. Введите число: ")
+print(f"n + nn + nnn= {n+n*11+n*111}")
