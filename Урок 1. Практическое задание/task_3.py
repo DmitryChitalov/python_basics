@@ -9,9 +9,8 @@
 n + nn + nnn = 369
 """
 n = int(input("Введите число n: "))
-d1 = str(n)
-d2 = d1 + d1
-d3 = d1 + d1 + d1
-comp = n + int(d2) + int(d3)
-print(f"n + nn + nnn = {comp}")
-print(f"{d1} + {d2} + {d3} = {comp}")  # test
+comp = str(n) + str(n * 2) + str(n * 3)
+print(f'n + nn + nnn = {comp}')  # var1
+print(f"n + nn + nnn = {n+(n*11)+(n*111)}")  # var2
+print(f"n + nn + nnn = {n*(1+11+111)}")  # var3
+print(f"n + nn + nnn = {str(n) + str(n * 2) + str(n * 3)}")  # var4

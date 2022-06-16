@@ -11,8 +11,8 @@
 Самая большая цифра в числе: 9
 """
 numb = input('Ведите целое положительное число: ')
-max_numb=0
+max_numb = 0
 for x in numb:
     while int(x) > max_numb:
-        max_numb=int(x)
+        max_numb = int(x)
 print(f"Самая большая цифра в числе: {max_numb} ")
