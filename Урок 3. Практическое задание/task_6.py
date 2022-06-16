@@ -8,3 +8,16 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+def int_func(wo):
+    return wo.capitalize()
+
+print(int_func('text'))
+
+
+def int_func2(words):
+    for i in range(len(words)):
+        words[i] = words[i].capitalize()
+    return ' '.join(words)
+
+print(int_func2(input().split()))
