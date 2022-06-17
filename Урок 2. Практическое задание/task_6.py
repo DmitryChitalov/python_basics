@@ -37,12 +37,11 @@ while True:
         break
     num += 1
     if control == 's':
-        print(f'\n Список \n ')   # {"-" * 30} [:25]:>30
+        print('\n Список \n ')
         for key, value in show_list.items():
             print(f'{key}: {value}')
-            # print("-" * 30)
     for f in features.keys():
         feature = input(f'Введите параментр "{f}": ')
-        features[f] = int(feature) if (f == 'цена' or f == 'кол-во') else feature
+        features[f] = int(feature) if (f in ('цена', 'кол-во')) else feature
         show_list[f].append(features[f])
     goods.append((num, features))
