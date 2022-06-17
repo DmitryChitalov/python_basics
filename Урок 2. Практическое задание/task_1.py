@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+new_list = [7, 'text', 234, 678.1, None]
+
+for el in new_list:
+    print(type(el))
