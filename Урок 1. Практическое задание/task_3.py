@@ -9,9 +9,9 @@
 n + nn + nnn = 369
 """
 
-n = int(input('Введите число n: '))
-temp = str(n)
+n = input('Введите число n: ')
+temp = n
 nn = temp + temp
 nnn = temp + temp + temp
-summ = n + int(nn) + int(nnn)
-print('n + nn + nnn =', summ)
+summ = int(n) + int(nn) + int(nnn)
+print(f'{n} + {nn} + {nnn} =', summ)
