@@ -25,3 +25,23 @@
 “ед”: [“шт.”]
 }
 """
+goods = []
+features = {'названия': '', 'цена': '', 'количество': '', 'ед': ''}
+show_list = {'названия': [], 'цена': [], 'количество': [], 'ед': []}
+num = 0
+feature = None
+control = None
+while True:
+    control = input("Выход '', продолжение 'Enter', показать список 's': ").lower()
+    if control == 'q':
+        break
+    num += 1
+    if control == 's':
+        print('\n Список \n ')
+        for key, value in show_list.items():
+            print(f'{key}: {value}')
+    for f in features.keys():
+        feature = input(f'Введите параментр "{f}": ')
+        features[f] = int(feature) if (f in ('цена', 'кол-во')) else feature
+        show_list[f].append(features[f])
+    goods.append((num, features))

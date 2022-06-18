@@ -11,3 +11,8 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+user_input = input("Ведите список элементов через пробел  >>> ").split()
+
+for el in range(0, len(user_input) - 1, 2):
+    user_input[el], user_input[el + 1] = user_input[el + 1], user_input[el]
+print(user_input)
