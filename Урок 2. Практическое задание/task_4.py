@@ -15,7 +15,7 @@
 2. перерефриж
 """
 print("Введите слова через пробел")
-slova = input()
-slova = slova.split()
-for ind, el in enumerate(slova, 1):
+words = input()
+words = words.split()
+for ind, el in enumerate(words, 1):
     print(ind, el[:10])

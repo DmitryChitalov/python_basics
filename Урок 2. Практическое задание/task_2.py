@@ -12,13 +12,13 @@
 Результат: 2 1 3
 """
 string = input("ВВедите данные  ")
-symbols = list(string)
+symbol = list(string)
 N = 0
-for el in range(len(symbols) - 1):
+for el in range(len(symbol) - 1):
     if el is N:
-        tmp = symbols[el]
-        symbols[el] = symbols[el + 1]
-        symbols[el + 1] = tmp
+        tmp = symbol[el]
+        symbol[el] = symbol[el + 1]
+        symbol[el + 1] = tmp
     else:
         N = N + 2
-print(symbols)
+print(symbol)
