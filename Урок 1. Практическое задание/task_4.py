@@ -10,3 +10,13 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+print("Задание №4")
+maxcheslo = int(input("Введите число "))
+delit = 10
+cheslo1 = 0
+while maxcheslo > 0:
+    cheslo = int(maxcheslo % delit)
+    maxcheslo = int((maxcheslo - cheslo) / delit)
+    if cheslo >= cheslo1:
+        cheslo1 = cheslo
+print(f"{cheslo1}")
