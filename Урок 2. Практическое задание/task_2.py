@@ -11,3 +11,14 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+string = input("ВВедите данные  ")
+symbols = list(string)
+N = 0
+for el in range(len(symbols) - 1):
+    if el is N:
+        tmp = symbols[el]
+        symbols[el] = symbols[el + 1]
+        symbols[el + 1] = tmp
+    else:
+        N = N + 2
+print(symbols)

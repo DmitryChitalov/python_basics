@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+chislo = 10
+spisok = (b"NAme", chislo, 3.1, "age", "Jone")
+for spisoks in spisok:
+    print(type(spisoks))

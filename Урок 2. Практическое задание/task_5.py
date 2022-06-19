@@ -15,3 +15,15 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+new = int(input("Введите число "))
+my_list = [2, 2, 3, 3, 4, 4, 5, 6, 7]
+for el in range(len(my_list)):
+    if my_list[el] == new:
+        my_list.insert(el + 1, new)
+        break
+    elif my_list[0] > new:
+        my_list.insert(0, new)
+    elif my_list[8] < new:
+        my_list.append(new)
+        break
+print(my_list)
