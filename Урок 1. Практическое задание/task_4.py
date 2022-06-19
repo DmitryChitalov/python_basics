@@ -11,11 +11,11 @@
 Самая большая цифра в числе: 9
 """
 number = int(input("Введите число - "))
-value = 0
+VALUE = 0
 
-while (number):
-    if (number % 10 > value):
-        value = number % 10
+while number:
+    if number % 10 > VALUE:
+        VALUE = number % 10
     number //= 10
 
-print(f"Наибольшее число {value}")
+print(f"Наибольшее число {VALUE}")
