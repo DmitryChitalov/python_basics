@@ -19,15 +19,15 @@ i = 0
 
 for number in numbers:
     couple.append(number)
-    i +=1
+    i += 1
     if len(couple) == 2:
         couple.reverse()
         result.extend(couple)
-        i =0
+        i = 0
         couple.clear()
-if len(numbers) % 2 !=0:
+if len(numbers) % 2 != 0:
     result.append(numbers[-1])
+pint(f"Результат: {' '.join(result)}")
 
-print(f"Результат: {' '.join(result)}")
 
 
