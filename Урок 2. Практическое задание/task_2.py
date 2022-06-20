@@ -28,6 +28,3 @@ for number in numbers:
 if len(numbers) % 2 != 0:
     result.append(numbers[-1])
 pint(f"Результат: {' '.join(result)}")
-
-
-
