@@ -19,3 +19,12 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+a = int(input('Введите результат первого дня в км: '))
+b = int(input('Введите результат в км: '))
+days = 1
+kilometers = float(a)
+while kilometers < b:
+    print(f'Результат дня №{days} = {kilometers:.2f}')
+    kilometers = kilometers * 1.1
+    days += 1
+print(f'Спортсмен достиг желаемого результата в {kilometers:.2f} на {days} день')
