@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+example_list = ["дом", 10, 25.78, False, "True", []]
+
+for item in example_list:
+    print(type(item))
