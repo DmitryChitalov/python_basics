@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+user_list = [10, "some-text", "3.14", True, None, {1,2,3}, ("one", "two") ]
+for el in user_list:
+    print(type(el))
