@@ -15,6 +15,7 @@
 2. перерефриж
 """
 
+
 my_list = input("Введите слова через пробел: ")
 new_list = my_list.split()
 x = 1
