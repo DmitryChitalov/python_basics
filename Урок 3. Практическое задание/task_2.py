@@ -8,3 +8,19 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+
+# def func(name: str, famely: str, year: int, city: str, email: str, phone: str):
+# pylint ругается на запись выше
+def func(*args):
+    '''функция вывода данных одной строкой'''
+    print(f'{args[0]} {args[1]} {args[2]} года рождения, '
+          f'проживает в городе {args[3]},\nemail: {args[4]}, телефон: {args[5]}')
+
+
+func(input('Введите Имя: '),
+     input('Введите фамилию: '),
+     input('Введите год рождения: '),
+     input('Введите город проживания: '),
+     input('Введите email: '),
+     input('Введите телефон: '))
