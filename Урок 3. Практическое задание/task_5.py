@@ -6,3 +6,20 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+import sys
+
+s = 0
+while True:
+    num_list = input('Введите строку чисел: ')
+    my_list = num_list.split()
+    try:
+        arr = list(map(int, my_list))
+        s = s + sum(arr)
+    except ValueError:
+        for el in my_list:
+            if el != 'q':
+                s = s + int(el)
+            else:
+                print(s)
+                sys.exit()
+    print(s)
