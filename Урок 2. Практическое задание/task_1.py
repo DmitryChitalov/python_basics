@@ -16,6 +16,6 @@
 <class 'NoneType'>
 """
 
-list = [5, "string", 0.5, True, None]
-for i in list:
+my_list = [5, "string", 0.5, True, None]
+for i in my_list:
     print(type(i))
