@@ -11,3 +11,20 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+numbers = input("Введите целые числа через пробел: ").split(' ')
+couple = []
+result = []
+i = 0
+
+for number in numbers:
+    couple.append(number)
+    i += 1
+    if len(couple) == 2:
+        couple.reverse()
+        result.extend(couple)
+        i = 0
+        couple.clear()
+if len(numbers) % 2 != 0:
+    result.append(numbers[-1])
+pint(f"Результат: {' '.join(result)}")
