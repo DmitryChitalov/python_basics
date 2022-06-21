@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def dvsn(arg1, arg2):
+    try:
+        return arg1 / arg2
+    except ZeroDivisionError:
+        return "На ноль делить нельзя"
+
+
+num1 = int(input('Введите первое число: '))
+num2 = int(input('Введите первое число: '))
+
+print(dvsn(num1, num2))
