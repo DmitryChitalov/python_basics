@@ -25,3 +25,24 @@
 “ед”: [“шт.”]
 }
 """
+
+products = []
+table = {'название': '', 'цена': '', 'количество': '', 'единица': ''}
+table_tmp = None
+analytica = {'название': [], 'цена': [], 'количество': [], 'единица': []}
+num_key = 0
+while True:
+    start = input('Для запуска программы нажмите Enter, для вывода аналитики введите ANALYTICA для выхода введите EXIT: ').upper()
+    if start == 'EXIT':
+        break
+    num_key += 1
+    if start == 'ANALYTICA':
+        print('АНАЛИТИКА:')
+        for key, value in analytica.items():
+            print(f'{key}: {value}')
+        continue
+    for t in table.keys():
+        table_tmp = input(f'Введите {t} товара: ')
+        table[t] = table_tmp
+        analytica[t].append(table[t])
+    products.append((num_key, table))
