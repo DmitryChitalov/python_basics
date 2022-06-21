@@ -14,3 +14,11 @@
 1. раз
 2. перерефриж
 """
+
+my_list = input("Введите слова через пробел: ")
+new_list = my_list.split()
+x = 1
+for i in new_list:
+    print(f"{x}. {i[0:10]}")
+    x += 1
+
