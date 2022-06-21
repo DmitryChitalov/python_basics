@@ -12,15 +12,15 @@ email: jackie@gmail.com, телефон: 01005321456
 
 # def func(name: str, famely: str, year: int, city: str, email: str, phone: str):
 # pylint ругается на запись выше
-def func(*args):
+def func(**kwargs):
     '''функция вывода данных одной строкой'''
-    print(f'{args[0]} {args[1]} {args[2]} года рождения, '
-          f'проживает в городе {args[3]},\nemail: {args[4]}, телефон: {args[5]}')
+    print(f'{kwargs.get("name")} {kwargs.get("famely")} {kwargs.get("year")} года рождения, '
+          f'проживает в городе {kwargs.get("city")},\nemail: {kwargs.get("email")}, телефон: {kwargs.get("phone")}')
 
 
-func(input('Введите Имя: '),
-     input('Введите фамилию: '),
-     input('Введите год рождения: '),
-     input('Введите город проживания: '),
-     input('Введите email: '),
-     input('Введите телефон: '))
+func(name=input('Введите Имя: '),
+     famely=input('Введите фамилию: '),
+     year=input('Введите год рождения: '),
+     city=input('Введите город проживания: '),
+     email=input('Введите email: '),
+     phone=input('Введите телефон: '))
