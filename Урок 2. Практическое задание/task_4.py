@@ -14,3 +14,8 @@
 1. раз
 2. перерефриж
 """
+words = input('Введите слова через пробел: ').split(' ')
+i = 0
+while i < len(words):
+    print(f'{i + 1}. {words[i][:10]}')
+    i += 1
