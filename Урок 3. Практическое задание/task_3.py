@@ -5,3 +5,29 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+
+def my_func_sort(*nums):
+    '''функция вычисления суммы с использованием функции sort'''
+    nums = list(nums)
+    nums.sort()
+    return nums[1] + nums[2]
+
+
+def my_func_notsort(*nums):
+    '''функция вычисления суммы без использования функции sort'''
+    nums = list(nums)
+    nums.remove(min(nums))
+    return sum(nums)
+
+
+'''
+Вообще, в условиях задачи не указан тип вводимых данных, 
+что рождает достаточное количество вариантов результата.
+Использовать конечно мы будем самый простой для толкования тип с числами
+'''
+a = int(input('Введите число a: '))
+b = int(input('Введите число b: '))
+c = int(input('Введите число c: '))
+print(my_func_sort(a, b, c))
+print(my_func_notsort(a, b, c))

@@ -17,3 +17,18 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def division(a, b):
+    '''функция деления двух позиционных аргументов'''
+    c = None
+    try:
+        c = a / b
+    except Exception:
+        print('Вы что, пытаетесь на ноль делить?!')
+    return c
+
+
+a = int(input('Введите число а: '))
+b = int(input('Введите число b: '))
+print(division(a, b))
