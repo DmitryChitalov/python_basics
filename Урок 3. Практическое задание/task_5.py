@@ -6,3 +6,29 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def sum_numbers():
+    """
+    Возвращает сумму чисел, введенных пользователем через пробел
+    Если введен символ q - посчитать сумму и выйти
+    """
+    out_list = []
+    is_exit = False
+
+    while True:
+        if is_exit:
+            break
+        try:
+            q = input("Введите строку чисел, разделенных пробелом: ")
+            for el in q.split(" "):
+                if el == "q":
+                    is_exit = True
+                else:
+                    out_list.append(int(el))
+            print(f"{out_list}: {sum(out_list)}")
+        except BaseException as err:
+            print(f"Unexpected {err=}, {type(err)=}")
+
+
+sum_numbers()
