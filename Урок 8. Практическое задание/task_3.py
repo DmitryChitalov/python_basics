@@ -9,25 +9,21 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
-class Error:
-    def __init__(self, *args):
-        self.args = []
 
-    def num(self):
-        while True:
-            try:
-                numbers = int(input('введите число'))
-                self.args.append(numbers)
-                print(f'Текущий список - {self.args} \n ')
-            except:
-                print('Ощибка! Вы ввели строку')
-                desision = input('Продолжить: y/n?')
-                if desision == 'y':
-                    print(try_ex.num())
-                elif desision == 'n':
-                    return ('Выход')
-                else: return('Выход')
 
-try_ex = Error(1)
-print(try_ex.num())
+class ControlType(Exception):
+    pass
 
+
+my_list = []
+while True:
+    try:
+        value = input('Введите число в список:')
+        if value == 'x':
+            break
+        if not value.isdigit():
+            raise ControlType(value)
+        my_list.append(int(value))
+    except ControlType as ex:
+        print(f'{ex} - не число!')
+print(my_list)

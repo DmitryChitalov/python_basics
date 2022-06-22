@@ -7,20 +7,19 @@
 """
 
 
-class DivisionByNull:
-    def __init__(self, divider, denominator):
-        self.divider = divider
-        self.denominator = denominator
-
-    @staticmethod
-    def divide_by_null(divider, denominator):
-        try:
-            return (divider / denominator)
-        except:
-            return (f"Деление на ноль недопустимо")
+class DivideByZero(Exception):
+    pass
 
 
-div = DivisionByNull(10, 100)
-print(DivisionByNull.divide_by_null(10, 0))
-print(DivisionByNull.divide_by_null(10, 0.1))
-print(div.divide_by_null(100, 0))
+try:
+    number_1 = int(input('Введите делимое число: '))
+    number_2 = int(input('Введите число делитель: '))
+    if number_2 == 0:
+        raise DivideByZero('Вы пытаетесь разделить на ноль!')
+    result = number_1 / number_2
+except ValueError:
+    print('Вы ввели не число')
+except DivideByZero as err:
+    print(err)
+else:
+    print(f'{number_1} / {number_2} = {round(result, 2)}')
