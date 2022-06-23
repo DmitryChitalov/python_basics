@@ -6,3 +6,22 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+TOTAL = 0
+
+while True:
+    user_numbers = input("Введите строку из чисел через пробел >>> ").split()
+    ERR = False
+
+    for number in user_numbers:
+        if number.isdigit():
+            TOTAL += int(number)
+        else:
+            ERR = True
+            break
+
+    print(f"Общая сумма чисел = {TOTAL}")
+
+    if ERR:
+        break

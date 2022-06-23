@@ -17,3 +17,17 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def main(one, two):
+    "Значения"
+    try:
+        return one / two
+    except ZeroDivisionError:
+        return "Ошибка деления на 0"
+
+
+x = int(input("Введите число x >>> "))
+y = int(input("Введите число y >>> "))
+
+print(main(x, y))
