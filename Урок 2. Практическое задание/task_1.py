@@ -15,3 +15,16 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+int_var = 1
+float_var = 1.11
+str_var = "My string"
+list_var = ['list', '1']
+dict_var = {'name': 'Artem', 'age': '26'}
+tuple_var = ('tuple', '2')
+bool_var = True
+none_var = None
+check_list = [int_var, float_var, str_var, list_var, tuple_var, dict_var, bool_var, none_var]
+
+for i in check_list:
+    print(f'Тип данных {i} - {type(i)}')

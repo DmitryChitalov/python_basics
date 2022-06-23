@@ -14,3 +14,9 @@
 1. раз
 2. перерефриж
 """
+
+input_str = input("Введите слова через пробел: ")
+split_list = list(filter(None, input_str.split(' ')))
+
+for i in range(len(split_list)):
+    print(f"{i+1}. {split_list[i][0:10]}")

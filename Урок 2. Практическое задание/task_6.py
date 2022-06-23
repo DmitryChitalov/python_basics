@@ -25,3 +25,34 @@
 “ед”: [“шт.”]
 }
 """
+
+product_list = []
+
+while input('Добавить товар (да/нет)?') == 'да':
+    number = input('Введите номер товара')
+    product_dict = {"Название": input("Введите название товара"),
+             "Цена": input("Введите цену товара"),
+             "Количество": input("Введите количество товара"),
+             "Единица": input("Введите единицу товара")}
+    product_tuple = (number, product_dict)
+    product_list.append(product_tuple)
+
+print(product_list)
+
+name_list = []
+price_list = []
+count_list = []
+value_list = []
+
+for i in range(len(product_list)):
+    name_list.append(product_list[i][1]["Название"])
+    price_list.append(product_list[i][1]["Цена"])
+    count_list.append(product_list[i][1]["Количество"])
+    value_list.append(product_list[i][1]["Единица"])
+
+value_list = list(set(value_list))
+analitics_dict = {"Названия": name_list,
+                  "Цены": price_list,
+                  "Количество": count_list,
+                  "Единицы": value_list}
+print(analitics_dict)
