@@ -17,3 +17,17 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+arg_1 = int(input("Введите число х="))
+arg_2 = int(input("Введите число y="))
+
+
+def my_funkc(arg_3, arg_4):
+    """ Функция деления"""
+    return arg_3 / arg_4
+
+
+try:
+    print(f"Результат = {my_funkc(arg_1, arg_2)}")
+except ZeroDivisionError:
+    print("Вы что? Пытаетесь делить на 0!")
