@@ -25,7 +25,7 @@ b = int(input("Введите количество километров, кот�
 number_of_days=1
 
 while a:
-    print(f"{number_of_days}-й день: {a}")
+    print(f"{number_of_days}-й день: {a:.2f}")
     if a > b:
         break
     a = a * 1.1
