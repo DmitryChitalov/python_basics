@@ -25,3 +25,24 @@
 “ед”: [“шт.”]
 }
 """
+
+products = []
+NUMBER = 0
+while input("Хотите ли вы добавить ещё один товар? Введите да/нет: ") == 'да':
+    NUMBER = NUMBER + 1
+    features = {}
+    while input("Хотите ли добавить параметр товару? Введите да/нет: ") == 'да':
+        feature_key = input("Введите название параметра товара: ")
+        feature_value = input("Введите значение параметра товара: ")
+        features.update({feature_key: feature_value})
+    products.append(tuple([NUMBER, features]))
+print(products)
+
+analitics = {}
+for product in products:
+    for feature_key, feature_value in product[1].items():
+        if feature_key in analitics:
+            analitics[feature_key].append(feature_value)
+        else:
+            analitics[feature_key] = [feature_value]
+print(analitics)
