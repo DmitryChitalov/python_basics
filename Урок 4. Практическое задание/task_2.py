@@ -16,4 +16,7 @@ for i in range(1, len(my_list)):
     except:
         pass
 
-print(f'{my_list}\n{result_list}')
+print(f'{my_list}\nВариант безгенераторный {result_list}')
+
+result_list = [my_list[i] for i in range(1,len(my_list)) if my_list[i] > my_list[i-1]]
+print(f'Вариант с генератором   {result_list}')
