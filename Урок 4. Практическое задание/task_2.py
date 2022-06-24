@@ -7,3 +7,16 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55, 70, 55]
+result_list = []
+for i in range(1, len(my_list)):
+    try:
+        if my_list[i] > my_list[i - 1]:
+            result_list.append(my_list[i])
+    except:
+        pass
+
+print(f'{my_list}\nВариант безгенераторный {result_list}')
+
+result_list = [my_list[i] for i in range(1,len(my_list)) if my_list[i] > my_list[i-1]]
+print(f'Вариант с генератором   {result_list}')
