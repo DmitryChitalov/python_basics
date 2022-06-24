@@ -19,15 +19,15 @@
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
 print("Задание №5")
-dohod = int(input("Введити выручку в руб.==>>> "))
-rashod = int(input("Введити издержки в руб.==> "))
-if dohod >= rashod:
+income = int(input("Введити выручку в руб.==>>> "))
+consumption = int(input("Введити издержки в руб.==> "))
+if income >= consumption:
     print("Бизнес прибыльный")
-    pribl = dohod - rashod
-    rent = (pribl / dohod) * 100
+    profit = income - consumption
+    rent = (profit / income) * 100
     print(f"Фирма работает с рентабельностью {rent} %")
-    chel = int(input("Введите кол-во персонала "))
-    dohod1 = str(pribl / chel)
-    print(f"Прибыль на 1 сотрудника {dohod1} руб.")
+    human = int(input("Введите кол-во персонала "))
+    INCOME_1 = str(profit / human)
+    print(f"Прибыль на 1 сотрудника {INCOME_1} руб.")
 else:
     print("Бизнес убыточен")

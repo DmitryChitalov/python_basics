@@ -15,5 +15,5 @@ if n >= 10:
 else:
     n2 = n * 10 + n
     n3 = n2 * 10 + n
-    summa = n + n2 + n3
-    print(f"Сумма чисел {summa}")
+    result = n + n2 + n3
+    print(f"Сумма чисел {result}")
