@@ -12,3 +12,19 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+a = int(input('Введите число для итератора из первого скрипта.\n'
+              'Конечное значение будет на 1 порядок больше введенного: '))
+result_a = [i for i in range(a, a * 10 + 1)]
+print(result_a)
+
+my_cycle_list = cycle(result_a)
+print(my_cycle_list)
+count = 0
+for el in my_cycle_list:
+    if count > 100:
+        break
+    else:
+        print(el)
+        count += 1
