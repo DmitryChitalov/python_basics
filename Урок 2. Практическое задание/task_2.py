@@ -11,3 +11,13 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+symbol = input("ВВедите данные  ").split(' ')
+# symbol = list(string)
+N_1 = 0
+N_2 = 1
+while len(symbol) > N_2:
+    symbol[N_1],symbol[N_2]=symbol[N_2],symbol[N_1]
+    N_1+=2
+    N_2+=2
+
+print('Результат', *symbol)
