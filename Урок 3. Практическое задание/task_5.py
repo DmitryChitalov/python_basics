@@ -6,3 +6,19 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+def my_func():
+    exit_func = False
+    result = 0
+    while exit_func == False:
+        numbers = input('Введит любое количество чисел через пробел или введите "q" для выхода: ').split()
+        summ = 0
+        for i in range(len(numbers)):
+            if numbers[i] == 'q'.lower():
+                exit_func = True
+            else:
+                summ = summ + int(numbers[i])
+        result = result + summ
+    return f'Сумма введенных вами чисел равна {result}'
+
+print(my_func())
