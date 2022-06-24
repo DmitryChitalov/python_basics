@@ -19,14 +19,14 @@ Process finished with exit code 0
 """
 
 
-def division(*args):
+def division(a, b):
     try:
-        a = int(input('Введите первое число: '))
-        b = int(input('Введите второе число: '))
         c = a / b
     except ZeroDivisionError:
         return f'Вы что? Пытаетесь делить на {b}?'
     return c
 
 
-print(division())
+a = int(input('Введите первое число: '))
+b = int(input('Введите второе число: '))
+print(division(a, b))
