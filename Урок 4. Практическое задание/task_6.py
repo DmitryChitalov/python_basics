@@ -15,16 +15,21 @@
 from itertools import count, cycle
 
 a = int(input('Введите число для итератора из первого скрипта.\n'
-              'Конечное значение будет на 1 порядок больше введенного: '))
-result_a = [i for i in range(a, a * 10 + 1)]
-print(result_a)
+              'Конечное значение будет в 2 раза больше введенного: '))
+result_a = count(a)
+my_list = []
+for el in result_a:
+    if el > a*2:
+        break
+    else:
+        print(f'вывод результата count() {el}')
+        my_list.append(el)
 
-my_cycle_list = cycle(result_a)
-print(my_cycle_list)
+my_cycle_list = cycle(my_list)
 count = 0
 for el in my_cycle_list:
     if count > 100:
         break
     else:
-        print(el)
+        print(f'Вывод результата cycle() {el}')
         count += 1
