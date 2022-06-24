@@ -3,7 +3,6 @@
 Необходимо решить задание в одну строку.
 Подсказка: использовать функцию range() и генераторное выражение.
 """
-result = (i for i in range(20, 241) if (i % 20 == 0) or (i % 21 == 0))
+result = [i for i in range(20, 241) if (i % 20 == 0) or (i % 21 == 0)]
 
-for el in result:
-    print(el, end=' ')
+print(result)
