@@ -11,3 +11,10 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+data_list = input("Введите целые числа через пробел: ").split(' ')
+a, b = 0, 1
+while len(data_list) > b:
+    data_list[a], data_list[b] = data_list[b], data_list[a]
+    a += 2
+    b += 2
+print('Результат: ', *data_list)                                      #Вывод данных введенных

@@ -25,3 +25,44 @@
 “ед”: [“шт.”]
 }
 """
+
+num = 1
+data_list = []
+while True:
+    name = input('Введите название товара: ')                            #Запрашиваем данные у пользователя
+    price = int(input('Введите стоимость товара: '))
+    count = int(input('Введите количество: '))
+    unit = input('Введите единицы измерения: ')
+
+    data_list.append((                                                   #Добавляем данные в data_list
+        num,
+        {
+            "Название": name,
+            "Цена": price,
+            "Количество": count,
+            "eд": unit
+        }
+    ))
+
+    num += 1
+    q = input('Добавить позицию? Для продолжения нажмите "Enter", для завершения наберите "нет": ').lower()
+    if q.lower() == 'нет':
+        break
+
+list_name = []
+list_price = []
+list_counts = []
+list_units = []
+analitics = {}
+for i in range(len(data_list)):
+    list_name.append(data_list[i][1]["Название"])
+    list_price.append(data_list[i][1]["Цена"])
+    list_counts.append(data_list[i][1]["Количество"])
+    list_units.append(data_list[i][1]["eд"])
+
+analitics.update({"Название": list_name,                                 #Обновляем данные в analitics
+                  "Цена": list_price,
+                  "Количество": list_counts,
+                  "eд": list_units})
+print(analitics)                                                         #Вывод данных
+
