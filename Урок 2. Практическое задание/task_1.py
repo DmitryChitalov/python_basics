@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+data_list = [45, 'текст', 15.5, True, None] #Список
+for el in data_list:
+    print(el.__class__)                     #Вывод данных введенных
