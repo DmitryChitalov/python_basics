@@ -7,3 +7,18 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+lst = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+#Вариант с циклом
+i = 0
+result = []
+for el in lst:
+    if el > lst[i-1]:
+        result.append(el)
+    i+=1
+print(result)
+
+#Вариант с генератором
+result = [el for el in lst if el > lst[lst.index(el)-1]]
+print(result)
