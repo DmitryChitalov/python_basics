@@ -5,3 +5,20 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    exp = x
+    if y > 0:
+        for _ in range(1, y):
+            exp *= x
+    else:
+        for _ in range(1, y, -1):
+            exp /= x
+
+    return exp
+
+
+num1, num2 = int(input('Number1: ')), int(input('Number2: '))
+
+print(my_func(num1, num2))
