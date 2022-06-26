@@ -12,3 +12,30 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import cycle
+from itertools import count
+from sys import argv
+
+script_name, start_num, stop_num = argv
+
+print('Имя скрипта:', script_name)
+print('Начальное число:', start_num)
+print('Конечное число:', stop_num)
+
+num_1 = int(start_num)
+num_2 = int(stop_num)
+
+for i in count(num_1):
+    if i > num_2:
+        break
+    else:
+        print(i)
+
+
+lst = [1, 2, 3, 4, 5, 6]
+tmp = cycle(lst)
+
+while num_1 < num_2:
+    print(next(tmp))
+    num_1 += 1
