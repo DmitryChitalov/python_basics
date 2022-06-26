@@ -6,5 +6,17 @@
 
 Пример:
 Иван Иванов 1846 года рождения, проживает в городе Москва,
-email: jackie@gmail.com, телефон: 01005321456
+email: jackie@gmail.com, телефон: 01005321456 f"{a=}, {b=}, {c=}"
 """
+def user_info(name, sname, bday, city, email, phone):
+    print(f"{name} {sname} {bday} года рождения, проживает в городе  {city}, email: {email}, телефон: {phone}")
+
+user_info(
+    name="Иван",
+    sname="Иванов",
+    bday="01.01.2001",
+    city="Москва",
+    email="mail@email.ru",
+    phone="+7000000"
+)
+
