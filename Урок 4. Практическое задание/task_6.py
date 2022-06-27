@@ -12,3 +12,27 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+# итератор A
+print("*" * 10, "Iterator A")
+START_ITERATOR = 1
+
+for el in count(START_ITERATOR):
+    if el > 10:
+        break
+
+    print(el)
+
+# итератор B
+print("*" * 10, "Iterator B")
+cycling_list = [2, 5, 8, 3]
+MAX_ITERATIONS = 16
+ITERATION_COUNT = 0
+
+for el in cycle(cycling_list):
+    print(el)
+    ITERATION_COUNT += 1
+
+    if ITERATION_COUNT >= MAX_ITERATIONS:
+        break
