@@ -5,3 +5,16 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+class ZeroError(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+def divider(a, b):
+    if b == 0:
+        raise ZeroError(f'{a} / {b} = На 0 делить нельзя!')
+    return a / b
+try:
+    divider(77, 0)
+except ZeroError as e:
+    print(e)
+print(f"49 / 7 = {divider(49, 7)}")
