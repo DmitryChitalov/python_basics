@@ -11,17 +11,16 @@
 Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 """
 
-from math import factorial
-
 
 def fact(n):
-    for el in range(1, n + 1):
-        yield factorial(el)
+    factorial = 1
+    while n > 1:
+        factorial *= n
+        n -= 1
+    yield factorial
 
 
 n = int(input('Введите число: '))
 
 for el in fact(n):
-    result = el
-
-print(f'Факториал {n}! равен {result}.')
+    print(f'Факториал {n}! равен {el}.')

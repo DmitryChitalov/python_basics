@@ -18,7 +18,7 @@ print('Премия:', bonus)
 
 
 def calculation(hours_worked, money, bonus):
-    salary = (float(hours_worked) * float(money)) + float(bonus)
+    salary = float(hours_worked) * float(money) + float(bonus)
     return salary
 
 
