@@ -11,7 +11,7 @@
 
 n = int(input("Введите целое положительное число:"))
 ls = []
-while n >=9:
+while n >= 9:
     ls.append(n % 10)
     n //= 10
 r = max(ls)
