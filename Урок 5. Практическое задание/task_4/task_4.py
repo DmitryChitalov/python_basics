@@ -7,3 +7,15 @@
 Иванов 23543.12
 Петров 13749.32
 """
+import csv
+
+with open('file.txt', 'r', encoding='utf8') as f:
+    my_list = csv.reader(f, delimiter=' ')
+    summ = 0
+    count = 1
+    for row in my_list:
+        if float(row[1]) < 20000:
+            print(row[0])
+        summ += float(row[1])
+        count += 1
+print(f'Средняя температура по больнице {(summ/count):.2f}')
