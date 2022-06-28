@@ -10,10 +10,10 @@
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
 print("Задание №2")
-vremia = int(input("Введите кол-во секунд "))
-min1 = int(vremia / 60)
-vremia1 = int(min1 / 60)
-vremia = vremia - min1 * 60
+time_1 = int(input("Введите кол-во секунд "))
+min1 = int(time_1 / 60)
+time_2 = int(min1 / 60)
+time_1 = time_1 - min1 * 60
 while min1 >= 60:
     min1 = min1 - 60
-print(f"Время в формате чч:мм:сс {vremia1}:{min1}:{vremia}")
+print(f"Время в формате чч:мм:сс {time_2}:{min1}:{time_2}")

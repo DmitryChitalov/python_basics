@@ -32,4 +32,8 @@ while A > 0:
             print(f"Результат: {NUMBER_1} ")
             sys.exit()
     NUMBER_1 = NUMBER_1 + number(data_list_1)
+<<<<<<< HEAD
     print(f"Результат: {NUMBER_1} ")
+=======
+    print(f"Результат: {NUMBER_1} ")
+>>>>>>> Amendments_Homework#1,2,3

@@ -14,7 +14,7 @@
 print("Задание №1")
 A = 10
 B = 15
-print(a, b)
+print(A, B)
 a = input("ВВедите значение а ==> ")
 b = input("ВВедите значение b ==> ")
-print(f"{a}, {b}")
+print(f"{A}, {B}")
