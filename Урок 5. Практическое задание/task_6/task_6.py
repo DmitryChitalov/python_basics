@@ -5,3 +5,19 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+d, h, v = {}, [], []
+with open('input.txt') as f:
+    for line in f:
+        l = line.split('   ')
+        h.append(l[0][:-1])
+        sum = 0
+        for el in l[1:]:
+            if el != '—':
+                num = ''
+                for n in el:
+                    if n.isnumeric():
+                        num += n
+                sum += int(num)
+        v.append(sum)
+print(dict(zip(h, v)))
