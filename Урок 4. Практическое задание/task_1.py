@@ -6,3 +6,16 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+
+def wage(hours, rate, reward):
+    """Функция расчета з.п."""
+    print(f"Размер заработной платы: {hours * rate + reward}")
+
+
+prod_hours = int(argv[1])
+rate_hour = int(argv[2])
+premium = int(argv[3])
+
+wage(prod_hours, rate_hour, premium)
