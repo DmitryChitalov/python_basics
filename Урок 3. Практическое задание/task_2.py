@@ -8,3 +8,18 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+
+def my_funkc(**kwargs):
+    """ Ввод персональных данных"""
+    f_name = input("Введите ваше имя:")
+    l_name = input("Введите вашу фамилию:")
+    birthday = input("Введите ваш ДР:")
+    city = input("Введите ваш город:")
+    email = input("Введите ваш email:")
+    phone = input("Введите ваш номер телефона:")
+    print(f"{f_name} {l_name} {birthday} года рождения, проживает в городе {city} email: {email}, телефон: {phone}")
+    return kwargs
+
+
+print(my_funkc())
