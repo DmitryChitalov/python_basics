@@ -13,5 +13,20 @@
 Переключение между режимами должно осуществляться только
 в указанном порядке (красный, желтый, зеленый).
 
+
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+
+
+class TrafficLight:
+    __color = {'Красный': 7, 'Желтый': 2, 'Зеленый': 3}
+
+    def running(self):
+        for key, value in self.__color.items():
+            print(f'{key}')
+            sleep(value)
+
+
+tl = TrafficLight()
+tl.running()

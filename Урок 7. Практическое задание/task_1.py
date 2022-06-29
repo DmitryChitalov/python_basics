@@ -28,3 +28,23 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+
+    def __init__(self, matrix):
+        self.matrix = matrix
+
+    def __add__(self, matrix):
+        result = [[self.matrix[i][j] + matrix.matrix[i][j] for j in range(len(self.matrix[0]))] for i in
+                  range(len(self.matrix))]
+        return Matrix(result)
+
+    def __str__(self):
+        return '\n'.join(map(str, self.matrix))
+
+
+m_one = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+m_two = Matrix([[2, 3, 4], [4, 5, 6], [7, 8, 9]])
+m_res = m_one + m_two
+print(m_res)

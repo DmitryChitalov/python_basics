@@ -19,3 +19,15 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+first_day = int(input("Введите число a: "))
+desired_res = int(input("Введите число b: "))
+day = 1
+print(f'{day}-й день: {first_day}')
+
+while first_day <= desired_res:
+    day += 1
+    first_day += first_day * 0.1
+    print(f'{day}-й день: {first_day:.2f}')
+
+print(f"На {day}-й день спортсмен достиг результата - не менее {desired_res} км.")
