@@ -12,3 +12,19 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+for el in count(3):
+    if el <= 10:
+        print(el)
+    else:
+        break
+
+list_1 = ["p", "a", "r", "a", "m"]
+i = 0
+for symbol in cycle(list_1):
+    if i <= 4:
+        print(symbol)
+        i += 1
+    else:
+        break
