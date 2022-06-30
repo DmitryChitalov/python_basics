@@ -17,4 +17,5 @@
 arr = [8, "слово", 3.14, False, None]
 print(arr)
 for el in arr:
-    print(el," ", type(el))
+    print(f"{el}, {type(el)}")
+

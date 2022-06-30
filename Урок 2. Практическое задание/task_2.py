@@ -13,9 +13,12 @@
 arr = input("Введите целые числа через пробел: ").split()
 if len(arr) % 2 == 0:
     arr[::2], arr[1::2] = arr[1::2], arr[::2]
-    print("Результат: " + ' '.join([str(i) for i in arr]))
+    spisok = " ".join([str(i) for i in arr])
+    print(f"Результат: {spisok}")
 else:
     arr.append("True")
     arr[::2], arr[1::2] = arr[1::2], arr[::2]
     arr.remove("True")
-    print("Результат: " + ' '.join([str(i) for i in arr]))
+    spisok2 = " ".join([str(i) for i in arr])
+    print(f"Результат: {spisok2}")
+
