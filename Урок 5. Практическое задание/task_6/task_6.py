@@ -5,3 +5,24 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+lessons = {}
+
+with open('task6.txt', encoding='utf-8') as f:
+    for string in f:
+        lesson_info = string.split()
+        name = lesson_info[0].rstrip(':')
+
+        lessons[name] = lesson_info[1:]
+
+result = {}
+
+for key, value in lessons.items():
+    result[key] = sum(
+        [
+            int(hours[:hours.index('(')])
+            for hours in value
+            if hours != '-'
+        ]
+    )
+
+print(result)

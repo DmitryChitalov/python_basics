@@ -1,0 +1,4 @@
+some text in str1
+some text in str2
+some text in str3
+some text in str4
