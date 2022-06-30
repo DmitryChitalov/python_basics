@@ -8,3 +8,9 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+n = int(input("Введите число: "))
+x = str(n)
+nn = x + x
+nnn = nn + x
+print(f"{n} + {nn} + {nnn} = {n + int(nn) + int(nnn)}")
