@@ -25,3 +25,27 @@
 “ед”: [“шт.”]
 }
 """
+
+products = []
+analytics = {"название": [], "цена": [], "количество": [], "ед": []}
+i = 1
+
+while True:
+    control = input("Для продолжения - Enter. \n Для аналитики - A. \n Для выхода - Q")
+    if control == 'Q':
+        break
+    if control == 'A':
+        for key, value in analytics.items():
+            print(f"{key}:{list(set(value)) if key == 'ед' else list(value)}")
+        continue
+    print(f" \n Введите информацию: \n {'_' * 10}")
+    name = str(input("Введите название товара: "))
+    price = float(input("Введите цену товара: "))
+    quantity = int(input("Введите количество товара: "))
+    measure = str(input("Введите едиинцу измерния товара: "))
+    features = {"название": name, "цена": price, "количество": quantity, "ед": measure}
+    for el in features.keys():
+        analytics[el].append(features[el])
+    products.append((i, features))
+    i += 1
+    print(f'\n {products} \n')

@@ -6,3 +6,9 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+import sys
+
+func_name, coworker, work_out, hour_rate, prize = sys.argv
+print(func_name)
+print(f'Сотрудник {name_v} отработал {work_out} часов и заработал {int(work_out) * int(hour_rate) + int(prize)}')

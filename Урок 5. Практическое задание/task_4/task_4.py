@@ -7,3 +7,12 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+salary = []
+with open("test_4.txt", "r") as bd_info:
+    for line in bd_info:
+        line = line.split()
+        if float(line[1]) < 20000:
+            print(f"Оклад менее 20 тыс.: {line[0]} - {line[1]}")
+        salary.append(line[1])
+    print(f"Средняя величина дохода сотрудников: {round(sum(map(float, salary)) / len(salary), 2)}")

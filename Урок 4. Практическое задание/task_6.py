@@ -12,3 +12,26 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import cycle, count
+
+x = int(input('Стартовое число: '))
+y = x * 2 + 10 + 1
+
+## a)
+for i in count(x):
+    if i < y:
+        print(i)
+    else:
+        break
+del i
+
+## b)
+my_list = [i for i in range(y)]
+z = 0
+for b in cycle(my_list):
+    if z < y + 10:
+        print(b)
+        z += 1
+    else:
+        break

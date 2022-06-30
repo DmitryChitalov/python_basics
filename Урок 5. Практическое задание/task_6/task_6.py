@@ -5,3 +5,15 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+dict = {}
+res = {}
+with open("test_6.txt", "r", encoding='utf-8') as file_items:
+    for lines in file_items:
+        subj = lines.split(' ')
+        name = subj[0].split(':')[0]
+        dict[name] = subj[1:]
+for key, value in dict.items():
+    res[key] = sum([int(hours.split('(')[0]) for hours in value if hours.split('(')[0].isdigit()])
+print(f"Словарь полностью: {dict}")
+print(f"Результат: {res}")
