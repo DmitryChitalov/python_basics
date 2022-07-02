@@ -5,6 +5,7 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
 new_dict = {}
 with open("file.txt", 'r', encoding='utf-8') as file:
         lines = file.readlines()

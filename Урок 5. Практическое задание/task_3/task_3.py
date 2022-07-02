@@ -9,7 +9,6 @@ Four — 4
 Новый блок строк должен записываться в новый текстовый файл.
 """
 
-
 with open('file.txt', 'r', encoding='utf-8') as my_f:
     text = my_f.read()
 text = text.replace("One", "Один").\
