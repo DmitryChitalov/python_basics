@@ -7,6 +7,7 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
 with open("file.txt", "rt", encoding='utf-8') as my_f:
     list_1 = my_f.readlines()
     my_f.seek(0)
