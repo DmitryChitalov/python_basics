@@ -3,3 +3,13 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+strings = []
+
+while True:
+    with open('1.txt', 'a+', encoding='utf-8') as f:
+        string = input("Введите строку >>> ")
+
+        if not string:
+            break
+
+        f.write(f"{string}\n")
