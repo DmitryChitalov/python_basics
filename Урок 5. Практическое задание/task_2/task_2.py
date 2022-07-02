@@ -16,3 +16,4 @@ text_file = open_file.read()
 text_file = text_file.split()
 print(f'Количество слов: {len(text_file)}')
 open_file.close()
+

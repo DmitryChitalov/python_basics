@@ -4,17 +4,11 @@
 Об окончании ввода данных свидетельствует пустая строка.
 """
 
-new_file = open(r'text.txt', 'w')
-line = input('Введите текст: ')
-
-while line:
-    new_file.writelines(line)
-    line = input('Введите текст: ')
-    if not line:
+f = open('text.txt', 'w', encoding='utf-8')
+print("Введите данные в файл: ")
+while True:
+    text = input()
+    f.write(text + '\n')
+    if text == "":
         break
-
-new_file.close()
-new_file = open('text.txt', 'r')
-text_file = new_file.readlines()
-print(text_file)
-new_file.close()
+f.close()
