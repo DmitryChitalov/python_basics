@@ -7,3 +7,18 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+SUM = 0
+COUNT = 0
+persons = []
+with open("file_4.txt", "r") as f_obj:
+    for line in f_obj:
+        print(line, end="")
+        part = line.split()
+        if float(part[1]) <= 20000:
+            persons.append(part[0])
+        SUM += float(part[1])
+        COUNT += 1
+result = SUM / COUNT
+print(f"Сотрудники с окладом меньше 20000: {persons}")
+print(f"Средний оклад: {result}")
