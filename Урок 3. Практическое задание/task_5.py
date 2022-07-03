@@ -6,3 +6,22 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+import sys
+
+RESULT = 0
+while True:
+    line = input("Введите число, несколько чисел разделённых пробелом или спецсимвол 'q' для выхода из программы: ")
+    simbols = line.split(" ")
+    for simbol in simbols:
+        try:
+            number = float(simbol)
+            RESULT = number + RESULT
+        except:
+            if simbol == 'q':
+                print(f"Сумма введённых чисел равна {RESULT}.")
+                exit(0)
+            else:
+                print(f"Сумма введённых чисел равна {RESULT}. Введён недопустимый символ.", file=sys.stderr)
+                exit(1)
+    print(RESULT)

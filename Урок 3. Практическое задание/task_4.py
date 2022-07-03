@@ -5,3 +5,10 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+def my_func(x, y):
+    result = x
+    for i in range(y-1):
+        result = result * x
+    print(result)
+my_func(2, 8)
