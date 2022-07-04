@@ -8,8 +8,8 @@
 
 new_dict = {}
 with open("file.txt", 'r', encoding='utf-8') as file:
-        lines = file.readlines()
-        for line in lines:
-            info = line.replace('(', ' ').split()
-            new_dict[info[0][:-1]] = sum(int(i) for i in info if i.isdigit())
+    lines = file.readlines()
+    for line in lines:
+        info = line.replace('(', ' ').split()
+        new_dict[info[0][:-1]] = sum(int(i) for i in info if i.isdigit())
 print(new_dict)
