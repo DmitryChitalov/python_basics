@@ -16,7 +16,7 @@ year = int(input("Год рождения: "))
 city = input("Город проживания: ")
 mail = input("Email: ")
 phone = int(input("Номер телефона: "))
-def user_base(name, surname, year, city, mail, phone):
+def user_base(*args):
     """Функция построения строки с объединением аргументов"""
     print(f"{name} {surname} {year} года рождения, проживает в городе {city}, \n"
           f"email: {mail}, телефон: {phone}")

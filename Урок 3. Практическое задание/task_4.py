@@ -20,7 +20,7 @@ if ispos(x) == True and ispos(y) == False:
 
 if ispos(x) == True and ispos(y) == False:
     step = s = 1
-    while (0 > y):
+    while 0 > y:
         s *= x
         y += 1
     print("Через while:", 1 / s)

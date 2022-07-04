@@ -26,5 +26,3 @@ def my_func(var_1, var_2, var_3):
     b = sum(a) - min(a)
     return b
 print("Вариант 2, без sort:", (my_func(var_1, var_2, var_3)))
-
-

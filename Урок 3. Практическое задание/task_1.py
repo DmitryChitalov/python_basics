@@ -14,22 +14,15 @@ Process finished with exit code 0
 Process finished with exit code 0
 """
 
-"""
-Вынес переменные var из функции так как не мог добиться
-красивого вывода. Пробовал использовать global, но получил что var не определены
-"""
-
 
 var_1 = int(input("Введите первое число: "))
 var_2 = int(input("Введите второе число: "))
-def division():
-    """Функция деления двух чисел"""
-    try:
+
+def division(var_1, var_2):
+    if var_1 > 0 and var_2 > 0:
         divis = var_1 / var_2
-        divis_er = var_2 / var_1
-        """Ошибка деления на 0"""
-    except ZeroDivisionError:
+        return divis
+    else:
         er = "Вы что? Пытаетесь делить на 0!"
         return er
-    return divis
-print((var_1), "/", (var_2), "=", division())
+print(division(var_1, var_2))
