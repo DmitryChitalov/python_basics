@@ -6,3 +6,16 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+
+def calc(a, b, c):
+    print(a * b + c)
+
+
+hours = float(argv[1])
+payment = float(argv[2])
+bonus = float(argv[3])
+
+calc(hours, payment, bonus)
