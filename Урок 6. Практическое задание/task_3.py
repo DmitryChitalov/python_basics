@@ -49,8 +49,8 @@ class Position(Worker):
         return sum(self._income.values())
 
 
-иван = Position("Иван", "Зорин", "Программист", 80000, 15000)
-print(иван.get_full_name(), иван.get_total_income())
+ivan = Position("Иван", "Зорин", "Программист", 80000, 15000)
+print(ivan.get_full_name(), ivan.get_total_income())
 
-петр = Position("Петр", "Лебедев", "Менеджер", 50000, 10000)
-print(петр.get_full_name(), петр.get_total_income())
+piter = Position("Петр", "Лебедев", "Менеджер", 50000, 10000)
+print(piter.get_full_name(), piter.get_total_income())
