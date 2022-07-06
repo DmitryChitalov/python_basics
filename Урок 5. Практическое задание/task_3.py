@@ -11,7 +11,7 @@
 dic = {}
 with open("file3.txt", encoding='utf-8') as file:
     for line in file:
-        (key, val) = line.split()
+        key, val = line.split()
         dic[key] = int(val)
 print(dic)
 

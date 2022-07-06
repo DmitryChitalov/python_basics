@@ -9,16 +9,16 @@
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
 
+import re
 dic = {}
 with open("file6.txt", encoding='utf-8') as file:
    for item in file:
          """Создаю словарь, но нужно вычистить значения!"""
-         key = (item.split(" ")[0]).replace(":", "") #Убираю лишние :
+         key = item.split(" ")[0].replace(":", "") #Убираю лишние :
          val = item.split(" ")[1:]
          my_str = ' '
          clean = my_str.join(val)
          """ Вытаскиваю числа """
-         import re
          nums = re.findall(r'\d*\.\d+|\d+', clean)
          nums = [int(i) for i in nums]
          su = sum(nums)  #Суммирую отдельные числа

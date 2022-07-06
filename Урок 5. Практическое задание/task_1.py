@@ -4,11 +4,11 @@
 Об окончании ввода данных свидетельствует пустая строка.
 """
 print("Введите текст для сохранения в файл, пустая строка конец ввода:")
-data=[]
-i=input()
-while i !="":
+data = []
+i = input()
+while i != "":
    data.append(i)
-   i=input()
+   i = input()
 print("Текст записан в файл file1.txt")
 
 with open("file1.txt", "w") as my_f:

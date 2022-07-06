@@ -9,6 +9,7 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+import json
 
 dic_firms_up = {} #Словарь прибыльных фирм
 dic_firms_down = {} #Словарь не прибыльных фирм
@@ -34,7 +35,6 @@ print(dic_average_profit)
 base = [dic_firms_up, dic_average_profit, dic_firms_down]
 
 """Полученый результат загоняю в json файл"""
-import json
 with open("file7_2.json", "w", encoding='utf-8') as file_json:
     json.dump(base, file_json, ensure_ascii=False)
 
