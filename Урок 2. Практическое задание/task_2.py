@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+list_my = input('Введите целые числа через пробел: ')
+arr = list_my.split()
+for k, v in enumerate(arr):
+    if (k % 2 == 0) and (k + 1 < (len(arr))):
+        arr[k] = arr[k + 1]
+        arr[k + 1] = v
+print(f'Результат: {arr}')
