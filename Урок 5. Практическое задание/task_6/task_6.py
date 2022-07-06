@@ -11,13 +11,13 @@ with open('input.txt') as f:
     for line in f:
         l = line.split('   ')
         h.append(l[0][:-1])
-        sum = 0
+        s = 0
         for el in l[1:]:
             if el != '—':
                 num = ''
                 for n in el:
                     if n.isnumeric():
                         num += n
-                sum += int(num)
-        v.append(sum)
+                s += int(num)
+        v.append(s)
 print(dict(zip(h, v)))
