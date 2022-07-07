@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def func_div(x, y):
+    return x / y
+
+
+m = int(input('Введите первое число: '))
+n = int(input('Введите второе число: '))
+
+try:
+    print(func_div(m, n))
+except ZeroDivisionError:
+    print(f'Вы что? Пытаетесь делить на {n}!')
