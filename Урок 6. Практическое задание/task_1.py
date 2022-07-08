@@ -1,3 +1,5 @@
+import time
+
 """
 Задание 1.
 
@@ -15,3 +17,34 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+
+class TrafficLight:
+    __color = ["красный", "желтый", "зеленый"]
+
+    def __init__(self, times):
+        self.__times = times
+
+    def running(self):
+        """
+        Функция выполняет переключение светофора, временные интервалы задаются в контрукторе класса
+        :return:
+        Пример запуска: <Object <TrafficLight> class>.running()
+        """
+        try:
+            for num, el in enumerate(self.__color):
+                print(f"Switch on to : {el}")
+
+                if num == 0:
+                    time.sleep(self.__times[0])
+                elif num == 1:
+                    time.sleep(self.__times[1])
+                else:
+                    time.sleep(self.__times[2])
+
+        except BaseException as e:
+            print(f"General error: {e}")
+
+
+my_TrafficLight = TrafficLight([7, 2, 14])
+my_TrafficLight.running()
