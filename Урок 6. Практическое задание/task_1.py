@@ -15,3 +15,33 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from time import sleep
+
+
+class TrafficLight:
+    __color = 'Алый'
+
+    def running(self):
+        '''
+
+        :return: реализуется бесконечное переключение светофора
+        '''
+        while True:
+            print(self.__color)
+            if self.__color == 'Алый':
+                sleep(7)
+                self.__color = 'Пшеничный'
+                print('Прошло 7 секунд и светофор теперь', end=' ')
+            elif self.__color == 'Пшеничный':
+                sleep(2)
+                self.__color = 'Салатовый'
+                print('Прошло 2 секунд и светофор теперь', end=' ')
+            else:
+                sleep(7)
+                self.__color = 'Алый'
+                print('Прошло 7 секунд и светофор теперь', end=' ')
+
+
+a = TrafficLight()
+a.running()
