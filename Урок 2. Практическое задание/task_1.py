@@ -15,3 +15,12 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+NUMBER = 10
+<<<<<<< HEAD
+lista = (b"NAme", NUMBER, 3.1, "age", "Jone")
+for lists in lista:
+=======
+list_1 = [b"NAme", NUMBER, 3.1, "age", "Jone"]
+for lists in list_1:
+>>>>>>> Amendments_Homework#1,2,3
+    print(type(lists))
