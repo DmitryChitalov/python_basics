@@ -8,3 +8,16 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+
+translater = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
+
+with open("file_3.txt") as f_obj:
+    RESULT = ''
+    for line in f_obj:
+        part = line.split(" — ")
+        print(part)
+        if part[0] in translater:
+            word = translater[part[0]]
+            RESULT = word + ' — ' + part[1]
+            with open("file_output_3.txt", "a") as f_2_obj:
+                f_2_obj.writelines(RESULT)
