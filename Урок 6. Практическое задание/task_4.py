@@ -51,12 +51,6 @@ class TownCar(Car):
         super().__init__(speed, color, name, is_police)
         print(f'Это семейный автомобиль')
 
-    def show_speed(self, speed):
-        # В данном контексте этот метод не нужен, обработка превышения скорости производится
-        # в родительском классе
-        self.speed = speed
-        super().show_speed(self.speed)
-
 
 class SportCar(Car):
 
@@ -71,9 +65,6 @@ class WorkCar(Car):
         super().__init__(speed, color, name, is_police)
         print(f'Это служебный автомобиль')
 
-    def show_speed(self, speed):
-        self.speed = speed
-        super().show_speed(self.speed)
 
 class PoliceCar(Car):
     def __init__(self, speed, color, name, is_police):
