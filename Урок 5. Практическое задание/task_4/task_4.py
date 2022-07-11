@@ -7,3 +7,16 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+count, salary = 0, 0
+try:
+    with open("input.txt") as f:
+        for l in f:
+            line = l.split(' ')
+            salary += float(line[1])
+            count += 1
+            if float(line[1]) < 20000:
+                print(line[0])
+        print(round(salary / count, 2))
+except IOError:
+    print("Произошла ошибка ввода-вывода!")

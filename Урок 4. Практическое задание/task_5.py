@@ -5,3 +5,14 @@
 Необходимо получить результат вычисления произведения всех элементов списка.
 Подсказка: использовать лямбда-функцию и функцию reduce().
 """
+
+from functools import reduce
+
+
+def fnc(x, y):
+    return x * y
+
+
+print(reduce(fnc, [i for i in range(100, 1000 + 1) if i % 2 == 0]))
+print(reduce(fnc,
+             list(filter(lambda x: x % 2 == 0, list(range(100, 1000 + 1))))))

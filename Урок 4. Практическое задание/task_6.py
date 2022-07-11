@@ -12,3 +12,31 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+
+def gen_numb(n):
+    for i in count(n):
+        yield i
+
+
+def rep_numb(lst):
+    for i in cycle(lst):
+        yield i
+
+
+n, j = 3, 0
+lst = [1, 2, 3]
+for i in gen_numb(n):
+    if i <= 10:
+        print(i)
+    else:
+        break
+
+for el in rep_numb(lst):
+    if j <= 10:
+        print(el)
+        j += 1
+    else:
+        break
