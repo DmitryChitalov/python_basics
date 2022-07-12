@@ -6,3 +6,18 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+
+def payroll(args, index):
+    """Функция производит расчет заработной платы"""
+    try:
+        return int(args[index])
+    except ValueError:
+        return 0
+
+
+rate, time, bonus = payroll(argv, 1), payroll(argv, 2), payroll(argv, 3)
+
+print(f'Сотруднику положено к выплате = {time * rate + bonus} р.')
