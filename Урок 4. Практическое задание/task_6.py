@@ -12,3 +12,25 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count
+from itertools import cycle
+
+def my_count_func(start_number, stop_number):
+    '''итератор от одного заданного числа до другого заданного числа'''
+    for element in count(start_number):
+        if element > stop_number:
+            break
+        print(element)
+
+def my_cycle_func(lst, itr):
+    '''итератор элементов списка'''
+    counter = 1
+    for element in cycle(lst):
+        if counter > itr:
+            break
+        print(element)
+        counter += 1
+
+my_count_func(start_number = int(input("Введите начальное число: ")), stop_number = int(input("Введите конечное число: ")))
+my_cycle_func(lst ="ABC", itr = int(input("Укажите нужное количество итераций: ")))

@@ -16,3 +16,24 @@ length (длина в метрах), width (ширина в метрах).
 
 Например: 20м*5000м*25кг*0.05м = 125000 кг = 125 т
 """
+
+class Road:
+
+    __length = None
+    __width = None
+    weigth = None
+    thickness = None
+
+    def __init__(self, length, width):
+        self.__length = length
+        self.__width = width
+        print('Объект класса Road создан.')
+
+    def expense(self):
+        self.weigth = 25
+        self.thickness = 0.05
+        expense = self.__length * self.__width * self.weigth * self.thickness / 1000
+        print(f'Необходимо {expense} тонн для посторойки дороги.')
+
+road_to_village = Road(5000, 20)
+road_to_village.expense()

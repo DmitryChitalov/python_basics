@@ -14,3 +14,9 @@
 1. раз
 2. перерефриж
 """
+
+my_str = input("Введите слова через пробел: ")
+my_list = my_str.split()
+
+for pos, el in enumerate(my_list, 1):
+    print(f"{pos}. - {el}")
