@@ -13,7 +13,6 @@ def sort_func(*args):
     #    vals.sort(reverse=True)
     return sum(sorted(list(args), reverse=True)[:2])
 
-
 def no_sort_func(*args):
     """Поиск суммы наибольших двух аргументов без sort"""
     args = list(args)
