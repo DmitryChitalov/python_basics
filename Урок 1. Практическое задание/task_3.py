@@ -8,3 +8,10 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+n = input("Введите целое число:")
+
+if not n.isdigit():
+    print("Неверный формат числа")
+
+else:
+    print(f"{n}+{n}{n}+{n}{n}{n}=", int(n) + int(f"{n}{n}") + int(f"{n}{n}{n}"))

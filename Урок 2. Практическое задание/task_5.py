@@ -15,3 +15,33 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+import sys
+
+rating = [24, 15, 9, 7, 7, 6, 5, 3, 3, 1]
+
+while True:
+    try:
+        print(f"Рейтинг = {rating}")
+        user_rate = int(input("Введите новый рейтинг >>> "))
+
+        current_rate_count = rating.count(user_rate)
+
+        if current_rate_count:
+            last_current_id = rating.index(user_rate) + current_rate_count
+            rating.insert(last_current_id, user_rate)
+        else:
+            if user_rate > rating[0]:
+                rating.insert(0, user_rate)
+            elif user_rate < rating[-1]:
+                rating.append(user_rate)
+            else:
+                for idx, rate in enumerate(rating):
+                    if rate < user_rate:
+                        rating.insert(idx, user_rate)
+                        break
+
+        print(rating)
+    except ValueError:
+        print("Неверное число")
+    except KeyboardInterrupt:
+        sys.exit()

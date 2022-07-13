@@ -19,3 +19,79 @@
 Подсказка: постарайтесь по возможности реализовать в проекте
 «Склад оргтехники» максимум возможностей, изученных на уроках по ООП.
 """
+
+
+class OfficeEquipment:
+    """info"""
+
+    def __init__(self, name, price, quantity, number_of_lists):
+        self.name = name
+        self.price = price
+        self.numb = number_of_lists
+        try:
+            if isinstance(quantity, int):
+                self.quantity = quantity
+                self.my_unit = {
+                    'Модель устройства': self.name,
+                    'Цена за ед': self.price,
+                    'Количество': self.quantity}
+            else:
+                self.my_unit = {}
+                raise MyOwnExc("Вы ввели не число, словарь будем пустым")
+
+        except MyOwnExc as doc:
+            print(doc.txt)
+
+
+class MyOwnExc(Exception):
+    """info"""
+    def __init__(self, txt):
+        super(__class__, self).__init__()
+        self.txt = txt
+
+
+class Warehouse:
+    """info"""
+    goods = []
+
+    @classmethod
+    def reception(cls, obj):
+        """info"""
+        cls.goods.append(obj.my_unit)
+
+    @classmethod
+    def put_to_div(cls, obj, div):
+        """info"""
+
+
+class Printer(OfficeEquipment):
+    """info"""
+
+    def to_print(self):
+        """info"""
+        return f'to print smth {self.numb} times'
+
+
+class Scanner(OfficeEquipment):
+    """info"""
+
+    def to_scan(self):
+        """info"""
+        return f'to scan smth {self.numb} times'
+
+
+class Copier(OfficeEquipment):
+    """info"""
+
+    def to_copier(self):
+        """info"""
+        return f'to copier smth  {self.numb} times'
+
+
+unit_1 = Printer('hp', 30000, 2, 10)
+unit_2 = Scanner('Canon', 18000, 1, 10)
+Warehouse.reception(unit_1)
+Warehouse.reception(unit_2)
+
+print(Warehouse.goods)
+print(unit_2.to_scan())

@@ -5,3 +5,22 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(one, two):
+    """info"""
+    powered = one
+
+    if two > 0:
+        for _ in range(1, two):
+            powered *= one
+    else:
+        for _ in range(1, two, -1):
+            powered /= one
+
+    return powered
+
+
+a, b = float(input("Число a >>> ")), int(input("Число b >>> "))
+
+print(my_func(a, b))

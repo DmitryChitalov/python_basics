@@ -20,3 +20,72 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+class Car:
+    """info"""
+    speed: int
+    color: str
+    name: str
+    is_police: bool = False
+
+    def __init__(self, speed: int, color: str, name: str) -> None:
+        """info"""
+        self.speed = speed
+        self.color = color
+        self.name = name
+
+    def start(self):
+        """info"""
+        print(f"{self.name}: старт")
+
+    def stop(self):
+        """info"""
+        print(f"{self.name}: стоп")
+
+    def turn(self, direction: str):
+        """info"""
+        print(f"{self.name}: поворот - {direction}")
+
+    def show_speed(self):
+        """info"""
+        print(f"{self.name}: скорость = {self.speed} км/ч")
+
+
+class TownCar(Car):
+    """info"""
+    def show_speed(self):
+        super().show_speed()
+        if self.speed > 60:
+            print(f"{self.name}: превышение скорости")
+
+
+class SportCar(Car):
+    """info"""
+
+
+
+class WorkCar(Car):
+    """info"""
+    def show_speed(self):
+        super().show_speed()
+        if self.speed > 40:
+            print(f"{self.name}: превышение скорости")
+
+
+class PoliceCar(Car):
+    """info"""
+    is_police: bool = True
+
+
+cars = [
+    SportCar(240, 'red', 'Audi'),
+    TownCar(180, 'silver', 'Kia'),
+    WorkCar(80, 'white', 'Golf'),
+    PoliceCar(170, 'black', 'Ford'),
+]
+
+cars[0].start()
+cars[0].turn("направо")
+cars[0].stop()
+
+for car in cars:
+    car.show_speed()

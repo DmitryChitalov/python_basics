@@ -6,3 +6,10 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+import sys
+
+*_, hours, rate, bonus = sys.argv
+
+salary = (float(rate) * float(hours)) + float(bonus)
+
+print(f"Зарплата = {salary}")
