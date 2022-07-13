@@ -7,13 +7,12 @@
 """
 from sys import argv
 
-obj, name, time, stavka, bonus = argv
+obj, name, time, rate, bonus = argv
 
 
-def zp(name_1, time_1, stavka_1, bonus_1):
-    total = 0
-    total = int(time_1) * int(stavka_1) + int(bonus_1)
+def zp(name_1, time_1, rate_1, bonus_1):
+    total = int(time_1) * int(rate_1) + int(bonus_1)
     print(f"{name} заработная плата  - {total}")
 
 
-zp(name, time, stavka, bonus)
+zp(name, time, rate, bonus)

@@ -8,7 +8,7 @@
 """
 
 
-spisok = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
-print(f"Исходный список: {spisok}")
-new_spisok = [x for x in spisok if spisok.count(x) == 1]
-print(f"Результат: {new_spisok}")
+list = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+print(f"Исходный список: {list}")
+result = [x for x in list if list.count(x) == 1]
+print(f"Результат: {result}")

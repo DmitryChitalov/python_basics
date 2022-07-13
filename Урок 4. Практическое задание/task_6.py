@@ -17,23 +17,23 @@ from itertools import count, cycle
 a1 = int(input("Введите начальное число: "))
 a2 = int(input("Введите конечное число: "))
 
-spisok = []
+list_a = []
 for el in count(a1):
     if el > a2:
         break
     else:
-        spisok.append(el)
+        list_a.append(el)
         print(el)
-print(f"Список задания а: {spisok}")
+print(f"Список задания а: {list_a}")
 
 
 #Задание б
-new_spisok = []
+list_b = []
 c = 0
-for x in cycle(spisok):
+for x in cycle(list_a):
     if c >= a2:
         break
     c += 1
     print(x)
-    new_spisok.append(x)
-print(f"Список задания б: {new_spisok}")
+    list_b.append(x)
+print(f"Список задания б: {list_b}")
