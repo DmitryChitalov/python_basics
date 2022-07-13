@@ -1,3 +1,6 @@
+from abc import ABC, abstractmethod
+
+
 """
 Задание 2.
 
@@ -25,3 +28,48 @@
 
 Два класса: абстрактный и Clothes
 """
+
+
+class MyAbstractClothes (ABC):
+    @abstractmethod
+    def get_coat_consumption(self):
+        pass
+
+    @abstractmethod
+    def get_suit_consumption(self):
+        pass
+
+    @abstractmethod
+    def get_total_consumption(self):
+        pass
+
+
+class Clothes (MyAbstractClothes):
+    def __init__(self, v, h):
+        self.v = v
+        self.h = h
+
+    def get_coat_consumption(self):
+        try:
+            print(f"Расход ткани на пальто = {round((self.v / 6.5 + 0.5), 2)}")
+        except BaseException as e:
+            print(f"General error: {e}")
+
+    def get_suit_consumption(self):
+        try:
+            print(f"Расход ткани на костюм = {round((2 * self.h + 0.3), 2)}")
+        except BaseException as e:
+            print(f"General error: {e}")
+
+    @property
+    def get_total_consumption(self):
+        try:
+            return f"Общий расход ткани = {round(self.v / 6.5 + 0.5 + (2 * self.h + 0.3), 2)}"
+        except BaseException as e:
+            print(f"General error: {e}")
+
+
+my_clothes = Clothes(5, 7)
+my_clothes.get_coat_consumption()
+my_clothes.get_suit_consumption()
+print(my_clothes.get_total_consumption)
