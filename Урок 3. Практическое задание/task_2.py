@@ -9,12 +9,18 @@
 email: jackie@gmail.com, телефон: 01005321456
 """
 
-def user_info(*args):
+
+def user_info(name, l_name, birth, city, email, phone):
     """Вывод данных о пользователе в одну строку"""
-    print(f'{args[0]} {args[1]} {args[2]} года рождения,'
-    f'проживает в {args[3]}, email: {args[4]}, телефон: {args[5]}')
+    print(f'{name} {l_name} {birth} года рождения, '
+          f'проживает в городе {city}, \nemail: {email}, телефон: {phone}')
 
 
-user_info(input('Введите имя: '), input('Введите фамилию: '),
-          input('Введите год рождения: '), input('Введите ваш город: '),
-          input('Введите ваш email: '), input('Введите ваш телефон:'))
+user_info(
+    name=input('Введите имя: '),
+    l_name=input('Введите фамилию: '),
+    birth=input('Введите год рождения: '),
+    city=input('Введите ваш город: '),
+    email=input('Введите ваш email: '),
+    phone=input('Введите ваш телефон:')
+)
