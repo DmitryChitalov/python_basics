@@ -6,17 +6,20 @@
 2) без функции sort()
 """
 
-def sort_func(*vals):
-    """Поиск суммы наибольших двух аргументов при помощи sort"""
-    vals = list(vals)
-    vals.sort(reverse=True)
-    return vals[0] + vals[1]
 
-def no_sort_func(*vals):
+def sort_func(*args):
+    """Поиск суммы наибольших двух аргументов при помощи sort"""
+    #    vals = list(vals)
+    #    vals.sort(reverse=True)
+    return sum(sorted(list(args), reverse=True)[:2])
+
+
+def no_sort_func(*args):
     """Поиск суммы наибольших двух аргументов без sort"""
-    vals = list(vals)
-    vals.remove(min(vals))
-    return sum (vals)
+    args = list(args)
+    args.remove(min(args))
+    return sum(args)
+
 
 a = int(input('Аргумент 1: '))
 b = int(input('Аргумент 2: '))
