@@ -17,3 +17,14 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def div_num(n_1, n_2):
+    """Функция деления двух чисел, вводимых пользователем"""
+    try:
+        print(f"Результат деления {n_1} на {n_2} = {n_1 / n_2}")
+    except ZeroDivisionError:
+        print("Вы пытаетесь делить на ноль!")
+
+x = int(input("Введите 1 число: "))
+y = int(input("Введите 2 число: "))
+div_num(x, y)

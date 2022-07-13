@@ -7,3 +7,13 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+with open('task_4.txt', 'r', encoding='utf-8') as budget:
+    low = {}
+    for staff in budget:
+        low[staff.split()[0]] = float(staff.split()[1])
+    print('Сотрудники с окладом менее 20 000:')
+for name, creep in low.items():
+    if creep < 20000:
+        print(name)
+print(f'Средний оклад: {round(sum(low.values()) / len(low), 2)}')
