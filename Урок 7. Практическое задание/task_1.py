@@ -28,3 +28,32 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, matrix):
+        self.matrix = matrix
+
+    def __str__(self):
+        result = ''
+        for n in range(len(self.matrix)):
+            for m in range(len(self.matrix[n])):
+                result += str(self.matrix[n][m]) + ' '
+            result += '\n'
+        return result
+
+    def __add__(self, other):
+        for n in range(len(self.matrix)):
+            for m in range(len(self.matrix)):
+                self.matrix[n][m] = int(self.matrix[n][m]) + int(other.matrix[n][m])
+        return Matrix(self.matrix)
+
+
+my_source_matrix = []
+for n in range(3):
+    my_source_matrix.append(input('Введите три числа через запятую: ').split(','))
+
+my_matrix = Matrix(my_source_matrix)
+print(my_matrix)
+my_matrix_2 = my_matrix
+print(my_matrix + my_matrix_2)
