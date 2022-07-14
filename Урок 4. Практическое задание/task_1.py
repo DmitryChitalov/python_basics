@@ -6,3 +6,14 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+script_name, hours, rate, premium = argv
+
+
+def payroll(*args):
+    return int(args[0]) * int(args[1]) + int(args[2])
+
+
+print(payroll(hours, rate, premium))
