@@ -9,3 +9,22 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+
+class MyError(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+while True:
+    my_list = []
+    a = input('Введите числа через запятую: ').split(',')
+    for el in a:
+        try:
+            if not el.isdigit():
+                raise MyError(f'Элемент {el} в списке не является числом!')
+            else:
+                my_list.append(el)
+        except MyError as err:
+            print(err)
+    print(f'Список на выходе {my_list}')
