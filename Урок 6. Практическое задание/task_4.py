@@ -20,3 +20,84 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+
+class Car:
+    speed: int
+    tmp_speed: int
+    color: str
+    name: str
+    is_police = False
+
+    def __init__(self, my_speed, my_color, my_name):
+        self.speed = my_speed
+        self.tmp_speed = my_speed
+        self.color = my_color
+        self.name = my_name
+
+    def start(self):
+        print("Машина поехала")
+        self.speed = self.tmp_speed
+
+    def stop(self):
+        print("Машина остановилась")
+        self.speed = 0
+
+    def turn(self, direction: str):
+        print(f"Машина повернула {direction}")
+
+    def show_speed(self):
+        #pass
+        print(f"Скорость машины: {self.speed}км/ч.")
+
+
+class TownCar(Car):
+
+    def show_speed(self):
+        print(f"Скорость машины: {self.speed}км/ч.")
+        if self.speed > 60:
+            print("Превышена скорость в 60 км/ч!")
+
+
+class SportCar(Car):
+    pass
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        print(f"Скорость машины: {self.speed}км/ч.")
+        if self.speed > 40:
+            print("Превышена скорость в 40 км/ч!")
+
+
+class PoliceCar(Car):
+    is_police = True
+
+
+my_town_car = TownCar(70, "Красный", "Фольксваген")
+if my_town_car.is_police:
+    print("Это полицейская машина")
+else:
+    print("Это не полицейская машина")
+
+print(f"{my_town_car.color} {my_town_car.name}")
+my_town_car.show_speed()
+my_town_car.stop()
+my_town_car.show_speed()
+my_town_car.start()
+my_town_car.show_speed()
+
+
+my_police_car = PoliceCar(120, "Серый", "Тойота")
+if my_police_car.is_police:
+    print("Это полицейская машина")
+else:
+    print("Это не полицейская машина")
+
+print(f"{my_police_car.color} {my_police_car.name}")
+my_police_car.show_speed()
+my_police_car.stop()
+my_police_car.show_speed()
+my_police_car.turn("направо")
+my_police_car.start()
+my_police_car.show_speed()
