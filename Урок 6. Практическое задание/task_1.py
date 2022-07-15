@@ -15,3 +15,27 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+import time
+class TrafficLight:
+    _color = None
+    _colors = ['красный', 'жёлтый', 'зелёный']
+
+    def __init__(self):
+        self._color = self._colors[0]
+
+    def running(self):
+        i = 0
+        while i < 3:
+            for el in TrafficLight._colors :
+                print(el)
+                if el == 'красный':
+                    time.sleep(7)
+                if el == 'жёлтый':
+                    time.sleep(2)
+                if el == 'зелёный':
+                    time.sleep(5)
+                i += 1
+
+traffic = TrafficLight()
+traffic.running()

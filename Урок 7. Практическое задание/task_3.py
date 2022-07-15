@@ -100,3 +100,47 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+class Cell():
+    numofcell: int
+
+    def __init__(self, numofcell):
+        self.numofcell = numofcell
+
+    def __add__(self, other):
+        if isinstance(other, Cell):
+            return self.numofcell + other.numofcell
+
+    def __sub__(self, other):
+        if isinstance(other, Cell) and self.numofcell - other.numofcell < 0:
+            return self.numofcell - other.numofcell
+        else:
+            return 'вычитание невозможно'
+
+    def __mul__(self, other):
+        if isinstance(other, Cell):
+            return self.numofcell * other.numofcell
+
+    def __truediv__(self, other):
+        if isinstance(other, Cell):
+            return self.numofcell // other.numofcell
+
+    def make_order(self, cellsinrow):
+        if self.numofcell % cellsinrow == 0:
+            cell = ''
+            for i in range(int(self.numofcell / cellsinrow)):
+                cell += cellsinrow * '*' + '\n'
+            return cell
+        else:
+            cell = ''
+            for i in range(int(self.numofcell // cellsinrow)):
+                cell += cellsinrow * '*' + '\n'
+            cell += self.numofcell % cellsinrow * '*' + '\n'
+            return cell
+
+
+c1 = Cell(15)
+c2 = Cell(12)
+
+print(c2.make_order(5))
+print(c1.make_order(5))
