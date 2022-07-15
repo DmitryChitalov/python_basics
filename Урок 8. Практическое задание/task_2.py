@@ -5,3 +5,23 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+
+class OwnErrors(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+print('Делим 100 на введенный делитель')
+a = 100
+while True:
+    try:
+        delimiter = int(input('Введите делитель: '))
+        if delimiter == 0:
+            raise OwnErrors('Вы ввели 0! На 0 делить нельзя, даже если очень хочется.')
+    except ValueError:
+        print('Вводить надо число')
+    except OwnErrors as err:
+        print(err)
+    else:
+        print(f'Результат деления {a / delimiter}')
