@@ -7,25 +7,17 @@
     ранее сумме и после этого завершить программу.
 """
 
-"""Я посмотрел как Вы решили эту задачу, но увы, сам не догадался и не могу пока найти другой путь ее решения"""
-total = 0
-exitcode = 0
+def my_func(my_sum = 0):
 
-def myfunc(entered_list):
-   global exitcode
-   summa = 0
-   for i in entered_list:
-      if int(i) == 0:
-         exitcode = 1
-         return summa
-      else:
-         summa += int(i)
-   return summa
-
-
-while True: # бесконечный цикл
-    entered_num_list = input("Введите список чисел, разделенных пробелом, 0 - прерывание: ").split()
-    total += myfunc(entered_num_list)
-    print(total)
-    if exitcode == 1:
-       exit(0)
+    lst = input('Введите числа через пробел, q - выход: ').split()
+    for i in range(len(lst)):
+        if lst[i] != "q":
+            my_sum = my_sum + int(lst[i])
+        else:
+            break
+    print(my_sum)
+    if "q" in lst:
+        print("Расчет окончен")
+    else:
+        my_func(my_sum)
+my_func()

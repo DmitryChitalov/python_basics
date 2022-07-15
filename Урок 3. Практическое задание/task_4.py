@@ -9,18 +9,12 @@ print("Возведение действительного положитель�
 x, y = float(input("Введите число: ")), int(input("Введите отрицательную целую степень: "))
 
 
-def ispos(num):
-    if num > 0:
-        return True
-    else:
-        return False
+def deg(x, y):
+    res = 1
+    for i in range(y, 0):
+        res = res * x
+    res = 1 / res
+    return res
 
-if ispos(x) == True and ispos(y) == False:
-    print("Простой способ **:", x ** y)
 
-if ispos(x) == True and ispos(y) == False:
-    step = s = 1
-    while 0 > y:
-        s *= x
-        y += 1
-    print("Через while:", 1 / s)
+print(f"{int(x)} в степени {y} равно: {deg(x,y)}")
