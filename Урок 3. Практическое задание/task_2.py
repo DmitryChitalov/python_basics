@@ -8,16 +8,17 @@
 email: jackie@gmail.com, телефон: 01005321456
 """
 
-"""Добавил \n - т.к. в Вашем примере вывод на двух строках"""
+#Думал **kwargs при распаковке элементов, передает их как именные и будет тут в самый раз.
 
-
-def user_base(**kwargs):
-    name = input("Имя: ")
-    surname = input("Фамилия: ")
-    year = int(input("Год рождения: "))
-    city = input("Город проживания: ")
-    mail = input("Email: ")
-    phone = int(input("Номер телефона: "))
+def user_base(name, surname, year, city, mail, phone):
     print(f"{name} {surname} {year} года рождения, проживает в городе {city}, \n"
           f"email: {mail}, телефон: {phone}")
-user_base()
+
+
+user_base(
+    name = input("Имя: "),
+    surname = input("Фамилия: "),
+    year = int(input("Год рождения: ")),
+    city = input("Город проживания: "),
+    mail = input("Email: "),
+    phone = int(input("Номер телефона: ")))
