@@ -25,3 +25,38 @@
 
 Два класса: абстрактный и Clothes
 """
+
+
+from abc import ABC, abstractmethod
+
+
+class MyAbstractClass(ABC):
+    @abstractmethod
+    def get_total_cost(self):
+        pass
+
+
+class Clothes(MyAbstractClass):
+    def __init__(self, name, size):
+        self.name = name
+        self.size = size
+
+    @property
+    def get_total_cost(self):
+        total_cost = 0.0
+        if self.name == 'Coat':
+            total_cost = self.size / 6.5 + 0.5
+        elif self.name == 'Suite':
+            total_cost = self.size * 2 + 0.3
+        else:
+            total_cost = 0
+
+        return total_cost
+
+coat = Clothes('Coat', 8)
+suite = Clothes('Suite', 10)
+
+print(f"Расход ткани на пальто = {round(coat.get_total_cost, 2)}" )
+print(f"Расход ткани на костюм = {round(suite.get_total_cost, 2)}")
+print(f"Общий расход ткани = "
+      f"{round(coat.get_total_cost, 2) + round(suite.get_total_cost, 2)}")
