@@ -13,27 +13,27 @@
 
 from itertools import count, cycle
 
-#Задание а
+# Задание а
 a1 = int(input("Введите начальное число: "))
 a2 = int(input("Введите конечное число: "))
 
-list_a = []
+lst_a = []
 for el in count(a1):
     if el > a2:
         break
     else:
-        list_a.append(el)
+        lst_a.append(el)
         print(el)
-print(f"Список задания а: {list_a}")
+print(f"Список задания а: {lst_a}")
 
 
-#Задание б
-list_b = []
+# Задание б
+lst_b = []
 c = 0
-for x in cycle(list_a):
+for x in cycle(lst_a):
     if c >= a2:
         break
     c += 1
     print(x)
-    list_b.append(x)
-print(f"Список задания б: {list_b}")
+    lst_b.append(x)
+print(f"Список задания б: {lst_b}")

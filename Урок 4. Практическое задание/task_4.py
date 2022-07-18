@@ -8,7 +8,7 @@
 """
 
 
-list = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
-print(f"Исходный список: {list}")
-result = [x for x in list if list.count(x) == 1]
+lst = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+print(f"Исходный список: {lst}")
+result = [x for x in lst if lst.count(x) == 1]
 print(f"Результат: {result}")

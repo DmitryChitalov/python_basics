@@ -12,17 +12,18 @@
 
 from itertools import count
 
-def fact(numb):
+
+def fact(x):
     factorial = 1
     for a in count(1):
-        if a > numb:
+        if a > x:
             break
         factorial *= a
         yield factorial
 
-numb = int(input("Для расчета факториала введите число: "))
-i = 0
 
-for el in fact(numb):
+x = int(input("Для расчета факториала введите число: "))
+i = 0
+for el in fact(x):
     i += 1
     print(el)

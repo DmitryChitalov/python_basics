@@ -5,5 +5,5 @@
 """
 
 
-list = [el for el in range(20, 240) if el % 20 == 0 or el % 21 == 0]
-print(f"Список чисел от 20 до 240, кратных 20 или 21: {list}")
+lst = [el for el in range(20, 240) if el % 20 == 0 or el % 21 == 0]
+print(f"Список чисел от 20 до 240, кратных 20 или 21: {lst}")

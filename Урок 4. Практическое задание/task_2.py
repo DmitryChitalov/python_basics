@@ -8,16 +8,16 @@
 """
 
 
-list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-print(f"Исходный список: {list}")
+lst = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+print(f"Исходный список: {lst}")
 
-#without LC
-list_wlc = []
-for i in range(len(list)-1):
-    if list[i] < list[i+1]:
-        list_wlc.append(list[i+1])
-print(f"Без генератора: {list_wlc}")
+# without LC
+lst_wlc = []
+for i in range(len(lst)-1):
+    if lst[i] < lst[i+1]:
+        lst_wlc.append(lst[i+1])
+print(f"Без генератора: {lst_wlc}")
 
-#LC
-list_lc = [list[i] for i in range(1, len(list)) if list[i] > list[i-1]]
-print(f"С генератором: {list_lc}")
+# LC
+lst_lc = [lst[i] for i in range(1, len(lst)) if lst[i] > lst[i-1]]
+print(f"С генератором: {lst_lc}")
