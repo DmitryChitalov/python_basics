@@ -5,3 +5,22 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+
+class DivisionError(Exception):
+    pass
+
+
+def divider(num1, num2):
+    try:
+        if num2 == 0:
+            raise DivisionError('На 0 делить нельзя!')
+        print(f'Результат деления числа {num1} на {num2} равен {num1 / num2}')
+    except DivisionError as error:
+        print(error)
+
+
+a = int(input("Введите число 1: "))
+b = int(input("Введите число 2: "))
+
+divider(a, b)
