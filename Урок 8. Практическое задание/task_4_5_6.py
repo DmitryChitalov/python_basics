@@ -1,21 +1,78 @@
-"""
-4. Начните работу над проектом «Склад оргтехники». Создайте класс, описывающий склад.
-А также класс «Оргтехника», который будет базовым для классов-наследников.
-Эти классы — конкретные типы оргтехники (принтер, сканер, ксерокс).
-В базовом классе определить параметры, общие для приведенных типов.
-В классах-наследниках реализовать параметры, уникальные для каждого типа оргтехники.
+class Sklad:
+    def __init__(self):
+        self.storage = []
 
-5. Продолжить работу над четвертым заданием.
-Разработать методы, отвечающие за приём оргтехники на
-склад и передачу в определенное подразделение компании.
-Для хранения данных о наименовании и
-количестве единиц оргтехники, а также других данных,
-можно использовать любую подходящую структуру, например словарь.
+    def input(self, item, count):
+        for n in range(count):
+            self.storage.append(item)
 
-6. Продолжить работу над пятым заданием. Р
-еализуйте механизм валидации вводимых пользователем данных.
-Например, для указания количества принтеров,
-отправленных на склад, нельзя использовать строковый тип данных.
-Подсказка: постарайтесь по возможности реализовать в проекте
-«Склад оргтехники» максимум возможностей, изученных на уроках по ООП.
-"""
+    def get_availability(self):
+        print(f"На складе {len(self.storage)} единиц ТМЦ:")
+        for key, i in enumerate(self.storage, 1):
+            print(key, i)
+
+    def output(self, item_id, depart):
+        try:
+            item = self.storage.pop(item_id)
+            print(f"{item} передан в отдел: {depart}")
+        except IndexError as err:
+            print(f"{err}")
+
+
+class OfficeEquipment(Sklad):
+    def __init__(self, manufacturer, model):
+        self.manufacturer = manufacturer
+        self.model = model
+
+
+class Printer(OfficeEquipment):
+    def __init__(self, manufacturer, model, color):
+        super().__init__(manufacturer, model)
+        self.color = color
+
+    def __str__(self):
+        return f"Printer (Производитель:{self.manufacturer}, " \
+               f"Модель:{self.model}, " \
+               f"Цветной:{self.color})"
+
+
+class Scanner(OfficeEquipment):
+    def __init__(self, manufacturer, model, auto_feed: bool):
+        super().__init__(manufacturer, model)
+        self.auto_feed = auto_feed
+
+    def __str__(self):
+        return f"Scanner (Производитель:{self.manufacturer}, " \
+            f"Модель:{self.model}, " \
+            f"Автоподача:{self.auto_feed}"
+
+
+class Copyr(OfficeEquipment):
+    def __init__(self, manufacturer, model, lan: bool):
+        super().__init__(manufacturer, model)
+        self.lan = lan
+
+    def __str__(self):
+        return f"Copyr (Производитель:{self.manufacturer}, " \
+           f"Модель:{self.model}, " \
+           f"Сетевой:{self.lan})"
+
+
+item_1 = Printer("Pantum", "P2500", False)
+item_2 = Scanner("HP", "Pro4500", True)
+item_3 = Copyr("Canon", "2425", True)
+item_4 = Printer("Pantum", "MFP2022", True)
+
+company = Sklad()
+
+
+company.input(item_1, 2)
+company.input(item_2, 1)
+company.input(item_3, 2)
+company.input(item_4, 1)
+
+company.get_availability()
+company.output(2, "Производство")
+company.get_availability()
+company.output(2, "Бухгалтерия")
+company.get_availability()
