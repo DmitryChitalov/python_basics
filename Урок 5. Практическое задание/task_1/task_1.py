@@ -3,3 +3,13 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+
+text = []
+
+while True:
+    with open('task_1.txt', 'a+', encoding='utf-8') as f:
+        text = input("Введите данные: ")
+
+        if not text:
+            break
+        f.write(f"{text}\n")
