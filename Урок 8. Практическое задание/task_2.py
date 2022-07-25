@@ -6,24 +6,20 @@
 """
 
 
-class ErrorHandle:
-    def __init__(self, var_1, var_2):
-        self.var_1 = var_1
-        self.var_2 = var_2
-
-    def div(var_1, var_2):
-        try:
-            if var_1 == 0 or var_2 == 0:
-                return "Вы пытаетесь делить на 0!"
-        except ErrorHandle as err:
-            print(err)
-        else:
-            div_res = var_1 / var_2
-            return div_res
+class ErrorHandle(Exception):
+    def __init__(self, txt):
+        self.txt = txt
 
 
-var_1 = int(input("Введите первое число: "))
-var_2 = int(input("Введите второе число: "))
-print(ErrorHandle.div(var_1, var_2))
+try:
+    var_1 = int(input("Введите первое число: "))
+    var_2 = int(input("Введите второе число: "))
+    if var_1 == 0 or var_2 == 0:
+        raise ErrorHandle("Вы пытаетесь делить на 0!")
+    result = var_1 / var_2
 
+except ErrorHandle as err:
+    print(err)
+else:
+    print(f"{var_1 / var_2}")
 
