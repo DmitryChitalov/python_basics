@@ -6,21 +6,24 @@
 """
 
 
-class Zero_divis:
+class ErrorHandle:
     def __init__(self, var_1, var_2):
         self.var_1 = var_1
         self.var_2 = var_2
 
-    def divis(var_1, var_2):
-        if var_1 > 0 and var_2 > 0:
-            divis = var_1 / var_2
-            return divis
+    def div(var_1, var_2):
+        try:
+            if var_1 == 0 or var_2 == 0:
+                return "Вы пытаетесь делить на 0!"
+        except ErrorHandle as err:
+            print(err)
         else:
-            return "Вы пытаетесь делить на 0!"
+            div_res = var_1 / var_2
+            return div_res
 
 
-print(Zero_divis.divis(0, 5))
-print(Zero_divis.divis(15, 6))
-print(Zero_divis.divis(75, 0))
+var_1 = int(input("Введите первое число: "))
+var_2 = int(input("Введите второе число: "))
+print(ErrorHandle.div(var_1, var_2))
 
 

@@ -1,4 +1,4 @@
-class Sklad:
+class Warehouses:
     def __init__(self):
         self.storage = []
 
@@ -19,7 +19,7 @@ class Sklad:
             print(f"{err}")
 
 
-class OfficeEquipment(Sklad):
+class OfficeEquipment(Warehouses):
     def __init__(self, manufacturer, model):
         self.manufacturer = manufacturer
         self.model = model
@@ -63,7 +63,7 @@ item_2 = Scanner("HP", "Pro4500", True)
 item_3 = Copyr("Canon", "2425", True)
 item_4 = Printer("Pantum", "MFP2022", True)
 
-company = Sklad()
+company = Warehouses()
 
 
 company.input(item_1, 2)

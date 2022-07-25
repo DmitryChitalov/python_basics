@@ -24,8 +24,8 @@ while True:
                 break
             else:
                 print("Это не число")
-        except CheckNumber as error1:
-            print(error1)
+        except CheckNumber as err:
+            print(err)
 
 
 print(num_lst)
