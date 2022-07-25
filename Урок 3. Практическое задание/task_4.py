@@ -5,3 +5,22 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+print("Возведение действительного положительного числа в целую отрицательную степень")
+x, y = float(input("Введите число: ")), int(input("Введите отрицательную целую степень: "))
+
+
+def ispos(num):
+    if num > 0:
+        return True
+    else:
+        return False
+
+if ispos(x) == True and ispos(y) == False:
+    print("Простой способ **:", x ** y)
+
+if ispos(x) == True and ispos(y) == False:
+    step = s = 1
+    while 0 > y:
+        s *= x
+        y += 1
+    print("Через while:", 1 / s)
