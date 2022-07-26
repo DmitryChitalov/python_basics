@@ -20,3 +20,63 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+class Car:
+    def __init__(self, speed: int, color: str, name: str, is_police: bool):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        print(f'Машина {self.name} поехала.')
+
+    def stop(self):
+        print(f'Машина {self.name} остановилась.')
+
+    def turn(self, direction: str):
+        print(f'Машина {self.name} повернула {direction}.')
+
+    def show_speed(self):
+        print(f'Текущая скорость {self.color} {self.name} - {self.speed}.')
+
+
+class TownCar(Car):
+    def show_speed(self):
+        message = f'Скорость {self.name} - {self.speed}.'
+        if self.speed > 60:
+            message += f' Скорость {self.color} {self.name} превышена.'
+        print(message)
+
+
+class SportCar(Car):
+    pass
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        message = f'Скорость {self.name} - {self.speed}.'
+        if self.speed > 40:
+            message += f' Скорость {self.color} {self.name} превышена.'
+        print(message)
+
+
+class PoliceCar(Car):
+    def __init__(self, speed: int, color: str, name: str, is_police: bool = True):
+        super().__init__(speed, color, name, is_police)
+
+car_1 = TownCar(speed=80, color='синий', name='Москвич', is_police=False)
+car_1.show_speed()
+car_1.stop()
+
+car_2 = PoliceCar(speed=90, color='черный', name='Жигули', is_police=True)
+car_2.show_speed()
+car_2.go()
+car_2.turn('на право')
+print(f'{car_2.name} - является полицеским автомобилем  {car_2.is_police}')
+
+
+car_3 = WorkCar(speed=25, color='белый', name='Камаз', is_police=False)
+car_3.speed = 55
+car_3.turn('на лево')
+car_3.show_speed()
