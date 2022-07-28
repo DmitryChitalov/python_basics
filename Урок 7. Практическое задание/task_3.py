@@ -100,3 +100,61 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+class Cell:
+    def __init__(self, quant):
+        self.quant = int(quant)
+
+    def __add__(self, oth):
+        return f'{self.quant + oth.quant}'
+
+    def __sub__(self, oth):
+        sub = self.quant - oth.quant
+        return f'{sub}' if sub > 0 else 'ошибка расчёта'
+
+    def __truediv__(self, oth):
+        return self.quant // oth.quant
+
+    def __mul__(self, oth):
+        return self.quant * oth.quant
+
+    def make_order(self, row):
+        res = ''
+        for _ in range(int(self.quant / row)):
+            res += '*' * row + '\n'
+        res += '*' * (self.quant % row) + '\n'
+        return res
+
+
+print("Создаём объекты клеток:")
+cell1 = Cell(25)
+cell2 = Cell(20)
+cell3 = Cell(15)
+cell4 = Cell(10)
+
+print()
+
+print("Складываем: ")
+print(cell1 + cell2)
+
+print()
+
+print("Вычитаем: ")
+print(cell1 - cell2)
+print(cell4 - cell3)
+
+print()
+
+print("Умножаем: ")
+print(cell2 * cell1)
+
+print()
+
+print("Делим: ")
+print(cell1 / cell2)
+
+print()
+
+print("Организация ячеек по рядам: ")
+print(cell1.make_order(5))
+print(cell2.make_order(10))
