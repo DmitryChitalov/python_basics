@@ -5,3 +5,27 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> Amendments_Homework#1,2,3
+def my_func():
+    """Функця для возвидения в отрицательную стпень"""
+    number_1 = int(input("Введите Х"))
+    number_2 = int(input("Введите Y"))
+    number_3 = abs(number_2) - 1
+    number_4 = number_1
+    while number_3 > 0:
+        number_1 = number_4 * number_1
+        number_3 = number_3 - 1
+    number_5 = 1 / number_1
+    return number_5
+
+
+number_6 = my_func()
+<<<<<<< HEAD
+print(f"Результа {number_6}")
+=======
+print(f"Результа {number_6}")
+>>>>>>> Amendments_Homework#1,2,3

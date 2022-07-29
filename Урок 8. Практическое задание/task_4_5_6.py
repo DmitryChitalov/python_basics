@@ -19,3 +19,62 @@
 Подсказка: постарайтесь по возможности реализовать в проекте
 «Склад оргтехники» максимум возможностей, изученных на уроках по ООП.
 """
+
+
+class Store:
+
+    def __init__(self, name, price, amount, power):
+        self.name = name
+        self.price = price
+        self.amount = amount
+        self.power = power
+        self.my_store_all = []
+        self.my_store = []
+        self.my_unit = {'Модель устройства': self.name, 'Цена за ед': self.price,
+                        'Количество': self.amount}
+
+    def __str__(self):
+        return f'{self.name} цена {self.price} количество {self.amount}'
+
+    def reception(self):
+        try:
+            # tupe = input(f'Введите принадлежность товара(0-принтер,1-сканер,2-ксерокс)')
+            unit = input('Введите наименование ')
+            unit_p = int(input('Введите цену за ед '))
+            unit_q = int(input('Введите количество '))
+            unique = {'Модель устройства': unit, 'Цена за ед': unit_p, 'Количество': unit_q}
+            self.my_unit.update(unique)
+            self.my_store.append(self.my_unit)
+            print(f'Текущий список -\n {self.my_store}')
+            out = input('Для окончания работы в программе нажмите "E" ')
+            if out == 'E':
+                self.my_store_all.append(self.my_store)
+                print(f'Весь склад -\n {self.my_store_all}')
+                return 'Спасибо за работу'
+
+            else:
+                return Store.reception(self)
+
+        except:
+            return 'Ошибка ввода данных'
+
+
+class Printer(Store):
+    def to_print(self):
+        return f'кол-во потребляемой энергии кВт/ч {self.power}'
+
+
+class Scanner(Store):
+    def to_scan(self):
+        return f'кол-во потребляемой энергии кВт/ч {self.power}'
+
+
+class Copier(Store):
+    def to_copier(self):
+        return f'кол-во потребляемой энергии кВт/ч {self.power}'
+
+
+num_1 = Printer('Принтер', 1000, 1, 4)
+num_2 = Scanner('Сканер', 2000, 2, 12)
+num_3 = Copier('Ксерокс', 3000, 3, 10)
+num_1.reception()
