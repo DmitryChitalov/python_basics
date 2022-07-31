@@ -19,3 +19,68 @@
 Подсказка: постарайтесь по возможности реализовать в проекте
 «Склад оргтехники» максимум возможностей, изученных на уроках по ООП.
 """
+class Myexc(Exception):
+    def __init__(self, text):
+        self.txt = text
+
+
+class OfficeEquipment:
+    def __init__(self, name, price, quantity, color):
+        self.name = name
+        self.price = price
+        self.color = color
+        try:
+            if isinstance(quantity, int):
+
+                self.quantity = quantity
+
+                self.my_unit = {
+                    'Модель устройства': self.name,
+                    'Цена за ед': self.price,
+                    'Количество': self.quantity}
+            else:
+                self.my_unit = {}
+                raise Myexc("Ошибка ввода данных")
+
+        except Myexc as exc:
+            print(exc.text)
+
+
+class Warehouse:
+    goods = []
+
+    @classmethod
+    def reception(cls, obj):
+        cls.goods.append(obj.my_unit)
+
+    @classmethod
+    def put_to_div(cls, obj, div):
+        pass
+
+
+class Printer(OfficeEquipment):
+    def to_print(self):
+        return f'Цвет {self.color}'
+
+
+class Scanner(OfficeEquipment):
+    def to_scan(self):
+        return f'Цвет: {self.color}'
+
+
+class Copier(OfficeEquipment):
+    def to_copier(self):
+        return f'Цвет:  {self.color}'
+
+
+item_1 = Printer('Принтер', 150, 1, 'белый')
+item_2 = Scanner('Сканер', 200, 2, 'серый')
+item_3 = Copier('Ксерокс', 250, 3, 'белый')
+
+Warehouse.reception(item_1)
+Warehouse.reception(item_2)
+Warehouse.reception(item_3)
+
+print(Warehouse.goods)
+
+print(item_1.to_print())
