@@ -18,18 +18,18 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
-#Задание 5 Определение как работает фирма
-#выручка
-revenue=int(input("Введите значение выручки: "))
-#издержки
-costs=int(input("Введите значение издержек: "))
-if(revenue>costs):
+# Задание 5 Определение как работает фирма
+# выручка
+revenue = int(input("Введите значение выручки: "))
+# издержки
+costs = int(input("Введите значение издержек: "))
+if (revenue > costs):
     print("Прибыль")
-    rent=(revenue-costs)/revenue
-    print("Рентабельность продаж %.2f" %rent)
-    people=int(input("Введите количество сотрудников: "))
-    print("Чистая прибыль в расчете на 1 сотрудника: ", (revenue-costs)/people)
-elif(revenue<costs):
+    cost_effectiveness = (revenue - costs) / revenue
+    print("Рентабельность продаж {0}".format(cost_effectiveness))
+    people = int(input("Введите количество сотрудников: "))
+    print("Чистая прибыль в расчете на 1 сотрудника: {0} ".format ((revenue - costs) / people))
+elif (revenue < costs):
     print("Убытки")
 else:
     print("Выход в 0")

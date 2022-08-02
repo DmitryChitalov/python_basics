@@ -11,13 +11,13 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
-#Задание 1 работа с числами
-a=5
-b=5.89 
-c="text"
-print('int: {0}; fload: {1}; string: {2}'.format(a, b, c))
-#Запрос ввода переменных
-a1=int(input("Введите ваше имя: "))
-b1=float(input("Введите ваш пароль: "))
-c1=input("Введите ваш возраст: ")
-print(a1, " ", b1, " ", c1)
+# Задание 1 работа с числами
+number = 5
+number_1 = 5.89
+line = "text"
+print('int: {0}; fload: {1}; string: {2}'.format(number, number_1, line))
+# Запрос ввода переменных
+name = int(input("Введите имя: "))
+password = float(input("Введите пароль: "))
+age = input("Введите возраст: ")
+print('int: {0}; float: {1}; string: {2}'.format(name, password, age))

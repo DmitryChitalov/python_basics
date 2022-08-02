@@ -8,7 +8,6 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
-
-#Задание 3 Подсчет суммы n+nn+nnn
-n=int(input("Введите число n: "))
-print("n+nn+nnn = ", n+n*11+n*111)
+# Задание 3 Подсчет суммы n+nn+nnn
+n = int(input("Введите число n: "))
+print("n+nn+nnn = {0}".format(n + n * 11 + n * 111))
