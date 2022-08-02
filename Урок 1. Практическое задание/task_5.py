@@ -18,3 +18,18 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+income = int(input("Please enter income:"))
+expenses = int(input("Please enter expenses:"))
+
+if income - expenses > 0:
+    profit = income - expenses
+    profit_percent = profit / income * 100
+    print(f"You have {profit_percent}% profit.")
+
+    employees = int(input("Please enter the number of employees:"))
+    profit_per_employee = profit / employees
+    profit_per_employee_percent = profit_per_employee / profit * 100
+    print(f"Profit per employee : {profit_per_employee}$ or {profit_per_employee_percent}%")
+
+else:
+    print("You have no profit, unfortunately")
