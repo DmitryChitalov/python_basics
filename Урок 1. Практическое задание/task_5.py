@@ -33,3 +33,4 @@ if income - expenses > 0:
 
 else:
     print("You have no profit, unfortunately")
+    
