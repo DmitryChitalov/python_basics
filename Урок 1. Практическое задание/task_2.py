@@ -13,15 +13,14 @@
 user_input = int(input("Please enter time in seconds:"))
 hours = 00
 minutes = 00
-seconds = 00
+seconds = int(user_input)
 
 if user_input < 0:
     print("Very funny -_-")
     exit()
 
 hours = user_input // 3600
-remainder = user_input - hours * 3600
-minutes = remainder // 60
-seconds = remainder % 60
+minutes = user_input // 60
+seconds = int(user_input)
 
-print(f"{hours}:{minutes}:{seconds}")
+print(f"Time h:m:s {hours}:{minutes}:{seconds}")
