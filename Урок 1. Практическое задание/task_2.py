@@ -21,6 +21,5 @@ if user_input < 0:
 
 hours = user_input // 3600
 minutes = user_input // 60
-seconds = int(user_input)
 
 print(f"Time h:m:s {hours}:{minutes}:{seconds}")
