@@ -23,13 +23,12 @@
 revenue = int(input("Введите значение выручки: "))
 # издержки
 costs = int(input("Введите значение издержек: "))
-if (revenue > costs):
+if revenue > costs:
     print("Прибыль")
-    cost_effectiveness = (revenue - costs) / revenue
-    print("Рентабельность продаж {0}".format(cost_effectiveness))
+    print("Рентабельность продаж {0}".format((revenue - costs) / revenue))
     people = int(input("Введите количество сотрудников: "))
     print("Чистая прибыль в расчете на 1 сотрудника: {0} ".format ((revenue - costs) / people))
-elif (revenue < costs):
+elif revenue < costs:
     print("Убытки")
 else:
     print("Выход в 0")

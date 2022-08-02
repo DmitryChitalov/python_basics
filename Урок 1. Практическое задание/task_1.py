@@ -15,9 +15,9 @@
 number = 5
 number_1 = 5.89
 line = "text"
-print('int: {0}; fload: {1}; string: {2}'.format(number, number_1, line))
+print(f'int: {number}, float: {number_1}, string: {line}')
 # Запрос ввода переменных
-name = int(input("Введите имя: "))
+name = input("Введите имя: ")
 password = float(input("Введите пароль: "))
-age = input("Введите возраст: ")
-print('int: {0}; float: {1}; string: {2}'.format(name, password, age))
+age = int(input("Введите возраст: "))
+print(f"int: {name}; float: {password}; string: {age}")

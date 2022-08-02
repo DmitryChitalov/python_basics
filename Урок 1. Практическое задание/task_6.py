@@ -26,7 +26,7 @@ days = 1
 while first_day < purpose:
     first_day = first_day / 10 + first_day
     days += 1
-    if (first_day > purpose):
+    if first_day > purpose:
         print("Вы достигните результата {0} км. за {1} дней".format(purpose, days))
         break
     else:
