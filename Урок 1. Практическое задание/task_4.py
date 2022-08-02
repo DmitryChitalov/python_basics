@@ -17,9 +17,9 @@ a = 0
 while a < m:
     c = n
     while c > 0:
-        a = int(c % 10)
+        a = c % 10
         if a < m:
-            c = int(c / 10)
+            c = c // 10
         else:
             break
     m -= 1

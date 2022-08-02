@@ -12,13 +12,8 @@
 
 time_in_second = int(input("Введите время в секундах: "))
 
-hour = int(time_in_second / 3600)
-minute = int(time_in_second % 3600 / 60)
-second = int(time_in_second % 3600 % 60)
-if hour < 10:
-    hour = "0"+str(hour)
-if minute < 10:
-    minute = "0"+str(minute)
-if second < 10:
-    second = "0"+str(second)
-print(f"Время в формате чч:мм:сс: {hour}:{minute}:{second}")
+hour = time_in_second // 3600
+minute = time_in_second % 3600 // 60
+second = time_in_second % 3600 % 60
+
+print(f"Время в формате чч:мм:сс: {hour:02}:{minute:02}:{second:02}")
