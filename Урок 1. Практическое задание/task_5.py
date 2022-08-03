@@ -18,3 +18,19 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+incomes = int(input("Введите выручку фирмы: "))
+expenses = int(input("Введите расходы фирмы: "))
+finres_value = incomes - expenses
+staff = 1
+text = ''
+if finres_value > 0:
+    result = 'прибыль'
+    staff = int(input("Введите численность сотрудников фирмы: "))
+    text = "Прибыль фирмы в расчете на одного сотрудника = " + str(finres_value / staff)
+elif finres_value < 0:
+    result = 'убыток'
+else:
+    result = 'стработали в 0'
+
+print(f"Финансовый результат - ", result, ". Ее величина: ", finres_value, "\n", text, "")

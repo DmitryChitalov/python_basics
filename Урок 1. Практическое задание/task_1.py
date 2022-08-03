@@ -11,3 +11,12 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+
+var_int = 1
+var_str = "i'm string"
+print(f"{var_str} Number {var_int}")
+
+username = input("Введите ваше имя: ")
+password = input("Введите ваш пароль: ")
+age = input("Введите ваш возраст: ")
+print(f"Ваши данные для входа:\n Имя: {username}\n Пароль: {password}\n Возраст: {age}")
