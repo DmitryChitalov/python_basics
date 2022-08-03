@@ -11,13 +11,12 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
-digit = 123
-name = 'Student'
-print(f'Ваше имя {name}, Ваше число: {digit}')
+DIGIT = 123
+NAME = 'Student'
+print(f'Ваше имя {NAME}, Ваше число: {DIGIT}')
 
 user_name = input('Введте ваше имя:')
 user_pass = input('Введте ваш пароль:')
 user_age = input('Введте ваш возраст:')
 
 print(f'Ваши данные для входа в аккаунт: имя - {user_name}, пароль - {user_pass}, возраст - {user_age}')
-

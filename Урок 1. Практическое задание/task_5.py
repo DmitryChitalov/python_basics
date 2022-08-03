@@ -19,21 +19,22 @@
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
 try:
-  debts = float(input('Введите выручку фирмы: '))
-  creds = float(input('Введите издержки фирмы: '))
-  profit = debts > creds
-  if profit:
-    profit_size = debts - creds
-    print(f'Финансовый результат - прибыль. Ее величина: {profit_size}')
-    print(f'Рентабельность выручки = {profit_size / debts}')
-    employers = 0
-    while employers == 0:
-      try:
-        employers = int(input('Введите численность сотрудников фирмы: '))
-      except ValueError:
-        print('Должно быть введено целое число')
-    print(f'Прибыль фирмы в расчете на одного сотрудника = {profit_size / employers}')
-  else:
-    print(f'Финансовый результат - Убыток. Его величина: {debts - creds}')
+    debts = float(input('Введите выручку фирмы: '))
+    creds = float(input('Введите издержки фирмы: '))
+    profit = debts > creds
+    if profit:
+        profit_size = debts - creds
+        print(f'Финансовый результат - прибыль. Ее величина: {profit_size}')
+        print(f'Рентабельность выручки = {profit_size / debts}')
+        employers = 0
+        while employers == 0:
+            try:
+                employers = int(input('Введите численность сотрудников фирмы: '))
+            except ValueError:
+                print('Должно быть введено целое число')
+        print(f'Прибыль фирмы в расчете на одного сотрудника = {profit_size / employers}')
+    else:
+        print(f'Финансовый результат - Убыток. Его величина: {debts - creds}')
 except ValueError:
-  print('Должны быть введены числа')
+    print('Должны быть введены числа')
+    
