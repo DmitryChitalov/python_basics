@@ -18,15 +18,14 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
-izd=int(input('izderjka '))
-viru=int(input('viruchka '))
-if izd>viru:
-    print('убыток')
-elif izd<viru:
-    prib=viru-izd
-    print('pribil ', prib)
-    ren=prib/viru
-    print('rentbl ',ren)
-    personal=int(input('personal: '))
-    print(prib//personal)
-    print('прибыль')
+izd = int(input('Введите издержки фирмы: '))
+viru = int(input('Введите выручку фирмы: '))
+if izd > viru:
+    print('Финансовый результат - убыток')
+elif izd < viru:
+    prib = viru-izd
+    print(f'Финансовый результат - прибыль. Ее величина: {prib} ')
+    ren = prib/viru
+    print('Рентабельность выручки: ', ren)
+    personal = int(input('Введите численность сотрудников фирмы: '))
+    print('Прибыль фирмы в расчете на одного сотрудника =', prib//personal)
