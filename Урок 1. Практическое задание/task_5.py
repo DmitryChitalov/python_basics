@@ -18,3 +18,15 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+izd=int(input('izderjka '))
+viru=int(input('viruchka '))
+if izd>viru:
+    print('убыток')
+elif izd<viru:
+    prib=viru-izd
+    print('pribil ', prib)
+    ren=prib/viru
+    print('rentbl ',ren)
+    personal=int(input('personal: '))
+    print(prib//personal)
+    print('прибыль')
