@@ -10,3 +10,11 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+num = [a.split() for a in input()]
+maxx = 0
+k = 0
+while k != len(num):
+    if int(num[k][0]) > maxx:
+        maxx = int(num[k][0])
+    k += 1
+print(maxx)

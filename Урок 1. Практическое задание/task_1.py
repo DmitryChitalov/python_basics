@@ -11,3 +11,9 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+var1 = '1'
+var2 = 2
+print(var1, var2)
+user = input('>> ')
+user2 = int(input('number: '))
+print(user, user2)
