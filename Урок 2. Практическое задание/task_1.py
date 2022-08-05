@@ -15,3 +15,9 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+my_list = [1, 0.1, "string", True, None, complex(5, 6), ['l', 'i', 's', 't'], {'s', 'e', 't'}]
+filler = "{:<20}  =  "  # используется для форматирования вывода фиксированной ширины: элемент = тип данных
+for element in my_list:
+    # явно типизируем str(element) потому-что fоrmat не работает с некоторыми типами данных
+    print(filler.format(str(element)), type(element))
