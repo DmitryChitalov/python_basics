@@ -18,3 +18,40 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+# Приветственное сообщение
+print("Программа для определения финансового результата фирмы и расчет прибыли на каждого сотрудника.\n")
+
+# Создадим функцию ввода числа и проверки типа
+def inputandchecknum (text):
+    tempin = input (text)
+    while True:
+        try:
+            tempin = abs (int(tempin))
+            return tempin
+
+        except Exception:
+            print('Введите целое число ')
+            tempin = input()
+            continue
+
+# Запрашиваем исходные данные
+profit = inputandchecknum("Введите выручку фирмы: ")
+costs = inputandchecknum("Введите издержки фирмы: ")
+
+# Арифметические расчеты
+results = profit - costs
+
+# Вывод результата
+resultstext = 'убыток'
+if results > 0:
+    resultstext = 'прибыль'
+elif results == 0:
+    resultstext = 'вышли в "ноль"'
+print(f"Финансовый результ - {resultstext}. Его величина: {results}\n"
+      f"Рентабильность выручки: ", costs/profit)
+
+# Расчет прибыли на сотрудника
+if results > 0:
+    piple = inputandchecknum('Введите численность сотрудников фирмы: ')
+    print(f'Прибыль фирмы в расчете на одного сотрудника = ', results/piple)

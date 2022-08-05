@@ -19,3 +19,33 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+# Приветственное сообщение
+print("Программа для определения количества дней для достижения трубуемого результата.\n")
+
+# Создадим функцию ввода числа и проверки типа
+def inputandchecknum (text):
+    tempin = input (text)
+    while True:
+        try:
+            tempin = abs (float(tempin))
+            return tempin
+
+        except Exception:
+            print('Введите число ')
+            tempin = input()
+            continue
+
+# Запрашиваем исходные данные
+firstday = inputandchecknum('Введите расстояние, пройденное в первый день: ')
+lastday = inputandchecknum('Введите расстояние, пройденное в последний день: ')
+
+#
+step = firstday
+day = int (1)
+print(f"{day}-й день - {'{:.2f}'.format(step)} км")
+while step <= lastday:
+    day = day + 1
+    step = step + firstday * 0.1
+    print(f"{day}-й день - {'{:.2f}'.format(step)} км")
+print(f"Ответ: На {day}-й день спортсмен достиг результата не менее - {'{:.2f}'.format(lastday)} км.")
