@@ -39,14 +39,14 @@ for el in goods:
     for key, value in el[1].items():
         if key == "название":
             result_list_name.append(value)
-            result_dict.update({key:result_list_name})
+            result_dict.update({key: result_list_name})
         elif key == "цена":
             result_list_price.append(value)
-            result_dict.update({key:result_list_price})
+            result_dict.update({key: result_list_price})
         elif key == "количество":
             result_list_quant.append(value)
-            result_dict.update({key:result_list_quant})
+            result_dict.update({key: result_list_quant})
         else:
             result_list_units.append(value)
-            result_dict.update({key:set(result_list_units)})
+            result_dict.update({key: set(result_list_units)})
 print(result_dict)
