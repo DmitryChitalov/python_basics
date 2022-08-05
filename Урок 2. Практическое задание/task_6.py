@@ -25,3 +25,41 @@
 “ед”: [“шт.”]
 }
 """
+goods = []
+stats_goods = {}
+
+for i in range(1,4):                                                  # Ask for user input 3 times
+    category_number = i
+    category = input("Please enter category name:")
+    price = int(input("Please enter the price:"))
+    stock = int(input("Please enter the amount in stock:"))
+    pieces = input("Please enter the pieces:")
+
+    goods_dictionary = {
+        "Category" : category,
+        "Price" : price,
+        "Stock" : stock,
+        "Pieces" : pieces
+    }
+
+    goods_tuple = (category_number, goods_dictionary)
+    goods.append(goods_tuple)
+    print(goods)
+    
+# Create new empty dictionary, with categories names
+for i in goods:
+    information=i[1]
+    for key,value in information.items():
+        stats_goods[key] = []
+
+# Get the stats
+for cat in goods:
+    information = cat[1]
+    for key,value in information.items():
+        stats_goods[key].append(value)
+
+for i in stats_goods:
+    if i == "Pieces":
+        print(i,set(stats_goods[i]))
+    else:       
+        print(i,stats_goods[i])
