@@ -18,3 +18,16 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+print("Задание №5")
+income = int(input("Введити выручку в руб.==>>> "))
+consumption = int(input("Введити издержки в руб.==> "))
+if income >= consumption:
+    print("Бизнес прибыльный")
+    profit = income - consumption
+    rent = (profit / income) * 100
+    print(f"Фирма работает с рентабельностью {rent} %")
+    human = int(input("Введите кол-во персонала "))
+    INCOME_1 = str(profit / human)
+    print(f"Прибыль на 1 сотрудника {INCOME_1} руб.")
+else:
+    print("Бизнес убыточен")
