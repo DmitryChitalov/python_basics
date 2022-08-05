@@ -30,4 +30,4 @@ if profit > 0:
     employee_profit = profit / employees
     print(f"Прибыль фирмы в расчете на одного сотрудника = {employee_profit}")
 else:
-    print("Упс, похоже прибыль ниже нуля")
+    print("Ой, похоже вы работаете не ради прибыли")
