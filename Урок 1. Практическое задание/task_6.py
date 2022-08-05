@@ -19,3 +19,18 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+def find_day(ran: float, want: int) -> int:
+    day = 1
+    while ran <= want:
+        day += 1
+        ran *= 1.1
+    return day
+
+
+if __name__ == '__main__':
+    ran = 2
+    want = 3
+
+    day_x = find_day(ran, want)
+    print(f"На {day_x} день спортсмен пересек {want} км")
