@@ -14,3 +14,10 @@
 1. раз
 2. перерефриж
 """
+value = input("Введите слова через пробел: ")
+words_list = value.split()
+for ind, element in enumerate(words_list, 1):
+    if len(element) < 10:
+        print(f"{ind}.", element)
+    else:
+        print(f"{ind}.", element[:10])
