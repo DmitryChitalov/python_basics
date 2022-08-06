@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+list = [1, "--", 1.1, True, None]
+for item in list:
+    print(type(item))
