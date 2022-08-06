@@ -11,3 +11,13 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+ask_name = input("Введите ваше имя: ")
+ask_password = input("Введите ваш пароль: ")
+ask_age = int(input("Введите ваш возраст: "))
+ask_email = input("Введите ваш e-mail: ")
+
+print(f"Ваши учетные данные: {ask_name}, {ask_email}, возраст {ask_age} лет.")
+print(f"Ваш логин и пароль: {ask_name}:{ask_password}")
+print("Тип строки имени ask_name: ", type(ask_name))
+print("Тип переменной возраста ask_age",type(ask_age))
+
