@@ -11,3 +11,7 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+list_input = input().split(' ')
+for i in range(0, len(list_input) - 1, 2):
+    list_input[i], list_input[i + 1] = list_input[i + 1], list_input[i]
+print(list_input)
