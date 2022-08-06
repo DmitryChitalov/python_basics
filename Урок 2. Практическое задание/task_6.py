@@ -25,3 +25,26 @@
 “ед”: [“шт.”]
 }
 """
+list_set = [(1, {"название": "компьютер", "цена": 20000, "количество": 5, "eд": "шт."}),
+            (2, {"название": "принтер", "цена": 6000, "количество": 2, "eд": "шт."}),
+            (3, {"название": "сканер", "цена": 2000, "количество": 7, "eд": "шт."}), ]
+list_name = []
+list_price = []
+list_count = []
+list_units = []
+dict_res = {}
+for element in list_set:
+    for key, value in element[1].items():
+        if key == 'название':
+            list_name.append(value)
+            dict_res.update({'названия': list_name})
+        elif key == 'цена':
+            list_price.append(value)
+            dict_res.update({'цены': list_price})
+        elif key == 'количество':
+            list_count.append(value)
+            dict_res.update({'количества': list_count})
+        elif key == 'eд':
+            list_units.append(value)
+            dict_res.update({key: set(list_units)})
+print(dict_res)
