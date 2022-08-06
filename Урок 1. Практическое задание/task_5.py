@@ -43,4 +43,4 @@ elif proceeds == costs:
     percentage = ((a - (imagine / months) * (-1) / proceeds) * 100) * employess
     print(f"Чтобы достичь этой цели за {months} мес. вам нужно увеличить прибыль на %.1f проц." %percentage)
 else:
-    print("Ваша фирма убыточна.")
+    print("Ваша фирма убыточна")
