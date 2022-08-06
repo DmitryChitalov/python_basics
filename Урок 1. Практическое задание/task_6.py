@@ -24,28 +24,28 @@
 print("Программа для определения количества дней для достижения трубуемого результата.\n")
 
 # Создадим функцию ввода числа и проверки типа
-def inputandchecknum (text):
-    tempin = input (text)
+def input_and_check_num(text):
+    temp_in = input(text)
     while True:
         try:
-            tempin = abs (float(tempin))
-            return tempin
+            tempin = abs(float(temp_in))
+            return temp_in
 
         except Exception:
             print('Введите число ')
-            tempin = input()
+            temp_in = input()
             continue
 
 # Запрашиваем исходные данные
-firstday = inputandchecknum('Введите расстояние, пройденное в первый день: ')
-lastday = inputandchecknum('Введите расстояние, пройденное в последний день: ')
+first_day = input_and_check_num('Введите расстояние, пройденное в первый день: ')
+last_day = input_and_check_num('Введите расстояние, пройденное в последний день: ')
 
 #
-step = firstday
-day = int (1)
+step = first_day
+day = int(1)
 print(f"{day}-й день - {'{:.2f}'.format(step)} км")
-while step <= lastday:
+while step <= last_day:
     day = day + 1
-    step = step + firstday * 0.1
+    step = step + first_day * 0.1
     print(f"{day}-й день - {'{:.2f}'.format(step)} км")
-print(f"Ответ: На {day}-й день спортсмен достиг результата не менее - {'{:.2f}'.format(lastday)} км.")
+print(f"Ответ: На {day}-й день спортсмен достиг результата не менее - {'{:.2f}'.format(last_day)} км.")

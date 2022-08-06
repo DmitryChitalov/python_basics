@@ -23,35 +23,35 @@
 print("Программа для определения финансового результата фирмы и расчет прибыли на каждого сотрудника.\n")
 
 # Создадим функцию ввода числа и проверки типа
-def inputandchecknum (text):
-    tempin = input (text)
+def input_and_check_num(text):
+    temp_in = input(text)
     while True:
         try:
-            tempin = abs (int(tempin))
-            return tempin
+            temp_in = abs(int(temp_in))
+            return temp_in
 
         except Exception:
             print('Введите целое число ')
-            tempin = input()
+            temp_in = input()
             continue
 
 # Запрашиваем исходные данные
-profit = inputandchecknum("Введите выручку фирмы: ")
-costs = inputandchecknum("Введите издержки фирмы: ")
+profit = input_and_check_num("Введите выручку фирмы: ")
+costs = input_and_check_num("Введите издержки фирмы: ")
 
 # Арифметические расчеты
 results = profit - costs
 
 # Вывод результата
-resultstext = 'убыток'
+results_text = 'убыток'
 if results > 0:
-    resultstext = 'прибыль'
+    results_text = 'прибыль'
 elif results == 0:
-    resultstext = 'вышли в "ноль"'
-print(f"Финансовый результ - {resultstext}. Его величина: {results}\n"
+    results_text = 'вышли в "ноль"'
+print(f"Финансовый результ - {results_text}. Его величина: {results}\n"
       f"Рентабильность выручки: ", costs/profit)
 
 # Расчет прибыли на сотрудника
 if results > 0:
-    piple = inputandchecknum('Введите численность сотрудников фирмы: ')
+    piple = input_and_check_num('Введите численность сотрудников фирмы: ')
     print(f'Прибыль фирмы в расчете на одного сотрудника = ', results/piple)

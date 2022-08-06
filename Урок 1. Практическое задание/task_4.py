@@ -14,33 +14,33 @@
 print("Программа нахождения наибольшей цифры в целом числе.\n")
 
 # Создадим функцию ввода числа и проверки типа
-def inputandchecknum (text):
-    tempin = input (text)
+def input_and_check_num(text):
+    temp_in = input(text)
     while True:
         try:
-            tempin = abs (int(tempin))
-            return tempin
+            temp_in = abs(int(temp_in))
+            return temp_in
 
         except Exception:
             print('Введите целое число ')
-            tempin = input()
+            temp_in = input()
             continue
 
 # Вводим исходное число
-fullnum = inputandchecknum("Введите целое число: ")
+full_num = input_and_check_num("Введите целое число: ")
 
 # Выполняем математические операции
-fullnum = str (fullnum)
-maxdigit = int (0)
-indexstring = 0
-for i in fullnum:
-    tempnum = int (fullnum[indexstring])
-    if tempnum == 9:
-        maxdigit = tempnum
+full_num = str(full_num)
+max_digit = int(0)
+index_string = 0
+for i in full_num:
+    temp_num = int(full_num[index_string])
+    if temp_num == 9:
+        max_digit = temp_num
         break
-    if tempnum > maxdigit:
-        maxdigit = tempnum
-    indexstring = indexstring + 1
+    if temp_num > max_digit:
+        max_digit = temp_num
+    index_string = index_string + 1
 
 # Выводим результат на экран
-print(f"Максимальная цифра в числе {fullnum} - {maxdigit}")
+print(f"Максимальная цифра в числе {full_num} - {max_digit}")

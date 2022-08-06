@@ -12,39 +12,39 @@
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
 # Зададим переменные заранее
-firstname = str ('empty1')
-stringone = str ('empty2')
-firstnumber = int (1)
-secondnumber = int (2)
-othernumber = int (3)
-soulnumber = int (23435459)
-countnumbers = int (8)
+first_name = str('empty1')
+string_one = str('empty2')
+first_number = int(1)
+second_number = int(2)
+other_number = int(3)
+soul_number = int(23435459)
+count_numbers = int(8)
 
 # Приветственное сообщение
 print("Программа генерации пары логин-пароль\n\n")
 
 # Создадим функцию ввода числа и проверки типа
-def inputandchecknum (text):
-    tempin = input (text)
+def input_and_check_num(text):
+    temp_in = input(text)
     while True:
         try:
-            tempin = int(tempin)
-            return tempin
+            temp_in = int(temp_in)
+            return temp_in
 
         except Exception:
             print('Введите целое число ')
-            tempin = input()
+            temp_in = input()
             continue
 
 # Вводим данные
-firstname = input("Введите имя: ")
-firstnumber = inputandchecknum("Введите первое число: ")
-secondnumber = inputandchecknum("Введите второе число: ")
+first_name = input("Введите имя: ")
+first_number = input_and_check_num("Введите первое число: ")
+second_number = input_and_check_num("Введите второе число: ")
 
 # Генерируем пароль из чисел
-othernumber = ((firstnumber * soulnumber + soulnumber) % (10 ** countnumbers) + (secondnumber * soulnumber + soulnumber) % (10 ** countnumbers)) % (10 ** countnumbers)
+other_number = ((first_number * soul_number + soul_number) % (10 ** count_numbers) + (second_number * soul_number + soul_number) % (10 ** count_numbers)) % (10 ** count_numbers)
 
 # Вывод данных на экран
 print(f"Для входа в учетную запись введите \n"
-      f"Логин: {firstname} \n"
-      f"Пароль: {othernumber}")
+      f"Логин: {first_name} \n"
+      f"Пароль: {other_number}")

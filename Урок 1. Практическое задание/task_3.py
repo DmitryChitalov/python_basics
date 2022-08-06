@@ -12,28 +12,28 @@ n + nn + nnn = 369
 print("Программа нахождения суммы чисел n + nn + nnn.\n")
 
 # Создадим функцию ввода числа и проверки типа
-def inputandchecknum (text):
-    tempin = input (text)
+def input_and_check_num(text):
+    temp_in = input(text)
     while True:
         try:
-            tempin = abs (int(tempin))%10
-            return tempin
+            temp_in = abs(int(temp_in))%10
+            return temp_in
 
         except Exception:
             print('Введите целое число ')
-            tempin = input()
+            temp_in = input()
             continue
 
 # Для корректной работы цикла, объявляем переменную
-tempnumber = 1
+temp_number = 1
 
-while tempnumber != 0:
+while temp_number != 0:
     # Ввод исходных данных
-    tempnumber = inputandchecknum("Введите значение числа n от 1 до 9 (0-завершение программы): ")
-    dubletempnumber = str (tempnumber) + str (tempnumber)
-    tripletempnumber = str (tempnumber) + str (tempnumber) + str (tempnumber)
+    temp_number = input_and_check_num("Введите значение числа n от 1 до 9 (0-завершение программы): ")
+    duble_temp_number = str(temp_number) + str(temp_number)
+    triple_temp_number = str(temp_number) + str(temp_number) + str(temp_number)
 
     # Вывод результата на экран
-    print(f"При исходном значении n={tempnumber} \n"
+    print(f"При исходном значении n={temp_number} \n"
           f"Результат:\n"
-          f"{tempnumber} + {dubletempnumber} + {tripletempnumber} = ", tempnumber + int(dubletempnumber)+int(tripletempnumber))
+          f"{temp_number} + {duble_temp_number} + {triple_temp_number} = ", temp_number + int(duble_temp_number)+int(triple_temp_number))
