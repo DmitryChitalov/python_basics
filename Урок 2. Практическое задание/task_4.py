@@ -14,3 +14,9 @@
 1. раз
 2. перерефриж
 """
+word = input().split(' ')
+for i in range(len(word)):
+    if len(word[i]) > 10:
+        print(i + 1, word[i][:10])
+    else:
+        print(i + 1, word[i])
