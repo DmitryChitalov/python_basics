@@ -15,6 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
-list = [1, "--", 1.1, True, None]
-for item in list:
-    print(type(item))
+
+list_values = [1, "--", 1.1, True, None]
+for item_value in list_values:
+    print(type(item_value))

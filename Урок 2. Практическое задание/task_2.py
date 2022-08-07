@@ -11,7 +11,8 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
-list = list(int(x) for x in input("Введите целые числа через пробел: ").split())
-for i in range(1, len(list), 2):
-    list[i], list[i - 1] = list[i - 1], list[i]
-print(list)
+
+list_numbers = list(int(x) for x in input("Введите целые числа через пробел: ").split())
+for i in range(1, len(list_numbers), 2):
+    list_numbers[i], list_numbers[i - 1] = list_numbers[i - 1], list_numbers[i]
+print(list_numbers)

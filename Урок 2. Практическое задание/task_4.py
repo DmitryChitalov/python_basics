@@ -14,5 +14,6 @@
 1. раз
 2. перерефриж
 """
+
 words = input("Введите слова через пробел: ").split(" ")
 print('\n'.join([f"{words.index(word) + 1}.{word[:10]}" for word in words]))
