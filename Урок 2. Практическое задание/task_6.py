@@ -25,3 +25,27 @@
 “ед”: [“шт.”]
 }
 """
+
+my_list = []
+i = 1
+my_dict = {"название": [], "цена": [], "количество": [], "ед": []}
+while True:
+    t_name = input("Введите название товара: ")
+    t_price = float(input("Введите цену товара: "))
+    t_count = int(input("Введите количество товара: "))
+    t_type = input("Введите единицу измерения: ")
+    t_tuple = (i, {"название": t_name, "цена": t_price, "количество": t_count, "eд": t_type})
+    my_list.append(t_tuple)
+    my_dict["название"].append(t_name)
+    my_dict["цена"].append(t_price)
+    my_dict["количество"].append(t_count)
+    my_dict["ед"].append(t_type)
+
+    t_next = input("Добавить ещё товар? Да - добавить товар | Любое другое значение - закончить ")
+    if t_next.capitalize() == "Да":
+        i = i + 1
+        continue
+    else:
+        break
+print(*my_list, sep="\n")
+print(my_dict, sep="\n")
