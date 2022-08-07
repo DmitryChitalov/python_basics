@@ -9,5 +9,5 @@
 n + nn + nnn = 369
 """
 n = int(input("Введите число n: "))
-total = n + n * 11 + n * 111
-print(f"n + nn + nnn = {total}")
+res = n + n * 11 + n * 111
+print(f"n + nn + nnn = {res}")
