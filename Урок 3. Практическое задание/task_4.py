@@ -13,7 +13,11 @@ def my_func(x, y):
     while i <= y * -1:
         res *= x
         i += 1
-    return 1 / res
+    try:
+        return 1 / res
+    except Exception as ex:
+        print(f"Error: {ex}")  # `Error: division by zero` if x = 0
+        return "Error"
 
 
 print(my_func(2.0, -2))  # 1/2**2 = 1/4 = 0.25
