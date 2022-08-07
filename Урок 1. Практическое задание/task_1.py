@@ -12,13 +12,13 @@
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
 # Зададим переменные заранее
-first_name = str('empty1')
-string_one = str('empty2')
-first_number = int(1)
-second_number = int(2)
-other_number = int(3)
-soul_number = int(23435459)
-count_numbers = int(8)
+first_name = 'empty1'
+string_one = 'empty2'
+first_number = 1
+second_number = 2
+other_number = 3
+soul_number = 23435459
+count_numbers = 8
 
 # Приветственное сообщение
 print("Программа генерации пары логин-пароль\n\n")
