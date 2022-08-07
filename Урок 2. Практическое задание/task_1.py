@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_list = [12, True, "string", 87.56, None]
+for my_type in my_list:
+    print(f"{my_type} принадлежит {type(my_type)}")
