@@ -39,4 +39,3 @@ while in_sec != 0:
 
     # Вывод результата на экран
     print(f"В {in_sec} секундах {calc_hours} часов {calc_minuts} минут {calc_sec} секунд")
-    

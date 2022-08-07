@@ -10,6 +10,7 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+
 # Приветственное сообщение
 print("Программа нахождения наибольшей цифры в целом числе.\n")
 
@@ -31,7 +32,7 @@ full_num = input_and_check_num("Введите целое число: ")
 
 # Выполняем математические операции
 full_num = str(full_num)
-max_digit = int(0)
+max_digit = 0
 index_string = 0
 for i in full_num:
     temp_num = int(full_num[index_string])

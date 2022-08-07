@@ -40,9 +40,9 @@ def input_and_check_num(text):
 first_day = input_and_check_num('Введите расстояние, пройденное в первый день: ')
 last_day = input_and_check_num('Введите расстояние, пройденное в последний день: ')
 
-#
+# Математические преобразования и вывод
 step = first_day
-day = int(1)
+day = 1
 print(f"{day}-й день - {'{:.2f}'.format(step)} км")
 while step <= last_day:
     day = day + 1
