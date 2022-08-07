@@ -11,3 +11,20 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+# Задача_1: Поиграться с переменными. Объявляю переменные, запрашиваю данные у ползателя и вывожу их на экран
+ask = 0
+question = 'Лук'
+answers = [None] * 5
+'print(answers)'
+while ask < 4:
+    answers[ask] = (input(f'Скажи {question}! :)\n: '))
+    if answers[ask] == question:
+        print(f'Сдался? Слабак! :)')
+        ask = 5
+        break
+    else:
+        print(f"Вот все говорят {answers[ask]}, а ты скажи {question}!")
+        ask += 1
+        continue
+else:
+    print(f"А тебя так просто не заболтаешь")
