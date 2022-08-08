@@ -11,3 +11,8 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+usr_list = (input("Введите целые числа через пробел: ")).split()
+
+for el in range(0, len(usr_list)-1, 2):
+    usr_list[el], usr_list[el+1] = usr_list[el+1], usr_list[el]
+print(f"Результат: {usr_list}")
