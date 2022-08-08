@@ -14,3 +14,12 @@
 1. раз
 2. перерефриж
 """
+
+# Запрашиваем набор слов
+words = input('Введине несколько слов: ').split()
+
+# выводим каждое слово в отдельную строчку
+index_word = 1
+for word_from_list in words:
+    print(f'{index_word}.{word_from_list[:10]}')
+    index_word += 1
