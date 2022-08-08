@@ -18,4 +18,4 @@ text_string = input('Введите строку текста: ')
 word_list = text_string.split()
 
 for i, index in enumerate(word_list):
-    print(f'{i+1}. {index[0:10]}')
+    print(f'{i + 1}. {index[0:10]}')
