@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+MY_ARR = [4, "Гоша", 0.56, True, None, (25,23), [1,2,3,4]]
+for el in MY_ARR:
+    print(type(el))
