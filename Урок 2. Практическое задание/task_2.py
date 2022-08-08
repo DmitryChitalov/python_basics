@@ -11,3 +11,8 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+lists = input("Введите элементы списка: ").split()
+for i in range(0, len(lists)-1, 2):
+    lists[i], lists[i+1] = lists[i+1], lists[i]
+print(lists)
+

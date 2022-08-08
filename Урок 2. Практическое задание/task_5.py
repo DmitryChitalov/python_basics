@@ -15,3 +15,18 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+rating = [7, 5, 3, 3, 2]
+new_rating = int(input('Введите новое значение рейтинга (натуральное число): '))
+flag = False
+print(f'Исходный список: {rating}')
+
+for i, index in enumerate(rating):
+    if index < new_rating:
+        rating.insert(i, new_rating)
+        print(f'Новое значение {new_rating} вставили на {i} позицию: {rating}')
+        flag = True
+        break
+
+if not flag:
+    rating.append(new_rating)
+    print(f'Новое значение {new_rating} добавили в конец списка: {rating}')

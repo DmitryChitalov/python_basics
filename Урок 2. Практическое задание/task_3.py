@@ -8,3 +8,17 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+list_of_list = [['Зима', 1, 2, 12], ['Весна', 3, 4, 5], ['Лето', 6, 7, 8], ['Осень', 9, 10, 11]]
+dict_of_list = {'Зима' : [1, 2, 12], 'Весна' : [3, 4, 5], 'Лето' : [6, 7, 8], 'Осень' : [9, 10, 11]}
+month_number = int(input('Введите порядковый номер месяца: '))
+if month_number in range(1, 13):
+    for i in dict_of_list.items():
+        if month_number in i[1]:
+             print(f'Результат через словарь: {i[0]}')
+             break
+    for j, index in enumerate(list_of_list):
+        if month_number in index:
+            print(f'Результат через список: {index[0]}')
+else:
+    print('Введен некорректный номер месяца!')
+
