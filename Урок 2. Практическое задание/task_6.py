@@ -25,3 +25,28 @@
 “ед”: [“шт.”]
 }
 """
+answer = input("начать работу (да-нет): ")
+my_list = []
+while answer == "да":
+    number_good = input("Введите номер товара: ")
+    title = input("Введите название товара: ")
+    price = input("Введите цену товара: ")
+    amount = input("Введите количество товара: ")
+    size = input("Единицы : ")
+    list1 = {'название': title, 'цена': price, 'количество': amount, 'единицы': size}
+    my_list.append((number_good, list1))
+    answer = input("продолжить (да-нет): ")
+names = []
+prices = []
+amounts = []
+sizes = []
+for i in my_list:
+    names.append(i[1].get('название'))
+    prices.append(i[1].get('цена'))
+    amounts.append(i[1].get('количество'))
+    sizes.append(i[1].get('единицы'))
+print(f'"название" {names}')
+print(f'"цена" {prices}')
+print(f'"количество" {amounts}')
+print(f'"единицы" {sizes}')
+
