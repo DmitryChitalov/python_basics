@@ -15,4 +15,9 @@
 <class 'bool'>
 <class 'NoneType'>
 """
-# test edit
+# Объявляем переменную(список)
+my_list = [5, "string", 0.15, True, None]
+
+# Выводим тип каждого элемента списка
+for element in my_list:
+    print(f'Элемент списка {element} - ', type(element))

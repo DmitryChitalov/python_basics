@@ -11,3 +11,14 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+# Запрашиваем исходные данные и преобразовываем в список
+my_list = input('Введите набор чисел через пробел: ').split(' ')
+# Арифметичекие преобразования и перемещение элементов списка
+my_list_len = len(my_list)
+for index_in_list in range(0, my_list_len-1, 2):
+    my_list[index_in_list], my_list[index_in_list+1] = my_list[index_in_list+1], my_list[index_in_list]
+
+# Вывод результата
+print(f'Список после перестанвок:')
+print(" ".join(my_list))
