@@ -17,5 +17,5 @@
 letter = input('Введите слова через пробел: ')
 letter = letter.split()
 for i in range(0, len(letter)):
-    print(f'{i+1} {letter[i]}')
+    print(f'{i+1} {letter[i][:10]}')
 
