@@ -23,7 +23,7 @@ while index < len(rating):
     if rating[index] < user_number :
         rating.insert(index,user_number)
         break
-    elif (index == len(rating)-1) or ((rating[index] == user_number) and (rating[index+1] < user_number)):
+    elif index == len(rating)-1 or (rating[index] == user_number and rating[index+1] < user_number):
         rating.insert(index+1,user_number)
         break
     else:

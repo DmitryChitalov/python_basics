@@ -10,7 +10,7 @@
 """
 
 month = int(input("Please enter month number:"))                            # Ask for input from a user
-while not (1 <= month <= 12):                                               # Chech if number is in range from 1 to 12
+while not 1 <= month <= 12:                                               # Chech if number is in range from 1 to 12
     month = int(input("Please enter month number between 1 and 12:"))       # If the number is not in the range, keep asking for proper number
 
 
