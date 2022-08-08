@@ -13,13 +13,13 @@
 """
 user_vals = input('Введите целые числа через пробел: ').split(' ')
 lenght = len(user_vals)
-odd = (lenght % 2) != 0
+odd = lenght % 2 != 0
 reodered_array = []
 for i in range(lenght):
-    if i == (lenght - 1) and odd:
+    if i == lenght - 1 and odd:
         current_val = user_vals[i]
         reodered_array.append(current_val)
-    elif ((i + 1) % 2) != 0:
+    elif (i + 1) % 2 != 0:
         next_val = user_vals[i + 1]
         current_val = user_vals[i]
         reodered_array.append(next_val)
