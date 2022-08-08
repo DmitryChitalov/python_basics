@@ -14,3 +14,7 @@
 1. раз
 2. перерефриж
 """
+my_list = input("Введите строку с очень длинным словом: ").split()
+for ind, el in enumerate(my_list, 1):
+    print(ind, ".", el[:10])
+
