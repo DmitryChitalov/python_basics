@@ -25,3 +25,28 @@
 “ед”: [“шт.”]
 }
 """
+
+massiv = []
+numbers = int(input('Сколько будет наименований: '))
+for i in range(0, numbers):
+    dict_new = {}
+    dict_new['название'] = input('название: ')
+    dict_new['цена'] = int(input('цена: '))
+    dict_new['количество'] = int(input('количество: '))
+    dict_new['ед.'] = input('единица измерения: ')
+    dict_turtle = (i + 1, dict_new)
+    massiv.append(dict_turtle)
+name = []
+cost = []
+value = []
+ed = []
+for item in massiv:
+    new_dict = item[1]
+    name.append(new_dict['название'])
+    cost.append(new_dict['цена'])
+    value.append(new_dict['количество'])
+    ed.append(new_dict['ед.'])
+print(f'"названия": {name}')
+print(f'"цены": {cost}')
+print(f'"количество": {value}')
+print(f'"ед.": {ed}')

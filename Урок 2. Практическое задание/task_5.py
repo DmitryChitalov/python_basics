@@ -15,3 +15,13 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_list = [7, 5, 3, 3, 2]
+min_list = min(my_list)
+num = int(input('Введите новый элемент: '))
+for i in range(len(my_list)):
+    if num >= my_list[i]:
+        my_list.insert(i, num)
+        break
+if num < min_list:
+    my_list.append(num)
+print(my_list)
