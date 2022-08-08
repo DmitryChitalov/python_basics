@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="191de17d-80b7-4188-a435-b9a0302984d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +22,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Python.task_4">
+  <component name="RunManager" selected="Python.task_5">
     <configuration name="task_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Урок 2. Практическое задание" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,9 +130,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.task_5" />
         <item itemvalue="Python.task_4" />
         <item itemvalue="Python.task_6" />
-        <item itemvalue="Python.task_5" />
         <item itemvalue="Python.task_3" />
         <item itemvalue="Python.task_2" />
       </list>

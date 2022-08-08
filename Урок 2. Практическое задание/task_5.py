@@ -16,9 +16,7 @@
 например, my_list = [7, 5, 3, 3, 2].
 """
 my_list = [7, 5, 3, 3, 2]
-max_list = max(my_list)
 min_list = min(my_list)
-print(min_list)
 num = int(input('Введите новый элемент: '))
 for i in range(len(my_list)):
     if num >= my_list[i]:
