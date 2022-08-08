@@ -15,6 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
-list = [5, "string", 0.15, True, None]
-for item in list:
+list_dir = [5, "string", 0.15, True, None]
+for item in list_dir:
     print(type(item))
