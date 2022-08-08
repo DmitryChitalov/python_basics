@@ -11,3 +11,5 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+name = str(input('enter your name: '))
+passwd = str(input('enter your password: '))
