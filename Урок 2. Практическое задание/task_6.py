@@ -25,3 +25,28 @@
 “ед”: [“шт.”]
 }
 """
+my_list = []
+my_dict = {"Название": [], "Цена": [], "Количество": [], "Ед": []}
+i = 1
+
+while True:
+    name = input("Введите название товара: ")
+    cost = input("Введите цену товара: ")
+    amount = input("Введите кол-во товара: ")
+    unit = input("Введите единицы измерения товара: ")
+    my_dict["Название"].append(name)
+    my_dict["Цена"].append(cost)
+    my_dict["Количество"].append(amount)
+    my_dict["Ед"].append(unit)
+    my_tuple = (i, {"Название": name, "Цена": cost, "Количество": amount, "Ед": unit} )
+    my_list.append(my_tuple)
+    answer = input("Добавить еще один пункт? Да/Нет ")
+    if answer == "Да":
+        i += 1
+        continue
+    else:
+        break
+
+print(*my_list, sep="\n")
+for key in my_dict:
+    print(f"{key} : {my_dict[key]}")

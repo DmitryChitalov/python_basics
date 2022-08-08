@@ -14,3 +14,10 @@
 1. раз
 2. перерефриж
 """
+words = input("Введите текст: ").split()
+score = 0
+for i in words:
+    score += 1
+    if len(i) > 10:
+        i = i[:10]
+    print(f"{score}. {i}")
