@@ -16,6 +16,6 @@
 <class 'NoneType'>
 """
 
-list = ['one', 2, {"name":'John', "age":'99'}, {1,2,3,3,3}, 2.5, ("one", 2)]
-for i in list:
+my_list = ['one', 2, {"name":'John', "age":'99'}, {1,2,3,3,3}, 2.5, ("one", 2)]
+for i in my_list:
     print(f"{i} is {type(i)}")
