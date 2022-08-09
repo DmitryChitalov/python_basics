@@ -1,0 +1,5 @@
+a = input("Your name pls: ")
+b = int(input("Your age pls: "))
+c = int(input("Your favorite count pls: "))
+print(' Your mental age: ')
+print(b - c)
