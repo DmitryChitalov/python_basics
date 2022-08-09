@@ -8,3 +8,12 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+def int_func(some_text:str):
+    result = []
+    for i in some_text.split(" "):
+        result.append(i.lower().capitalize())
+    
+    return " ".join(result)
+
+print(int_func("text asdasd asda sd "))
