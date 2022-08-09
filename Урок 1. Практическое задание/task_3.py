@@ -8,3 +8,7 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+n = int(input('Введите целое число: '))
+sum = n + int(str(n) + str(n)) + int(str(n) + str(n) + str(n))
+print(f"Сумма n + nn + nn = {sum}")
