@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+new_list = ["text", False, None, 1, "test", 1.03]
+for i in new_list:
+    print(type(i))
