@@ -27,6 +27,6 @@ def f_devide(a, b):
         return "Error"
 
 
-devident = input(f"Введите первое число: ")
-devider = input(f"Введите второе число: ")
+devident = input("Введите первое число: ")
+devider = input("Введите второе число: ")
 print(f"Result: {f_devide(devident, devider)}")

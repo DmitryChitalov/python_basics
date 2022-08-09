@@ -6,6 +6,7 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+import sys
 
 
 def two_arg_sum(number, summa=0):
@@ -15,14 +16,14 @@ def two_arg_sum(number, summa=0):
 
 final_sum = 0
 while True:
-    input_string = input(f"Введите числа. Для подсчета промежуточного итога нажмите [Enter]\n"
+    input_string = input("Введите числа. Для подсчета промежуточного итога нажмите [Enter]\n"
                          "Получить окончальный результат: введите символ \"^\": ")
     for i in input_string.split():
         if i != "^":
             final_sum = two_arg_sum(i, final_sum)
         else:
             print(final_sum)
-            exit(0)
+            sys.exit(0)
     print(final_sum)
 
 """

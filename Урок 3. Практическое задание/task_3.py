@@ -18,9 +18,9 @@ def my_func(arg1, arg2, arg3):
     arg_max2 = args_set.pop(args_set.index(max(args_set)))
     return_no_sort = arg_max1 + arg_max2
 
-    return f"+ sort(): {return_sorted}\n- sort(): {return_no_sort}"
+    return f"Using sort(): {return_sorted}\nNo using sort(): {return_no_sort}"
 
 
 print(my_func(5, 1, 2))
-# + sort(): 7
-# - sort(): 7
+# Using sort(): 7
+# No using sort(): 7
