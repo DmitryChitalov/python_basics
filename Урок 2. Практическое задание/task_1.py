@@ -18,3 +18,4 @@
 my_list = [6, None, -87, 'True', False, 9.5]
 for el in my_list:
     print(type(el))
+
