@@ -10,7 +10,8 @@
 
 def summ_numbers(user_data: str, special_character: str):
     """
-    Prompts for an array of numbers, separated by space and calculates their sum until user enters a special character.
+    Prompts for an array of numbers, separated by space and calculates their sum until user enters
+    a special character.
     :param user_data: String of numbers, separated by space
     :param special_character: Special character used to break the function execution
     :return: Integer - sum of numbers passed in user_data argument
@@ -32,11 +33,11 @@ def summ_numbers(user_data: str, special_character: str):
     return result
 
 
-user_data = ""
-special_character = input("Please provide a character you want to use as breaker : ")
-summ = 0
+USER_INPUT = ""
+SPECIAL_CHAR = input("Please provide a character you want to use as breaker : ")
+SUMM = 0
 
-while special_character not in user_data:
-    user_data = input("Please enter numbers:")
-    summ += summ_numbers(user_data, special_character)
-    print(summ)
+while SPECIAL_CHAR not in USER_INPUT:
+    user_input = input("Please enter numbers:")
+    SUMM += summ_numbers(user_input, SPECIAL_CHAR)
+    print(SUMM)
