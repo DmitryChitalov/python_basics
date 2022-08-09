@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def f_devide(a, b):
+    try:
+        return int(a) / int(b)
+    except Exception as ex:
+        print(f"Error: {ex}")  # `Error: division by zero` if devider = 0
+        return "Error"
+
+
+devident = input("Введите первое число: ")
+devider = input("Введите второе число: ")
+print(f"Result: {f_devide(devident, devider)}")

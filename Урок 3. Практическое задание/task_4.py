@@ -5,3 +5,19 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    i = 1
+    res = 1
+    while i <= y * -1:
+        res *= x
+        i += 1
+    try:
+        return 1 / res
+    except Exception as ex:
+        print(f"Error: {ex}")  # `Error: division by zero` if x = 0
+        return "Error"
+
+
+print(my_func(2.0, -2))  # 1/2**2 = 1/4 = 0.25
