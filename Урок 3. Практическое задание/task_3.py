@@ -6,14 +6,14 @@
 2) без функции sort()
 """
 
-def my_func(a,b,c):
-    user_input = [a,b,c]
+def my_func(number1,number2,number3):
+    user_input = [number1,number2,number3]
     user_input.sort(reverse=True)
     return user_input[0]+user_input[1]
 
 
-def my_func_no_sort(a,b,c):
-    user_input = [a,b,c]
+def my_func_no_sort(number1,number2,number3):
+    user_input = [number1,number2,number3]
 
     largest = max(user_input)
     user_input.remove(largest)
