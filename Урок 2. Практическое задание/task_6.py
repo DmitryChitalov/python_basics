@@ -25,3 +25,29 @@
 “ед”: [“шт.”]
 }
 """
+#
+print(f'Программа реализации структуры даных "Товары"')
+
+#
+product_list = []
+temp_answer = 'да'
+temp_index = 1
+while temp_answer == 'да':
+    temp_list = input(f'Введите характеристики товара в формате: \n'
+                      'Название Цена Количество Ед.изм\n').split()
+    temp_dict = {'Название': temp_list[0], 'Цена': temp_list[1], 'Количество': temp_list[2],
+                 'Ед.изм': temp_list[3]}
+    product = (temp_index, temp_dict)
+    product_list.append(product)
+    temp_index += 1
+    temp_answer = input('Продолжить ввод (да/нет) ')
+
+for temp_index_1 in range(0, len(product_list) - 1):
+
+for temp_index in range('Название', 'Цена', 'Количество', 'Ед.изм'):
+    total_products = {temp_index, for i in range(0, len(product_list) - 1): product_list[i]}
+
+
+print(product_list)
+
+#
