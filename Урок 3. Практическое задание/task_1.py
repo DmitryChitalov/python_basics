@@ -18,14 +18,21 @@ Process finished with exit code 0
 Process finished with exit code 0
 """
 
-dividend = int(input("Please enter the number to be divided:"))
-divisor = int(input("Please enter the number to be the divisor:"))
+first_number = int(input("Please enter the number to be divided:"))
+second_number = int(input("Please enter the number to be the divisor:"))
 
-def divide_numbers (a,b):
+
+def divide_numbers(dividend, divisor):
+    """
+    Returns value dividend divided by divisor
+    :param dividend: Dividend
+    :param divisor: Divisor
+    :return: Result dividend divided by divisor
+    """
     try:
-        return a/b
+        return dividend / divisor
     except ZeroDivisionError:
-        print("You can't divide by zero")
-        exit(0) 
+        return "You can't divide by zero"
 
-print(divide_numbers(dividend,divisor))
+
+print(divide_numbers(first_number, second_number))

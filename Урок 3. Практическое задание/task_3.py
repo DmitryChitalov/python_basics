@@ -9,7 +9,7 @@
 def my_func(a,b,c):
     user_input = [a,b,c]
     user_input.sort(reverse=True)
-    return(user_input[0]+user_input[1])
+    return user_input[0]+user_input[1]
 
 
 def my_func_no_sort(a,b,c):
@@ -22,8 +22,9 @@ def my_func_no_sort(a,b,c):
     return largest + second_largest
 
 
-first_number, second_number, third_number  = int(input("Enter first number : ")), int(input("Enter second number : ")), int(input("Enter third number : "))
+first_number = int(input("Enter first number : "))
+second_number = int(input("Enter second number : "))
+third_number = int(input("Enter third number : "))
 
 print(my_func(first_number, second_number, third_number))
-
 print(my_func_no_sort(first_number, second_number, third_number))

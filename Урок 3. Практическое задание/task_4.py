@@ -10,16 +10,17 @@ def my_func(x:int,y:int):
     """
     Return x**y with and without built-in function.
 
-    :param x: Positive integer 
+    :param x: Positive integer
     :param y: Negative integer
-    :return: Two floats. Result of x**y without using built-in function and another one using it for reference
+    :return: Two floats. Result of x**y without using built-in function and another one using 
+    it for reference
     """
 
     # Do not use built-in function:
     if not x >=0 or not y <=0:
         print("First number must be more than 0, scond number must be less than 0")
         exit(0)
-    elif (type(x) != int) or (type(y) != int):
+    elif isinstance(x, int) or isinstance(y, int):
         print("Wrong number type, must be integer")
         exit(0)
 
@@ -28,13 +29,13 @@ def my_func(x:int,y:int):
 
     for i in range(1,y_module): # get x in power of y
         result *= x
-    
+
     result = 1 / result         # get final result by dividing 1 by x in power of y
 
 
     #use built-in function
     result2 = x**y
-    
+
     return f"without built-in finction : {result} \nwith built-in finction    : {result2}"
 
 
