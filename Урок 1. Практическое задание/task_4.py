@@ -20,6 +20,6 @@ while n >= 1:
     if n > 9:
         continue
     else:
-        print("Максимальная цифра в числе: ", max)
+        print("Максимальная цифра в числе: ", max_n)
 
 # print(max([int(s) for s in input("Введите ваше число: ")])) 2 способ
