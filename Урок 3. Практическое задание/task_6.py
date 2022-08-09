@@ -8,3 +8,6 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+def int_func(word):
+    return word.title(), word.capitalize()
+print(int_func('text word sword kword lord mord kord'))
