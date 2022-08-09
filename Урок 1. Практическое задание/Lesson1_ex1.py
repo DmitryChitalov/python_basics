@@ -1,4 +1,3 @@
-age=input("Введите свой возраст: ")
-if age.isdigit():
-    print("Ваш возраст:", age)
-else: print("Ошибка ввода")
+name = input("Напишите Ваше имя: ")
+age = input("Введите свой возраст: ")
+print(f"{name}, Ваш возраст: {age}")
