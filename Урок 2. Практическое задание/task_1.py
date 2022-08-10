@@ -16,8 +16,7 @@
 <class 'NoneType'>
 """
 a = [5, True, 0.11, None, "ststsef"]
-print(type(a[0]))
-print(type(a[1]))
-print(type(a[2]))
-print(type(a[3]))
-print(type(a[4]))
+i = 0
+for el in a:
+    print(type(a[i]))
+    i = i + 1
