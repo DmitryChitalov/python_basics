@@ -11,3 +11,17 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+string1 = input("Введите целые числа через пробел: ")
+lst = string1.split()
+print(lst)
+k = len(lst) // 2  # Количество пар чисел, которые надо поменять местами
+# print(k)
+# print(lst[0])
+for i in range(0, k + 2, 2):  # Цикл от 0 до количества пар c шагом 2
+    # print(i)
+    tmp = lst[i]
+    # print(tmp)
+    lst[i] = lst[i + 1]
+    lst[i + 1] = tmp
+print(lst)
