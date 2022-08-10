@@ -18,3 +18,29 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+proceeds = int(input("Введите выручку фирмы: "))
+costs = int(input("Введите издержки фирмы: "))
+a = proceeds - costs
+if proceeds > costs:
+    print("Финансовый результат - прибыль. Ее величина: %d" %a)
+    b = a / proceeds
+    print("Рентабельность выручки = %.2f" %b)
+    employees = int(input("Введите количество сотрудников: "))
+    c = a / employees
+    print("Прибыль фирмы в расчете на одного сотрудника = %.2f" %c)
+elif proceeds == costs:
+    print("Ваша фирма стагнирует.")  # Здесь можно было остановиться, но я придумал продолжение
+    months = int(input("Рассчитаем график выхода в плюс. Через какое количество месяцев ожидаете результат: "))
+    imagine = int(input("Введите желаемую прибыль в рассчете на одного сотрудника: "))
+    employess = int(input("А также, введите количество сотрудников: "))
+    target = employess * imagine
+    plan = target / months
+    i = 0
+    while i < months:
+        i = i + 1
+        k = plan * i
+        print(f"За {i}-й месяц прибыль состатваит %d"%k)
+    percentage = ((a - (imagine / months) * (-1) / proceeds) * 100) * employess
+    print(f"Чтобы достичь этой цели за {months} мес. вам нужно увеличить прибыль на %.1f проц." %percentage)
+else:
+    print("Ваша фирма убыточна")
