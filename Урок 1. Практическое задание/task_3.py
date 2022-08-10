@@ -8,3 +8,10 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+num = int(input("Введите число n от 1 до 9: "))
+if 1 <= num <= 9:
+    total = num * 123
+    print("Число n + nn + nnn равно", total)
+else:
+    print("Введено некорректное число.")

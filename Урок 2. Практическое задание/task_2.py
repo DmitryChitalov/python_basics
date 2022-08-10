@@ -11,3 +11,26 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+print("Введите элементы списка по одному в каждой строке. Пустой элемент - завершение ввода.")
+
+element = "1"   # непустое значение, чтобы заскочить в цикл while
+my_list = []
+while element != '':
+    element = input("> ")
+    if element != '':
+        my_list.append(element)
+
+print("Исходный список:", my_list)
+
+size = len(my_list)
+print("Количество введенных элементов:", size)
+i = 0
+j = 1
+while j < size:
+    my_list[i], my_list[j] = my_list[j], my_list[i]
+    i += 2
+    j += 2
+
+print("Измененный список:", my_list)
+
