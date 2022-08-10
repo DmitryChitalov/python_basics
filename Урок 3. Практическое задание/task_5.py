@@ -6,3 +6,19 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def sum_args(number, summa=0):
+    summa += int(number)
+    return summa
+
+
+res_sum = 0
+while True:
+    num_input = input(f"Введите числа. Для подсчета промежуточного итога нажмите [Enter]\n"
+                      "Для подсчета окончального результата: введите символ \"*\": ")
+    for i in num_input.split():
+        if i != "*":
+            res_sum = sum_args(i, res_sum)
+        else:
+            print(res_sum)
+            exit(0)
+    print(res_sum)
