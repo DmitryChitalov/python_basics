@@ -5,3 +5,32 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    """Функция возведения в отрицательную степень"""
+    if y >= 0:
+        print(f'Значение переменной Y, равное {y} не удовлетворяет условию задачи!')
+        return None
+    return x ** y
+
+
+def my_func_without_an_operator(x, y):
+    """Функция подсчета возведения в отрицательную степень с использованием цикла FOR"""
+    result = 1
+    if y >= 0:
+        print(f'Значение переменной y, равное {y} не удовлетворяет условию задачи!')
+        return None
+
+    for i in range(0, y, -1):
+        result *= x
+    return 1 / result
+
+
+x = int(input("Введите число X: "))
+y = int(input("Введите число Y: "))
+result = my_func(x, y)
+without_an_operator = my_func_without_an_operator(x, y)
+if result:
+    print(f'{x} в степени {y} равно {result: .3f}')
+    print(f'{x} в степени ,без оператора {y} равно  {without_an_operator: .3f}')
