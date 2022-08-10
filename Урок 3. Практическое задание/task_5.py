@@ -6,3 +6,18 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+is_break = False
+while not is_break:
+    num_str = input('Введите строку чисел, разделенных пробелами (для завершения ввода введите - !):')
+    num_list = num_str.split(' ')
+    total_sum = 0
+    for i, el in enumerate(num_list):
+        if (el != '!'):
+            total_sum += float(el)
+        else:
+            is_break = True
+            break
+    if not is_break:
+        print('Промежуточная сумма чисел равна:', total_sum)
+
+print('Окончательная сумма чисел равна:', total_sum)
