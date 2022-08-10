@@ -9,16 +9,16 @@
 Результат через словарь: Осень
 """
 
-seasons_list = ['winter', 'spring', 'summer', 'autumn']
-seasons_dict = {1: 'winter', 2: 'spring', 3: 'summer', 4: 'autumn'}
-month = int(input("Введите номер месяца"))
-if month == 1 or month == 12 or month == 2:
-    print(seasons_list[0])
-elif month == list(3, 4, 5):
-    print(seasons_list[1])
-elif month == 6 or month == 7 or month == 8:
-    print(seasons_list[2])
-elif month == 9 or month == 10 or month == 11:
-    print(seasons_list[3])
+season_list = ('Winter', 'Winter',
+                'Spring', 'Spring', 'Spring',
+                'Summer', 'Summer', 'Summer',
+                'Autumn', 'Autumn', 'Autumn',
+                'Winter')
+season_dict = {str(k): v for (k, v) in enumerate(season_list, 1)}
+month_str = int(input("Введите номер месяца от 1 до 12 - "))
+month = int(month_str)
+if month in range(1, 13):
+    print(season_list[month - 1])
 else:
-    print("Такого месяца не существует")
+    print("Такого месяца не существет")
+print(season_dict.get(month_str) or "Такого месяца не существует")
