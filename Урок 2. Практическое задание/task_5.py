@@ -31,4 +31,3 @@ while True:
         break
     my_list.append(new_element)
     my_list.sort(reverse=True)
-

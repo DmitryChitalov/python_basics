@@ -18,7 +18,8 @@ def input_and_check_num(text):
     while True:
         try:
             temp_in = abs(int(temp_in)) % 12
-            if temp_in == 0: temp_in = 12
+            if temp_in == 0:
+                temp_in = 12
             return temp_in
 
         except Exception:
@@ -38,8 +39,10 @@ months_dict = {1: 'Январь это зима', 2: 'Февраль это зи
 month_num = input_and_check_num('Введите календарный номер месяца: ')
 
 # Выборка и вывод на экран
-for i in range(0,len(months_list)):
-    if i == month_num - 1: print(f'Список: Под календарным №{month_num} подразумевается месяц {months_list[i]}')
+for i in range(0, len(months_list)):
+    if i == month_num - 1:
+        print(f'Список: Под календарным №{month_num} подразумевается месяц {months_list[i]}')
 
 for i in months_dict.items():
-    if i[0] == month_num: print(f'Словарь: Под календарным №{month_num} подразумевается месяц {i[1]}')
+    if i[0] == month_num:
+        print(f'Словарь: Под календарным №{month_num} подразумевается месяц {i[1]}')
