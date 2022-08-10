@@ -8,3 +8,9 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+def get_info(name='', surname='', birth_year='', city='', email='', phone=''):
+    print(f"{name} {surname} {birth_year} года рождения, проживает в городе {city},")
+    print(f"email: {email}, телефон:{phone}")
+
+
+get_info(name="Иван", surname="Иванов", birth_year="1846", city="Москва", email="jackie@gmail.com", phone="01005321456")
