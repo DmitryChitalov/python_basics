@@ -12,12 +12,11 @@ while not is_break:
     num_list = num_str.split(' ')
     total_sum = 0
     for i, el in enumerate(num_list):
-        if (el != '!'):
+        if el != '!':
             total_sum += float(el)
         else:
             is_break = True
             break
     if not is_break:
         print('Промежуточная сумма чисел равна:', total_sum)
-
 print('Окончательная сумма чисел равна:', total_sum)
