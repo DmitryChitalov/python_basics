@@ -25,14 +25,17 @@
 “ед”: [“шт.”]
 }
 """
-#
+
+# Выводим название программы
 print(f'Программа реализации структуры даных "Товары"')
 
-#
+# Заполняем Структуру данных
 product_list = []
 temp_answer = 'да'
 temp_index = 1
-while temp_answer == 'да':
+temp_list = []
+
+while temp_answer == 'да' or temp_answer == 'y':
     temp_list = input(f'Введите характеристики товара в формате: \n'
                       'Название Цена Количество Ед.изм\n').split()
     temp_dict = {'Название': temp_list[0], 'Цена': temp_list[1], 'Количество': temp_list[2],
@@ -42,12 +45,31 @@ while temp_answer == 'да':
     temp_index += 1
     temp_answer = input('Продолжить ввод (да/нет) ')
 
-for temp_index_1 in range(0, len(product_list) - 1):
+# Объявляем переменные для выборки
+temp_names = []
+temp_cost = []
+temp_counts = []
+temp_units = []
 
-for temp_index in range('Название', 'Цена', 'Количество', 'Ед.изм'):
-    total_products = {temp_index, for i in range(0, len(product_list) - 1): product_list[i]}
+# Формируем выборку словарь
+for temp_index in range(0, len(product_list)):
+    temp_names.append(product_list[temp_index][1]['Название'])
+temp_names = list(set(temp_names))
 
+for temp_index in range(0, len(product_list)):
+    temp_cost.append(product_list[temp_index][1]['Цена'])
+temp_cost = list(set(temp_cost))
 
-print(product_list)
+for temp_index in range(0, len(product_list)):
+    temp_counts.append(product_list[temp_index][1]['Количество'])
+temp_counts = list(set(temp_counts))
 
-#
+for temp_index in range(0, len(product_list)):
+    temp_units.append(product_list[temp_index][1]['Ед.изм'])
+temp_units = list(set(temp_units))
+
+total_dict = {'Название': temp_names, 'Цена': temp_cost, 'Количество': temp_counts, 'Ед.изм': temp_units}
+
+# Выводим на экран построчно
+for temp_index in ['Название', 'Цена', 'Количество', 'Ед.изм']:
+    print(f'{temp_index}: {total_dict.get(temp_index)}')
