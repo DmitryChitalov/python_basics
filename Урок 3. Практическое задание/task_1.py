@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def divide(arg1, arg2):
+    if arg2 == 0:
+        print("На ноль делить нельзя!")
+        exit(1)
+    return arg1 / arg2
+
+
+first = int(input("Введите первое число:"))
+second = int(input("Введите второе число:"))
+
+print("Результат деления чисел:", divide(first, second))

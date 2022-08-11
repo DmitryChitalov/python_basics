@@ -8,3 +8,14 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+int_func = lambda txt: txt[0].upper() + txt[1:]
+
+test_str = list(input("Введите строку:").split(' '))
+s_out = ''
+for s in test_str:
+    s_out += int_func(s)
+    s_out += ' '
+
+print(s_out)
