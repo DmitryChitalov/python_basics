@@ -17,3 +17,13 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+def division (x, y):
+    try:
+        return x/y
+    except ZeroDivisionError:
+        return 'Нельзя делить на ноль!!!'
+
+print(division(a,b))

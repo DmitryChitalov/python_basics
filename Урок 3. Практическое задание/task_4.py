@@ -5,3 +5,19 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+x = int(input("Введите действительное положительное число: "))
+y = int(input("Введите целое отрицательное число: "))
+
+
+def square(a, b):
+    b = abs(b)
+    b_list = []
+    mult = 1
+    for i in range(b):
+        b_list.append(a)
+    for i in b_list:
+        mult *= i
+    return 1 / mult
+
+
+print(round(square(x, y), 4))

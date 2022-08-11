@@ -6,3 +6,19 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def recursive_sum():
+    all_sum = 0
+    while True:
+        try:
+            a = input("Введите числа через пробел: ").split()
+            for i in a:
+                all_sum += int(i)
+            print(all_sum)
+            print("Для завершения расчетов введите любой текстовый символ")
+        except ValueError:
+            return all_sum
+
+
+print(recursive_sum())
