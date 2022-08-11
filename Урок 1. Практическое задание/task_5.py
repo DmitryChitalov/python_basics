@@ -26,5 +26,7 @@ if profit > costs:
     print(f'Рентабельность выручки = {costs / profit}')
     employees = int(input('Введите численность сотрудников фирмы: '))
     print(f'Прибыль фирмы в расчете на одного сотрудника = {(profit - costs) / employees}')
-else:
+elif profit < costs:
     print(f'Финансовый результат - убыток.')
+else:
+    print('Фирма сработала в НОЛЬ!')
