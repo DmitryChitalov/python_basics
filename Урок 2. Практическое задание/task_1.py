@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_list = [(1, 2), [3, 4], {5, 6} ,"root", 12, 7.5, True, {"one": 1, "two": 2}, b"three"]
+for q in my_list:
+    print(type(q))
