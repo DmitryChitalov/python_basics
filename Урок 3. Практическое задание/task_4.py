@@ -5,3 +5,15 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    step = 1
+    result = 1 / x
+    while step < abs(y):
+        result = result * (1 / x)
+        step += 1
+    return result
+
+
+print(f'{my_func(float(input("действительное положительное число x: ")), int(input("целое  трицательное число Y: ")))}')
