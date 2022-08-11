@@ -31,7 +31,7 @@ hhmmss(seconds)
 number = int(input("Укажите число: "))
 
 
-def sumNumbers(n):
+def sum_numbers(n):
     one = str(n)
     double = one + one
     trick = double + one
