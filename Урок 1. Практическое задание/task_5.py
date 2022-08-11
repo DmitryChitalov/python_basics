@@ -18,3 +18,35 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+while True:
+    revenue = input("Введите выручку фирмы: ")
+    try:
+        revenue = int(revenue)
+        break
+    except ValueError:
+        print("Введите целое число")
+        continue
+while True:
+    costs = input("Введите издержки фирмы: ")
+    try:
+        costs = int(costs)
+        break
+    except ValueError:
+        print("Введите целое число")
+        continue
+if revenue > costs:
+    proceeds = revenue - costs
+    print(f"Финансовый результат - прибыль. Ее величина: {proceeds}")
+    print("Значит вычисляем рентабельность выручки (соотношение прибыли к выручке)")
+    print(f"Рентабельность выручки = {'{:.1f}'.format(proceeds / revenue)}")
+    while True:
+        employees_count = input("Введите численность сотрудников фирмы: ")
+        try:
+            employees_count = int(employees_count)
+            break
+        except ValueError:
+            print("Введите целое число")
+            continue
+    print(f"Прибыль фирмы в расчете на одного сотрудника = {'{:.1f}'.format(proceeds / employees_count)}")
+else:
+    print(f"Финансовый результат - убыток. Ее величина: {revenue - costs}")
