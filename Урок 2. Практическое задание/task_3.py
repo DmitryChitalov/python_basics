@@ -1,10 +1,15 @@
-"""
-3. Пользователь вводит месяц в виде целого числа от 1 до 12.
-Сообщить к какому времени года относится месяц (зима, весна, лето, осень).
-Напишите два варианта решения: через list и через dict.
+d = (int(input('Please input num form 1 - 12: ')))
+my_month = ['Jan - Winter', 'Feb - Winter', 'March - Spring',
+            'April - Spring', 'May - Spring', 'June - Summer',
+            'July - Summer', 'August - Summer', 'Sept - Fall',
+            'Oct - Fall', 'Nov - Fall', 'Dec - Winter']
+n_month = list(enumerate(my_month, start=1))
+d_month = {n_month[0]: n_month for n_month in n_month}
 
-Пример:
-Введите номер месяца: 10
-Результат через список: Осень
-Результат через словарь: Осень
-"""
+if d <= 12:
+    print(d_month[d])
+else:
+    print('Only 1 - 12')
+
+
+
