@@ -5,3 +5,18 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    """ My func description"""
+    c = x
+    while y < -1:
+        y += 1
+        c *= x
+    return 1 / c
+
+
+print(my_func(0.5, -2))
+print(my_func(1, -3))
+print(my_func(5, -1))
+print(my_func(8, -3))
