@@ -9,14 +9,16 @@
 email: jackie@gmail.com, телефон: 01005321456
 """
 
-def new_func(name, sur, year, city, email, phone):
-    print(f'{name} {sur} {year} года рождения, прожиает в городе {city}, email: {email}, телефон: {phone}')
+def new_func(**kwargs):
+    print(f'{kwargs.get("name")} {kwargs.get("sur")} {kwargs.get("year")} года рождения, проживает в городе {kwargs.get("city")}, email: {kwargs.get("email")}, телефон: {kwargs.get("phone")}')
 
-name = input('Введете имя: ')
-sur = input('Введете фамилию: ')
-year = input('Год рождения: ')
-city = input('Город проживания: ')
-email = input('Электронка: ')
-phone = input('Телефон: ')
+human = {
+        'name': 'Иван',
+        'sur': 'Иванов',
+        'year': '2000',
+        'city': 'Сыктывкар',
+        'email': 'one@two.ru',
+        'phone': '8800900',
+    }
 
-new_func(name, sur, year, city, email, phone)
+new_func(**human)
