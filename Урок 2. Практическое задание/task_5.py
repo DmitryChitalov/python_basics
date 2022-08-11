@@ -15,3 +15,16 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+ranking = [7, 5, 3, 3, 2]
+
+print('Чтобы выйти из режима ввода перестаньте вводить натуральные числа')
+while True:
+    num = input('Введите натуральное число: ')
+    if not num.isdigit():
+        print('Goodbye')
+        break
+    else:
+        num = int(num)
+        index = max([idx + 1 for idx, val in enumerate(ranking) if val >= num], default=0)
+        ranking.insert(index, num)
+        print(f"Результат: {ranking}")

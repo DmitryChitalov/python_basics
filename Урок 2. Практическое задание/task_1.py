@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+some_vars = [300, 'Я.строка', 3.14, True, None]
+
+for var in some_vars:
+    print(type(var))
