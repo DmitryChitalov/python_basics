@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+ls = [5, "string", 0.15, True, None]
+for i in ls:
+    print(type(i))
