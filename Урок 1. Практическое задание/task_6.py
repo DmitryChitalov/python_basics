@@ -20,12 +20,12 @@
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
 
-a = int(input("Введите результаты пробежки первого дня в км "))
-b = int(input("Введите общий желаемый результат в км "))
+first_day_run = int(input("Введите результаты пробежки первого дня в км "))
+summary_runs = int(input("Введите общий желаемый результат в км "))
 result_days = 1
-result_km = a
-while result_km < b:
-        a = a + 0.1 * a
-        result_days += 1
-        result_km = result_km + a
+result_km = first_day_run
+while result_km < summary_runs:
+    first_day_run = first_day_run + 0.1 * first_day_run
+    result_days += 1
+    result_km = result_km + first_day_run
 print(f"Вы достигнете требуемых показателей на %.d день" % result_days)
