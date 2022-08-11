@@ -5,3 +5,38 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def exponentiation_fun(var_x, var_y):
+    exp = 1
+    for i in range(var_y * -1):
+        exp *= var_x
+    return 1 / exp
+
+
+while True:
+    x = input("Введите действительное положительное число: ")
+    try:
+        x = float(x)
+    except ValueError:
+        print("Введите действительное число")
+        continue
+    if x <= 0:
+        print("Введите положительное число")
+        continue
+    else:
+        break
+
+while True:
+    y = input("Введите целое отрицательное число: ")
+    try:
+        y = int(y)
+    except ValueError:
+        print("Введите целое отрицательное число")
+        continue
+    if y >= 0:
+        print("Введите отрицательное число")
+    else:
+        break
+
+print(f"Число {x} в степени {y} = {exponentiation_fun(x, y)}")

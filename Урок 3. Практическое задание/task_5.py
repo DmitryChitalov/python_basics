@@ -6,3 +6,14 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+result = 0
+status = True
+while status:
+    var_list = input("Введите числа через пробел: ").split(" ")
+    for i in var_list:
+        try:
+            result += int(i)
+        except ValueError:
+            status = False
+    print(f"Сумма: {result}")
