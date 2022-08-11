@@ -17,6 +17,6 @@ month_num = int(input('Введите номер месяца: '))
 if 0 < month_num < 13:
     season = month_num // 3
     print(f"Результат через список: {seasons_list[season]}")
-    print(f"Результат через список: {seasons_dict[season]}")
+    print(f"Результат через словарь: {seasons_dict[season]}")
 else:
     print('Out of bounds')
