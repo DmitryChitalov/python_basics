@@ -8,3 +8,17 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+def new_func(**kwargs):
+    print(f'{kwargs.get("name")} {kwargs.get("sur")} {kwargs.get("year")} года рождения, проживает в городе {kwargs.get("city")}, email: {kwargs.get("email")}, телефон: {kwargs.get("phone")}')
+
+human = {
+        'name': 'Иван',
+        'sur': 'Иванов',
+        'year': '2000',
+        'city': 'Сыктывкар',
+        'email': 'one@two.ru',
+        'phone': '8800900',
+    }
+
+new_func(**human)

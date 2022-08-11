@@ -5,3 +5,15 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def my_func(x, y):      # вариант без **
+    y = y * -1
+    new_num = 1
+    for i in range(0, y):
+        new_num = new_num * x
+    return 1 / new_num
+
+def my_func2(a, z):     # вариант с **
+    return a ** z
+
+print(my_func(3, -6))
+print(my_func2(10, -3))
