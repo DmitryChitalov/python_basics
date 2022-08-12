@@ -8,3 +8,23 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+# Выводим название программы
+print('Программа реализовывающая вывод данных о пользователе одной строкой')
+
+# Определяем функцию
+def __string_out(name, fam, year, city, email, phone):
+    print(f'{name} {fam} {year} года рождения, проживает в городе {city}\n'
+          f'email: {email}, телефон: {phone}')
+
+
+# Запрашиваем исходные данные
+person_name = input('Введите имя ')
+person_fam = input('Введите фамилию ')
+person_year = input('Введите год рождения ')
+person_city = input('Введите город проживания ')
+person_email = input('Введите адрес электронной почты ')
+person_phone = input('Введите номер телефона ')
+
+# Передаем запрошенные данные в функцию
+__string_out(person_name, person_fam, person_year, person_city, person_email, person_phone)

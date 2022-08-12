@@ -28,7 +28,7 @@ def input_and_check_num(text):
     temp_in = input(text)
     while True:
         try:
-            tempin = abs(float(temp_in))
+            temp_in = abs(float(temp_in))
             return temp_in
 
         except Exception:
