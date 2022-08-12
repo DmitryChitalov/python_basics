@@ -17,16 +17,14 @@
 """
 my_list = [10, 7, 5, 2, 2]
 m = int(input("Введите натуральное число: "))
+print(f"Исходный список: {my_list}")
+my_list.append(0) # Добавляем в список еще один элемент, увеличивая размер списка
 l = len(my_list)
-print(l)
+#print(l)
 for i in range(0, l):
-    print(f"my_list[i]={my_list[i]}")
-    if m >= my_list[i]:
-        print(f"i={i}")
-        for j in range(l, i, -1):
-            print(f"j={j}")
-            my_list[j + 1] = my_list[j]
+      if m >= my_list[i]:
+        for j in range(l, i, -1):  # в цикле сдвигаю в конец все элементы, если введеный элемент больше текущего
+            my_list[j-1] = my_list[j-2]
         my_list[i] = m
         break
-
-print(my_list)
+print(f"Конечный список: {my_list}")
