@@ -15,3 +15,18 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_list = [10, 7, 5, 2, 2]
+m = int(input("Введите натуральное число: "))
+l = len(my_list)
+print(l)
+for i in range(0, l):
+    print(f"my_list[i]={my_list[i]}")
+    if m >= my_list[i]:
+        print(f"i={i}")
+        for j in range(l, i, -1):
+            print(f"j={j}")
+            my_list[j + 1] = my_list[j]
+        my_list[i] = m
+        break
+
+print(my_list)
