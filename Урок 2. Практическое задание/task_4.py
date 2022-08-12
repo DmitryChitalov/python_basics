@@ -14,3 +14,8 @@
 1. раз
 2. перерефриж
 """
+for word in input("Введите строку из нескольких слов: ").split():
+    if len(str(word)) <= 10:
+        print(word)
+    if len(str(word)) > 10:
+        print(word[0:10])
