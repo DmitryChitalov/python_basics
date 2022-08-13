@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+my_list = input("Введите через пробел значения списка: ")
+my_list = my_list.split()
+num = 0
+while num < len(my_list) / 2 + 1:
+    obj = my_list.pop(num)
+    my_list.insert(num + 1, obj)
+    num = num + 2
+print(my_list)
