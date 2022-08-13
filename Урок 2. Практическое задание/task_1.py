@@ -15,3 +15,13 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_list1 = [12, None, -34, 'U-boat', True, 9.5]
+
+
+def my_type(el):
+    for el in range(len(my_list1)):
+        print(type(my_list1[el]))
+    return
+
+
+my_type(my_list1)
