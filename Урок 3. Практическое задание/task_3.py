@@ -9,7 +9,9 @@
 def get_max(*args):
     print(sum(sorted(list(args), reverse=True)[:2]))
 
+
 get_max(4, 5, 6)
+
 
 # 2) без функции sort()
 def my_func(arg1, arg2, arg3):
@@ -25,6 +27,6 @@ try:
     first_num = int(input("Введите первый аргумент (целое число):  "))
     second_num = int(input("Введите второй аргумент (целое число):  "))
     third_num = int(input("Введите третий аргумент (целое число):  "))
-    print (my_func(first_num, second_num, third_num))
+    print(my_func(first_num, second_num, third_num))
 except ValueError:
     print("Вводите только целые числа")

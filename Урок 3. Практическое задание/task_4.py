@@ -24,10 +24,10 @@ def get_val(x, y):
     except ZeroDivisionError:
         return "На ноль делить нельзя"
 
+
 try:
     first_num = int(input("Введите число:  "))
     second_num = int(input("Введите второе число (отрицательное):  "))
     print(get_val(first_num, second_num))
 except ValueError:
     print("Вводите только целые числа")
-
