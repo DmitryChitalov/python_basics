@@ -15,3 +15,8 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+rank = [7, 5, 3, 3, 2]
+num = int(input('Введите число: '))
+index = max([idx + 1 for idx, val in enumerate(rank) if val >= num], default=0)
+rank.insert(index, num)
+print(f"Результат: {rank}")
