@@ -25,3 +25,20 @@
 “ед”: [“шт.”]
 }
 """
+
+
+number_product = int(input('введите количество номенкулатуры на складе: '))
+i = 1
+sp_general = []
+while i <= number_product:
+    sp_tmp = []
+    sp_tmp.append(i)
+    card = {'название': '', 'цена' : '', 'количество' : '', 'ед' : ''}
+    for keys in card:
+        card[keys] = input(f'введите {keys}: ')
+    sp_tmp.append(card)
+    sp_general.append(tuple(sp_tmp))
+    i += 1
+print(sp_general)
+
+# Дальше пока не получается, думаю.

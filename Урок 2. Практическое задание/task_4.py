@@ -14,3 +14,14 @@
 1. раз
 2. перерефриж
 """
+
+
+words = input('Введите слова через пробел: ').split()
+count = 1
+for i in words:
+    if len(i) > 10:
+        print(f'{count}. {i[:9]}')
+        count += 1
+    else:
+        print(f'{count}. {i}')
+        count += 1
