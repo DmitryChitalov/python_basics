@@ -5,3 +5,29 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def get_val(x, y):
+    try:
+        if y < 0:
+            res = 1
+            for i in range(y, 0):
+                res = res * x
+            res = 1 / res
+            return res
+
+        else:
+            return "Число y должно быть строго отрицательным"
+
+    except TypeError:
+        return "Пожалуйста, вводите только числа"
+    except ZeroDivisionError:
+        return "На ноль делить нельзя"
+
+try:
+    first_num = int(input("Введите число:  "))
+    second_num = int(input("Введите второе число (отрицательное):  "))
+    print(get_val(first_num, second_num))
+except ValueError:
+    print("Вводите только целые числа")
+
