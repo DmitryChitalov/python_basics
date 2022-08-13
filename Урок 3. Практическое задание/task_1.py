@@ -17,3 +17,14 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def decision(a, b):
+    try:
+        return a / b
+    except:
+        ZeroDivisionError
+        return 'На ноль делить нельзя!!'
+
+a = int(input('Введите первое число: '))
+b = int(input('Введите второе число: '))
+print(decision(a, b))
