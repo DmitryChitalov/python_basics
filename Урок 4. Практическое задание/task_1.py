@@ -9,14 +9,14 @@
 
 
 def salary():
-    try:
-        time = float(input('Выработка в часах '))
-        sal = int(input('Ставка в рублях '))
-        bonus = int(input('Премия в рублях '))
-        res = time * sal + bonus
-        print(f'заработная плата сотрудника  {res}')
-    except ValueError:
-        return print('Not a number')
+    try:     time = float(input('Выработка в часах '))
+    sal = int(input('Ставка в рублях '))
+    bonus = int(input('Премия в рублях '))
+    res = time * sal + bonus
 
+    print(f'заработная плата сотрудника  {res}')
+
+except ValueError:
+return print('Not a number')
 
 salary()
