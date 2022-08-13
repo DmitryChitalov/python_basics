@@ -6,3 +6,18 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def multi_sum(*args):
+    '''Сумма всех введенных аргументов'''
+    return sum(args)
+overall_sum = 0
+break_commit = False
+while True:
+    user_vals = input('Введите числа через пробел, @ чтобы выйти:').split(' ')
+    if '@' in user_vals:
+        user_vals.remove('@')
+        break_commit = True
+    user_vals = list(map(int, user_vals))
+    overall_sum = overall_sum + multi_sum(*user_vals)
+    print(f'Сумма введенных чисел: {overall_sum}')
+    if break_commit:
+        break

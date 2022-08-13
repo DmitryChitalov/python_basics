@@ -25,3 +25,45 @@
 “ед”: [“шт.”]
 }
 """
+user_input = ' '
+index = 1
+#По мне так изначальное складывание данных в нужные списки упрощает задачу
+#т.к в этом случае мы только используем память, а если мы начнем парсить структуру,
+#то и помимо памяти займем время процессора на обработку цикла
+structure = []
+labels = []
+prices = []
+quantities = []
+metric_list = []
+while len(user_input) != 0:
+    user_input = input('Введите название товара, или пустую строку чтобы закончить: ')
+    if len(user_input) == 0:
+        break
+    label = user_input
+    labels.append(label)
+    user_input = input('Введите цену товара: ')
+    price = int(user_input)
+    prices.append(price)
+    user_input = input('Введите количество товара: ')
+    quantity = int(user_input)
+    quantities.append(quantity)
+    user_input = input('Введите ед. измерения товара: ')
+    metrics = user_input
+    metric_list.append(metrics)
+    entry = {
+        'название': label,
+        'цена': price,
+        'количество': quantity,
+        'eд': metrics
+    }
+    list_el = (index, entry)
+    structure.append(list_el)
+    index += 1
+analitycs_dict = {
+    'Названия товаров': labels,
+    'Цены': prices,
+    'Количество': quantities,
+    'Ед. изм': metric_list
+}
+print('Аналитика по введенным записям: ')
+print(analitycs_dict)
