@@ -25,3 +25,24 @@
 “ед”: [“шт.”]
 }
 """
+product = []
+while True:
+    answer = input('Вы хотите внести новую позицию в базу? Наберите "да", для продолжения: ')
+    if answer.lower() != "да":
+        break
+    name = input('Введите наименование товара')
+    price = float(input('Введите цену товара'))
+    count = int(input('Введите количество товара'))
+    unit = input('Единиицы измерения: ')
+    product.append((len(product), {'name': name, 'price': price, 'count': count, 'unit': unit}))
+
+analytics = dict()
+for _, item in product:
+    for k, v in item.items():
+        vl = analytics.get(k) or []
+        if v not in vl:
+            vl.append(v)
+        analytics[k] = vl
+
+print('product_base: ', product)
+print('analytics: ', analytics)
