@@ -6,3 +6,12 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+
+def salary(hours, base, bonus):
+    """ Salary """
+    return int(hours) * int(base) + int(bonus)
+
+
+print(salary(argv[1], argv[2], argv[3]))
