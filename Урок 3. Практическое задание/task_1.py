@@ -26,6 +26,7 @@ def divide(x, y):
         print('Вы что? Пытаетесь делить на 0!')
         raise ZeroDivisionError
 
+
 a = int(input('Введите первое число: '))
 b = int(input('Введите второе число: '))
 

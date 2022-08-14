@@ -9,6 +9,7 @@
 email: jackie@gmail.com, телефон: 01005321456
 """
 
+
 def display(name, surname, birth_date, city, email, phone):
     return f'{name} {surname} {birth_date} года рождения, ' \
            f'проживает в городе {city}, email: {email}, ' \
