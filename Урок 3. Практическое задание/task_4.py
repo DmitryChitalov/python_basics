@@ -5,3 +5,17 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def negative_power(num, pwr):
+    res = 1
+    for i in range(abs(pwr)):
+        res *= num
+    if pwr >= 0:
+        return res
+    return 1 / res
+
+
+x = int(input('Действительное положительное число: '))
+y = int(input('Степень: (действительное целое отрицательное число): '))
+print(f"x^y = {negative_power(x, y)}")
