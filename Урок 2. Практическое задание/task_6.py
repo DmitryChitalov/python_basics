@@ -25,3 +25,31 @@
 “ед”: [“шт.”]
 }
 """
+product_count = int(input("Введите количество наименований товаров на складе: "))
+i = 0
+b = 0
+my_list = []
+analitics_list = {}
+while i < product_count:
+    i = i + 1
+    product_name = input(f"Введите название {i}-го товара: ")
+    prouct_sn = input("Введите серийный номер товара: ")
+    product_price = int(input("Введите цену в $: "))
+    pruduct_count = int(input("Введите количество едениц товара: "))
+    my_list.append((i, {"name": product_name, "sn": prouct_sn, "price": product_price, "count": product_count}))
+product_name_list = []
+product_sn_list = []
+product_price_list = []
+product_count_list = []
+
+for i in range(len(my_list)):
+    product_name_list.append(my_list[i][1]['name'])
+    product_sn_list.append(my_list[i][1]['sn'])
+    product_price_list.append(my_list[i][1]['price'])
+    product_count_list.append(my_list[i][1]['count'])
+print(f"Наименование продуктов:  {product_name_list}")
+print(f"Серийные номера: {product_sn_list}")
+print(f"Цены продуктов:  {product_price_list}")
+print(f"Количество продуктов: {product_count_list}")
+
+"Цыкл я скопипапстил целиком"

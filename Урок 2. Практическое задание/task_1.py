@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+lst = [345, "abrakadabra", None, 12.0, True]
+for i in lst:
+    print(type(i))
