@@ -14,3 +14,17 @@
 1. раз
 2. перерефриж
 """
+
+my_str = input("Введите строку из нескольких слов через пробел: ")
+my_lst = my_str.split()
+# print(my_lst)
+# print(my_lst[2])
+#print(len(my_lst)) # длина списка (кол-во элементов)
+k = len(my_lst)
+for i in range(0, k):
+    l = len(my_lst[i]) # количество знаков в строке
+    if l < 11:
+        print(f"{i + 1}. {my_lst[i]}")
+    else:
+        my_short = my_lst[i][0:10]
+        print(f"{i + 1}. {my_short}")

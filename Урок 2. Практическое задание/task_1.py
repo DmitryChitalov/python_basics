@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+a = [455, 67, None, 0, 3.675, "file1", "file2", False, True]
+for el in a:
+   # print(type(el))
+    print(f"Тип текущего элемента списка - {el} - {type(el)}")

@@ -25,3 +25,45 @@
 “ед”: [“шт.”]
 }
 """
+
+my_l = []
+while True:
+    my_l.append((input("Номер: "),
+                 {"Название": input("Название: "), \
+                  "Цена": input("Цена: "),
+                  "Количество": input("Количество: "),
+                  "Ед.": input("Единица учета: ")}))
+    q = input("Выйти? да/нет ")
+    if q == "да":
+        break
+print(my_l)
+# print(len(my_l))
+i = len(my_l)
+print("#####")
+######
+print(my_l[0][0])
+print(my_l[0][1])
+print(my_l[0][1]["Название"])  # печать элемента - это работает
+
+# print("222#####")
+my_d = dict()  # создание пустого словаря
+# my_d['Название'] = ""
+# my_d['Цена'] = ""
+# my_d["Количество"] = ""
+# my_d["Ед."] = ""
+
+l_names = []  # создание пустых списков
+l_prices = []
+l_counts = []
+l_units = []
+
+for y in range(i):
+    print(y)
+    l_names.append(my_l[y][1]["Название"])
+    l_prices.append(my_l[y][1]["Цена"])
+    l_counts.append(my_l[y][1]["Количество"])
+    l_units.append(my_l[y][1]["Ед."])
+
+my_d.update({"Наименования": l_names, "Цены": l_prices, "Количества": l_counts, "Единицы учета": l_units})
+
+print(my_d)
