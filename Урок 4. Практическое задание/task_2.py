@@ -7,3 +7,15 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+lst_in = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+# Вариант без
+lst_out1 = []
+for i, el in enumerate(lst_in):
+    if lst_in[i - 1] < el:
+        lst_out1.append(el)
+print(lst_out1)
+
+# Вариант с
+lst_out2 = [el for i, el in enumerate(lst_in) if el > lst_in[i - 1]]
+print(lst_out2)
