@@ -6,3 +6,14 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+sum_numbers = 0
+while True:
+    my_numbers = input("Введите Ваши числа: ")
+    result_list = my_numbers.split()
+    if "#" in result_list:
+        result_list.remove("#")
+        sum_numbers = sum_numbers + sum(list(map(int, result_list)))
+        break
+    sum_numbers = sum(list(map(int, result_list)))
+    print(f"Текущая сумма {sum_numbers}")
+print(f"Итоговая сумма:{sum_numbers}")
