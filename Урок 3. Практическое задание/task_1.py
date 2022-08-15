@@ -17,3 +17,10 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def calculator(a, b):
+    try:
+        return a/b
+    except ZeroDivisionError:
+        print(f'Вы что? Пытаетесь делить на 0!')
+
+print(calculator(int(input('Первое число: ')), int(input('Второе число: '))))
