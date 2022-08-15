@@ -8,3 +8,15 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(arg1):
+    return arg1.title()
+
+
+my_str = input("Введите Вашу строку: ")
+my_list = my_str.split()
+res = ""
+for i in my_list:
+    res = res + " " + int_func(i)
+print(res)
