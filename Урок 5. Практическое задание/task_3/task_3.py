@@ -8,3 +8,14 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+new_list = []
+with open('one-two.txt', 'r', encoding='utf-8') as f:
+    data = f.readlines()
+    for el in data:
+        new_el = el.replace('One', 'Один')\
+                   .replace('Two', 'Два')\
+                   .replace('Three', 'Три')\
+                   .replace('Four', 'Четыре')
+        new_list.append(new_el)
+with open('one-two-result.txt', 'w', encoding='utf-8') as f:
+    f.writelines(new_list)
