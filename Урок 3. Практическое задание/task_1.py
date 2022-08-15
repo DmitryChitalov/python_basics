@@ -19,9 +19,7 @@ Process finished with exit code 0
 """
 
 
-def my_func():
-    var_1 = int(input("Введите первое число: "))
-    var_2 = int(input("Введите второе число: "))
+def my_func(var_1, var_2):
     try:
         var_3 = var_1 / var_2
         return var_3
@@ -29,5 +27,6 @@ def my_func():
         return print("Вы что? Пытаетесь делить на 0!")
 
 
-s_val = my_func()
+s_val = my_func(int(input("Введите первое число: ")),
+                int(input("Введите второе число: ")))
 print(s_val)
