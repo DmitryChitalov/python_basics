@@ -3,3 +3,7 @@
 Необходимо решить задание в одну строку.
 Подсказка: использовать функцию range() и генераторное выражение.
 """
+
+generator = (el for el in range(20, 240) if el % 20 == 0 or el % 21 == 0)
+for el in generator:
+    print(el)

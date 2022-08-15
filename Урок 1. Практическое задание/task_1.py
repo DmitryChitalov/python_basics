@@ -11,3 +11,15 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+
+user_name = input("Введите ваше имя: ")
+password = input("Введите ваш пароль: ")
+while True:
+    age = input("Введите ваш возраст: ")
+    try:
+        age = int(age)
+        break
+    except ValueError:
+        print("Введите целое число")
+        continue
+print(f"Ваши данные для входа в аккаунт: имя - { user_name }, пароль - { password }, возраст - { str(age) }")
