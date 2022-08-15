@@ -18,3 +18,26 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+# Входные данные
+firm_inc = int(input("Введите выручку фирмы:"))
+firm_exp = int(input("Введите расходы фирмы:"))
+firm_profit = firm_inc - firm_exp
+
+#Считаем прибыль-убыль
+if firm_profit > 0:
+    print(f"Фирма работает с прибылью: {firm_profit}")
+
+elif firm_profit < 0:
+    print(f"Фирма работает с убылью: {firm_profit}")
+
+else:
+    print(f"Фирма работает в ноль.")
+
+# Считаем рентабельность
+firm_profitab = firm_profit / firm_inc
+print(f"Рентабельность фирмы: {firm_profitab}")
+
+#Считаем доход на одного сотрудника
+firm_staff = int(input("Введите кол-во сотрудников фирмы:"))
+staff_inc = firm_profit // firm_staff
+print(f"Доход на одного работника фирмы: {staff_inc}")
