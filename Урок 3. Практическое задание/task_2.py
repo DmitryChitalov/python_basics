@@ -11,8 +11,19 @@ email: jackie@gmail.com, телефон: 01005321456
 
 
 def user_data(name, surname, birth_year, user_city, user_email, phone):
+    """
+    Print user data in one line
+    :param name: User name
+    :param surname: User surname
+    :param birth_year: User's birth year
+    :param user_city: User's city
+    :param user_email: User's email
+    :param phone: User's phone
+    :return: Formatted string with user data
+    """
     print(
-        f"{name} {surname} born in {birth_year} lives in {user_city} email : {user_email} phone : {phone}"
+        f"{name} {surname} born in {birth_year} lives in {user_city}"
+        f"email : {user_email} phone : {phone}"
     )
 
 
