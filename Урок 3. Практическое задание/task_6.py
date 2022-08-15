@@ -8,3 +8,9 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+def capitalize(line):
+  return ' '.join(s[:1].upper() + s[1:] for s in line.split(' '))
+
+
+line = input("Введите любое слово: ")
+print(capitalize(line))
