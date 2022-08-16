@@ -6,3 +6,8 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+script_name, first_param, second_param, third_param = argv
+
+print(float(first_param) * float(second_param) + float(third_param))

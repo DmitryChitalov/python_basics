@@ -12,3 +12,19 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+start = int(input("Введите число с какого начнется генерация: "))
+stop = int(input("Введите число до какого генерировать: "))
+a = 0
+my_list = []
+for i in count(start):
+    if i > stop:
+        break
+    else:
+        my_list.append(i)
+# Формирую массив при помощи count и использую его же для cycle
+for i in cycle(my_list):
+    if a > stop:
+        break
+    print(i)
+    a += 1
