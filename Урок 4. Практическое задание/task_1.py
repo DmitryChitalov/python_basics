@@ -6,3 +6,8 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+def salary (param_1, param_2, param_3):
+    return param_1 * param_2 + param_3
+
+
+print(salary(int(input("Укажите кол-во часов: ")), int(input("Ставка в час: ")), int(input("Премия: "))))
