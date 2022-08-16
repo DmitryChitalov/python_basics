@@ -7,3 +7,10 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+result_list = []
+list = [int(i) for i in input("Введите числа: ").split()]
+for i in range(1, len(list)):
+    if list[i] > list[i-1]:
+        (result_list.append(list[i]))
+print("Исходный список: ", list)
+print("Список, значения которого больше предыдущего элемента: ", result_list)
