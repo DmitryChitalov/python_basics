@@ -12,5 +12,5 @@ while True:
 values_sum = sum(values_list)
 data_to_write = ' '.join(map(str, values_list))
 print(f'Сумма введенных значений: {values_sum}')
-with open('task_5_result.txt', 'a', encoding='utf-8') as f:
+with open('task_5_result.txt', 'w', encoding='utf-8') as f:
     f.write(data_to_write)
