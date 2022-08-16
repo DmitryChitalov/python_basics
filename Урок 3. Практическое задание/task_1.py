@@ -31,11 +31,11 @@ def my_func1(a1, a2):
     if a2 != 0:
         return round(a1 / a2, 1)
     else:
-        print(f"Деление на 0, так нельзя")
+        print(f"Деление на 0, так нельзя") # почему-то задваивается строка в выводе
         return None
 
 a1 = int(input("Введите первое число: "))
 a2 = int(input("Введите второе число: "))
-print(type(my_func1(a1,a2)))
+#print(type(my_func1(a1,a2)))
 if type(my_func1(a1, a2)) != "None":
     print(my_func1(a1, a2))
