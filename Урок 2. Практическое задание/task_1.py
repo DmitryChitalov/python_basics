@@ -15,3 +15,11 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+s = [10, 20, 30, [1, 2]]
+print(s)
+s.extend([3, 4])
+print(s)
