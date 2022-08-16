@@ -8,3 +8,21 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+
+seasons_list = ["Зима", "Зима", "Весна", "Весна", "Весна", "Лето", "Лето", "Лето", "Осень", "Осень", "Осень", "Зима"]
+seasons_dict = {"Зима": [12, 1, 2], "Весна": [3, 4, 5], "Лето": [6, 7, 8], "Осень": [9, 10, 11]}
+month = 0
+while month < 1 or month > 12:
+    month = int(input("Введите номер месяца от 1 до 12: "))
+
+print(f"Результат через список: ", seasons_list[month - 1])
+
+is_find = False
+for x, y in seasons_dict.items():
+    for i in y:
+        if i == month:
+            is_find = True
+            break
+    if is_find:
+        print(f"Результат через словарь: ", x)
+        break

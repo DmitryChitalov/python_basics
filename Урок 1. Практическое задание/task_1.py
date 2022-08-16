@@ -11,3 +11,7 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+
+my_list = [5, "string", 0.15, True, None, (34, "asdf"), {34, "asdf"}, {"one": 34, 2: "asdf"}]
+for element in my_list:
+    print(type(element))
