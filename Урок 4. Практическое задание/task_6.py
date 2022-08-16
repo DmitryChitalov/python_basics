@@ -12,3 +12,18 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count
+
+print("Итератор, генерирующий целые числа, начиная с указанного")
+n = int(input("Введите целое число:"))
+
+for i in count(n):
+    print(i, end=' ')
+
+
+
+from itertools import cycle
+
+list = [9, 15, 6, 1, 8, 12, 2, 6, 7, 5]
+for i in cycle(list):
+    print(i, end=' ')
