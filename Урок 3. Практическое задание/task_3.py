@@ -5,3 +5,27 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+### Первый способ (sort)
+print("Первый способ...")
+
+
+def my_sum():
+    try:
+        a1 = float(input("Введите первое число: "))
+        a2 = float(input("Введите второе число: "))
+        a3 = float(input("Введите третье число: "))
+    except ValueError:
+        print("Нужно вводить числа")
+        return
+    my_list = [a1, a2, a3]
+    my_list.sort()
+    s = my_list[1] + my_list[2]
+    return s
+
+
+print(my_sum())
+
+
+
+
