@@ -7,10 +7,15 @@
 Иванов 23543.12
 Петров 13749.32
 """
+import os
+
+
+cur_dir = os.path.join('Урок 5. Практическое задание', 'task_4')
+file_path_read = os.path.join(cur_dir, 'task_4_data.txt')
 average_salary = 0
 processed_data = []
 less_than_20 = []
-with open('task_4_data.txt', 'r', encoding='utf-8') as f:
+with open(file_path_read, 'r', encoding='utf-8') as f:
     data = f.readlines()
     for el in data:
         surname, salary = el.split(' ')
