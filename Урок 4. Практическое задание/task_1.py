@@ -6,3 +6,10 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+script_name, hours, cost, bonus = argv
+def new_func():
+    return int(hours) * int(cost) + int(bonus)
+
+print(f'Зарплата = {new_func()}')
+s
