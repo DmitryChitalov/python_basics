@@ -10,4 +10,4 @@
 my_list = [23, 12, 45, 4, 5, 61, 22, 33, 22, 11]
 my_new_list = [el for num, el in enumerate(my_list) if my_list[num - 1] < my_list[num]]
 print(f'Исходный список {my_list}')
-print(f'Новый список {my_new_list}')
+print(f'Результат {my_new_list}')
