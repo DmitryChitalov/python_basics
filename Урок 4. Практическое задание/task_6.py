@@ -12,3 +12,18 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+
+from itertools import count, cycle
+
+for a in count(2):
+    if a == 1003:
+        break
+    print(a)
+
+user_cycle = cycle(['37', '22', 4, 55, {'56': 2}])
+for a in range(5):
+    print(next(user_cycle))

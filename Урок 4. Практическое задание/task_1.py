@@ -6,3 +6,35 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+
+
+def simple():
+    x = float(input('Введите количество отработанных часов : '))
+    y = float(input('Введите суммы оплаты труда за 1 час : '))
+    c = float(input('Укажите размер премии - '))
+    pay = x * y
+    return pay + c
+
+
+print(f'Размер заработной платы составил: {simple()}')
+
+------
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+
+from sys import argv
+
+script_name, hours_production, rate_per_hour, bonus = argv
+
+print("Имя скрипта: ", script_name)
+print("\n<< Программа рассчета заработной платы сотрудника >>")
+print("Выработка в часах: ", hours_production)
+print("Ставка в час: ", rate_per_hour)
+print("Премия: ", bonus)
+print("Зарплата сотрудника: ", (float(hours_production) * float(rate_per_hour)) + float(bonus))
