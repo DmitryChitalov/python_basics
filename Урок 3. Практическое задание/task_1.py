@@ -25,4 +25,4 @@ def div():
     else:
         print("Вы что? Пытаетесь делить на 0! ")
 
-print(f'result  {div()}')
+print(div())
