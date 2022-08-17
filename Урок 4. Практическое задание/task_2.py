@@ -19,3 +19,6 @@ for b in range(1, len(lis)):
         (result_list.append(lis[b]))
 print("Исходный список: ", lis)
 print("Список, элементы которого больше предыдущего: ", result_list)
+
+source_list = [333, 22, 121, 44, 1, 11, 4, 10, 7, 1, 68, 173, 55]
+print([source_list[ind] for ind in range(1, len(source_list)) if source_list[ind] > source_list[ind - 1]])
