@@ -12,12 +12,22 @@
 # word1 = input("Введите исходное слово для преобразования: ")
 
 string1 = input("Введите строку из слов для преобразования: ")
+my_list = string1.split()
+print("###")
+print(my_list)
 
 
 def my_f():
-    global string1
-    string1 = string1.title()
-    return string1
+    global el
+    el = el.title()
+    return el
 
 
-print(my_f())
+my_list2 = []
+k = 0
+for el in my_list:
+    my_list2.append(my_f())
+    k = +1
+
+for i in my_list2:
+    print(i, end=' ')  # печатает не с новой строки, а рядом
