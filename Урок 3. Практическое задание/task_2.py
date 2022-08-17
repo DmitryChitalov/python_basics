@@ -1,10 +1,11 @@
-"""
-2. Реализовать функцию, принимающую несколько параметров,
-описывающих данные пользователя: имя, фамилия, год рождения, город проживания, email, телефон.
-Функция должна принимать параметры как именованные аргументы.
-Реализовать вывод данных о пользователе одной строкой.
+def my_sum():
+    arg_1 = str(input('Put Your Name: '))
+    arg_2 = str(input('Put Your Surname: '))
+    arg_3 = str(input('Put Your DOB: '))
+    arg_4 = str(input('Put Your City: '))
+    arg_5 = str(input('Put Your Email: '))
+    arg_6 = str(input('Put Your Phone number: '))
+    return list[f'Name: {arg_1}; Surname: {arg_2}; DOB: {arg_3}; City: {arg_4}; Email: {arg_5}; Phone number: {arg_6};']
 
-Пример:
-Иван Иванов 1846 года рождения, проживает в городе Москва,
-email: jackie@gmail.com, телефон: 01005321456
-"""
+
+print(my_sum())

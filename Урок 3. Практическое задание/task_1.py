@@ -1,19 +1,12 @@
-"""
-1. Реализовать функцию, принимающую два числа (позиционные аргументы)
-и выполняющую их деление. Числа запрашивать у пользователя,
-предусмотреть обработку ситуации деления на ноль (try except).
+def my_func():
+    var_1 = float(input('Put number 1: '))
+    var_2 = float(input('Put number 2: '))
+    while True:
+        var_2 = 0
+        print('put number not = 0 :')
+        var_2 = float(input('Put number 2: '))
+        break
+    return var_1 / var_2
 
-Пример:
-Введите первое число: 10
-Введите второе число: 0
-Вы что? Пытаетесь делить на 0!
 
-Process finished with exit code 0
-
-Пример:
-Введите первое число: 10
-Введите второе число: 10
-1.0
-
-Process finished with exit code 0
-"""
+print(my_func())
