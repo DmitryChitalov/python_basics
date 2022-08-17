@@ -12,3 +12,20 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+start = int(input("Введите число с какого начнется генерация: "))
+stop = int(input("Введите число до какого генерировать: "))
+count_num = 0
+my_list = []
+for i in count(count_num):
+    if i > stop:
+        break
+    else:
+        my_list.append(i)
+        
+for i in cycle(my_list):
+    if count_num > stop:
+        break
+    print(i)
+    count_num += 1
