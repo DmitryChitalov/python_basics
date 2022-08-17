@@ -9,16 +9,16 @@
 
 
 def my_sum(my_list):
-    my_sum_1 = 0
+    amount = 0
     my_flag = True
     for number in my_list:
         try:
             next_number = int(number)
-            my_sum_1 += next_number
+            amount += next_number
         except ValueError:
             my_flag = False
-            return my_sum_1, my_flag
-    return my_sum_1, my_flag
+            return amount, my_flag
+    return amount, my_flag
 
 
 my_flags = True
