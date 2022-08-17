@@ -7,3 +7,9 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+some_set = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+new_list = []
+for i in range(len(some_set) - 1):
+    if some_set[i + 1] > some_set[i]:
+        new_list.append(some_set[i + 1])
+print(new_list)
