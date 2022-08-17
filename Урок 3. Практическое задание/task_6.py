@@ -11,11 +11,12 @@
 
 #word1 = input("Введите исходное слово для преобразования: ")
 
-word1 = input("Введите строку из слов для преобразования: ")
+string1 = input("Введите строку из слов для преобразования: ")
+
 def my_f():
-    global word1
-    word1=word1.title()
-    return word1
+    global string1
+    string1=string1.title()
+    return string1
 
 print(my_f())
 
