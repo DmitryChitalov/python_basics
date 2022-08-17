@@ -7,3 +7,12 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+my_list1 = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+my_list2 = [my_list1[i] for i in range(1, len(my_list1)) if my_list1[i] > my_list1[i - 1]]
+print(my_list2)
+
+my_list3 = []
+for i in range(1, len(my_list1)):
+    if my_list1[i - 1] < my_list1[i]:
+        my_list3.append(my_list1[i])
+print(my_list3)
