@@ -9,15 +9,15 @@
 Необходимо использовать написанную ранее функцию int_func().
 """
 
-#word1 = input("Введите исходное слово для преобразования: ")
+# word1 = input("Введите исходное слово для преобразования: ")
 
 string1 = input("Введите строку из слов для преобразования: ")
 
+
 def my_f():
     global string1
-    string1=string1.title()
+    string1 = string1.title()
     return string1
 
+
 print(my_f())
-
-
