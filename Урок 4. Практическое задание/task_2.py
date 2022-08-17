@@ -7,3 +7,15 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+
+result_list = []
+lis = [int(b) for b in input("Введите список чисел: ").split()]
+for b in range(1, len(lis)):
+    if lis[b] > lis[b - 1]:
+        (result_list.append(lis[b]))
+print("Исходный список: ", lis)
+print("Список, элементы которого больше предыдущего: ", result_list)
