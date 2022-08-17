@@ -14,12 +14,11 @@
 n = int(input("Ведите целое положительное число: "))
 result = 0
 i = 0
-while n>0:
+while n > 0:
     i += 1
     tmp = n % 10
     if result < tmp:
         result = tmp
     n = n // 10
-    #print(tmp)
 if result > 0:
     print(f"Самая большая цифра в числе: {result}")

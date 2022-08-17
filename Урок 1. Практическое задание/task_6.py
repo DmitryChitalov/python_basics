@@ -26,4 +26,4 @@ while a < b:
     n_day += 1
     a += a * 0.1
     #print(a)
-print("Результат через дней:", n_day)
+print(f"Результат через дней: {n_day}")

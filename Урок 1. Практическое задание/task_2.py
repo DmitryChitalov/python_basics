@@ -13,4 +13,4 @@ second = int(input("Введите время в секундах: "))
 time_hour   = second // 3600
 time_minute = second % 3600 // 60
 time_second = second - time_hour * 3600 - time_minute * 60
-print("Время:" , time_hour , ":" , time_minute, ":" , time_second)
+print(f"Время: {time_hour}:{time_minute}:{time_second}")
