@@ -6,8 +6,9 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
-def my_func(my_summ = 0):
 
+
+def my_func(my_summ=0):
     lst = input('Введите числа через пробел, q - выход: ').split()
     for i in range(len(lst)):
         if lst[i] != "q":
@@ -19,4 +20,6 @@ def my_func(my_summ = 0):
         print("Расчет завершен")
     else:
         my_func(my_summ)
+
+
 my_func()

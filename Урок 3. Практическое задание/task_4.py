@@ -14,6 +14,7 @@ def my_func(x, y):
     result = 1 / result
     return result
 
+
 x, y = float(input("Введите действительное положительное число x: ")), \
        int(input("Введите целое отрицательное число y: "))
 print(f"{int(x)} в степени {y} равно: {my_func(x, y)}")

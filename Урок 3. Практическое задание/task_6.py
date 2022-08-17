@@ -9,8 +9,11 @@
 Необходимо использовать написанную ранее функцию int_func().
 """
 
-def int_func (*args):
+
+def int_func(*args):
     word = input("Введите слово (или слова через пробел) из маленьких латинских букв ")
     print(word.title())
     return
+
+
 int_func()
