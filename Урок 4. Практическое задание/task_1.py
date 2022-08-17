@@ -7,16 +7,18 @@
 необходимо запускать скрипт с параметрами.
 """
 
+import sys
 
-def salary():
-    try:     time = float(input('Выработка в часах '))
-    sal = int(input('Ставка в рублях '))
-    bonus = int(input('Премия в рублях '))
-    res = time * sal + bonus
+f_obj, name_v, rate_v, hours_v = sys.argv
+print(f_obj)
 
-    print(f'заработная плата сотрудника  {res}')
 
-except ValueError:
-return print('Not a number')
+def calculate_salary(rate, hours):
+    try:
+        print(f"Сотрудник {name_v} заработатал {int(rate) * int(hours) * 1.25}")
+    except TypeError:
+        print("Операция применима к объекту не соответствующего типа")
+        exit()
 
-salary()
+
+calculate_salary(rate_v, hours_v)
