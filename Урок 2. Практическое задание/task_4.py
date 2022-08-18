@@ -14,3 +14,12 @@
 1. раз
 2. перерефриж
 """
+
+ls = input("Введите слова: ").split()
+a = 1
+for text in ls:
+    if len(text) > 10:
+        print(f"{a} - {text[:10]}")
+    else:
+        print(a, "-", text)
+    a += 1

@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+ls = [158, "158", 0.158, False, None]
+for element in ls:
+    print (type(element))

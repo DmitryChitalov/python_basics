@@ -11,3 +11,12 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+ls = input("введите числа: ").split(' ')
+first = 0
+second = 1
+while len(ls) > second:
+    ls[first], ls[second] = ls[second], ls[first]
+    first += 2
+    second += 2
+print(ls)
