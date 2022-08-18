@@ -25,3 +25,22 @@
 “ед”: [“шт.”]
 }
 """
+
+list_product = []
+while True:
+    list_product.append((int(input("Номер товара: ")),
+                         # название, цена, количество, единица измерения
+                         {"название": input("Название: "),
+                          "цена": input("Цена: "),
+                          "количество": input("Количество: "),
+                          "единица измерения": input("Единица измерения: ")}))
+    if input("Продолжить ввод (1 - нет)?: ") == "1":
+        break
+# print(list_product)
+list_name = ["название", "цена", "количество", "единица измерения"]
+dict_product = {"название": [], "цена": [],
+                "количество": [], "единица измерения": []}
+for n in list_product:
+    for i in list_name:
+        dict_product[i].append(n[1][i])
+print(dict_product)
