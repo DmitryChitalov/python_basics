@@ -8,3 +8,21 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(str):
+    return str.title()
+
+
+print(int_func("text"))
+
+
+def new_func(str):
+    print(str)
+    lst = str.split()
+    for el in lst:
+        a = int_func(el)
+        print(a, end=' ')  # печатает не с новой строки, а рядом
+
+
+new_func("строка из нескольких слов маленькими буквами")

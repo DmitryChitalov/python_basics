@@ -5,3 +5,19 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_f():
+    try:
+        x = int(input("Введите основание  степени: "))
+        y = int(input("Введите показатель  степени: "))
+    except ValueError:
+        return
+    rez = x
+    for i in range(1, abs(y)):
+        rez = rez * x
+    rez = 1 / rez
+    return rez
+
+
+print(my_f())
