@@ -9,22 +9,22 @@
 
 
 def my_f():
-    q = input("Введите спецсимвол, по которому будет завершение программы: " )
+    q = input("Введите спецсимвол, по которому будет завершение программы: ")
     x = 1
-    sum = 0
+    z = 0
     while x != q:
-        x = input("Введите число или несколько через пробел " )
+        x = input("Введите число или несколько через пробел ")
         my_l = x.split()
         for el in my_l:
             if el == q:
                 x = q
                 break
             else:
-                sum = sum + int(el)
+                z = z + int(el)
 
-       # print(my_l)
+    # print(my_l)
 
-    return sum
+    return z
 
 
 print(my_f())
