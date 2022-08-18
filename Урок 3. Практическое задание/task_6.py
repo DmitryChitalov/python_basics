@@ -9,25 +9,20 @@
 Необходимо использовать написанную ранее функцию int_func().
 """
 
-# word1 = input("Введите исходное слово для преобразования: ")
 
-string1 = input("Введите строку из слов для преобразования: ")
-my_list = string1.split()
-print("###")
-print(my_list)
+def int_func(str):
+    return str.title()
 
 
-def my_f():
-    global el
-    el = el.title()
-    return el
+print(int_func("text"))
 
 
-my_list2 = []
-k = 0
-for el in my_list:
-    my_list2.append(my_f())
-    k = +1
+def new_func(str):
+    print(str)
+    lst = str.split()
+    for el in lst:
+        a = int_func(el)
+        print(a, end=' ')  # печатает не с новой строки, а рядом
 
-for i in my_list2:
-    print(i, end=' ')  # печатает не с новой строки, а рядом
+
+new_func("строка из нескольких слов маленькими буквами")
