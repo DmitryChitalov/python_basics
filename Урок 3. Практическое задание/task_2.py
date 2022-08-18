@@ -32,4 +32,4 @@ def user_data(name, fam, year, city, mail, tel):
     return string1
 
 
-print(user_data(name, fam, year, city, mail, tel))
+print(user_data(name=name, fam=fam, year=year, city=city, mail=mail, tel=tel))
