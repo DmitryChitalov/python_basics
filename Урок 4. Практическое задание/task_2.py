@@ -7,3 +7,16 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+list_1 = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+result_list = []
+for i in range(1, len(list_1)):
+    if list_1[i] > list_1[i - 1]:
+        result_list.append(list_1[i])
+
+print(result_list)
+
+result_list_gen = [list_1[i] for i in range(1, len(list_1)) if list_1[i] > list_1[i - 1]]
+
+print(result_list_gen)

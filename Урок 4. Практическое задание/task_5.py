@@ -5,3 +5,13 @@
 Необходимо получить результат вычисления произведения всех элементов списка.
 Подсказка: использовать лямбда-функцию и функцию reduce().
 """
+
+from functools import reduce
+
+list_1 = [i for i in range(100, 1001, 2)]
+
+print(f"Список: {list_1}")
+
+result = reduce(lambda arg1, arg2: arg1 * arg2, list_1)
+
+print(f"Результат: {result}")
