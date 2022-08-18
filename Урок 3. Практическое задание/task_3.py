@@ -25,10 +25,9 @@ def my_sum():
 
 print(my_sum())
 
-
-
 ### Второй способ
 print("Второй способ...")
+
 
 def my_sum2():
     try:
@@ -42,11 +41,13 @@ def my_sum2():
     if a1 > a2:
         if a2 > a3:
             s = a1 + a2
-        else: s = a1 + a3
+        else:
+            s = a1 + a3
     elif a3 > a1:
         s = a2 + a3
-    else: s = a2 + a1
+    else:
+        s = a2 + a1
     return s
+
+
 print(my_sum2())
-
-
