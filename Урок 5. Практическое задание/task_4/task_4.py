@@ -7,3 +7,12 @@
 Иванов 23543.12
 Петров 13749.32
 """
+SALARY = 20000
+lst = []
+with open("salary.txt", 'r', encoding='utf-8') as f_obj:
+    print(f"Сотрудники с зарплатой менее {SALARY}:")
+    for line in f_obj.readlines():
+        if float(line.split()[1]) < SALARY:
+            print(line.split()[0])
+        lst.append(float(line.split()[1]))
+print(f"Средняя величины дохода сотрудников = {sum(lst) / len(lst)}")
