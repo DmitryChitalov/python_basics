@@ -7,3 +7,20 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+my_lst = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+result = []
+
+# вариант без
+for ind in range(1, len(my_lst)):
+    if my_lst[ind] > my_lst[ind - 1]:
+        result.append(my_lst[ind])
+
+print(f"1. {result}")
+
+# вариант с генераторным выражением
+result = [my_lst[ind] for ind in range(1, len(my_lst))
+          if my_lst[ind] > my_lst[ind - 1]]
+
+print(f"2. {result}")

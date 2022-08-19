@@ -12,3 +12,23 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+# 1
+begin_to = 3
+end_to = 10
+result = []
+for x in count(begin_to):
+    if x > end_to:
+        break
+    result.append(x)
+print(result)
+
+# 2
+result.clear()
+lst = list(range(begin_to, end_to + 1))
+for i, x in enumerate(cycle(lst)):
+    result.append(x)
+    if i >= (end_to - begin_to):
+        break
+print(result)

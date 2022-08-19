@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c24f5df9-bc37-44b0-814c-2a78479de8b8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Урок 4. Практическое задание/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 4. Практическое задание/task_7.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DYvaQ83T7ZNwYieq2ZDrFUsDds" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/-Сейчас/pythonProject/basic/python_basics/Урок 4. Практическое задание/task_1.py",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="task_1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="python_basics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 4. Практическое задание" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 4. Практическое задание/task_1.py" />
+      <option name="PARAMETERS" value="1 2 3" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c24f5df9-bc37-44b0-814c-2a78479de8b8" name="Changes" comment="" />
+      <created>1660888897693</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660888897693</updated>
+    </task>
+    <servers />
+  </component>
+</project>
