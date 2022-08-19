@@ -17,3 +17,17 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def division(var_1, var_2):
+    '''
+    Деление а на b
+    '''
+    try:
+        return var_1 / var_2
+    except ZeroDivisionError:
+        return 'Вы что? Пытаетесь делить на 0!'
+try:
+    a = float(input('Введите первое число: '))
+    b = float(input('Введите второе число: '))
+except ValueError:
+    print('Введенные значения не являются числами')
+print(division(a,b))
