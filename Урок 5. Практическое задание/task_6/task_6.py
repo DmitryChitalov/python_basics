@@ -5,3 +5,12 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+subject_dict = {}
+with open("task_6.txt", encoding='utf-8') as f:
+    for line in f:
+        replaced_line = line.replace("(л)", "").replace("(пр)", "").replace("(лаб)", "").replace(".", "") \
+            .replace("-", "0").replace(":", "")
+        subject, lecture, practice, lab = replaced_line.split()
+
+        subject_dict[subject] = int(lecture) + int(practice) + int(lab)
+    print(f"{subject_dict}")
