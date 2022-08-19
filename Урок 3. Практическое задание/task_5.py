@@ -6,3 +6,28 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def input_list(var_str):
+    result = 0
+    lst = var_str.split()
+    cont = True
+    for i in lst:
+        try:
+            if i == "q":
+                cont = False
+                break
+            val_x = float(i)
+        except ValueError:
+            continue
+        result += val_x
+    return result, cont
+
+
+result = 0
+cont = True
+while cont:
+    lst = input("Введите последовательность чисел через пробел (q - exit): ")
+    result_step, cont = input_list(lst)
+    result += result_step
+print(f"Полученная сумма {result}")

@@ -5,3 +5,23 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    """ чуть расширил функцию воводит в любую степень"""
+    if y == 0:
+        return 1
+    elif y < 0:
+        mod_y = -y
+    else:
+        mod_y = y
+    result = 1
+    for i in range(mod_y):
+        result = result * x
+    result = result if mod_y == y else 1 / result
+    return result
+
+
+x = int(input("Введите действительное положительное число x: "))
+y = int(input("Введите целое отрицательное число y: "))
+print(f"x ** y = {x ** y} => {my_func(x, y)}")

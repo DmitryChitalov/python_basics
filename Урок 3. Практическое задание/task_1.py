@@ -17,3 +17,20 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def func_del(var_a, var_b):
+    if var_b == 0:
+        return
+    else:
+        return a / b
+
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+c = func_del(a, b)
+if c == None:
+    print("Вы что? Пытаетесь делить на 0!")
+else:
+    print(c)
