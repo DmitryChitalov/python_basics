@@ -7,3 +7,19 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+
+# Вариант 1 (без генератора)
+list1 = [18, 1, 30, 2, 8, 10]
+print(list1)
+k = len(list1)
+list2=[]
+for i in range(0, k):
+   #print(list1[i])
+    if i > 0:
+        if list1[i] > list1[i-1]:
+           list2.append(list1[i])
+    else:  list2.append(list1[i])
+print(list2)
+
+# Вариант 2 (с генератором)
