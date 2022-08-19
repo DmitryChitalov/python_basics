@@ -10,3 +10,17 @@
 Подсказка: факториал числа n — произведение чисел от 1 до n.
 Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 """
+
+from math import factorial
+
+
+def factorial_gen(n):
+    """Функция подсчета факториала"""
+    for i in range(n):
+        print(i, end='! = ')
+        yield factorial(i)
+
+
+number = int(input("Введите число до которого будет вычисляться факториал: "))
+for el in factorial_gen(number + 1):
+    print(el)

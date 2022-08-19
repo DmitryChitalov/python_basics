@@ -12,3 +12,16 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count
+from itertools import cycle
+
+for el in count(3):
+    if el > 10:
+        break
+    print(el)
+repeat_count = 0
+for i in cycle(['---1---', '--111--', '-11111-', '1111111', '-11111-', '--111--']):
+    print(i)
+    repeat_count += 1
+    if repeat_count > 12:
+        break
