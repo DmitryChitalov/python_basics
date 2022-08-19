@@ -12,3 +12,25 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import cycle, count
+
+a = int(input("Введите число: "))
+n = int(input("Введите количество генерируемых чисел:"))
+
+for i in count(a):
+    if n:
+        print(i)
+        n -= 1
+    else:
+        break
+
+list_in = list(input("Введите числа через пробел: ").split(" "))
+n = int(input("Введите количество повторений: "))
+
+for i in cycle(list_in):
+    if n:
+        print(i)
+        n -= 1
+    else:
+        break
