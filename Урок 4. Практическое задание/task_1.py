@@ -6,3 +6,10 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+worked_hours = int(argv[1])
+rate_hour = int(argv[2])
+premium = int(argv[3])
+
+print(f"Расчет заработной платы сотрудника: {worked_hours * rate_hour + premium} рублей")
