@@ -12,3 +12,24 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+
+def gen_fun(ferst_number):
+    for el in count(ferst_number):
+        if el > 10:
+            break
+        else:
+            print(el)
+
+
+def repeat_fun(my_str):
+    i = 0
+    for el in cycle(my_str):
+        if i > 5:
+            break
+        print(el)
+        i += 1
+
+gen_fun(3)
+repeat_fun("abc")

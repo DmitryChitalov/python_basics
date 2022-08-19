@@ -6,3 +6,6 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+print(f"Your salary is:  {int(argv[1]) * int(argv[2]) + int(argv[3])}")
