@@ -7,3 +7,7 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+some_set = [23, 12, 45, 4, 5, 61, 22, 33, 22, 11]
+my_new_list = [el for num, el in enumerate(some_set) if some_set[num - 1] < some_set[num]]
+print(f'Исходный список {some_set}')
+print(f'Результат {my_new_list}')
