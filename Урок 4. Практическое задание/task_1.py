@@ -6,9 +6,9 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
-def money(time, sal, bonus):
-    res = time * sal + bonus
-    return f'заработная плата сотрудника:  {res}'
+from sys import argv
+script_name, hours, cost, bonus = argv
+def money():
+    return int(hours) * int(cost) + int(bonus)
 
-
-print(money(10, 20, 50))
+print(f'Зарплата = {money()}')
