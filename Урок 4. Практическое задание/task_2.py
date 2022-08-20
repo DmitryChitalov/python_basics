@@ -7,9 +7,7 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
-some_set = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-new_list = []
-for i in range(len(some_set) - 1):
-    if some_set[i + 1] > some_set[i]:
-        new_list.append(some_set[i + 1])
-print(new_list)
+some_set = [23, 12, 45, 4, 5, 61, 22, 33, 22, 11]
+my_new_list = [el for num, el in enumerate(some_set) if some_set[num - 1] < some_set[num]]
+print(f'Исходный список {some_set}')
+print(f'Результат {my_new_list}')
