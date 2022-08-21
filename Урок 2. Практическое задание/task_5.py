@@ -15,3 +15,13 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+real_r = []
+u_sol = 'y'
+while True:
+    print(f"Сейчас рейтинг выглядит так:{real_r}")
+    u_sol = input("Введите число или 'y' для выхода: ")
+    if u_sol == 'y':
+        break
+    real_r.append(int(u_sol))
+    real_r.sort(reverse=True)
+print(f"Итоговый рейтинг:{real_r}")
