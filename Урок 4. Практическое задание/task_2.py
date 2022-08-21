@@ -7,3 +7,23 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+# Пербор циклом
+
+sp = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+new_sp = []
+def my_func(sp):
+    for i in range(len(sp)-1):
+        if sp[i+1] > sp[i]:
+            new_sp.append(sp[i+1])
+    return new_sp
+print(my_func(sp))
+
+# Генератор
+new_sp1 = [sp[i] for i in range(1, len(sp)) if sp[i] > sp[i-1]]
+
+print(new_sp1)
+
+
+
+
+

@@ -12,3 +12,21 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+a, b = (map(int,input('Введите два числа через пробел: ').split()))
+ls = []
+for i in count(a):
+    if i > b:
+        break
+    ls.append(i)
+print(ls)
+
+new_ls = []
+count = 0
+for x in cycle(ls):
+    if count >= len(ls):
+        break
+    new_ls.append(x)
+    count += 1
+print(new_ls)
