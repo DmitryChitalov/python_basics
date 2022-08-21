@@ -9,3 +9,29 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+import json
+
+lst_result = []
+with open("c:\Python38\\text8.txt", "r", encoding="utf-8") as my_file:
+    dict_firm = {}
+    dict_average = {"average_profit": 0}
+    result_value = 0
+    count_value = 0
+    while True:
+        line = my_file.readline()
+        if not line:
+            break
+        lst_line = line.split()
+        if len(lst_line) == 4:
+            firm = lst_line[0].replace("\ufeff", "")
+            dict_firm[firm] = float(lst_line[2]) - float(lst_line[3])
+            if dict_firm[firm] > 0:
+                result_value += dict_firm[firm]
+                count_value += 1
+    if count_value > 0:
+        dict_average["average_profit"] = round(result_value / count_value, 2)
+    lst_result.append(dict_firm)
+    lst_result.append(dict_average)
+print(lst_result)
+with open("c:\Python38\\text8.json", "w") as write_file:
+    json.dump(lst_result, write_file)

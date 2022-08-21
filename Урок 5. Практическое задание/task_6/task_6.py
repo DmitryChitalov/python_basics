@@ -5,3 +5,30 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+
+def number_in_str(var_str):
+    result = ""
+    for i in var_str:
+        if i.isdigit():
+            result = result + i
+    try:
+        result = int(result)
+    except ValueError:
+        result = 0
+    return result
+
+
+article = {}
+my_file = open("c:\Python38\\text7.txt", "r", encoding="utf-8")
+while True:
+    line = my_file.readline()
+    if not line:
+        break
+    lst_line = line.split()
+    result = 0
+    for i in lst_line:
+        result += number_in_str(i)
+    article[lst_line[0].replace(":", "")] = result
+my_file.close()
+print(article)
