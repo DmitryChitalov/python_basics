@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+our_list = [36, None, "word", 0.5]
+# Для каждого элемента в нашем_списке определяем тип.
+for el in our_list:
+    print(type(el))
