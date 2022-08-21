@@ -1,0 +1,68 @@
+
+Задача 3.1.2.2.1. Изучение алгоритмов симметричного шифрования
+Triple DES (3DES): MIHXBgkrBgEEAYI3WAOggckwgcYGCisGAQQBgjdYAwGggbcwgbQCAwIAAAICZgMC
+AgDABAjpoPFX/1ELVAQQlRlGXf5N8qv9DuDMgE1+sgSBiPUgoW2Q/8INqBG084+c
+6pKmFfY8gmbqkbMoO3fqONuctZHTIDyvy7XJ7j6FLX0muP/tu5jKVjR2jA5D2Fzz
+OSkzsoBZEfZSY085S0cacHpz5etjRy5V8GN/+LAhjXv2yspjUp2mCZlKJFTkvXvM
+GrwSXPb33FklOOsd08TLiY/FUD2KtDsViHo=
+
+DES: MIHWBgkrBgEEAYI3WAOggcgwgcUGCisGAQQBgjdYAwGggbYwgbMCAwIAAAICZgEC
+AUAECO2AnLnmAFE9BBDomf3ELAFEgStU7yiJBewSBIGIDQ9epb8CoYTjp4Ueqapk
+A0UjMlEA0Q6Rvmf58VkG0qdI43pkTJj+4TLMDP6v5SS7lItB6icyQ3syEoe832Ec
+Nm6eLKCobE1KO8G5PAuuevYLHkH6Crp9gc4lGKDp9Uj5UabjBIZNtuLMcp4N28s2
+YbcSmooEBfdMgPxfqjJ+GaSHaoSo2utGng==
+
+RSA RC4:MIHXBgkrBgEEAYI3WAOggckwgcYGCisGAQQBgjdYAwGggbcwgbQCAwIAAAICZgIC
+AgCABAgIQwacLPjVJQQQGbneOrSB4jD44oPXuIs36QSBiE6faIJ5E9t6IVri8h7m
+3jyh9SBLa2VY+bux5SntFW8rg3abpcKKlR6nz8ETbU6s3xz2FDrO23DV6O9E8xG4
+kMKw/j0+WNA5Ruqduyw9JYvhBFk20LAJkN04P11YfPuYydu45yYyYb2DOk1IQnTc
+Es7Mjb4g7TpzGx7QHgLBtnuo32eQGEiAJJA=
+
+RSA RC2: MIHJBgkrBgEEAYI3WAOggbswgbgGCisGAQQBgjdYAwGggakwgaYCAwIAAAICaAEC
+AgCABAAEEO4b4o7tO5b5EBfOKmCBL10EgYKldjvrmdwe2fEmdUXUmkRdHZvrw/4w
+s2mnQp8BhUGjzPzRmEW/GBaqai6wsBKlOdalTyF4T58w8Y+IdOslWyehOEpw9hL4
+zwDoVf7clyAqUk+3WkMHNsl9JVsoKePq5e/Gtxd9IbDXxZNHdNyglwCs91Fg6zwe
+X4G/EdWzTVtzdD07
+
+
+Различается ли длина зашифрованного текста при выборе различных ал- горитмов шифрования? Почему?
+Насколько сильно изменилось значение зашифрованного текста в поле En- crypted Data по сравнению с выписанным ранее?
+
+
+Задача 3.1.2.2.2. Изучение алгоритма асимметричного шифрования RSA
+
+p: 1999
+q: 2111
+n: 4219889
+m: 4215780
+d: 1033
+e: 1024357
+
+Запишите шифруемое число и его зашифрованное значение:
+Исходное (шифруемое) число: 1002333
+Зашифрованное число: 3029064
+
+
+
+Задача 3.1.2.2.3. Изучение алгоритмов хэширования
+MD2: CC1C97DEE2835C385DF4CA5225C50830
+MD4: 87575CD4F819ABD9D17F0022EAE2C894
+MD5: F711E923175B8B1C975E87DAEF597924
+SHA1: BB3235186444CDC5E8DD1B0C6D743356889A4AC8
+Различается ли длина хэша при выборе различных алгоритмов хэширова- ния файла?
+У хэшей MD длинна хэша составляет 32 
+У SHA1 40
+
+MD2: 28B01B8A3B9B69C4372F3BF696266E7D
+MD4: D2197F4795C72615A902AEF74F210958
+MD5: 6F689561B0CF075995154CA37BCA7859
+SHA1: 5F52801D78E61BFB09FFC38B9C502B591504200D
+Насколько сильно изменилось его значение по сравнению с выписанным ра- нее? - Значения полностью изменились
+Почему? Потому при незначительном изменении входных данных, алгоритм хэширования на выход   выдаст 
+
+Задача 3.1.2.2.4. Изучение порядка простановки и проверки электронной подписи
+Откройте Проводник. Выпишите и сравните размеры файлов:
+test.txt:
+encrypt.txt:
+decrypt.txt:
+Сравните размеры файлов. Какие выводы Вы можете сделать?
