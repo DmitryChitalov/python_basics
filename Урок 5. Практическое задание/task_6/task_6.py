@@ -5,3 +5,27 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+my_f = open("task6.txt", encoding='utf-8')
+all_sub_dic = []
+for i in my_f.readlines():
+    i = i.replace(":", "")
+    i = i.replace("(л)", "")
+    i = i.replace("(пр)", "")
+    i = i.replace("(лаб)", "")
+    content = i.split()
+    sub_dic = {"Предмет": content[0], "Л": content[1], "ПЗ": content[2], "Лаб": content[3]}
+    all_sub_dic.append(sub_dic)
+my_f.close()
+res_dic = {}
+
+print(all_sub_dic)
+for i in all_sub_dic:
+    hour_sum = 0
+    if str(i['Л']) != "—":
+        hour_sum = hour_sum + int(i['Л'])
+    if str(i['ПЗ']) != "—":
+        hour_sum = hour_sum + int(i['ПЗ'])
+    if str(i['Лаб']) != "—":
+        hour_sum = hour_sum + int(i['Лаб'])
+    res_dic[i['Предмет']] = hour_sum
+print(res_dic)
