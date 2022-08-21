@@ -10,5 +10,7 @@ with open('task_1.txt', 'w', encoding="utf-8") as my_f:
         line = input('Введите текст \n ')
         if not line:
             break
-
-
+my_f = open('task_1.txt', 'r')
+content = my_f.readlines()
+print(content)
+my_f.close()
