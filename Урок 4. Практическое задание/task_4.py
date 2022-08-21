@@ -6,3 +6,18 @@
 Пример исходного списка: [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11].
 Результат: [23, 1, 3, 10, 4, 11]
 """
+ls = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+new_ls = []
+count = 0
+for i in ls:
+    if ls.count(i) == 1:
+        new_ls.append(i)
+    else:
+        count += 1
+
+print((new_ls))
+
+#генератор
+
+new_ls1 = [i for i in ls if ls.count(i) == 1]
+print(new_ls1)
