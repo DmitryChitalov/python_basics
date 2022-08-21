@@ -25,13 +25,14 @@ for el in g:
 x = int(input("Введите число для расчета факториала: "))
 f = 1
 
+
 def generator():
-    for el in range(1, x+1):
+    for el in range(1, x + 1):
         yield el
+
 
 g = generator()
 for el in g:
     f = f * el
-
 
 print(f)
