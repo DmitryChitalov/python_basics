@@ -12,3 +12,25 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+# a
+from itertools import count
+
+for el in count(5, 2):  # итератор нечетных чисел, начиная с 5
+    if el > 50:
+        break
+    else:
+        print(el)
+
+
+
+# b
+from itertools import cycle
+
+my_list = [10, 'Aaa', 'Bbb', 'Ccc', 20, 40]
+a = 5
+for el in cycle(my_list): # итератор значений списка в цикле
+    print(f"Текущий элемент: {el}")
+    a += 1
+    if a > 14:
+        break
