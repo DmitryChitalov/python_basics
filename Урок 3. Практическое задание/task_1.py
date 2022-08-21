@@ -17,3 +17,17 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def my_div(first_obj, second_obj):
+    try:
+        return first_obj/second_obj
+    except ZeroDivisionError:
+        return f'Деление на {second_obj} запрещено !'
+
+
+first_num = int(input('Введите первое число: '))
+second_num = int(input('Введите второе число: '))
+print(my_div(first_num, second_num))
+
+
+
