@@ -7,3 +7,16 @@
 Иванов 23543.12
 Петров 13749.32
 """
+with open('text.txt', 'r', encoding='utf-8') as my_file:
+    salary = []
+    stuff = []
+    my_list = my_file.read().split('\n')
+
+    for i in my_list:
+        i = i.split()
+        if float(i[1]) < 20000:
+            stuff.append(i[0])
+            print(f'Зарабатывает < 20000руб: {i[0]}')
+        salary.append(i[1])
+print(f'Средний оклад всех сотрудников: {sum(map(float, salary)) / len(salary)}')
+
