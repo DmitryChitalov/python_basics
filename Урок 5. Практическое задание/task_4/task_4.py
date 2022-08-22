@@ -7,3 +7,15 @@
 Иванов 23543.12
 Петров 13749.32
 """
+zp = {}
+
+with open("task4.txt", "r", encoding="utf-8") as my_file:
+    for el in my_file:
+        zp[el.split()[0]] = float(el.split()[1])
+
+print("Сотрудники получающие меньше 20 000: ")
+for n, i in zp.items():
+    if i < 20000:
+        print(n)
+
+print(f"Средняя зарплата: {sum(zp.values()) / len(zp)}")
