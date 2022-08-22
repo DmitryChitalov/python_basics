@@ -7,3 +7,18 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+min_salary = 20000
+
+with open("in.txt") as in_file:
+    total_salary = 0
+    empl = 0
+    print(f"Cотрудники, имеющие оклады менее {min_salary} руб.:")
+    for line in in_file:
+        s = line.split(" ")
+        empl += 1
+        total_salary += float(s[1])
+        if float(s[1]) < min_salary:
+            print(f"{s[0]} ({float(s[1])} руб.)")
+    print(f"Общее количество сотрудников: {empl} чел.")
+    print(f"Средний оклад сотрудников: {total_salary / empl} руб.")
