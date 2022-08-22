@@ -7,7 +7,7 @@
 Иванов 23543.12
 Петров 13749.32
 """
-my_file = open("c:\Python38\\text5.txt", "r", encoding="utf-8")
+my_file = open("text5.txt", "r", encoding="utf-8")
 
 rows = 0
 result_salary = 0

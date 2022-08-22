@@ -9,8 +9,8 @@ Four — 4
 Новый блок строк должен записываться в новый текстовый файл.
 """
 
-my_file = open("c:\Python38\\text4.txt", "r", encoding="utf-8")
-my_file_ru = open("c:\Python38\\text4_ru.txt", "w", encoding="utf-8")
+my_file = open("text4.txt", "r", encoding="utf-8")
+my_file_ru = open("text4_ru.txt", "w", encoding="utf-8")
 str_replace = {"One": "Один", "Two": "Два", "Three": "Три", "Four": "Четыре"}
 
 while True:

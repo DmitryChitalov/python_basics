@@ -12,7 +12,7 @@
 import json
 
 lst_result = []
-with open("c:\Python38\\text8.txt", "r", encoding="utf-8") as my_file:
+with open("text8.txt", "r", encoding="utf-8") as my_file:
     dict_firm = {}
     dict_average = {"average_profit": 0}
     result_value = 0
@@ -33,5 +33,5 @@ with open("c:\Python38\\text8.txt", "r", encoding="utf-8") as my_file:
     lst_result.append(dict_firm)
     lst_result.append(dict_average)
 print(lst_result)
-with open("c:\Python38\\text8.json", "w") as write_file:
+with open("text8.json", "w") as write_file:
     json.dump(lst_result, write_file)

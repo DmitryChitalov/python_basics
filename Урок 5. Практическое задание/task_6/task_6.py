@@ -20,7 +20,7 @@ def number_in_str(var_str):
 
 
 article = {}
-my_file = open("c:\Python38\\text7.txt", "r", encoding="utf-8")
+my_file = open("text7.txt", "r", encoding="utf-8")
 while True:
     line = my_file.readline()
     if not line:

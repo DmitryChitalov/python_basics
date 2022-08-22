@@ -4,7 +4,7 @@
 Об окончании ввода данных свидетельствует пустая строка.
 """
 
-my_file = open("c:\Python38\\text1.txt", "w", encoding="utf-8")
+my_file = open("text1.txt", "w", encoding="utf-8")
 print("Введите данные в файл (пустая строка - окончание ввода)")
 while True:
     text_str = input(">")
@@ -12,4 +12,4 @@ while True:
         break
     my_file.write(text_str + "\n")
 my_file.close()
-print("Данные сохранены в c:\Python38\\text1.txt")
+print("Данные сохранены.")

@@ -3,7 +3,7 @@
 выполнить подсчет количества строк, количества слов в каждой строке.
 """
 
-my_file = open("c:\Python38\\text4.txt", "r", encoding="utf-8")
+my_file = open("text4.txt", "r", encoding="utf-8")
 
 number_of_text = []
 

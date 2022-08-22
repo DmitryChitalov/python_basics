@@ -4,15 +4,15 @@
 """
 from itertools import count
 
-my_file = open("c:\Python38\\text6.txt", "w", encoding="utf-8")
+my_file = open("text6.txt", "w", encoding="utf-8")
 for i in count(30):
     if i > 100:
         break
     my_file.write(str(i) + " ")
 my_file.close()
-print("Данные сохранены в c:\Python38\\text6.txt")
+print("Данные сохранены в text6.txt")
 
-my_file = open("c:\Python38\\text6.txt", "r", encoding="utf-8")
+my_file = open("text6.txt", "r", encoding="utf-8")
 my_list = my_file.read().split()
 result = 0
 for i in my_list:
