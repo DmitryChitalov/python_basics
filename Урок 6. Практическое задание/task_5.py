@@ -27,7 +27,6 @@ class Pen(Stationery):
         print("Запуск отрисовки ручки")
         return
 
-
 class Pencil(Stationery):
     title = "Карандаш"
 
@@ -35,14 +34,12 @@ class Pencil(Stationery):
         print("Запуск отрисовки карандаша")
         return
 
-
 class Handle(Stationery):
     title = "Маркер"
 
     def draw(self):
         print("Запуск отрисовки маркера")
         return
-
 
 pen = Pen()
 pen.draw()
