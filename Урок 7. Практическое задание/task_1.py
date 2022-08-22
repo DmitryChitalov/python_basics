@@ -28,3 +28,41 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+
+    def __init__(self, listlist=None):
+        if listlist == None:
+            self._value = []
+        else:
+            self._value = listlist.copy()
+
+    def __str__(self):
+        result = ""
+        for i in self._value:
+            for ii in i:
+                result += str(ii)
+                result += " "
+            result += "\n"
+        return result
+
+    def __add__(self, other):
+        result = Matrix(self._value)
+        for ind_x, i in enumerate(result._value):
+            for ind_y, ii in enumerate(i):
+                result._value[ind_x][ind_y] += other._value[ind_x][ind_y]
+        return result
+
+
+m1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(m1)
+m2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+m3 = m1 + m2
+print("Сумма матриц: ")
+print(m3)
+"""
+Почему поменялось значение m1  когда я делаю через copy() присвоение 
+при создании класса?
+"""
+print(m1)
