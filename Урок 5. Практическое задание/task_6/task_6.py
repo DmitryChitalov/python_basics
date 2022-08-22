@@ -5,3 +5,19 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+mydict = {}
+lst=[]
+with open("text.txt", 'r', encoding='utf-8') as f:
+    for line in f:
+        name, stats = line.split(':')  # name = Информатика, stats = 100(л) 50(пр) 20(лаб).
+        stats = stats[:-1]
+        lst = stats.split(' ')
+        lst = [string.rstrip('(лпраб-)') for string in lst]
+        lst = list(filter(None, lst))
+        print(lst)
+        total = sum(map(int, lst))
+        mydict[name] = total
+
+print(mydict)
+
