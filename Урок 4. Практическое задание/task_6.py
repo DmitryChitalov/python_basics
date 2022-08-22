@@ -12,3 +12,19 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+from functools import reduce
+
+for el in count(3):
+    if el > 10:
+        break
+    else:
+        print(el)
+
+stp = 0
+lst = ['A', 'B', 'C', 'D']
+for el in cycle(lst):
+    if stp > 7:
+        break
+    print(reduce(lambda val_1, val_2: val_2 + val_1, lst))
+    stp += 1

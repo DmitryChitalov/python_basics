@@ -8,3 +8,15 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+
+def my_func(name, age, city, mail, phone):
+    return print(f"{name} {age} года рождения, проживает в городе {city}, "
+                 f"email: {mail}, телефон: {phone}")
+
+
+my_func(name=input("Введите ваше имя: "),
+        age=int(input("Введите год рождения: ")),
+        city=input("Введите город проживания: "),
+        mail=input("Введите ваш почтовый ящик: "),
+        phone=input("Введите ваш телефон: "))
