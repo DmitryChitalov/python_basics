@@ -31,7 +31,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.task_2">
+  <component name="RunManager" selected="Python.task_6">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="python_basics" />
       <method v="2">
@@ -108,6 +108,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="task_6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_basics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Урок 1. Практическое задание" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Урок 1. Практическое задание/task_6.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="python_basics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,6 +174,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.task_6" />
         <item itemvalue="Python.task_2" />
         <item itemvalue="Python.task_1" />
       </list>
