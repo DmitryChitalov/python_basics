@@ -40,7 +40,6 @@ class Car:
     def show_speed(self):
         return f'\n{self.speed} - current speed'
 
-
 class TownCar(Car):
 
     def show_speed(self):
