@@ -7,3 +7,13 @@
 Иванов 23543.12
 Петров 13749.32
 """
+with open(r"C:\Users\Serg\Desktop\fff.txt", 'r', encoding="utf-8") as my_file:
+    lines = my_file.read().splitlines()
+    dic = {}
+    for line in lines:
+        key, value = line.split(' ')
+        dic.update({key: value})
+    print(dic)
+
+# Нашел как привести файл к словарю, но на этом всё остановилось. Хотел дальше значения сравнивать с 20000 и выводить их ключи, но не нашел как. 
+

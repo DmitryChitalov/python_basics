@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+a = [5, True, 0.11, None, "ststsef"]
+i = 0
+for el in a:
+    print(type(a[i]))
+    i = i + 1

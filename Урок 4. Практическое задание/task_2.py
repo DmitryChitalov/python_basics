@@ -7,3 +7,13 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+a = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+b = []
+for el in range(1, len(a)):
+    if a[el] > a[el - 1]:
+        b.append(a[el])
+print(b)
+
+
+d = [a[el] for el in range(1, len(a)) if a[el] > a[el - 1]]
+print(d)
