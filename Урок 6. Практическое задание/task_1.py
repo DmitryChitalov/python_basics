@@ -15,3 +15,21 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+
+
+class TrafficLight:
+    """Светофор"""
+    __color = None
+
+    def running(self):
+        """ Running """
+        dictionary = {"Красный": 7, "Желтый": 2, "Зеленый": 4}
+        for key, value in dictionary.items():
+            self.__color = key
+            print(self.__color)
+            sleep(value)
+
+
+a = TrafficLight()
+a.running()
