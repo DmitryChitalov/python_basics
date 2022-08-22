@@ -6,3 +6,24 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def usr_sum():
+    sum_result = 0
+    ex = False
+    while not ex:
+        number = input("Введите произвольную последовательность чисел, разделенных пробелом, X для выхода: ").split()
+
+        result = 0
+        for el in range(len(number)):
+            if number[el] == '' or number[el] == 'X':
+                ex = True
+                break
+            else:
+                result = result + int(number[el])
+        sum_result = sum_result + result
+        print(f"Промежуточная сумма:  {sum_result}")
+    print(f"Итоговая сумма: {sum_result}")
+
+
+usr_sum()
