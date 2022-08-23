@@ -25,3 +25,29 @@
 “ед”: [“шт.”]
 }
 """
+prod_list = []
+while True:
+    prod_list.append((input("Номер товара: "),
+                     {"Название": input("Название: ")},
+                     {"Цена": input("Цена: ")},
+                     {"Количество": input("Количество: ")},
+                     {"ед": input("Единицы учета: ")}))
+    y = input("Завершить ввод позиций? (Да, Нет): ")
+    if y == "Да":
+        break
+
+tit_list = []
+coast_list = []
+amount_list = []
+units_list = []
+total_dict = {}
+
+for i, n in enumerate(prod_list):
+    tit_list.append(prod_list[i][1]['Название'])
+    coast_list.append(prod_list[i][2]['Цена'])
+    amount_list.append(prod_list[i][3]['Количество'])
+    units_list.append(prod_list[i][4]['ед'])
+
+total_dict.update({'Названия': tit_list, 'Цены': coast_list,
+                   'Количество': amount_list, 'Единицы учета': units_list})
+print(total_dict)

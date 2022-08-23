@@ -15,3 +15,14 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+num_set = [9, 8, 7, 6, 5]
+print(num_set)
+
+while True:
+    new_num = input("Введите число для добавления или нажмите 'e': ")
+    if new_num != 'e':
+        num_set.append(new_num(int))
+        num_set.sort(reverse=True)
+        print(num_set)
+    else:
+        break
