@@ -5,3 +5,18 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+
+def my_func(x, y):
+    count = 1
+    result = 1 / x
+    while count < abs(y):
+        result = result * (1 / x)
+        count += 1
+    return result
+
+
+print(f'Возведение в степень: '
+      f'{my_func(float(input("Основание степени Х: ")), int(input("Показатель степени Y: ")))}')
+
