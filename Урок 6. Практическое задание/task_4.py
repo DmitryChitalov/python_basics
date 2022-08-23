@@ -35,16 +35,16 @@ class Car:
         self.is_formula = is_formula
 
     def go(self):
-        return f'The {self.name} went.'
+        return f'То {self.name} старт.'
 
     def stop(self):
-        return f'\nThe {self.name} has stopped.'
+        return f'\nТо {self.name} стоп.'
 
     def turn(self, direction):
-        return f'\nThe {self.name} turned {direction}'
+        return f'\nТо {self.name} свернуть {direction}'
 
     def show_speed(self):
-        return f'\nYour speed is {self.speed}'
+        return f'\nВаша скорость равна {self.speed}'
 
 
 class FormulaCar(Car):
@@ -69,3 +69,13 @@ class WorkCar(Car):
 
 class FiatCar(Car):
     pass
+
+
+town = FormulaCar('Formula', 190, 'blue', False)
+print('1:\n' + town.go(), town.show_speed(), town.turn('left'), town.turn('right'), town.stop())
+
+sport = SportCar('Mitsubishi', 150, 'red', False)
+print('2:\n' + sport.go(), sport.show_speed(), sport.turn('left'), sport.stop())
+
+work = FiatCar('Fiat', 60, 'black', False)
+print('3:\n' + work.go(), work.show_speed(), work.turn('right'), work.stop())
