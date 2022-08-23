@@ -20,3 +20,52 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+
+
+class Car:
+
+    def __init__(self, name, speed, color, is_formula=False):
+        self.name = name
+        self.speed = speed
+        self.color = color
+        self.is_formula = is_formula
+
+    def go(self):
+        return f'The {self.name} went.'
+
+    def stop(self):
+        return f'\nThe {self.name} has stopped.'
+
+    def turn(self, direction):
+        return f'\nThe {self.name} turned {direction}'
+
+    def show_speed(self):
+        return f'\nYour speed is {self.speed}'
+
+
+class FormulaCar(Car):
+    def show_speed(self):
+        if self.speed > 320:
+            return f'\nВаша скорость выше допустимой! Ваша скорость равна {self.speed}'
+        else:
+            return f'Скорость {self.name} это нормальная'
+
+
+class SportCar(Car):
+    pass
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed > 90:
+            return f'\nВаша скорость выше допустимой! Ваша скорость равна {self.speed}'
+        else:
+            return f'Скорость {self.name} это нормальная'
+
+
+class FiatCar(Car):
+    pass
