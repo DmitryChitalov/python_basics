@@ -20,3 +20,63 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+
+class Car:
+
+    def __init__(self, speed, color, name, is_police=False):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        return f'{self.name} Поехала\n'
+
+    def stop(self):
+        return f'{self.name} Остановилась\n'
+
+    def turn(self, direction):
+        return f'{self.name} Повернула {direction}\n'
+
+    def show_speed(self):
+        return f'Текущая скорость - {self.speed}\n'
+
+
+class TownCar(Car):
+
+    def show_speed(self):
+        if self.speed > 60:
+            return f'Превышение скорости - {self.speed}\n'
+        else:
+            return f'Скорость в норме - {self.speed} \n'
+
+
+class SportCar(Car):
+    pass
+
+
+class WorkCar(Car):
+
+    def show_speed(self):
+        if self.speed > 40:
+            return f'Превышение скорости - {self.speed} \n'
+        else:
+            return f'Скорость в норме - {self.speed}\n'
+
+
+class PoliceCar(Car):
+    pass
+
+
+cars = TownCar(70, 'черная', 'BMW', True)
+print(cars.go(), cars.turn('налево'), cars.show_speed(), cars.stop())
+
+cars = WorkCar(35, 'красная', 'VW', False)
+print(cars.go(), cars.turn('направо'), cars.show_speed(), cars.stop())
+
+cars = SportCar(110, 'белая', 'Merscedes', False)
+print(cars.go(), cars.turn('направо'), cars.turn('налево'), cars.show_speed(), cars.stop())
+
+cars = PoliceCar(90, ',синяя', 'AUDI', True)
+print(cars.go(), cars.turn('налево'), cars.turn('направо'), cars.show_speed(), cars.stop())
