@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+noname_list = [4, 'somesing', 3.12, False, None]
+
+for el in noname_list:
+    print(type(el))
