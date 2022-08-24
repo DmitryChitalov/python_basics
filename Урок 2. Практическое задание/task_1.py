@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+type_class = [True, "some words", 11.55, None, 55]
+for elem in type_class:
+    print(type(elem))
