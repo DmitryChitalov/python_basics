@@ -10,10 +10,10 @@ Four — 4
 """
 num_rus = {"One": "Один", "Two": "Два", "Three": "Три", "Four": "Четыре"}
 
-with open(r"C:\Users\Serg\Desktop\fff.txt", 'r') as my_file:
+with open("one.txt", 'r', encoding="utf-8") as my_file:
     for line in my_file:
         for key in num_rus.keys():
             line = line.replace(key, num_rus[key])
         print(line)
-        with open(r"C:\Users\Serg\Desktop\new_text.txt", 'a') as new_file:
+        with open("abcd.txt", 'a') as new_file:
             new_file.write(line)
