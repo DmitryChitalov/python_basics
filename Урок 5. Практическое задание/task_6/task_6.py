@@ -5,3 +5,23 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+subject_dict = {}
+with open("task_6.txt", encoding='utf-8') as f:
+    for line in f:
+        clear_line = line.replace("(л)", "").replace("(пр)", "").replace("(лаб)", "").replace(".", "")
+        print(clear_line)
+        subject, lecture, practice, lab = clear_line.split()
+        print(lab)
+        lect_int = 0
+        practice_int = 0
+        lab_int = 0
+        if lecture != "-":
+            lect_int = int(lecture)
+        if practice != "-":
+            practice_int = int(practice)
+        if lab != "-":
+            lab_int = int(lab)
+        subject_dict[subject] = lect_int + practice_int + lab_int
+    print(f"{subject_dict}")
+
+# Проанализировал код (интересный момент с назначением переменных в 6 строке), написать свой код уже не успеваю 
