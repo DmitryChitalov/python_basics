@@ -5,3 +5,37 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+# Создадим функцию ввода и проверки зачения на число
+def __input_and_check_num(text):
+    temp_in = input(text)
+    while True:
+        try:
+            temp_in = float(temp_in)
+            return temp_in
+
+        except Exception:
+            print('Введите число ')
+            temp_in = input()
+            continue
+
+
+# Объявляем функцию
+def __exponencial(num, deg):
+    result = num
+    i = 1
+    while i < deg:
+        result = result * num
+        i = i + 1
+    return result
+
+# Выводим название программы
+print("Программа вывода результата возведения в степень, не используя встроенные функции")
+
+# Запрашивае данные
+number = __input_and_check_num('Введите число: ')
+degree = __input_and_check_num('Введите степень: ')
+
+# Передаем данные в функцию и выводим на экран
+print(f'{number} в степени {degree} равно {__exponencial(number, degree)}')
