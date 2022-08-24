@@ -15,3 +15,21 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+
+my_lis = [55, 15, 14, 8, 7, 2]
+user_rating = int(input("Введите рейтинг: "))
+a = 0
+while a < len(my_lis):
+    if user_rating > int(my_lis[a]):
+        my_lis.insert(a, user_rating)
+        break
+    a = a + 1
+if user_rating in my_lis:
+    print(my_lis)
+else:
+    my_lis.append(user_rating)
+    print(my_lis)
