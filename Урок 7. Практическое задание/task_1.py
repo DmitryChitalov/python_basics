@@ -28,3 +28,38 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    matrix = [[], [], []]
+
+    def __init__(self, matr):
+        self.matrix = matr
+        return
+
+    def __str__(self):
+        s = ""
+        for i in self.matrix:
+            for j in i:
+                s += str(j)
+                s += "\t"
+            s += "\n"
+        return s
+
+    def __add__(self, other):
+        sum = self.matrix.copy()
+        i_2 = 0
+        for row in sum:
+            j_2 = 0
+            for j in row:
+                sum[i_2][j_2] += other.matrix[i_2][j_2]
+                j_2 += 1
+            i_2 += 1
+        return Matrix(sum)
+
+
+matrix_1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matrix_2 = Matrix([[9, 11, 12], [13, 14, 15], [16, 17, 18]])
+print(matrix_1)
+print(matrix_2)
+print("Сумма матриц:\n", matrix_1 + matrix_2)
