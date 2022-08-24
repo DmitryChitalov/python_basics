@@ -2,14 +2,14 @@
 2)	Создать текстовый файл (не программно), сохранить в нем несколько строк,
 выполнить подсчет количества строк, количества слов в каждой строке.
 """
-#Не решил, показанное решение с урока разобрал, но оно тоже не работает (ошибок нет, но резульататы неправильные)
+# Исправил абс. пути. Даже скопировал решение, но оно неверно считает..
 
 user_lines = 0
 user_words = 1
 
-with open(r"C:\Users\Serg\Desktop\fff.txt", 'r') as my_file:
+with open("fff.txt", "r", encoding="utf-8") as my_file:
     for line in my_file:
-        print(line.replace('\n ', ''))
+        print(line.replace('\n', ''))
         print(line)
         for n in line:
             if n == " ":
