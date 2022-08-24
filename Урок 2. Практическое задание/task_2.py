@@ -11,3 +11,12 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+my_string = input("Введите произвольные значения через пробел: ")
+separator = " "
+convert_string = my_string.split(separator)
+length = len(convert_string)
+for x in range(length // 2):
+    even = 2 * x
+    odd = 2 * x + 1
+    convert_string[even:odd + 1] = [convert_string[odd], convert_string[even]]
+print(separator.join(convert_string))
