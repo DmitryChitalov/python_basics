@@ -15,8 +15,6 @@ try:
 except IOError:
     print("Произошла ошибка ввода-вывода!")
 
-
-
 # Задача 1
 a = "1"
 with open("test_ivan.txt", "w") as f_obj:
