@@ -43,3 +43,4 @@ class Position(Worker):
 
 a = Position('Иван', 'Иванович', 'engineer', '110000', '20000')
 print(a.get_full_name(), a.get_total_income())
+
