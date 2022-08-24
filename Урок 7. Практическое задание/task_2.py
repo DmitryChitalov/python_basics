@@ -25,3 +25,39 @@
 
 Два класса: абстрактный и Clothes
 """
+from abc import ABC, abstractmethod
+
+
+class MyAbstractClass(ABC):
+    """AbstractClass"""
+
+    @abstractmethod
+    def total(self):
+        """total"""
+
+
+class Clothes(MyAbstractClass):
+    """Clothes"""
+
+    def __init__(self, v, h):
+        self.v = v
+        self.h = h
+
+    @property
+    def coat(self):
+        """coat"""
+        return self.v / 6.5 + 0.5
+
+    @property
+    def costume(self):
+        """costume"""
+        return 2 * self.h + 0.3
+
+    def total(self):
+        return self.coat + self.costume
+
+
+a = Clothes(50, 1.8)
+print(a.coat)
+print(a.costume)
+print(a.total())
