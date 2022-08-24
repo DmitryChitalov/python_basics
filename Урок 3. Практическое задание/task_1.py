@@ -17,3 +17,11 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def my_sum(arg_1, arg_2):
+    try:
+        return arg_1 / arg_2
+    except ZeroDivisionError:
+        return print("Вы что делите на ноль?")
+
+
+print(my_sum(int(input("Введите первое число: ")), int(input("Введите второе число: "))))
