@@ -79,3 +79,5 @@ print('2:\n' + sport.go(), sport.show_speed(), sport.turn('left'), sport.stop())
 
 work = FiatCar('Fiat', 60, 'black', False)
 print('3:\n' + work.go(), work.show_speed(), work.turn('right'), work.stop())
+
+
