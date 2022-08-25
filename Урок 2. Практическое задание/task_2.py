@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+w = int(input('Введите сколько элементов вы хотите добавить? \n\t Введите колличество элементов: '))
+emp_lst = []
+for i in range(w):
+    emp_lst.append(input(f'Элемент # {i + 1} : '))
+print(f'Ваш список на экране:\n{emp_lst}')
+for t in range(int(len(emp_lst)/2)):
+    emp_lst[t], emp_lst[t+1] = emp_lst[t+1], emp_lst[t]
+print(f'Ваш измененный список:\n{emp_lst}')
