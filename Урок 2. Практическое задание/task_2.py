@@ -11,3 +11,20 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+res_list = []
+user_input = input("Введите целые числа через пробел: 1 2 3 4").split(" ")
+
+'''Проверка на int'''
+for i in user_input:
+    try:
+        res_list.append(int(i))
+    except ValueError:
+        raise ValueError("Введённое значение не является int")
+'''Проверка на int'''
+
+el1 = 0
+while len(res_list) > el1+1:
+    res_list[el1], res_list[el1+1] = res_list[el1+1], res_list[el1]
+    el1 += 2
+print(res_list)

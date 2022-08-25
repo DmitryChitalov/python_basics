@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+list = [5, "string", 0.15, True, None]
+for a in list:
+    print(f"Тип {a} : {type(a)}")
