@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+type_list = [9, 5.7, True, False, 'books', 5/11, None ]
+for i in range (len(type_list)) :
+    print(f'Тип переменной в списке {type(type_list[i])}')
