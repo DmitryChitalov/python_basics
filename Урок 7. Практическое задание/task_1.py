@@ -47,15 +47,15 @@ class Matrix:
         return s
 
     def __add__(self, other):
-        sum = self.matrix.copy()
+        sm = self.matrix.copy()
         i_2 = 0
-        for row in sum:
+        for row in sm:
             j_2 = 0
             for j in row:
-                sum[i_2][j_2] += other.matrix[i_2][j_2]
+                sm[i_2][j_2] += other.matrix[i_2][j_2]
                 j_2 += 1
             i_2 += 1
-        return Matrix(sum)
+        return Matrix(sm)
 
 
 matrix_1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
