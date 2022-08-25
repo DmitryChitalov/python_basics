@@ -100,3 +100,80 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+from copy import copy
+
+
+class Cell():
+    quantity = 0
+
+    def __init__(self, quant):
+        self.quantity = quant
+
+    def __add__(self, other):
+        с = Cell(self.quantity + other.quantity)
+        return с
+
+    def __sub__(self, other):
+        x = Cell(0)
+        if self.quantity >= other.quantity:
+            x.quantity = self.quantity - other.quantity
+        else:
+            print("Ошибка вычитания, результат меньше нуля! Присваиваем нуль.")
+        return x
+
+    def __mul__(self, other):
+        с = Cell(self.quantity * other.quantity)
+        return с
+
+    def __truediv__(self, other):
+        с = Cell(self.quantity // other.quantity)
+        return с
+
+    def __str__(self):
+        return str(self.quantity)
+
+    def make_order(self, arg1):
+        c = self.quantity
+        s = ''
+        while c > 0:
+            n = arg1
+            while n > 0 and c > 0:
+                s += '*'
+                n -= 1
+                c -= 1
+            s += '\n'
+        return s
+
+
+cell1 = Cell(30)
+cell2 = Cell(25)
+
+cell3 = Cell(10)
+cell4 = Cell(15)
+
+print()
+
+print("Складываем:")
+print(cell1 + cell2)
+
+print()
+
+print("Вычитаем:")
+print(cell2 - cell1)
+print(cell4 - cell3)
+
+print()
+
+print("Умножаем:")
+print(cell2 * cell1)
+
+print()
+
+print("Делим:")
+print(cell1 / cell2)
+
+print()
+
+print("Организация ячеек по рядам:")
+print(cell1.make_order(5))
+print(cell2.make_order(10))
