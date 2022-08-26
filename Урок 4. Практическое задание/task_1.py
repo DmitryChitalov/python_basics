@@ -6,3 +6,10 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+
+def salary(hours, bid, premium):
+    return (hours * bid) + premium
+
+
+print(salary(160, 1200, 30000))
