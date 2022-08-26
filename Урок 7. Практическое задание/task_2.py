@@ -49,8 +49,8 @@ class Coat(Clothes):
         "Ошибка!"
 
 
-class suit(Clothes):
-    def consumption_suit(self):
+class Costume(Clothes):
+    def consumption_costume(self):
         return f'Расход ткани на костюм: {2 * self.param + 0.3 :.2f}'
 
     def abstract(self):
@@ -58,8 +58,8 @@ class suit(Clothes):
 
 
 coat = Coat(8)
-suit = suit(7)
-print(f'{suit.consumption} на костюм')
+costume = Costume(7)
+print(f'{costume.consumption} на костюм')
 print(f'{coat.consumption} на пальто')
-print(suit.consumption_suit())
+print(costume.consumption_costume())
 print(coat.consumption_coat())
