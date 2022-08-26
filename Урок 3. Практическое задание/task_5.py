@@ -6,3 +6,25 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def my_func():
+    def input_data():
+        data = input("Ввдите числа через пробел: ").split()
+        return data
+
+    amount = 0
+    go_to_exit = False
+    while not go_to_exit:
+        number_list = input_data()
+        for x in number_list:
+            try:
+                amount += int(x)
+            except ValueError:
+                if x == "q":
+                    print(amount)
+                    return
+        print(amount)
+
+
+my_func()

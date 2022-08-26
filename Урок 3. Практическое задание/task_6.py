@@ -8,3 +8,17 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(text):
+    return text.capitalize()
+
+
+word = "a"
+while word != "q":
+    array_words = ""
+    print("\"q\" - ВЫХОД")
+    word = input("Введите слово или фразу состоящую из прописных латинских букв: ")
+    for one_word in word.split():
+        array_words += int_func(one_word) + " "
+    print(array_words)
