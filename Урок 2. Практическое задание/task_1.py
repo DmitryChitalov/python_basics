@@ -15,3 +15,10 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+my_list = ["строка", 356, 3.14, True, None]
+print('Создан список:', my_list)
+print('Типы данных в списке:')
+
+for i, type_date in enumerate(my_list, 1):
+    print(f'{i}) {type_date} - {type(type_date)}')
