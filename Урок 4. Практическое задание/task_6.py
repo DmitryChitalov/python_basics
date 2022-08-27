@@ -12,3 +12,27 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+
+from itertools import count
+from itertools import cycle
+from sys import argv
+
+
+script_name1, start_number, stop_number, repeat_number = argv
+
+print("Итератор, генерирующий целые числа, начиная с указанного:")
+for el in count(int(start_number)):
+    if el > int(stop_number):
+        break
+    else:
+        print(el)
+
+print("Итератор, повторяющий элементы некоторого списка, определенного заранее:")
+my_list = [45, 35, 25, 15]
+c = 0
+for el in cycle(my_list):
+    if c > int(repeat_number):
+        break
+    print(el)
+    c += 1
