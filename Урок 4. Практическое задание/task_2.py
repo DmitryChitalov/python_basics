@@ -7,3 +7,13 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+source_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+print(f"Исходный список чисел: {source_list};")
+
+# с генераторным выражением:
+result_list = [num for el, num in enumerate(source_list) if source_list[el] > source_list[el - 1]]
+print(f"Результрующий список чисел с генератором списков: {result_list[1:]};")
+
+# без генераторного выражения:
+res_list = [num1 for num1, num2 in zip(source_list[1:], source_list[:-1]) if num1 > num2]
+print(f"Результрующий список чисел ,без генератора списков: {result_list[1:]}.")
