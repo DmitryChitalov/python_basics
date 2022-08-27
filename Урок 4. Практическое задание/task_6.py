@@ -12,3 +12,25 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+# а) итератор, генерирующий целые числа, начиная с указанного:
+
+from sys import argv
+from itertools import count, cycle
+
+script_name, start_number, end_number = argv
+
+print(f"Итератор, генерирующий целые числа, начиная с {start_number} до {end_number}: ")
+
+for number in count(int(start_number)):
+    if number > int(end_number):
+        break
+    else:
+        print(number)
+
+# б) итератор, повторяющий элементы некоторого списка, определенного заранее:
+
+specific_list = cycle(list(input("Введите список, произвольных значений, разделенных пробелом: ").split()))
+repetitions = int(input("Введите желаемое количество повторений: "))
+for el in range(repetitions):
+    print(next(specific_list))

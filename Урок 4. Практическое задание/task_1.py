@@ -6,3 +6,12 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+script_name, h_production, h_rate, premium = argv
+
+print("Имя скрипта: ", script_name)
+print("Выработка в часах: ", h_production)
+print("Ставка в час: ", h_rate)
+print("Размер премии: ", premium)
+print("Итоговая зарплата сотрудника: ", (float(h_production) * float(h_rate)) + float(premium))
