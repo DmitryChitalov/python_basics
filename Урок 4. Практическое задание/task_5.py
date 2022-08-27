@@ -5,3 +5,10 @@
 Необходимо получить результат вычисления произведения всех элементов списка.
 Подсказка: использовать лямбда-функцию и функцию reduce().
 """
+
+
+from functools import reduce
+
+my_list = [thing for thing in range(100, 1001) if thing % 2 == 0]
+sum_all = reduce(lambda x, y: x*y, my_list)
+print(sum_all)
