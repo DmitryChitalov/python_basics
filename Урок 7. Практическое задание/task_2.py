@@ -25,3 +25,51 @@
 
 Два класса: абстрактный и Clothes
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+
+from abc import ABC, abstractmethod
+
+
+class Clothes(ABC):
+    @abstractmethod
+    def __init__(self, name):
+        pass
+
+    @abstractmethod
+    def tissue_consumption(self):
+        pass
+
+    def __add__(self, other):
+        return self.tissue_consumption + other.tissue_consumption
+
+
+class Palto(Clothes):
+    def __init__(self, the_size, name='default'):
+        super().__init__(name)
+        self.name, self.the_size = name, the_size
+
+    @property
+    def tissue_consumption(self):
+        return self.the_size / 2 + 45.5
+
+
+class Hoff(Clothes):
+    def __init__(self, height, name='default'):
+        super().__init__(name)
+        self.name, self.height = name, height
+
+    @property
+    def tissue_consumption(self):
+        return 2 * self.height + 0.3
+
+
+palto = Palto(23)
+print(f'Расход ткани на пальто: {palto.tissue_consumption:.2f}')
+
+hoff = Hoff(23, name='hoff')
+print(f'Расход ткани на брюки: {hoff.tissue_consumption:.2f}')
+
+print(f'Общий расход ткани: {palto + hoff:.2f}')
