@@ -14,3 +14,8 @@
 1. раз
 2. перерефриж
 """
+user_val = input('Введите слова через пробел: ').split(' ')
+index = 1
+for el in user_val:
+    print(f'{index}. {el[0:10]}')
+    index += 1

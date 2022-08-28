@@ -15,3 +15,26 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+
+
+class TrafficLight:
+    '''Светофор - есть цвет
+    есть метод запуска'''
+    __color = 'red'
+
+    def running(self):
+        '''Запустить светофор'''
+        while True:
+            sleep(7)
+            self.__color = 'yellow'
+            print(self.__color)
+            sleep(2)
+            self.__color = 'green'
+            print(self.__color)
+            sleep(20)
+            self.__color = 'red'
+            print(self.__color)
+
+tl = TrafficLight()
+tl.running()
