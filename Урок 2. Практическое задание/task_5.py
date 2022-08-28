@@ -15,3 +15,12 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+list_1 = [7, 5, 3, 3, 2]
+while True:
+    num = input("Введите элемент рейтинга от 1 до 10 или 'e' для выхода: ")
+    if num != 'e':
+        list_1.append(int(num))
+        list_1.sort(reverse=True)
+        print(list_1)
+    else:
+        break
