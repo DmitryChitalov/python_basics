@@ -10,6 +10,7 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
 class MyException(Exception):
     '''Исключение для проверки чисел'''
     def __init__(self, msg):
@@ -21,8 +22,10 @@ PERMITTED_CHARS = '1234567890'
 while True:
     try:
         user_val = input('Введите число: ')
+        if user_val == '':
+            raise MyException("Вы ничего не ввели")
         for char in user_val:
-            if char not in PERMITTED_CHARS:
+            if char not in PERMITTED_CHARS or char == '':
                 raise MyException("Введенное значение не является числом")
         values_list.append(user_val)
     except MyException as err:
