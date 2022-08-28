@@ -25,3 +25,34 @@
 “ед”: [“шт.”]
 }
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+
+product_cont = int(input("Введите количество наименований товаров на складе: "))
+a = 0
+b = 0
+my_lis = []
+analytics_list = {}
+while a < product_cont:
+    a = a + 1
+    product_name = input(f"Введите название {a}-го товара: ")
+    prouct_sn = input("Введите серийный номер товара: ")
+    product_price = int(input("Введите цену в $: "))
+    pruduct_cont = int(input("Введите количество едениц товара: "))
+    my_lis.append((a, {"name": product_name, "sn": prouct_sn, "price": product_price, "count": product_cont}))
+product_name_lis = []
+product_sn_lis = []
+product_price_lis = []
+product_cont_lis = []
+
+for a in range(len(my_lis)):
+    product_name_lis.append(my_lis[a][1]['name'])
+    product_sn_lis.append(my_lis[a][1]['sn'])
+    product_price_lis.append(my_lis[a][1]['price'])
+    product_cont_lis.append(my_lis[a][1]['cont'])
+print(f"Наименование продуктов:  {product_name_lis}")
+print(f"Серийные номера: {product_sn_lis}")
+print(f"Цены продуктов:  {product_price_lis}")
+print(f"Количество продуктов: {product_cont_lis}")

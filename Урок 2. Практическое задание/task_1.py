@@ -15,3 +15,22 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+s = [10, 20, 30, [1, 2]]
+print(s)
+s.extend([3, 4])
+print(s)
+
+s2 = [22, None, -65, 'True', False, 8.5]
+
+
+def my_type(el):
+    for el in range(len(s2)):
+        print(type(s2[el]))
+    return
+
+
+my_type(s2)
