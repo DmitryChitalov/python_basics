@@ -28,3 +28,32 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, *option):
+        self.matrix = []
+        self.matrix.append(option)
+
+    def __str__(self):
+        result = ''
+        for elm in self.matrix[0]:
+            result += f'{elm} \n'
+        return result
+
+    def __add__(self, other):
+        result = []
+        for i in range(0, len(self.matrix[0])):
+            elm_new = []
+            for j in range(0, len(self.matrix[0][i])):
+                elm_new.append(self.matrix[0][i][j] + other.matrix[0][i][j])
+            result.append(elm_new)
+        return result
+
+
+m_1 = Matrix([1, 2, 3], [4, 5, 6], [7, 8, 9])
+m_2 = Matrix([1, 2, 3], [4, 5, 6], [7, 8, 9])
+m_sum = m_1 + m_2
+
+for el in m_sum:
+    print(f'{el}')
