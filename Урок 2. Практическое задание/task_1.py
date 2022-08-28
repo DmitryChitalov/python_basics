@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+list_1 = [12, 0.5, -5, "slovo", None, False, True]
+for element in list_1:
+    print(type(element))
