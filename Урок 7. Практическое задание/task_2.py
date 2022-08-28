@@ -56,7 +56,7 @@ class Palto(Clothes):
         return self.the_size / 2 + 45.5
 
 
-class Bruki(Clothes):
+class Hoff(Clothes):
     def __init__(self, height, name='default'):
         super().__init__(name)
         self.name, self.height = name, height
@@ -69,7 +69,7 @@ class Bruki(Clothes):
 palto = Palto(23)
 print(f'Расход ткани на пальто: {palto.tissue_consumption:.2f}')
 
-bruki = Bruki(23, name='bruki')
-print(f'Расход ткани на брюки: {bruki.tissue_consumption:.2f}')
+hoff = Hoff(23, name='hoff')
+print(f'Расход ткани на брюки: {hoff.tissue_consumption:.2f}')
 
-print(f'Общий расход ткани: {palto + bruki:.2f}')
+print(f'Общий расход ткани: {palto + hoff:.2f}')
