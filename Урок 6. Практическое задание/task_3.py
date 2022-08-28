@@ -17,7 +17,6 @@ __str__(self) - вызывается функциями str, print и format. В
 """
 from typing import Dict
 
-
 class Worker:
     name = ''
     surname = ''
@@ -39,7 +38,6 @@ class Position(Worker):
 
     def __str__(self):
         return f"{self.name} {self.surname}, оклад: {str(self._income['wage'])} премия: {str(self._income['bonus'])}"
-
 
 empl = Position("Jane", "Doe", 30000, 10000)
 
