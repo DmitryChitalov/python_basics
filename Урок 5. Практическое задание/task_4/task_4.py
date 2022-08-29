@@ -7,3 +7,19 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+my_l = []
+k = 0
+all = 0
+try:
+    with open("D:\TEST\\zp.txt") as f1_obj:
+        for line in f1_obj:
+            k += 1
+            my_l = line.split()  # в массив записываю значения в строке
+            if int(my_l[1]) >= 200:
+                print(line)
+            all = all + int(my_l[1])
+
+except IOError:
+    print("Произошла ошибка ввода-вывода!")
+print(f"Средняя зарплата = {all / k}")
