@@ -6,3 +6,18 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def sum_num(func_sum=0):
+    # 1 2 3 - ['1',...]
+    my_list = input("Введите числа через пробел: ").split()
+    for element in range(len(my_list)):
+        if my_list[element] != "e":
+            func_sum = func_sum + int(my_list[element])
+        else:
+            break
+    print(func_sum)
+    if "e" in my_list:
+        exit("Выход из программы")
+    else:
+        sum_num(func_sum)
+
+sum_num()

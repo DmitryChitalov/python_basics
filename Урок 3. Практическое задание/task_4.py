@@ -5,3 +5,17 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def exp(x, y):
+    try:
+        if y < 0:
+            result = 1
+            for i in range(y, 0):
+                result = 1 / result
+                return f'Для значений x = {8}, y = {-8} результат: {result}'
+        else:
+            return "Число (y) должно быть строго отрицательным"
+    except TypeError:
+        return "Необходимо вводить только числа"
+    except ZeroDivisionError:
+        return "На ноль делить нельзя!"
+print(exp(8, -8))
