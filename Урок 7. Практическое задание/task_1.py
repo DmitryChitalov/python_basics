@@ -46,4 +46,8 @@ class Matrix:
 
 m = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [-5, -7, -2]])
 new_m = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9], [2, 2, -7]])
+<<<<<<< Updated upstream
 print(f'Сумма матриц:\n {m + (new_m)}')
+=======
+print(f'Сумма матриц:\n {m + new_m}')
+>>>>>>> Stashed changes
