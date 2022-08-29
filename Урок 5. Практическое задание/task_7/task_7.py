@@ -9,29 +9,42 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
-
+import json
 f = "D:\TEST\\firma_7.txt"
 
 my_list1 = []
+my_list2 = []
 my_dict1 = {}
+my_dict2 = {}
 k = 0  # количество строк
 a = 0  # значение прибыли
 try:
     with open(f) as f_obj:
         for line in f_obj:
             my_list1 = line.split()  # в список добавляю все значения текущей  строки
-            x = int(my_list1[2]) - int(my_list1[3])
-            if x >= 0:
+            x = int(my_list1[2]) - int(my_list1[3])  # вычисляю прибыль или убыток
+            my_dict1[my_list1[0]] = x # и записываю в словарь
+            if x >= 0:  # средние значения вычисляю тоьько для прибыли, а не для убытка
                 a = a + x
             k += 1
-            my_dict1[my_list1[0]] = x
 
-        my_dict1["average"] = a / k
+
+        my_dict2["average"] = a / k
 
 
 except IOError:
     print("Произошла ошибка ввода-вывода!")
 
-print(my_dict1)
+my_list2.append(my_dict1) # создаю список из двух словарей
+my_list2.append(my_dict2)
+print(my_list2)
+
+j = "D:\TEST\\json_7.txt"
+with open(j, "w") as write_f:    #работа с модулем JSON
+    json.dump(my_list2, write_f)
+
+json_str = json.dumps(my_list2)
+print(json_str)
+
 
 
