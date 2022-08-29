@@ -9,3 +9,29 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+
+f = "D:\TEST\\firma_7.txt"
+
+my_list1 = []
+my_dict1 = {}
+k = 0  # количество строк
+a = 0  # значение прибыли
+try:
+    with open(f) as f_obj:
+        for line in f_obj:
+            my_list1 = line.split()  # в список добавляю все значения текущей  строки
+            x = int(my_list1[2]) - int(my_list1[3])
+            if x >= 0:
+                a = a + x
+            k += 1
+            my_dict1[my_list1[0]] = x
+
+        my_dict1["average"] = a / k
+
+
+except IOError:
+    print("Произошла ошибка ввода-вывода!")
+
+print(my_dict1)
+
+
