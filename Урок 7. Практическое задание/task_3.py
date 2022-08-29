@@ -100,3 +100,54 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __add__(self, other):
+        return self.quantity + other.quantity
+
+    def __sub__(self, other):
+        sub = self.quantity - other.quantity
+        return sub if sub > 0 else 'Разность отрицательна, поэтому операция не выполняется'
+
+    def __truediv__(self, other):
+        return self.quantity // other.quantity
+
+    def __mul__(self, other):
+        return self.quantity * other.quantity
+
+    def make_order(self, row):
+        result = ''
+        for i in range(int(self.quantity / row)):
+            result += '*' * row + '\n'
+        result += '*' * (self.quantity % row) + '\n'
+        return result
+
+
+cell = Cell(15)
+cell_2 = Cell(12)
+cell_3 = Cell(10)
+cell_4 = Cell(13)
+print("Сложение")
+print(cell + cell_2)
+print(cell_3 + cell_4)
+print("Вычитание")
+print(cell - cell_2)
+print(cell_3 - cell_4)
+print("Деление")
+print(cell / cell_2)
+print(cell_3 / cell_4)
+print("Умножение")
+print(cell * cell_2)
+print(cell_3 * cell_4)
+print("Организация ячеек по рядам")
+print(cell.make_order(3))
+print("Организация ячеек по рядам")
+print(cell_2.make_order(5))
+print("Организация ячеек по рядам")
+print(cell_3.make_order(2))
+print("Организация ячеек по рядам")
+print(cell_4.make_order(4))
