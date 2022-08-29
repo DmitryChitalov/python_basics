@@ -17,3 +17,12 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def div(fs_num, sd_num):
+    try:
+        return fs_num/sd_num
+    except ZeroDivisionError:
+        return "Вы что? Пытаетесь делить на 0!"
+    except ValueError:
+        return "Пожалуйста, вводите только числа!"
+print(div(int(input("Введите 1е число: ")), int(input("Введите 2е число: "))))
+
