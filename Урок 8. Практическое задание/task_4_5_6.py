@@ -20,7 +20,6 @@
 «Склад оргтехники» максимум возможностей, изученных на уроках по ООП.
 """
 
-
 class OfficeEquipment:
 
     def __init__(self, name, price, quantity, department):
@@ -47,7 +46,7 @@ class OfficeEquipment:
                 self.items.update(item)
                 self.my_store.append(self.items)
                 print(self.my_store)
-                print('Для продолжения ввода нажмите Enter,\n для выхода Q')
+                print('Для продолжения ввода нажмите Enter,\n для выхода Q, \n для передачи техники в отдел введите B')
                 q = input()
                 if q == 'q' or q == 'Q':
                     self.my_store_all.append(self.my_store)
@@ -89,3 +88,4 @@ p = Xerox('Phaser', 12, 1233, 'Главный склад')
 s = Scanner('Samsung', 15, 1000, 'Главный склад')
 p = Printer('Hp', 2, 300, 'Главный склад')
 p.income()
+
