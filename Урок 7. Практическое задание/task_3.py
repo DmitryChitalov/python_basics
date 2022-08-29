@@ -100,3 +100,58 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class CellStorage:
+
+    def __init__(self, count: int):
+        if not type(count) is int:
+            raise TypeError(f'Count should be an natural number but got {type(count)}')
+        if count < 0:
+            raise ValueError(f'Count should greater or equal zero but got {type(count)}')
+        self.count = count
+
+    @classmethod
+    def __check_other(cls, other):
+        if not type(other) is cls:
+            raise TypeError(f'Only {cls.__name__} supported but got {type(other)}')
+
+    def __add__(self, other):
+        self.__check_other(other)
+        return CellStorage(self.count + other.count)
+
+    def __sub__(self, other):
+        self.__check_other(other)
+        return CellStorage(self.count - other.count)
+
+    def __mul__(self, other):
+        self.__check_other(other)
+        return CellStorage(self.count * other.count)
+
+    def __truediv__(self, other):
+        self.__check_other(other)
+        return CellStorage(self.count//other.count)
+
+    def make_order(self, cells_in_row):
+        end = self.count + self.count // cells_in_row + 1  # count of * + count of \n + border
+        return ''.join('\n' if not x % (cells_in_row + 1) else '*' for x in range(1, end))
+
+    def __repr__(self):
+        return f'CellStorage({self.count})'
+
+
+if __name__ == '__main__':
+    storage = CellStorage(17)
+    st2 = CellStorage(2)
+    print(storage / st2)
+    print(storage - st2)
+    print(storage + st2)
+    print(storage * st2)
+
+    print(storage.make_order(5))
+    print('-'*17)
+
+    print(storage.make_order(7))
+    print('-'*17)
+    print(storage.make_order(17))
+    print('-' * 17)
