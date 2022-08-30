@@ -6,15 +6,11 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
-import sys
-
-script, people, salary, time = sys.argv
-
-sum_salary(salary, time)
-def sum_salary(money, hours):
-    try:
-        print(f"Сотрудник {people} получит {int(money) * int(hours) * 2} рублей")
-    except TypeError:
-        print("Неверные данные")
-        exit()
+def simple_calc():
+    x = float(input('Введите количество отработанных часов : '))
+    y = float(input('Введите суммы оплаты труда за 1 час : '))
+    c = float(input('Укажите размер премии - '))
+    pay = x * y
+    return pay + c
+print(f'Размер заработной платы составил: {simple_calc() }')
 
