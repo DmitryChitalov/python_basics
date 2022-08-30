@@ -100,3 +100,39 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell:
+    def __init__(self, quan_c):
+        self.quan_c = quan_c        # кол-во клеток quantity cell
+
+    def __add__(self, other):
+        return self.quan_c + other
+
+    def __sub__(self, other):
+        return self.quan_c - other
+
+    def __mul__(self, other):
+        return self.quan_c * other
+
+    def __truediv__(self, other):
+        return round(self.quan_c / other)
+
+    def make_cell(self, cell_in_row):       # кол-во клеток в ряду
+        self.cell_fall = ""
+        while self.quan_c > 0:
+            self.quan_c -= cell_in_row
+            if self.quan_c < 0:
+                self.cell_fall += ("*" * (cell_in_row + self.quan_c) + "\n")
+            else:
+                self.cell_fall += ("*" * cell_in_row + "\n")
+        return self.cell_fall
+
+    def __call__(self, new_quan_c):
+        self.quan_c = new_quan_c
+
+
+c = Cell(52)
+print(c.make_cell(10))
+print(c+15)
+c(99)
+print(c.quan_c)
+print(c/2)
