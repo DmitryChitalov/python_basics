@@ -40,3 +40,22 @@ class Error:
 
 try_except = Error(1)
 print(try_except.my_input())
+
+#Альтернативное решение
+
+class ControlType(Exception):
+    pass
+
+
+my_Hop = []
+while True:
+    try:
+        value = input('Введите число в список, для выхода введите ?  :')
+        if value == '?':
+            break
+        if not value.isdigit():
+            raise ControlType(value)
+        my_Hop.append(int(value))
+    except ControlType as ex:
+        print(f'{ex} - не число ?')
+print(my_Hop)
