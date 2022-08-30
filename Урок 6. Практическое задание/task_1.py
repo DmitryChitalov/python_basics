@@ -15,3 +15,21 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from time import sleep
+
+
+class TrafficLight:
+    # атрибуты класса
+    __traf_color = {"red": 7, "yellow": 2, "green": 5}
+
+    def traf_running(self):
+        print("Включение светофора")
+        for key, value in TrafficLight.__traf_color.items():
+            print(f"Переключился в {key}")
+            sleep(value)
+
+
+a1 = TrafficLight()
+a1.traf_running()
+print("Окончание работы программы")
