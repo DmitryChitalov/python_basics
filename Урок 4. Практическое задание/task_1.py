@@ -6,3 +6,15 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+import sys
+
+script, people, salary, time = sys.argv
+
+sum_salary(salary, time)
+def sum_salary(money, hours):
+    try:
+        print(f"Сотрудник {people} получит {int(money) * int(hours) * 2} рублей")
+    except TypeError:
+        print("Неверные данные")
+        exit()
+

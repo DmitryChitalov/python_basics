@@ -12,3 +12,29 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+ls = []
+
+first = int(input("Введите число: "))
+second = int(input("Введите еще одно число"))
+
+if second < first:
+    print("Второе число должно быть больше первого")
+else:
+    for x in count(first):
+        if x > second:
+            break
+        print(x)
+        ls.append(x)
+print(ls)
+
+ls_2 = 0
+for a in cycle(ls):
+    if ls_2 >= len(ls):
+        break
+    print(a)
+    ls_2 += 1
+
+
+
