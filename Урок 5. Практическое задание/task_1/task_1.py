@@ -3,3 +3,11 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+task1 = open('task_1.txt', 'w', encoding="utf-8")
+while True:
+    text = input('Введите текст: ')
+    if len(text) == 0:
+        break
+    else:
+        task1.write(f"{text}\n")
+task1.close()
