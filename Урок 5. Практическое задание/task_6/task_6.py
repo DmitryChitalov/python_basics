@@ -16,3 +16,4 @@ for line in file:
     subject, lec, pr, lab = replaced_line.split()
     dct[subject] = int(lec) + int(pr) + int(lab)
 print(f"{dct}")
+file.close()

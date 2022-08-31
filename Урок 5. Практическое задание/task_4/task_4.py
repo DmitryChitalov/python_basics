@@ -18,3 +18,4 @@ for line in salary_all:
         print(f'{line.split()[0]} {line.split()[1]}')
         employ += 1
 print(f'Доход сотрудников в среднем составляет: {total_salary / employ}')
+salary_all.close()

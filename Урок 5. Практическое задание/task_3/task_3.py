@@ -16,3 +16,5 @@ for line in task_input:
     for key in dict_int.keys():
         line = line.replace(key, dict_int[key])
     task_output.write(line)
+task_output.close()
+task_input.close()

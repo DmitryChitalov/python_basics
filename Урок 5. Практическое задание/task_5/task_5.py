@@ -8,3 +8,4 @@ input_line = input('Введите набор чисел через пробел
 file.writelines(input_line)
 number = input_line.split()
 print(f"Сумма введенных вами чисел: {sum(map(int, number))}")
+file.close()

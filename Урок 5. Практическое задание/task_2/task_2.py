@@ -10,3 +10,4 @@ for el in text:
     word = len(el.split(' '))
     words += word
 print(f'Количество слов: {words}')
+task2.close()
