@@ -8,3 +8,14 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+def int_func(word):
+    latin_lit = 'qwertyuiopasdfghjklzxcvbnm'
+    return word.title() if not set(word).difference(latin_lit) else False
+
+
+words = input('Введите слова разделенные пробелами: ').split()
+for w in words:
+    result = int_func(w)
+    if result:
+        print(int_func(w), ' ')
