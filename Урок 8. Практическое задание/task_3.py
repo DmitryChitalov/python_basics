@@ -9,3 +9,18 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+class ControlType(Exception):
+    pass
+
+my_list = []
+while True:
+    try:
+        value = input('Введите число в список, для выхода введите !  :')
+        if value == '!':
+            break
+        if not value.isdigit():
+            raise ControlType(value)
+        my_list.append(int(value))
+    except ControlType as ex:
+        print(f'{ex} - не число!')
+print(my_list)

@@ -12,3 +12,27 @@
 Второй, с декоратором @staticmethod, должен проводить валидацию числа, месяца
 и года (например, месяц — от 1 до 12). Проверить работу полученной структуры на реальных данных.
 """
+class Data:
+    day_month_year = "31 : 08 : 2022"
+
+    @classmethod
+    def extract(cls):
+        my_date = [int(el) for el in cls.day_month_year.split() if el != ':']
+        cls.day, cls.month, cls.year = my_date
+
+    @staticmethod
+    def valid():
+        if 1 <= Data.day <= 31:
+            if 1 <= Data.month <= 12:
+                if 2022 >= Data.year >= 0:
+                    return f"Все корректно"
+                else:
+                    return f"Неверный год"
+            else:
+                return f"Неверный месяц"
+        else:
+            return f"Неверный день"
+
+
+Data.extract()
+print(Data.valid())
