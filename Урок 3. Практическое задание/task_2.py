@@ -8,3 +8,6 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+def my_func (name, surname, year, city, email, telephone):
+     print(f"{name} {surname} {year} года рождения, проживает в городе {city}, email: {email}, телефон: {telephone}")
+my_func(name = 'Иван', surname = 'Иванов', year = '1846', city = 'Москва', email = 'jackie@gmail.com', telephone = '01005321456')
