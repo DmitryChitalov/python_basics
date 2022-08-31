@@ -7,21 +7,19 @@
     ранее сумме и после этого завершить программу.
 """
 
-#
-def __infinity_numbers(total_sum = 0):
-#    total_sum = 0
-#    list_of_number = []
-    list_of_number_in = input('Введите числа через пробел. Введение не цисла завершает работу программы.\n').split(' ')
-    for temp_num in list_of_number_in:
-        try:
-            temp_num = int(temp_num)
-            total_sum = total_sum + temp_num
-        except Exception:
-            print(f'Сумма числовых элементов = {temp_num}')
-            return 0
-        break
+# Описываем функцию
+def __infinity_numbers():
+    total_sum = 0
+    while True:
+        list_of_number_in = input('Введите числа через пробел. Введение не цисла завершает работу программы.\n').split()
+        for temp_num in list_of_number_in:
+            try:
+                total_sum = total_sum + int(temp_num)
+            except Exception:
+                print(f'Сумма числовых элементов = {total_sum}')
+                return 0
+        print(f'Сумма числовых элементов = {total_sum}')
 
-    return total_sum
 
 # Выводим название программы
 print(f'Программа запрашивает у пользователя строку чисел, разделенных пробелом. При нажатии Enter должна\n'
@@ -31,8 +29,5 @@ print(f'Программа запрашивает у пользователя с
       f'символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной\n'
       f'ранее сумме и после этого завершить программу.\n')
 
-sum_of_num = 0
-while True:
-    sum_of_num = sum_of_num + __infinity_numbers(sum_of_num)
-    if __infinity_numbers(sum_of_num) == 0:
-        break
+# Запускаем функцию
+__infinity_numbers()
