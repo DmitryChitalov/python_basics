@@ -20,9 +20,7 @@ Process finished with exit code 0
 
 
 # Создадим функцию ввода и проверки зачения на число
-def __input_and_check_num():
-    first_num = float(input('Введите числитель: '))
-    second_num = float(input('Введите знаминатель: '))
+def __input_and_div_num(first_num, second_num):
     while True:
         try:
             summ_num = first_num/second_num
@@ -37,4 +35,6 @@ def __input_and_check_num():
 
 # Выводим название программы
 print('Программа выполняющая деление двух чисел')
-__input_and_check_num()
+
+__input_and_div_num(first_num=float(input('Введите числитель: ')),
+                      second_num=float(input('Введите знаминатель: ')))
