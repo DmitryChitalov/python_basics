@@ -15,16 +15,14 @@ print('Программа реализовывающая вывод данных
 # Определяем функцию
 def __string_out(name, fam, year, city, email, phone):
     print(f'{name} {fam} {year} года рождения, проживает в городе {city}\n'
-          f'email: {email}, телефон: {phone}')
+          f'email: {email}, \n'
+          f'телефон: {phone}')
 
 
 # Запрашиваем исходные данные
-person_name = input('Введите имя ')
-person_fam = input('Введите фамилию ')
-person_year = input('Введите год рождения ')
-person_city = input('Введите город проживания ')
-person_email = input('Введите адрес электронной почты ')
-person_phone = input('Введите номер телефона ')
-
-# Передаем запрошенные данные в функцию
-__string_out(person_name, person_fam, person_year, person_city, person_email, person_phone)
+__string_out(name = input('Введите имя '),
+             fam = input('Введите фамилию '),
+             year = input('Введите год рождения '),
+             city = input('Введите город проживания '),
+             email = input('Введите адрес электронной почты '),
+             phone = input('Введите номер телефона '))

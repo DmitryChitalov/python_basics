@@ -18,31 +18,23 @@ Process finished with exit code 0
 Process finished with exit code 0
 """
 
-# Выводим название программы
-print('Программа выполняющая деление двух чисел')
 
 # Создадим функцию ввода и проверки зачения на число
-
-
-def __input_and_check_num(text):
-    temp_in = input(text)
+def __input_and_check_num():
+    first_num = float(input('Введите числитель: '))
+    second_num = float(input('Введите знаминатель: '))
     while True:
         try:
-            temp_in = float(temp_in)
-            return temp_in
+            summ_num = first_num/second_num
+            print(f'Результат деления: {"{:.3f}".format(summ_num)}')
+            return 0
 
-        except Exception:
-            print('Введите число ')
-            temp_in = input()
-            continue
+        except ZeroDivisionError:
+            print('Знаминатель не должен быть нулевым!\n'
+                  ' Введите знаминатель:')
+            second_num = float(input())
 
-# Определяем переменные
-first_num = __input_and_check_num('Введите числитель: ')
-second_num = __input_and_check_num('Введите знаминатель: ')
 
-# Проверяем возможность деления и выводим результат
-try:
-    div_num = first_num / second_num
-    print(f'Результат деления: {"{:.3f}".format(div_num)}')
-except ZeroDivisionError:
-    print('Нельзя делить на ноль!')
+# Выводим название программы
+print('Программа выполняющая деление двух чисел')
+__input_and_check_num()
