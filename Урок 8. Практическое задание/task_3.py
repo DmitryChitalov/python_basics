@@ -9,3 +9,36 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+
+class ExcLiter(Exception):
+    def __init__(self, text):
+        self.text = text
+
+    def __str__(self):
+        return self.text
+
+
+def num_list():
+    if __name__ == '__main__':
+        my_list = []
+
+        while True:
+            print(f'Для завершения программы введите q')
+            el = input("Введите число: ")
+
+            if el == "q":
+                break
+
+            try:
+                if not el.isdecimal():
+                    raise ExcLiter(f"'{el}' вы ввели не число!")
+
+                my_list.append(int(el))
+            except ExcLiter as error:
+                print(error)
+
+        print(f'Результат: {my_list}')
+
+
+num_list()

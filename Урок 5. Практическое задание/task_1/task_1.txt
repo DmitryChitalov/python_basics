@@ -1,0 +1,5 @@
+input
+string
+test
+text
+gb
