@@ -17,3 +17,20 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def divs(first_number, second_number):
+    division_operation = False
+    result_divs = 0
+    while not division_operation:
+        try:
+            result_divs = first_number / second_number
+            division_operation = True
+        except ZeroDivisionError:
+            print("Вы что? Пытаетесь делить на 0?)) ")
+            second_number = int(input("Повторно укажите делитель: "))
+    return result_divs
+
+
+x = int(input("Введите делимое число: "))
+y = int(input("Введите делитель числа: "))
+result = divs(x, y)
+print(f"Ответ: ", result)
