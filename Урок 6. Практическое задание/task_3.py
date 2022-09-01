@@ -18,21 +18,25 @@ __str__(self) - вызывается функциями str, print и format. В
 
 
 class Worker():
-    def __init__(self, name, surname, position, _income):
+    def __init__(self, name, surname, position, wage, bonus):
         self.name = name
         self.surname = surname
         self.position = position
-        self._income = _income
+        self._income = int(wage) + int (bonus)
 
 
 class Position(Worker):
+    def __int__(self, name, surname, position, _income):
+        super().__init__(name, surname, position, _income)
+        self.new_param = name + surname
+
     def get_full_name(self):
-        full_name = super().name
-        return full_name
+        return (self.name + ' ' + self.surname)
 
     def get_total_income(self):
         pass
 
 
-obj = Position("Иван", "Петров", "инженер", 500)
+obj = Position("Иван", "Петров", "инженер", 500, 100)
 print(obj.get_full_name())
+print(obj._income)
