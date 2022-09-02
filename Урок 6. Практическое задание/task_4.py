@@ -20,3 +20,20 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+class Car:
+    def __init__(self,speed,color,name,is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+    def go(self):
+        print("Машина поехала")
+    def stop(self):
+        print("Машина остановилась")
+    def turn(self,direction):
+        print(f"Машина повернула - {direction}")
+
+obj2= Car(200,"yellow","Mustang","False")
+print(obj2.go())
+print(obj2.turn("Южные широты"))
