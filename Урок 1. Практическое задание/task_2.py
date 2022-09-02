@@ -9,3 +9,7 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+import time
+time_in_seconds = int(input('Введите время в секундах: '))
+time_format = time.strftime("%H:%M:%S", time.gmtime(time_in_seconds))
+print(f'Время в формате ч:м:с - {time_format} ')
