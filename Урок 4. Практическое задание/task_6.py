@@ -12,3 +12,33 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+
+def iter_int(n_st, n_end):
+    iter_list = []
+    for num in count(n_st):
+        if num > n_end:
+            break
+        iter_list.append(num)
+    return iter_list
+
+
+def c_list(u_list):
+    cnt = 1
+    pos = 0
+    for pos in cycle(u_list):
+        if cnt >= len(u_list):
+            break
+        print(pos)
+        cnt += 1
+    yield pos
+
+
+num_st = int(input(f"Введите число начала итерации: "))
+num_en = int(input(f"Введите число окончания итерации: "))
+print(f"Наш список: {iter_int(num_st, num_en)}")
+print(f"Повтор списка: ")
+for ex in c_list(iter_int(num_st, num_en)):
+    print(ex)
