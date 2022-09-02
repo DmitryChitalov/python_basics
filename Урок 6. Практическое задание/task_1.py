@@ -15,3 +15,16 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+class TrafficLight:
+    _color = ['Красный', 'Желтый', 'Зеленый']
+    @staticmethod
+    def running():
+        print(TrafficLight._color[0])
+        time.sleep(7)
+        print(TrafficLight._color[1])
+        time.sleep(3)
+        print(TrafficLight._color[2])
+
+TL = TrafficLight()
+TL.running()
