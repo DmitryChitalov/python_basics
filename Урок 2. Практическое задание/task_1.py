@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+el_list = [5, "String", 0.15, True, None]
+for el in el_list:
+    print(f"Type {type(el)}")
