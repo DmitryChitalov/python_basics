@@ -7,3 +7,15 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+# без генератора:
+init_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+result = []
+for i in range(0, len(init_list)):
+    if init_list[i] > init_list[i - 1]:
+        (result.append(init_list[i]))
+print(f"Список элементов: {result}")
+
+# с генератором:
+
+my_new_list = [init_list[i] for i in range(0, len(init_list)) if init_list[i - 1] < init_list[i]]
+print(f"Cписок элементов: {my_new_list}")
