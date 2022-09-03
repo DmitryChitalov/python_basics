@@ -100,3 +100,36 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __add__(self, other):
+        return f"Действие сложение, клеток стало: {self.quantity + other.quantity}"
+
+    def __sub__(self, other):
+        diff = self.quantity - other.quantity
+        return f"Действие вычитание, клеток стало меньше и равно: {diff} " if diff > 0 else "Клетки исчезли :("
+
+    def __truediv__(self, other):
+        return f"Действие деление, клеток стало очень мало :( : {self.quantity // other.quantity}"
+
+    def __mul__(self, other):
+        return f"Действие умножение, клеток стало гораздо больше :) : {self.quantity * other.quantity}"
+
+    def make_order(self, row):
+        res = ""
+        for i in range(int(self.quantity / row)):
+            res += "*" * row + "\n"
+        res += "*" * (self.quantity % row) + "\n"
+        return res
+
+
+cage = Cell(15)
+cage2 = Cell(5)
+print(cage + cage2)
+print(cage - cage2)
+print(cage / cage2)
+print(cage * cage2)
+print("\nМетод make_order():")
+print(cage.make_order(5))
