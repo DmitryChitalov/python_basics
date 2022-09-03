@@ -7,3 +7,17 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+primary_list = [234, 34, 14, 3, 1, 1, 34, 7, 55, 7, 54, 1, 45]
+
+var_list_1 = []
+for el in range(1, len(primary_list)):
+    if primary_list[el] > primary_list[el - 1]:
+        var_list_1.append(primary_list[el])
+
+print(var_list_1)
+
+var_list_2 = [primary_list[el] for el in range(
+    1, len(primary_list)) if primary_list[el] > primary_list[el - 1]]
+
+print(var_list_2)
