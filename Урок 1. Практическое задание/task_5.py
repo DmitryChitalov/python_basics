@@ -18,3 +18,17 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+revenue = int(input("Введите выручку фирмы: "))
+loss = int(input("Введите издержки фирмы: "))
+if revenue > loss:
+    net_income = revenue - loss
+    print("Финансовый результат - прибыль. Ее величина:", net_income)
+    revenue_profit = net_income / revenue
+    print("Рентабельность выручки = ", revenue_profit)
+    headcount = int(input("Введите численность сотрудников фирмы:"))
+    employee = float(net_income / headcount)
+    print("Прибыль фирмы в расчете на одного сотрудника = ", employee)
+elif revenue == loss:
+    print("Фирма работает не в убыток и не в прибыль")
+else:
+    print("Фирма работает в убыток")
