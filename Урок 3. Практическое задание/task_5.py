@@ -6,3 +6,21 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def num_sum(value_list):
+    value_list = value_list.split()
+    list = []
+    for i in value_list:
+        list.append((int(i)))
+    return sum(list)
+
+input("Для выхода из программы нажмите ! ")
+memory = 0
+while 1:
+    value_list = input("Введите числа через пробел: ")
+    if value_list.endswith('!'):
+        value_list = value_list[:-1]
+        memory += num_sum(value_list)
+        print("Сумма: ", memory)
+        break
+    memory += num_sum(value_list)
+    print("Сумма: ", memory)

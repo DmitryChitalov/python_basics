@@ -5,3 +5,12 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+def my_func(arg1 , arg2, arg3):
+    if arg1 >= arg3 and arg2 >= arg3:
+        return arg1 + arg2
+    elif arg1 > arg2 and arg1 < arg3:
+        return arg1 + arg3
+    else:
+        return arg2 + arg3
+
+print(f'Сумму наибольших двух аргументов - {my_func(int(input("Введите первое значение ")), int(input("Введите второе значениее ")), int(input("Введите третье значение ")))}')

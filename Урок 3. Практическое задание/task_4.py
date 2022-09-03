@@ -5,3 +5,21 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+x = float(input("Введите действительное положительное число: "))
+y = int(input("Введите целое отрицательное число: "))
+
+def my_func(x, y):
+    memory = 1
+    if y > 0:
+        for i in range(int(y)):
+            memory *= x
+        return 1
+    elif y < 0:
+        for i in range(abs(y)):
+            memory *= x
+        return 1 / memory
+    else:
+        return memory
+
+
+print(f"Ответ: {my_func(x, y)}")
