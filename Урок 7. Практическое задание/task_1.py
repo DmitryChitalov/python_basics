@@ -28,3 +28,30 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, *args):
+        self.mx_lst = list(args)
+
+    def __str__(self):
+        res = '\n'.join(map(str, self.mx_lst)).replace(',', '') \
+            .replace('[', '').replace(']', '')
+        return res
+
+    def __add__(self, mx2):
+        mx_sum = []
+        line_sum = []
+        for x in range(len(self.mx_lst)):
+            for y in range(len(self.mx_lst[x])):
+                line_sum.append(self.mx_lst[x][y] + mx2.mx_lst[x][y])
+            mx_sum.append(line_sum)
+            line_sum = []
+        return Matrix('\n'.join(map(str, mx_sum)))
+
+
+mx1 = Matrix([1, 2, 3], [4, 5, 6], [7, 8, 9])
+mx2 = Matrix([1, 2, 3], [4, 5, 6], [7, 8, 9])
+print(f'Матрица 1:\n{mx1}')
+print(f'Матрица 2:\n{mx2}')
+print(f'Сумма матриц:\n{mx1 + mx2}')
