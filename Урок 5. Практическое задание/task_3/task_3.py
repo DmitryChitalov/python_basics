@@ -8,3 +8,12 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+dict_int = {"One": "Один", "Two": "Два", "Tree": "Три", "Four": "Четыре"}
+
+with open("input_file.txt", encoding='utf-8') as my_obj:
+    for line in my_obj:
+        for key in dict_int.keys():
+            line = line.replace(key, dict_int[key])
+        print(line)
+        with open("output_file.txt", "a") as file_rus:
+            file_rus.write(f"\n {line}")
