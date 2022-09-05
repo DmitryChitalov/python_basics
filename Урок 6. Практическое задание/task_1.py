@@ -15,3 +15,26 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from time import sleep
+
+
+class TrafficLight:
+    # атрибуты класса
+    __traf_color = {"red": 7, "yellow": 2, "green": 5}
+    _traf_protected_year = "2015"
+    traf_public_pro = "Электрозавод"
+
+    def traf_running(self):
+        print("Включение светофора")
+        for key, value in TrafficLight.__traf_color.items():
+            print(f"Переключился в {key}")
+            sleep(value)
+
+
+a1 = TrafficLight()
+a1.traf_running()  # вызов публичного метода traf_running
+print("Окончание работы программы\n")
+print(f"Вывод  значения защищенного атрибута _traf_protected_year = {a1._traf_protected_year}  ")
+print(f"Вывод  значения публичного атрибута _traf_public_pro = {a1.traf_public_pro}  ")
+print(f"Вывод словаря приватного атрибута класса = {a1._TrafficLight__traf_color}")

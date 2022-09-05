@@ -20,3 +20,72 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+
+class Car():
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        print("Машина поехала")
+
+    def stop(self):
+        print("Машина остановилась")
+
+    def turn(self, direction):
+        print(f'Машина повернула - {direction}')
+
+    def show_speed(self):
+        print(f"Скорость {self.name} сейчас: {self.speed}")
+
+
+class TownCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        print(f"Текущая скорость {self.name} составляет {self.speed}")
+        if self.speed > 60:
+            print(f"Скорость авто {self.name}  выше, чем позволяют ПДД")
+        else:
+            print(f"Скорость авто {self.name}  в рамках ПДД")
+
+
+class SportCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+
+class WorkCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        print(f"Текущая скорость {self.name} составляет {self.speed}")
+        if self.speed > 40:
+            print(f"Скорость авто {self.name}  выше, чем позволяют ПДД")
+        else:
+            print(f"Скорость авто {self.name}  в рамках ПДД")
+
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def police(self):
+        if self.is_police == 'True':
+            print(f'Автомобиль {PoliceCar.name} является полицейским')
+
+
+obj2 = Car(200, "yellow", "Mustang", "False")
+print(obj2.go())
+print(f"Машина {obj2.name} ее скорость -  {obj2.speed} {obj2.turn('на эстакаду')}")
+
+obj3 = WorkCar(50, 'Синий', 'Газель', False)
+print(f'Авто {obj3.name} текущая скорость {obj3.show_speed()}')
+
+obj7 = PoliceCar(150, 'Белый', "Форд", 'True')
+print(f'Автомобиль - {obj7.name}, полицейский {obj7.is_police}')
