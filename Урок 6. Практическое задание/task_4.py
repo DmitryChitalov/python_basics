@@ -22,7 +22,7 @@ speed, color, name, is_police (булево).
 """
 
 
-class Car:
+class Car():
     def __init__(self, speed, color, name, is_police):
         self.speed = speed
         self.color = color
@@ -44,7 +44,7 @@ class Car:
 
 class TownCar(Car):
     def __init__(self, speed, color, name, is_police):
-        super().init__(speed, color, name, is_police)
+        super().__init__(speed, color, name, is_police)
 
     def show_speed(self):
         print(f"Текущая скорость {self.name} составляет {self.speed}")
