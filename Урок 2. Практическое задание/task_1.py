@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+result_list = [0.12, "string", 0.15, True, None, 23]
+print(f'Для списка {result_list} \nрезультат\n')
+print
+for el in result_list:
+    print(type(el))
