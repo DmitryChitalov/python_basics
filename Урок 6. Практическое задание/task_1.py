@@ -15,3 +15,19 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+
+
+class TrafficLight:
+    __color = "красный"
+    __scheme = {"красный": 7, "желтый": 2, "зеленый": 9}
+
+    def running(self):
+        while True:
+            for i in self.__scheme.keys():
+                print(i)
+                time.sleep(self.__scheme[i])
+
+
+light = TrafficLight()
+light.running()
