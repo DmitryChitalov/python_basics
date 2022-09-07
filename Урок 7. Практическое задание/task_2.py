@@ -25,3 +25,52 @@
 
 Два класса: абстрактный и Clothes
 """
+from abc import ABC, abstractmethod
+
+
+class Clothes(ABC):
+    def __init__(self, name: str):
+        self.name = name
+
+    @abstractmethod
+    def cloths(self):
+        pass
+
+
+class Coat(Clothes):
+    def __init__(self, name: str, size: int):
+        self.size = size
+        super().__init__(name)
+
+    @property
+    def cloths(self):
+        return round(self.size / 6.5 + 0.5, 2)
+
+
+class Suit(Clothes):
+    def __init__(self, name: str, height: int):
+        self.height = height
+        super().__init__(name)
+
+    @property
+    def cloths(self):
+        return round(2 * self.height + 0.3, 2)
+
+
+class total_sum:
+    def __init__(self, num_a: int, num_b: int):
+        self.a = num_a
+        self.b = num_b
+
+    @property
+    def cloths(self):
+        return self.a / 6.5 + 0.5 + 2 * self.b + 0.3
+
+
+if __name__ == "__main__":
+    c = Coat("пальто", 20)
+    s = Suit("костюм", 10)
+    print("Расход ткани на пальто =", c.cloths)
+    print("Расход ткани на костюм =", s.cloths)
+    t = total_sum(c.cloths, s.cloths)
+    print("\nОбщий расход ткани: %.2f" % t.cloths)
