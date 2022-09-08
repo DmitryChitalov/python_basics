@@ -5,3 +5,19 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+
+class MyError(Exception):
+    def __init__(self, parm_1):
+        self.message = parm_1
+
+
+number_1 = input("Введите первое число: ")
+number_2 = input("Введите второе число: ")
+try:
+    if int(number_2) == 0:
+        raise MyError("На ноль делить нельзя")
+except MyError as err:
+    print(err)
+else:
+    print(f"Ответ: {int(number_1) / int(number_2)}")
