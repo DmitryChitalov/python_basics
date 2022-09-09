@@ -7,7 +7,7 @@
 Иванов 23543.12
 Петров 13749.32
 """
-with open('sal.txt', 'r') as my_file:
+with open('sl.txt', 'r') as my_file:
     sal = []
     poor = []
     my_list = my_file.read().split('\n')
