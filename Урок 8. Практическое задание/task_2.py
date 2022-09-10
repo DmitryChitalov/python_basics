@@ -5,3 +5,20 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+
+class DevByZero(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+x = int(input('Введите делимое: '))
+y = int(input('Введите делитель: '))
+
+try:
+    if y == 0:
+        raise DevByZero('Делить на ноль нельзя')
+    else:
+        print(x / y)
+except DevByZero as err:
+    print(err)
