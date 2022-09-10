@@ -72,7 +72,6 @@ class SportCar(Car):
 class PoliceCar(Car):
     def __init__(self, speed, color, name, is_police):
         super().__init__(speed, color, name, is_police)
-        self.is_police = True
 
 def __rand_turn():
     if randrange(2) == 0:
