@@ -20,3 +20,43 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+
+class Car:
+
+    def __init__(self, name, speed, color, is_police=False):
+        self.name = name
+        self.speed = speed
+        self.color = color
+        self.is_police = is_police
+        print(f'Новая машина: {self.name} (Цвет {self.color}) машина полицейская - {self.is_police}')
+
+    def go(self):
+        print(f'{self.name}: Машина поехала.')
+
+    def stop(self):
+        ptint(f'{self.name}: Машина остановилась.')
+
+    def turn(self, direction):
+        print(f"{self.name}: Машина повернула {'налево' if direction == 0 else 'направо'}")
+
+    def show_speed(self):
+        print(f'{self.name}: Скорость авто - {self.speed}')
+
+class WorkCar(Car):
+
+    def show_speed(self):
+        return f'{self.name}: Скорость авто - {self.speed} - Превышение скорости!' \
+            if self.speed > 40 else f'{self.name}: скорость авто - {self.speed}'
+
+
+class SportCar(Car):
+    pass
+
+
+class PoliceCar(Car):
+    def __init__(self, name, speed, color, is_police=True):
+        super().__init__(name, speed, color, is_police)
+
+police_car = PoliceCar("ДПС", 'Белый', 80)
+police_car.go()
