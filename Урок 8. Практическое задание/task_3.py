@@ -9,3 +9,24 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+
+class OnlyNumbers(Exception):
+    def __init__(self):
+        pass
+
+
+my_lst = []
+num = input('Введите елемент массива, для прекращения ввода наберите - стоп: ')
+while num != 'стоп':
+    try:
+        if num.isnumeric() == True:
+            my_lst.append(num)
+            num = input('Введите елемент массива, для прекращения ввода наберите - стоп: ')
+        else:
+            raise OnlyNumbers()
+    except OnlyNumbers:
+        print('Вы пытаетесь внести строку')
+        num = input('Введите елемент массива, для прекращения ввода наберите - стоп: ')
+
+print(my_lst)
