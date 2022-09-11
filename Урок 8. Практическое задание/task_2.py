@@ -5,3 +5,22 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+
+class StopDivToZero(Exception):
+
+    def __init__(self):
+        pass
+
+
+try:
+    a = int(input("Введите первое число: "))
+    b = int(input("Введите первое число: "))
+    if b == 0:
+        raise StopDivToZero()
+    else:
+        print(a/b)
+except StopDivToZero:
+    print('Нельзя делить на ноль')
+except ValueError:
+    print('Вы вводите не число')

@@ -19,3 +19,45 @@
 Подсказка: постарайтесь по возможности реализовать в проекте
 «Склад оргтехники» максимум возможностей, изученных на уроках по ООП.
 """
+
+
+class OfficeEquipment:
+
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+        self.items = {'Модель': self.name, 'Цена за единицу': self.price,
+                      'Кол-во': self.quantity}
+
+    def income(self):
+        try:
+            name = input('Введите название модели: ')
+            price = int(input('Введите цену за единицу: '))
+            quantity = int(input('Введите кол-во: '))
+            item = {'Модель': name, 'Цена за единицу': price,
+                    'Кол-во': quantity}
+            self.items.update(item)
+            print(self.items)
+        except ValueError:
+            print('Вы ввели не верное значение')
+
+
+class Printer(OfficeEquipment):
+    pass
+
+
+class Scanner(OfficeEquipment):
+    pass
+
+
+class Xerox(OfficeEquipment):
+    pass
+
+
+p = Printer('Принтер', 100, 2)
+s = Scanner('Сканер', 400, 5)
+x = Xerox('Ксерокс', 200, 3)
+p.income()
+s.income()
+x.income()
