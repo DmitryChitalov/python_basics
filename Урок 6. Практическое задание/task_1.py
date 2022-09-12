@@ -15,3 +15,27 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from time import sleep
+from datetime import datetime
+
+
+class TrafficLight:
+    _states = {'красный': 7, 'желтый': 2, 'зеленый': 10}
+    _color = ''
+
+    def run(self):
+        for color, sw_time in self._states.items():
+            self._color = color
+            start_state_time = datetime.now()
+
+            print(f"Цвет светофора сменился на '{self._color}' "
+                  f"на {sw_time} секунд")
+            sleep(sw_time)
+
+            print(f"Цвет светофора изменится на '{self._color}' через "
+                  f"{(datetime.now() - start_state_time).seconds} секунд")
+
+if __name__ == '__main__':
+    tl = TrafficLight()
+    tl.run()

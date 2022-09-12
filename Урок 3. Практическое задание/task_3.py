@@ -5,3 +5,20 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+
+def my_func(arg_1, arg_2, arg_3):
+    print(f"Сумма двух наибольших элементов равна: {arg_1 + arg_2 + arg_3 - min([arg_3, arg_2, arg_1])}")
+
+
+my_func(int(input('Первый элемент: ')),
+        int(input('Второй элемент: ')),
+        int(input('Третий элемент: '))
+        )
+
+
+def max_summa(*args):
+    print(sum(sorted(list(args), reverse=True)[:2]))
+
+
+max_summa(100,500,1000)

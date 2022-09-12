@@ -5,3 +5,20 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    result = 1
+    i = 1
+    while i <= abs(y):
+        result *= x
+        i += 1
+    return 1 / result
+
+
+print(
+    my_func(
+        int(input("x: ")),
+        int(input("y: "))
+    )
+)
