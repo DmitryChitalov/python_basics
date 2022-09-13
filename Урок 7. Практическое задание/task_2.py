@@ -30,7 +30,7 @@
 from abc import ABC, abstractmethod
 
 # Выводим на экран задание
-print('\nУрок 7 Задание 1\n')
+print('\nУрок 7 Задание 2\n')
 
 # Объявляем классы и методы
 class AbstractClothers(ABC):

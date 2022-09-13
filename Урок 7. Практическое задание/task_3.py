@@ -100,3 +100,76 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+# Выводим на экран задание
+print('\nУрок 7 Задание 3\n')
+
+# Объявляем класс и методы
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __add__(self, other):
+        self.summ_cells = self.quantity + other.quantity
+        print(f'Сумма двух клеток = {self.summ_cells}')
+        return ''
+
+    def __sub__(self, other):
+        self.sub_cells = self.quantity - other.quantity
+        if self.sub_cells > 0:
+            print(f'Разница двух клеток = {self.sub_cells}')
+        else:
+            print(f'Клеток не стало')
+        return ''
+
+    def __mul__(self, other):
+        self.mul_cells = self.quantity * other.quantity
+        print(f'Произведение двух клеток = {self.mul_cells}')
+        return ''
+
+    def __truediv__(self, other):
+        self.div_cells = self.quantity // other.quantity
+        print(f'Деление двух клеток = {self.div_cells}')
+        return ''
+
+    def make_order(self, value):
+        star_line = ''
+        for i in range(int(self.quantity / value)):
+            star_line = star_line + '*' * value + '\n'
+        star_line = star_line + '*' * (self.quantity % value) + '\n'
+        return star_line
+
+# Вводим инструкции из задания
+print("Создаем объекты клеток")
+cell1 = Cell(30)
+cell2 = Cell(25)
+
+cell3 = Cell(10)
+cell4 = Cell(15)
+
+print()
+
+print("Складываем")
+print(cell1 + cell2)
+
+print()
+
+print("Вычитаем")
+print(cell2 - cell1)
+print(cell4 - cell3)
+
+print()
+
+print("Умножаем")
+print(cell2 * cell1)
+
+print()
+
+print("Делим")
+print(cell1 / cell2)
+
+print()
+
+print("Организация ячеек по рядам")
+print(cell1.make_order(5))
+print(cell2.make_order(10))
