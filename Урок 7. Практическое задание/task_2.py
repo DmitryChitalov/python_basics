@@ -25,3 +25,53 @@
 
 Два класса: абстрактный и Clothes
 """
+
+# Подключаем модули
+from abc import ABC, abstractmethod
+
+# Выводим на экран задание
+print('\nУрок 7 Задание 1\n')
+
+# Объявляем классы и методы
+class AbstractClothers(ABC):
+    @abstractmethod
+    def coat_exp(self):
+        pass
+
+    @abstractmethod
+    def suit_exp(self):
+        pass
+
+
+class Cloth(AbstractClothers):
+    def __init__(self, v, h):
+        self.v = v
+        self.h = h
+
+    @property
+    def coat_exp(self):
+        coat_expend = self.v / 6.5 + 0.5
+        return coat_expend
+
+    @property
+    def suit_exp(self):
+        suit_expend = self.h * 2 + 0.3
+        return suit_expend
+
+    @property
+    def summ_exp(self):
+        summ_expend = self.coat_exp + self.suit_exp
+        return summ_expend
+
+    def __str__(self):
+        print(f'Всего потребуется {self.summ_exp:.2f} едениц ткани')
+        return ''
+
+# Объявляем переменные и выводим результат методов на экран
+size = float(input('Введите размер пальто: '))
+height = float(input('Введите рост для изготовления костюма: '))
+clothes = Cloth(size, height)
+print(f'Для изготовления {clothes.v} размера пальто потребуется {clothes.coat_exp:.2f} едениц ткани.\n')
+print(f'Для изготовления костюма на рост {clothes.h} потребуется {clothes.suit_exp:.2f} едениц ткани.\n')
+# Общий расход
+print(clothes)
