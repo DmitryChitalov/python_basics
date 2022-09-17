@@ -16,3 +16,21 @@ length (длина в метрах), width (ширина в метрах).
 
 Например: 20м*5000м*25кг*0.05м = 125000 кг = 125 т
 """
+
+
+class Road:
+    _surface_spec_gravity: float = 0.025
+
+    def __init__(self, length: [int, float], width: [int, float]):
+        self._length = float(length)
+        self._width = float(width)
+
+    def asphalt_mass_calc(self, thickness: float) -> (float, None):
+        return self._length * self._width * thickness * self._surface_spec_gravity
+
+
+if __name__ == '__main__':
+    road = Road(5000, 10)
+    print('Масса дорожного покрытия составит:',road.asphalt_mass_calc(20), 'тонн')
+
+
