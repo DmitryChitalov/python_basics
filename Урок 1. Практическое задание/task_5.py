@@ -18,3 +18,16 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+profit = int(input('Выручка: '))
+costs = int(input('Расходы: '))
+if profit > costs:
+    people = int(input('Введите количество сотрудников: '))
+    realmoney =(profit - costs)
+    moneyforpeople = realmoney / people
+    rent = realmoney / profit
+    print('Финасовый результат: Прибыль, ', 'Ваша рентабельность: ', rent, ',', 'Прибыль в расчете на человека: ', moneyforpeople)
+elif profit == costs:
+    print('Финансовый результат: Вы вышли в 0')
+else:
+    print('Финасовый результат: Убытки')
+
