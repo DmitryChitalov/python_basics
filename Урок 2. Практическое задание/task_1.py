@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+my_list = [123, 'text', True, None, 3.14, [1, 'sample'], ('tuple', True), {1, 'set'}, {'this_dict': True, 'key_2': 2}]
+
+for el in my_list:
+    print(type(el))
