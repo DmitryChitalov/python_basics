@@ -1,3 +1,7 @@
+
+__author__ = 'Юлия Павлова'
+__group__ = 2547
+
 """
 Задание 5.
 
@@ -18,3 +22,18 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+proceeds = float(input('Введите выручку фирмы:'))
+costs = float(input('Введите издержки фирмы:'))
+if proceeds > costs:
+    profit = proceeds - costs
+    profitability = profit / proceeds
+    print(f'Рентабельность выручки = {profitability}')
+    workers = int(input('Введите количество сотрудников:'))
+    prof_per_worker = profit / workers
+    print(f'Прибыль в рассчете на одного сотрудника: {prof_per_worker} рублей.')
+    print(f'Фирма получила прибыль в размере {profit} рублей.')
+else:
+    print(f'Фирма отработала в убыток. Издержки больше выручки.')
+
+
