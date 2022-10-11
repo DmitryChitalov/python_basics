@@ -15,3 +15,18 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+
+rating_list = [7, 5, 3, 3, 2]
+
+while True:
+    n = input()
+    if not n:
+        break
+    for el_index in range(len(rating_list)):
+        if int(n) > rating_list[el_index]:
+            rating_list.insert(el_index, int(n))
+            break
+        if el_index == len(rating_list) - 1:
+            rating_list.append(int(n))
+print(rating_list)
