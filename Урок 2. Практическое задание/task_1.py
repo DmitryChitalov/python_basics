@@ -15,3 +15,9 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+
+list_with_all_types = [1, 'Python', 1.1, False, (1, 2), None, {1, 2, 3, 4}, {1: 'Python', 2: 'C++'}]
+
+for el in list_with_all_types:
+    print(type(el))

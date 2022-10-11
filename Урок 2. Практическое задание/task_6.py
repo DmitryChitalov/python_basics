@@ -1,3 +1,4 @@
+from collections import Counter
 """
 6. *Реализовать структуру данных «Товары». Она должна представлять собой список кортежей.
 Каждый кортеж хранит информацию об отдельном товаре.
@@ -25,3 +26,20 @@
 “ед”: [“шт.”]
 }
 """
+
+
+list_with_products = [
+    (1, {'название': 'компьютер', 'цена': 20000, 'количество': 5, 'eд': 'шт.'}),
+    (2, {'название': 'принтер', 'цена': 6000, 'количество': 2, 'eд': 'шт.'}),
+    (3, {'название': 'сканер', 'цена': 2000, 'количество': 7, 'eд': 'шт.'})
+]
+
+dict_with_products = {}
+
+for product in list_with_products:
+    for key, value in product[1].items():
+        if key in dict_with_products.keys():
+            if value in dict_with_products[key]:
+                continue
+        dict_with_products[key] = dict_with_products.get(key, list()) + [value]
+print(dict_with_products)

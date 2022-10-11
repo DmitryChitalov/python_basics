@@ -11,3 +11,10 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+
+start_list = [i for i in input().split()]
+
+for i in range(1, len(start_list), 2):
+    start_list[i], start_list[i-1] = start_list[i-1], start_list[i]
+print(start_list)

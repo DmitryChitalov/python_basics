@@ -14,3 +14,8 @@
 1. раз
 2. перерефриж
 """
+
+
+list_of_words = enumerate(input().split(), start=1)
+for count, word in list_of_words:
+    print(count, '. ', word[:11], sep='')
