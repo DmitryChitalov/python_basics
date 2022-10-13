@@ -15,6 +15,6 @@ __group__ = 2547
 """
 
 time_sec = float(input('Введите время в секундах'))
-hour = time_sec / 3600
-min = time_sec / 60
-print(f'Время в формате ч:м:с - {hour} : {min} : {time_sec}')
+time_hour = time_sec / 3600
+time_minute = time_sec / 60
+print(f'Время в формате ч:м:с - {time_hour} : {time_minute} : {int(time_sec)}')

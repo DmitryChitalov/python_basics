@@ -19,6 +19,7 @@ num = int(input('Введите целое положительное число
 a = 0
 while num > 0:
     b = num % 10
-    if b >= a: a = b
+    if b >= a:
+        a = b
     num //= 10
 print(f'Максимальное число: {a}')
