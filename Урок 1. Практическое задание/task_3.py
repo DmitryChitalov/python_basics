@@ -8,3 +8,12 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+n = int(input("Введите число n: "))
+if n > 0:
+    nn = f"{n}{n}"
+    nnn = f"{nn}{n}"
+    result = n + int(nn) + int(nnn)
+    print(f"n + nn + nnn = {result}")
+else:
+    print(f"Введенное число должно быть положительным")

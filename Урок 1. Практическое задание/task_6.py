@@ -19,3 +19,19 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+DISTANCE_GROW_PCT = 10
+
+first_distance = int(input("Величина пробежки в первый день: "))
+search_distance = int(input("Величина пробежки для поиска: "))
+
+current_distance = first_distance
+num_of_day = 1
+
+print(f"{num_of_day}-й день: {current_distance:.2f}")
+while search_distance > current_distance:
+    current_distance += current_distance * DISTANCE_GROW_PCT / 100
+    num_of_day += 1
+    print(f"{num_of_day}-й день: {current_distance:.2f}")
+
+print(f"Ответ: на {num_of_day}-й день спортсмен достиг результата — не менее {search_distance} км.")
