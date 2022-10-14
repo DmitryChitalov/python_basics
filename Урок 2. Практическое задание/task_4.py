@@ -14,3 +14,10 @@
 1. раз
 2. перерефриж
 """
+
+user_input = input('Введите слова через пробел: ')
+words = user_input.split()
+string_number = 0  # Отсчёт строки
+for el in words:
+    string_number += 1
+    print(f'{string_number}. {el[0:10]}')
