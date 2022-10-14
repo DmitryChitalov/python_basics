@@ -15,3 +15,19 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+initial_rating = [8, 7, 3, 3, 2]
+print(f'Стартовый рейтинговый список: {initial_rating}')
+while True:
+    user_input = int(input('Введите число для записи в рейтинговый список (для выхода введите -1): '))
+    if user_input == -1:
+        break
+    for ind, el in enumerate(initial_rating):
+        if user_input > el:
+            initial_rating.insert(ind, user_input)
+            print(initial_rating)
+            break  # После добавления елемента в итерируемый список, выполняем break, иначе попадём в бесконечный цикл
+    if user_input <= min(initial_rating):  # Если значение < или = минимального в списке, значение вставляем в конец.
+        initial_rating.append(user_input)
+        print(initial_rating)
+print(f'Завершение программы')
