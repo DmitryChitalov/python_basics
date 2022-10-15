@@ -25,3 +25,37 @@
 “ед”: [“шт.”]
 }
 """
+product_list = []
+params = {}
+n = int(input("Введите количество товаров: "))
+product_number = 1
+for ind in range(n):
+    name = input("Введите наименование: ")
+    price = int(input("Введите цену: "))
+    count = int(input("Введите количество: "))
+    ed = input("Введите единицу измерения: ")
+    params = {'name': name, 'price': price, 'amount': count, 'unit': ed}
+    product_list.append((product_number, params))
+    product_number += 1
+print("Итоговая структура: ", product_list)
+name_dik = {}
+name_dik_help = []
+price_dik = {}
+price_dik_help = []
+count_dik = {}
+count_dik_help = []
+ed_dik = {}
+ed_dik_help = []
+for imd in range(n):
+    name_dik_help.append(product_list[imd][1]['name'])
+    price_dik_help.append(product_list[imd][1]['price'])
+    count_dik_help.append(product_list[imd][1]['amount'])
+    ed_dik_help.append(product_list[imd][1]['unit'])
+    name_dik = {'name': name_dik_help}
+    price_dik = {'price': price_dik_help}
+    count_dik = {'amount': count_dik_help}
+    ed_dik = {'unit': ed_dik_help}
+print(name_dik)
+print(price_dik)
+print(count_dik)
+print(ed_dik)
