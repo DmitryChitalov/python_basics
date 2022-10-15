@@ -15,3 +15,32 @@
 П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
+
+
+from turtle import position
+
+
+class Worker:
+
+    def __init__(self, name, surname, position, wage, bonus):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self._income = {"wage": wage, "bonus": bonus}
+
+
+class Position(Worker):
+    def __init__(self, name, surname, position, wage, bonus):
+        super().__init__(name, surname, position, wage, bonus)
+
+    def get_full_name(self):
+        return (f"{self.name} {self.surname}")
+
+    def get_total_income(self):
+        return (self._income["wage"]+self._income["bonus"])
+
+
+pos = Position("Алескандр", "Андреев", "Администратор", 50000, 15000)
+print(f"Фамилия и Имя: {pos.get_full_name()}")
+print(f"Должность: {pos.position}")
+print(f"Фамилия и Имя: {pos.get_total_income()}")
