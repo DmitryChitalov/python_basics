@@ -26,7 +26,6 @@
 }
 """
 product_list = []
-params = {}
 n = int(input("Введите количество товаров: "))
 product_number = 1
 for ind in range(n):
@@ -38,24 +37,16 @@ for ind in range(n):
     product_list.append((product_number, params))
     product_number += 1
 print("Итоговая структура: ", product_list)
-name_dik = {}
-name_dik_help = []
-price_dik = {}
-price_dik_help = []
-count_dik = {}
-count_dik_help = []
-ed_dik = {}
-ed_dik_help = []
+
+result_dict = {
+    'name': [],
+    'price': [],
+    'amount': [],
+    'unit': []
+}
 for imd in range(n):
-    name_dik_help.append(product_list[imd][1]['name'])
-    price_dik_help.append(product_list[imd][1]['price'])
-    count_dik_help.append(product_list[imd][1]['amount'])
-    ed_dik_help.append(product_list[imd][1]['unit'])
-    name_dik = {'name': name_dik_help}
-    price_dik = {'price': price_dik_help}
-    count_dik = {'amount': count_dik_help}
-    ed_dik = {'unit': ed_dik_help}
-print(name_dik)
-print(price_dik)
-print(count_dik)
-print(ed_dik)
+    result_dict['name'].append(product_list[imd][1]['name'])
+    result_dict['price'].append(product_list[imd][1]['price'])
+    result_dict['amount'].append(product_list[imd][1]['amount'])
+    result_dict['unit'].append(product_list[imd][1]['unit'])
+print(result_dict)
