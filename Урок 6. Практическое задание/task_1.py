@@ -27,10 +27,10 @@ def cls():
 class TraficLite:
     __color = "RED", "YELLOW", "GREEN"
 
-    def running(self, red_on=7, green_on=7, counter=25):
+    def running(red_on, green_on, repit):
         cls()
         count_on_off = 0
-        while count_on_off < counter:
+        while count_on_off < repit:
             for el in TraficLite.__color:
                 if el == "RED":
                     print(
