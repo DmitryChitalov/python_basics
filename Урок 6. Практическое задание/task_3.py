@@ -15,9 +15,11 @@
 П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
+from os import system, name as osname
 
 
-from turtle import position
+def cls():
+    system('cls' if osname == 'nt' else 'clear')
 
 
 class Worker:
@@ -40,6 +42,7 @@ class Position(Worker):
         return (self._income["wage"]+self._income["bonus"])
 
 
+cls()
 pos = Position("Алескандр", "Андреев", "Администратор", 50000, 15000)
 print(f"Фамилия и Имя: {pos.get_full_name()}")
 print(f"Должность: {pos.position}")
