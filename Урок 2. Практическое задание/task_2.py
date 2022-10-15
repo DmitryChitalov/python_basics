@@ -11,3 +11,10 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+list_1 = input('Введите целые числа через пробел: ').split(' ')
+ind_1 = 0
+for ind in range(int(len(list_1) / 2)):
+    list_1[ind_1], list_1[ind_1 + 1] = list_1[ind_1 + 1], list_1[ind_1]
+    ind_1 += 2
+
+print('Результат:', *list_1)
