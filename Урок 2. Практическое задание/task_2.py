@@ -22,7 +22,7 @@ for el in user_list_str:
 print(user_list_int)
 
 iterations = len(user_list_int) - 1
-if iterations > 1:
+if iterations > 0:
     index = 0
     while index < iterations:
         user_list_int[index], user_list_int[index + 1] = user_list_int[index + 1], user_list_int[index]
