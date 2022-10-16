@@ -29,7 +29,7 @@ def cls():
 
 class Car:
 
-    def __init__(self, speed, color, name, is_police):
+    def __init__(self, speed, color, name, is_police=0):
         self.speed = speed
         self.color = color
         self.name = name
@@ -37,34 +37,34 @@ class Car:
 
     def go(self):
         if self.is_police:
-            return f"Полицейская машина {self.name}, цвет {self.color},  движется."
+            return print(f"Полицейская машина {self.name}, цвет {self.color},  движется.")
         else:
-            return f"Машина {self.name}, цвет {self.color} движется."
+            return print(f"Машина {self.name}, цвет {self.color} движется.")
 
     def stop(self):
-        return f"Машина {self.name} остановилась."
+        return print(f"Машина {self.name} остановилась.")
 
     def turn(self, direction):
-        return f"Машина {self.name} повернула на{direction}."
+        return print(f"Машина {self.name} повернула на{direction}.")
 
     def show_speed(self):
-        return f"Ваша скорость {self.speed} км/ч"
+        return print(f"Ваша скорость {self.speed} км/ч")
 
 
 class TownCar(Car):
     def show_speed(self):
         if self.speed > 40:
-            return f"Вы превысили скорость 40 км/ч. Ваша скорость {self.speed}"
+            return print(f"Вы превысили скорость 40 км/ч. Ваша скорость {self.speed}")
         else:
-            return f"Ваша скорость {self.speed}."
+            return print(f"Ваша скорость {self.speed}.")
 
 
 class WorkCar(Car):
     def show_speed(self):
         if self.speed > 60:
-            return f"Вы превысили скорость 60 км/ч. Ваша скорость {self.speed}"
+            return print(f"Вы превысили скорость 60 км/ч. Ваша скорость {self.speed}")
         else:
-            return f"Ваша скорость {self.speed}."
+            return print(f"Ваша скорость {self.speed}.")
 
 
 class SportCar(Car):
@@ -76,44 +76,23 @@ class PoliceCar(Car):
 
 
 cls()
-t = TownCar(40, "зеленый", "Ока", 0)
-print(t.go())
-print(t.show_speed())
-print(t.turn("лево"))
-print(t.turn("право"))
-print(t.stop(), "\n")
-
-t = TownCar(60, "зеленый", "Ока", 0)
-print(t.go())
-print(t.show_speed())
-print(t.turn("лево"))
-print(t.turn("право"))
-print(t.stop(), "\n")
-
-w = WorkCar(60, "желтый", "Газель", 0)
-print(w.go())
-print(w.show_speed())
-print(w.turn("лево"))
-print(w.turn("право"))
-print(w.stop(), "\n")
-
-w = WorkCar(70, "желтый", "Газель", 0)
-print(w.go())
-print(w.show_speed())
-print(w.turn("лево"))
-print(w.turn("право"))
-print(w.stop(), "\n")
-
-s = SportCar(200, "Красный", "Ferrari", 0)
-print(s.go())
-print(s.show_speed())
-print(s.turn("лево"))
-print(s.turn("право"))
-print(s.stop(), "\n")
-
-p = PoliceCar(100, "белый", "UAZ", 1)
-print(p.go())
-print(p.show_speed())
-print(p.turn("лево"))
-print(p.turn("право"))
-print(p.stop(), "\n")
+print("---------------------------------------------------")
+oka1 = TownCar(40, "зеленый", "Ока1")
+oka1.go(), oka1.show_speed(), oka1.turn("лево"), oka1.turn("право"), oka1.stop()
+print("---------------------------------------------------")
+oka2 = TownCar(60, "зеленый", "Ока2")
+oka2.go(), oka2.show_speed(), oka2.turn("лево"), oka2.turn("право"), oka2.stop()
+print("---------------------------------------------------")
+gaz1 = WorkCar(60, "желтый", "Газель1")
+gaz1.go(), gaz1.show_speed(), gaz1.turn("лево"), gaz1.turn("право"), gaz1.stop()
+print("---------------------------------------------------")
+gaz2 = WorkCar(70, "желтый", "Газель2")
+gaz2.go(), gaz2.show_speed(), gaz2.turn("лево"), gaz2.turn("право"), gaz2.stop()
+print("---------------------------------------------------")
+ferrari = SportCar(200, "Красный", "Ferrari")
+ferrari.go(), ferrari.show_speed(), ferrari.turn(
+    "лево"), ferrari.turn("право"), ferrari.stop()
+print("---------------------------------------------------")
+uaz = PoliceCar(100, "белый", "УАЗ", 1)
+uaz.go(), uaz.show_speed(), uaz.turn("лево"), uaz.turn("право"), uaz.stop()
+print("---------------------------------------------------")
