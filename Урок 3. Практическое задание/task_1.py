@@ -17,3 +17,14 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def delenie (arg1, arg2):
+    try:
+        res = arg1 / arg2
+    except ZeroDivisionError:
+        return "Делить на ноль аморально!!!!"
+    return res
+
+num_1 = int(input("Введите первое число: "))
+num_2 = int(input("Введите второе число: "))
+
+print(delenie(num_1, num_2))
