@@ -5,3 +5,13 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def my_func(x,y):
+    y_new = y * -1
+    x_new = 1
+    for ind in range(y_new):
+        x_new = x_new * x
+    return 1 / x_new
+
+n1 = int(input("Введите х: "))
+n2 = int(input("Введите у: "))
+print(my_func(n1, n2))
