@@ -15,3 +15,9 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+
+my_list = ['привет', 10, True, None, 'мир', 0.15]
+for i in my_list:
+    print(type(i))
+
