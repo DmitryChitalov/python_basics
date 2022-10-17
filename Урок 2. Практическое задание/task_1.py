@@ -16,8 +16,8 @@
 <class 'NoneType'>
 """
 
-any_types = ["abc", 34, True, 0.12367, None, [1, 2, 3], ('a', 'b', 'c'), {11, 3, 8, 4},
-             {"key1": "val1", "key2": "val2"}, b'bytes']
+any_types = ["abc", 34, True, 0.12367, None, [1, 2, 3], ('a', 'b', 'c'),
+             {11, 3, 8, 4}, {"key1": "val1", "key2": "val2"}, b'bytes']
 
 for el in any_types:
     print(type(el))

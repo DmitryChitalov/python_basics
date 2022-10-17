@@ -15,17 +15,16 @@
 user_data = input("Введите целые числа через пробел: ")
 
 user_list_str = user_data.split(' ')
-user_list_int = []
-for el in user_list_str:
-    user_list_int.append(int(el))
+user_list_int = [int(i) for i in user_list_str]
 
 print(user_list_int)
 
-iterations = len(user_list_int) - 1
-if iterations > 0:
-    index = 0
-    while index < iterations:
-        user_list_int[index], user_list_int[index + 1] = user_list_int[index + 1], user_list_int[index]
-        index += 2
+iter_cont = len(user_list_int) - 1
+if iter_cont > 0:
+    current_index = 0
+    while current_index < iter_cont:
+        user_list_int[current_index], user_list_int[current_index + 1] = \
+            user_list_int[current_index + 1], user_list_int[current_index]
+        current_index += 2
 
 print(user_list_int)
