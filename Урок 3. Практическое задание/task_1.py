@@ -21,10 +21,11 @@ Process finished with exit code 0
 
 def div_two(divisible, divisor):
     """ Возвращает частное от деления двух чисел """
-    if divisor == 0:
-        print("Division by zero!")
-        return None
-    return divisible / divisor
+    try:
+        return divisible / divisor
+    except ZeroDivisionError:
+        print("Вы что? Пытаетесь делить на 0!")
+    return None
 
 
 first_num = int(input("Введите первое число: "))
