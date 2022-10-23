@@ -6,3 +6,20 @@
 Пример исходного списка: [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11].
 Результат: [23, 1, 3, 10, 4, 11]
 """
+
+
+def includes_count(def_list, val):
+    """
+    подсчитывает количество вхождений элемента в список
+    :param def_list: список
+    :param val: элемент
+    :return: количество вхождений
+    """
+    return len([el for el in def_list if el == val])
+
+
+list_num = [1, 22, 7, 7, 1, 13, 43, 3, 3, 2, 10, 14, 43, 11, 6, 13, 10, 6]
+print(f"Исходный список: {list_num}")
+
+result = [el for el in list_num if includes_count(list_num, el) == 1]
+print(f"Результат: {result}")
