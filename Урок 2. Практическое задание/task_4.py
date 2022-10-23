@@ -14,3 +14,9 @@
 1. раз
 2. перерефриж
 """
+
+phrase = input('Введите слова через пробел:')
+word = phrase.split(' ')
+for i, el in enumerate(word, 1):
+    print(f'{i}. {el[:10]}')
+

@@ -25,3 +25,23 @@
 “ед”: [“шт.”]
 }
 """
+item_list = int(input('Введите номер товара:'))
+n = 1
+my_list = []
+my_dict = []
+my_analytics = {}
+while n <= item_list:
+    my_dict = ({'Название': input('Введите название: '),
+                'Цена': input('Введите цену: '),
+                'Количество': input('Введите количество: '),
+                'ед.': input('Введите единицы измерения: '
+                )})
+    my_list.append(my_dict)
+    n += 1
+    my_analytics = {'Название': my_dict.get('Название'),
+                        'Цена': my_dict.get('Цена'),
+                        'Количество': my_dict.get('Количество'),
+                        'ед.': my_dict.get('ед.')}
+print(my_list)
+print(my_analytics)
+
