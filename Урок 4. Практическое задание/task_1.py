@@ -6,3 +6,15 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+script_name, out_in_hrs, rate_in_hrs, award = argv
+
+print(f"выработка в часах: {out_in_hrs}")
+print(f"ставка в час: {rate_in_hrs}")
+print(f"премия: {award}")
+
+salary = int(out_in_hrs) * float(rate_in_hrs) + int(award)
+
+print(f"заработная платы сотрудника: {salary}")
