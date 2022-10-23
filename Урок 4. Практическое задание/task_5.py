@@ -5,3 +5,12 @@
 Необходимо получить результат вычисления произведения всех элементов списка.
 Подсказка: использовать лямбда-функцию и функцию reduce().
 """
+
+from functools import reduce
+
+even_numbers = [el for el in range(100, 1001, 2)]
+print("четные числа от 100 до 1000")
+print(even_numbers)
+
+mult_numbers = reduce(lambda p1, p2: p1 * p2, even_numbers)
+print(f"Произведения всех элементов списка: {mult_numbers}")

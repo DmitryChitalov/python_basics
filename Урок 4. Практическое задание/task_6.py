@@ -12,3 +12,21 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count
+from itertools import cycle
+from itertools import takewhile
+
+list1 = list(takewhile(lambda i: i < 50, count(5, 3)))
+print(list1)
+
+cyc_list = [3, 4, 7, 1]
+list2 = []
+amt = 0
+for el in cycle(cyc_list):
+    if amt + el > 50:
+        break
+    amt += el
+    list2.append(el)
+
+print(f"amount of {list2} = {amt}")
