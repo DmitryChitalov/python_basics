@@ -108,6 +108,3 @@ print(s.obj_consumption)
 
 t = Total(size_coat, height_suit)
 print(f"\nОбщий расход материала: {round(t.sum(), 2)}")
-
-
-input("\nНажмите Enter...")
