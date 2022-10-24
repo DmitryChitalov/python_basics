@@ -59,10 +59,10 @@ matrix1 = Matrix(lst1)
 matrix2 = Matrix(lst2)
 
 print("\nМатрица 1: ")
-print(matrix1.__str__())
+print(matrix1)
 
 print("Матрица 2: ")
-print(matrix2.__str__())
+print(matrix2)
 
 print("Сумма матриц: ")
 print(matrix1 + matrix2)
