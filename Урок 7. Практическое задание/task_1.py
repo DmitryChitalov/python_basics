@@ -1,4 +1,4 @@
-'''
+"""
 Задание 1.
 
 Реализовать класс Matrix (матрица). Обеспечить перегрузку конструктора класса (метод __init()__),
@@ -27,7 +27,7 @@
 2 4 6
 8 10 12
 14 16 18
-'''
+"""
 
 
 class Matrix:
@@ -35,7 +35,7 @@ class Matrix:
         self.matrix = lists
 
     def __str__(self):
-        string = ''
+        string = ""
         for el in self.matrix:
             string = f'{string}{"  ".join(map(str, el))}\n'
         return string
@@ -58,13 +58,11 @@ lst2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 matrix1 = Matrix(lst1)
 matrix2 = Matrix(lst2)
 
-print('\nМатрица 1: ')
+print("\nМатрица 1: ")
 print(matrix1.__str__())
 
-print('Матрица 2: ')
+print("Матрица 2: ")
 print(matrix2.__str__())
 
-print('Сумма матриц: ')
+print("Сумма матриц: ")
 print(matrix1 + matrix2)
-
-input('\nНажмите Enter...')
