@@ -15,3 +15,14 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+rate_list = [7, 5, 3, 3, 2]
+while True:
+    new_el = input('Введите новый элемент рейтинга (натуральное число) или q для выхода: ')
+    if new_el != 'q':
+        rate_list.append(int(new_el))
+        rate_list.sort(reverse=True)
+        print('Результат:', *rate_list)
+    else:
+        print('Выход из программы, последний актуальный рейтинг:', *rate_list)
+        break
