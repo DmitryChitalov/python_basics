@@ -15,3 +15,43 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from os import system, name as osname
+from time import sleep
+from colorama import Back, Style
+
+
+def cls():
+    system('cls' if osname == 'nt' else 'clear')
+
+
+class TraficLite:
+    __color = "RED", "YELLOW", "GREEN"
+
+    def running(self, red_on, green_on, counter):
+        cls()
+        count_on_off = 0
+        while count_on_off < counter:
+            for el in TraficLite.__color:
+                if el == "RED":
+                    print(
+                        f"Загорелся {Back.RED}красный{Style.RESET_ALL} сигнал светофора")
+                    sleep(red_on)
+                    cls()
+                    print(
+                        f"Загорелся {Back.YELLOW}желтый{Style.RESET_ALL} сигнал светофора")
+                    sleep(2)
+                    cls()
+                elif el == "GREEN":
+                    print(
+                        f"Загорелся {Back.GREEN}зеленый{Style.RESET_ALL} сигнал светофора")
+                    sleep(green_on)
+                    cls()
+                    print(
+                        f"Загорелся {Back.YELLOW}желтый{Style.RESET_ALL} сигнал светофора")
+                    sleep(2)
+                    cls()
+            count_on_off += 1
+
+
+r = TraficLite()
+r.running(7, 5, 5)
