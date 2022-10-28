@@ -25,3 +25,28 @@
 “ед”: [“шт.”]
 }
 """
+
+products_list = []
+while True:
+    accept = input('Если хотите внести данные о товарах введите любой символ, для выхода используйте q: ')
+    if accept == 'q':
+        break
+    else:
+        number = int(input('Введите номер товара: '))
+        name = input('Введите название товара: ')
+        price = input('Введите цену товара: ')
+        quantity = input('Введите количество товара: ')
+        units = input('Введите единицы товара: ')
+        products_list.append((number, {"название": name, "цена": price, "количество": quantity, "ед": units}))
+        products_list.sort()
+for i in products_list:
+    print(i)
+
+products_dict = {"название": [], "цена": [], "количество": [], "ед": []}
+for el in range(len(products_list)):
+   products_dict["название"].append(products_list[el][1]["название"])
+   products_dict["цена"].append(products_list[el][1]["цена"])
+   products_dict["количество"].append(products_list[el][1]["количество"])
+   products_dict["ед"].append(products_list[el][1]["ед"])
+for key in products_dict:
+    print(f'{key}: {products_dict.get(key)}')
