@@ -16,6 +16,6 @@
 <class 'NoneType'>
 """
 
-my_list=[5, "string", 0.15, True, None, [2, 'text', 456, 45.3, None], ('1', 1), {2, 'text', 456}, {'my_dict': False}]
+my_list = [5, "string", 0.15, True, None, [2, 'text', 456, 45.3, None], ('1', 1), {2, 'text', 456}, {'my_dict': False}]
 for el in my_list:
     print(type(el))
