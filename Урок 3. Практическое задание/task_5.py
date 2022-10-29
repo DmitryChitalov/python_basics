@@ -6,3 +6,20 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def sum_func():
+    total = 0
+    esc = False
+    while not esc:
+        my_list = input('Введите целые числа через пробел или q для выхода: ').split(' ')
+        for el in range(len(my_list)):
+            if my_list[el] != 'q':
+                total = total + int(my_list[el])
+            else:
+                esc = True
+                break
+        print('Вы не ввели ни одного числа!') if total == 0 else print(total)
+
+
+sum_func()

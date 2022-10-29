@@ -8,3 +8,21 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(word):
+    return word.title()
+
+
+print(int_func(input('Введите слово из строчных букв: ')))
+
+
+def upp_func(string):
+    my_list = string.split(' ')
+    upper_list = []
+    for el in my_list:
+        upper_list.append(int_func(el))
+    return upper_list
+
+
+print(*(upp_func(input('Введите строку из слов разделенных пробелами используя только строчные буквы: '))))
