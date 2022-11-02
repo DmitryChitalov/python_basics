@@ -13,4 +13,3 @@ try:
         print(f"строк в файле: {lines_count}")
 except IOError:
     print("Произошла ошибка ввода вывода!")
-
