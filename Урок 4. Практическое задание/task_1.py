@@ -6,3 +6,10 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+
+from sys import argv
+script_name, hours_worked, hourly_rate, bonus = argv
+
+salary = (int(hours_worked) * int(hourly_rate)) + int(bonus)
+print(f'Заработная плата составила {salary} рублей')

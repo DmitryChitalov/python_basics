@@ -12,3 +12,21 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+
+from itertools import cycle, count
+# Задание А.
+for el in count(3):
+    if el == 10:
+        break
+    print(el)
+
+# Задание Б.
+
+some_list = [11, 22, 33, 44, 55, 66, 77, 88, 99]
+i = 0  # Номер итерации
+for num in cycle(some_list):
+    if i > 13:
+        break
+    print(num)
+    i += 1
