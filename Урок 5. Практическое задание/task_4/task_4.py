@@ -7,3 +7,20 @@
 Иванов 23543.12
 Петров 13749.32
 """
+out_f = open("text_file3.txt", "w", encoding='utf-8')
+str_list = ['Иванов 23213.11\n', 'Петров 22323.23\n', 'Сидорво 34324.43\n', 'Папапа 21100.66\n', 'Ивавава 22311.78\n',
+            'Чебчуренко 22222.63\n', 'Марков 77777.32\n', 'Андереев 11231.23\n', 'Пихтов 10000.23\n',
+            'Сергеке 23100.65\n', ]
+out_f.writelines(str_list)
+out_f.close()
+with open("text_file3.txt", "r", encoding='utf-8') as f_obj:
+    print(f'Сотрудники, чей оклад менее 20т.р: ')
+    d = 0
+    for line in f_obj:
+        r_list = line.split()
+        c = float(r_list[1])
+        d += c
+        if c < 20000:
+            print(r_list[0])
+    average_sallary = d / 10
+    print(f'Средний доход сотрудников: {average_sallary} ')
