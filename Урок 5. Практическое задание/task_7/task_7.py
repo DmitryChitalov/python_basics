@@ -15,7 +15,7 @@ import json
 result_dict = [{}, {"average_profit": 0.0}, {}]
 
 try:
-    with open("firms.data") as f_obj:
+    with open("firms.data", encoding="utf-8") as f_obj:
         for f_line in f_obj:
             l_parts = f_line.split("  ")
 
@@ -39,11 +39,11 @@ if profit_count > 0:
 
 print(f"Результируюший список:\n{result_dict}")
 
-with open("firms.json", "w+") as write_f:
+with open("firms.json", "w+", encoding="utf-8") as write_f:
     json.dump(result_dict, write_f)
     write_f.seek(0)
     print(f"Сохраненный файл:\n {write_f.read()}")
 
-with open("firms.json") as read_f:
+with open("firms.json", encoding="utf-8") as read_f:
     data = json.load(read_f)
     print(f"Десереализованный json из файла:\n {data}")

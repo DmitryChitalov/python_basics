@@ -6,7 +6,7 @@
 
 print("Вводите текс построчно, для завершения введите пустую строку.")
 try:
-    with open("user_text.txt", "w+") as f_obj:
+    with open("user_text.txt", "w+", encoding="utf-8") as f_obj:
         while True:
             line = input(">")
             if line == "":

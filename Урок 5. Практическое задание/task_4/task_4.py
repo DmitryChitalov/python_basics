@@ -32,7 +32,7 @@ try:
         print()
         avg_salary = sum_salary / emp_cnt
 except IOError:
-    print(f"Произошла ошибка ввода вывода!")
+    print("Произошла ошибка ввода вывода!")
 
 print(f"Сотрудники с окладом меньше {LOW_SALARY}")
 for emp_name in low_salary_emp:

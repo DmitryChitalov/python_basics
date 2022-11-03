@@ -4,7 +4,7 @@
 """
 
 try:
-    with open("test_file.txt") as f_obj:
+    with open("test_file.txt", encoding="utf-8") as f_obj:
         lines_count = 0
         for line in f_obj:
             lines_count += 1

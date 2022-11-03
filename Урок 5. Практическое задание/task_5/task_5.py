@@ -9,7 +9,7 @@ gen_nums_count = randint(5, 20)
 
 try:
     gen_nums = [str(randint(-10, 10)) for el in enumerate(range(gen_nums_count))]
-    with open("numbers.dat", "w+") as f_obj:
+    with open("numbers.dat", "w+", encoding="utf-8") as f_obj:
         f_obj.write(" ".join(gen_nums))
 
         f_obj.seek(0)
