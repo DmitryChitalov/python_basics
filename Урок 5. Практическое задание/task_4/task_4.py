@@ -7,3 +7,21 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+
+with open("salaries.txt", "r", encoding="utf=8") as my_file:
+    content = my_file.readlines()
+
+print(content)
+
+i = 0  # Считаем кол-во строк (сотрудников)
+sum_salary = 0  # Считаем сумарный доход всех работников
+for line in content:
+    i += 1
+    x, y = line.split()  # В "x" записывается фамилия сотрудника, в "y" его ЗП
+    if float(y) < 20000:
+        print(f"У работника {x} оклад менее 20000. Его оклад = {y}")
+    sum_salary += float(y)
+print(f"Сумарный доход всех сотрудников = {sum_salary}")
+print(f"Всего сотрудников = {i}")
+print(f"Средний доход сотрудников составляет {sum_salary / i}")
