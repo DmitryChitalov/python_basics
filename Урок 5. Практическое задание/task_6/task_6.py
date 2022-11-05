@@ -5,3 +5,35 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+import re
+
+
+def parse_subject(subj_str):
+    """
+    разбирает строку на предмет и типы занятий
+    :param subj_str: строка формата "Предмет: 100(л)   -   15(л)"
+    :return: словарь вида {"name": Предмет, "hrs": [100, 0, 15]}
+    """
+    parts = subj_str.split(":")
+    subj_name = parts[0].strip()
+    types_str = parts[1].strip()
+    types_list = re.findall(r"((\d+)\(\w+\)|(-))", types_str)
+
+    result = {"name": subj_name, "hrs": []}
+    for val_str in types_list:
+        val = 0 if val_str[2] == '-' else int(val_str[1])
+        result["hrs"].append(val)
+    return result
+
+
+f_lines = []
+try:
+    with open("academic_subjects.txt", encoding="utf-8") as f_obj:
+        f_lines = f_obj.readlines()
+except IOError:
+    print("Произошла ошибка ввода вывода!")
+
+subjects = {}
+for line in f_lines:
+    subject = parse_subject(line)
+    subjects[subject["name"]] = sum(subject["hrs"])
