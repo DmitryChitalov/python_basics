@@ -28,3 +28,38 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, matrix):
+        self.matrix = matrix
+
+    def __add__(self, other):
+        i = 0
+        j = 0
+        x = 0
+        print("расчёт сложения матриц:")
+        res = list()
+        for i in range(len(self.matrix)):  # -> разбираем матрицу выделяем строки, цикл для каждой строки
+            for j in range(len(other.matrix)):  # -> разбираем строку матрицы
+                res.append(self.matrix[i][j] + other.matrix[i][j])
+        new_list = [res[i:i + 3] for i in range(0, len(res), 3)]
+        for x in new_list:
+            print(x)
+        return "готово"
+
+    def __str__(self):
+        for x in self.matrix:
+            print(x)
+        return "+++++++"
+
+
+m1 = Matrix([[1, 1, 1],
+             [2, 2, 2],
+             [1, 5, 10]])
+m2 = Matrix([[1, 2, 5],
+             [1, 3, 5],
+             [1, 5, 5]])
+print(m1)
+print(m2)
+print(m1 + m2)
