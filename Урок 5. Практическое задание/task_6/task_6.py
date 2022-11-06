@@ -5,3 +5,20 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+
+my_dict = {}
+with open('in.txt', 'r', encoding='utf-8') as in_file:
+    for line in in_file:
+        # Получаем строку вида: Информатика: 100 50 20
+        line = line.replace('(л)', '').replace('(пр)', '').replace('(лаб)', '').replace('-', '').replace(".", "")
+        # Разбиваем на две части по разделителю ":"
+        subj_line = line.split(':', 1)
+        # В ключ будущего словаря пойдет название предмета
+        subj = subj_line.pop(0)
+        # Получим список с элементами по количеству часов
+        hrs = subj_line[0].split()
+        # Считаме сумму часов
+        sum_hrs = sum(map(int, hrs))
+        my_dict[subj] = sum_hrs
+print(my_dict)
