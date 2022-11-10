@@ -100,3 +100,78 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+from itertools import repeat
+
+
+class Cell:
+    """
+    класс Клетка
+    """
+    def __init__(self, quantity) -> None:
+        if quantity <= 0:
+            raise AttributeError("quantity mas be positive")
+        self.quantity = int(quantity)
+
+    def __add__(self, other):
+        return Cell(self.quantity + other.quantity)
+
+    def __sub__(self, other):
+        res = abs(self.quantity - other.quantity)
+        if res == 0:
+            raise ArithmeticError("клетки поглатили друг друга")
+        return Cell(res)
+
+    def __mul__(self, other):
+        return Cell(self.quantity * other.quantity)
+
+    def __truediv__(self, other):
+        res = self.quantity // other.quantity if self.quantity > other.quantity \
+            else other.quantity // self.quantity
+        return Cell(res)
+
+    def make_order(self, cells_in_row):
+        """
+        Данный метод позволяет организовать ячейки по рядам
+        :param cells_in_row: количество ячеек в ряду
+        :return: строка формата *****\n*****\n***
+        """
+        result = ''
+        rows = self.quantity // cells_in_row
+        if rows > 0:
+            r_str = ''.join(repeat('*', cells_in_row))
+            result += "\n".join(repeat(r_str, rows))
+        l_row_cells = self.quantity - rows * cells_in_row
+        if l_row_cells > 0:
+            result += f"\n{''.join(repeat('*', l_row_cells))}"
+        return result
+
+    def __str__(self) -> str:
+        return f"Cell({self.quantity})"
+
+
+cell1 = Cell(30)
+cell2 = Cell(25)
+
+cell3 = Cell(10)
+cell4 = Cell(15)
+
+print()
+
+print(f"Складываем {cell1} + {cell1} = {cell1 + cell2}")
+print()
+
+print(f"Вычитаем {cell2} - {cell1} = {cell2 - cell1}")
+print(f"Вычитаем {cell4} - {cell3} = {cell4 - cell3}")
+print()
+
+print(f"Умножаем  {cell2} * {cell1} = {cell2 * cell1}")
+print()
+
+print(f"Делим  {cell1} / {cell2} = {cell1 / cell2}")
+print()
+
+print("Организация ячеек по рядам")
+print(cell1.make_order(5))
+print()
+print(cell2.make_order(10))
