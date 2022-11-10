@@ -1,6 +1,5 @@
 """
 Задание 4.
-
 Реализуйте базовый класс Car. У данного класса должны быть следующие публичные атрибуты:
 speed, color, name, is_police (булево).
 
@@ -20,3 +19,63 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+
+class Car:
+    def __init__(self, speed, color, name, is_policy):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_poicy = is_policy
+
+    def go(self):
+        print(f' {self.name} поехала')
+
+    def stop(self):
+        print(f'Машина {self.name} остановилась')
+
+    def turn(self, direction):
+        print(f'Машина {self.name} поехала {direction}')
+
+    def show_speed(self):
+        print(f'Текущая скорость автомобиля {self.name} : {self.speed}')
+
+
+class TownCar(Car):
+
+    def show_speed(self):
+        if self.speed > 60:
+            print(f'Скорость автомобиля {self.name} превышена')
+        super().show_speed()
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed > 40:
+            print(f'Скорость автомобиля {self.name} превышена')
+        super().show_speed()
+
+
+class Sportcar(Car):
+    def w_func(self):
+        print(f'Классная машина {self.name} {self.color}')
+
+
+class PoliceCar(Car):
+    def c_func(self):
+        print(f'Машина {self.color} {self.name} выехала на дежурство ')
+
+
+tc1 = TownCar(55, 'green', 'mazda', False)
+tc2 = TownCar(65, 'green', 'toyota', False)
+wc1 = WorkCar(45, 'green', 'MAZ', False)
+tc1.go()
+tc1.show_speed()
+tc2.show_speed()
+wc1.show_speed()
+sc1 = Sportcar(85, 'green', 'zaz', False)
+tc2.turn('налево')
+sc1.w_func()
+pc1 = PoliceCar(75, 'white', 'priora', True)
+pc1.c_func()
+wc1.stop()
