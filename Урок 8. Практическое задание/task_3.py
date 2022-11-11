@@ -31,8 +31,7 @@ for x in res_string:
     if res_string[el].isdigit():
         int_list.append(res_string[el])
     else:
+        # создать объект класса исключения с выводом соотв. сообщения в методе
         OwnError(c_data, el)
     el += 1
-#    except OwnError as err:
-#       print("pizda")
 print(f'Итоговая последовательность: {int_list}')
