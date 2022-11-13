@@ -12,32 +12,53 @@
 Второй, с декоратором @staticmethod, должен проводить валидацию числа, месяца
 и года (например, месяц — от 1 до 12). Проверить работу полученной структуры на реальных данных.
 """
-class MyDivZero(Exception):
-    def __init__(self):
-        print("Мой обработчик деления на ноль")
+class BadDate(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+class MyDate:
+    day_month_year = ''
+    day = 0
+    month = 0
+    year = 0
+
+    def __init__(self, date_str):
+        self.day_month_year = date_str  # format: 'DD.MM.YYYY'
+        return
+
+    @classmethod
+    def set_day_mon_year(cls, arg1):
+        lst = arg1.split('.', maxsplit=2)
+        nd = int(lst[0])
+        nm = int(lst[1])
+        ny = int(lst[2])
+        cls.validate_params(nd, nm, ny)
+        cls.day = nd
+        cls.month = nm
+        cls.year = ny
         return
 
     @staticmethod
-    def test_div_zero(divider):
-        """
-        Тестирует делитель (число) на равенство нулю.
-        :param divider: делитель
-        :return: True - если делитель равен нулю, False - если делитель не равен нулю
-        """
-        return not divider
+    def validate_params(n_day, n_month, n_year):
+        try:
+            if n_year < 0:
+                raise BadDate('Неверный год!')
+            elif n_month < 1 or n_month > 12:
+                raise BadDate('Неверный месяц!')
+            elif n_day < 1 or n_day > 31:
+                raise BadDate('Неверный день!')
+        except BadDate as err:
+            print(err)
+            return -1
+        return 0
+
+    def __str__(self):
+        return f"{self.day}.{self.month}.{self.year}"
 
 
-try:
-    a = int(input("Введите делимое:"))
-    b = int(input("Введите делитель:"))
-    if MyDivZero.test_div_zero(b):
-        raise MyDivZero
-except MyDivZero:
-    print("На ноль делить нельзя!")
-except ValueError:
-    print("Некорректный ввод!")
-else:
-    z = a / b
-    print(f"Результат деления: {a} / {b} = {z}")
-finally:
-    print("Работа программы завершена.")
+s_date = input("введите дату в формате ДД.ММ.ГГГГ :")
+MyDate.set_day_mon_year(s_date)
+obj = MyDate("01.01.1901")
+MyDate.set_day_mon_year(s_date)
+print(obj)                  # выводит введенную пользователем дату
