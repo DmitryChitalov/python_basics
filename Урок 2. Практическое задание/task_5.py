@@ -15,3 +15,17 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+list_1 = [7, 5, 3, 3, 2]
+print(f"Рейтинг - {list_1}")
+list_2 = int(input("Введите новый элемент рейтинга: "))
+for el in range(len(list_1)):
+    if list_1[el] == list_2:
+        list_1.insert(el + 1, list_2)
+        break
+    elif list_1[0] < list_2:
+        list_1.insert(0, list_2)
+    elif list_1[-1] > list_2:
+        list_1.append(list_2)
+    elif list_1[el] > list_2 and list_1[el + 1] < list_2:
+        list_1.insert(el + 1, list_2)
+print(f"Новый рейтинг - {list_1}")
