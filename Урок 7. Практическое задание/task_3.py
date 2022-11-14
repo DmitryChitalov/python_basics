@@ -100,3 +100,38 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell:
+    def __init__(self, cell):
+        self.cell = cell
+        self.simbol = '*'
+
+    def __str__(self):
+        return str(self.cell)
+
+    def __sub__(self, other):
+        if self.cell > other.cell:
+            return Cell(self.cell - other.cell)
+
+        print(f'Разность отрицательна, поэтому операция не выполняется')
+
+    def __mul__(self, other):
+        return Cell(self.cell * other.cell)
+
+    def __truediv__(self, other):
+        return Cell(self.cell // other.cell)
+
+    def __add__(self, other):
+        return Cell(abs(self.cell + other.cell))
+
+
+
+
+a = Cell(30)
+b = Cell(25)
+c = Cell(10)
+d = Cell(15)
+
+print(f'Складываем \nCумма клеток = {(a + b)} \n')
+print(f'Вычитаем \nРазность клеток = {(d - c)} \n')
+print(f'Умножаем \nУмножение клеток = {(a * b)} \n')
+print(f'Делим \nДеление клеток = {(a / b)} \n')
