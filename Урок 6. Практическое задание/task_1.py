@@ -15,3 +15,27 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+import time
+
+
+class TrafficLight:
+    __color = ""
+
+    def running(self):
+        self.__color = "Красный"
+        print(self.__color)
+        for i in range(7):
+            print(f"Осталось {7 - i}")
+            time.sleep(1)
+        self.__color = "Жёлтый"
+        print(self.__color)
+        for i in range(2):
+            print(f"Осталось {2 - i}")
+            time.sleep(1)
+        self.__color = "Зелёный"
+        print(self.__color)
+
+
+light = TrafficLight()
+light.running()
