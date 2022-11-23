@@ -23,6 +23,7 @@
 class OwnError(Exception):
     def __init__(self, txt):
         self.txt = txt
+        
 class Warehouse:
     all_stuff = []
     def __init__(self, device, name, price, quantity):
@@ -49,6 +50,7 @@ class Equipment(Warehouse):
 
 class Printer(Equipment):
     pass
+    
 class Scanner(Equipment):
     pass
 
