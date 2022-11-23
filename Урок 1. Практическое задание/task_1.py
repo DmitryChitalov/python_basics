@@ -11,3 +11,11 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+
+variable_1 = 15
+variable_2 = "15"
+variable_3 = 15.35
+
+print(f"Переменная {variable_1} имеет тип {type(variable_1)}")
+print(f"Переменная {variable_2} имеет тип {type(variable_2)}")
+print(f"Переменная {variable_3} имеет тип {type(variable_3)}")
