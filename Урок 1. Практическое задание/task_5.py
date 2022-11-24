@@ -20,11 +20,13 @@
 def returnResault(result):
     if result > 0:
         return "Выручка больше издержек"
-    else:
+    elif result < 0:
         return "Издержки больше выручки"
+    else:
+        return f"Что-то идет не так, преятель. Ты работаешь в {result}"
 
-profit_corp = 1000
-costs_corp = 500
+profit_corp = 1500
+costs_corp = 1500
 result = profit_corp - costs_corp
 
 profitability = costs_corp / profit_corp
