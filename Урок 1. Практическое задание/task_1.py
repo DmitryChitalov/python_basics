@@ -11,3 +11,7 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+numbers = 25
+name = 'Ivan'
+placee = 'Moscow'
+print(numbers, name, placee)
