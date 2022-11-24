@@ -18,3 +18,18 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+income = int(input('Введите выручку компании: '))
+expen = int(input('Введите расход компании: '))
+profit = income - expen
+if income > expen:
+    n = int(input('Колличество сотрудников: '))
+    print('У компании прибыль: ', profit)
+    print('Рентабельность выручки: ', expen / income)
+    print('Прибыль на одного сотрудника: ', profit / n)
+elif income == expen:
+    print('Мы в нулях')
+else:
+    print('У компании убытки: ', expen - income)
+
+
+
