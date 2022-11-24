@@ -8,6 +8,5 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
-a = input('Введите целое положительное число n: ')
-b = int(a)
-print(f'n + nn + nnn = {a + str(b*2) + str(b*3)}')
+a = int(input('Введите целое положительное число n: '))
+print(f'n + nn + nnn = {str(a) + str(a*2) + str(a*3)}')
