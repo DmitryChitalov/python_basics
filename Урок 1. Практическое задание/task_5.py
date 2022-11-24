@@ -17,7 +17,7 @@
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
 
-def returnResault(result):
+def return_resault(result):
     if result > 0:
         return "Выручка больше издержек"
     elif result < 0:
@@ -34,4 +34,4 @@ profitability = costs_corp / profit_corp
 employees = 10
 profit_from_empl = profit_corp / employees * profitability
 
-print(returnResault(result))
+print(return_resault(result))
