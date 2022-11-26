@@ -15,3 +15,16 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+num = int(input('Введите целое натуральное число: '))
+my_list = [7, 5, 3, 3, 2]
+a = 0
+while a < len(my_list):
+    if num > int(my_list[a]):
+        my_list.insert(a, num)
+        break
+    a = a + 1
+if num in my_list:
+    print(my_list)
+else:
+    my_list.append(num)
+    print(my_list)
