@@ -19,3 +19,14 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+start = float(input("Кол-во км в первый день - "))
+finish = float(input("Цель - "))
+day = 1
+if start <= 0 or finish <= 0:
+    print("Кол-во км и цель должны быть больше 0.")
+else:
+    while not (start >= finish):
+        print(f"{day}-й день: {start}")
+        day += 1
+        start = start + (start * 0.1)
+    print(f"Ответ: на {day}-й день спортсмен достиг результата — не менее {finish} км.")
