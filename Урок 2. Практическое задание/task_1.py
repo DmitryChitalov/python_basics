@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_list = [99, "99", 99.9, True, None]
+for i in my_list:
+    print(f"Type of {i} is {type(i)}")

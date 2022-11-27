@@ -11,3 +11,17 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+n = input("Введите целые числа через пробел: ")
+n = n.split()
+print(f"Вы ввели следующий список {n}")
+if len(n) % 2 == 0:
+    for i in range(0, len(n) - 1, 2):
+        temp = n[i]
+        n[i] = n[i + 1]
+        n[i + 1] = temp
+else:
+    for i in range(0, len(n) - 2, 2):
+        temp = n[i]
+        n[i] = n[i + 1]
+        n[i + 1] = temp
+print(n)
