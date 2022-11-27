@@ -15,3 +15,15 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+
+my_list = [7, 5, 3, 3, 2]
+while True:
+    user_number = int(input("Введите новый элемент рейтинга "))
+    if 0 < user_number <= 10:
+        my_list.append(int(user_number))
+        my_list.sort(reverse=True)
+        print(my_list)
+    else:
+        print("Рейтинг не может быть больше 10")
+        break
