@@ -29,6 +29,13 @@ def append_elements(count_num, add_elems):
 
 struct_list = []
 
+dict_map = {}
+new_dict_map = {}
+names_list = []
+costs_list = []
+amount_list = []
+units_list = []
+
 count_num = 0
 user_in = None
 
@@ -45,7 +52,7 @@ while user_in != "СТОП":
         user_in = input()
         if user_in != 'СТОП':
             my_elems = {}
-            for elem in ['название', 'цена', 'количество', 'eд', ]:
+            for elem in ['название', 'цена', 'количество', 'eд']:
                 val = input(f"Введите {elem}: ")
                 my_elems[elem] = val
             count_num += 1
@@ -55,7 +62,22 @@ while user_in != "СТОП":
         print("Вы что-то не то ввели... Давайте еще раз!")
         response = input("Наполним БД информацией? (Да/Нет): ")
 
-print("Вот и порабовали...")
+print("Вот и поработали...")
 print(f"В БД у нас содержится информация о: {struct_list}")
 
-# Вторая часть пока в процессе
+# Вторая часть - вывод сводной информации
+for elems in struct_list:
+    for keys, vals in elems[1].items():
+        dict_map[keys] = vals
+        
+    names_list.append(dict_map['название'])
+    costs_list.append(dict_map['цена'])
+    amount_list.append(dict_map['количество'])
+    units_list.append(dict_map['eд'])
+
+new_dict_map['названия'] = names_list
+new_dict_map['цены'] = costs_list
+new_dict_map['количества'] = amount_list
+new_dict_map['eд'] = list(set(units_list))
+
+print(f"Итого у нас:\n{new_dict_map}")
