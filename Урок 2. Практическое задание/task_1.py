@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+list1 = ["Рома", 22, True, None, (1, 2, 3), [11, 22, 33]]
+print(f'Список {list1} содержит элементы следующих типов:')
+for ind, el in enumerate(list1):
+    print(f'{ind}-й элемент {el} {type(el)}')
