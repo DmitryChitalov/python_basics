@@ -9,14 +9,15 @@
 email: jackie@gmail.com, телефон: 01005321456
 """
 
-def person():
-    name = input("Введите имя: ")
-    last_name = input("Введите фамилию: ")
-    dob = input("Введите дату рождения: ")
-    city = input("Введите город проживания: ")
-    email = input("Ваш email: ")
-    phone = input("Ваш номер телефона: ")
+
+def person(name, last_name, dob, city, email, phone):
     sum_p = (f"{name.title()} {last_name.title()} {dob} года рождения, проживает в городе {city.title()}, "
              f"email: {email}, телефон: {phone}")
     return sum_p
-print(person())
+arg_1 = input("Введите имя: ")
+arg_2 = input("Введите фамилию: ")
+arg_3 = input("Введите дату рождения: ")
+arg_4 = input("Введите город проживания: ")
+arg_5 = input("Ваш email: ")
+arg_6 = input("Ваш номер телефона: ")
+print(person(last_name = arg_2, name = arg_1, dob = arg_3, city = arg_4, email = arg_5, phone = arg_6))
