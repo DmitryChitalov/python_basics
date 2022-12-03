@@ -17,3 +17,18 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def my_div(a, b):
+    try:
+        return float(a) / float(b)
+    except ZeroDivisionError:
+        print("Вы что? Пытаетесь делить на 0!")
+    except ValueError:
+        print("Нужны числа а не буквы")
+
+
+first_number = input("Введите первое число: ")
+second_number = input("Введите второе число: ")
+
+my_div(first_number, second_number)

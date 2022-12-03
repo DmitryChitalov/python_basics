@@ -6,3 +6,19 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+summa_num = 0
+
+while True:
+    data = input("Введите строку чисел, разделенных пробелом (выход - e) ")
+    if "e" in data:
+        data = data.split("e")
+        data.pop(-1)
+        data = str(data[0]).strip().split()
+        data = [float(x) for x in data]
+        summa_num = summa_num + sum(data)
+        print(summa_num)
+        break
+    data = data.strip().split()
+    data = [float(x) for x in data]
+    summa_num = summa_num + sum(data)
