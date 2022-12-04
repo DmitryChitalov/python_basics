@@ -15,4 +15,12 @@ def card_users(first_name, last_name, year_in, city_live, email, phone):
 проживает в городе {city_live}, email: {email}, телефон: {phone}"
 
 
-print(card_users('Иван', 'Иванов', 1997, "Бамбей", 'goo@gogo.go', '+73455436789'))
+# Пример без функции "input()"
+first_name = 'Иван'
+last_name = 'Иванов'
+year_in = 1997
+city_live = "Бамбей"
+email = 'goo@gogo.go'
+phone = '+73455436789'
+
+print(card_users(first_name, last_name, year_in, city_live, email, phone))
