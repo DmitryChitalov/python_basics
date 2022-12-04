@@ -16,13 +16,15 @@ Process finished with exit code 0
 
 def division_num(arg_1, arg_2):
     """ Функция деления чисел """
-    if arg_1 == str(arg_1) or arg_2 == str(arg_2):
-        return "Что-то из аргументов не является числом"
-    else:
-        try:
-            return arg_1 / arg_2
-        except ZeroDivisionError:
-            return "Вы что? Пытаетесь делить на 0!"
+    try:
+        return arg_1 / arg_2
+    except ZeroDivisionError:
+        return "Вы что? Пытаетесь делить на 0!"
 
-
-print(division_num(5, 10))
+try:
+    arg_int_1 = int(input("Введите первое число: "))
+    arg_int_2 = int(input("Введите второе число: "))
+    print(division_num(arg_int_1, arg_int_2))
+except:
+    print("Что-то из аргументов не является числом")
+    print("Нужно ввести числа!")
