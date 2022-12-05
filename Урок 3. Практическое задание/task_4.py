@@ -5,3 +5,24 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(pos_x, neg_y, keys):
+    """ Функция возведения числа x в степень y """
+    if keys == 1:
+        return pos_x **neg_y
+    elif keys == 2:
+        result = 1
+        if neg_y > 0:
+            for _ in range(neg_y):
+                result *= pos_x
+        else:
+            for _ in range(-neg_y):
+                result /= pos_x
+        return result
+
+
+print(my_func(5, 4, 1))
+print(my_func(5, 4, 2))
+print(my_func(5, -4, 1))
+print(my_func(5, -4, 2))
