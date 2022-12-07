@@ -16,12 +16,24 @@ def my_func(a, b, c):
     elif first_num == c:
         second_num = max(a, b)
     print(f"Сумма двух наибольших чисел без sort(): {first_num + second_num}")
+#another answer
+#def get_max(*args):
+#    lst = list(args)
+#    i = 0
+#    res = 0 
+#    while i != 2:
+#        max_val = max(lst)
+#        res += max_val
+#        lst.remove(max_val)
+#        i += 1
+#    print(res)
+
 
 
 def sort_func(sa, sb, sc):
     res = sorted([sa, sb, sc])
     print(f"Сумма двух наибольших чисел с sort: {sum(res[1:3])}")
-
+#or print(sum(sorted(list(args), reverse=True)[:2]))
 
 val1 = int(input("Первое число: "))
 val2 = int(input("Второе число: "))
