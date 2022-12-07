@@ -31,4 +31,4 @@ try:
     b = int(input("Введите второе число: "))
     print(my_func(a, b))
 except ValueError:
-    print("Enter only numbers)
+    print("Enter only numbers")
