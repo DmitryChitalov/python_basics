@@ -32,3 +32,17 @@ while True:
             elif number < my_list[len(my_list) - 1]:
                 my_list.append(number)
     print(my_list)
+    
+    
+    
+    
+#another answer
+my_list = [7, 5, 3, 3, 2]
+while True:
+    n = input("Enter number or q")
+    if n != 'q':
+        my_list.append(int(n))
+        my_list.sort(reverse=True)
+        print(my_list)
+    else:
+        break
