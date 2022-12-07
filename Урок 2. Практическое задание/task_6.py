@@ -25,3 +25,36 @@
 “ед”: [“шт.”]
 }
 """
+
+
+my_lst = []
+while True:
+    my+lst.append((input("Number of an item"),
+                   {"Name": input("Name"),
+                    "Price": input("Price"),
+                    "Amount": input"Amount"),
+                    "Unit": input("Unit")}))
+    q = input("End? y or n")
+    if q == "y":
+        break
+
+
+my_lst = [(1, {"Name": "PC", "Price": 20000, "Amount": 5, "Unit": "p."}),
+          (2, {"Name": "Printer", "Price": 6000, "Amount": 2, "Unit": "p."}),
+          (3, {"Name": "Scanner", "Price": 2000, "Amount": 7, "Unit": "p."})]
+
+
+names_lst = []
+prices_lst = []
+counts_lst = []
+units_lst = []
+res_dict = {}
+for i in range(len(my_lst)):
+    names_lst.append(my_lst[i][1]["Name"])
+    prices_lst.append(my_lst[i][1]["Price"])
+    counts_lst.append(my_lst[i][1]["Amount"])
+    units_lst.append(my_lst[i][1]["Unit"])
+    
+    
+res_dict.update({"Names": names_lst, "Prices": prices_lst, "Amounts": counts_lst, "Units": units_lst})
+print(res_dict)
