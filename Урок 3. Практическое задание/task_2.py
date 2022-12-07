@@ -20,3 +20,20 @@ my_user(name=input("Введите имя: "),
         city=input("Введите город: "),
         email=input("Введите email: "),
         number=int(input("Введите телефон: ")))
+
+
+#another answer
+def user_info(**kwarsg):
+    print(f"{kwargs["name]} {surname} {year_of_birth} birth year, "
+        f"lives in (city), email: {email}, number: {phone}"}
+        
+                    
+user_info(
+    name="Ivan",
+    surname="Ivanov",
+    year_of_birth="1948",
+    city="Moscow",
+    email="sdjh@gmail.com"
+    phone="65654654"
+)
+    
