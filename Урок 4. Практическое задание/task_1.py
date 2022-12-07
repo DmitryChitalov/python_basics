@@ -23,9 +23,9 @@ if len(argv) > 1:
     bonus = int(bonus)
     print(my_salary(argv))
 else:
-    hours = int(input("Inpute time work: "))
-    rate = int(input("Inpute ratet: "))
-    bonus = int(input("Inpute prize: "))
+    hours = int(input("Input emounte of work hours: "))
+    rate = int(input("Input rate: "))
+    bonus = int(input("Input bonus: "))
     print(my_salary(hours, rate, bonus))
 
 
