@@ -33,7 +33,23 @@ user_info(
     surname="Ivanov",
     year_of_birth="1948",
     city="Moscow",
-    email="sdjh@gmail.com"
+    email="sdjh@gmail.com",
     phone="65654654"
 )
     
+#another variant
+name = input()
+surname = input()
+year_of_birth = input()
+city = input()
+email = input()
+phone = input()
+                    
+user_info(
+    name=name,
+    surname=surname,
+    year_of_birth=year_of_birth,
+    city=city,
+    email=email,
+    phone=phone
+)
