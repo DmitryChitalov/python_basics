@@ -19,7 +19,7 @@ Process finished with exit code 0
 """
 
 
-def my_func(val1, val2):
+def my_func(*args):
     try:
         print(val1 / val2)
     except ZeroDivisionError:
