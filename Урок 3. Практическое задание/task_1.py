@@ -26,7 +26,9 @@ def my_func(val1, val2):
         print("Вы что? Пытаетесь делить на 0!")
 
 
-a = int(input("Введите первое число: "))
-b = int(input("Введите второе число: "))
-
-my_func(a, b)
+try:
+    a = int(input("Введите первое число: "))
+    b = int(input("Введите второе число: "))
+    print(my_func(a, b))
+except ValueError:
+    print("Enter only numbers)
