@@ -34,7 +34,7 @@ while True:
                     "Price": input("Price"),
                     "Amount": input"Amount"),
                     "Unit": input("Unit")}))
-    q = input("End? y or n")
+    q = input("If END enter y")
     if q == "y":
         break
 
