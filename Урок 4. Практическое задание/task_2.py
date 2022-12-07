@@ -7,3 +7,17 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+print("Исходный список: ", my_list)
+new_list = []
+for el in range(1, len(my_list)):
+    if my_list[el] > my_list[el - 1]:
+        new_list.append(my_list[el])
+        el += 1
+    else:
+        el += 1
+print("Новый список без генератора: ", new_list)
+
+
+new_list = [my_list[el] for el in range(1, len(my_list)) if my_list[el] > my_list[el - 1]]
+print("Новый список с генератором: ", new_list)
