@@ -32,7 +32,7 @@ while True:
     my+lst.append((input("Number of an item"),
                    {"Name": input("Name"),
                     "Price": input("Price"),
-                    "Amount": input"Amount"),
+                    "Amount": input("Amount"),
                     "Unit": input("Unit")}))
     q = input("If END enter y")
     if q == "y":
