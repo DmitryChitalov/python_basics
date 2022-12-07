@@ -23,7 +23,7 @@ my_user(name=input("Введите имя: "),
 
 
 #another answer
-def user_info(**kwarsg):
+def user_info(**kwargs):
     print(f"{kwargs["name]} {surname} {year_of_birth} birth year, "
         f"lives in (city), email: {email}, number: {phone}"}
         
