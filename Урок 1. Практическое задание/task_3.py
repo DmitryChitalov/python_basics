@@ -8,3 +8,7 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+#Task_3
+n = int(input("Введите число n: "))
+nnn = n + int(str(n)+str(n)) + int(str(n) + str(n) + str(n))
+print(f'Выражение n+n+nnn равно - {nnn}')
