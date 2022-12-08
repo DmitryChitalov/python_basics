@@ -17,3 +17,17 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def division(n1: int, n2: int):
+    try:
+        result = n1 / n2
+        return result
+    except ZeroDivisionError:
+        print("Вы передали 0 в качестве 2 аргумента!")
+        n3 = int(input("Введите второй аргумент:"))
+        result_new = division(n1, n3)
+        return result_new
+
+num1 = input("Введите первое число: ")
+num2 = input("Введите второе число: ")
+
+print("Результат деления:", division(4, 3))
