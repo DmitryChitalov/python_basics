@@ -6,3 +6,9 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+try:
+    script_name, param_1, param_2, param_3 = argv
+    print("Заработная плата:", (int(param_1) * int(param_2)) + int(param_3))
+except ValueError:
+    print("Некорректный ввод аргументов!")
