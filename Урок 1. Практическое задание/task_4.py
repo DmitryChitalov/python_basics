@@ -10,3 +10,12 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+#Task_4
+numb = int(input('А сейчас непонятный фокус. Введите число:'))
+max_numb = 0
+while numb != 0:
+    numb_c = numb % 10
+    if max_numb < numb_c:
+        max_numb = numb_c
+    numb = numb // 10
+print(f'Самая большая цифра в числе - {max_numb}')
