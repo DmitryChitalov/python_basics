@@ -5,3 +5,8 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+def find_sum(n1: int, n2: int, n3: int):
+    sum = n1 + n2 + n3
+    return sum - min(n1, n2, n3)
+
+print(find_sum(1, 2, -3))

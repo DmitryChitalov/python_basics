@@ -5,3 +5,24 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def custom_pow(n1: float, n2: int):
+
+    if n2 == 0:
+        return 1 
+    else:
+        result = 1
+        n2 = n2 * -1
+        while n2 != 0:
+            result *= n1
+            n2 -= 1
+        return 1 / result
+
+try:
+    x = float(input("Введите первое число: "))
+    y = int(input("Введите второе висло: "))
+    if y > 0:
+        print("Второе число должно быть отрицательным!")
+    else:
+        result = custom_pow(x, y)
+except ValueError:
+    print("Некорректный ввод аргументов!")
