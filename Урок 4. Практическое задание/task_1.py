@@ -7,7 +7,6 @@
 необходимо запускать скрипт с параметрами.
 """
 
-
 from sys import argv
 
 
@@ -27,6 +26,3 @@ else:
     rate = int(input("Input rate: "))
     bonus = int(input("Input bonus: "))
     print(my_salary(hours, rate, bonus))
-
-
-
