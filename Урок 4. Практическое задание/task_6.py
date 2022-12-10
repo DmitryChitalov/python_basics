@@ -12,3 +12,24 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import cycle, count
+
+# 1
+start = int(input("Start number: "))
+
+for i in count(start):
+    if i <= 10:
+        print(i)
+    else:
+        break
+
+# 2
+my_list = [a for a in range(1, 90) if a % 2 == 0]
+
+for i, j in enumerate(cycle(my_list)):
+    print(j)
+    if i == 50:
+        break
+    else:
+        continue
