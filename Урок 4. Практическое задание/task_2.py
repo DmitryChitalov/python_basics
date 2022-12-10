@@ -7,3 +7,19 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+import numpy  # импортируем
+
+
+def my_func(my_list):
+    # если элемент больше предыдущего, то добавляем в новый список
+    new_list = [my_list[i + 2] for i in range((len(my_list)) - 2) if my_list[i + 1] < my_list[i + 2]]
+    return new_list
+
+
+list1 = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+list2 = list(numpy.random.randint(1, 1000, 13))  # используем генераторный список из numpy
+
+print(f'Исходный список 1: {list1}')
+print('Результат для списка 1', my_func(list1))
+print('Исходный список 2:', list2)
+print('Результат для списка 2', my_func(list2))
