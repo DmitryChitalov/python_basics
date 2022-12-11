@@ -6,3 +6,30 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def sum_row(int_list):
+    s = 0
+    list_nums = list(map(int, int_list))    # переводим в список целых чисел
+    for i in range(len(list_nums)):
+        s = s + list_nums[i]                # суммируем строку
+    return s
+
+
+sum_total = 0
+while True:
+    print('Для нахождения суммы строки нажмите Enter, для завершения подсчётов введите q')
+    # удаляем пробелы, используя функцию строки split()
+    list1 = input('Введите строку чисел, разделённых пробелом: ').split()
+    if list1[-1] != 'q':            # проверяем наличие q
+        print('Строка: ', list1)
+        print('Сумма строки: ', sum_row(list1))
+    else:
+        list1.remove('q')
+        print('Строка: ', list1)
+        print('Сумма строки: ', sum_row(list1))
+        break
+    sum_total = sum_total + sum_row(list1)
+    print('Общий итог: ', sum_total)
+sum_total = sum_total + sum_row(list1)
+print('Общий итог: ', sum_total)

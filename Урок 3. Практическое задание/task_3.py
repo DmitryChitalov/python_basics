@@ -5,3 +5,25 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+
+def my_func1(a, b, c):
+    my_list = [a, b, c]
+    my_list.sort()                      # используем встроенную функцию
+    sum_max = my_list[1] + my_list[2]   # складываем два последних
+    print(f'1. Сумма двух наибольших: {my_list[1]} + {my_list[2]} = {sum_max}')
+
+
+def my_func2(a, b, c):
+    if a > b:           # выполняем пузырьковую сортировку
+        a, b = b, a
+    if b > c:
+        b, c = c, b
+    if a > b:
+        a, b = b, a
+    sum_max = b + c     # складываем два наибольших
+    print(f'2. Сумма двух наибольших: {b} + {c} = {sum_max}')
+
+
+my_func1(-33, 22, 100)
+my_func2(-33, 22, 100)
