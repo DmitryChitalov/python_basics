@@ -8,10 +8,3 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
-dict_num = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
-with open("note1.txt", "r") as note, open("note2.txt", "a", encoding="utf-8") as note2:
-    for fstr in note:
-        tstr = fstr.split()
-        for wrd in tstr:
-            if dict_num.get(wrd) is not None:
-                note2.write(fstr.replace(wrd, dict_num.get(wrd)))
