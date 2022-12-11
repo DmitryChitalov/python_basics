@@ -7,3 +7,12 @@
 Иванов 23543.12
 Петров 13749.32
 """
+with open("money.txt", "r", encoding="UTF-8") as f:
+    data = f.readlines()
+    data = [x.split() for x in data]
+    data = [[x[0], float(x[1])] for x in data]
+print(data)
+for i in data:
+    if i[1] < 20000:
+        print(f"Оклад менее 20 000 р - {i[0]}")
+print(f"Средняя зп сотрудников - {sum([x[1] for x in data])/len(data)}")
