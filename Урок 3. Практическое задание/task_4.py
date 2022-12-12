@@ -5,3 +5,27 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+# Первый вариант
+def my_func(x, y):
+    if y == 0:
+        return 1
+    elif y == 1:
+        return x
+    elif y < 0:
+        return 1 / my_func(x, -y)
+    return x * my_func(x, y - 1)
+print(my_func(3, -2))
+
+# Второй вариант
+def my_func_2(x, y):
+    _list = y * (1, x)
+    if y == 0:
+        return 1
+    elif y == 1:
+        return x
+    elif y < 0:
+        return 1 / _list
+    return _list
+print(my_func(3, -2))
+
