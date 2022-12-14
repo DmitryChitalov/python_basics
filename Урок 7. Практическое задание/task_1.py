@@ -60,7 +60,6 @@ class Matrix:
         counter = 0
         counter_list = 0
         counts = ([len(i) for i in [j for j in self.matrix]])
-        print(counts)
 
         for elem in new_lst:
             return_mrx.append(str(elem) + ' ')
