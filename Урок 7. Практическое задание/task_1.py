@@ -28,3 +28,56 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    """Класс Матрица"""
+
+    def __init__(self, lst: list):
+        """Инициализация параметров"""
+        self.matrix = lst
+
+    def __str__(self):
+        """Вывод матрицы"""
+        return_mrx = []
+        for elems in self.matrix:
+            return_mrx.append(str(elems).replace(',', '')
+                .replace('[', '').replace(']', '') +'\n')
+
+        mrx = ''.join(return_mrx)
+
+        return f"Матрица:\n{mrx}"
+
+    def __add__(self, another):
+        """Метод сложения матриц"""
+        new_lst = []
+        return_mrx = []
+
+        for elems in range(len(self.matrix)):
+            for elem in range(len(self.matrix[elems])):
+                new_lst.append(self.matrix[elems][elem] + another.matrix[elems][elem])
+
+        counter = 0
+        counter_list = 0
+        counts = ([len(i) for i in [j for j in self.matrix]])
+        print(counts)
+
+        for elem in new_lst:
+            return_mrx.append(str(elem) + ' ')
+            counter += 1
+            if counter == counts[counter_list]:
+                counter = 0
+                counter_list += 1
+                return_mrx.append('\n')
+        mrx = ''.join(return_mrx)
+
+        return f"Сумма Матриц:\n{mrx}"
+
+
+matrx_1 = Matrix([[1, 2, 3, 3], [4, 5, 6], [7, 8, 9]])
+matrx_2 = Matrix([[1, 2, 3, 4], [4, 5, 6], [7, 8, 9]])
+
+print(matrx_1.__str__())
+print(matrx_2.__str__())
+
+print(matrx_1.__add__(matrx_2))
