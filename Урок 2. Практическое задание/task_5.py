@@ -15,3 +15,20 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+init_list = [8, 7, 4, 4, 3, 2, 1]
+print(init_list)
+try:
+    new_el = int(input("Введите новую позицию рейтинга в формате натурального числа: "))
+    i = 0
+    if new_el <= 0:
+        print("Некорректный ввод. Повторите.")
+    else:
+        while i < len(init_list):
+            if new_el < init_list[i]:
+                i = i + 1
+            else:
+                init_list.insert(i, new_el)
+                break
+        print(f'{init_list}')
+except ValueError:
+    print("Некорректный ввод. Повторите.")

@@ -9,3 +9,11 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+try:
+    s_inp = abs(int(input("Введите время в секундах: ")))
+    h_res = s_inp // 3600
+    m_res = (s_inp % 3600) // 60
+    s_res = s_inp - h_res*3600 - m_res*60
+    print(f'{str(h_res).zfill(2)}:{str(m_res).zfill(2)}:{str(s_res).zfill(2)}')
+except ValueError:
+    print("Некорректный ввод. Повторите.")

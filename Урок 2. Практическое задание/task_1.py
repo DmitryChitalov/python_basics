@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+test_list = ['test', 1, 1.25, True, ['a', 'b'], ('a', 'b'), None]
+for _ in test_list:
+    print(f'Значение {test_list.index(_)+1}: {_}, тип - {type(_)}')
