@@ -4,6 +4,9 @@
 Узнайте у пользователя целое положительное число n.
 Найдите сумму чисел n + nn + nnn.
 
-a = int(input('введите целое положительное число'))
-summ_n = a+a**2+a**3
-print(summ_n)
+n = input('Введите число: ')
+nn = int(n+n)
+nnn = int(n+n+n)
+n = int(n)
+res = n+nn+nnn
+print(res)
