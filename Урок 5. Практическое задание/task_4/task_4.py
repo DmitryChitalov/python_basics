@@ -7,3 +7,15 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+with open('4.txt', encoding="utf-8") as sal:
+    i = 0
+    sal_sum = 0.0
+    print('Сотрудники с зарплатой < 20000:')
+    for str1 in sal:
+        strt = str1.split()
+        sal_sum = sal_sum + float(strt[1])
+        i += 1
+        if float(strt[1]) < 20000:  
+            print(str1, end='')
+    print('Средняя зарпалата сотрудников:', "%.2f" % (sal_sum / i))
