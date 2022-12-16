@@ -20,13 +20,13 @@ length (длина в метрах), width (ширина в метрах).
 
 class Road:
     def __init__(self, length, width, weight1m2, thickness):
-        self.__length = length  # защищённый атрибут
-        self.__width = width    # защищённый атрибут
+        self._length = length  # защищённый атрибут
+        self._width = width    # защищённый атрибут
         self.weight1m2 = weight1m2
         self.thickness = thickness
 
     def asphalt(self):
-        return self.__length * self.__width * self.weight1m2 * self.thickness
+        return self._length * self._width * self.weight1m2 * self.thickness
 
 
 rd1 = Road(5000, 20, 25, 0.05)
