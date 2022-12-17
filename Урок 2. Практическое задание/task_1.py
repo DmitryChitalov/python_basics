@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+user_list = [5, "string", 0.15, True, None]
+
+for i in user_list:
+    print(type(i))
