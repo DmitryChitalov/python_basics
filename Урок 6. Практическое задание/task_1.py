@@ -15,3 +15,26 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+
+
+class TrafficLight:
+    def __int__(self, color="White"):
+        self.__color = color
+
+    def running(self):
+        """(красный, желтый, зеленый)"""
+        while True:
+            self.__color = "Red"
+            print(self.__color)
+            time.sleep(7)
+            self.__color = "Yellow"
+            print(self.__color)
+            time.sleep(2)
+            self.__color = "Green"
+            print(self.__color)
+            time.sleep(2)
+
+
+obj = TrafficLight()
+obj.running()
