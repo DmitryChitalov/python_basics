@@ -100,3 +100,33 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = quantity
+
+    def __add__(self, other):  # +
+        return f'Складываем клетки. {self.quantity} + {other.quantity} = {self.quantity + other.quantity}'
+
+    def __mul__(self, other):  # *
+        return f'Умножаем клетки. {self.quantity} * {other.quantity} = {self.quantity * other.quantity}'
+
+    def __sub__(self, other):  # -
+        if self.quantity < other.quantity:  # учитываем ситуацию с отрицательной разностью
+            print('Разность отрицательна, поэтому операция не выполняется')
+        else:
+            print(f'Вычитаем клетки. {self.quantity} - {other.quantity} = {self.quantity - other.quantity}')
+        return ''
+
+    def __truediv__(self, other):  # /
+        return f'Делим клетки. {self.quantity} / {other.quantity} = {self.quantity // other.quantity}'
+
+
+cell1 = Cell(10)
+cell2 = Cell(20)
+print(cell1 + cell2)
+print(cell1 * cell2)
+print(cell1 - cell2)
+print(cell2 - cell1)
+print(cell2 / cell1)
