@@ -28,3 +28,42 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+
+    def __init__(self, mstr1):
+        self.mstr1 = mstr1
+
+    def __str__(self):  # перегрузка метода __str()__ для вывода матрицы в привычном виде
+        mtrx_out = ""
+        for i in range(len(self.mstr1)):
+            mtrx_out += str(self.mstr1[i])
+            mtrx_out += "\n"
+        return mtrx_out
+
+    # перегрузка метода __add()__ для реализации операции
+    # сложения двух объектов класса Matrix (двух матриц)
+    def __add__(self, other):
+        mtrx_res = []
+        for i in range(len(self.mstr1)):
+            mtrx_res_l = []
+            for c in range(len(self.mstr1[i])):
+                mtrx_res_l.append(self.mstr1[i][c] + other.mstr1[i][c])     # сумммируем поэлементно
+            mtrx_res.append(mtrx_res_l)
+            print(str(mtrx_res[i]))
+
+        return print(" ")
+
+
+l1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]      # список списков для формирования матрицы
+l2 = [[11, 2, 3], [4, 5, 6], [7, 8, 9]]     # список списков для формирования матрицы
+l3 = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]      # список списков для формирования матрицы
+m1 = Matrix(l1)     # создаём объект класса
+print(m1)
+m2 = Matrix(l2)     # создаём объект класса
+print(m2)
+m3 = Matrix(l3)     # создаём объект класса
+print(m3)
+m1 + m2
+m3 + m2
