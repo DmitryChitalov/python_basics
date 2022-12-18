@@ -6,4 +6,4 @@ with open("new_file.txt") as file_1, open ("next_file", "w+",
         any_line = line.split()
         any_line[0] = my_list[i]
         file_2.write(' '.join(any_line) + '\n')
-        i +=1
+        i += 1
