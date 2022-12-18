@@ -6,3 +6,24 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def my_func():
+    result = 0
+    exit_if = False
+    while exit_if == False:
+        num = input("Введите числа, разделенные пробелом: ").split()
+        res = 0
+        for i in range(len(num)):
+            if num[i] == 'q':
+                exit_if = True
+                break
+            else:
+                res += int(num[i])
+        result += res
+        print(f"Сумма введенных чисел: {result}")
+    print(f"Сумма всех чисел: {result}")
+
+
+my_func()
+
