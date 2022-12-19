@@ -17,3 +17,12 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+#Task_1
+def division(num_1, num_2):
+    try:
+        return num_1 / num_2
+    except ZeroDivisionError:
+        return "куда ты делишь?"
+num_1 = int(input("Введите первое число: "))
+num_2 = int(input("Введите второе число: "))
+print(division(num_1, num_2))
