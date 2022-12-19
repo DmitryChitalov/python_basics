@@ -14,3 +14,13 @@
 1. раз
 2. перерефриж
 """
+my_list = input("введите предложение").split()
+len_my_list = len(my_list)
+i = 0
+for len_my_list in my_list:
+    if len(str(my_list[i])) <= 10:
+        print(f" {i+1}. {my_list[i]}")
+        i += 1
+    else:
+        print(f" {i+1}. {my_list[i] [0:10]}")
+        i += 1
