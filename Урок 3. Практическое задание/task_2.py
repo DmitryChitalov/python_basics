@@ -8,3 +8,7 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+#Task_2
+def personality(name, sname, b_date, city, email, ph_numb):
+    print(f'{name} {sname}, {b_date} года рождения, проживающий в городе {city}. Электронная почта: {email}, телефон: {ph_numb}.')
+personality(name = 'Глеб', sname = 'Жиглов', b_date = '1953', city = 'Москва', email = 'g_zhi@ya.ru', ph_numb = '88005553535')
