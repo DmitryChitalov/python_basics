@@ -25,3 +25,18 @@
 “ед”: [“шт.”]
 }
 """
+count_goods = int(input(f"Здравствуйте! Сколько продуктов желаете добавить в систему?\n\t Кол-во: "))
+prop = "Название", "Цена", "Количество", "Ед.изм"
+products, names, prices, Quantity, uoms = [], [], [], [], []
+for i in range(count_goods):
+    print(f"Введите характеристики для товара # {i + 1} :")
+    name, price, quantity, uom = input("\tНазвание : "), input("\tЦена товара : "), input("\tКоличество : "), \
+                                 input("\tЕд.изм : ")
+    products_up = (i + 1, {prop[0]: name, prop[1]: price, prop[2]: quantity, prop[3]: uom})
+    products.append(products_up)
+    names.append(products[i][1].get(prop[0]))
+    prices.append(products[i][1].get(prop[1]))
+    Quantity.append(products[i][1].get(prop[2]))
+    uoms.append(products[i][1].get(prop[3]))
+analytics ={prop[0]: names, prop[1]: prices, prop[2]: Quantity, prop[3]: uoms}
+print(f"Статистика по товарам ниже \n{analytics}")
