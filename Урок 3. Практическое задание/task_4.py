@@ -5,3 +5,21 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    if x <= 0 or y >= 0 or not(isinstance(y, int)) or not(isinstance(x, float)):
+        result = "Невыполнены условия. Повторите"
+    else:
+        result = 1
+        for i in range(abs(y)):
+            result = result/x
+    return result
+
+
+try:
+    x = float(input("Введите действительное положительное число: "))
+    y = int(input("Введите отрицательное целое число: "))
+    print(my_func(x, y))
+except ValueError:
+    print("Некорректный ввод. Повторите")

@@ -6,3 +6,22 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+list_sum = 0
+while True:
+    list_extension = input('Введите несколько чисел, разделённых пробелом.\nПри наличии в строке символа \"|\" суммируемыей список будет обрезан до данного символа\n').split(' ')
+    for i in range(len(list_extension)):
+        if list_extension[i] == "|":
+            print(f'Прервано вводом специального символа. Сумма: {list_sum}')
+            break
+        else:
+            try:
+                list_sum = list_sum + float(list_extension[i])
+            except ValueError:
+                print('Введено некорректное значение. Выполнение прервано.')
+                break
+    else:
+        print(f'Сумма: {list_sum}')
+        continue
+    break
