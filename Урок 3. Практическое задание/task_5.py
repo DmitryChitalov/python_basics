@@ -9,17 +9,17 @@
 def my_func():
     result = 0
     while True:
-        numbers = input('Enter numbers through space. '
-                        'Enter qqq for exit ').split()
+        numbers = input(f'Введите числа разделенные пробелом. '
+                        'После этого введите q для выхода ').split()
         for i in numbers:
             try:
-                if i == 'qqq':
-                    print(f'The sum is {result}. Job is done')
+                if i == 'q':
+                    print(f'Сумма {result} ')
                     return
                 else:
                     result += int(i)
             except ValueError:
-                print('Enter numbers or qqq for exit')
-        print(f'The sum is {result}')
+                print(f'Введите число или q для выхода')
+        print(f'Сумма {result}')
 
 my_func()
