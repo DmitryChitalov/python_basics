@@ -14,10 +14,17 @@
 <class 'float'>
 <class 'bool'>
 <class 'NoneType'>
-"""
+
 my_list = [5, "string", 0.15, True, None]
 print(type(my_list[0]))
 print(type(my_list[2]))
 print(type(my_list[3]))
 print(type(my_list[4]))
 print(list(map(type, my_list)))
+"""
+my_list = [5, "string", 0.15, True, None]
+len_my_list = len(my_list)
+i = 0
+while i < len_my_list:
+    print(type(my_list[i]))
+    i += 1
