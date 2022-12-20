@@ -28,6 +28,7 @@
 8 10 12
 14 16 18
 """
+
 class Matrix:
     def __init__(self, matrix):
         self.matrix = matrix
