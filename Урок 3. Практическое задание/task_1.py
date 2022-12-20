@@ -17,3 +17,21 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def my_func(user_inp_num, user_inp_den):
+    try:
+        return round((int(user_inp_num)/int(user_inp_den)), 2)
+    except ZeroDivisionError:
+        print('Вы что? Пытаетесь делить на 0!')
+    except ValueError:
+        print('Нужно ввести цифры!')
+
+
+numerator = input('Введите первое число: ')
+denumerator = input('Введите второе число: ')
+
+result = my_func(numerator, denumerator)
+
+print(result)
+

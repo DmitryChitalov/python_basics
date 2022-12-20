@@ -18,3 +18,26 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+# revenue - выручка
+# costs - издержки
+# profit - прибыль
+# loss - убыток
+# profitability - рентабельность
+
+input_revenue = int(input('Введите выручку: '))
+input_costs = int(input('Введите издержки: '))
+
+profit = input_revenue - input_costs
+
+if profit > 0:
+    print(f'Компания вышла в прибыль: {profit}')
+    profitability = profit / input_revenue
+    print(f'profitability (рентабельность) = {profitability}')
+    
+    employees = int(input('Введите количестов сотрудников: '))
+    employees_profib = profit / employees
+    print(f'Рентабльность на 1-го сотрудника =  {employees_profib}')
+elif profit < 0:
+    print(f'У компании убыток в размере = {profit}')
+else:
+    print('Компания вышла в ноль!')
