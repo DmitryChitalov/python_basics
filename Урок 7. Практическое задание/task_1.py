@@ -28,3 +28,25 @@
 8 10 12
 14 16 18
 """
+
+class Matrix:
+    def __init__(self, matrix):
+        self.matrix = matrix
+
+    def __add__(self, other):
+        for i in range(len(self.matrix)):
+            for j in range(len(self.matrix)):
+                self.matrix[i][j] = int(self.matrix[i][j]) + int(other.matrix[i][j])
+        return Matrix(self.matrix)
+
+    def __str__(self):
+        new_view = [str(i).strip('[]').replace(',', '')for i in self.matrix]
+        return "\n".join(new_view)
+
+
+m1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+m2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(f'Матрица 1:\n{m1}')
+print(f'Матрица 2:\n{m2}')
+m3 = m1 + m2
+print(f'Сумма матриц:\n{m3}')
