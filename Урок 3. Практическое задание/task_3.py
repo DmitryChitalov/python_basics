@@ -5,7 +5,7 @@
 1) используя функцию sort()
 2) без функции sort()
 """
-#
+
 # с использованием функции sorted
 def my_func(*args):
     print(sum(sorted(list(args), reverse = True)[:2]))
