@@ -26,7 +26,7 @@ while True:
         print(count, 'Сумма чисел = ', get_sum(user_input))
     count += 1 """
     
-
+#
 def get_sum(inp = 0):
     result = 0
     count = 1
