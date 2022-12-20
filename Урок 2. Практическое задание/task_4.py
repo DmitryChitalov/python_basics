@@ -14,3 +14,11 @@
 1. раз
 2. перерефриж
 """
+n_str = 0
+list = input().split()
+for word in list:
+    n_str += 1
+    if len(str(word)) > 10:
+        print("<", n_str, "строка >", str(word)[0:10])
+    else:
+        print("<", n_str, "строка >", word)
