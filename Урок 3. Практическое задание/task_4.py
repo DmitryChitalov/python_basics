@@ -5,3 +5,20 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def exp_func(x, y):
+    try:
+        if y < 0:
+            exp_x = 1
+            for i in range(y, 0):
+                exp_x *= x
+                i += 1
+            return 1 / exp_x
+        else:
+            return (f'Необходимо вводить целое отрицательное число!')
+    except TypeError:
+        return (f'Вы ввели не число!')
+    except ZeroDivisionError:
+        return (f'Ошибка! Деление на 0!')
+
+print(exp_func(int(input(f'Введите действительное положительное число x: ')),
+               int(input(f'Введите целое отрицательное число y: '))))
