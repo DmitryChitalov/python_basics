@@ -5,3 +5,25 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+
+class MyException(Exception):
+    '''Собственный класс исключения'''
+    def __init__(self, txt):
+        self.txt = txt
+
+
+num_1 = 0
+num_2 = 1
+
+try:
+    if num_2 == 0:
+        raise MyException("На ноль делить нельзя!")
+    else:
+        total = num_1 / num_2
+except TypeError:
+    print("Вы ввели не число")
+except MyException as err:
+    print(err)
+else:
+    print(f"Все хорошо. Результат: {total}")
