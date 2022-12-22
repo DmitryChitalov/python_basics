@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+dif_list = [8, 6.5, True, [7,4], "hellow", {"team": "Arsenal", "coach": "Mikel Arteta Amatriaín"}, (5,6)]
+for i in range (len(dif_list)) :
+    print(f"Тип переменной: {type(dif_list[i])}")
