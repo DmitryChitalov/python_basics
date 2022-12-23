@@ -17,3 +17,13 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def division(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return 'Делить на ноль нельзя, попробуйте заново.'
+    except ValueError:
+        return 'No value'
+
+
+print(f'Результат деления - {round(division(float(input("делимое")), float(input("делитель, отличный от нуля"))), 2)}')
