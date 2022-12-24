@@ -11,8 +11,8 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
-a = input("Enter your name: ")
-b = int(input("Enter your age: "))
-c = float(input("Enter pass: "))
+a = input("Ведите ваше имя: ")
+b = int(input("Введите ваш возраст: "))
+c = float(input("Введите пароль: "))
 
-print(a, b, c)
+print(f"Меня зовут {a}. Мой возраст {b}. Мой пароль {c}")
