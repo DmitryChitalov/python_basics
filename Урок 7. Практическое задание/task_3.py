@@ -100,3 +100,64 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+    """Класс КЛЕТКА"""
+
+    def __init__(self, quantity):
+        self.quantity = quantity
+
+    def __add__(self, other):
+        return self.quantity + other.quantity
+
+    def __sub__(self, other):
+        total = self.quantity - other.quantity
+        if total < 0:
+            return "Разность отрицательна, поэтому операция не выполняется"
+        return total
+
+    def __mul__(self, other):
+        return self.quantity * other.quantity
+
+    def __truediv__(self, other):
+        return int(self.quantity / other.quantity)
+
+    def make_order(self, cell):
+        """Дополнительный метод на вывод '*' """
+
+        return_order = []
+        counter = 0
+
+        for _ in range(self.quantity):
+            return_order.append(str('*'))
+            counter += 1
+            if counter == cell:
+                counter = 0
+
+                return_order.append('\n')
+        mrx = ''.join(return_order)
+
+        return f"Вывод звездочек:\n{mrx}"
+
+
+print("Создаем объекты клеток")
+cell_1 = Cell(33)
+cell_2 = Cell(25)
+cell_3 = Cell(10)
+cell_4 = Cell(15)
+
+print("\nСкладываем:\n")
+print(cell_1 + cell_2)
+
+print("\nВычитаем:\n")
+print(cell_2 - cell_1)
+print(cell_4 - cell_3)
+
+print("\nУмножаем\n")
+print(cell_2 * cell_1)
+
+print("\nДелим\n")
+print(cell_1 / cell_2)
+
+print(cell_1.make_order(5))
