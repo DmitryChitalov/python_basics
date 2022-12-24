@@ -17,3 +17,17 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+
+
+def ab(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError as e:
+        print(f'Ошибка! Делить на ноль нельзя')
+
+
+print(ab(int(input('Первое число: ')), int(input('Второе число: '))))

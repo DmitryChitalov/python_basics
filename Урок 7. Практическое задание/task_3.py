@@ -100,3 +100,52 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+"""
+Выполенине! Емельяненко А.А.
+"""
+
+
+class Cell:
+    def __init__(self, quantity_cells):
+        self.quantity_cells = int(quantity_cells)
+
+    def __str__(self):
+        return str(self.quantity_cells)
+
+    def __add__(self, other):
+        self.quantity_cells += other.quantity_cells
+        return self.__str__()
+
+    def __sub__(self, other):
+        sub = self.quantity_cells - other.quantity_cells
+        if sub > 0:
+            self.quantity_cells = sub
+            return self.__str__()
+        else:
+            return 'разность меньше нуля!'
+
+    def __mul__(self, other):
+        self.quantity_cells *= other.quantity_cells
+        return self.__str__()
+
+    def __truediv__(self, other):
+        self.quantity_cells //= other.quantity_cells
+        return self.__str__()
+
+    def make_order(self, quantity_cells_in_row):
+        make_order = ''
+        for el in range(1, self.quantity_cells + 1):
+            make_order += '*' if el % quantity_cells_in_row != 0 else '*\n'
+        return make_order
+
+
+cell = Cell(25)
+cell2 = Cell(36)
+
+print(cell - cell2)
+print(cell + cell2)
+print(cell / cell2)
+print(cell * cell2)
+
+print(cell.make_order(10))
