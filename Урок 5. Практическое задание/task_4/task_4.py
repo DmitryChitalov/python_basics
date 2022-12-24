@@ -7,3 +7,15 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+from statistics import mean
+
+workers = open("file4.txt", 'r', encoding='utf-8')
+salaries = []
+for worker in workers:
+    last_name, salary = worker.split()
+    salary = float(salary)
+    if salary < 20_000:
+        print(last_name)
+    salaries.append(salary)
+print(mean(salaries))
