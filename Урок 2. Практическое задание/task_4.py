@@ -14,3 +14,15 @@
 1. раз
 2. перерефриж
 """
+
+#tack_4
+
+my_list = input("Введите через пробел значения списка: ")
+my_list = my_list.split()
+n = 1
+for i in my_list:
+    if len(i) > 10:
+        print(f"{n}. {i[0:10]}")
+    else:
+        print(f"{n}. {i}")
+    n = n + 1

@@ -15,3 +15,9 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+#tack_1
+
+my_list = [32, 'Moscow', 1.92, None, True]
+for a in my_list:
+    print(type(a))

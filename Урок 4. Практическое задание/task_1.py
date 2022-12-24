@@ -6,3 +6,17 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+# task_1
+
+from sys import argv
+
+sc_name, fam, time, st, prem = argv
+
+# print(fam)
+
+def my_func(time, st, prem):
+    zp = int(time) * int(st) + int(prem)  # Зарплата = часы работы * размер ставки + премия
+    return zp
+
+print(f"Сотруднику {fam} выплачивается ЗП  в размере {my_func(time, st, prem)}")
