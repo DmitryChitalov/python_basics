@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+NUMBER = 10
+lista = (b"NAme", NUMBER, 3.1, "age", "Jone")
+for lists in lista:
+    print(type(lists))
