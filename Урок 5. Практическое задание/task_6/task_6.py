@@ -5,3 +5,13 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+def number_classes():
+    dictionary = {}
+    with open("task_6.txt", encoding="utf-8") as df:
+        for line_el in df:
+            items, qty = line_el.split(":")
+            el_enum = sum(map(int, "".join([i for i in qty if i == " " or ("0" <= i <= "9")]).split()))
+            dictionary[items] = el_enum
+        print(f"\nСловарь: {dictionary}")
+
+number_classes()
