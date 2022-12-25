@@ -19,3 +19,24 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+
+def less6():
+    a = int(input("Введите значение a: "))
+    b = int(input("А теперь значение b: "))
+    count = 1
+    print(f"{count}-й день: {fixed(a, 2)} км.")
+    while a <= b:
+        count += 1
+        a = a + a / 10
+        print(f"{count}-й день: {fixed(a,2)} км.")
+    print(f"Ответ: на {count}-й день спортсмен достиг результата не менее 3 км.")
+
+
+def fixed(numObj, digits=0):
+    return f"{numObj:.{digits}f}"
+
+
+if __name__ == '__main__':
+    less6()
+
