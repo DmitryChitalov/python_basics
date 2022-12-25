@@ -8,3 +8,13 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+
+def less3():
+    n = int(input("Введите число n: "))
+    print(f"n + nn + nn = {n+n*10+n+n*100+n*10+n}")
+
+
+if __name__ == '__main__':
+    less3()
+
