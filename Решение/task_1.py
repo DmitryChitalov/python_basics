@@ -1,0 +1,7 @@
+name = input("Name?")
+years = int(input("How old are you?"))
+print(type(name))
+print(type(years))
+print(name)
+print(years)
+print(f"Привет, я {name}. Мне {years} годиков")
