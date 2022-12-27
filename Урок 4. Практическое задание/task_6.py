@@ -12,3 +12,19 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import *
+
+print("Итерация первая")
+for el in count(3):
+    if el > 10:
+        break
+    else:
+        print(el)
+print("Итерация вторая")
+bas = [1, 2, 3, 4]
+c = 0
+for el1 in cycle(bas):
+    if c > 10:
+        break
+    else:
+        print(el1)
