@@ -14,3 +14,14 @@
 1. раз
 2. перерефриж
 """
+user_input = input('Введите несколько слов: ').split()
+
+str_count = 1 # для подсчета строк
+count_of_symbols = 10 # кол-во символов
+
+for item in user_input:
+    if len(item) < count_of_symbols:
+        print(f'{str_count}-строка: ', item)
+    else:
+        print(f'{str_count}-строка: ',item[0:10])
+    str_count += 1 
