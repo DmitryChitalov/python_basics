@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+my_list = input("Введите символы (числа или буквы) через запятую >>> ").split(',')
+print(f"Список: {my_list}")
+
+i = 0
+for el in range(len(my_list) // 2):
+    my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+    i += 2
+print(f"Поменяли: {my_list}")
