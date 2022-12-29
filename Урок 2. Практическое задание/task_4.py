@@ -14,3 +14,19 @@
 1. раз
 2. перерефриж
 """
+
+
+def less4():
+    my_list = input("Введите слова через пробел: ").split()
+    count = 0
+    for element in my_list:
+        count += 1
+        if len(element) > 10:
+            print(f"{count}. {element[0:10]}")
+        else:
+            print(f"{count}. {element}")
+
+
+if __name__ == '__main__':
+    less4()
+
