@@ -14,3 +14,7 @@
 1. раз
 2. перерефриж
 """
+us_input = input("Введите несколько слов, разделенных пробелами >>> ").split(" ")
+
+for ind, el in enumerate(us_input):
+    print(f"{ind+1} >>> {el[:10]}")

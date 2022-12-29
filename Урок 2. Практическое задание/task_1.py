@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_list = [5, 3.14, True, 'string', None]
+for element in my_list:
+    print(f"{element} - {type(element)}")
