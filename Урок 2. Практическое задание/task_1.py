@@ -15,3 +15,14 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+
+def less1():
+    my_list = [3, 'test', 0.11, True, None]
+    for element in my_list:
+        print(type(element))
+
+
+if __name__ == '__main__':
+    less1()
+
