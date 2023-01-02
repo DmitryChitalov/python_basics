@@ -100,3 +100,36 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __sub__(self, other):
+        if (self.quantity - other.quantity) > 0:
+            print(f"Subtraction: {self.quantity - other.quantity}")
+        else:
+            print("Error")
+
+    def __mul__(self, other):
+        print(f"Multiplication: {int(self.quantity * other.quantity)}")
+
+    def __truediv__(self, other):
+        print(f"Division: {round(self.quantity // other.quantity)}")
+
+    def __add__(self, other):
+        print(f"Addition: {self.quantity + other.quantity}")
+
+
+a = Cell(30)
+b = Cell(25)
+c = Cell(10)
+d = Cell(15)
+
+a + b
+b - a
+d - c
+b * a
+a / b
