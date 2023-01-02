@@ -9,3 +9,21 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+
+class NotNumber(ValueError):
+    pass
+
+
+my_list = []
+while True:
+    try:
+        value = input("Enter number: ")
+        if value == "q":
+            break
+        if not value.isdigit():
+            raise NotNumber(value)
+        my_list.append(int(value))
+    except NotNumber as ex:
+        print("Not a number")
+print(my_list)
