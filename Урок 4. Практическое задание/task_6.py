@@ -12,3 +12,31 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+my_list = []
+
+start_number = 3
+end_number = 10
+
+print('task_a')
+
+for i in count(start_number):
+    if i > end_number:
+        break
+    my_list.append(i)
+
+print(my_list)
+
+print('--------')
+print('task_b')
+
+count = 0
+
+for i in cycle(my_list):
+    if count >= len(my_list):
+        break
+    print(i)
+    count += 1
+
+        
