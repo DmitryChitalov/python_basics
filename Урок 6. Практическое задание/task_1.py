@@ -15,3 +15,24 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+
+
+class TrafficLight:
+    __color = {'Красный': 7, 'Жёлтый': 2, 'Зелёный': 5}
+
+    def running(self, color):
+        for col, tim in TrafficLight.__color.items():
+            if color == "Жёлтый":
+                color = "Красный"
+                continue
+            if color == "Зелёный":
+                color = "Жёлтый"
+                continue
+            print("Свет светофора: ", col)
+            time.sleep(int(tim))
+
+
+t = TrafficLight()
+t.running(
+    input("Введите начальный цвет светофора (Красный, Жёлтый, Зелёный): ")) 

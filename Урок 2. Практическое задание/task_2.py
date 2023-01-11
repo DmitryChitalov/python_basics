@@ -11,3 +11,14 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+count_list = int(input(f"Введите количество элементов списка "))
+my_list = []
+i = 0
+item_n = 0
+while i < count_list:
+    my_list.append(input(f"Введите значение списка "))
+    i += 1
+for element in range(int(len(my_list)/2)):
+    my_list[item_n], my_list[item_n + 1] = my_list [item_n + 1], my_list[item_n]
+    item_n += 2
+print(my_list)
