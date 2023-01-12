@@ -15,3 +15,9 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_list = ["текст", 2023, 20.22, False, None]
+print('Создан список:', my_list)
+print('Типы данных в списке:')
+for i, type_date in enumerate(my_list, 1):
+    print(f'{i}) {type_date} - {type(type_date)}')
+    
