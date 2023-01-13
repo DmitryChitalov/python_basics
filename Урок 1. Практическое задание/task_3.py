@@ -8,3 +8,6 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+n = int(input("Введите число n: "))
+m = sum([int(n), int(f"{n}{n}"), int(f"{n}{n}{n}")])
+print(f"{n} + {n}{n} + {n}{n}{n} = {m}")
