@@ -7,8 +7,8 @@ i = 0
 max_value = 0
 
 while i < len(inp):
-    for _ in inp:
-        if int(_) > max_value:
+    for el in inp:
+        if int(el) > max_value:
             max_value = int(_)
         i += 1
 
