@@ -15,3 +15,30 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+
+
+class TrafficLight:
+    color = ['Красный', 'Желтый', 'Зеленый']
+
+    def running(self):
+        t = int(input("Введите время работы светофора в секундах:"))
+        i = 0
+        while t > 1:
+            if i == 0:
+                print(TrafficLight.color[0])
+            if i == 7:
+                print(TrafficLight.color[1])
+            if i == 9:
+                print(TrafficLight.color[2])
+            if i == 12:
+                i = -1
+            t -= 1
+            i += 1
+            time.sleep(1)
+            print(t)
+        print("Нерегулируемый перекресток!")
+
+
+r = TrafficLight()
+r.running()
