@@ -15,3 +15,19 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+
+
+class TrafficLight:
+
+    __color = {'Красный': 7, 'Жёлтый': 2, 'Зелёный': 10}
+
+    def runnnig(self):
+        while True:
+            for color in self.__color:
+                print(color)
+                time.sleep(self.__color.get(color))
+
+
+tl_1 = TrafficLight()
+tl_1.runnnig()
