@@ -6,7 +6,7 @@
 integers = input('Input two integers with a space: ').split()
 
 
-def div(int_1, int_2):
+def divide(int_1, int_2):
     try:
         return int(int_1) / int(int_2)
     except ZeroDivisionError:
@@ -14,4 +14,9 @@ def div(int_1, int_2):
         return ''
 
 
-print(div(integers[0], integers[1]))
+print(divide(integers[0], integers[1]))
+
+"""
+Input two integers with a space: 4 5
+0.8
+"""

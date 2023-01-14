@@ -14,3 +14,7 @@ def data(n, s, yb, cl, e, tn):
 print(*data(n=inp[0], s=inp[1], yb=inp[2], cl=inp[3], e=inp[4], tn=inp[5]))
 
 # W Www 1990 Moscow ggg@prot.mail +799911111111
+
+"""
+W Www 1990 Moscow ggg@prot.mail +799911111111
+"""

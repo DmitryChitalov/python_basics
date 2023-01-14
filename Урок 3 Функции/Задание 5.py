@@ -7,50 +7,36 @@
 сумме и после этого завершить программу.
 """
 
-str = input('Input integers with space or "/" for exit: ').split()
-counter = 0
+inp = input('Input integers with space or "/" for exit: ').split()
 
 
-def sumstr(string):
-    global counter
-    while string != '':
-        # специальный символ введен после нескольких чисел
-        if len(string) >= 3 and string[-1] == '/':
-            string.pop()
-            string = [int(i) for i in string]
-            counter += sum(string)
-            print(f'Sum of integers after "/" is {counter}')
+def suminp(inp):
+    counter = 0
+
+    def adding(input_v, counter):
+        input_v = [int(i) for i in input_v]
+        counter += sum(input_v)
+        return counter
+
+    if inp[-1] == '/':
+        counter = adding(inp[:-1], counter)
+        print(f'\nSum of integers before "/" is {counter}\n')
+        return
+
+    while inp != '' and inp[0] != '/':
+        counter = adding(inp, counter)
+        print(f'\nSum of integers is {counter}\n')
+
+        inp = input('Input two integers with space ro "/" for exit: ').split()
+
+        if inp[-1] == '/':
+            counter = adding(inp[:-1], counter)
+            print(f'\nSum of integers before "/" is {counter}\n')
             break
-        # специальный символ, выполнение программы завершается
-        if string and string[0] == '/':
-            break
-        else:
-            # для проверки неверного введения числа (напрмер: 1 2/) --------------------------------------------------
-            try:
-                string = [int(i) for i in string]
-            except ValueError:
-                a = False
-                while a is False:
-                    string = input(
-                        f'Input ONLY integers, you entered wrong data {string}: ').split()
-                    # специальный символ введен после нескольких чисел
-                    if len(string) >= 3 and string[-1] == '/':
-                        string.pop()
-                        string = [int(i) for i in string]
-                        print(f'Sum of integers after "/" is {counter}')
-                        break
-                    try:
-                        string = [int(i) for i in string]
-                        a = True
-                    except ValueError:
-                        pass
 
-            # --------------------------------------------------------------------------------------------------------
-            counter += sum(string)
+        if inp[0] == '/':
             print(f'\nSum of integers is {counter}\n')
-
-        string = input(
-            'Input two integers with space ro "/" for exit: ').split()
+            break
 
 
-sumstr(str)
+suminp(inp)

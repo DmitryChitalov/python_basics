@@ -15,3 +15,8 @@ def my_func(a, b, c):
 
 
 print(my_func(arg[0], arg[1], arg[2]))
+
+"""
+Enter 3 arguments for function: 1 5 7
+12
+"""
