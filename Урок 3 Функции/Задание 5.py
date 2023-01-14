@@ -40,3 +40,13 @@ def suminp(inp):
 
 
 suminp(inp)
+
+"""
+Input integers with space or "/" for exit: 1 2 3
+
+Sum of integers is 6
+
+Input two integers with space ro "/" for exit: 1 7 8 9 /
+
+Sum of integers before "/" is 31
+"""

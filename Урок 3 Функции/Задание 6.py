@@ -19,7 +19,7 @@ def int_func(words):
     return words.title()
 
 
-print(int_func(input('Enter word or words with space: ')))
+print(int_func(input('Enter word in smal case: ')))
 
 """
 Второй вариант 
@@ -43,5 +43,11 @@ def int_func(wr):
 
 
 print(
-    f'Your word is: "Paraparapam\nTadam" -----> {int_func(input("Enter word or words: "))}\nApplause please )))')
-# Атмосфера шоу )))
+    f'Your words is: {int_func(input("Enter words in small case with spaces: "))}')
+
+"""
+Enter word in smal case: earth 
+Earth
+Enter words in small case with spaces: earth planet
+Your words is: Earth Planet
+"""
