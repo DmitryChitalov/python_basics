@@ -8,3 +8,20 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(arg_str):
+    return str.capitalize(arg_str)
+
+
+def less6():
+    my_sentence = input("Введите фразу из слов в нижнем регистре: ").split()
+    for i in range(len(my_sentence)):
+        my_sentence[i] = int_func(my_sentence[i])
+    print(f"Результат: {' '.join(my_sentence[:])}")
+
+
+if __name__ == '__main__':
+    less6()
+
+

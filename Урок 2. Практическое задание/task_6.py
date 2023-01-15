@@ -25,3 +25,22 @@
 “ед”: [“шт.”]
 }
 """
+
+
+def less6():
+    count = 0
+    goods_name = input("Введите название товара: ")
+    goods_price = input("Введите стоимость товара: ")
+    goods_volume = input("Введите количество товара: ")
+    goods_dict = ({"название": goods_name, "цена": goods_price, "количество": goods_volume, "ед": "шт."})
+    goods = (count, goods_dict)
+    count += 1
+
+    print(f"Аналитика")
+    for i in list(goods_dict):
+        print(f"{i}: {', '.join(map(str, goods_dict))}")
+
+
+if __name__ == '__main__':
+    less6()
+
