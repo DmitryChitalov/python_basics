@@ -100,3 +100,71 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+def raise_type_error_if_needed(other, message):
+    if not isinstance(other, Cell):
+        raise TypeError(message)
+
+
+def exception_decorator(func):
+    def some_function(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except BaseException as err:
+            return f"Unexpected {err=}, {type(err)=}"
+    return some_function
+
+
+class Cell:
+    _quantity: int
+
+    def __init__(self, quantity: int):
+        self._quantity = quantity
+
+    def __str__(self):
+        return f'Quantity: {self._quantity}'
+
+    def __add__(self, other):
+        raise_type_error_if_needed(other, 'Cannot add cell and non-cell types')
+        return Cell(self._quantity + other._quantity)
+
+    def __sub__(self, other):
+        raise_type_error_if_needed(other, 'Cannot subtract cell and non-cell types')
+        sub_result = self._quantity - other._quantity
+        if sub_result > 0:
+            return Cell(sub_result)
+        raise ValueError(f'Cell quantity cannot be negative (result={sub_result})')
+
+    def __mul__(self, other):
+        raise_type_error_if_needed(other, 'Cannot multiply cell and non-cell types')
+        return Cell(self._quantity * other._quantity)
+
+    def __truediv__(self, other):
+        raise_type_error_if_needed(other, 'Cannot divide cell and non-cell types')
+        return Cell(self._quantity // other._quantity)
+
+    def make_order(self, cells_in_row):
+        row = ''
+        for _ in range(self._quantity // cells_in_row):
+            row += f'{"*" * cells_in_row} \\n'
+        row += f'{"*" * (self._quantity % cells_in_row)}'
+        return row
+
+
+cells1 = Cell(33)
+cells2 = Cell(9)
+print(f'Cells1: {cells1}')
+print(f'Cells2: {cells2}')
+print(f'cells1 + cells2: {cells1 + cells2}')
+print(f'cells1 - cells2: {cells1 - cells2}')
+
+decorator = exception_decorator(cells1.__add__)
+print(f'cells1 + 4: {decorator(4)}')
+
+decorator = exception_decorator(cells2.__sub__)
+print(f'cells2 - cells1: {decorator(cells1)}')
+
+print(f'cells1 * cells2: {cells1 * cells2}')
+print(f'cells1 / cells2: {cells1 / cells2}')
+
+print(f'cells2.make_order(5): {cells2.make_order(5)}')
+print(f'cells1.make_order(10): {cells1.make_order(10)}')
