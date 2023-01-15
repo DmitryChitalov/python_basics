@@ -11,3 +11,18 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+
+def less2():
+    my_list = input("Введите целые числа через пробел: ").split()
+    for i in range(0, len(my_list)-1):
+        if i % 2 == 0 & i < len(my_list):
+            temp = my_list[i]
+            my_list[i] = my_list[i+1]
+            my_list[i+1] = temp
+    print(f"Результат: {' '.join(map(str, my_list))}")
+
+
+if __name__ == '__main__':
+    less2()
+

@@ -17,3 +17,24 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def divide(arg_1, arg_2):
+    if arg_2 == 0:
+        return
+    else:
+        return arg_1 / arg_2
+
+
+def less1():
+    num_1, num_2 = map(int, input("Введите два числа через пробел: ").split())
+    res = divide(num_1, num_2)
+    if num_2 == 0:
+        print("Error! Зафиксирована попытка деления на 0!")
+    else:
+        print(f"Результат деления {num_1} на {num_2}:   {res:0.3f}")
+
+
+if __name__ == '__main__':
+    less1()
+
