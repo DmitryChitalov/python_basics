@@ -15,3 +15,17 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+
+def less5():
+    my_rating = input("Введите существующий рейтинг чисел через пробел: ").split()
+    new_element = input("Введите дополнительное значение: ")
+    my_rating.append(new_element)
+    my_rating.sort()
+    my_rating.reverse()
+    print(f"Пользователь ввел число {new_element}. Результат: {', '.join(map(str, my_rating))}.")
+
+
+if __name__ == '__main__':
+    less5()
+
