@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+checklist = [2, "text", 1.2, True, None]
+for el in checklist:
+    print(type(el))
