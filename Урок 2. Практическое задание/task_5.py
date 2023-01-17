@@ -15,3 +15,12 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+numbers_list = [6, 4, 3, 2]
+print(f"Список натуральных чисел: {numbers_list}")
+check_number = input("Введите число или 'q' для отмены: ")
+if check_number != 'q':
+    numbers_list.append(int(check_number))
+    numbers_list.sort(reverse=True)
+    print(f"Новый список: {numbers_list}")
+else:
+    print("Отмена!")

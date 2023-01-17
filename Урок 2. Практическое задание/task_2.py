@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+checklist = input("Введите целые числа через пробел: ").split(' ')
+a = 0
+b = 1
+while len(checklist) > b:
+    checklist[a], checklist[b] = checklist[b], checklist[a]
+    a += 2
+    b += 2
+print(f"Результат: {checklist}")
