@@ -100,3 +100,59 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cells:
+
+    def __init__(self, cells_qtty):
+        self.cells_qtty = cells_qtty
+
+    @property
+    def is_valid(self):
+        return type(self.cells_qtty) == int
+
+    def __add__(self, other):
+        if self.is_valid:
+            return self.cells_qtty + other.cells_qtty
+        else:
+            return "Задайте количество ячеек целым числом"
+
+    def __sub__(self, other):
+        if self.is_valid:
+            if self.cells_qtty > other.cells_qtty:
+                return self.cells_qtty + other.cells_qtty
+            else:
+                return "Некорретно. Количество ячеек первой клетки меньше, чем второй"
+        else:
+            return "Задайте количество ячеек целым числом"
+
+    def __mul__(self, other):
+        if self.is_valid:
+            return self.cells_qtty * other.cells_qtty
+        else:
+            return "Задайте количество ячеек целым числом"
+
+    def __truediv__(self, other):
+        if self.is_valid:
+            return self.cells_qtty // other.cells_qtty
+        else:
+            return "Задайте количество ячеек целым числом"
+
+    def make_order(self, n):
+        cnt = self.cells_qtty // n
+        rem = self.cells_qtty % n
+        return '\n'.join(['*' * n] * cnt + (['*' * rem] if rem > 0 else []))
+
+
+test_1 = Cells(20)
+test_2 = Cells(15)
+print("Сложение:")
+print(test_1 + test_2)
+print("Вычитание:")
+print(test_1 - test_2)
+print("Умножение:")
+print(test_1 * test_2)
+print("Деление:")
+print(test_1 / test_2)
+print("По рядам:")
+print(test_1.make_order(6))
