@@ -25,3 +25,51 @@
 “ед”: [“шт.”]
 }
 """
+
+quest = int(input("Введите количество добавляемых товаров: "))
+specifications = "Название", "Цена", "Количество", "Единица измерения"
+product = [] 
+for i in range(quest):
+    print(f"Характеристики для товара №{i + 1} :")
+    name = input("Название:")
+    price = input("Цена:")
+    unit = input("Количесвто:")
+    measure = input("Единица измерения:")
+    product.append((i+1, {'Название': name, 'Цена': price, 'Количество': unit, 'Единица измерения': measure}))
+name = [] 
+price = []
+unit = []
+measure = []
+for i in product:
+    name.append(i[1].get(specifications[0]))
+    price.append(i[1].get(specifications[1]))
+    unit.append(i[1].get(specifications[2]))
+    measure.append(i[1].get(specifications[3]))
+result = {
+    specifications[0] : list(set(name)),
+    specifications[1] : list(set(price)),
+    specifications[2] : list(set(unit)),
+    specifications[3] : list(set(measure))
+    }
+
+
+print(f"Аналитика: {result}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

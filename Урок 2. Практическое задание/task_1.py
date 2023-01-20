@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+list = [5, "string", 0.15, True, None]
+for i in range (len(list)) :
+    print(f" Элемент списка под номером {i} имеет тип переменной {type(list[i])}")
+    
