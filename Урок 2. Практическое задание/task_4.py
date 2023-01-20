@@ -22,3 +22,4 @@ for number, value in enumerate (list, start=1) :
         print(number, value)
     else :
         print(number, value)
+        
