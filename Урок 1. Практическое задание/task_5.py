@@ -21,9 +21,12 @@
 proc = int(input('Введите выручку фирмы:'))
 costs = int(input('Введите издержки фирмы:'))
 fin_result = proc - costs
-print('Финансовый результат - прибыль. Ее величина:', fin_result)
-rent = costs / proc
-print('Рентабельность выручки =', rent)
-souls = int(input('Введите численность сотрудников фирмы:'))
-proc_per_soul = fin_result / souls
-print('Рентабельность выручки =', proc_per_soul)
+if fin_result < 0:
+    print('Финансовый результат - убыток. Ее величина:', fin_result)
+else:
+    print('Финансовый результат - прибыль. Ее величина:', fin_result)
+    rent = costs / proc
+    print('Рентабельность выручки =', rent)
+    souls = int(input('Введите численность сотрудников фирмы:'))
+    proc_per_soul = fin_result / souls
+    print('Рентабельность выручки =', proc_per_soul)
