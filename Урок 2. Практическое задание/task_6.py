@@ -25,3 +25,35 @@
 “ед”: [“шт.”]
 }
 """
+""" elem_list = []
+elem_tup = (1, 2, 3)
+elem_dict = {elem_tup[0]: 'компьютер', 'цена': 20000, 'количество': 5}
+print(elem_dict) """
+
+
+list_of_tuples = []
+list_of_tuples = [(1, {'название': 'компьютер',
+                  'цена': 20000, 'количество': 5, 'eд.': 'шт.'}),
+                  (2, {'название': 'принтер', 'цена': 6000,
+                   'количество': 2, 'eд.': 'шт.'}),
+                  (3, {'название': 'сканер', 'цена': 2000, 'количество': 7, 'eд.': 'шт.'})]
+
+print(range(len(list_of_tuples)))
+
+name_list = []
+price_list = []
+count_list = []
+unit_list = []
+
+for i in range(len(list_of_tuples)):
+    name_list.append(list_of_tuples[i][1]['название'])
+    price_list.append(list_of_tuples[i][1]['цена'])
+    count_list.append(list_of_tuples[i][1]['количество'])
+    unit_list.append(list_of_tuples[i][1]['eд.'])
+
+dictionary = {}
+
+dictionary.update({'Название': name_list, 'Цена': price_list, 'Количество': count_list, 'Ед.изм.': unit_list})
+
+print(dictionary)
+

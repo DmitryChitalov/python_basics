@@ -7,3 +7,15 @@
 Иванов 23543.12
 Петров 13749.32
 """
+import json
+
+max_salary = 20000
+
+with open("salary.json", encoding='utf-8') as f_n:
+    data_dict = json.load(f_n)
+    print("Сотрудники, зарабатывающие менее  20000$ в год:")
+    for keys, values in data_dict.items():
+        if values < max_salary:
+            print(keys)
+    print(f"Средняя заработная плата = {round(sum(data_dict.values())/len(data_dict), 2)} $ в год")
+
