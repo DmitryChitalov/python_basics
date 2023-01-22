@@ -8,3 +8,4 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+#test-tested
