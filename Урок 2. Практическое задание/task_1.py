@@ -13,6 +13,7 @@
 <class 'NoneType'>
 """
 
+""" Решение задания№1 """
 type_list = [777, None, -30, 'True', True, "Hallo Welt", 9.5]
     for element in range(len(type_list)):
 print(type(type_list[element]))  
