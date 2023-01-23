@@ -8,43 +8,29 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
-month = int(input("Введите месяц по id от 1 до 12 : "))
-mlist = ["зима", "весна", "лето", "осень"]
-while True:
-    if month > 12 or month <= 0 :
-        print(f"\tINCORRECT ID!!! \n\tPlease use number range from 1 to 12 only!")
-        month = int(input("Введите месяц по id от 1 до 12 : "))
-        continue
-    mlist = ["зима", "весна", "лето", "осень"]
-    if month == 12 or (month >= 1 and month < 3):
-        print(f"\tSeason related to your Month id#{month}  is '{mlist[0]}'")
-        break
-    elif month >= 3 and month < 6:
-        print(f"\tSeason related to your Month id# {month} is '{mlist[1]}'")
-        break
-    elif month >= 6 and month < 9:
-        print(f"\tSeason related to your Month id# {month} is '{mlist[2]}'")
-        break
-    elif month >= 9 and month < 12:
-        print(f"\tSeason related to your Month id# {month} is '{mlist[3]}'")
-    else:
-          print("Такого месяца не существует")    
-        
-seasons_list = ['winter', 'spring', 'summer', 'autumn']
-seasons_dict = {1 : 'winter', 2 : 'spring', 3 : 'summer', 4 : 'autumn'}
-month = int(input("Введите месяц по номеру "))
-if month ==12 or month == 1 or month == 2:
-        print(seasons_dict.get(1))
-        print(seasons_list[0])
-elif month == 3 or month == 4 or month ==5:
-    print(seasons_dict.get(2))
-    print(seasons_list[1])
-elif month == 6 or month == 7 or month == 8:
-    print(seasons_dict.get(3))
-    print(seasons_list[2])
 
-elif month == 9 or month == 10 or month == 11:
-    print(seasons_dict.get(4))
-    print(seasons_list[3])
+""" Решение задания №3 """
+# Решение с использованием list
+month_list = [['зима', 12, 1, 2], ['весна', 3, 4, 5], ['лето', 6, 7, 8], ['осень', 9, 10, 11]]
+month_num = int(input('Введите номер месяца (1..12): '))
+if month_num in range(1, 13):
+    for i, el in enumerate(month_list):
+        if month_num in el[1:4]:
+            print(f'Введенный месяц относится к сезону {el[0]}')
+            break
 else:
-        print("Такого месяца не существует")
+    print('Введен неcуществующий месяц: их всего 12!')
+
+# Решение с использованием dict
+month_dict = {'Winter': [12, 1, 2],
+              'Spring': [3, 4, 5],
+              'Summer': [6, 7, 8],
+              'Autumn': [9, 10, 11]}
+month_num = int(input('Please enter # of month (1..12): '))
+if month_num in range(1, 13):
+    for i in month_dict.items():
+        if month_num in i[1]:
+            print(f'This month refers to season {i[0]}')
+            break
+else:
+    print('Sorry, but entered value doesn`t match with month!')  
