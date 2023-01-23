@@ -12,6 +12,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
-type_list = [7, 3/20, True, [1,2], "Hi", {"книги": "Бесы", "автор": "Достоевский Ф.М."},(1,2)]
+type_list = [5, True, 3/20, [1,2], "Hi", {"книги": "Бесы", "автор": "Достоевский Ф.М."},(1,2)]
 for i in range (len(type_list)) :
     print(f"Тип переменной в списке: {type(type_list[i])}")
