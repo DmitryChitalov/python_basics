@@ -16,14 +16,11 @@
 """
 
 """ Решение к заданию №4 """
-my_string = input("Введите слова через пробел: ")
-my_word = []
-number = 1
-for element in range(my_string.count(' ') + 1):
-    my_word = my_string.split()
-    if len(str(my_word)) <= 10:
-        print(f" {number} {my_word [element]}")
-        number += 1
+text = input("Введите слова через пробел: ")
+T = text.split()
+for x, y in enumerate (T, start=1):
+    if len(y) > 11 :
+        y = y[:10]
+        print(x, y)
     else:
-        print(f" {number} {my_word [element] [0:10]}")
-        number += 1
+        break      
