@@ -6,3 +6,25 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def less5():
+    the_num = 0
+    line_num = 0
+    break_out_flag = False
+    while not break_out_flag:
+        line_num += 1
+        arr_nums = input(f"{line_num}) Введите числа через пробел: ").split()
+        for args in arr_nums:
+            try:
+                the_num += int(args)
+            except ValueError:
+                break_out_flag = True
+                break
+        print(f"• Текущая сумма:  {the_num}")
+    print(f"Итоговое число: {the_num}, за {line_num} проходов.")
+
+
+if __name__ == '__main__':
+    less5()
+
