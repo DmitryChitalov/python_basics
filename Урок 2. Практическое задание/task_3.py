@@ -8,12 +8,12 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
-month = int(input(""Введите месяц по номеру id от 1 до 12 : "))
+month = int(input("Введите месяц по id от 1 до 12 : "))
 mlist = ["зима", "весна", "лето", "осень"]
 while True:
     if month > 12 or month <= 0 :
         print(f"\tINCORRECT ID!!! \n\tPlease use number range from 1 to 12 only!")
-        month = int(input("Please enter month id from 1 to 12 : "))
+        month = int(input("Введите месяц по id от 1 до 12 : "))
         continue
     mlist = ["зима", "весна", "лето", "осень"]
     if month == 12 or (month >= 1 and month < 3):
