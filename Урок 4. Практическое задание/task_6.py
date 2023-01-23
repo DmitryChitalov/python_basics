@@ -12,32 +12,3 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
-
-
-from itertools import count, cycle
-
-# генерируем целые числа:
-
-list_int = []
-
-a = int(input("Укажите первое число последовательности: "))
-n = int(input("Укажите последнее число последовательности: "))
-
-for x in count(a):
-    if x > n:
-        break
-    print(x)
-    list_int.append(x)
-
-# повторяем элементы списка:
-
-print()
-print(list_int)
-
-count = 0
-for item in cycle(list_int):
-    if count >= len(list_int):
-        break
-    print(item)
-    count += 1
-
