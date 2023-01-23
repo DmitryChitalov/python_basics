@@ -14,10 +14,5 @@
 """
 
 type_list = [777, None, -30, 'True', True, "Hallo Welt", {"книги": "Бесы", "автор": "Достоевский Ф.М."}, 9.5]
-
-def my_type(element):
     for element in range(len(type_list)):
-print(type(type_list[element]))
-   
-
-    
+print(type(type_list[element]))  
