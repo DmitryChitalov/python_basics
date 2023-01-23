@@ -17,8 +17,7 @@ type_list = [777, None, -30, 'True', True, "Hallo Welt", {"книги": "Бес�
 
 def my_type(element):
     for element in range(len(type_list)):
-        print(type(type_list[element]))
-    return
-print(f"Тип переменной в списке: {type(type_list[i])}")
+print(type(type_list[element]))
+   
 
     
