@@ -7,3 +7,13 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+result_list = []
+my_list = [int(i) for i in input("Введите список чисел через пробел: ").split()]
+for i in range(1, len(my_list)):
+    if my_list[i] > my_list[i-1]:
+        (result_list.append(my_list[i]))
+if len(result_list) != 0:
+    print("Исходный список: ", my_list)
+    print("Список, элементы которого больше предыдущего: ", result_list)
+else:
+    print("Нет элементов удовлетворяющих условию")

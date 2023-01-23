@@ -12,3 +12,20 @@
 Второй, с декоратором @staticmethod, должен проводить валидацию числа, месяца
 и года (например, месяц — от 1 до 12). Проверить работу полученной структуры на реальных данных.
 """
+class MyDate:
+    @classmethod  # нет ясности применения результата этого метода в дальнейшем коде, хотя он напрашивается
+    def extract(cls, param):
+        my_date = param.split('-')
+        return int(my_date[0]), int(my_date[1]), int(my_date[2])
+
+    @staticmethod
+    def valid(param):
+        my_date = param.split('-')
+        if 1 <= int(my_date[0]) <= 31 and 1 <= int(my_date[1]) <= 12 and 0 <= int(my_date[2]) <= 9999:
+            return f'Введенная вами дата\n Число {my_date[0]}\n Месяц {my_date[1]}\n Год {my_date[2]}'
+        else:
+            return f'Дата некорректна'
+
+
+md = MyDate.valid(input("Введите дату через дефис в формате 'dd-mm-yyyy'"))
+print(md)

@@ -28,3 +28,40 @@
 8 10 12
 14 16 18
 """
+# вариант который мне больше нравится, но не по заданию
+import numpy
+
+
+class Matrix:
+    def __init__(self, x, y):
+        self.matrix_1 = x
+        self.matrix_2 = y
+        print(f'{numpy.add(numpy.array(x), numpy.array(y))}\n Суммарная матрица')
+
+
+Matrix([[-1, 0, 1, 2], [-1, 0, 1, 3], [0, 1, -1, 4], [1, 1, -1, -4]],
+       [[-2, 0, 2, 1], [-2, 0, 2, 1], [0, 2, -2, 1], [2, 2, -7, 2]])
+
+
+# вариант по заданию
+class Matrix:
+    def __init__(self, my_list):
+        self.my_list = my_list
+
+    def __str__(self):
+        for row in self.my_list:
+            for i in row:
+                print(f"{i:3}", end="")
+            print()
+        return ''
+
+    def __add__(self, other):
+        for i in range(len(self.my_list)):
+            for j in range(len(other.my_list[i])):
+                self.my_list[i][j] = self.my_list[i][j] + other.my_list[i][j]
+        return Matrix.__str__(self)
+
+
+m_1 = Matrix([[-1, 0, 1, 2], [-1, 0, 1, 3], [0, 1, -1, 4], [1, 1, -1, -4]])
+m_2 = Matrix([[-2, 0, 2, 1], [-2, 0, 2, 1], [0, 2, -2, 1], [2, 2, -7, 2]])
+print(f'Суммарная матрица\n {m_1.__add__(m_2)}')

@@ -25,3 +25,41 @@
 
 Два класса: абстрактный и Clothes
 """
+from abc import ABC, abstractmethod
+
+
+class Clothes (ABC):
+    @abstractmethod
+    def consumption(self):
+        return f''
+
+
+class Clothes:
+
+    def __init__(self, size, height):
+        self.size = size
+        self.height = height
+
+    @property
+    def consumption(self):
+        # реализовать дочерний метод в родительском было бы правильно, но уже запутался
+        return f'Общий расход ткани ткани равна: {self.size / 6.5 + 0.5 + 2 * self.height + 0.3 :.2f}'
+
+    def __str__(self):
+        return f'Общий расход ткани ткани равна: {self.size / 6.5 + 0.5 + 2 * self.height + 0.3 :.2f}'
+
+
+class Coat(Clothes):
+    def consumption(self):
+        return f'Для пошива пальто нужно: {self.size / 6.5 + 0.5 :.2f} ткани'
+
+
+class Costume(Clothes):
+    def consumption(self):
+        return f'Для пошива костюма нужно: {2 * self.height + 0.3 :.2f} ткани'
+
+
+p = Clothes(52, 5)
+print(p)
+
+# упомянув пару секунд про декораторы в 7 занятии ясности не прибавило
