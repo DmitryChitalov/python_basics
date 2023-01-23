@@ -12,12 +12,15 @@
 Результат: 2 1 3
 """
 """ Решение к заданию №2 """ 
-g = int(input("How many items in list do you want to add?\n\t Enter items quantity: "))
-my_lst = []
-for i in range(g):
-    my_lst.append(input(f"Item # {i + 1} : "))
-print(f"Your item list view:\n{my_lst}")
-for x in range(0, (len(my_lst) - 1),2):
-    my_lst[x], my_lst[x+1] = my_lst[x+1], my_lst[x]
-print(f"Your CHANGED item list view:\n{my_lst}")
+element_count = int(input("Введите целые числа через пробел: "))
+my_list = []
+i = 0
+element = 0
+while i < element_count:
+    my_list.append(input("Введите значение списка: "))
+    i += 1
+for element in range(int(len(my_list)/2)):
+        my_list[element], my_list[element + 1] = my_list [element + 1], my_list[element]
+        element += 2
+print(my_list)
 
