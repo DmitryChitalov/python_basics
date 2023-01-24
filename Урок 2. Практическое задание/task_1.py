@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_lst = ["data1", 13, None, False, True, 3.14]
+for el in my_lst:
+    print(type(el))
