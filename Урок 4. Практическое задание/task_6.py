@@ -12,3 +12,26 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count
+from itertools import cycle
+# а:
+try:
+    s = int(input("Введите целое число: "))
+except ValueError:
+    print("Некорректный ввод. Повторите")
+
+for el in count(s):
+    if el > 100:
+        break
+    else:
+        print(el)
+
+# б:
+source_list = ['test_1', 'test_2', 'test_3', 'test_4']
+it = 0
+for el in cycle(source_list):
+    if it > 100:
+        break
+    print(el)
+    it = it + 1

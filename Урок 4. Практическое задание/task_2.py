@@ -7,3 +7,23 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+source_list = [1, 3, 4, 1, 1, 2, 10]
+
+# Вариант без генератора
+result_list_1 = []
+for i in range(1, len(source_list)):
+    if source_list[i] > source_list[i-1]:
+        result_list_1.append(source_list[i])
+    else:
+        continue
+    i = i + 1
+
+# Вариант с генератором
+result_list_2 = [source_list[el] for el in range(1, len(source_list)) if source_list[el] > source_list[el-1]]
+
+print(f'Исходный список: {source_list}')
+print(f'Результат 1: {result_list_1}')
+print(f'Результат 2: {result_list_2}')
+
+

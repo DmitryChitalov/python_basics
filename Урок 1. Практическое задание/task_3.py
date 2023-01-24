@@ -8,3 +8,10 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+try:
+    n = input("Введите число целое число n: ")
+    n = int(n) + int(n+n) + int(n+n+n)
+    print(n)
+except ValueError:
+    print("Некорректный ввод. Повторите.")
+

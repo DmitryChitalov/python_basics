@@ -7,3 +7,36 @@
 Иванов 23543.12
 Петров 13749.32
 """
+lines = [
+    'Павленко 20000\n',
+    'Гринченко 19230\n',
+    'Токарев 39000.12\n'
+    'Михайлова 21000.5\n',
+    'Баранов 18900.13\n',
+    'Саркисян 14000.5\n',
+    'Кочкин 30000\n',
+    'Жиляков 10000\n',
+    'Артемов 19000.2\n',
+    'Нечаева 30000\n',
+    'Аминова 21000\n',
+    'Куликова 20000\n',
+    'Лепп 50000'
+]
+test_file = open("test_file.txt", "w+")
+for line in lines:
+    test_file.write(line)
+
+test_file.seek(0)
+lines = test_file.readlines()
+
+high_salaries_list = [line for line in lines if float(line.split(' ')[1]) > 20000]
+avg_salary = sum([float(line.split(' ')[1]) for line in lines]) / len(lines)
+
+print("Сотрудники с ЗП выше 20000:")
+i = 1
+for _ in high_salaries_list:
+    print(f'{i}. {_.split(" ")[0]}')
+    i = i + 1
+
+print(f'Средняя ЗП: {avg_salary:.2f}')
+

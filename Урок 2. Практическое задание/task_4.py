@@ -14,3 +14,8 @@
 1. раз
 2. перерефриж
 """
+test_list = input('Введите выражение из нескольких слов: ').split(' ')
+for _ in test_list:
+    i = test_list.index(_)
+    word = test_list[i]
+    print(f'{i+1}. {word[:10]}')

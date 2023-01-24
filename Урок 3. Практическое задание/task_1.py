@@ -17,3 +17,23 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def div_func(var_1, var_2):
+    try:
+        return var_1 / var_2
+    except ZeroDivisionError:
+        return print("Делить на ноль нельзя")
+    else:
+        return
+
+
+try:
+    e = float(input("Делимое: "))
+    d = float(input("Делитель: "))
+    print(div_func(e, d))
+except ValueError:
+    print("Некорректно. Введите число.")
+
+
+
