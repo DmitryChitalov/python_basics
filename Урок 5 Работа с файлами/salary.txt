@@ -1,0 +1,10 @@
+Ivanov 25000.54
+Petrov 13500.23
+Sidorov 70000.45
+Smirnov 15000.87
+Fedorov 8500.79
+Usov 34500.99
+Konovalov 21000.21
+Grigoryev 6000.23
+Smolyanov 9000.65
+Egorov 1000000.77
