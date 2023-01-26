@@ -14,3 +14,8 @@
 1. раз
 2. перерефриж
 """
+my_str1 = input("Введите строку из нескольких слов через пробел: ")
+my_str1 = my_str1.split()
+for ind, el in enumerate(my_str1, 1):
+    print(ind, el[0:10])
+    
