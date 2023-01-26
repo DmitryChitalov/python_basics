@@ -12,3 +12,4 @@ def my_func(x, y):
 
 print(f'Результат x^y: '
       f'{my_func(int(input("Положительное число х: ")), int(input("Целое отрицательное y: ")))}')
+      
