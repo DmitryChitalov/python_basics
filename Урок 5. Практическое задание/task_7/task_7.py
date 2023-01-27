@@ -9,3 +9,30 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+import json
+
+d_1 = {}
+d_2 = {}
+averagec = 0
+count = 0
+with open('firms.txt', 'r') as s:
+    with open('js.json', 'w') as f:
+        for i in s:
+            st = i.strip().split()
+            for j in st:
+                d_1[j] = int(st[2]) - int(st[3])
+                if d_1[j] > 0:
+                    averagec += int(st[2])
+                break
+
+for k, v in d_1.items():  # перебираем значения прибыли
+    if v >= 0:  # если значение меньше 0, то прибавляем счетчик
+        count += 1
+
+g = averagec // count
+d_2['average_profit'] = g
+lst = [d_1, d_2]
+print(lst)
+
+with open('js.json', 'w', encoding="utf-8") as j:
+    json.dump(lst, j, indent=4, sort_keys=True)
