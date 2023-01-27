@@ -10,5 +10,7 @@ if receipt > cost:
     employee = int(input("Введите число сотрудников фирмы "))
     profit_employee = profit / employee
     print(f"Прибыль фирмы в расчете на одного сотрудника {profit_employee}.")
+elif receipt == cost:
+        print("Величина выручки равна издержкам фирмы.")
 else:
-    print("Убыток - издержки больше выручки")
+    print("Убыток - издержки больше выручки.")
