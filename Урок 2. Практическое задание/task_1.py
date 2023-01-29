@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+lst_1 = [1, "sunday", 3.14, True, None]
+for el in lst_1:
+    print(type(el))
