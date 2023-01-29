@@ -8,3 +8,17 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+""" Задание №2 """
+def user_info(**kaparams):
+    print(f"{kaparams['name']} {kaparams['last_name']} {kaparams['birth_year']} года рождения, "
+          f"проживает в городе {kaparams['city']}, email: {kaparams['email']}, телефон: {kaparams['phone']}")
+
+user_info(
+    name='Бзденек',
+    last_name='Кузьебиш',
+    birth_year='1991',
+    city='Таллинн',
+    email='bzd.kuz@mylom.com',
+    phone='+79993222332'
+)
