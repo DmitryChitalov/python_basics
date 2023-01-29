@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def division(dividend, divider):
+    try:
+        return dividend/divider
+    except ZeroDivisionError:
+        return "Как так? Пытаетесь делить на 0!"
+
+try:
+    first_numb = int(input("Введите первое число: "))
+    second_numb = int(input("Введите второе число: "))
+    print(division(first_numb, second_numb))
+except ValueError:
+    print("Вводите только числа, пожалуйста")
