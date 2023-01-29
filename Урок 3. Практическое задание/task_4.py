@@ -5,3 +5,27 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def my_func(x, y):
+    if y > 0:
+        z = x
+        while y > 1:
+            z *= x
+            y -= 1
+        return z
+    elif y < 0:
+        x = 1 / x
+        y = abs(y)
+        i = 1
+        total_num = x
+        while i < y:
+            total_num *= x
+            i += 1
+        return total_num
+    else:
+        return 1
+print(my_func(2, 4))
+print(my_func(2, -1))
+print(my_func(99, 0))
+print(my_func(1, 100))
+print(my_func(100, 1))
+print(my_func(16, 12))
