@@ -12,3 +12,36 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+import sys
+from itertools import count, cycle
+from sys import exit
+
+# a
+print("Задача 'A'")
+lst = []
+try:
+    a = int(input("Укажите начальное число списка: "))    #Просим пользователя ввести число
+    b = int(input("Укажите конечное число списка: "))
+except ValueError:
+    print("Необходимо указать только числа!!")    #При обнаружении ошибки, программа будет остановлена
+    sys.exit()
+
+for x in count(a):    #Функция создания и вывода списка
+    if x > b:
+        print(f"Результат: {lst}")
+        break
+    lst.append(x)
+
+
+# б
+print("Задача 'Б'")
+orig_lst = [2, 6, 3, 342, 54, 23, 23, 12, 53]
+print(f"Оригинальный список: {orig_lst}")
+new_lst = []
+c = 0
+for x in cycle(orig_lst):    #Функция перебора каждого элемента списка 20 раз
+    if c > 20:
+        print(f"Новый список: {new_lst}")
+        break
+    new_lst.append(x)
+    c += 1

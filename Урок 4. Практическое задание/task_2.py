@@ -7,3 +7,17 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+orig_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+# без генераторного выражения
+result_without_generator = []
+for el in range(1, len(orig_list)):
+    if orig_list[el] > orig_list[el-1]:
+        result_without_generator.append(orig_list[el])
+
+print(f"Результат без использования генератора: {result_without_generator}")
+
+# с генераторным выражением
+result_with_generator = [orig_list[el] for el in range(1, len(orig_list)) if orig_list[el] > orig_list[el-1]]
+
+print(f"Результат с использованием генератора: {result_with_generator}")
