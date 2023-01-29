@@ -14,3 +14,16 @@
 1. раз
 2. перерефриж
 """
+my_lst = input("Введите слово через пробел").split()
+#Вариант1
+n = 1
+for el in my_lst:
+    if len(el) > 10:
+        print(f"{n}.{el[:10]}")
+    else:
+        print(f"{n}.{el}")
+    n += 1
+print()
+#Вариант2
+for i, el in enumerate(my_lst,1):
+    print(f"{i}.{el[:10]}")
