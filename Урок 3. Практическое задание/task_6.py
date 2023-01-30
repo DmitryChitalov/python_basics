@@ -13,9 +13,9 @@ def int_func(text):
     return text.capitalize()
 
 """ продолжение с выводом исходной строки, где каждое
-слово будет наичанться с заглавной буквы """
+слово будет начинаться с заглавной буквы """
 
-line = input("Введите строку из латинских букав: ")
+line = input("Введите строку из латинских буковОК: ")
 my_list = line.split()
 for my_word in my_list:
     print(int_func(my_word), end=" ")
