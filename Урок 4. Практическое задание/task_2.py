@@ -7,3 +7,11 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+result = []
+list = [int(i) for i in input("Введите список чисел: ").split()]
+for i in range(1, len(list)):
+    if list[i] > list[i-1]:
+        (result.append(list[i]))
+print("Исходный список:", list)
+print("Результат:", result)

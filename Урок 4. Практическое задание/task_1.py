@@ -6,3 +6,14 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+def pay():
+    try:
+        amount = [int(_) for _ in argv[1:]]
+        return (amount[0] * amount[1]) + amount[2]
+    except IndexError:
+        return 'Нобходимо ввести три параметра'
+
+print(pay())

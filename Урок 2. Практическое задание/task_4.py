@@ -14,3 +14,12 @@
 1. раз
 2. перерефриж
 """
+text = input("Введите слова через пробел:")
+list = text.split()
+for number, value in enumerate (list, start=1) :
+    if len(value) > 11 :
+        value = value[:10]
+        print(number, value)
+    else :
+        print(number, value)
+        

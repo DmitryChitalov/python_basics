@@ -17,3 +17,10 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def divider(a, b):
+    try:
+        return a/b
+    except ZeroDivisionError as c:
+        print('Ошибка! Делить на ноль нельзя')
+
+print(divider(int(input('Первое число: ')), int(input('Второе число: '))))

@@ -6,3 +6,20 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+def my_sum ():
+    total = 0
+    flag = False
+    while flag == False:
+        number = input('Введите строку чисел, разделенных пробелом ').split()
+        overall = 0
+        for x in range(len(number)):
+            if number[x] == 'q':
+                flag = True
+                break
+            else:
+                overall = overall + int(number[x])
+        total = total + overall
+        print(f'Сумма чисел равна {total}')
+    print(f'Сумма чисел равна {total}')
+my_sum() 

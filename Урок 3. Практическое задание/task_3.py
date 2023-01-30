@@ -5,3 +5,13 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+def total(arg1, arg2, arg3):
+    summ = arg1 + arg2 + arg3 - min([arg1, arg2, arg3])
+    print(f'Сумма двух наибольших аргументов равна: {summ}')
+    
+total(
+    int(input('Первый аргумент:')),
+    int(input('Второй аргумент:')),
+    int(input('Третий аргумент:')),
+)
