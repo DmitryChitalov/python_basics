@@ -22,7 +22,7 @@ def division(dividend, divider):
     try:
         return dividend/divider
     except ZeroDivisionError:
-        return "Как так? Пытаетесь делить на 0!"
+        return "Как так? Нельзя делить на 0!"
 
 try:
     first_numb = int(input("Введите первое число: "))
