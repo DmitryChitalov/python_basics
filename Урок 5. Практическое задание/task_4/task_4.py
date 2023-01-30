@@ -7,3 +7,19 @@
 Иванов 23543.12
 Петров 13749.32
 """
+money = []
+with open('test.txt', 'r', encoding='utf-8') as f:
+    print ('Зарплату менее 20000 рублей имеют:')
+    for i in f:
+        b = i.split()
+        i = int(i.split(' ')[1]) 
+        if i < 20000:
+            print (f' {b}')
+        money.append(i)
+total = 0
+line = len(money)
+for number in money:
+    total += number
+medium = total / line
+print(f'Средняя зарплата: {medium}')
+
