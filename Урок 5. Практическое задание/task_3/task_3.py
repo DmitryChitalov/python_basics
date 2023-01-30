@@ -8,3 +8,12 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+replace_word = {"One": "Один", "Two": "Два", "Three": "Три", "Four": "Четыре"}
+
+with open("number_list.txt", encoding='utf-8') as f_obj:
+    for line in f_obj:
+        for key in replace_word.keys():
+            line = line.replace(key, replace_word[key])
+        print(line)
+        with open("new_number_list.txt", 'a', encoding='utf-8') as rus_word:
+            rus_word.writelines(f"\n {line}")

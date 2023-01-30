@@ -7,3 +7,12 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+
+with open('salary_of_staff.txt', 'r', encoding='utf-8') as f_sal:
+    staff = {}
+    for line in f_sal:
+        worker, value = line.split()
+        staff[worker] = value
+        if float(value) < 20000:
+            print(f'{worker}: зарплата меньше 20000')
