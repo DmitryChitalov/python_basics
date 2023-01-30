@@ -5,3 +5,15 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+def my_func(a, b, c):
+    """ Возврщает сумму наибольших двух аргументов из трех """
+    list_of_args = [a, b, c]
+    sum = max(list_of_args)
+    list_of_args.remove(sum)  # удаляем наибольший элемент
+    sum += max(list_of_args)  # добавляем следующий наибольший элемент
+    return sum
+# вызов функции
+first = int(input('Укажите первое значение: '))
+second = int(input('Укажите второе значение: '))
+third = int(input('Укажите третье значение: '))
+print(my_func(first, second, third))
