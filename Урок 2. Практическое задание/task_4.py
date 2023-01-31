@@ -14,3 +14,10 @@
 1. раз
 2. перерефриж
 """
+user_list = list(input('Введите слова через пробел : ').split(' '))
+
+for i, item in enumerate(user_list):
+    if len(user_list[i]) > 10:
+        print(F'{i + 1} : {item[:10]}')
+    else:
+        print(F'{i + 1} : {item}')

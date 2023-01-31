@@ -1,5 +1,6 @@
 """
-6. *Реализовать структуру данных «Товары». Она должна представлять собой список кортежей.
+6. *Реализовать структуру данных «Товары».
+Она должна представлять собой список кортежей.
 Каждый кортеж хранит информацию об отдельном товаре.
 В кортеже должно быть два элемента — номер товара и словарь с параметрами
 (характеристиками товара: название, цена, количество, единица измерения).
@@ -25,3 +26,31 @@
 “ед”: [“шт.”]
 }
 """
+product_list = []
+user_number = int(input('Введите кол-во записей : '))
+for i in range(1, user_number + 1):
+    title = input('названия : ')
+    price = int(input('цена : '))
+    number = int(input('количество : '))
+    units_measurement = input('eд : ')
+    product_list.append(
+        (i, {'Название': title, 'Цена': price, 'Количество': number, 'Единица измерения': units_measurement}))
+
+title = []
+price = []
+number = []
+units_measurement = []
+for i in product_list:
+    title.append(i[1].get('Название'))
+    price.append(i[1].get('Цена'))
+    number.append(i[1].get('Количество'))
+    units_measurement.append(i[1].get('Единица измерения'))
+
+result = {
+    'Название': title,
+    'Цена': price,
+    'Количество': number,
+    'Единица измерения': units_measurement
+}
+
+print(F"{result}")

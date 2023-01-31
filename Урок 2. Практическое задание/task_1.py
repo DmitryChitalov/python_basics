@@ -15,3 +15,9 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+random_list = [5, 'hallo', .15, True, None]
+print(type(random_list))
+
+for i in random_list:
+    print(type(i))
