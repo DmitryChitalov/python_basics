@@ -5,3 +5,29 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def my_func(x, y):
+    res = x ** y
+    return res
+print(my_func(float(input("Введите x: ")),
+              int(input("Введите y: "))))
+
+# Вариант с использованием встроенной функции pow():			  
+def my_func(x, y):
+    res = pow(x, y)
+    return res
+print(my_func(float(input("Введите x: ")),
+              int(input("Введите y: "))))
+
+#Вариант с циклом:			  
+def my_func(x, y):
+    i = 1
+    res = 1
+    while i <= abs(y):
+        res *= x
+        i += 1
+    if y < 0:
+        res = 1 / res
+    return res
+
+print(my_func(float(input("Введите x: ")),
+              int(input("Введите y: "))))
