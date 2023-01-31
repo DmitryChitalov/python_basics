@@ -15,3 +15,12 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+my_list = [7, 5, 3, 3, 2]
+while True:
+    grade = input("Введите оценку от 1 до 10 или напишите 'Выход' для выхода из программы: ")
+    if grade != "Выход":
+        my_list.append(int(grade))
+        my_list.sort(reverse=True)
+        print(my_list)
+    else: break

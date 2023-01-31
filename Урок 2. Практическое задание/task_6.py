@@ -25,3 +25,40 @@
 “ед”: [“шт.”]
 }
 """
+
+goods = [] # Реализовать структуру данных «Товары». Она должна представлять собой список кортежей.
+#goods_features = {'название': '', 'цена': '', 'количество': '', 'ед': ''}
+goods_analytics_name = []
+goods_analytics_price = []
+goods_analytics_quantity = []
+goods_analytics_unit = []
+goods_counter = 0
+
+control = ''
+while True:
+    control = input("Для наполнения справочника нажмите 'Enter', для перехода в аналитику введите 'A', для выхода введите 'Q': ")
+    if control == "Q" or "q":
+        break
+    elif control == "A" or "a": # Далее необходимо собрать аналитику о товарах.
+        for good in goods:
+            goods_analytics_name.append(good[1].get('название')) # Реализовать словарь, в котором каждый ключ — характеристика товара, например название,
+            goods_analytics_price.append(good[1].get('цена'))    # а значение — список значений-характеристик, например список названий товаров.
+            goods_analytics_quantity.append(good[1].get('количество'))
+            goods_analytics_unit.append(good[1].get('ед'))
+        print(f'"названия:" {goods_analytics_name}')
+        print(f'"цены:" {goods_analytics_price}')
+        print(f'"количества:" {goods_analytics_quantity}')
+        print(f'"ед:" {goods_analytics_unit}')
+    else:
+        goods_features = {'название': input("Введите наименование товара: "), # Структуру нужно сформировать программно,
+                          'цена': input("Введите цену товара: "),             # т.е. запрашивать все данные у пользователя.
+                          'количество': input("Введите количество товара: "),
+                          'ед': input("Введите единицу измерения товара: ")}
+        if goods_features.get('название') == '' or\
+                goods_features.get('цена') == '' or\
+                goods_features.get('количество') == '' or\
+                goods_features.get('ед') == '':
+            continue
+        goods_counter += 1
+        goods.append((goods_counter, goods_features)) # Каждый кортеж хранит информацию об отдельном товаре.
+                                                      # В кортеже должно быть два элемента — номер товара и словарь с параметрами
