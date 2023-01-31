@@ -17,3 +17,14 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def my_del():
+    try:
+        num = float(input("Введите число - делимое: "))
+        denom = float(input("Введите число - делитель: "))
+        result = num / denom
+    except ZeroDivisionError:
+        return "На ноль делить нельзя!"
+    except ValueError:
+        return "Введенное значение не является числом"
+    return result
+print(my_del())
