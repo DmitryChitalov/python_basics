@@ -15,3 +15,22 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+my_list = [9, 7, 5, 3, 3, 2]
+number = int(input(f"Для выхода из программы введите - 0. "
+                   f"\nТекущий рейтинг: {my_list}. "
+                   f"\nВведите новый элемент рейтинга: "))
+while number != 0:
+    for i in range(len(my_list)):
+        if my_list[i] == number:
+            my_list.insert(i + 1, number)
+            break
+        elif my_list[0] < number:
+            my_list.insert(0, number)
+        elif my_list[-1] > number:
+            my_list.append(number)
+        elif my_list[i] > number and my_list[i + 1] < number:
+            my_list.insert(i + 1, number)
+            break
+    print(f"Текущий рейтинг - {my_list}")
+    number = int(input("Введите новый элемент рейтинга: "))
