@@ -17,18 +17,3 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
-
-num1 = int(input("Введите первое число: "))
-num2 = int(input("Введите второе число: "))
-
-def div(num1, num2):
-    """
-    Функция деления двух чисел
-    """
-    try:
-        result = num1 / num2
-    except ZeroDivisionError:
-        return "Вы что? Пытаетесь делить на 0!"
-    return result
-
-print(div(num1, num2))
