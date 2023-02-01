@@ -6,3 +6,14 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+def salary(hours, rate, extra=0):
+    return int(hours) * int(rate) + int(extra)
+
+if len(argv) == 3:  # расчет ЗП, если премия не указана
+    print(salary(argv[1], argv[2]))
+elif len(argv) == 4:  # расчет ЗП, если премия указана
+    print(salary(argv[1], argv[2], argv[3]))
+else:  # вывод сообщения о неверном количестве аргументов в скрипте
+    print('Неверное количество аргументов')
