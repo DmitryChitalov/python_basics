@@ -1,0 +1,245 @@
+"""
+1)Создать класс TrafficLight (светофор) и определить у него один атрибут color (цвет) и метод running (запуск).
+Атрибут реализовать как приватный. В рамках метода реализовать переключение светофора в режимы: красный,
+желтый, зеленый. Продолжительность первого состояния (красный) составляет 7 секунд, второго (желтый) — 2 секунды,
+третьего (зеленый) — на ваше усмотрение.  Переключение между режимами должно осуществляться только в указанном порядке
+ (красный, желтый, зеленый). Проверить работу примера, создав экземпляр и вызвав описанный метод.
+Задачу можно усложнить, реализовав проверку порядка режимов, и при его нарушении выводить соответствующее сообщение и
+завершать скрипт.
+"""
+import time
+from termcolor import colored
+
+lights = ['red', 'yellow', 'green', 'yellow']
+
+
+class TrafficLight:
+    def __init__(self, color):
+        self.__color = color
+
+    def colortraffic(self):
+        c1 = "   .....\n .........\n...........\n .........\n  ......."
+        cc = "   @@@@@\n @@@@@@@@@\n@@@@@@@@@@@\n @@@@@@@@@\n  @@@@@@@"
+        if self.__color == 'red':
+            print(colored(cc, self.__color))
+            print(c1)
+            print(c1)
+        if self.__color == 'yellow':
+            print(c1)
+            print(colored(cc, self.__color))
+            print(c1)
+        if self.__color == 'green':
+            print(c1)
+            print(c1)
+            print(colored(cc, self.__color))
+
+    def running(self):
+        if self.__color == 'red':
+            # print(colored(f'{self.__color} light is on', 'red'))
+            self.colortraffic()
+            time.sleep(7)
+            print()
+
+        elif self.__color == 'yellow':
+            # print(colored(f'{self.__color} light is on', 'yellow'))
+            self.colortraffic()
+            time.sleep(2)
+            print()
+
+        elif self.__color == 'green':
+            # print(colored(f'{self.__color} light is on', 'green'))
+            self.colortraffic()
+            time.sleep(5)
+            print()
+
+
+while True:
+    for i in range(len(lights)):
+        if lights[i - 1] == 'red' or lights[i - 1] == 'yellow' or lights[i - 1] == 'green' and i != 'yellow':
+            first = TrafficLight(lights[i])
+            first.running()
+        else:
+            print("ERROR DON'T TOUCH traffic light")
+            exit()
+"""
+2)Реализовать класс Road (дорога), в котором определить атрибуты: length (длина), width (ширина).
+Значения данных атрибутов должны передаваться при создании экземпляра класса. Атрибуты сделать защищенными.
+Определить метод расчета массы асфальта, необходимого для покрытия всего дорожного полотна. Использовать формулу:
+длина*ширина*масса асфальта для покрытия одного кв метра дороги асфальтом, толщиной в 1 см*число см толщины полотна.
+Проверить работу метода.
+Например: 20м*5000м*25кг*5см = 12500 т
+"""
+import re
+
+# 20м 5000м 25кг 5см
+string = ''
+while len(string) < 4:
+    inp = input('Enter length, width, mass, thickness with space: ')
+    st = re.split('[a-zA-Zа-яА-Я]', inp)
+    string = ''.join(st).split()
+# чтобы код был понятен для другого человека
+length = int(string[0])
+width = int(string[1])
+mass = int(string[2])
+thickness = int(string[3])
+
+
+class Road:
+    def __init__(self, length, width):
+        self._length = length
+        self._width = width
+
+    def formula(self, mass, thickness):
+        s = self._length * self._width
+        m = (self._length * self._width * mass * thickness) // 1000
+        s1 = m / s
+        return f'{m} tons of asphalt need ({s1} tons or {int(s1 * 1000)} kg of asphalt need for 1 m^2 of road)'
+
+
+x = Road(length, width)
+am = x.formula(mass, thickness)
+print(am)
+"""
+Enter length, width, mass, thickness with space: 20 5000 25 5
+12500 tons of asphalt need (0.125 tons or 125 kg of asphalt need for 1 m^2 of road)
+"""
+"""
+3)Реализовать базовый класс Worker (работник), в котором определить атрибуты: name, surname, position (должность),
+income (доход). Последний атрибут должен быть защищенным и ссылаться на словарь, содержащий элементы: оклад и премия,
+например, {"wage": wage, "bonus": bonus}. Создать класс Position (должность) на базе класса Worker. В классе Position
+реализовать методы получения полного имени сотрудника (get_full_name) и дохода с учетом премии (get_total_income).
+Проверить работу примера на реальных данных (создать экземпляры класса Position, передать данные, проверить значения
+атрибутов, вызвать методы экземпляров).
+"""
+class Worker:
+    def __init__(self, name, surname, position, income):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self._income = income
+
+
+class Position(Worker):
+    def get_full_name(self):
+        return f'{self.name} {self.surname}'
+
+    def get_total_income(self):
+        income = self._income['wage'] + (self._income['wage'] * self._income['bonus'])
+        return int(income)
+
+
+worker_1 = Position('Ivan', 'Ivanov', 'ceo', {'wage': 100, 'bonus': 0.1})
+w_1 = worker_1.get_total_income()
+print(f'{worker_1.get_full_name()} have {w_1}$ hour profit')
+worker_2 = Position('Mihail', 'Prohorov', 'managing partner', {'wage': 1500, 'bonus': 0.25})
+w_2 = worker_2.get_total_income()
+print(f'{worker_2.get_full_name()} have {w_2}$ hour profit')
+worker_3 = Position('V', 'B', 'owner', {'wage': 77777, 'bonus': 0.75})
+w_3 = worker_3.get_total_income()
+print(f'{worker_3.get_full_name()} have {w_3}$ hour profit')
+
+"""
+Ivan Ivanov have 110$ hour profit
+Mihail Prohorov have 1875$ hour profit
+V B have 136109$ hour profit
+"""
+"""
+4)Реализуйте базовый класс Car. У данного класса должны быть следующие атрибуты: speed, color, name,
+is_police (булево). А также методы: go, stop, turn(direction), которые должны сообщать, что машина поехала,
+остановилась, повернула (куда). Опишите несколько дочерних классов: TownCar, SportCar, WorkCar, PoliceCar.
+Добавьте в базовый класс метод show_speed, который должен показывать текущую скорость автомобиля. Для классов
+TownCar и WorkCar переопределите метод show_speed. При значении скорости свыше 60 (TownCar) и 40 (WorkCar)
+должно выводиться сообщение о превышении скорости.
+Создайте экземпляры классов, передайте значения атрибутов. Выполните доступ к атрибутам, выведите результат.
+Выполните вызов методов и также покажите результат.
+"""
+class Car:
+    def __init__(self, speed, color, name, is_police=False):
+        self.speed = int(speed)
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        return 'Машина поехала.'
+
+    def stop(self):
+        return 'Машина остановлена.'
+
+    def turn(self, direction):
+        return f' Машина едет на{direction}.'
+
+    def show_speed(self):
+        return f'Скорость автомобиля {self.speed}км/ч.'
+
+
+class TownCar(Car):
+    def show_speed(self):
+        if self.speed > 60:
+            return f'Превышение максимально разрешенной скорости, сбросьте скорость на {self.speed - 60}км/ч.'
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed > 40:
+            return f'Превышение максимально разрешенной скорости, сбросьте скорость на {self.speed - 40}км/ч.'
+
+
+class SportCar(Car):
+    pass
+
+
+class PoliceCar(Car):
+    def go(self):
+        if self.is_police:
+            return 'Полицейская машина поехала.'
+
+
+car1 = TownCar(82, 'хром', 'TownCar')
+print(car1.go(), car1.show_speed(), car1.turn('лево'), car1.turn('право'), car1.stop(), 'Конец поездки')
+car2 = WorkCar(98, 'черный', 'WorkCar')
+print(car2.go(), car2.turn('лево'), car2.show_speed(), car2.turn('право'), car2.stop(), 'Конец поездки')
+car3 = SportCar(325, 'красный', 'SportCar')
+print(car3.go(), car3.show_speed(), car3.turn('право'), car3.stop(), 'Конец поездки')
+car4 = PoliceCar(110, 'серый', 'PoliceCar', True)
+print(car4.go(), car4.show_speed(), car4.stop(), 'Конец поездки.')
+"""
+5)Реализовать класс Stationery (канцелярская принадлежность). Определить в нем атрибут title (название) и метод
+draw (отрисовка). Метод выводит сообщение “Запуск отрисовки.” Создать три дочерних класса Pen (ручка),
+Pencil (карандаш), Handle (маркер). В каждом из классов реализовать переопределение метода draw. Для каждого из
+классов метод должен выводить уникальное сообщение. Создать экземпляры классов и проверить, что выведет описанный
+метод для каждого экземпляра.
+"""
+
+
+class Stationery:
+    def __init__(self, title):
+        self.title = title
+
+    def draw(self):
+        return 'Запуск отрисовки'
+
+
+class Pen(Stationery):
+    def draw(self):
+        return 'Ручка'
+
+
+class Pencil(Stationery):
+    def draw(self):
+        return 'Карандаш'
+
+
+class Handle(Stationery):
+    def draw(self):
+        return 'Маркер'
+
+
+p = Pen('Ручка')
+print(p.draw())
+penc = Pencil('Карандаш')
+print(penc.draw())
+h = Handle('Маркер')
+print(h.draw())
+
+"""
