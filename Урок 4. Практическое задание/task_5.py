@@ -5,3 +5,6 @@
 Необходимо получить результат вычисления произведения всех элементов списка.
 Подсказка: использовать лямбда-функцию и функцию reduce().
 """
+from functools import reduce
+initial_list = [i for i in range(100, 1001, 2)]
+print("Сумма элементов списка:\n", reduce(lambda a, b: a * b, initial_list))
