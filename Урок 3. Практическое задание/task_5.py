@@ -10,6 +10,8 @@
 
 
 def sum_numbers(list_of_numbers):
+    """Функция принимает список, возвращает сумму элементов списка и
+     в случае невозможности преобразования элемента списка в тип float выход из функции. """
     sum_result = 0
     for element in list_of_numbers:
         try:
