@@ -6,3 +6,11 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+
+def wage(production_hours, rate_hour, premium):
+    return production_hours * rate_hour + premium
+
+
+print(f'расчет заработной платы. ЗП = {wage(int(argv[1]), int(argv[2]), int(argv[3]))}')

@@ -6,3 +6,21 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def adder(g, sum):
+    for i in g:
+        if i != 'stop':
+            sum = sum + int(i)
+        else:
+            return sum, False
+    return sum, True
+
+
+sum = 0
+flag = True
+
+while flag:
+    user_list = list(input('Введите целые числа через пробел : ').split(' '))
+    sum, flag = adder(user_list, sum)
+    print(sum)
