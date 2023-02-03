@@ -10,7 +10,7 @@ def my_sum():
     res = 0
     end = False
     while not end:
-        my_str = list(input("Введите числа через пробел: ").split(' '))
+        my_str = input("Введите числа через пробел: ").split(' ')
         el = 0
         while el < len(my_str):
             c = my_str[el]
