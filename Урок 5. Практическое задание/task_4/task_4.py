@@ -7,3 +7,19 @@
 Иванов 23543.12
 Петров 13749.32
 """
+my_file = open("salary.txt", "r")
+content = my_file.readlines()
+my_file.close()
+a = []
+print("\nСотрудники, имеющих оклад меньше 20000: ")
+for j in content:
+    a = j.split()
+    if float(a[1]) < 20000:
+        print(a[0])
+print("\nСредняя величина дохода сотрудников = : ")
+b = []
+result = 0
+for i in content:
+    b = i.split()
+    result = int((result + float(b[1]))/len(b))
+print(result)
