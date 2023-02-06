@@ -5,3 +5,13 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+import re
+import numpy
+with open("file.txt", encoding="utf-8") as list_subj:
+    subj_dict = {}
+    for subj in list_subj:
+        temp_list = subj.split(" ")
+        list_num = re.findall(r"\d+", subj)
+        sum_h = numpy.sum(list(map(int, list_num)))
+        subj_dict[temp_list[0]] = sum_h
+    print(subj_dict)
