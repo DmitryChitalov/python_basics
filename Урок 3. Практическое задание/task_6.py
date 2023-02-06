@@ -8,3 +8,9 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+def int_func(some_str):
+    return some_str.title()
+user_word = input('Введите слово маленькими буквами: ')
+print(int_func(user_word))
+user_string = input('Введите несколько слов с маленькой буквы, через пробел: ')
+print(int_func(user_string))
