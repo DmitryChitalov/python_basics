@@ -5,3 +5,17 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+# формирование словаря из файла, где ключ - название предмета, значение - список занятий по предмету
+with open('lesson5_task6_text.txt', 'r', encoding='utf-8') as txt:
+    dict_of_subjects = {line.strip().split(':')[0]: line.strip().split(':')[1].split() for line in txt}
+
+
+def num_from_string(string):
+    """ Возвращает число с начала строки до первого не числового символа. Если чисел нет, то возвращает 0"""
+    result = ''
+    for i in string:
+        if i.isdigit():
+            result += i
+        else:
+            break
+    if result != '':
