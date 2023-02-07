@@ -9,3 +9,25 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+import json
+
+# создание словаря с ключом - название фирмы, значение - значение прибыли (убытков)
+with open('lesson5_task7_text.txt', 'r', encoding='utf-8') as txt:
+    dict_of_firms = {line.strip().split()[0]: int(line.strip().split()[2]) - int(line.strip().split()[3]) for
+                     line in txt}
+
+# подсчет средней прибыли (только для прибыльных компаний)
+sum_profit = 0  # начальное значение для подсчета общей прибыли
+profitable_firms = 0  # начальное значение для подсчета числа прибыльных фирм
+for value in dict_of_firms.values():
+    if value >= 0:  # если фирма не терпит убытки
+        sum_profit += value  # прибавлении прибыли компании в общую сумму
+        profitable_firms += 1  # увеличение счетчика прибыльных компаний
+average_profit = sum_profit / profitable_firms  # расчет средней прибыли
+
+# создание списка из 2х словарей
+list_of_firms = [dict_of_firms, {"average_profit": average_profit}]
+
+# заись json-объекта в файл
+with open('lesson5_task7_result.json', 'w') as txt:
+    json.dump(list_of_firms, txt)
