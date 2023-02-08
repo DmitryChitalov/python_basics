@@ -15,3 +15,31 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+class TrafficLight:
+    __color = 'красный'
+
+    def running(self):
+        print(self.__color)  # вывод на экран начального сигнала
+        cycle = ['красный', 'желтый', 'зеленый']  
+        i = 0  
+        while True:
+            if self.__color == 'красный':
+                time.sleep(7)
+                self.__color = 'желтый'
+            elif self.__color == 'желтый':
+                time.sleep(2)
+                self.__color = 'зеленый'
+            elif self.__color == 'зеленый':
+                time.sleep(7)
+                self.__color = 'красный'
+            i += 1  # увеличение счетчика
+            if i >= len(cycle):  # если счетчик превысил длину списка сигналов
+                i = 0  # обнуление счетчика
+            if self.__color == cycle[i]:  # проверка правильности последовательности переключния сигналов
+                print(self.__color)  # вывод текущего сигнала на экран
+            else:
+                break  # прерывание, при несоблюдении последовательности
+
+tl = TrafficLight()
+tl.running()
