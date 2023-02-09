@@ -17,3 +17,9 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def division (x, y):
+    try:
+       return x/y
+    except ZeroDivisionError:
+        return "Нельзя делить на ноль"
+print(division(int(input("Введите x = ")), int(input("Введите y = "))))

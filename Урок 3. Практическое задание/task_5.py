@@ -6,3 +6,18 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+result = 0
+while True:
+    line = input(f"Сумма введенных чисел {result}. Введите числа через пробел или специальный символ x для выхода: ")
+    tokens = line.split(" ")
+    for token in tokens:
+        try:
+            number = float(token)
+            result += number
+        except:
+            if token == 'x':
+                print(f"Сумма введенных чисел {result}. Расчет окончен")
+                exit(0)
+            else:
+                print(f"Сумма введенных чисел {result}.")
+                exit(1)
