@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+Изменения
+
