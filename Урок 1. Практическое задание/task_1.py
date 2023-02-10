@@ -19,4 +19,4 @@ print(vnm)
 
 name = input("Укажите свое имя: ")
 years = int(input("Укажите свой возраст: "))
-print("Имя:", name, "Возраст:", years)
+print(f"Имя:  {name},  Возраст:  {years}")
