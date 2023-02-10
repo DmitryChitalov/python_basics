@@ -14,3 +14,11 @@
 1. раз
 2. перерефриж
 """
+my_list = input("Введите слова через пробел: ").split(' ')
+a = 1
+for el in my_list:
+    if len(el) > 10:
+        print(f'{a}. {el[:10]}')
+    else:
+        print(f'{a}. {el}')
+    a += 1
