@@ -6,3 +6,19 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+x = float(input('Ввод количества отработанных часов: '))
+y = float(input('Стоимость оплаты труда за 1 нормо/час: '))
+z = float(input('Укажите размер премии: '))
+
+script_n, productivity, rate_hours, bonus = argv, x, y, z
+
+print("Имя скрипта: ", script_n)
+print(f'Выработка в часах: {productivity:};')
+print(f'Cтавка руб. в час: {rate_per_hour:};')
+print(f'Премия: {bonus:};')
+try:
+    print(f'Заработная плата Сотрудника: {int(productivity) * int(rate_hours) + int(bonus)} рублей')
+except ValueError:
+    print('Введено недопустимое значение')
