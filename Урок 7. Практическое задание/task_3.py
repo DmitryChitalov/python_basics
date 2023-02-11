@@ -100,3 +100,67 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell:
+    def __init__(self, subcells):
+        self.subcells = subcells
+
+    def __add__(self, other):
+        return Cell(self.subcells + other.subcells)
+
+    def __sub__(self, other):
+        result = self.subcells - other.subcells
+        if result > 0:
+            return Cell(result)
+        else:
+            print('Разность количества ячеек двух клеток меньше нуля')
+
+    def __mul__(self, other):
+        return Cell(self.subcells * other.subcells)
+
+    def __truediv__(self, other):
+        return Cell(self.subcells // other.subcells)
+
+    def make_order(self, subcells_in_row):
+        numbers = self.subcells
+        blocks = numbers // subcells_in_row
+        result = ''
+        while blocks > 0:
+            result += '*' * subcells_in_row
+            if numbers != subcells_in_row:  # если данная строка не последняя
+                result += '\n'
+            numbers -= subcells_in_row
+            blocks = numbers // subcells_in_row
+        result += '*' * numbers
+        return result
+
+print("Создаем объекты клеток")
+a = Cell(13)
+b = Cell(20)
+c = Cell(50)
+e = Cell(30)
+print()
+
+print("Складываем")
+f = c + e
+print(f.subcells)
+print()
+
+print("Вычитаем")
+g = c - b
+print(g.subcells)
+print()
+
+print("Умножаем")
+d = a * b
+print(d.subcells)
+print()
+
+print("Делим")
+h = e / a
+print(h.subcells)
+print()
+
+print("Организация ячеек по рядам")
+print((d.make_order(10)))
+print()
+print((f.make_order(10)))
