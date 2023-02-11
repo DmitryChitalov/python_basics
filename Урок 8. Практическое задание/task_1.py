@@ -66,7 +66,6 @@ class Date:
         if good_date:
             print("Введена верная дата")
 
-# проверка работы статического метода
 Date.check_date("28-18-2091")
 print()
 Date.check_date("30-02-2023")
