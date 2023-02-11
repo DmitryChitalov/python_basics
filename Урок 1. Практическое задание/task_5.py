@@ -31,7 +31,7 @@ if debet > credit:
     pure_debet_for_person = float(pure_debet/workers)
     print('Прибыль фирмы в расчете на одного сотрудника: %s'%pure_debet_for_person)
 
-elif debet < credit:
+elif debet == credit:
     print('Прибыль фирмы нулевая')
 
 else:
