@@ -15,3 +15,20 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_list = [7, 5, 3, 3, 2]
+frq = int(input("Введите новый элемент рейтинга: "))
+for j in range(frq):
+    add_new = int(input("Введите новый элемент рейтинга: "))
+    if add_new in my_list:
+        i = my_list.index(add_new)
+        while (i + 1) <= (len(my_list) - 1) and (my_list[i] == my_list[i + 1]):
+            i += 1
+        my_list.insert(i, add_new)
+        print(f"Результат: {my_list}")
+    else:
+        if add_new <= my_list[-1]:
+            my_list.append(add_new)
+            print(f"Результат: {my_list}")
+        else:
+            my_list.insert(0, add_new)
+            print(f"Результат: {my_list}")

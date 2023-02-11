@@ -12,3 +12,28 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+#задание, где "стоп" - это достижение условия
+from itertools import cycle, count
+v_start = int(input('Введите стартовое значение: '))
+v_stop = v_start * 3
+for i in count(v_start):
+    if i < v_stop:
+        print(i)
+    else:
+        break
+del i
+
+
+#задание, где "стоп" - это достижение повторного списка
+from itertools import cycle, count
+v_start = int(input('Введите стартовое значение: '))
+v_stop = v_start * 3
+list = [i for i in range(v_stop)]
+count = 0
+for b in cycle(list):
+    if count < v_stop * 3:
+        print(b)
+        count += 1
+    else:
+        break
