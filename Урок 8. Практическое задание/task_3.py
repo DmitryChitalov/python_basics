@@ -9,3 +9,21 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+class NotIntError(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+user_list = []  # начальный список
+n = "start"
+while n != 'stop':
+    n = input("Введите целое число, для завершения работы введите stop: ")
+    try:
+        isdigit = n.isdigit()  # состоит ли введеный элемент только из цифр
+        if not isdigit:
+            raise NotIntError("Вы ввели не число, элемент не был добавлен в список")
+    except NotIntError as e:
+        print(e)
+    else:
+        user_list.append(int(n))
+print(user_list)
