@@ -17,3 +17,20 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def division(a, b):
+    """ Возвращает частное от деления
+
+    Позиционные аргументы:
+    a - делимое (целое число)
+    b - делитель (целое число)
+    """
+    try:
+        return a / b
+    except ZeroDivisionError:  # Обработка ситуации деления на ноль
+        print("Делитель равен нулю! Попробуйте другие числа")
+
+
+# Вызов функции
+dividend = int(input('Введите делимое: '))
+divider = int(input('Введите делитель: '))
+print(division(dividend, divider))

@@ -12,3 +12,21 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+from sys import argv
+
+# итератор, который генерирует целые числа, начиная с указанного
+for i in count(int(argv[1])):
+    if i >= 10:
+        break
+    else:
+        print(i)
+
+# итератор, который повторяет элементы какого-то списка, определенного заранее
+counter = 0
+for i in cycle(['l', 'i', 's', 't']):
+    if counter < 7:
+        print(i)
+    else:
+        break
+    counter += 1

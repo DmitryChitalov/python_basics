@@ -100,3 +100,53 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell:
+    def __init__(self, subcells):
+        self.subcells = subcells
+
+    def __add__(self, other):
+        return Cell(self.subcells + other.subcells)
+
+    def __sub__(self, other):
+        result = self.subcells - other.subcells
+        if result > 0:
+            return Cell(result)
+        else:
+            print('Разность количества ячеек двух клеток - не больше нуля')
+
+    def __mul__(self, other):
+        return Cell(self.subcells * other.subcells)
+
+    def __truediv__(self, other):
+        return Cell(self.subcells // other.subcells)
+
+    def make_order(self, subcells_in_row):
+        numbers = self.subcells
+        blocks = numbers // subcells_in_row
+        result = ''
+        while blocks > 0:
+            result += '*' * subcells_in_row
+            if numbers != subcells_in_row:  # если данная строка не последняя
+                result += '\n'
+            numbers -= subcells_in_row
+            blocks = numbers // subcells_in_row
+        result += '*' * numbers
+        return result
+
+
+# Проверка
+a = Cell(3)
+b = Cell(4)
+c = Cell(5)
+e = Cell(10)
+d = a * b
+f = c + e
+g = c - b
+h = e / a
+print(g.subcells)
+print(h.subcells)
+print()
+# проверка работы метода make_order
+print((d.make_order(5)))
+print()
+print((f.make_order(5)))

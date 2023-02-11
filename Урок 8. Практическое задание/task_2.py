@@ -5,3 +5,16 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+class MyZeroDivisionError(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+try:
+    n = int(input("На скольких человек будем делить 100 конфет? "))
+    if n == 0:
+        raise MyZeroDivisionError("На ноль делить нельзя")
+except MyZeroDivisionError as e:
+    print(e)
+else:
+    print(f"Каждому достанется по {100 / n} конфет")

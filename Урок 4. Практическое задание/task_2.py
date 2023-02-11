@@ -7,3 +7,15 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+from random import randint
+
+# формирование исходного списка
+num = int(input('Введите необходимое количество элементов списка: '))
+initial_list = [randint(-100, 100) for i in range(num)]
+
+# формирование результируещего списка
+result_list = [initial_list[i] for i in range(1, len(initial_list)) if initial_list[i] > initial_list[i - 1]]
+
+# вывод на экран обоих списков
+print(initial_list)
+print(result_list)
