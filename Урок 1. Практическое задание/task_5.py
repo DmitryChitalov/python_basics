@@ -18,3 +18,21 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+debet = int(input('Введите значение прибыли: '))
+credit = int(input('Введите значение издержек: '))
+workers = int(input('Ввдите количество работников: '))
+
+if debet > credit:
+    print('Выручка фирмы больше издержек')
+    pure_debet = debet - credit
+    rent = pure_debet/debet
+    print('Рентабельность {} выручки {}: {:.2f}' .format('нашей','составила',rent))
+    pure_debet_for_person = float(pure_debet/workers)
+    print('Прибыль фирмы в расчете на одного сотрудника: %s'%pure_debet_for_person)
+
+elif debet < credit:
+    print('Прибыль фирмы нулевая')
+
+else:
+    print('Убытки фирмы превышают ее доход')
