@@ -1,6 +1,5 @@
 """
 Задание 2.
-
 Реализовать проект расчета суммарного расхода ткани на производство одежды.
 
 Единственный класс этого проекта — одежда (класс Clothes).
@@ -25,3 +24,22 @@
 
 Два класса: абстрактный и Clothes
 """
+
+class Clothes:
+    def __init__(self, name, type, n):
+        self.name = name
+        self.type = type
+        self.n = n
+
+    def calc(self):
+        if self.type == 'пальто':
+            return round(self.n/6.5 + 0.5, 2)
+        elif self.type == 'костюм':
+            return round(2 * self.n + 0.3, 2)
+
+
+coat_1 = Clothes('красное', 'пальто', 42)
+print(f'Расход ткани на {coat_1.name} {coat_1.type} составляет {coat_1.calc()} м.')
+suit_1 = Clothes('синий', 'костюм', 165)
+print(f'Расход ткани на {suit_1.name} {suit_1.type} составляет {suit_1.calc()} м.')
+print(f'Общий расход ткани составляет {coat_1.calc() + suit_1.calc()} м.')

@@ -7,3 +7,16 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+#вариант с генераторным выражением
+result_list = []
+list = [int(i) for i in input("Введите список чисел через пробел: ").split()]
+for i in range(1, len(list)):
+    if list[i] > list[i-1]:
+        (result_list.append(list[i]))
+print("Из исходного списка: ", list)
+print("Получаем список, элементы которого больше предыдущего: ", result_list)
+
+#вариант без генераторного выражения
+list = [int(i) for i in input("Введите список чисел через пробел: ").split()]
+result_list = [num1 for num1, num2 in zip(list[1:], list[:-1]) if num1 > num2]
+print(result_list)

@@ -1,10 +1,7 @@
 """
 Задание 3.
-
 Реализовать программу работы с органическими клетками, состоящими из ячеек.
-
 Необходимо создать класс Клетка (Cell).
-
 В его конструкторе инициализировать параметр (quantity),
 соответствующий количеству ячеек клетки (целое число).
 
@@ -100,3 +97,36 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __add__(self, other):
+        return f'Размер клетки изменен и равен: {self.quantity + other.quantity}'
+
+    def __sub__(self, other):
+        sub = self.quantity - other.quantity
+        return f'Размер клетки изменен в наименьшую сторону, как: {sub} клеточкам' if sub > 0 else 'Клетки больше нет:('
+
+    def __truediv__(self, other):
+        return self.quantity // other.quantity
+
+    def __mul__(self, other):
+        return self.quantity * other.quantity
+
+    def make_order(self, row):
+        result = ''
+        for i in range(int(self.quantity / row)):
+            result += '*' * row + '\n'
+        result += '*' * (self.quantity % row) + '\n'
+        return result
+
+
+cell_1 = Cell(30)
+cell_2 = Cell(25)
+print(cell_1 + cell_2)
+print(cell_1 - cell_2)
+print(cell_1 / cell_2)
+print(cell_1 * cell_2)
+print(cell_1.make_order(5))
+print(cell_2.make_order(10))

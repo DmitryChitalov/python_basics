@@ -25,3 +25,71 @@
 “ед”: [“шт.”]
 }
 """
+tovar, order = [], 1
+title, price, amount = None, None, None
+
+while True:
+    if title is None:
+        tmp = input('Введите название товара на русском: ')
+        if not tmp.isalnum():
+            print('Вы вели неверное значение. Попробуйте еще раз.')
+            continue
+
+        title = tmp
+
+    if price is None:
+        tmp = input('Введите стоимость товара: ')
+        if not tmp.isdigit():
+            print('Вы вели неверное значение. Попробуйте еще раз.')
+            continue
+
+        price = int(tmp)
+
+    if amount is None:
+        tmp = input('Введите количество: ')
+        if not tmp.isdigit():
+            print('Вы вели неверное значение.  Попробуйте еще раз.')
+            continue
+
+        amount = int(tmp)
+
+    tmp = input('Введите единицы измерения: ')
+    if not tmp.isalpha():
+        print('Вы вели неверное значение.  Попробуйте еще раз.')
+        continue
+
+    unit = tmp
+
+    tovar.append((
+        order,
+        {
+            'title': title,
+            'price': price,
+            'amount': amount,
+            'unit': unit
+        }
+    ))
+
+    title, price, amount = None, None, None
+    order += 1
+
+    print(tovar)
+
+    q = input('Формирование списка завершено? (Y/N)) ')
+    if q.lower() == 'y':
+        break
+
+analitics = {
+    'title': [],
+    'price': [],
+    'amount': [],
+    'unit': set()
+}
+
+for _, item in tovar:
+    analitics['title'].append(item['title'])
+    analitics['price'].append(item['price'])
+    analitics['amount'].append(item['amount'])
+    analitics['unit'].add(item['unit'])
+
+print(analitics)
