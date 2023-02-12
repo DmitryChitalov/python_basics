@@ -18,3 +18,18 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+total_income = int(input('Введите выручку фирмы: '))
+outgoings = int(input('Введите издержки фирмы: '))
+profit = total_income - outgoings
+if total_income > outgoings:
+    efficiency = profit / total_income
+    print('Финансовый результат - прибыль. Ее величина:', profit)
+    print('Рентабельность выручки =', "%.2f" % efficiency)
+    staff = int(input('Введите численность сотрудников фирмы: \n'))
+    staff_profit = profit / staff
+    print('Прибыль фирмы в расчете на одного сотрудника =',
+          "%.2f" % staff_profit)
+else:
+    print('Финансовый результат - убыток. Его величина:', abs(profit))
+    print('Казна пустеет, милорд. Подданные будут голодать')
