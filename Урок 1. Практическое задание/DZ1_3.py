@@ -3,7 +3,7 @@ if n >= 0:
    ns = str(n)
    n2 = ns + ns
    n3 = ns + ns + ns
-   sum = n + int(n2) + int(n3)
-   print("Сумма равна", sum)
+   amount = n + int(n2) + int(n3)
+   print("Сумма равна", amount)
 else:
     print("Повторите ввод")
