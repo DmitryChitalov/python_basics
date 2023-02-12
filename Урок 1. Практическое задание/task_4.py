@@ -21,4 +21,3 @@ else:
         if digit >= mx_digit:
             mx_digit = digit
     print('Самая большая цифра в числе:', mx_digit)
-    
