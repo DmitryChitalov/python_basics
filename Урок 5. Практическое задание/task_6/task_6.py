@@ -6,6 +6,25 @@
 
 Примеры строк файла: Информатика:   100(л)   50(пр)   20(лаб).
                           Физика:   30(л)   —   10(лаб)
-                     Физкультура:   —   30(пр)   —
+                     Физкультура:   —   30(пр)   — 
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+# import re
+# text = 'ул. Карпинского, дом № 20, корпус 3, квартира 98'
+# match = re.findall(r'\d+', text)
+# print(match)
+# # ['20', '3', '98']
+
+from re import findall
+
+report = {}
+with open('DX_file6.txt', 'r', encoding='UTF-8') as r_file:
+    text = r_file.read()
+    r_file.seek(0)
+    for row in r_file.readlines():
+        row_items = row.split(':')
+        hours = findall(r"\d+", row_items[1])
+        report.update({row_items[0]: sum([int(i) for i in hours])})
+
+print(f"Исходный файл:\n{text}\n")
+print(f"Словарь: {report}")
