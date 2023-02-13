@@ -6,3 +6,16 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def my_func():
+    a = 0
+    while True:
+        num = input().split(' ')
+        try:
+            a += sum(map(int, num))
+            print(a)
+        except ValueError:
+            break
+    return a
+
+my_diff = my_func()
+print(my_diff)
