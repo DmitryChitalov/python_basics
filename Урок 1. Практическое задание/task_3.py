@@ -13,4 +13,4 @@ term_1 = int(usr_numb)
 term_2 = int(usr_numb + usr_numb)
 term_3 = int(usr_numb + usr_numb + usr_numb)
 total = term_1 + term_2 + term_3
-print('Сумма i + ii + iii составляет:', total)
+print(f'Сумма i + ii + iii составляет: {total}')

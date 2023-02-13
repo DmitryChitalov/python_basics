@@ -14,7 +14,7 @@
 usr_name = input('Введите ваше имя \n')
 usr_passwd = input('Введите ваш пароль \n')
 usr_old = int(input('Введите ваш возраст \n'))
-print('Ваши данные для входа в аккаунт: \n',
-      'Имя:', usr_name, '\n',
-      'Пароль:', usr_passwd, '\n',
-      'Возраст:', usr_old)
+print(f'Ваши данные для входа в аккаунт:\n'
+      f'Имя: {usr_name} \n'
+      f'Пароль: {usr_passwd} \n'
+      f'Возраст: {usr_old} \n')

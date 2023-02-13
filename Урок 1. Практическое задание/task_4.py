@@ -20,5 +20,5 @@ else:
         usr_numb //= 10
         if digit >= mx_digit:
             mx_digit = digit
-    print('Самая большая цифра в числе:', mx_digit)
+    print(f'Самая большая цифра в числе: {mx_digit}')
     
