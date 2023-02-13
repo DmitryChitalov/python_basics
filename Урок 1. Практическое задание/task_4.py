@@ -10,3 +10,20 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+
+while True:
+    my_numb = input("Ведите целое положительное число: ")
+
+    if not my_numb.isdigit():
+        print("Неверный формат числа")
+        exit()
+
+    my_numb = int(my_numb)
+    numb_maximum = 0
+
+    while my_numb > 0:
+        if numb_maximum < my_numb % 10:
+            numb_maximum = my_numb % 10
+        my_numb = my_numb // 10
+
+    print(f"Самая большая цифра в числе: {numb_maximum}")
