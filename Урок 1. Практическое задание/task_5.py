@@ -25,7 +25,14 @@ expenses = int(input("Введите издержки фирмы: "))
 profit = income - expenses
 profitability = profit / income
 
-print(f"Финансовый результат - прибыль. Ее величина: {profit}")
+if profit > 0:
+    result = "прибыль"
+elif profit < 0:
+    result = "убыток"
+else:
+    result = "в ноль"
+
+print(f"Финансовый результат - {result}. Ее величина: {profit}")
 print(f"Рентабельность выручки = {profitability:.2f}")
 
 employees = int(input("Введите численность сотрудников фирмы: "))
