@@ -19,4 +19,4 @@ for i in number:
     if i > highest:
         highest = i
 
-print(f"Самая большая цифра в числе: {int(highest)}")
+print(f"Самая большая цифра в числе: {highest}")
