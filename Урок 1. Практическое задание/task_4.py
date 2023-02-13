@@ -21,7 +21,7 @@ while True:
     my_numb = int(my_numb)
     numb_maximum = 0
 
-    while (my_numb > 0):
+    while my_numb > 0:
         if numb_maximum < my_numb % 10:
             numb_maximum = my_numb % 10
         my_numb = my_numb // 10
