@@ -8,3 +8,13 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+n = input("Введите целое, положительное число:")
+i = 0
+t = ''
+number = 0
+while i < int(n):
+    t = t + n
+    number = number + int(t)
+    i = i + 1
+print(number)
