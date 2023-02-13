@@ -21,9 +21,13 @@
 
 revenue = int(input('Введите выручку фирмы:'))
 costs = int(input('Введите издержки фирмы:'))
-profitability = costs/revenue
-print(f'Рентабельность выручки = {profitability}')
+if costs > revenue:
+    print('убыток — издержки больше выручки')
+else:
+    print('прибыль — выручка больше издержек')
+    profitability = costs/revenue
+    print(f'Рентабельность выручки = {profitability}')
 
-employees_count = int(input('Введите численность сотрудников фирмы:'))
-profitability_employees = employees_count * profitability
-print(f'Прибыль фирмы в расчете на одного сотрудника = {profitability_employees}')
+    employees_count = int(input('Введите численность сотрудников фирмы:'))
+    profitability_employees = employees_count * profitability
+    print(f'Прибыль фирмы в расчете на одного сотрудника = {profitability_employees}')
