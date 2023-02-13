@@ -28,3 +28,22 @@
 8 10 12
 14 16 18
 """
+a = [[5, 4, 2, 7], [5, 5, 5, 6], [7, 8, 9, 3]]
+b = [[1, 5, 1, 9], [5, 6, 8, 3], [5, 2, 8, 2]]
+class Matrix:
+    def __init__(self, lists):
+        self.lists = lists
+    def __str__(self):
+        return '\n'.join(map(str, self.lists))
+    def __add__(self, other):
+        c = []
+        for i in range(len(self.lists)):
+            c.append([])
+            for j in range(len(self.lists[0])):
+                c[i].append(self.lists[i][j] + other.lists[i][j])
+        return '\n'.join(map(str, c))
+mtrx1 = Matrix(a)
+mtrx2 = Matrix(b)
+print(mtrx1, '\n')
+print(mtrx2, '\n')
+print(mtrx1 + mtrx2)
