@@ -24,7 +24,7 @@ start = int(input("Введите текущую дистанцию: "))
 finish = int(input("Введите желаемую дистанцию: "))
 days = 1
 
-while start <= finish:
+while start < finish:
     print(f"День {days} с результатом в {start:.2f} км")
     days += 1
     start *= 1.1
