@@ -11,12 +11,13 @@
 Самая большая цифра в числе: 9
 """
 
-number = input("Введите целое положительное число: ")
+number = int(input("Введите целое положительное число: "))
+highest = 0
 
-highest = "0"
-
-for i in number:
-    if i > highest:
-        highest = i
+while number > 10:
+    digit = number % 10
+    number //= 10
+    if digit > highest:
+        highest = digit
 
 print(f"Самая большая цифра в числе: {highest}")
