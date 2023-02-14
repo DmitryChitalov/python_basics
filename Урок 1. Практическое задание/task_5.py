@@ -28,6 +28,7 @@ if gain > expenses:
 
     number_of_employees = int(input("Введите численность сотрудников фирмы:"))
     print("Прибыль фирмы в расчете на одного сотрудника = {:.1f}".format(profit / number_of_employees))
-
+elif gain == expenses:
+    print("Вы не добились финансового результата")
 else:
     print("Финансовый результат - убыток.")
