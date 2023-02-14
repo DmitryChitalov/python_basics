@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+array: list = [5, "string", 0.15, True, None]
+for el in array:
+    print(type(el))

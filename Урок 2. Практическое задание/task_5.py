@@ -15,3 +15,13 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+n = int(input("Введите натуральное число: "))
+my_list = [7, 5, 3, 3, 2]
+
+rating = my_list.copy()
+rating.append(n)
+
+srt_rating = sorted(rating, reverse=True)
+result: str = ', '.join([str(i) for i in srt_rating])
+print(f"Пользователь ввел число {n}. Результат: {result}.")
