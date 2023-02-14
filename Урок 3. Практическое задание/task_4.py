@@ -5,3 +5,13 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+def my_func(x, y):
+    bedingung = 1
+    result = 1 / x
+    while bedingung < abs(y):
+        result = result * (1 / x)
+        bedingung += 1
+    return result
+
+print(my_func(float(input('Основание: ')), int(input('Степень: '))))
