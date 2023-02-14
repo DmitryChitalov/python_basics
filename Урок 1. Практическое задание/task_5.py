@@ -21,9 +21,11 @@
 revenue = int(input('Введите выручку фирмы: '))
 costs = int(input('Введите издержки фирмы: '))
 
-if revenue <= costs:
+if revenue < costs:
     lesion = costs - revenue
     print(f'Финансовый результат - убыток. Ее величина: {lesion}')
+elif revenue == costs:
+    print(f'Финансовый результат - в ноль.')
 else:
     profit = revenue - costs
     print(f'Финансовый результат - прибыль. Ее величина: {profit}')
