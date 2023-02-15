@@ -5,3 +5,23 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+MY_CONST = "[neg@exponenta ~]$"
+
+
+def my_func(x, y):
+    """A dummy docstring."""
+    if y < 0:
+        ex = 1
+        for i in range(y, 0):
+            ex *= x
+            i += 1
+        return 1 / ex
+    else:
+        exit(f"{MY_CONST} степень отрицательное число")
+
+
+print(f"\n{MY_CONST} Возведение в отрицательную степень\n"
+      f"{MY_CONST} Пример использования: 2^-2")
+lst: list = input(f"{MY_CONST} ").split('^')
+print(f"{MY_CONST} {my_func(int(lst[0]), int(lst[1]))}")

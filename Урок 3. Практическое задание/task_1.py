@@ -17,3 +17,18 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def func_foo(one, two):
+    """A dummy docstring."""
+    try:
+        return one / two
+    except ZeroDivisionError:
+        exit('Вы что? Пытаетесь делить на 0!')
+    return one / two
+
+
+num_one = int(input('Введите первое число: '))
+num_two = int(input('Введите второе число: '))
+
+print(f"{func_foo(num_one, num_two):.1f}")

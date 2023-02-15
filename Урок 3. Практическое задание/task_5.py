@@ -6,3 +6,20 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def my_func():
+    """A dummy docstring."""
+    loop = True
+    total = 0
+    while loop:
+        my_list = input('Строка чисел или exit: ').split()
+        for i, j in enumerate(my_list):
+            if j != 'exit':
+                total += int(j)
+            else:
+                loop = False
+        print(total)
+
+
+my_func()
