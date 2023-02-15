@@ -8,3 +8,32 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+
+
+
+month = int(input('Введите месяц в виде числа от 1 до 12: '))
+
+""" month_list = ['Зима', 'Весна', 'Лето', 'Осень']
+
+if 1 <= month <= 2 or month == 12:
+    print(f'Результат через список: {month_list[0]}')
+elif 3 <= month < 6:
+    print(f'Результат через список: {month_list[1]}')
+elif 6 <= month < 9:
+    print(f'Результат через список: {month_list[2]}')
+elif 9 <= month < 12:
+    print(f'Результат через список: {month_list[3]}')
+else:
+    print('Введено некорректное значение') """
+
+month_dict = {'Зима': [1, 2, 12],
+              'Весна': [3, 4, 5],
+              'Лето': [6, 7, 8],
+              'Осень': [9, 10, 11]
+              }
+for i in month_dict.values():
+    for k in i:
+        if k == month:
+            print(month_dict.keys(i))
+else:
+    print('Введено некорректное значениe')
