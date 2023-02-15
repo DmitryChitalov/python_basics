@@ -44,8 +44,8 @@ class Matrix:
         for i in range(len(other.my_list)):
             for k in range(len(other.my_list[i])):
                 self.my_list[i][k] = self.my_list[i][k] + other.my_list[i][k]
-        return  Matrix.__str__(self)
+        return  Matrix(self.my_list)
 
 matrix_1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 matrix_2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-print(matrix_1.__add__(matrix_2))
+print(matrix_1 + (matrix_2))
