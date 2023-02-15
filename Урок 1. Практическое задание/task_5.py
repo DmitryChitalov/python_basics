@@ -30,5 +30,9 @@ if profit > 0:
     number_of_employees = int(input("Введите количество сотрудников в компании: "))
     profit_per_employee = profit / number_of_employees
     print("Прибыль компании на одного работника = ", profit_per_employee)
-else:
+
+elif profit < 0:
     print("Финансовый результат - убыток. Его значение: ", profit)
+
+else:
+    print("Выручка равна издержкам")
