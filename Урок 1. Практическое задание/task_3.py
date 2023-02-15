@@ -8,3 +8,10 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+n_1 = int(input("Введите положительное число: "))
+print(n_1 + int(str(n_1) * 2) + int(str(n_1) * 3))
+
+
+m = input("Число: ")
+res = int(m) + int(m * 2) + int(m * 3)
+print(f"{m} + {m * 2} + {m * 3} = {res}")
