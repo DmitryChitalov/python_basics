@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+pool = [50, 'tsxt', 56.56, True, None]
+for t in pool:
+    print(type(t))
