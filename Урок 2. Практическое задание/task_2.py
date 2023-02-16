@@ -11,3 +11,15 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+numbers = input("Введите целые числа через пробел: ")
+
+
+list_of_numbers = numbers.split(' ')
+
+
+for el in range(0, len(list_of_numbers), 2):
+    tmp = list_of_numbers[el]
+    list_of_numbers[el] = list_of_numbers[el + 1]
+    symbols[el + 1] = tmp
+    print(el)
