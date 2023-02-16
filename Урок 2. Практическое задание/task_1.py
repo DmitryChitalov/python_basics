@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+misc = [5, "string", 0.15, True, None]
+for i in misc:
+    print(type(i))
