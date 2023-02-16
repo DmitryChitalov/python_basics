@@ -19,3 +19,14 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+first_dists = int(input("Введите расстояние, которе спортсмен преодалел в первый день тренировки : "))
+final_dists = int(input("Введите конечную дистанцию в км :"))
+resuld_day = 1
+
+while first_dists < final_dists:
+    resuld_day += 1
+    first_dists *=1.1
+    print(first_dists)
+
+print(f"Спортсмен пробежит {final_dists} км за {resuld_day} дней")
