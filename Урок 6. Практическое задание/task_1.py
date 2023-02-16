@@ -15,3 +15,26 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+from datetime import datetime as dt
+
+class TrafficLight:
+    _states = {'Красный': 7, 'Желтый': 2, 'Зеленый': 5}
+    _color = ''
+
+    def running(self):
+        for color, sw_time in self._states.items():
+            self._color = color
+            start_state_time = dt.now()
+
+            print(f"Горит '{self._color}' "
+                  f" {sw_time} секунд")
+
+            sleep(sw_time)
+
+
+
+
+if __name__ == '__main__':
+    tl = TrafficLight()
+    tl.running()
