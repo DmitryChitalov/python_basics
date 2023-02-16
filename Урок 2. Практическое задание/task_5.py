@@ -15,3 +15,15 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+import random
+
+list_len = int(input('Введите длину списка: '))
+my_list = []
+for i in range(list_len):
+    my_list.append(random.randint(1, 10))
+my_list.sort(reverse=True)
+print(my_list)
+element = int(input('Введите  новый элемент рейтинга: '))
+my_list.append(element)
+my_list.sort(reverse=True)
+print(my_list)

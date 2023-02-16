@@ -6,5 +6,22 @@
 Пример:
 Введите номер месяца: 10
 Результат через список: Осень
-Результат через словарь: Осень
+Осень
 """
+
+
+month = int(input('Введите номер месяца: '))
+
+if int (month) <= 0 or int(month) > 12:
+    print('Такого месяца не существует')
+elif int(month) > 2 and int(month) < 6:
+    print('Весна')
+elif int(month) > 5 and int(month) < 9:
+    print('Лето')
+elif int(month) > 8 and int(month) < 12:
+    print('Осень')
+else:
+    print('Зима')
+
+my_dict = {'Зима': (12, 1, 2), 'Весна': (3, 4, 5), 'Лето': (6, 7, 8), 'Осень': (9, 10, 11)}
+[print(k) for k, v in my_dict.items() if month in v]

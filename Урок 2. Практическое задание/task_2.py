@@ -11,3 +11,17 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+list_len = int(input('Введите длину списка: '))
+my_list = []
+for i in range(list_len):
+    my_list.append(int(input('Введите число: ')))
+print(my_list)
+temp = 0
+i = 0
+while i < list_len - 1:
+    temp = my_list[i]
+    my_list[i] = my_list[i + 1]
+    my_list[i + 1] = temp
+    i += 2
+print(my_list)
