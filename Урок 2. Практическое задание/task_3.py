@@ -9,11 +9,8 @@
 Результат через словарь: Осень
 """
 
-
-
 month = int(input('Введите месяц в виде числа от 1 до 12: '))
-
-""" month_list = ['Зима', 'Весна', 'Лето', 'Осень']
+month_list = ['Зима', 'Весна', 'Лето', 'Осень']
 
 if 1 <= month <= 2 or month == 12:
     print(f'Результат через список: {month_list[0]}')
@@ -24,16 +21,17 @@ elif 6 <= month < 9:
 elif 9 <= month < 12:
     print(f'Результат через список: {month_list[3]}')
 else:
-    print('Введено некорректное значение') """
+    print('Введено некорректное значение')
 
 month_dict = {'Зима': [1, 2, 12],
               'Весна': [3, 4, 5],
               'Лето': [6, 7, 8],
               'Осень': [9, 10, 11]
               }
+season = -1
 for i in month_dict.values():
+    season += 1
     for k in i:
         if k == month:
-            print(month_dict.keys(i))
-else:
-    print('Введено некорректное значениe')
+            print(f'Результат через словарь: '
+                  f'{list(month_dict.keys())[season]}')
