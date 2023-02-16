@@ -7,3 +7,15 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+lst = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+lst_1 = []
+for el in range(1, len(lst)):
+    if lst[el] > lst[el - 1]:
+        lst_1.append(lst[el])
+
+lst_2 = [lst[el] for el in range(1, len(lst)) if lst[el] > lst[el - 1]]
+
+print(lst_1)
+print(lst_2)
