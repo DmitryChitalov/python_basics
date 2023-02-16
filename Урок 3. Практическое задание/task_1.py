@@ -17,3 +17,14 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def two_numbers(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return 'Делить на ноль нельзя'
+
+
+a, b = map(int, input('Введите два числа через пробел: ').split())
+print(two_numbers(a, b))
