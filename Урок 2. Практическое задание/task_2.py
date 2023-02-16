@@ -11,3 +11,9 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+pool = input('Введите целые числа через пробел:').split()
+t = list(map(int, pool))
+for el in range(0, len(t)-1, 2):
+    t[el], t[el+1] = t[el+1], t[el]
+print(t)
+
