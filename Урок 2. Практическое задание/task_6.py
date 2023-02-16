@@ -37,9 +37,9 @@ goods_counter = 0
 control = ''
 while True:
     control = input("Для наполнения справочника нажмите 'Enter', для перехода в аналитику введите 'A', для выхода введите 'Q': ")
-    if control == "Q" or "q":
+    if control == "Q" or control == "q":
         break
-    elif control == "A" or "a": # Далее необходимо собрать аналитику о товарах.
+    elif control == "A" or control == "a": # Далее необходимо собрать аналитику о товарах.
         for good in goods:
             goods_analytics_name.append(good[1].get('название')) # Реализовать словарь, в котором каждый ключ — характеристика товара, например название,
             goods_analytics_price.append(good[1].get('цена'))    # а значение — список значений-характеристик, например список названий товаров.
