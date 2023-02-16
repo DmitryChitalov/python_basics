@@ -15,3 +15,29 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+from os import system
+# color = ["RED", "YELLOV", "GREEN"]
+# color = ["RED", "YELLOV", "GREEN"]
+# for i in my_time:
+#     for el in color:
+#         print(el)
+#         sleep(i)
+
+
+class TrafficLight:
+    _color = {7: "RED", 2: "YELLOV", 5: "GREEN", 2.01: "YELLOV"}
+
+    def runing(self):
+        print(' ' * 6, end='\r')
+        for key, value in self._color.items():
+            print(value, end='\r')
+            sleep(key)
+            print(' ' * 10, end='\r')
+
+
+traflite = TrafficLight()
+s = 0
+while s < 10:
+    traflite.runing()
+s += 1
