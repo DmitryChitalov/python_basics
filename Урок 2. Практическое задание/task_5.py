@@ -15,3 +15,9 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_pool = [85, 7, 5, 3, 3, 2]
+while True:
+    print(my_pool)
+    new_element = int(input("Добавьте элемент:"))
+    my_pool.append(new_element)
+    my_pool = sorted(my_pool, reverse=True)
