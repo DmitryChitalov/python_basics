@@ -14,3 +14,7 @@
 1. раз
 2. перерефриж
 """
+pool = input('Введите несколько слов через пробел:').split()
+for n, bl in enumerate(pool):
+        print(f"{n + 1}. {bl if len(bl) < 10 else bl[:10]}")
+

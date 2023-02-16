@@ -8,3 +8,20 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+num = int(input('Введите номер месяца:'))
+month_list = ['Зима', 'Весна', 'Лето', 'Осень']
+month_dict = {1: 'Зима', 2: 'Весна', 3: 'Лето', 4: 'Осень'}
+if num == 12 or num < 3:
+    print(f"Результат через список:{month_list[0]}")
+    print(f"Результат через словарь:{month_dict.get(1)}")
+elif num >= 3 and num < 6:
+    print(f"Результат через список:{month_list[1]}")
+    print(f"Результат через словарь:{month_dict.get(2)}")
+elif num >= 6 and num < 9:
+    print(f"Результат через список:{month_list[2]}")
+    print(f"Результат через словарь:{month_dict.get(3)}")
+elif num >= 9 and num < 12:
+    print(f"Результат через список:{month_list[3]}")
+    print(f"Результат через словарь:{month_dict.get(4)}")
+else:
+    print('Неверое число')
