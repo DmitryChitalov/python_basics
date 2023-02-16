@@ -10,7 +10,7 @@
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
 
-Time_sec = int(input('Введите число секунд: '))
-print(f'Время в формате чч:мм:сс - {round(Time_sec / 3600, 1)} : {round(Time_sec / 60, 1)} : {Time_sec}')
+time = int(input('Введите число секунд: '))
+print(f'Время в формате чч:мм:сс - {round(time / 3600, 1)} : {round(time / 60, 1)} : {time}')
 
 

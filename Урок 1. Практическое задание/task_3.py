@@ -8,5 +8,6 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
-number = int(input("Ввидите целое положительное число: "))
-print(f'{number} + {number}{number} + {number}{number}{number} = {number}{number + number}{number + number + number}')
+number = int(input("Ввидите целое положительное число n: "))
+var = int(number) + int(number * 2) + int(number * 3)
+print(f'{number} + {number * 2} + {number * 3} = {var}')
