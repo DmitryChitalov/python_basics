@@ -100,3 +100,50 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell:
+    def __init__(self, count):
+        self.count = int(count)
+
+    def __str__(self):
+        return f"Клетка состоит из {self.count} ячеек"
+
+    def __add__(self, other):
+        return Cell(self.count + other.count)
+
+    def __sub__(self, other):
+        if self.count > other.count:
+            return Cell(self.count - other.count)
+        else:
+            return f'Операция вычитания невозможна'
+
+    def __mul__(self, other):
+        return Cell(self.count * other.count)
+
+    def __truediv__(self, other):
+        return Cell(self.count // other.count)
+
+    def make_order(self, numb):
+        x = self.count
+        s = ''
+        self.simbol = "*"
+        while x > 0:
+            if x > numb:
+                o = numb
+            else:
+                o = x
+            s += f'{"*" * o}\n'
+            x -= o
+        return s
+
+c1 = Cell(17)
+print(c1)
+c2 = Cell(13)
+print(c2)
+
+print(c1 + c2)
+print(c1 - c2)
+print(c2 - c1)
+print(c2 - c2)
+print(c1 * c2)
+print(c1 / c2)
+print((c1 * c2).make_order(100))
