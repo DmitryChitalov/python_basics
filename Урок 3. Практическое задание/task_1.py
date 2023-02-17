@@ -17,3 +17,18 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def division(a, b):
+    """
+    Возвращает результат деления числа a на число b
+    (number, number) -> number
+    >>> division(10, 2)
+    5
+    """
+    try:
+        result = a / b
+        return result
+    except ValueError:
+        return "Вы что? Пытаетесь делить на 0!"
+
+print(division(11, 2))
