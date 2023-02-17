@@ -6,3 +6,14 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+def employee_salary():
+    try:
+        arg = [int(_) for _ in argv[1:]]
+        return arg[0] * arg[1] + arg[2]
+    except IndexError:
+        return 'Недостаточное количество параметров'
+
+
+print(employee_salary())
