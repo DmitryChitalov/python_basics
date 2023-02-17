@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+check_type_el = [5, 'string', 0.15, True, None]
+
+for el in check_type_el:
+    print(type(el))
+

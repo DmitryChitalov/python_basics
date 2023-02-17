@@ -8,3 +8,21 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+
+seasons_list = [3, 4, 5, 6, 7, 8, 9, 10, 11]
+number_month = int(input('Введите номер месяца: '))
+if number_month in seasons_list:
+        if number_month >= 3 and number_month <= 5:
+            print('Результат через список: Весна')
+        elif number_month >= 6 and number_month <= 8:
+            print('Результат через список: Лето')
+        elif number_month >= 9 and number_month <= 11:
+            print('Результат через список: Осень')
+else:
+    print('Результат через список: Зима')
+
+seasons_dict = {1: 'Зима',2: 'Зима', 3: 'Весна',
+                4: 'Весна', 5: 'Весна', 6: 'Лето',
+                7: 'Лето', 8: 'Лето', 9: 'Осень',
+                10: 'Осень', 11: 'Осень', 12: 'Зима'}
+print(f'Результат через словарь: {seasons_dict[number_month]}')
