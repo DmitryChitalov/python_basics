@@ -15,7 +15,5 @@
 <class 'NoneType'>
 """
 my_lst = [1, "two", 3.6, "boat", 9, None, 5.78273, True]
-index = 0
-while index < len(my_lst):
-    print(type(list(my_lst)[index]))
-    index += 1
+for el in my_lst:
+    print(type(el)) 
