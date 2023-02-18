@@ -14,13 +14,3 @@
 1. раз
 2. перерефриж
 """
-
-lst = input("Введите слова через пробел: ").split()
-number = 1
-for element in lst:
-    if len(element) > 10:
-        print(f"{number}. {element[:10]}")
-    else:
-        print(f"{number}. {element}")
-    number += 1
-print()
