@@ -15,7 +15,3 @@
 <class 'bool'>
 <class 'NoneType'>
 """
-
-lst = ["list", 0.17, False, 7]
-for el in lst:
-    print(type(el))
