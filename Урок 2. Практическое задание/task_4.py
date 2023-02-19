@@ -14,3 +14,8 @@
 1. раз
 2. перерефриж
 """
+
+tokens = input("Введите слова через пробел: ").split(" ")
+
+for i, token in enumerate(tokens):
+    print(f"{i}. {token[:10]}")

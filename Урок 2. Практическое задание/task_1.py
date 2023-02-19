@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+different_types = [1, 0.01, "abc", True, None, [], {}]
+
+for one_type in different_types:
+    print(type(one_type))
