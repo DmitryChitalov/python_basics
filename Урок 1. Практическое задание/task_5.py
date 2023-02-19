@@ -34,12 +34,11 @@ if profit < 0:
 if profit == 0:
     print("Финансовый результат фирмы:", profit, "р.", "Сработали в ноль!")
 if profit > 0:
-    print("Финансовый результат фирмы:", profit,"р.","- Прибыль!")
+    print("Финансовый результат фирмы:", profit, "р.", "- Прибыль!")
     profitability = (profit / revenue) * 100
     profitability = float('{:.2f}'.format(profitability))
-    print ("Рентабельность фирмы:", profitability,"%")
+    print("Рентабельность фирмы:", profitability, "%")
     employees = int(input("Введите кол-во сотрудников: "))
     profit_employees = profit / employees
     profit_employees = float('{:.2f}'.format(profit_employees))
-    print("Прибыль в расчете на одного сотрудника:", profit_employees,"р.")
-
+    print("Прибыль в расчете на одного сотрудника:", profit_employees, "р.")
