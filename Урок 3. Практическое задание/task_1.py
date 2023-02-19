@@ -17,3 +17,19 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def solution(*args):
+    # Выводим исключения
+    try:
+        num1 = float(input("Введите первое число:"))
+        num2 = float(input("Введите второе число:"))
+        result = num1 / num2
+    except ValueError:
+        return 'Ошибка!Вводите только числа'
+    except ZeroDivisionError:
+        return 'Нельзя использовать ноль'
+    return result
+
+
+print(f'Рзультат: {solution()}')
