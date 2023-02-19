@@ -19,7 +19,7 @@
 scores = [7, 5, 3, 3, 2]
 score = int(input("Введите оценку от 1 до 10: "))
 
-scores.append(int(score))
+scores.append(score)
 scores.sort(reverse=True)
 
 print(scores)
