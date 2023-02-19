@@ -25,11 +25,11 @@ profit = total_income - outgoings
 if total_income > outgoings:
     efficiency = profit / total_income
     print(f'Финансовый результат - прибыль. Ее величина: {profit}')
-    print(f'Рентабельность выручки = {"%.2f" % efficiency}')
+    print(f'Рентабельность выручки = {efficiency:.2f}')
     staff = int(input('Введите численность сотрудников фирмы: \n'))
     staff_profit = profit / staff
     print(
-        f'Прибыль фирмы в расчете на одного сотрудника = {"%.2f" % staff_profit}')
+        f'Прибыль фирмы в расчете на одного сотрудника = {staff_profit:.2f}')
 elif total_income == outgoings:
     print('Финансовый результат никакой. Вы отработали в ноль.')
 else:

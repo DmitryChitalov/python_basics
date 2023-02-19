@@ -19,4 +19,4 @@ usr_sec = (sec_amount % 3600) % 60  # находим количество сек
 минут или секунд.
 """
 print(f'Вы ввели {sec_amount} секунд. В формате чч : мм : сс это составит:')
-print(f'{"%.1f" % usr_hours} : {"%.1f" % usr_minutes} : {usr_sec}')
+print(f'{usr_hours:.1f} : {usr_minutes:.1f} : {usr_sec:.1f}')
