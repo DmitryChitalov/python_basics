@@ -25,3 +25,21 @@
 “ед”: [“шт.”]
 }
 """
+product_dict = {}
+while True:
+        # name = input("Введите название товара: ")
+        # price = input("Введите цену: ")
+        # quantity = input("Введите количество: ")
+        # unit = input("Введите единицы измерения: ")
+        product_dict["название"] = input("Введите название товара: ")
+        product_dict["цена"] = int(input("Введите цену: "))
+        product_dict["количество"] = int(input("Введите количество: "))
+        product_dict["ед"] = input("Введите единицы измерения: ")
+
+        if not bool(int(input("Продолжить ввод - да: 1, нет: 0: "))):
+            break
+
+for key, value in product_dict.items():
+    print(key, ' : ', value)
+
+

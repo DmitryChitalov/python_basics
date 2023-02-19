@@ -19,7 +19,8 @@ list_of_numbers = numbers.split(' ')
 
 
 for el in range(0, (len(list_of_numbers) - len(list_of_numbers) % 2), 2):
-    tmp = list_of_numbers[el]
-    list_of_numbers[el] = list_of_numbers[el + 1]
-    list_of_numbers[el + 1] = tmp
+    list_of_numbers[el], list_of_numbers[el + 1] = list_of_numbers[el + 1], list_of_numbers[el]
+    # tmp = list_of_numbers[el]
+    # list_of_numbers[el] = list_of_numbers[el + 1]
+    # list_of_numbers[el + 1] = tmp
 print(list_of_numbers)
