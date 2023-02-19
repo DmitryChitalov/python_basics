@@ -25,3 +25,34 @@
 “ед”: [“шт.”]
 }
 """
+products = []
+while True:
+    name = input("Введите название товара или введите 'стоп', чтобы завершить ввод: ")
+    if name == "стоп":
+        break
+    price = int(input("Введите цену товара: "))
+    quantity = int(input("Введите количество товара: "))
+    unit = input("Введите единицу измерения товара: ")
+    product = {
+        "название": name,
+        "цена": price,
+        "количество": quantity,
+        "ед": unit
+    }
+    products.append((len(products) + 1, product))
+
+analytics = {
+    "название": [],
+    "цена": [],
+    "количество": [],
+    "ед": []
+}
+
+for product in products:
+    for key, value in product[1].items():
+        if key in analytics:
+            if value not in analytics[key]:
+                analytics[key].append(value)
+
+print(products)
+print(analytics)
