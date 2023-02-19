@@ -1,0 +1,3 @@
+roga_i_kopita OOO 5000000 200000
+pupkin IP 100000 200000
+mudakofff OOO 700000 100000

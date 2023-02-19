@@ -12,3 +12,20 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+a = int(input('Введите первое число '))
+b = int(input('Введите второе число '))
+for el in count(a):
+    if el > b:
+        break
+    else:
+        print(el)
+
+my_family = ["mother", "father", "sister", "brother", "cat"]
+c = 0
+d = int(input("Введите число повторений: "))
+for el in cycle(my_family):
+    c += 1
+    if c > d:
+        break
+    print(el)

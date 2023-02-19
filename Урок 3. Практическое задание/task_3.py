@@ -5,3 +5,12 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+def my_func(a, b, c):
+    my_list = [a, b, c]
+    min_el = min(my_list)
+    res = sum(my_list) - min_el
+    return res
+
+print(my_func(float(input("Введите первое число: ")),
+              float(input("Введите второе число: ")),
+              float(input("Введите третье число: "))))

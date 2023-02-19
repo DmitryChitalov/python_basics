@@ -20,3 +20,65 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+    def go(self):
+        print(f"Машина {self.name} поехала")
+    def stop(self):
+        print(f"Машина {self.name} остановилась")
+    def turn(self, direction):
+        self.direction = direction
+        if self.direction == "right":
+            print(f"Машина {self.name} повернула направо")
+        elif self.direction == "left":
+            print(f"Машина {self.name} повернула налево")
+        else:
+            print(f"Машина {self.name} совершила неизвестный вираж")
+    def show_speed(self):
+        print(f"Скорость машины {self.name} {self.speed} км/час")
+
+class TownCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, False)
+
+    def show_speed(self):
+        if self.speed > 60:
+            print(f"Скорость машины {self.name} превышена!")
+        else:
+            print(f"Скорость машины {self.name} {self.speed} км/час")
+
+class SportCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, False)
+
+class WorkCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, False)
+
+    def show_speed(self):
+        if self.speed > 40:
+            print(f"Скорость машины {self.name} превышена!")
+        else:
+            print(f"Скорость машины {self.name} {self.speed} км/час")
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, True)
+
+town_car = TownCar(70, "синий", "KIA")
+town_car.go()
+town_car.show_speed()
+sport_car = SportCar(100, "красный", "BMW")
+sport_car.show_speed()
+sport_car.turn("flight")
+sport_car.stop()
+work_car = WorkCar(50, "черный", "ГАЗ")
+work_car.show_speed()
+work_car.turn("left")
+police_car = PoliceCar(80, "белый", "Ford")
+police_car.show_speed()
+police_car.turn("right")
