@@ -8,3 +8,13 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+
+seasons_list = ["Зима", "Весна", "Лето", "Осень"]
+seasons_dictionary = {0: "Зима", 1: "Весна", 2: "Лето", 3: "Осень"}
+
+month_number = int(input("Введите номер месяца: "))
+
+season_index = month_number % 12 // 3
+
+print(f"Результат через список: {seasons_list[season_index]}")
+print(f"Результат через словарь: {seasons_dictionary.get(season_index)}")

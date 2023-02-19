@@ -15,3 +15,11 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+scores = [7, 5, 3, 3, 2]
+score = int(input("Введите оценку от 1 до 10: "))
+
+scores.append(int(score))
+scores.sort(reverse=True)
+
+print(scores)

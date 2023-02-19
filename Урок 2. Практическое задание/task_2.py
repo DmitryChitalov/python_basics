@@ -11,3 +11,10 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+values = input("Введите целые числа через пробел: ").split(" ")
+
+for i in range(0, len(values) - 1, 2):
+    values[i], values[i + 1] = values[i + 1], values[i]
+
+print("Результат:", " ".join(values))
