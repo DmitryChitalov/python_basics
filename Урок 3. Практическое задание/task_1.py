@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def division(*args):
+    try:
+        args1 = int(input("Input args1: "))
+        args2 = int(input("Input args2: "))
+        res = args1 / args2
+    except BaseException:
+        return ("ERROR. EXIT.")
+        exit(-1)
+
+        return int(res)
+
+print(division())
