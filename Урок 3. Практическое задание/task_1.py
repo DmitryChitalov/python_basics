@@ -28,7 +28,7 @@ def division(a, b):
     try:
         result = a / b
         return result
-    except ValueError:
+    except ZeroDivisionError:
         return "Вы что? Пытаетесь делить на 0!"
 
-print(division(11, 2))
+print(division(11, 0))

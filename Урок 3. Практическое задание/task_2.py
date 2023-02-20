@@ -9,12 +9,12 @@
 email: jackie@gmail.com, телефон: 01005321456
 """
 
-def user_info(*args):
+def user_info(args1, args2, args3, args4, args5, args6):
     """
         Возвращает информацию о пользователе в удобном виде
     """
-    return f"Пользователь {args[0]} {args[1]} {args[2]} года рождения, проживает в городе {args[3]}\n" \
-           f"e-mail: {args[4]}, телефон: {args[5]}"
+    return f"Пользователь {args1} {args2} {args3} года рождения, проживает в городе {args4}\n" \
+           f"e-mail: {args5}, телефон: {args6}"
 
 
 print(user_info("Петров", "Сергей", 1992, "Омск", "petserg@asd.com", "08654564778"))

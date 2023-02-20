@@ -7,26 +7,19 @@
     ранее сумме и после этого завершить программу.
 """
 
-sum = 0.0
-stop_word = True
-
-
-def my_func():
+def my_func2(total):
     """
-    Программа запрашивает у пользователя строку чисел, разделенных пробелом. При нажатии Enter
-    выводиться сумма чисел
+        Программа запрашивает у пользователя строку чисел, разделенных пробелом. При нажатии Enter
+        выводиться сумма чисел
     """
-    global sum, stop_word
     nums = input('Введите числа через пробел, для завершения введите *: ').split()
     for i in nums:
         if i != '*':
-            sum = sum + float(i)
+            total = total + float(i)
         else:
-            stop_word = False
-            print(sum)
-            return
-    return print(sum)
+            print(total)
+            return total
+    print(total)
+    my_func2(total)
 
-
-while stop_word:
-    my_func()
+my_func2(0)
