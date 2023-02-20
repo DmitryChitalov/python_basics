@@ -5,3 +5,19 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+def my_func(a_1, a_2, a_3):
+    print(f'Сумма двух наибольших аргументов равна: {a_1 + a_2 + a_3 - min([a_1, a_2, a_3])}')
+
+def my_func_1(args):
+    sorted_list = sorted(args, reverse=True)
+    print(f'Сумма двух наибольших аргументов равна: {sorted_list[0] + sorted_list[1]}')
+
+a_1 = int(input('Аргумент 1:'))
+a_2 = int(input('Аргумент 2:'))
+a_3 = int(input('Аргумент 3:'))
+
+my_func(a_1, a_2, a_3)
+
+my_func_1([a_1, a_2, a_3])
+
