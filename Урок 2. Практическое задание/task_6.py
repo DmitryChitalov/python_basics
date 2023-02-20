@@ -25,3 +25,32 @@
 “ед”: [“шт.”]
 }
 """
+
+from collections import defaultdict
+
+products = []
+
+while True:
+    name = input("Введите название товара (для выхода введите 'стоп'): ")
+    if name.lower() == "стоп":
+        break
+    price = float(input("Введите цену товара: "))
+    quantity = int(input("Введите количество товара: "))
+    unit = input("Введите единицу измерения товара: ")
+    product = {
+        "название": name,
+        "цена": price,
+        "количество": quantity,
+        "ед": unit
+    }
+    products.append((len(products)+1, product))
+
+analytics = defaultdict(list)
+
+for product in products:
+    for key, value in product[1].items():
+        analytics[key].append(value)
+
+for key, value in analytics.items():
+    print(f"{key}: {list(set(value))}")
+
