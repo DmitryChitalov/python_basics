@@ -6,3 +6,19 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def sum_numbers(numbers, func_amount):
+    numbers_amount = numbers.split()
+    for num in numbers_amount:
+        if num != '@':
+            func_amount += int(num)
+        elif num == '@':
+            return print(func_amount)
+    numbers = input('Введите новые цифры: ')
+    sum_numbers(numbers, func_amount)
+
+
+amount = 0
+numbers = input('Введите строку чисел, разделенных пробелами: ')
+sum_numbers(numbers, amount)
