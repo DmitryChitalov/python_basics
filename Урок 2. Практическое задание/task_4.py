@@ -22,3 +22,4 @@ for el in list:
     else:
         print(f"{num}.{el}" )
     num += 1
+    
