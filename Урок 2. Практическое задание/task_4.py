@@ -14,3 +14,9 @@
 1. раз
 2. перерефриж
 """
+words = input("Введите слова через пробел: ")
+list_of_words = words.split(' ')
+#dict_of_words = [print(f"{i + 1}. " + list_of_words[i][0:9]) for i in range(0, len(list_of_words))] для отеделния 9 символов
+
+for ind, el in enumerate(list_of_words, 1):
+    print(f"{ind}.", el)
