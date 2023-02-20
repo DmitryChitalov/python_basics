@@ -49,8 +49,6 @@ while True:
 
 # print(*product_list, sep="\n")
 
-ds = [list(item[1].values()) for item in product_list]
-
-print(list(zip(*ds)))
-
+ds = [dict(item[1].items()) for item in product_list]
+print({key: [i[key] for i in ds] for key in ds[0]})
 
