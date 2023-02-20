@@ -41,10 +41,16 @@ while True:
 
         if not bool(int(input("Продолжить ввод - да: 1, нет: 0: "))):
             break
-        i += i
+        i = i + 1
 
+# result = {}
 # for key, value in product_dict.items():
 #     print(key, ' : ', value)
 
-print(*product_list, sep="\n")
+# print(*product_list, sep="\n")
+
+ds = [list(item[1].values()) for item in product_list]
+
+print(list(zip(*ds)))
+
 
