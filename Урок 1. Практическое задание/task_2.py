@@ -9,3 +9,12 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+allseconds = int(input("Введите время в секундах:"))
+hours = allseconds // 3600
+minutes = (allseconds % 3600) // 60
+seconds = (allseconds % 3600) % 60
+
+print(f"Часов: {hours}; Минут: {minutes}; Секунд: {seconds}")
+
+
+
