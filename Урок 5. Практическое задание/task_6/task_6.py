@@ -5,3 +5,17 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+def sum_subjects():
+    try:
+        my_dictionary = {}
+        with open("test.txt", encoding='utf-8') as my_file:
+            for line in my_file:
+                name, score = line.split(':')
+                name_sum = sum(map(int, ''.join([i for i in score if i == ' ' or ('0' <= i <= '9')]).split()))
+                my_dictionary[name] = name_sum
+            print(f"{my_dictionary}")
+    except FileNotFoundError:
+        return 'Файл не найден.'
+
+
+sum_subjects()
