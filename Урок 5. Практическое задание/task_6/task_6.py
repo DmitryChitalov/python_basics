@@ -5,3 +5,15 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+import re
+
+subjects_dict = {}
+with open('less5_t6_diction.txt', 'r', encoding='UTF-8') as df:
+    text = df.read()
+    df.seek(0)
+    for i in df:
+        r_types = i.split(': ')
+        hours = re.findall(r"\d+", r_types[1])
+        subjects_dict.update({r_types[0]: sum([int(i) for i in hours])})
+print(f'Словарь:\n {subjects_dict}')
