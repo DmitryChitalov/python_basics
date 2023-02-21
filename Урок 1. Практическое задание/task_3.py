@@ -8,3 +8,9 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+i_n: int = int(input("Введите положительное целое число n: "))
+i_n2: int = int(f'{i_n}{i_n}')
+i_n3: int = int(f'{i_n}{i_n}{i_n}')
+i_sum =  i_n + i_n2 + i_n3
+
+print(f'{i_n} + {i_n2} + {i_n3} = {i_sum}')
