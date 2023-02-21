@@ -3,3 +3,10 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+
+with open('less5.1_text.txt', 'w', encoding='utf-8') as txt:
+    while True:
+        line_obj = input('Ввод текста, для выхода- пустую строку: ')
+        if line_obj == '':
+           break
+    txt.write(line_obj+'\n') 
