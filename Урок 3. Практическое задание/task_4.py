@@ -5,3 +5,16 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+def my_func(x, y):
+    number = 0
+    degree = (-y)
+    test = 1
+    for i in range(degree):
+        number = x * test
+        test *= x
+    res = 1 / number
+    return res
+
+
+print(my_func(2, (-8)))

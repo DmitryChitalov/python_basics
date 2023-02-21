@@ -8,3 +8,14 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+user_text = 'hello'
+
+def int_func(text):
+    return text.title()
+
+print(int_func(user_text))
+
+user_words = 'hello world bye go finish'
+
+print(int_func(user_words))

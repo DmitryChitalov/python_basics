@@ -6,3 +6,18 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def my_func():
+    user_text = input('Введите текст разделенной пробелами: ').split()
+    user_text_sum = len(''.join(user_text))
+    res = 0
+    print(f'Сумма значение: {user_text_sum}')
+    while True:
+        user_numbers = (input('Введите числа: ')).split()
+        for el in user_numbers:
+            try:
+                int(el)
+            except ValueError:
+                return print(f'Сумма значений: {res + user_text_sum}')
+            res += int(el)    
+        print(f'Сумма значений: {res + user_text_sum}')
+my_func()
