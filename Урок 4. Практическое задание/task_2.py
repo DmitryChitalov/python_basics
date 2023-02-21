@@ -22,5 +22,8 @@ def my_list(func_list):
                 if func_list[i] > func_list[i-1]]
     return new_list
 
-print(my_list(input('Введите последовательность чисел через пробел: ').split()))
-print(my_list_1(input('Введите последовательность чисел через пробел: ').split()))
+
+print(my_list(input('Введите последовательность '
+                    'чисел через пробел (Генератор списка): ').split()))
+print(my_list_1(input('Введите последовательность '
+                      'чисел через пробел (Просто функция): ').split()))
