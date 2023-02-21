@@ -18,9 +18,8 @@ def my_list_1(func_list):
 
 
 def my_list(func_list):
-    new_list = [func_list[i] for i in range(1, len(func_list))
-                if func_list[i] > func_list[i-1]]
-    return new_list
+    return [func_list[i] for i in range(1, len(func_list))
+            if func_list[i] > func_list[i-1]]
 
 
 print(my_list(input('Введите последовательность '
