@@ -8,3 +8,8 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+a = str(input("Введите целое положительное число:"))
+b = int(a + a)
+c = int(a + a + a)
+a = int(a)
+print(a + b + c)
