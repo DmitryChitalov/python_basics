@@ -15,3 +15,13 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+ls = [5, "string", 0.15, True, None]
+for val in ls:
+    print(type(val))
+
+print(type(ls[0]) is int)
+print(type(ls[1]) is str)
+print(type(ls[2]) is float)
+print(type(ls[3]) is bool)
+print(ls[4] is None)
+
