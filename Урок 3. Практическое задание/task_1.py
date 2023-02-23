@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def my_calc(x, y):
+    try:
+        return x / y
+    except ZeroDivisionError:
+        return "делить на 0 низя!"
+
+    return res
+
+
+print(my_calc(int(input("Введите первое число: ")),
+              int(input('Введите второе число: '))))
