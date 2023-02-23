@@ -17,3 +17,10 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def fn_division(var_1, var_2):
+    """Функция деления первого числа на второе, с обработкой деления на  0 """
+    try:
+        return var_1 / var_2
+    except ZeroDivisionError:
+        return "Вы что? Пытаетесь делить на 0!"
+print(fn_division(int(input("Введите первое число: ")), int(input("Введите второе число: "))))
