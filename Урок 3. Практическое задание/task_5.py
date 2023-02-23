@@ -6,3 +6,19 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+my_sum_total = 0
+working = True
+
+while working:
+    values = input("Введите числа через пробел (символ q используется для остановки программы)): ").split(" ")
+    my_sum = 0
+
+    for value in values:
+        if value.isnumeric():
+            my_sum += int(value)
+        elif "q" == value:
+            working = False
+
+    my_sum_total += my_sum
+    print(f"Общая сумма всех чисел: {my_sum_total}")

@@ -5,3 +5,22 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+
+# def my_func(x, y, z):
+#     """Сумма двух из трех максимальных значений аргументов, с использованием функции sort()"""
+#     values = [x, y, z]
+#     values.sort(reverse=True)
+#     return values[0] + values[1]
+
+
+def my_func(x, y, z):
+    """Сумма двух из трех максимальных значений аргументов, без использования фунции sort()"""
+    return x + y + z - min([x, y, z])
+
+
+my_x = int(input("Певрое число: "))
+my_y = int(input("Второе число: "))
+my_z = int(input("Третье число: "))
+
+print(my_func(my_x, my_y, my_z))
