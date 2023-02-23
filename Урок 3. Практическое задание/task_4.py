@@ -5,3 +5,15 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    result = 1
+    for i in range(abs(y)):
+        result *= x
+    if y < 0:
+        result = 1 / result
+    return result
+
+result = my_func(2, -3)
+print(result)  # Output: 0.125

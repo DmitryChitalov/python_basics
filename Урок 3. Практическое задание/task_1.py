@@ -17,3 +17,14 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def division():
+    try:
+        num1 = float(input("Введите первое число: "))
+        num2 = float(input("Введите второе число: "))
+        result = num1 / num2
+        print(result)
+    except ZeroDivisionError:
+        print("Вы что? Пытаетесь делить на 0!")
+
+division()
