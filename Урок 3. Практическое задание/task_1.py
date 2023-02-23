@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def divide_numbers(first_object, second_object):
+    try:
+        return first_object/second_object
+    except ZeroDivisionError:
+        return "Деление на ноль невозможно"
+
+try:
+    first_numb = int(input("Введите первое число: "))
+    second_numb = int(input("ведите второе число: "))
+    print(divide_numbers(first_numb, second_numb))
+except ValueError:
+    print("Вы ввели некорректное значение. Пожалуйста, введите число")
