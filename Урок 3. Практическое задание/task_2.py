@@ -9,7 +9,9 @@
 email: jackie@gmail.com, телефон: 01005321456
 """
 
+
 def my_func(name, surname, birthday, city, email, phone):
     print(f"{name} {surname} {birthday} года рождения, проживает в городе {city}, email: {email}, телефон: {phone}")
-my_func('Василий', 'Георгиевич', 1971, 'Пермь', 'riga@pskov.kerch', '+7-921-326-32-17' )
 
+
+my_func('Василий', 'Георгиевич', 1971, 'Пермь', 'riga@pskov.kerch', '+7-921-326-32-17')

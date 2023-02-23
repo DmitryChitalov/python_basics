@@ -17,7 +17,9 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
-def devide(var_1, var_2):
+
+
+def subdev(var_1, var_2):
     try:
         result = var_1 / var_2
     except ZeroDivisionError:
@@ -25,6 +27,7 @@ def devide(var_1, var_2):
         return
     return result
 
+
 a = int(input("Введите первое число: "))
 b = int(input("Введите второе число: "))
-print(f"Результат: {devide(a,b)}")
+print(f"Результат: {subdev(a, b)}")
