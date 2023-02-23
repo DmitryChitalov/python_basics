@@ -6,3 +6,12 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+import sys
+from sys import argv
+
+try:
+    p1, prod_h, rate_h, premium = argv
+    res = int(prod_h) * int(rate_h) + int(premium)
+    print(res)
+except Exception as e:
+    print(e)
