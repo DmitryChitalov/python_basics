@@ -8,3 +8,13 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+def int_func(text):
+    return text.capitalize()
+
+
+i_user_text = input('Введите слова через пробел : ').split(' ')
+rez_text = []
+for i in i_user_text:
+    rez_text.append(int_func(i))
+
+print(" ".join(rez_text))
