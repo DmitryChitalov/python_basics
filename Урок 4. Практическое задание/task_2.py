@@ -7,3 +7,16 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+a = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+b = a[0]
+my_list = []
+for el in a:
+    if el > b:
+        my_list.append(el)
+    b = el
+print(my_list)
+
+new_list = [c for c in a if c > a[a.index(c) - 1]]
+new_list.pop(0)
+print(new_list)
