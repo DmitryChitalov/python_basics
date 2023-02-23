@@ -6,3 +6,18 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+def sum_numbers():
+    total_sum = 0
+    while True:
+        user_input = input("Введите строку чисел, разделенных пробелом (для выхода введите q): ")
+        if user_input.lower() == "q":
+            break
+        try:
+            numbers = [float(x) for x in user_input.split()]
+            total_sum += sum(numbers)
+            print("Сумма введенных чисел:", total_sum)
+        except ValueError:
+            print("Вы ввели неправильное значение, попробуйте еще раз.")
+
+sum_numbers()
