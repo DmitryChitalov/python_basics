@@ -7,3 +7,13 @@
 Иванов 23543.12
 Петров 13749.32
 """
+with open('salary.txt', 'r') as my_file:
+    salary = []
+    little = []
+    my_list = my_file.read().split(' \n')
+    for i in my_list:
+        i = i.split()
+        if int(i[1]) < 20000:
+           little.append(i[0])
+        salary.append(i[1])
+print(f'Оклад меньше 20.000 {little}, средний оклад {sum(map(int, salary)) / len(salary)}')
