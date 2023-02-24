@@ -17,3 +17,18 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def my_func(var_1, var_2):
+    try:
+        var_1 / var_2
+    except ZeroDivisionError:
+        print('Введено значение 0. Ошибка ввода')
+        return
+    my_res = var_1 / var_2
+    return my_res
+
+
+print(my_func(float(input('Введите числитель: ')), float(input('Введите '
+                                                               'знаменатель:'
+                                                               ' '))))
