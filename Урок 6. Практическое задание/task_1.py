@@ -15,3 +15,17 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+
+
+class TrafficLight:
+    __color = {'Красный': 7, 'Жёлтый': 2, 'Зелёный': 10}
+
+    @staticmethod
+    def running():
+        for key, value in TrafficLight.__color.items():
+            print(key)
+            sleep(value)
+
+
+TrafficLight.running()
