@@ -17,3 +17,12 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+now_a = int(input("Введите число:"))
+now_b = int(input("Введите число:"))
+def my_de(a, b):
+    try:   
+        return a/b
+    except ZeroDivisionError:
+        print("На 0 делить нельзя!")
+        return
+print(f"{my_de(now_a,now_b):.1f}")
