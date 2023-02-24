@@ -12,3 +12,27 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+
+from itertools import count
+ls = []
+for el in count(int(input("Input value: 3:"))):
+    if el > 10:
+        break
+    else:
+        ls.append(el)
+print(ls)
+
+
+from itertools import cycle
+q = 0
+for item in cycle(ls):
+    if q > 10:
+        break
+    else:
+        ls.append(item)
+        q += 1
+print(ls)
+    
+
+
