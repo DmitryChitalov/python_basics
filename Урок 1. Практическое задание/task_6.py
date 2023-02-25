@@ -19,3 +19,16 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+current_result = int(input('Сейчас наш спортсмен пробегает (км): '))
+target_result = int(input('Введите цель для спортсмена в км: '))
+mid_res = current_result
+day = 1
+print(f'{day}-й день: {current_result} км')
+while mid_res < target_result:
+    mid_res = round(mid_res + (mid_res * 0.1), 2)
+    day += 1
+    print(f'{day}-й день: {mid_res} км')
+print(f'Ответ: на {day}-й день спортсмен достигнет результата - не менее '
+      f'{target_result} км.')
+
