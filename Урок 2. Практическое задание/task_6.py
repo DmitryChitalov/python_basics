@@ -25,3 +25,21 @@
 “ед”: [“шт.”]
 }
 """
+products_list: list = [
+    (1, {'название': 'компьютер', 'цена': 20000, 'количество': 5, 'eд': 'шт.'}),
+    (2, {'название': 'принтер', 'цена': 6000, 'количество': 2, 'eд': 'шт.'}),
+    (3, {'название': 'сканер', 'цена': 2000, 'количество': 7, 'eд': 'шт.'})
+]
+
+products_structure: dict = {}
+
+for product in products_list:
+    product_props = product[1]
+
+    for key, val in product_props.items():
+        if key in products_structure:
+            products_structure[key].append(val)
+        else:
+            products_structure[key] = [val]
+
+print(products_structure)
