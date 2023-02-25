@@ -11,3 +11,13 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+ls = input('Введите целые числа через пробел: ')
+ls = ls.split()
+
+idx = 0
+while idx + 1 < len(ls):
+    var1, var2 = ls[idx], ls[idx + 1]
+    ls[idx], ls[idx + 1] = var2, var1
+    idx += 2
+
+print(' '.join(ls))
