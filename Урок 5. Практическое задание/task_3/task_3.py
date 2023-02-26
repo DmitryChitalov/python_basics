@@ -17,7 +17,7 @@ new_file2 = new_file
 for en, ru in trans.items():
     new_file2 = new_file2.replace(en, ru)
 
-with open('text3_new.txt', 'w', encoding='UTF-8') as new_file_cont:
+with open('text3_new.txt', 'w') as new_file_cont:
     new_file_cont.writelines(new_file2)
     print("Файл перезаписан")
 
