@@ -12,3 +12,26 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count
+from itertools import cycle
+
+
+lst = []
+n = int(input("Выберите первое целое положительное число: "))
+b = int(input("Выберите последнее целое положительное число: "))
+c = 0
+
+for el in count(n):
+ if el > b:
+  break
+ else:
+  print(el)
+  lst.append(el)
+
+iterator = cycle(lst)
+
+for el in iterator:
+ print(el)
+ c += 1
+ if c == len(lst):
+  break
