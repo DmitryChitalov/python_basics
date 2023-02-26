@@ -7,3 +7,23 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+
+
+my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+print(my_list)
+new_list = [my_list[i+1] for i in range(len(my_list)-1) if my_list[i] < my_list[i+1]]
+print(new_list)
+print(type(new_list))
+# ---------------------------------------
+new_list_ = []
+for idx in range(1, len(my_list)):
+    if my_list[idx - 1] < my_list[idx]:
+        new_list_.append(my_list[idx])
+print(f"Новый лист такой: {new_list_}")
+# ----------------------------------------
+
+data = (my_list[i+1] for i in range(len(my_list)-1) if my_list[i] < my_list[i+1])
+for x in data:
+    print(x)
+print(type(data))
