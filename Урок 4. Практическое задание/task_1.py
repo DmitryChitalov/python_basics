@@ -6,3 +6,14 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+import sys
+script, hours, bonus = sys.argv
+try:
+    hours1:int = int(hours)
+    bonus1:int = int(bonus)
+    wage:int = hours1 * 500 * ((bonus1+100)/100)
+    print(f"Заработано за месяц {wage}")
+except ValueError:
+    exit
+"""Зарплата считается: ставка меняется редко, переменные это часы выходов 
+в месяц и % к зарплате премия."""
