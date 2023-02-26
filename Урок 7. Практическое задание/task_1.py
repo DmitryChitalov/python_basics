@@ -28,3 +28,24 @@
 8 10 12
 14 16 18
 """
+class Matrix:
+    def __init__(self, my_list):
+        self.my_list = my_list
+
+    def __str__(self):
+        for el in self.my_list:
+            for i in el:
+                print(f"{i:3}", end="")
+            print()
+        return ''
+
+    def __add__(self, o):
+        for i in range(len(self.my_list)):
+            for i_2 in range(len(o.my_list[i])):
+                self.my_list[i][i_2] = self.my_list[i][i_2] + o.my_list[i][i_2]
+        return Matrix.__str__(self)
+
+
+matrix_1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matrix_2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(matrix_1.__add__(matrix_2))
