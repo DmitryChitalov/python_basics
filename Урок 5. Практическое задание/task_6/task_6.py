@@ -5,3 +5,22 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+from re import search
+
+if __name__ == '__main__':
+    try:
+        with open('text', 'r') as f_obj:
+            res = {}
+            for i in f_obj:
+                lst = i.split()
+                amount = 0
+                for el in lst:
+                    f = search("[0-9]+", el)
+                    amount += int(f.group(0)) if f is not None else 0
+                res = {**res, lst[0]: amount}
+            print(res)
+    except IOError:
+        print('Warning: error input output')
+    except Exception as e:
+        print(e)
