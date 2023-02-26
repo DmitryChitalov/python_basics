@@ -120,7 +120,7 @@ class Cell:
     def __truediv__(self, other):
         return f'Делим клетки: {self.qty} / {other.qty} = {self.qty // other.qty} \n'
 
-    def org_cells(self, row):
+    def make_order(self, row):
         res = ''
         for i in range(int(self.qty /row)):
             res += f'{"*" * row}\\n '
@@ -138,5 +138,5 @@ print(cell2 - cell1)
 print(cell2 / cell1)
 
 print("Организация ячеек по рядам:")
-print(cell1.org_cells(5))
-print(cell2.org_cells(10))
+print(cell1.make_order(5))
+print(cell2.make_order(10))
