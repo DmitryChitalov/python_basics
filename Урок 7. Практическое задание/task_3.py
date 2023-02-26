@@ -100,3 +100,36 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __add__(self, another):
+        return f'Сумма: {self.quantity + another.quantity}'
+
+    def __sub__(self, another):
+        sub = self.quantity - another.quantity
+        return f'Разность: {sub} ' if sub > 0 else 'Разность отрицательна '
+
+    def __mul__(self, another):
+        return f'Умножение: {self.quantity * another.quantity}'
+
+    def __truediv__(self, another):
+        return f'Деление: {self.quantity // another.quantity}'
+
+    def make_order(self, row):
+        result = ''
+        for i in range(int(self.quantity / row)):
+            result += '*' * row + '\n'
+        result += '*' * (self.quantity % row) + '\n'
+        return result
+
+
+cell = Cell(30)
+cell_2 = Cell(25)
+print(cell + cell_2)
+print(cell - cell_2)
+print(cell * cell_2)
+print(cell / cell_2)
+print(cell.make_order(5))
