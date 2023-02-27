@@ -4,7 +4,7 @@
 Об окончании ввода данных свидетельствует пустая строка.
 """
 
-input_text = open('input_text', 'w')
+input_text = open('input_text.txt', 'w')
 while True:
     text_string = input('Введите текст: ')
     if text_string == '':
