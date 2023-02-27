@@ -7,3 +7,28 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+
+
+with open("04.txt", "r", encoding='UTF8') as my_fl:
+
+    count = {}
+    rows = 0
+    total = 0
+    for row in my_fl:
+        w = row.split(" ")
+
+        rows += 1
+        total += float(w[1])
+
+        if float(w[1]) < 20000:
+            count[w[0]] = w[1].replace('\n', '')
+
+my_middle = total / rows
+
+
+for my_info in count.items():
+    print(f" {my_info[0]} получает {my_info[1]} РЭ")
+
+
+print(f"\nСредний дохода сотрудников: {my_middle} ")
