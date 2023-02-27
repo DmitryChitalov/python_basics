@@ -5,21 +5,23 @@
 
 my_f = open("Task2.txt", "w", encoding='utf-8')
 str_list = [
-     "Caro m'è 'l sonno, e più l'esser di sasso,\n",
-     "mentre che 'l danno e la vergogna dura;\n",
-     "non veder, non sentir m'è gran ventura;\n",
-     "però non mi destar, deh, parla basso.\n"
+     "Будто в руки взял,\n",
+     "Молнию, когда во мраке\n",
+     "Ты зажег свечу.\n",
 ]
 
-my_f.writelines((str_list))
-
+my_f.writelines(str_list)
 my_f.close()
-
-
 
 my_f = open("Task2.txt", "r", encoding='utf-8')
 content = my_f.readlines()
-print(len(content))
-content2 = list(my_f.read())
-
+str_num = len(content)
+print(f"Количество строк равно: {str_num}")
 my_f.close()
+
+print(f"Количество слов в каждой строке соотвественно равно:")
+with open("Task2.txt", encoding='utf-8') as f_obj:
+    for line in f_obj:
+        my_str = line.split(" ")
+        word_num = len(list(my_str))
+        print(word_num, end=' ')
