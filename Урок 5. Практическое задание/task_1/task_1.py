@@ -4,8 +4,10 @@
 Об окончании ввода данных свидетельствует пустая строка.
 """
 
-
-out_f = open("out_file.txt", "w")
-out_f.write("String string string")
-out_f.close()
-print(out_f)
+input_text = open('input_text', 'w')
+while True:
+    text_string = input('Введите текст: ')
+    if text_string == '':
+        break
+    input_text.write(text_string+'\n')
+input_text.close()
