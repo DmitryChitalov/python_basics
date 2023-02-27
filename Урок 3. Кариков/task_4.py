@@ -5,3 +5,19 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+def my_func(base: int, degree: int) -> float:
+    # Проверка на то, что степень отрицательная
+    if degree > 0:
+        raise ValueError('Степень должна быть отрицательной')
+
+    # Считаем положительную степень
+    positive_power = base
+    for i in range((degree * -1) - 1):
+        positive_power *= base
+
+    # Возвращаем отрицательную степень
+    return 1 / positive_power
+
+
+print(my_func(2, -2))
