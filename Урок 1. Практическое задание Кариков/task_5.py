@@ -18,3 +18,11 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+proceeds = int(input("Введите выручку фирмы: "))
+costs = int(input("Введите издержки фирмы: "))
+profit = proceeds - costs
+print(f"Чистая прибыль {profit}")
+ratio = costs / proceeds
+staff = int(input("Введите численность сотрудников фирмы: "))
+profit_staff = profit // staff
+print(f"Прибыль фирмы в расчете на одного сотрудника = {profit_staff}" )
