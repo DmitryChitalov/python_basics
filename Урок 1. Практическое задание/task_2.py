@@ -9,3 +9,9 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+time_ = int(input('Напишите время в секундах'))
+
+time_hours = round((time_ / 3600), 0)
+time_mins = round(((time_ - time_hours * 3600) / 60), 0)
+time_sec = round((time_ - time_hours * 3600 - time_mins * 60), 2)
+print(f'Время сейчас: {time_hours} часов, {time_mins} минут, {time_sec} секунд')
