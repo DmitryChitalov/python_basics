@@ -6,3 +6,18 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+
+def payment(hours, cost, bonus):
+    try:
+        return int(hours) * int(cost) + int(bonus)
+    except ValueError:
+        return "Заданы некорректные параметры"
+
+
+try:
+    print(f"Выплата в размере: {payment(argv[1], argv[2], argv[3])}")
+except IndexError:
+    print("Недостаточно аргументов")

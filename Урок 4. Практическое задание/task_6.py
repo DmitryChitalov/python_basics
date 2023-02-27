@@ -12,3 +12,26 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+my_list = []
+
+start = int(input("Первое число последовательности: "))
+end = int(input("Последнее число последовательности: "))
+repeats = int(input("Количество повторений: "))
+
+# а) итератор, генерирующий целые числа, начиная с указанного
+for i in count(start):
+    if i > end:
+        break
+    print(i)
+    my_list.append(i)
+
+# б) итератор, повторяющий элементы некоторого списка, определенного заранее
+counter = 0
+for i in cycle(my_list):
+    if counter >= repeats:
+        break
+    print(i)
+    counter += 1
