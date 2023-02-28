@@ -7,3 +7,15 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+elem = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+sort_elem = []
+
+for el in range(len(elem)-1):
+    if elem[el] < elem[el+1]:
+        sort_elem.append(elem[el+1])
+
+print(sort_elem)
+
+gen_elem = [elem[el+1] for el in range(len(elem)-1) if elem[el] < elem[el+1]]
+
+print(gen_elem)
