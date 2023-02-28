@@ -6,3 +6,21 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+def summary_func():
+    saved_sum = 0
+    end = False
+    while end is False:
+        my_list = input('Введите числа через пробел (завершить - введите /) = ').split(' ')
+        tmp_val = 0
+        for num in range(len(my_list)):
+            if my_list[num] == "/":
+                end = True
+            else:
+                tmp_val = tmp_val + int(my_list[num])
+        saved_sum = saved_sum + tmp_val
+        print(f'Общая сумма чисел равна: {saved_sum}, сумма последних чисел '
+              f'равна {tmp_val}')
+    return
+
+summary_func()
