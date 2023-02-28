@@ -15,3 +15,23 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+
+
+class Trafficlight:
+
+    def __init__(self, color):
+        self.__color__ = color
+
+    def running(self):
+        if self.__color__ == 'Красный':
+            print("Загорелся красный свет")
+        time.sleep(7)
+        print("Загорелся желтый свет")
+        time.sleep(2)
+        print("Загорелся зеленый свет")
+        time.sleep(3)
+
+
+obj = Trafficlight('Красный')
+obj.running()
