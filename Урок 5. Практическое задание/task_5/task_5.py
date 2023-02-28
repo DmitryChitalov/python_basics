@@ -11,5 +11,5 @@ for number in text_write:
     number = number.split()
     for i in number:
         amount += int(i)
-text_write.close()
+text_write.close
 print(f'Сумма чисел - {amount}')
