@@ -26,8 +26,8 @@ class Road:
 
     def asph_mass(self, mass, thick):
         amount_mass = self.__length * self.__width * mass * thick
-        print(amount_mass)
+        print(f'Потребуется {amount_mass} кг асфальта')
 
 
-new_road = Road(1000, 5)
-new_road.asph_mass(100, 3)
+new_road = Road(5000, 20)
+new_road.asph_mass(25, 0.05)
