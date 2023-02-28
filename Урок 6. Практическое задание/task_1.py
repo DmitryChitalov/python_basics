@@ -15,25 +15,6 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
-# from time import sleep
-
-
-# class Trafficlight:
-
-#     __color__ = cycle
-
-#     def running(self):
-#         if self.__color__ == 'Красный':
-#             print("Загорелся красный свет")
-#         sleep(7)
-#         print("Загорелся желтый свет")
-#         sleep(2)
-#         print("Загорелся зеленый свет")
-#         sleep(3)
-
-
-# obj = Trafficlight('Красный')
-# obj.color()
 
 from itertools import cycle
 from time import sleep
