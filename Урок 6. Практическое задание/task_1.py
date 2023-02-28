@@ -15,23 +15,46 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
-import time
+# from time import sleep
 
 
-class Trafficlight:
+# class Trafficlight:
 
-    def __init__(self, color):
-        self.__color__ = color
+#     __color__ = cycle
+
+#     def running(self):
+#         if self.__color__ == 'Красный':
+#             print("Загорелся красный свет")
+#         sleep(7)
+#         print("Загорелся желтый свет")
+#         sleep(2)
+#         print("Загорелся зеленый свет")
+#         sleep(3)
+
+
+# obj = Trafficlight('Красный')
+# obj.color()
+
+from itertools import cycle
+from time import sleep
+
+
+class TrafficLight:
+    __color__ = cycle([
+        ['Красный', 7],
+        ['Желтый', 2],
+        ['Зеленый', 5],
+        ['Желтый', 2]
+    ])
 
     def running(self):
-        if self.__color__ == 'Красный':
-            print("Загорелся красный свет")
-        time.sleep(7)
-        print("Загорелся желтый свет")
-        time.sleep(2)
-        print("Загорелся зеленый свет")
-        time.sleep(3)
+        light = next(self.__color__)
+        print(f'Горит {light[0]} свет, осталось {light[1]} секунд')
+        sleep(light[1])
 
 
-obj = Trafficlight('Красный')
-obj.running()
+traffic_light = TrafficLight()
+traffic_light.running()
+traffic_light.running()
+traffic_light.running()
+traffic_light.running()
