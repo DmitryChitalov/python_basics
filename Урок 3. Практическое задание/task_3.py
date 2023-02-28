@@ -19,5 +19,5 @@ def my_func_wsort(a1, a2, a3):
     summ = a1 + a2 + a3 - (min([a1, a2, a3]))
     return summ
 
-print("С фнукцией sort: ",my_func_sort(a, b, c))
-print("Без функции sort: ",my_func_wsort(a, b, c))
+print("С фнукцией sort: ", my_func_sort(a, b, c))
+print("Без функции sort: ", my_func_wsort(a, b, c))
