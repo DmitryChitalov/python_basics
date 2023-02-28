@@ -8,3 +8,13 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def str_upper_case(text):
+    return str(text).title()
+
+
+out_str = input('Введите слово разделенное пробелами: ')
+
+out_str_arr = list(map(lambda v: str_upper_case(v), out_str.split()))
+print(' '.join(out_str_arr))

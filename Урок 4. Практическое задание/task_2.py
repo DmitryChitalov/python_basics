@@ -7,3 +7,15 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+new_list = []
+my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+for idx in range(1, len(my_list)):
+
+    if my_list[idx] > my_list[idx - 1]:
+        new_list.append(my_list[idx])
+
+print(new_list)
+
+new_list = [my_list[idx] for idx in range(1, len(my_list)) if my_list[idx] > my_list[idx - 1]]
+print(new_list)
