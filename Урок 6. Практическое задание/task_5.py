@@ -22,19 +22,19 @@ class Stationery:
 
 class Pen(Stationery):
     def draw(self):
-        Stationery.draw(self)
+        super().draw()
         print('Ручка пишет.')
 
 
 class Pencil(Stationery):
     def draw(self):
-        Stationery.draw(self)
+        super().draw()
         print('Карандаш ресует.')
 
 
 class Handle(Stationery):
     def draw(self):
-        Stationery.draw(self)
+        super().draw()
         print('Маркер выделяет.')
 
 

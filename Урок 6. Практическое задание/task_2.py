@@ -19,11 +19,12 @@ length (длина в метрах), width (ширина в метрах).
 
 
 class Road:
+    weight = 25
+    thickness = 0.05
+
     def __init__(self, length, width):
         self._length = length
         self._width = width
-        self.weight = 25
-        self.thickness = 0.05
 
     def get_full_weight(self):
         return self._length * self._width * self.weight * self.thickness / 1000
