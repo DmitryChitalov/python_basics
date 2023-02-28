@@ -14,3 +14,14 @@
 1. раз
 2. перерефриж
 """
+words = input('Введите несколько слов через пробел: ')
+words_list = []
+start_number = 1
+for x in range(words.count(' ') + 1):
+    words_list = words.split()
+    if len(str(words_list)) <= 10:
+        print(f" {start_number} {words_list [x]}")
+        start_number += 1
+    else:
+        print(f" {start_number} {words_list [x] [0:10]}")
+        start_number += 1
