@@ -11,3 +11,15 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+big_list = int(input('Введите количество элементов списка '))
+list_ = []
+indx_1 = 0
+indx_2 = 0
+while indx_1 < big_list:
+    list_.append(input('Введите значение списка '))
+    indx_1 += 1
+
+for elem in range(int(len(list_)/2)):
+        list_[indx_2], list_[indx_2 + 1] = list_ [indx_2 + 1], list_[indx_2]
+        indx_2 += 2
+print(list_)

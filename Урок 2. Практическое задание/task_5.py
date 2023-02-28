@@ -15,3 +15,19 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_list = [7, 5, 3]
+print(f'Рейтинг: {my_list}')
+number = int(input('Введите число '))
+while number != 10:
+    for x in range(len(my_list)):
+        if my_list[x] == number:
+            my_list.insert(x + 1, number)
+            break
+        elif my_list[0] < number:
+            my_list.insert(0, number)
+        elif my_list[-1] > number:
+            my_list.append(number)
+        elif my_list[x] > number and my_list[x + 1] < number:
+            my_list.insert(x + 1, number)
+    print(f'Список - {my_list}')
+    number = int(input('Введите число '))
