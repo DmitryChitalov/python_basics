@@ -5,3 +5,26 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+from functools import reduce
+file_name_and_path = '/Users/aleksandr_bolokhov/Desktop/GeekBrains/DevOps/Python/homeworks/python_basics/Урок 5. Практическое задание/task_6/data.txt'
+
+dic = {}
+with open(file_name_and_path, 'r', encoding='utf-8') as file:
+    my_data = file.read().splitlines()
+    for line in my_data:
+        key, value = line.split(': ')
+        dic.update({key: value})
+        
+def sum_value_dic(dictionary):
+    for key in dictionary:
+        value_dic = ''
+        for el in dictionary[key]:
+            if el.isdigit():
+                value_dic += str(el)
+            else:
+                value_dic += ' '
+        sum_value_dictionary= reduce(lambda el_1, el_2: int(el_1) + int(el_2), value_dic.split())
+        dictionary[key] = sum_value_dictionary
+        
+sum_value_dic(dic)    
+print(dic)
