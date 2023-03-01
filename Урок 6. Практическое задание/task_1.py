@@ -15,3 +15,31 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from time import sleep
+
+
+class TrafficLight:
+    """
+    Реализует поведение светофора
+
+    Attributes:
+        __color    цвет светофора
+    """
+
+    __color = ''
+
+    def running(self):
+        """
+        переключение светофора в режимы (красный, желтый, зеленый)
+        :return: None
+        """
+        colors = (('красный', 7), ('желтый', 2), ('зеленый', 5))
+        for i in colors:
+            self.__color = i[0]
+            print(self.__color)
+            sleep(i[1])
+
+
+traffic_light = TrafficLight()
+traffic_light.running()
