@@ -20,3 +20,43 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+class Car():
+
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go():
+        pass
+
+    def stop():
+        pass
+
+    def turn():
+        pass
+
+    def show_speed():
+        pass
+
+
+class SportCar(Car):
+    pass
+
+
+class TownCar(Car):
+    pass
+
+
+class WorkCar(Car):
+    pass
+
+
+class PoliceCar(Car):
+    pass
+
+sport_car = SportCar(180, 'Red', 'Viper', False)
+town_car = TownCar(80, 'Grey', 'Ford Focus', False)
+work_car = WorkCar(50, 'Green', 'Transporter', False)
+police_car = PoliceCar(130, 'White and Blue Lines', 'S300', True)
