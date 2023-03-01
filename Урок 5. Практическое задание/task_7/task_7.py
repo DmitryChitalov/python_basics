@@ -9,3 +9,18 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+import csv
+import json
+
+companies = {}
+with open("companies.tsv", "r") as fp:
+    reader = csv.reader(fp, delimiter="\t")
+
+    for row in reader:
+        companies.update({row[0]: int(row[2]) - int(row[3])})
+
+pos_values = [v for v in companies.values() if v > 0]
+average_profit = {"average_profit": sum(pos_values) / len(pos_values)}
+
+with open("report.json", "w", encoding="UTF-8") as fp:
+    json.dump([companies, average_profit], fp)

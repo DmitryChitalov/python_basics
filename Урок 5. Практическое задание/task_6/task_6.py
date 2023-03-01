@@ -5,3 +5,20 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+import csv
+import re
+
+plan = {}
+with open("edu_plan.tsv", "r") as fp:
+    reader = csv.reader(fp, delimiter="\t")
+
+    for row in reader:
+        hours = [0]
+        for cell in row[1:]:
+            match = re.findall(r"\d+", cell)
+            if len(match):
+                hours.append(int(match.pop()))
+        plan.update({row[0].rstrip(":"): sum(hours)})
+
+print(plan)
