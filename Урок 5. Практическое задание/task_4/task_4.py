@@ -7,3 +7,13 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+with open('sal.txt', encoding='utf-8') as my_file:
+    sal_sum = 0.0
+    counter = 0
+    for i in my_file:
+        if float(i.split()[1]) < 20000.00:
+            print(f'{i.split()[0]} получает меньше 20 000')
+        sal_sum += float(i.split()[1])
+        counter += 1
+    print(f'Средняя ЗП - {sal_sum / counter:.2f}')
