@@ -15,3 +15,21 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from itertools import cycle
+from time import sleep
+class trafficlight:
+    t = cycle([
+        {'a': 'красный', 'b': 7},
+        {'a': 'желтый', 'b': 2},
+        {'a': 'зеленый', 'b': 1},
+
+    ])
+    def running(self):
+        light = next(self.t)
+        print(f"{light['a']} сигнал светофора, до переключения {light['b']} сек.")
+        sleep(light['b'])
+traffic_light = trafficlight()
+traffic_light.running()
+traffic_light.running()
+traffic_light.running()
