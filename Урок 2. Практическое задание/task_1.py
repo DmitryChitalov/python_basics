@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+x = []
+x = [2, 'hello', 2.3, '28', True, None]
+for element in x:
+    print (type(element))

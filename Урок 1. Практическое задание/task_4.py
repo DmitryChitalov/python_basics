@@ -10,3 +10,14 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+task_4 = abs(int(input('Введите целое положительное число ')))
+max_num = task_4 % 10
+while task_4 >= 1:
+    task_4 = task_4 // 10
+    if task_4 % 10 > max_num:
+        max_num = task_4 % 10
+    if task_4 > 9:
+        continue
+    else:
+        print(f'Самая большая цифра в числе, {max_num}')
+        break
