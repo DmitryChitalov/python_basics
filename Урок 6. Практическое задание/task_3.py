@@ -17,7 +17,7 @@ __str__(self) - вызывается функциями str, print и format. В
 """
 
 
-class Worker():
+class Worker:
 
     def __init__(self, name, surname, position, wage, bonus):
         self.name = name

@@ -22,7 +22,7 @@ speed, color, name, is_police (булево).
 """
 
 
-class Car():
+class Car:
 
     def __init__(self, speed, color, name, is_police):
         self.speed = speed
@@ -36,8 +36,9 @@ class Car():
             print(f'Создан гражданский автомобиль'
                   f' {self.name}, цвет {self.color}')
 
-    def go(self, speed):
-        return print(f'Машина {self.name} едет вперед со скоростью {self.speed}')
+    def go(self):
+        return print(f'Машина {self.name} едет вперед'
+                     f' со скоростью {self.speed}')
 
     def stop(self):
         self.speed = 0
@@ -63,7 +64,7 @@ class TownCar(Car):
             return print(f'Превышение скорости на '
                          f'{self.speed - self.max_speed}')
         else:
-            return print(f'Машина едет со скоростью {self.speed}')
+            return print('Cкорость в допустимых пределах')
 
 
 class WorkCar(Car):
@@ -83,13 +84,15 @@ class PoliceCar(Car):
 
 
 def drive(car):
-    car.go(40)
+    car.go()
     car.show_speed()
     car.turn('налево')
-    car.stop()
+    car.go()
     car.show_speed()
-    car.go(70)
     car.turn('направо')
+    car.go()
+    car.show_speed()
+    car.stop()
     print('\n')
 
 
