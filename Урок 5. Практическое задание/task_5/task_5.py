@@ -5,15 +5,18 @@
 import random
 
 afile = open("file.txt", "w")
-
+line_str = ""
 try:
     for i in range(int(input('Сколько чисел записать в файл?: '))):
-        line = str(random.randint(1, 100)) + " "
-        afile.write(line)
-        print(line)
+        line_str += str(random.randint(1, 100)) + " "
+    afile.write(line_str.rstrip())
+    print(line_str.rstrip())
 except ValueError:
     print("Это не число")
-
-print(f"Сумма чисел: {afile}")
 afile.close()
+
+file_ = open("file.txt")
+list_of_digits = file_.readline().split()
+
+print(f"Сумма чисел: {sum([int(digit) for digit in list_of_digits])}")
 
