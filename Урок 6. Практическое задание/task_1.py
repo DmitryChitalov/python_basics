@@ -15,3 +15,21 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+
+class TrafficLight:
+    __color = {'Красный': 7, 'Желтый': 2, 'Зеленый': 9}
+
+    def running(self):
+        for color, val in TrafficLight.__color.items():
+            if color == "Жёлтый":
+               color = "Красный"
+               continue
+            if color == "Зелёный":
+               color = "Жёлтый"
+               continue
+            print(f'Светофор ожидает в режиме {color} свет - {val} сек')
+            sleep(int(val))
+
+tl = TrafficLight()
+tl.running()
