@@ -8,3 +8,27 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+# Создаем словарь для замены английских числительных на русские
+nums = {'One': 'Один',
+        'Two': 'Два',
+        'Three': 'Три',
+        'Four': 'Четыре'}
+
+# Открываем файл на чтение
+with open('input.txt', 'r', encoding='utf-8') as input_file:
+
+    # Открываем файл на запись
+    with open('output.txt', 'w', encoding='utf-8') as output_file:
+
+        # Читаем файл построчно
+        for line in input_file:
+
+            # Ищем английское число в строке
+            for num in nums:
+                if num in line:
+                    # Заменяем английское число на русское
+                    line = line.replace(num, nums[num])
+                    break
+
+            # Записываем строку в новый файл
+            output_file.write(line)
