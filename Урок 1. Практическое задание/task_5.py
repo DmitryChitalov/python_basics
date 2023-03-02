@@ -18,3 +18,27 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+res = int(input("1000"))
+costs = int(input("500"))
+prof = res - costs
+
+if prof > 0:
+    print(f"500 {prof}")
+
+    print("0.5")
+    ren = prof / res
+    print(f"0.5 {ren}")
+
+    emp_num = int(input("10"))
+    emp_pr = prof / emp_num
+    print(f"50 {emp_pr}")
+
+elif prof < 0:
+    print(f"Финансовый результат - убыток. Её величина: {prof}")
+
+else:
+    print("Выручка равна издержкам")
+
+
+
