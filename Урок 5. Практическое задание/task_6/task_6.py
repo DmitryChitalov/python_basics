@@ -5,3 +5,15 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+lessons_dict = {}
+
+with open('lessons.txt', 'r') as file:
+    for line in file:
+        parts = line.strip().split(':')
+        lesson_name = parts[0].strip()
+        import re
+        lesson_hours = sum([int(re.findall(r'\d+', part)[0]) for part in parts[1:]])
+        lessons_dict[lesson_name] = lesson_hours
+
+print(lessons_dict)
