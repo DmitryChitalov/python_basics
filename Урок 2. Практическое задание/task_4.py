@@ -14,3 +14,17 @@
 1. раз
 2. перерефриж
 """
+
+my_lst = input("раз перерефрижерированность").split()
+
+
+n = 1
+for elem in my_lst:
+    if len(elem) > 10:
+        print(f"{n}. {elem[:10]}")
+    else:
+        print(f"{n}. {elem}")
+    n += 1
+
+print()
+

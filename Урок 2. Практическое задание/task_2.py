@@ -11,3 +11,13 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+my_lst = input("1 2 3 4").split(' ')
+i, j = 0, 1
+while len(my_lst) > j:
+    my_lst[i], my_lst[j] = my_lst[j], my_lst[i]
+    i += 2
+    j += 2
+
+print('2 1 3', *my_lst)
+
