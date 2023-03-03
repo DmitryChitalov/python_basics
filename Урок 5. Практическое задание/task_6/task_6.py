@@ -5,3 +5,14 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+
+dct = {}
+with open("my_file.txt", encoding='utf-8') as file:
+    for line in file:
+        repl = line.replace("(л)", "").replace("(пр)", "").replace(
+            "(лаб)", "").replace(".", "").replace("—", "0").replace(":", "")
+        col_0, col_1, col_2, col_3 = repl.split()
+        # print(repl)
+        dct[col_0] = int(col_1) + int(col_2) + int(col_3)
+    print(f"{dct}")
