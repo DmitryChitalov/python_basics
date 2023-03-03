@@ -7,3 +7,15 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+from statistics import mean
+
+salaries = []
+for worker in workers:
+    last_name, salary = worker.split()
+    salary = int(salary)
+    if salary < 20_000:
+        print(last_name)
+
+print(mean(salaries))
+
