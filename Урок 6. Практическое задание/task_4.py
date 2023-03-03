@@ -20,3 +20,56 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        print("Машина поехала")
+
+    def stop(self):
+        print("Машина остановилась")
+
+    def turn(self):
+        print("Машина повернула(куда)")
+
+    def show_speed(self):
+        print(self.speed)
+
+class TownCar(Car):
+    def show_speed(self):
+        if self.speed > 60:
+            print("Скорость превышена")
+        else:
+            print(self.speed)
+class SportCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+class WorkCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        if self.speed > 40:
+            print(" Скорость превышена")
+        else:
+            print(self.speed)
+class PoliceCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+p_car = PoliceCar(78, 'red', 'grad', True)
+w_car = WorkCar(36, 'red', 'grad', False)
+t_car = TownCar(75, 'red', 'grad', False)
+s_car = SportCar(89, 'red', 'grad', False)
+
+p_car.show_speed()
+w_car.show_speed()
+t_car.show_speed()
+s_car.turn()
+
+
+
