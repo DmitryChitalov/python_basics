@@ -15,3 +15,40 @@
 П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
+
+# pylint: disable=missing-class-docstring, missing-function-docstring
+
+
+class Worker:
+
+    def __init__(
+            self,
+            name: str,
+            surname: str,
+            position: str,
+            wage: float = 0,
+            bonus: float = 0
+    ):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self._income = {'wage': wage, 'bonus': bonus}
+
+    def __str__(self):
+        return f'Работник: {self.name} {self.surname}, должность: {self.position}'
+
+
+class Position(Worker):
+    def get_full_name(self):
+        return f'{self.name} {self.surname}'
+
+    def get_total_income(self):
+        wage = self._income.get('wage', 0)
+        bonus = self._income.get('bonus', 0)
+        return wage + bonus
+
+
+worker = Position('Александр', 'Петров', 'Вайтишник', 5000, 150)
+print(f'Атрибуты экземпляра: {worker.__dict__}')
+print(worker)
+print(worker.get_full_name(), worker.get_total_income())
