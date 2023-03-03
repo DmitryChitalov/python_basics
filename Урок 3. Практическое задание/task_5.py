@@ -6,3 +6,17 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+result = 0
+while True:
+    new_str = input(
+        'Введите числа через пробел. Для завершения введите q: ').split()
+    if 'q' in new_str:
+        new_str.remove('q')
+        for el in new_str:
+            result = result + int(el)
+        print(f'Сумма всех введенных чисел: {result}')
+        break
+    else:
+        for el in new_str:
+            result = result + int(el)
+        print(f'Сумма всех введенных чисел: {result}')
