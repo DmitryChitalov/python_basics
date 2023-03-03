@@ -15,3 +15,12 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+ratebase = [8, 6, 5, 3, 2, 2, 1]
+
+rateupdate = int(input("Введите ваш рейтинг от 1 до 10: "))
+
+ratebase.append(rateupdate)
+ratebase.sort(reverse=True)
+
+print(ratebase)

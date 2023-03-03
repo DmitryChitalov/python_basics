@@ -5,3 +5,13 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+try:
+    new_dict = {}
+    with open("dict.txt", encoding='utf-8') as f_obj:
+        for line in f_obj:
+            name, stats = line.split(':')
+            less = sum(map(int, ''.join([i for i in stats if i == ' ' or ('0' <= i <= '9')]).split()))
+            new_dict[name] = less
+        print(f"{new_dict}")
+except FileNotFoundError:
+    print('Файл не найден.')
