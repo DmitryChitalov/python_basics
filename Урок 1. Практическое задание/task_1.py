@@ -11,3 +11,11 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+user_name = 'Гарри'
+user_age = 42
+user_message = 'Капациус экстремис'
+print(f'Привет! Я {user_name}. Мне {user_age} года. Моё сообщение "{user_message}"')
+user_name = input('А как твое имя?: ')
+user_age = input('Сколько тебе лет?: ')
+user_message = input('Введи свое сообщение: ')
+print(f'Привет {user_name}! {user_age} это прекрасный возраст. Принимаю сообщение "{user_message}".')
