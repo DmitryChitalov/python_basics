@@ -7,3 +7,22 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+
+def my_list_1(func_list):
+    new_list = []
+    for i in range(1, len(func_list)):
+        if func_list[i] > func_list[i-1]:
+            new_list.append(func_list[i])
+    print(new_list)
+
+
+def my_list(func_list):
+    return [func_list[i] for i in range(1, len(func_list))
+            if func_list[i] > func_list[i-1]]
+
+
+print(my_list(input('Введите последовательность '
+                    'чисел через пробел (Генератор списка): ').split()))
+print(my_list_1(input('Введите последовательность '
+                      'чисел через пробел (Просто функция): ').split()))
