@@ -1,3 +1,17 @@
+a = int(input("Первое значение "))
+b = int(input("Второе значение "))
+с = 1  # Первый день
+print(str(с) + "-й день  " + str(a))
+
+while True:
+    a += a / 100 * 10  # +10%
+    с += 1  # +1 день
+    if a < b:
+        print(str(с) + "-й день  " + str(round(a, 2)))
+    if a > b:
+        print(str(с) + "-й день  " + str(round(a, 2)))
+        break
+
 """
 Задание 6.
 
