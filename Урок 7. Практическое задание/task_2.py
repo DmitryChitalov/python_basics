@@ -25,3 +25,47 @@
 
 Два класса: абстрактный и Clothes
 """
+
+from abc import ABC, abstractmethod
+
+
+class AbstractClothes(ABC):
+    collections = {
+        'coat': lambda v: v / 6.5 + 0.5,
+        'costume': lambda h: 2 * h + 0.3,
+    }
+
+    @abstractmethod
+    def calc_from(self, what, size=0, height=0):
+        return
+
+
+class Clothes(AbstractClothes):
+    def __init__(self):
+        self.coat_expense = 0
+        self.costume_expense = 0
+
+    def calc_from(self, what, size=0, height=0):
+        try:
+            if what == 'coat':
+                self.coat_expense = round(self.collections[what](size), 2)
+                return self.coat_expense
+            elif what == 'costume':
+                self.costume_expense = round(self.collections[what](height), 2)
+                return self.costume_expense
+            return None
+        except TypeError:
+            return None
+
+    @property
+    def calc_all(self):
+        return self.coat_expense + self.costume_expense
+
+    def __str__(self):
+        return f"{self.coat_expense}, {self.costume_expense}"
+
+
+a = Clothes()
+print(f"Расход ткани на пальто = {a.calc_from('coat', size=5)}")
+print(f"Расход ткани на костюм = {a.calc_from('costume', height=10)}")
+print(f"Общий расход ткани = {a.calc_all}")
