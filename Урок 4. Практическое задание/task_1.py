@@ -6,3 +6,17 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+def my_func_1():
+    try:
+        number = [int(_) for _ in argv[1:]]
+        return (number[0] * number[1]) + number[2]
+    except ValueError:
+        return 'Вы ввели недопустимое значение'
+    except IndexError:
+        return 'Вы ввели недостаточное количество параметров'
+
+
+print(my_func_1())
+
