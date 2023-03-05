@@ -7,3 +7,35 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+# Открываем файл на чтение
+with open('salary.txt', 'r', encoding='utf-8') as file:
+    # Читаем строки по одной
+    lines = file.readlines()
+
+    # Инициализируем список для хранения фамилий сотрудников с окладом менее 20 тыс.
+    less_than_20k = []
+
+    # Инициализируем переменную для хранения суммарной величины окладов
+    total_salary = 0
+
+    # Перебираем строки и разделяем их на фамилию и оклад
+    for line in lines:
+        surname, salary = line.split()
+        salary = float(salary)
+
+        # Проверяем, имеет ли сотрудник оклад менее 20 тыс.
+        if salary < 20000:
+            less_than_20k.append(surname)
+
+        # Добавляем величину оклада к суммарной величине
+        total_salary += salary
+
+    # Выводим фамилии сотрудников с окладом менее 20 тыс.
+    print('Сотрудники с окладом менее 20 тыс.:')
+    for surname in less_than_20k:
+        print(surname)
+
+    # Вычисляем средний оклад всех сотрудников
+    avg_salary = total_salary / len(lines)
+    print('Средний оклад всех сотрудников: {:.2f}'.format(avg_salary))
