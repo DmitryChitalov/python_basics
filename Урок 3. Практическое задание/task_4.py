@@ -5,3 +5,16 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_pow_negative(_x, _y):
+    def my_pow(_x, _y):
+        if _y == 1:
+            return _x
+        return _x * my_pow(_x, _y - 1)
+    return 1 / my_pow(_x, abs(_y))
+
+
+x = int(input('Введите число: '))
+y = int(input('Введите степень: '))
+print(my_pow_negative(x, y))

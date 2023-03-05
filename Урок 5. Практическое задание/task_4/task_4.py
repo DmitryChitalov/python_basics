@@ -7,3 +7,14 @@
 Иванов 23543.12
 Петров 13749.32
 """
+total = 0
+cnt_employees = 0
+with open('employees.txt', 'r') as f:
+    for line in f:
+        employee, salary = line.strip().split()
+        cnt_employees += 1
+        total += float(salary)
+        if float(salary) < 20000:
+            print(employee)
+
+print(f'средняя величина дохода сотрудников {total / cnt_employees}')

@@ -28,3 +28,32 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, matrix):
+        self.matrix = matrix
+
+    def __str__(self):
+        result = ''
+        for line in self.matrix:
+            result += ' '.join([str(el) for el in line])
+            result += '\n'
+        return result
+
+    def __add__(self, other):
+        new_matrix = []
+
+        for id1, cell1 in enumerate(self.matrix):
+            new_matrix.append([])
+            for idx, cell in enumerate(self.matrix[id1]):
+                new_matrix[id1].append(self.matrix[id1][idx] + other.matrix[id1][idx])
+
+        return new_matrix
+
+
+m1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+m2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+print(m1)
+print(m1 + m2)
