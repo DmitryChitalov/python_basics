@@ -11,3 +11,17 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+new_list = input('Введите элементы списка через пробел: \n').split()
+n_idx = len(new_list) - 1
+def pair_rev(my_list, n):
+    while n > 0:
+            my_list[n], my_list[n - 1] = my_list[n - 1], my_list[n]
+            n = n - 2
+    return my_list
+if n_idx % 2 == 0:
+    new_list.reverse()
+    pair_rev(new_list, n_idx)
+    new_list.reverse()
+else:
+    pair_rev(new_list, n_idx)
+print(f'Результат преобразования: {" ".join(new_list)}')
