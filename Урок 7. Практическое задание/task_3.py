@@ -94,9 +94,82 @@ print(cell2.make_order(10))
 Умножение клеток = (750)
 
 Делим
-Деление клеток = (1)
+Умножение клеток = (1)
 
 Организация ячеек по рядам
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell:
+    test = ''
+    
+    def __init__(self, quantity: int):
+        self.quantity = quantity
+        
+    def __str__(self):
+        if self.test == '+':
+            return f'Сумма клеток = ({self.quantity})'
+
+    def __add__(self, other):
+        self.test = '+'
+        return f'Сумма клеток = ({Cell(self.quantity + other.quantity).quantity})'
+
+    def __sub__(self, other):
+        if (self.quantity - other.quantity) < 0:
+            return f'Разность отрицательна, поэтому операция не выполняется.'
+        else:
+            return f'Разность клеток = ({Cell(self.quantity - other.quantity).quantity})'
+
+    def __mul__(self, other):
+        return f'Умножение клеток = ({Cell(self.quantity * other.quantity).quantity})'
+
+    def __truediv__(self, other):
+        return f'Умножение клеток = ({Cell(round(self.quantity // other.quantity)).quantity})'
+    
+    def make_order(self, cells_in_row):
+        snowflake = ''
+        for i in range(1, self.quantity + 1):
+            if i % cells_in_row != 0:
+                snowflake += '*'
+            else:
+                snowflake += '*'
+                snowflake += '\\n '
+        return snowflake
+                
+            
+            
+           
+       
+
+cell1 = Cell(30)
+cell2 = Cell(25)
+
+cell3 = Cell(10)
+cell4 = Cell(15)
+
+print()
+
+print("Складываем")
+print(cell1 + cell2)
+
+print()
+
+print("Вычитаем")
+print(cell2 - cell1)
+print(cell4 - cell3)
+
+print()
+
+print("Умножаем")
+print(cell2 * cell1)
+
+print()
+
+print("Делим")
+print(cell1 / cell2)
+
+print()
+
+print("Организация ячеек по рядам")
+print(cell1.make_order(5))
+print(cell2.make_order(10))
