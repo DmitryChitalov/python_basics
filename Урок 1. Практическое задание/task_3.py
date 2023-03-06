@@ -1,5 +1,0 @@
-n = int(input("Введите число n:"))
-nn = int(str(n) * 2)
-nnn = int(str(n) * 3)
-x = n + int(str(n) * 2) + int(str(n) * 3)
-print(f'{n} + {nn} + {nnn}' , '=' , x )
