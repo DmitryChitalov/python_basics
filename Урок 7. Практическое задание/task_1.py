@@ -28,3 +28,30 @@
 8 10 12
 14 16 18
 """
+class Matrix:
+    def __init__(self, m_list):
+        self.new_str = m_list
+
+    def __str__(self):
+        z = ''
+        for v in range(len(self.new_str)):
+            z = z + '\t'.join(map(str, self.new_str[v])) + '\n'
+        return z
+
+    def __add__(self, other):
+        if len(self.new_str) != len(other.new_str):
+            return None
+        add = self.new_str
+        for v in range(len(self.new_str)):
+            for k in range(len(self.new_str[v])):
+                add[v][k] = self.new_str[v][k] + other.new_str[v][k]
+        return Matrix(add)
+
+fsum = Matrix([[15, 57, 95], [33, 49, 85], [60, 43, 22]])
+ssum = Matrix([[-7, -12, 22], [60, -19, 0], [77, 25, 89]])
+
+print(fsum)
+print()
+print(ssum)
+print()
+print(f'Сумма матриц:\n{fsum + ssum}')
