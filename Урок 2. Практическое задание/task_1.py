@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_list = [68, 'geekBrains', 0.5, False, ('free', True, 65), {1, 2, 6, 15, '57'}]
+print(f'для списка {my_list}')
+print('результат:')
+for el in my_list:
+    print(type(el))
