@@ -12,3 +12,20 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+for x in count(5):
+    if x >= 20:
+        break
+    else:
+        print(x)
+
+
+y = [1, 2, 3, 4, 5, 10, 11, 12, 13, 14]
+
+z = 0
+for x in cycle(y):
+    if z > 20:
+        break
+    print(x)
+    z += 1
