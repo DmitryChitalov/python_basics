@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+user_string = input('Введите целые числа через пробел: ')
+roll = user_string.split()
+a, b = 0, 1
+while len(roll) > b:
+    roll[a], roll[b] = roll[b], roll[a]
+    a += 2
+    b += 2
+print("Результат: ", *roll)
