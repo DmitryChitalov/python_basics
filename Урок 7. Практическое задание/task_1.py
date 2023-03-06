@@ -28,3 +28,35 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, die):
+        self.die = die
+        self.new_die = ''
+
+    def __str__(self):
+
+        for k in range(len(self.die)):
+            if len(self.new_die) != 0:
+                self.new_die += '\n'
+            for t in self.die[k]:
+                self.new_die += f'{str(t)} '
+        return self.new_die
+
+    def __add__(self, other):
+        if len(self.die) == len(other.die):
+            for k in range(len(self.die)):
+                for j in range(len(other.die[0])):
+                    self.die[k][j] = self.die[k][j] + other.die[k][j]
+            return Matrix(self.die)
+        else:
+            return 'Матрицы должны быть одного размера'
+
+
+die = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+print(f'Сложение матриц:')
+new_die = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+new_die_update = Matrix([[1, 2, 3], [2, 3, 4], [5, 6, 7]])
+print(new_die + new_die_update)
