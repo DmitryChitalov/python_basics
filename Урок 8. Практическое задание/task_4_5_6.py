@@ -19,3 +19,43 @@
 Подсказка: постарайтесь по возможности реализовать в проекте
 «Склад оргтехники» максимум возможностей, изученных на уроках по ООП.
 """
+from abc import ABC, abstractmethod
+
+
+class Stock:
+    pass
+
+
+class OfficeEquipment(ABC):
+    def __init__(self, weight, power, speed):
+        self.weight = weight
+        self.power = power
+        self.speed = speed
+
+    @abstractmethod
+    def print_speed(self):
+        pass
+
+
+class Printer(OfficeEquipment):
+    def print_speed(self):
+        print(f'Скорость печати принтера {self.speed} листов в минуту!')
+
+
+class Scaner(OfficeEquipment):
+    def print_speed(self):
+        print(f'Скорость сканирования {self.speed} листов в минуту!')
+
+
+class Xerox(OfficeEquipment):
+    def print_speed(self):
+        print(f'Печать копий ксерокса {self.speed} листов в минуту!')
+
+
+printer = Printer(800, 20, 15)
+scaner = Scaner(300, 20, 25)
+xerox = Xerox(1600, 20, 30)
+
+printer.print_speed()
+scaner.print_speed()
+xerox.print_speed()
