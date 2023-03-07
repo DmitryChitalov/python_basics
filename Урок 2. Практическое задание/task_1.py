@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+l = ['bell', 27, 17.35, None, False]
+
+for c in l:
+    print(type(c))
