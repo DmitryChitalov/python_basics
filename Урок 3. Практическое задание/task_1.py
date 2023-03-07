@@ -13,10 +13,10 @@ Process finished with exit code 0
 1.0
 Process finished with exit code 0
 """
-def func(*number):
+number1 = int(input("Введите первое число: "))
+number2 = int(input("Введите второе число: "))
+def func(number1, number2):
     try:
-        number1 = int(input("Введите первое число: "))
-        number2 = int(input("Введите второе число: "))
         res = number1 / number2
     except ZeroDivisionError:
         return "Вы что? Пытаетесь делить на 0!"
@@ -26,4 +26,4 @@ def func(*number):
         return number1 / number2
     else:
         print("Вы что? Пытаетесь делить на 0!")
-print(f'result  {func()}')
+print(f'result  {func(number1, number2)}')
