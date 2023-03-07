@@ -100,3 +100,34 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+    def __str__(self):
+        return f'результат {self.quantity}'
+    def __add__(self, other):
+        return f'сложение клеток = {Cell(self.quantity + other.quantity)}'
+
+    def __sub__(self, other):
+        if (self.quantity - other.quantity) > 0:
+            return f'разность клеток = {Cell(int(self.quantity - other.quantity))}'
+        else:
+            return f'вычитание невозможно, отрицательное значение'
+
+    def __mul__(self, other):
+        return f'умножение клеток = {Cell(int(self.quantity * other.quantity))}'
+
+    def __truediv__(self, other):
+      return f'деление клеток = {Cell(self.quantity // other.quantity)}'
+
+
+
+c_1 = Cell(140)
+c_2 = Cell(80)
+print(c_1)
+print(c_1 + c_2)
+print(c_2 - c_1)
+print(c_1 * c_2)
+print(c_1 / c_2)
