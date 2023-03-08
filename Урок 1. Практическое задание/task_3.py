@@ -8,3 +8,6 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+user_num = int(input("Введите целое положительное число n: "))
+res = str(f"{user_num}{user_num * 2}{user_num * 3}")
+print(f"n + nn + nnn = {res}")

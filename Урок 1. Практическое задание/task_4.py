@@ -10,3 +10,13 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+user_input = input("Ведите целое положительное число: ")
+
+i = 0
+res = user_input[i]
+while i < len(user_input) - 1:
+    if res < user_input[i + 1]:
+        res = user_input[i + 1]
+    i += 1
+
+print(f"Самая большая цифра в числе: {res}")
