@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def dv(a, b):
+    try:
+        res = a / b
+        print(res)
+    except ZeroDivisionError:
+        print("Вы что? Пытаетесь делить на 0!")
+
+
+dv(a=int(input('Введите первое число: ')),
+   b=int(input('Введите второе число: ')))
