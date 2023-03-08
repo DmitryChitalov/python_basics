@@ -5,6 +5,6 @@
 my_list = input('Введите значения: ').split()
 
 for number, word in enumerate(my_list, 1):
-    print(number, word[0:10])
+    print(f"number, word[0:10]")
 
 
