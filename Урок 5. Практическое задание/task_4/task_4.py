@@ -7,3 +7,20 @@
 Иванов 23543.12
 Петров 13749.32
 """
+with open('input.txt', 'r', encoding='utf-8') as f:
+    workers = {}
+    for line in f:
+        key, value = line.split()
+        workers[key] = value
+        if int(value) < 20000:
+            print(f'{key}: зарплата меньше 20000')
+
+
+
+
+
+
+
+
+
+
