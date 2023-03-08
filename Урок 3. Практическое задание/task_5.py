@@ -6,3 +6,11 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+start = 0
+try:
+    while True:
+        for next_num in map(int, input().split()):
+            start += next_num
+        print(start)
+except ValueError:
+    print(start)

@@ -5,3 +5,10 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+
+def my_func(*args):
+    print(sum(sorted(list(args), reverse=True)[:2]))
+
+
+my_func(10, 20, 40)
