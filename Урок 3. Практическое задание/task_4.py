@@ -5,3 +5,17 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def exponentiation(num, exp):
+    res = 1
+    for i in range(abs(exp)):
+        res *= num
+    if exp >= 0:
+        return res
+    return 1 / res
+
+
+x = int(input('Действительное положительное число: '))
+y = int(input('Степень: (действительное целое отрицательное число): '))
+print(f"x^y = {exponentiation(x, y)}")
