@@ -13,7 +13,7 @@ while True:
     for i in range(1, new_count + 1):
      new_score = input('Введите число: ')
      if not new_score.isdigit():
-        print("Введены некорректные данные. Должно быть целое положительное число")
+        print(f"Введены некорректные данные. Должно быть целое положительное число")
         continue
      else:
         new_score = int(new_score)
