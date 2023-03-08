@@ -18,3 +18,20 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+revenue = int(input("Введите выручку фирмы: "))
+costs = int(input("Введите издержки фирмы: "))
+result = ""
+profit = revenue - costs
+bool_value = revenue > costs
+if bool_value:
+    result = "прибыль"
+else:
+    result = "убыток"
+
+print(f"Финансовый результат - {result}. Величина: {profit}")
+if bool_value:
+    print(f"Рентабельность выручки = {profit / revenue}")
+    num_staff = int(input("Введите численность сотрудников фирмы: "))
+    print(
+        f"Прибыль фирмы в расчете на одного сотрудника = {profit / num_staff}")
