@@ -5,3 +5,22 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+# №1
+
+my_func = list(map(int, input('Введите числа через пробел: ').split()))
+my_func.sort(reverse=True)
+my_func[2] = 0
+sumOfElements = sum(my_func)
+print(f'Сумма двух наибольших чисел равна: {sumOfElements}')
+
+
+# №2
+def my_func(a, b, c):
+    print(f'Сумма двух наибольших чисел равна: '
+          f'{a + b + c- min([a, b, c])}')
+
+
+my_func(a=int(input("Введите первое число: ")),
+        b=int(input('Введите второе число: ')),
+        c=int(input('Введите третье число: ')))
