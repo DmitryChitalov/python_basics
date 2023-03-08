@@ -100,3 +100,67 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __add__(self, other):
+        return Cell(self.quantity + other.quantity)
+
+    def __sub__(self, other):
+        result = self.quantity - other.quantity
+        if result > 0:
+            return Cell(result)
+        else:
+            return "Разность отрицательна, поэтому операция не выполняется"
+
+    def __mul__(self, other):
+        return Cell(self.quantity * other.quantity)
+
+    def __truediv__(self, other):
+        return Cell(self.quantity // other.quantity)
+
+    def make_order(self, cells_in_row):
+        rows = self.quantity // cells_in_row
+        last_row = self.quantity % cells_in_row
+        return '\n'.join(['*' * cells_in_row] * rows + (['*' * last_row] if last_row > 0 else []))
+
+    def __str__(self):
+        return "(%s)" % format(str(self.quantity))
+
+
+print("Создаем объекты клеток")
+cell1 = Cell(30)
+cell2 = Cell(25)
+
+cell3 = Cell(10)
+cell4 = Cell(15)
+
+print()
+
+print("Складываем")
+print(f"Сумма клеток = {cell1 + cell2}")
+
+print()
+
+print("Вычитаем")
+print(f"Разность клеток = {cell2 - cell1}")
+print(f"Разность клеток = {cell4 - cell3}")
+
+print()
+
+print("Умножаем")
+print(f"Умножение клеток = {cell2 * cell1}")
+
+print()
+
+print("Делим")
+print(f"Деление клеток = {cell1 / cell2}")
+
+print()
+
+print("Организация ячеек по рядам")
+print(cell1.make_order(5))
+print(cell2.make_order(10))
