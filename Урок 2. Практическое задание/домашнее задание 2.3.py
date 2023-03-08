@@ -18,7 +18,7 @@ elif month == 9 or month == 10 or month == 11:
     print(seasons_dict.get(4))
     print(seasons_list[3])
 else:
-    print("Месяца не существует")
+    print(f"Месяца не существует")
 
 # второй вариант через словарь
 dict_months = {1: 'Зима',
@@ -36,7 +36,7 @@ dict_months = {1: 'Зима',
                }
 month = int(input('Номер месяца: '))
 if month > 12:
-    print("Месяца не существует")
+    print(f"Месяца не существует")
 else:
     seasons = dict_months[month]
     print(seasons)
