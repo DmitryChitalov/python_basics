@@ -9,5 +9,8 @@
 n + nn + nnn = 369
 """
 n = int(input("Введите число - "))
-total = (n + int(str(n) + str(n)) + int(str(n) + str(n)+ str(n)))
-print("Сумма чисел n + nn + nnn - %d" % total)
+a = n
+b = int(str(n) + str(n))
+c = int(str(n) + str(n) + str(n))
+d = a + b + c
+print(d)

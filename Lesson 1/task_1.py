@@ -24,5 +24,5 @@ print("Введеные значения - %10s %5d %10s %5d" % (string1, number
 
 string1 = input("Введите ваше имя: ")
 string2 = input("Введите ваш пароль: ")
-number1 = int(input("Введите ваш возраст: "))
-print("Ваши данные для входа в аккаунт - %10s %10s %5d " % (string1, string2, number1))
+number3 = int(input("Введите ваш возраст: "))
+print("Ваши данные для входа в аккаунт - %10s %10s %5d " % (string1, string2, number3))
