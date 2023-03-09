@@ -23,7 +23,27 @@ from abc import ABC, abstractmethod
 
 
 class Stock:
-    pass
+    def __init__(self):
+        self.equipments = {}
+        self.subdivision = {}
+
+    def add_equipment(self, equipment, cnt):
+        equipment = str(equipment)
+        if self.equipments.get(equipment) is not None:
+            cnt += self.equipments[equipment]
+        self.equipments.update({equipment: cnt})
+
+    def transfer_equipment(self, subdivision, equipment, cnt):
+        equipment = str(equipment)
+        if self.equipments.get(equipment) is None:
+            raise Exception('Нет такой переферии борудования')
+        if self.equipments[equipment] < cnt:
+            raise Exception(f'Недостаточное кол-во техники доступно {self.equipments[equipment]}')
+        self.equipments[equipment] -= cnt
+        if self.subdivision.get(subdivision) is None:
+            self.subdivision.update({subdivision: {equipment: cnt}})
+        else:
+            self.subdivision[subdivision].update({equipment: cnt})
 
 
 class OfficeEquipment(ABC):
@@ -41,15 +61,24 @@ class Printer(OfficeEquipment):
     def print_speed(self):
         print(f'Скорость печати принтера {self.speed} листов в минуту!')
 
+    def __str__(self):
+        return 'printer'
+
 
 class Scaner(OfficeEquipment):
     def print_speed(self):
         print(f'Скорость сканирования {self.speed} листов в минуту!')
 
+    def __str__(self):
+        return 'scaner'
+
 
 class Xerox(OfficeEquipment):
     def print_speed(self):
         print(f'Печать копий ксерокса {self.speed} листов в минуту!')
+
+    def __str__(self):
+        return 'xerox'
 
 
 printer = Printer(800, 20, 15)
@@ -59,3 +88,22 @@ xerox = Xerox(1600, 20, 30)
 printer.print_speed()
 scaner.print_speed()
 xerox.print_speed()
+
+stock = Stock()
+stock.add_equipment(printer, 5)
+stock.add_equipment(scaner, 10)
+stock.add_equipment(xerox, 4)
+stock.add_equipment(scaner, 2)
+stock.add_equipment(printer, 6)
+print(stock.equipments)
+
+try:
+    stock.transfer_equipment('Бухгалтерия', xerox, 4)
+    stock.transfer_equipment('Бухгалтерия', printer, 1)
+    stock.transfer_equipment('Лаборатория', printer, 1)
+    stock.transfer_equipment('Секретарь', xerox, 1)
+except Exception as err:
+    print(err)
+
+print(stock.subdivision)
+print(stock.equipments)
