@@ -7,3 +7,14 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+list_0= [255, 125, 1, 15, 5, 65, 11, 12, 87, 33]
+
+list_1 = []
+for el in range(1, len(list_0)):
+    if list_0[el] > list_0[el - 1]:
+        list_1.append(list_0[el])
+
+list_2 = [list_0[el] for el in range(1, len(list_0)) if list_0[el] > list_0[el - 1]]
+
+print(f"С применением генераторного выражения append {list_1}")
+print(f"Без использования генераторного выражения {list_2}")
