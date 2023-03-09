@@ -6,3 +6,17 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def my_func(my_sum=0):
+    numbs = input("Введите числа через пробел: ").split()
+    for el in range(len(numbs)):
+        if numbs[el] != "q":
+            my_sum = my_sum + int(numbs[el])
+        else:
+            break
+        print(my_sum)
+        if "q" in numbs:
+            exit("Выход")
+        else:
+            my_func(my_sum)
+
+my_func()
