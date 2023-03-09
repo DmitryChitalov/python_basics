@@ -20,6 +20,7 @@
 «Склад оргтехники» максимум возможностей, изученных на уроках по ООП.
 """
 from abc import ABC, abstractmethod
+import re
 
 
 class Stock:
@@ -28,7 +29,10 @@ class Stock:
         self.subdivision = {}
 
     def add_equipment(self, equipment, cnt):
-        equipment = str(equipment)
+        p = re.compile("^printer|scaner|xerox$")
+        if not p.search(equipment):
+            raise Exception('Нет такого оборудования')
+
         if self.equipments.get(equipment) is not None:
             cnt += self.equipments[equipment]
         self.equipments.update({equipment: cnt})
@@ -90,11 +94,18 @@ scaner.print_speed()
 xerox.print_speed()
 
 stock = Stock()
-stock.add_equipment(printer, 5)
-stock.add_equipment(scaner, 10)
-stock.add_equipment(xerox, 4)
-stock.add_equipment(scaner, 2)
-stock.add_equipment(printer, 6)
+try:
+    while True:
+        equipment = input('Введите оборудование: ')
+        if not equipment:
+            break
+        cnt = int(input('Введите количество: '))
+
+        stock.add_equipment(equipment, cnt)
+
+except Exception as err:
+    print(err)
+
 print(stock.equipments)
 
 try:
