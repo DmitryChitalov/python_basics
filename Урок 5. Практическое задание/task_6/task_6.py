@@ -5,3 +5,17 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+import re
+
+dictionary = dict()
+
+p = re.compile(r'\D+')
+
+with open('academic_subject.txt', 'r') as f:
+    for line in f:
+        row = line.strip().split()
+
+        cnt_classes = [int(p.sub('', el)) for el in [row[1], row[2], row[3]] if el != '—']
+        dictionary.update({row[0][0:-1]: sum(cnt_classes)})
+
+print(dictionary)

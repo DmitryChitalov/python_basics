@@ -25,3 +25,39 @@
 “ед”: [“шт.”]
 }
 """
+
+store = []
+while True:
+    name = input('Введите название: ')
+    price = float(input('Введите цену: '))
+    qty = float(input('Введите количество: '))
+    measure = input('Введите еденицу измерения: ')
+
+    d = {'название': name, 'цена': price, 'количество': qty, 'eд': measure}
+
+    store.append((len(store) + 1, d))
+
+    result = input('Введите 1 если хотите ввести больше данных.')
+
+    if result != '1':
+        break
+        
+
+name_rep = set()
+price_rep = set()
+qty_rep = set()
+measure_rep = set()
+
+for key in store:
+    name_rep.add(key[1]['название'])
+    price_rep.add(key[1]['цена'])
+    qty_rep.add(key[1]['количество'])
+    measure_rep.add(key[1]['eд'])
+
+report = {
+'название': list(name_rep),
+'цена': list(price_rep),
+'количество': list(qty_rep),
+'eд': list(measure_rep),
+}
+print(report)

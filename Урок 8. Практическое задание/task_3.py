@@ -9,3 +9,22 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+
+class ListOnlyInt(ValueError):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+ls = []
+while True:
+    try:
+        num = float(input('Введите число: '))
+        if num == -1:
+            break
+        ls.append(num)
+
+    except ValueError as err:
+        print(ListOnlyInt('Вы ввели не число'))
+
+print(ls)
