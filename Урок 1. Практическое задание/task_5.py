@@ -18,3 +18,16 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+revnue = int(input("Укажите объем выручки -> "))
+costs = int(input("Укажите объем издержек -> "))
+result = 'убыток'
+profit = 'отрицательный'
+if revnue > costs:
+    result = 'прибыль'
+    profit = costs / revnue
+if revnue == costs:
+    result= 0
+    profit = 0
+print(f"фин результат - {result}, уровень рентабельности => {profit}")
+print(f"доход на сотрудника = {(revnue - costs) / int(input('Введите численность сотрудников компании => '))}")
+
