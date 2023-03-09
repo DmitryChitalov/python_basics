@@ -28,3 +28,43 @@
 8 10 12
 14 16 18
 """
+
+class Matrix:
+    def __init__(self, matrix):
+        self.matrix = matrix
+
+    def __str__(self):
+        return '\n'.join([' '.join(map(str, row)) for row in self.matrix])
+
+    def __add__(self, other):
+        if len(self.matrix) != len(other.matrix) or len(self.matrix[0]) != len(other.matrix[0]):
+            raise ValueError("Матрицы разных размеров нельзя складывать.")
+        result = []
+        for i in range(len(self.matrix)):
+            row = []
+            for j in range(len(self.matrix[0])):
+                row.append(self.matrix[i][j] + other.matrix[i][j])
+            result.append(row)
+        return Matrix(result)
+
+# Создаем две матрицы
+m1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+m2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+# Выводим матрицы
+print("Матрица m1:")
+print(m1)
+print("Матрица m2:")
+print(m2)
+
+# Складываем матрицы и выводим результат
+m3 = m1 + m2
+print("Сумма матриц m1 и m2:")
+print(m3)
+
+# Попытка сложить матрицы разных размеров
+m4 = Matrix([[1, 2], [3, 4]])
+try:
+    m5 = m1 + m4
+except ValueError as e:
+    print("Ошибка:", e)

@@ -20,3 +20,76 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+class Car:
+
+    def __init__(self, speed: int, color: str, name: str, is_police: bool):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        print('Машина поехала.')
+
+    def stop(self):
+        print('Машина остановилась.')
+
+    def turn(self, turn):
+        if turn == 'left':
+            print('Машина повернула на лево.')
+        elif turn == 'right':
+            print('Машина повернула на право.')
+        else:
+            print('Машина едет прямо.')
+
+    def show_speed(self):
+        print(f'Скорость: {self.speed}')
+
+
+class TownCar(Car):
+
+    def show_speed(self):
+        print(f'Скорость: {self.speed}')
+        if self.speed > 60:
+            print('Вы превысили скорость.')
+
+class SportCar(Car):
+
+    def __init__(self, speed: int, color: str, name: str, is_police: bool, number_of_wheels: int):
+        super().__init__(speed, color, name, is_police)
+        self.number_of_wheels = number_of_wheels
+
+class WorkCar(Car):
+
+    def show_speed(self):
+        print(f'Скорость: {self.speed}')
+        if self.speed > 40:
+            print('Вы превысили скорость.')
+
+    def __str__(self):
+        show = self.show_speed()
+        return f'Скорость:{show}'
+
+
+
+class PoliceCar(Car):
+
+    def __init__(self, speed: int, color: str, name: str, is_police: bool, siren: bool):
+        super().__init__(speed, color, name, is_police)
+        self.siren = siren
+
+
+town_car = TownCar(55, "yellow", 'mercedes', False)
+town_car.go()
+
+sport_car = SportCar(140, 'red', 'ferrari', False, 4)
+print(sport_car.name, sport_car.number_of_wheels)
+sport_car.stop()
+
+work_car = WorkCar(50, 'green', 'audi', False)
+work_car.__str__()
+
+police_car = PoliceCar(88, 'blue', 'hyundai', True, True)
+print(police_car.is_police, police_car.siren)
+police_car.turn('left')

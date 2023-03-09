@@ -5,3 +5,19 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def my_func(x, y):
+    try:
+        if y < 0:
+            result = 1
+            for i in range(y, 0):
+                result = result * x
+            result = 1 / result
+            return f'Для значений x = {7}, y = {-5} результат: {result}'
+        else:
+            return "Число y должно быть меньше 0"
+    except TypeError:
+        return "Можно вводить только числа"
+    except ZeroDivisionError:
+        return "На 0 делить нельзя!"
+print(my_func(7, -5))
+
