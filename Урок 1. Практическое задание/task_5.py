@@ -25,6 +25,9 @@ profit = 'отрицательный'
 if revnue > costs:
     result = 'прибыль'
     profit = costs / revnue
+if revnue == costs:
+    result= 0
+    profit = 0
 print(f"фин результат - {result}, уровень рентабельности => {profit}")
 print(f"доход на сотрудника = {(revnue - costs) / int(input('Введите численность сотрудников компании => '))}")
 
