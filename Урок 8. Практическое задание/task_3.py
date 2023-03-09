@@ -9,3 +9,26 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+
+class CustomError(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+def fn():
+    try:
+        s = input('Введите числа через пробел: ')
+        b = []
+        for i in s.split():
+            if not i.replace('.', '').isdigit():
+                raise CustomError('В строке присутствуют не числа! Пробуем снова ')
+            else:
+                b = [*b, float(i)]
+        print(b)
+    except CustomError as e:
+        print(e)
+        fn()
+
+
+fn()

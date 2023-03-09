@@ -5,3 +5,25 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+
+class CustomError(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+def fn():
+    try:
+        a = input('Делимое: ')
+        b = input('Делитель: ')
+        if int(b) == 0:
+            raise CustomError('Делитель == 0! Делим снова')
+        else:
+            x = int(a) / int(b)
+            return print(x)
+    except CustomError as e:
+        print(e)
+        fn()
+
+
+fn()
