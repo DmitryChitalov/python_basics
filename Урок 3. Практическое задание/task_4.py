@@ -5,3 +5,15 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    i = 2
+    result = x*x
+    while i < abs(y):
+        result = result * x
+        i += 1
+    return result
+
+
+print(f'{my_func(int(input("Число: ")), int(input("Степень: ")))}')
