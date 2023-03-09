@@ -25,3 +25,63 @@
 “ед”: [“шт.”]
 }
 """
+products, order = [], 1
+title, price, amount = None, None, None
+
+while True:
+    if title is None:
+        tmp = input('Введите название товара: ')
+
+
+        title = tmp
+
+    if price is None:
+        tmp = input('Введите стоимость товара: ')
+
+
+        price = int(tmp)
+
+    if amount is None:
+        tmp = input('Введите количество: ')
+
+
+        amount = int(tmp)
+
+    tmp = input('Введите единицы измерения: ')
+
+
+    unit = tmp
+
+    products.append((
+        order,
+        {
+            'Название': title,
+            'Цена': price,
+            'Количество': amount,
+            'ед': unit
+        }
+    ))
+
+    title, price, amount = None, None, None
+    order += 1
+
+    print(products)
+
+    q = input('Формирование списка завершено? (y/N)) ')
+    if q.lower() == 'y':
+        break
+
+analitics = {
+    'Название': [],
+    'Цена': [],
+    'Количество': [],
+    'ед': set()
+}
+
+for _, item in products:
+    analitics['Название'].append(item['Название'])
+    analitics['Цена'].append(item['Цена'])
+    analitics['Количество'].append(item['Количество'])
+    analitics['ед'].add(item['ед'])
+
+print(analitics)
