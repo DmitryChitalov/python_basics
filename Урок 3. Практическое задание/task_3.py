@@ -5,3 +5,30 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+
+
+print("Решение используя функцию sort()")
+def fn_sort(a, b, c):
+    ls = [a, b, c]
+    ls.sort(reverse=True)
+    print(f'Сумма наибольших двух аргументов: {sum(ls [:2])}')
+
+fn_sort(
+    int(input("Число 1: ")),
+    int(input("Число 2: ")),
+    int(input("Число 3: "))
+)
+
+
+
+print("Решение без функции sort()")
+def my_func(a, b, c):
+    print(f'Сумма наибольших двух аргументов: {a + b + c - min([a, b, c])}')
+
+my_func(
+    int(input("Число 1: ")),
+    int(input("Число 2: ")),
+    int(input("Число 3: "))
+)
+

@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+ls = [10, "string", 0.86, False, None]
+for el in ls:
+    print(type(el))

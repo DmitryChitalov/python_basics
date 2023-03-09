@@ -28,3 +28,42 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, data):
+        # Конструктор класса, принимает список списков (матрицу) и сохраняет его в атрибут self.data
+        self.data = data
+
+    def __str__(self):
+        # Метод для преобразования матрицы в строку для вывода на экран
+        # Проходим по списку списков, преобразуя каждый элемент в строку и соединяем их в строку, разделяя табуляцией
+        # Затем соединяем все строки вместе, разделяя их переносом строки
+        return "\n".join(
+            ["\t".join([str(cell) for cell in row]) for row in self.data])
+
+    def __add__(self, other):
+        # Метод для сложения двух матриц
+        if len(self.data) != len(other.data) or len(self.data[0]) != len(
+                other.data[0]):
+            # Если матрицы не имеют одинаковый размер (число строк и столбцов), выбрасываем исключение ValueError
+            raise ValueError("Matrices must be of the same size")
+
+        result = []
+        for i in range(len(self.data)):
+            # Создаем новую строку, складывая соответствующие элементы матриц
+            # Проходим по каждому столбцу (j) в текущей строке (i) и складываем соответствующие элементы
+            # Затем добавляем строку в новую матрицу
+            result.append([self.data[i][j] + other.data[i][j] for j in
+                           range(len(self.data[0]))])
+        # Возвращаем новую матрицу в виде объекта класса Matrix
+        return Matrix(result)
+
+
+matrix1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matrix2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(matrix1)
+print("+")
+print(matrix2)
+print("=")
+print(matrix1 + matrix2)
