@@ -14,3 +14,9 @@
 1. раз
 2. перерефриж
 """
+
+text = input('Запишите предложение: ')
+text_list = text.split(' ')
+
+for i, el in enumerate(text_list):
+    print(f'{i+1}. {el[0:10]}')
