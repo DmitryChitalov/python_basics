@@ -9,5 +9,5 @@
 n + nn + nnn = 369
 """
 n = int(input("Введите число целое положительное число "))
-total = (n + int(str(n) + str(n)) + int(str(n) + str(n)+ str(n)))
-print("Сумма чисел n + nn + nnn - %d" % total)
+total = n + n * 11 + n * 111
+print(f"Сумма чисел n + nn + nnn - {total}")

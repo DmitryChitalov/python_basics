@@ -27,6 +27,6 @@ day = 1
 if a > b:
     print(day)
 while a < b:
-    a+=a/10
+    a += a / 10
     day += 1
     print(f'Ответ: на {day}-й день спортсмен достигнет результата — {round(a,2)} км.')

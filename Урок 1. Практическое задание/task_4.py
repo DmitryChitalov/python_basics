@@ -11,13 +11,13 @@
 Самая большая цифра в числе: 9
 """
 n = abs(int(input("Введите целое положительное число ")))
-max = n % 10
+max_num = n % 10
 while n >= 1:
     n = n // 10
-    if n % 10 > max:
-        max = n % 10
+    if n % 10 > max_num:
+        max_num = n % 10
     if n > 9:
         continue
     else:
-        print("Максимальное цифра в числе ", max)
+        print("Максимальное цифра в числе ", max_num)
         break
