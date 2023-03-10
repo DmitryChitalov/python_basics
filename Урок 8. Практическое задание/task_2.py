@@ -5,3 +5,14 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+class NullDivException(Exception):
+    pass
+
+try:
+    a = int(input('Введите делимое: '))
+    b = int(input('Введите делитель: '))
+    if b == 0:
+        raise NullDivException('На 0 делить нельзя')
+    print(f'Результат: {a / b:.2f}')
+except NullDivException as ex:
+    print(ex)
