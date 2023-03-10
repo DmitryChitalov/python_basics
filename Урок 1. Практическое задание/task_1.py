@@ -12,8 +12,10 @@
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
 
-first_name = input("Ваше имя: ")
+
+middle_name = input("Ваше отчество: ")first_name = input("Ваше имя: ")
 middle_name = input("Ваше отчество: ")
 last_name = input("Ваша фамилия: ")
 a = last_name + first_name + middle_name
-print (a)
+print(f" {last_name} {first_name} {middle_name} ")
+
