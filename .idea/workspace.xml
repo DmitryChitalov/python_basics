@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="63fac06d-a606-4b54-99c2-dbb7a3a42559" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Урок 2. Практическое задание/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 2. Практическое задание/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 2. Практическое задание/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 2. Практическое задание/task_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 2. Практическое задание/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 2. Практическое задание/task_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 2. Практическое задание/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 2. Практическое задание/task_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Урок 2. Практическое задание/task_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 2. Практическое задание/task_5.py" afterDir="false" />
+    <list default="true" id="63fac06d-a606-4b54-99c2-dbb7a3a42559" name="Changes" comment="Выполнел кроме 6 задания.">
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,18 +16,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2MaNvgt7Xwpiuz6q6EaWxAVa3h0" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Урок 2. Практическое задание" />
@@ -42,6 +45,18 @@
       <option name="presentableId" value="Default" />
       <updated>1678001965688</updated>
     </task>
+    <task id="LOCAL-00001" summary="Выполнел кроме 6 задания.">
+      <created>1678002560700</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678002560700</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Выполнел кроме 6 задания." />
+    <option name="LAST_COMMIT_MESSAGE" value="Выполнел кроме 6 задания." />
   </component>
 </project>
