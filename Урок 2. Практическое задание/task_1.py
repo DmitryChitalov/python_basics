@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+datatypes = [10, "word", 5.55, False, None]
+for i in range(len(datatypes)):
+    print(f'{i}-ой элемент списка = "{datatypes[i]}" и имеет тип {type(datatypes[i])}')

@@ -15,3 +15,19 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+my_list = [7, 5, 3, 3, 2]
+new_list = int(input('Введите новое числовое значение: '))
+inserted = False
+print(f'Исходный список: {my_list}')
+
+for i, el in enumerate(my_list):
+    if el < new_list:
+        my_list.insert(i, new_list)
+        print(f'Новое значение {new_list} вставили на {i} позицию: {my_list}')
+        inserted = True
+        break
+
+if not inserted:
+    my_list.append(new_list)
+    print(f'Новое значение {new_list} добавили в конец списка: {my_list}')
