@@ -11,3 +11,9 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+num = input("Введите целые числа через пробел: ").split()
+l = len(num)
+for i in range(0, l):
+    if i%2 == 0 and i < l - 1:
+        num[i], num[i+1] = num[i+1], num[i]
+print("Результат:",  " ".join(num))
