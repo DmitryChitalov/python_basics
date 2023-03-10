@@ -7,3 +7,15 @@
 Иванов 23543.12
 Петров 13749.32
 """
+salary = open('salary.txt', 'r', encoding='utf-8')
+print('У следующих сотрудников оклад ниже 20.000 руб.: ')
+avg_salary = 0
+worker = 0
+for line in salary:
+    line = line.split()
+    avg_salary += float(line[1])
+    worker += 1
+    if float(line[1]) < 20000:
+        print(line[0])
+print(f'Средняя зарплата:  {round(avg_salary / worker, 2)} руб.')
+salary.close()

@@ -11,3 +11,9 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+new_list = input('Введите целые числа через пробел: ').split()
+len_list = len(new_list)
+for i in range(0, len_list):
+    if i % 2 == 0 and i < len_list - 1:
+        new_list[i], new_list[i+1] = new_list[i+1], new_list[i]
+print(new_list)

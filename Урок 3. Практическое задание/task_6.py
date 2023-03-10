@@ -8,3 +8,15 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(text):
+    text = text.split()
+    new_text = ''
+    for t in text:
+        new_text = (f'{new_text} {t.capitalize()}')
+    return new_text.lstrip()
+
+
+text = input('Введите любой текст без заглавных букв: ')
+print(int_func(text))

@@ -5,3 +5,20 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+SCH_SUBJ = {}
+
+text = open('school.txt', 'r', encoding='utf-8')
+school = text.readlines()
+num_sum = 0
+num = ''
+for disc in school:
+    disc = disc.split(':')
+    for value in disc[1]:
+        if value.isdigit():
+            num += value
+        else:
+            if num != '':
+                num_sum += int(num)
+                num = ''
+    SCH_SUBJ[disc[0]] = num_sum
+print(SCH_SUBJ)
