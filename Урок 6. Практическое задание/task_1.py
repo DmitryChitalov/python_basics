@@ -15,3 +15,29 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+from datetime import datetime as dt
+
+class TrafficLight:
+    """ Класс светофора, реализующий свое переключение при запуске running( """
+    _states = {'красный': 7, 'желтый': 2, 'зеленый': 10}
+    _color = ''
+
+    def running(self):
+        """ Метод запусключения светофора """
+        for color, sw_time in self._states.items():
+            self._color = color
+            start_state_time = dt.now()
+
+            print(f"Внимание! Светофор переключится на '{self._color}' "
+                  f"через {sw_time} секунд")
+
+            sleep(sw_time)
+
+            print(f"Внимание! Состояние светофора '{self._color}' сменится через " 
+                  f"{(dt.now() - start_state_time).seconds} секунд")
+
+
+if __name__ == '__main__':
+    tl = TrafficLight()
+    tl.running()
