@@ -1,3 +1,10 @@
+def my_func(name, last_name, year, city, email, phone):
+    print(f"{name} {last_name} {year} года рождения, проживает в городе {city}, email: {email} телефон: {phone}")
+
+
+my_func(name=input("имя"), last_name=input("фамилия"), year=input("год рождения"), city=input("город проживания"),
+        email=input("email"), phone=input("телефон"))
+
 """
 2. Реализовать функцию, принимающую несколько параметров,
 описывающих данные пользователя: имя, фамилия, год рождения, город проживания, email, телефон.
