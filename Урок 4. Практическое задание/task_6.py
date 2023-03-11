@@ -12,3 +12,25 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+# а)
+from itertools import cycle, count
+
+num_start = int(input('Первое число: '))
+all_num = int(input('Сколько всего чисел необходимо вывести: '))
+num_stop = num_start + all_num + 1
+
+for x in count(num_start):
+    if x < num_stop:
+        print(x)
+    else:
+        break
+del x
+# б)
+my_list = [x for x in range(num_stop)]
+count = 0
+for b in cycle(my_list):
+    if count < num_stop + 10:
+        print(b)
+        count += 1
+    else:
+        break
