@@ -14,3 +14,11 @@
 1. раз
 2. перерефриж
 """
+my_list = list(map(str,input("Введите слова через пробел: ").strip().split()))
+my_list = ["раз", "два", "три"]
+for i in range(len(my_list)):
+    print(f"{i+1}. {my_list[i]}")
+
+my_list2 = list(map(str,input("Введите слова через пробел: ").strip().split()))
+for i in range(len(my_list2)):
+    print(f"{i+1}. {my_list2[i][:10]}")
