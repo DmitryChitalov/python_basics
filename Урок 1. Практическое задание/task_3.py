@@ -1,9 +1,3 @@
-a = int(input("Введите число"))
-b = (a + a)
-c = (a + a + a)
-
-print(str(a) + str(b) + str(c))
-
 """
 Задание 3.
 
