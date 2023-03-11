@@ -12,3 +12,24 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count
+from sys import argv
+from itertools import cycle
+
+name, start, stop = argv
+for el in count(int(start)):
+    if el > int(stop):
+        break
+    else:
+        print(el)
+
+# ---------------------------------
+
+
+name, stop = argv
+с = 0
+for el in cycle("ABC"):
+    if с > stop:
+        break
+    print(el)
+    с += 1

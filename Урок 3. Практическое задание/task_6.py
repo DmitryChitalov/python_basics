@@ -8,3 +8,12 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def capiword(arg_):
+    return arg_[0].upper() + arg_[1:]
+
+
+
+list_of_words = input("Введите через пробел набор слов из латинских букв в нижнем регистре: ").split()
+list_of_capwords = [print(capiword(i)) for i in list_of_words]
