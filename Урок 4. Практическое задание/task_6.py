@@ -12,3 +12,33 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+
+def int_input(s):
+    while True:
+        try:
+            return int(input(f"{s} "))
+            break
+        except ValueError:
+            print("Вы должны указать целое число. Повторите ввод.")
+
+
+print("Для формирования списка, состоящего из целых чисел, вам необходимо указать начало и конец диапазона.")
+start = int_input("Введите начало диапазона: ")
+end = start
+while end <= start:
+    end = int_input("Введите конец диапазона: ")
+
+new_list = []
+for el in count(start):
+    if el > end:
+        break
+    new_list.append(el)
+print(f'Сгенерированный список: {new_list}')
+print("Укажите номер шага, на котором будет прекращено циклическое поочередное отображение элементов списка.")
+
+c = int_input("Укажите номер итерации: ")
+iter = cycle(new_list)
+for i in range(c):
+    print(next(iter))

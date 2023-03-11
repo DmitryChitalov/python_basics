@@ -5,3 +5,9 @@
 Необходимо получить результат вычисления произведения всех элементов списка.
 Подсказка: использовать лямбда-функцию и функцию reduce().
 """
+from functools import reduce
+
+a = 100
+b = 1000
+new_list = [num for num in range(a, b + 1) if num % 2 == 0]
+print(reduce(lambda a, b: (a * b), new_list))
