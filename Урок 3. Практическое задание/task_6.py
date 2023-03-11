@@ -8,3 +8,23 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(s):
+    s = s.title()
+    return s
+
+
+check = True
+while check:
+    print("Введите слово или строку слов, разделенных пробелом, из латинских букв в нижнем регистре:")
+    my_str = input()
+    for el in my_str:
+        if ord(el) in range(97, 123) or ord(el) == 32:
+            check = False
+        else:
+            print("Ошибка ввода!")
+            check = True
+            break
+print(int_func(my_str))
+print("Работа программы завершена")

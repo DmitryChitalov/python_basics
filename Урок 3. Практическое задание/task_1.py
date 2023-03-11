@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def my_division(x, y):
+    try:
+        return x / y
+    except ZeroDivisionError:
+        print("Ошибка: деление на ноль")
+        return
+
+a = int(input("Введите первое число (a): "))
+b = int(input("Введите второе число (b): "))
+res = my_division(a, b)
+if res is not None:
+    print(f"Результат деления a/b: {res}")

@@ -6,3 +6,24 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def str_to_int(x):
+    return int(x)
+res = 0
+while True:
+    my_list = input("Введите числа через пробел:").split()
+    try:
+        my_list = [str_to_int(el) for el in my_list]
+        res += sum(my_list)
+        print(f" Текущая сумма = {res}")
+    except ValueError:
+        if my_list[-1] == 'q':
+            try:
+                my_list = [str_to_int(el) for el in my_list[:-1]]
+                res += sum(my_list)
+                print(f" Текущая сумма = {res}")
+                break
+            except ValueError:
+                print("Ошибка! Повторите ввод")
+        else:
+            print("Ошибка! Повторите ввод")
+print("Работа программы завершена")
