@@ -15,3 +15,29 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+import time
+
+class TrafficLight:
+    color = ''
+
+    def change_color(self, color, delay):
+
+        self.color = color
+        print(f'{self.color} - {delay}s')
+        time.sleep(delay) 
+
+    def running(self, count):
+        counter = count
+        print('switch on')
+        while counter > 0:
+            self.change_color('red', 7)
+            self.change_color('yellow', 2)
+            self.change_color('green', 8)
+            self.change_color('yellow', 2)
+            counter -= 1
+        
+        print('switch off')
+
+traffic_light = TrafficLight()
+traffic_light.running(2)
