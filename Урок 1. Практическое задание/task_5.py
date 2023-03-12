@@ -24,10 +24,13 @@ expense = float(input("Введите издержки фирмы: "))
 
 profit = revenue - expense
 
-if profit >= 0:
+if profit > 0:
     print(f"Финансовый результат - прибыль. Ее величина: {profit}")
-else:
+elif profit < 0:
     print(f"Финансовый результат - убыток. Ее величина: {profit}")
+    exit()
+else:
+    print(f"Финансовый результат - безубыточность")
     exit()
 
 profitability = (profit / revenue)
