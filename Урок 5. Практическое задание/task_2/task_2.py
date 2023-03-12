@@ -3,8 +3,6 @@
 выполнить подсчет количества строк, количества слов в каждой строке.
 """
 
-from collections import Counter
-
 def read_file(file_name):
     file = open(file_name, "r", encoding="utf-8")
     return file.readlines()
