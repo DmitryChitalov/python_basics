@@ -19,10 +19,12 @@ def input_lines():
 def write_lines(file_name, lines):
     file = open(file_name, "w", encoding="utf-8")
     file.writelines(lines)
+    file.close()
 
 def print_content(file_name):
     file = open(file_name, "r", encoding="utf-8")
     print(file.readlines())
+    file.close()
 
 lines = input_lines()
 write_lines("output.txt", lines)

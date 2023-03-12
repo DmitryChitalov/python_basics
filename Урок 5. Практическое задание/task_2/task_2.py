@@ -5,7 +5,9 @@
 
 def read_file(file_name):
     file = open(file_name, "r", encoding="utf-8")
-    return file.readlines()
+    result = file.readlines()
+    file.close()
+    return result
 
 def word_stat(line):
     words = line.split()

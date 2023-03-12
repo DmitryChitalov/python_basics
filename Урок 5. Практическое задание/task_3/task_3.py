@@ -21,14 +21,14 @@ def translate(line):
         "Eight": "Восемь",
         "Nine": "Девять"
     }
-    
+
     result = line
     for key in translate_map:
         result = result.replace(key, translate_map[key])
     return result
 
 # clear output file
-open("output.txt", "w", encoding="utf-8")
+open("output.txt", "w", encoding="utf-8").close()
 
 with open("input.txt", "r", encoding="utf-8") as in_file:
     for line in in_file:
