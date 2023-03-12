@@ -9,3 +9,40 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+
+
+import json
+
+def read_file(file_name):
+    companies = {}
+    total_profit = 0
+    count_profitable = 0
+    with open(file_name, 'r') as file:
+        for line in file:
+            data = line.strip().split()
+            name, ownership, revenue, expenses = data[0], data[1], int(data[2]), int(data[3])
+            profit = revenue - expenses
+            companies[name] = profit
+            if profit > 0:
+                total_profit += profit
+                count_profitable += 1
+    if count_profitable > 0:
+        average_profit = total_profit / count_profitable
+    else:
+        average_profit = 0
+    return companies, average_profit
+
+def save_to_json(file_name, data):
+    """
+    Сохранение данных в файл в формате json
+    """
+    with open(file_name, 'w') as file:
+        json.dump(data, file)
+
+if __name__ == '__main__':
+    file_name = 'companies.txt'
+    json_file_name = 'companies.json'
+    companies, average_profit = read_file(file_name)
+    result = [companies, {'average_profit': average_profit}]
+    save_to_json(json_file_name, result)
+    print(f'Result: {result}')
