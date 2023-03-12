@@ -5,3 +5,24 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+
+filename = "subjects.txt"
+subjects = {}
+
+with open(filename, "r", encoding='utf-8') as f:
+    for line in f:
+        parts = line.split(":")
+        subject = parts[0].strip()
+        lessons = parts[1].strip().split()
+        total = 0
+        for lesson in lessons:
+            if lesson.endswith("(л)"):
+                total += int(lesson[:-3])
+            elif lesson.endswith("(пр)"):
+                total += int(lesson[:-4])
+            elif lesson.endswith("(лаб)"):
+                total += int(lesson[:-5])
+        subjects[subject] = total
+
+print(subjects)
