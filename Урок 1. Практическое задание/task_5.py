@@ -18,3 +18,24 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+revenue = float(input("Введите выручку фирмы: "))
+expense = float(input("Введите издержки фирмы: "))
+
+profit = revenue - expense
+
+if profit > 0:
+    print(f"Финансовый результат - прибыль. Ее величина: {profit}")
+elif profit < 0:
+    print(f"Финансовый результат - убыток. Ее величина: {profit}")
+    exit()
+else:
+    print(f"Финансовый результат - безубыточность")
+    exit()
+
+profitability = (profit / revenue)
+print(f"Рентабельность выручки: {profitability}")
+
+number_of_staff = int(input("Введите численность сотрудников фирмы: "))
+profit_per_employee = profit / number_of_staff
+print(f"Прибыль фирмы в расчете на одного сотрудника: {profit_per_employee}")
