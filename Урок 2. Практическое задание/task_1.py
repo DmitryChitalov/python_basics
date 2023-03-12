@@ -15,3 +15,9 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_list = ['greek', 42, 0.5, False, ('cake is a lie', True, 23), {
+    1, 2, 3, 45, '28'}]
+print(f'the current list is {my_list}')
+print('every element type is:')
+for el in my_list:
+    print(type(el))
