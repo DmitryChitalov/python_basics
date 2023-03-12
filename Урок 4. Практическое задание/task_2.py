@@ -7,3 +7,16 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+ls = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+result_ls = []
+
+for el in range(len(ls)-1):
+    if ls[el] < ls[el+1]:
+        result_ls.append(ls[el+1])
+
+print(result_ls)
+
+result_ls = [ls[el+1] for el in range(len(ls)-1) if ls[el] < ls[el+1]]
+
+print(result_ls)
