@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def division(first_obj, second_obj):
+    try:
+        return first_obj/second_obj
+    except ZeroDivisionError:
+        return "Вы пытаетесь делить на 0!"
+
+try:
+    first_number = int(input("Введите число: "))
+    second_number = int(input("Введите число: "))
+    print(division(first_number, second_number))
+except ValueError:
+    print("Вводите только числа: ")
