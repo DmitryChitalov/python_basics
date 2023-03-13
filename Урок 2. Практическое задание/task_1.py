@@ -15,3 +15,9 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+xlist = [5, None, -1, 'True', True, 0.15]
+def xtype(el):
+    for el in range(len(xlist)):
+        print(type(xlist[el]))
+    return
+xtype(xlist)
