@@ -15,3 +15,12 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_list = [7, 5, 3, 3, 2]
+new_el = int(input('Введите любое целое положительное число \n'))
+if new_el in my_list:
+    pos = my_list.index(new_el) + my_list.count(new_el)
+    my_list.insert(pos, new_el)
+else:
+    my_list.append(new_el)
+    my_list.sort(reverse=True)
+print(f'Вы ввели число {new_el}. Результат: {my_list}')

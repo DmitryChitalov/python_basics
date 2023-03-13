@@ -100,3 +100,56 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+
+    def __init__(self, quantity):
+        self.quantity = quantity
+
+    def __str__(self):
+        return f'Это клетка. В ней {self.quantity} ячеек.'
+    
+    def __add__(self, other):
+        new_cell = self.quantity + other.quantity
+
+        return Cell(new_cell)
+
+    def __sub__(self, other):
+        new_cell = self.quantity - other.quantity
+        if new_cell < 0:
+            print('Разность клеток отрицательна. Операция не выполнена!')
+            exit
+        else:
+            return Cell(new_cell)
+
+    def __mul__(self, other):
+        new_cell = self.quantity * other.quantity
+        return Cell(new_cell)
+
+    def __truediv__(self, other):
+        new_cell = self.quantity // other.quantity
+        return Cell(new_cell)
+
+    def make_order(self, in_row):
+        cell = ['*' for i in range(self.quantity)]
+        count = in_row
+        for i in range(0, self.quantity // in_row):
+            cell.insert(count, '\n')
+            count += (in_row + 1)
+        return f'Клетка в графическом представлении:\n{"".join(cell)}'
+        
+
+
+a_cell = Cell(52)
+b_cell = Cell(23)
+c_cell = Cell(70)
+print(a_cell)
+print(b_cell)
+print(a_cell + b_cell)
+print(a_cell - b_cell)
+print(a_cell - c_cell)
+print(a_cell * b_cell)
+print(a_cell / b_cell)
+print(a_cell.make_order(8), '\n')
+print(b_cell.make_order(5))
