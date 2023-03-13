@@ -5,3 +5,19 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+
+class DivisionByZero(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+a, b = input('Введите делимое и делитель через пробел: ').split()
+
+try:
+    if int(b) == 0:
+        raise DivisionByZero('Вы ввели делитель равный нулю!')
+except DivisionByZero as err:
+    print(err)
+else:
+    print(int(a) / int(b))
