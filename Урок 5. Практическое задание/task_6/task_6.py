@@ -5,3 +5,24 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+def sum_in_line(line):
+    res = 0
+    for el in line.split():
+        try:
+            res += int(el)
+        except ValueError:
+            pass
+    return res
+
+key_list = []
+with open("subjects.txt", "r", encoding='utf-8') as file:
+    work_list = file.read().split()
+    key_list = [work_list[i] for i in range(0, len(work_list) - 1, 7)]
+
+lessons = []
+with open("subjects.txt", "r", encoding='utf-8') as file:
+    for line in file:
+        lessons.append((sum_in_line(line)))
+
+subj_dict = dict(zip(key_list, lessons))
+print(subj_dict)

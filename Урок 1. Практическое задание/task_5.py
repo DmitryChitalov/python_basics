@@ -18,3 +18,16 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+revenue = int(input("Введите значение выручки: "))
+waste = int(input("Введите значение убытка: "))
+profit = 0
+
+if revenue > waste:
+    print("Ваш финансовый результат работы фирмы: прибыль")
+    profit = revenue - waste
+    return_on_revenue = profit / revenue * 100
+    print(return_on_revenue, "%")
+    number_of_employees = int(input("Введите количество сотрудников работающих в компании: "))
+    print("Прибыль фирмы, в расчете на одного сотрудника, равна: ", profit / number_of_employees)
+else:
+    print(" Финансовым результатом работы фирмы: убыток")
