@@ -15,13 +15,13 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
-numb = int(input("Введите число от 1 до 10, 11 для выхода: "))
+numb = int(input("Введите число от 1 до 10: "))
 my_list = [7, 5, 3, 3, 2]
 n = my_list.count(numb)
 for element in my_list:
     if n > 0:
         a = my_list.index(numb)
-        my_list.insert(a+n, numb)
+        my_list.insert(a + n, numb)
         break
     else:
         if numb > element:
