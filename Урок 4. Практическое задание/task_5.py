@@ -1,3 +1,13 @@
+from functools import reduce
+
+
+def list1(prev_el, el):
+    return prev_el + el
+
+
+list2 = [el for el in range(100, 1001) if el % 2 == 0]
+print(reduce(list1, list2))
+
 """
 5. Реализовать формирование списка, используя функцию range()
 и возможности генераторного выражения.
