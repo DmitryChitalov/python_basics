@@ -13,21 +13,24 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+import json
+
 profit = {}
 average_profit = {}
 loss = {}
+finance = [profit, average_profit, loss]
 try:
     with open("file1.txt", 'r', encoding='utf-8') as file:
         companies = file.readlines()
         for company in companies:
             delta = float(company.split()[2]) - float(company.split()[3])
             if delta < 0:
-                loss[' '.join(company.split()[:1])] = delta
+                loss[' '.join(company.split()[:2])] = delta
             else:
-                profit[' '.join(company.split()[:1])] = delta
-        average_profit["average_profit"]=sum(profit.values())/len(profit)
-        print(profit)
-        print(average_profit)
-        print(loss)
+                profit[' '.join(company.split()[:2])] = delta
+        average_profit["average_profit"] = sum(profit.values()) / len(profit)
+        print(finance)
+        with open("my_file.json", "w") as write_f:
+            json.dump(finance, write_f)
 except IOError:
     print("Ошибка ввода-вывода!")
