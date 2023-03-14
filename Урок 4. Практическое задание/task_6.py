@@ -1,3 +1,24 @@
+from itertools import count
+from itertools import cycle
+
+a = 0
+b = int(input("ведите число"))
+for el in count():
+    if a < 8:
+        el += b
+        a += 1
+        print(el)
+    else:
+        break
+
+c = 0
+for el in cycle("Hello"):
+    if c > 14:
+        break
+    else:
+        print(el)
+        c += 1
+
 """
 6. Реализовать два небольших скрипта:
 а) итератор, генерирующий целые числа, начиная с указанного,
