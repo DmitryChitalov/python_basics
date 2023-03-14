@@ -15,3 +15,39 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+"""
+my_list = [7, 5, 3, 3, 2]
+n = int(input('поставьте оценку -> '))
+my_list.append(n)
+numb_temp = 0
+i = len(my_list) - 2
+while i > 0:
+    if my_list[i] == my_list[len(my_list)-1] :
+        numb_temp = my_list[i + 1]
+        my_list[i + 1] = my_list[len(my_list)-1]
+        my_list[len(my_list)-1] = numb_temp 
+        i -= 1 
+    else:
+        i -=1
+
+print(my_list)
+"""
+my_list = [7, 5, 3, 3, 2]
+n = int(input('поставьте оценку -> '))
+my_list.append(n)
+numb_temp = 0
+i = 0
+j = 1
+while i < len(my_list):
+
+    while j <len(my_list):
+        if my_list[i]< my_list[j]:
+            numb_temp = my_list[i]
+            my_list[i] = my_list[j]
+            my_list[j] = numb_temp
+            j += 1
+        else :
+            j +=1
+    i +=1
+    j = i + 1
+print(my_list)
