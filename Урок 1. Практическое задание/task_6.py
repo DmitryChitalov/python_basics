@@ -19,3 +19,25 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+len_first = int(input('Введите количество километров в 1-й день: '))
+len_max = int(input('Введите количество километров которое спортсмен должен пробежать: '))
+
+count = 1
+
+if len_first < len_max:
+    while True:
+        if len_max >= len_first:
+            print(f'{count}-й день: {len_first}')
+
+            len_first = round((len_first + len_first * 10 / 100), 2)
+            count += 1
+        else:
+            print(f'{count}-й день: {len_first}')
+            break
+    print(f'Ответ: на {count}-й день спортсмен достиг результата — не менее {len_max} км.')
+
+else:
+    print('Он лентяй')
+
+
