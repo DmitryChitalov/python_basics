@@ -18,3 +18,15 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+plus = int(input('Введите выручку фирмы: '))
+minus = int(input('Введите издержки фирмы: '))
+people = int(input('Ввдите количество работников: '))
+if plus > minus:
+     print('Выручка больше издержек')
+     clear_plus = plus - minus
+     rent = clear_plus/plus
+     print('Рентабельность {} выручки {}: {:.2f}' .format('нашей','составила',rent))
+     clear_for_person = float(clear_plus/people)
+     print('Прибыль фирмы в расчете на одного сотрудника: %s'%clear_for_person)
+else:
+     print('Фирма работает в убыток')
