@@ -14,5 +14,6 @@ year = int(input('enter year '))
 city = input('enter city ')
 email = input('enter email ')
 telephone = input('input telephone ')
-
-print(name,surname,year, " год рождения "" проживает в городе ",city," email: ",email," телефон ",telephone) 
+def func (name, surname, year, city, email, telephone):
+     return name, surname, year, city, email, telephone
+print(f"{name};{surname};{year} года рождения; проживает в городе {city}; email: {email}; телефон: {telephone}")
