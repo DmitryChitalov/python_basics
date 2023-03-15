@@ -26,6 +26,8 @@ if cash > costs:
     workers = int(input("Сколько человек работает в вашей фирме? "))
     bonus = profit / workers
     print("Бонус для каждого сотрудника составит: ", bonus)
+elif cash == costs:
+    print("К сожалению, ваша прибыль равна убыткам")
 else:
     loses = costs - cash
     print("Ваши убытки: ", loses)

@@ -16,7 +16,7 @@ some_text = "Some, text"
 print(number)
 print(some_text)
 
-number_from_user = int(input("Введите число: "))
-text_from_user = str(input("Введите текст: "))
-print("Вы ввели число:", number_from_user)
-print("Вы ввели строку:", text_from_user)
+user_name = input("Как вас зовут? ")
+user_age = input("Сколько вам лет? ")
+user_city = input("Из какого вы города? ")
+print(f"Ваше имя {user_name}! Ваш возраст {user_age}. Вы из города {user_city}.")

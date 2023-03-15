@@ -8,7 +8,7 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
-n = (input("Введите число: "))
+n = input("Введите число: ")
 nn = n+n
 nnn = n+n+n
 summ = int(n) + int(nn) + int (nnn)
