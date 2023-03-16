@@ -6,3 +6,21 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def it_sum ():
+    sum_ito = 0
+    ex_fl = False
+    while ex_fl == False:
+        num = input('Введите целые числа через пробел, для завершения работы ввидите Q/q: ').split()
+
+        res = 0
+        for elem in range(len(num)):
+            if num[elem] == 'q' or num[elem] == 'Q':
+                ex_fl = True
+                break
+            else:
+                res = res + int(num[elem])
+        sum_ito = sum_ito + res
+        print(f'Сумма введенных чисел равна: {sum_ito}')
+    print(f'Итоговая сумма введенных чисел равна: {sum_ito}')
+
+it_sum()
