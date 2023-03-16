@@ -14,3 +14,14 @@
 1. раз
 2. перерефриж
 """
+str_a = input("Введите строку из нескольких слов, разделённых пробелами: ").split()
+
+numb = 1
+for ele_t in str_a:
+    if len(ele_t) <= 10:
+        print(f"{numb}. {ele_t}")
+        numb += 1
+    else:
+        print(f"{numb}. {ele_t[:10]}")
+        numb += 1
+print()
