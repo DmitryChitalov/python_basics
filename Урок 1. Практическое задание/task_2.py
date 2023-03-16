@@ -9,13 +9,8 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
-name = input("Ведите ваше имя:\n")
-password = input("Ведите ваш пароль:\n")
-age = int(input("Введите ваш возраст:\n"))
+time = int(input("Введите время в секундах:"))
+time_in_hours = time / 3600
+time_in_minutes = time / 60
 
-print(
-    f"Ваши данные для входа в аккаунт:\n"
-    f" имя - {name}\n "
-    f"пароль - {password}\n"
-    f" возраст - {age}"
-)
+print(f"Время в формате ч:м:с - {time_in_hours:.3f} : {time_in_minutes:.3f} : {time}")
