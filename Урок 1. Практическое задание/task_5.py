@@ -18,3 +18,24 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+revenue = int(input("Input revenue:"))
+cogs = int(input("Input COGS:"))  # COGS = cost of goods sold
+
+prof = False  # признак прибыльности компании
+
+if revenue != cogs:
+    if revenue > cogs:
+        print(f"The company is profitable. Profit = {revenue - cogs}")
+        prof = True
+    elif revenue < cogs:
+        print("The company is unprofitable")
+elif revenue == cogs:
+    print("The company operates at break-even point")
+
+if prof:
+    profit = revenue - cogs
+    ror = profit / revenue
+    print("Return on revenue ratio: %.3f" % ror)
+    employees_num = int(input("Input number of employees:"))
+    print("Profit per employee: %.3f" % (profit / employees_num))
