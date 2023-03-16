@@ -24,6 +24,8 @@ costs = int(input("Введите издержки фирмы: "))
 difference = revenue - costs
 if difference < 0:
     print(f"Финансовый результат - убыток. Его величина: {- difference}")
+elif difference == 0:
+    print(f"Финансовый результат - нулевой.")
 else:
     print(f"Финансовый результат - прибыль. Ее величина: {difference}")
     print(f"Рентабельность выручки = {difference / revenue}")
