@@ -9,19 +9,21 @@
 
 # define Python user-defined exceptions
 class DevideByZero(Exception):
-    "Raised when the input value is less than 18"
-    pass
+    def __str__(self):
+        return f"На ноль делить нельзя"
 
 
 # you need to guess this number
 number = 18
 
 try:
-    input_num = int(input("Enter a number: "))
-    if input_num < number:
-        raise InvalidAgeException
+    input_num_a = int(input("Введите число a: "))
+    input_num_b = int(input("Введите число b: "))
+    if input_num_b == 0:
+        raise DevideByZero
     else:
-        print("Eligible to Vote")
-
-except InvalidAgeException:
-    print("Exception occurred: Invalid Age")
+        print(f"Результат деления a на b {input_num_a / input_num_b}")
+except ValueError:
+    print("Вы ввели не число")
+except DevideByZero as err:
+    print(err)
