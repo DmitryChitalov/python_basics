@@ -9,3 +9,15 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+
+sec = int(input('Input time in seconds:'))
+
+# Выводим секунды, переведенные в часы и секуныд, переведенные в минуты
+print("Inputted time in hours, minutes and seconds - %.1f : %.1f : %d" % (sec / 3600, sec / 60, sec))
+
+# Доп. задача: перевод введенных секунд в часы, минуты, секунды и вывод в полном формате
+hours = sec // 3600
+min_left = sec % 3600
+minutes = min_left // 60
+seconds = min_left % 60
+print(f"Inputted time in full time format: {hours:02}:{minutes:02}:{seconds:02}")

@@ -11,3 +11,11 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+
+var1 = 1
+var2 = "test"
+print(var1, var2)
+
+var_st = input('Input string:')
+var_fl = float(input('Input float number:'))
+print(f"{var_st}, {var_fl}")

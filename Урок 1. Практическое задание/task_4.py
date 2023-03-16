@@ -10,3 +10,21 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+
+init_var = int(input("Input positive integer number:"))
+max_num = init_var % 10
+var_left = init_var // 10
+
+# Разбираем введенное число на цифры и ищем максимальное. Цикл заканчивается, когда остается последняя цифра справа.
+while var_left // 10 > 0:
+    max_num1 = var_left % 10
+    if max_num1 > max_num:
+        max_num = max_num1
+    var_left = var_left // 10
+
+# Сравниваем последнюю цифру справа с максимальным значением, полученным в результате цикла.
+# Если последняя цифра больше, то она и будет максимальной.
+if var_left > max_num:
+    max_num = var_left
+
+print("Max number:", max_num)

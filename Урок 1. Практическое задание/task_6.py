@@ -19,3 +19,16 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+day_res = float(input("Input first day result (km):"))
+target = float(input("Input target result (km):"))
+day_count = 1  # счетчик тренировочных дней
+
+print("%d day: %.3f km" % (day_count, day_res))
+
+while day_res < target:
+    day_res *= 1.1
+    day_count += 1
+    print("%d day: %.3f km" % (day_count, day_res))
+
+print("Result (not less than", target, "km) reached at", day_count, "training day")
