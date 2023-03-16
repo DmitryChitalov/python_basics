@@ -19,3 +19,10 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+current_diatance = int(input(":"))
+necessary_diatance = int(input(":"))
+day = 1
+while (current_diatance < necessary_diatance):
+    current_diatance = current_diatance + current_diatance * 0.1
+    day += 1
+print(f"на {day}-й день спортсмен достиг результата — не менее {necessary_diatance} км")
