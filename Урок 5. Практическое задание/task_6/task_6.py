@@ -5,3 +5,21 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+
+
+abb = ['(л)', '(пр)', '(лаб)']
+school_subjects = {}
+try:
+     with open("file_6.txt", 'r', encoding='utf-8') as file:
+         subjects = file.readlines()
+         for subject in subjects:
+             summ = 0
+             for data in subject.split():
+                 for el in abb:
+                     if el in data:
+                         summ += int(data.replace(el, ''))
+             school_subjects[subject.split()[0]] = summ
+         print(school_subjects)
+except IOError:
+    print("Ошибка ввода-вывода!")
