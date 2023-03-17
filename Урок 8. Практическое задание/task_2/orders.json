@@ -1,0 +1,60 @@
+{
+    "orders": [
+        {
+            "item": "\u043f\u0440\u0438\u043d\u0442\u0435\u0440",
+            "quantity": "10",
+            "price": "6700",
+            "buyer": "Ivanov I.I.",
+            "date": "24.09.2017"
+        },
+        {
+            "item": "scaner",
+            "quantity": "20",
+            "price": "10000",
+            "buyer": "Petrov P.P.",
+            "date": "11.01.2018"
+        },
+        {
+            "item": "scaner",
+            "quantity": "20",
+            "price": "10000",
+            "buyer": "Petrov P.P.",
+            "date": "11.01.2018"
+        },
+        {
+            "item": "scaner",
+            "quantity": "20",
+            "price": "10000",
+            "buyer": "Petrov P.P.",
+            "date": "11.01.2018"
+        },
+        {
+            "item": "\u0422\u043e\u0432\u0430\u0440 1",
+            "quantity": 5,
+            "price": 100,
+            "buyer": "\u041f\u043e\u043a\u0443\u043f\u0430\u0442\u0435\u043b\u044c 1",
+            "date": "2023-03-17"
+        },
+        {
+            "item": "\u0422\u043e\u0432\u0430\u0440 2",
+            "quantity": 3,
+            "price": 200,
+            "buyer": "\u041f\u043e\u043a\u0443\u043f\u0430\u0442\u0435\u043b\u044c 2",
+            "date": "2023-03-18"
+        },
+        {
+            "item": "\u041a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440",
+            "quantity": 5,
+            "price": 23000,
+            "buyer": "\u0421\u0435\u043c\u0435\u043d\u043e\u0432",
+            "date": "2023-03-17"
+        },
+        {
+            "item": "\u0411\u0443\u043c\u0430\u0433\u0430",
+            "quantity": 3,
+            "price": 200,
+            "buyer": "\u0421\u0438\u0434\u043e\u0440\u043e\u0432",
+            "date": "2023-03-18"
+        }
+    ]
+}
