@@ -20,3 +20,11 @@
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
 #!/usr/bin/env python3
+a_input, b_input = input("Пожалуйста, введите через пробел результат первого дня и искомый результат: ").split()
+days_count = 1
+i = int(a_input)
+while i <= int(b_input):
+    print(f"День {days_count}: {i:.2f}")
+    i = i + i/100*10
+    days_count = days_count + 1
+print(f"Ответ: на {days_count} день спортсмен достиг результата — не менее {b_input} км.")

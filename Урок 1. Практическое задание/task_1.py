@@ -20,4 +20,3 @@ user_age = input("Введите ваш возраст: ")
 print(f"Ваш возраст: {user_age}.")
 
 print(f"Ваши данные для входа в аккаунт: имя - {user_name}, пароль - {user_password}, возраст - {user_age}.")
-

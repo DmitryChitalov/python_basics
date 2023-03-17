@@ -19,3 +19,13 @@
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
 #!/usr/bin/env python3
+revenue_input = int(input("Пожалуйста, введите выручку фирмы: "))
+expenses_input = int(input("Пожалуйста, введите издержки фирмы: "))
+financial_result = revenue_input - expenses_input
+if financial_result > 0 :
+    print(f"Финансовый результат - прибыль. Ее величина: {financial_result}.")
+else:
+    print(f"Финансовый результат - убыток. Ее величина: {financial_result}.")
+print(f"Вычисляем рентабельность выручки: {financial_result / revenue_input:.2f}")
+staff_number = int(input("Пожалуйста, введите численность сотрудников фирмы: "))
+profit_per_one = print(f"Прибыль фирмы в расчете на одного сотрудника = {financial_result // staff_number:.1f}")
