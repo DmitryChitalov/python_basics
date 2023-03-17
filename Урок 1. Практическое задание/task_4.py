@@ -10,3 +10,10 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+#!/usr/bin/env python3
+user_input = input("Пожалуйста, целое положительное число: ")
+sorting_list = [user_input]
+while i < len(sorting_list):
+    
+
+print(f"Мы с Питоном посчитали, что n + nn + nnn будет: {user_input + int(str(user_input) * 2) + int(str(user_input) * 3)}")
