@@ -28,3 +28,33 @@
 8 10 12
 14 16 18
 """
+
+import re
+
+
+class Matrix:
+    def __init__(self, list_of_list):
+        self.list_of_list = list_of_list
+
+    def get_readable_matrix_string(self, list_of_list):
+        strings = []
+        for row in list_of_list:
+            strings.append(re.sub(r'\D', ' ', str(row)))
+
+        return '\n'.join(strings)
+
+    def __str__(self):
+        return self.get_readable_matrix_string(self.list_of_list)
+
+    def __add__(self, M):
+        result = [[self.list_of_list[i][j] + M.list_of_list[i][j] for j in range(len(self.list_of_list[0]))] for i in
+                  range(len(self.list_of_list))]
+
+        return Matrix(result)
+
+
+m001 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+m002 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+m003 = Matrix([])
+m003 = m001 + m002
+print(m003)
