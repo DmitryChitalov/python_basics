@@ -11,9 +11,17 @@
 Самая большая цифра в числе: 9
 """
 #!/usr/bin/env python3
-user_input = input("Пожалуйста, целое положительное число: ")
-sorting_list = [user_input]
-while i < len(sorting_list):
-    
+print("Способ 1")
+user_input = input("Пожалуйста, введите целое положительное число: ")
+print(max(user_input))
 
-print(f"Мы с Питоном посчитали, что n + nn + nnn будет: {user_input + int(str(user_input) * 2) + int(str(user_input) * 3)}")
+print("Способ 2")
+user_input = int(input("Пожалуйста, введите целое положительное число: "))
+search_iteration = user_input % 10
+user_input = user_input // 10
+while user_input > 0:
+    if user_input % 10 > search_iteration:
+        search_iteration = user_input % 10
+    user_input = user_input // 10
+
+print(search_iteration)
