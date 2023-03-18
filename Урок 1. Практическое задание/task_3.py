@@ -8,3 +8,6 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+n: str = input("Введите целое число: ")
+print((int(n)+int(n+n)+int(n+n+n)))
