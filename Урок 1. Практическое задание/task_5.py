@@ -18,3 +18,15 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+total_profit = int(input("Введите сумму выручки "))
+expences = int(input("Введите сумму издержки "))
+profit = total_profit - expences
+if profit > 0:
+    print(f"Рентабельность составила= {expences/total_profit}")
+    workers = int(input("Введите количество сотрудников "))
+    print(f"Выручка на каждого сотрудника {profit/workers}")
+elif profit == 0:
+    print("Фирма работает в ноль")
+else:
+    print("Фирма работает в убыток")
+
