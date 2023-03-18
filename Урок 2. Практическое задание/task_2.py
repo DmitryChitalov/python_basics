@@ -11,3 +11,13 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+#!/usr/bin/env python3
+list_size = int(input("Пожалуйста, введите число от 4 до 7: "))
+i = 0
+user_list = []
+while i < list_size:
+    user_input = input("Пожалуйста, введите значение: ")
+    user_list.append(user_input)
+    i = i + 1
+
+print(user_list)
