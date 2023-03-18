@@ -10,7 +10,7 @@ costs = int(input("Введите сумму издержек >>> "))
 
 profit = revenue - costs
 
-if profit:
+if revenue > costs:
     profitability = profit / revenue
     print(f"Прибыль = {profit}, рентабельность = {profitability}")
 
@@ -18,5 +18,7 @@ if profit:
 
     profit_per_worker = profit / workers_count
     print(f"Прибыль на одного сотрудника = {profit_per_worker}")
+elif revenue == costs:
+    print ("Ваша выручка равна затратам")
 else:
-    print(f"Убыток = {profit}")
+    print(f"У вас отрицательная выручка = {profit}")
