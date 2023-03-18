@@ -11,3 +11,12 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+#!/usr/bin/env python3
+user_name = input("Введите ваше имя: ")
+print(f"Вы ввели имя: {user_name}.")
+user_password = input("Введите новый пароль: ")
+print(f"Вы ввели имя: {user_password}.")
+user_age = input("Введите ваш возраст: ")
+print(f"Ваш возраст: {user_age}.")
+
+print(f"Ваши данные для входа в аккаунт: имя - {user_name}, пароль - {user_password}, возраст - {user_age}.")
