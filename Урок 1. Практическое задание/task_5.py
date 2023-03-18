@@ -18,3 +18,20 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+profit = input("Введите выручку фирмы:")
+loss = input("Введите издержки фирмы: ")
+if profit.isdigit() and loss.isdigit():
+    profit = int(profit)
+    loss = int(loss)
+    if profit > loss:
+        print(f"Финансовый результат - прибыль. Ее величина: {profit-loss}")
+        print(f"Рентабельность выручки = {loss / profit}")
+        number_of_staff = input("Введите численность сотрудников фирмы: ")
+        if number_of_staff.isdigit():
+            number_of_staff = int(number_of_staff)
+        print(f"Прибыль фирмы в расчете на одного сотрудника =  {(profit - loss) / number_of_staff}")
+    elif profit == loss:
+        print(f"Финансовый результат - в ноль. Прибыли нет.")
+    else:
+        print(f"Финансовый результат - задолженность. Ее величина: {profit-loss}")
