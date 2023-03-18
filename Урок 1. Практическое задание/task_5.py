@@ -24,6 +24,8 @@ expenses_input = int(input("Пожалуйста, введите издержк�
 financial_result = revenue_input - expenses_input
 if financial_result > 0 :
     print(f"Финансовый результат - прибыль. Ее величина: {financial_result}.")
+elif financial_result == 0 :
+    print(f"Финансовый результат - равенство прибыли и убытков.")
 else:
     print(f"Финансовый результат - убыток. Ее величина: {financial_result}.")
 print(f"Вычисляем рентабельность выручки: {financial_result / revenue_input:.2f}")
