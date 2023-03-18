@@ -25,3 +25,23 @@
 “ед”: [“шт.”]
 }
 """
+products = []
+thing = 0
+while thing <= 2:
+    name = input("Введите название товара : ")
+    price = int(input("Введите цену товара: "))
+    quantity = int(input("Введите количество товара: "))
+    measure = input("Введите единицу измерения товара: ")
+    product = {'названия': name, 'цены': price, 'количества': quantity, 'единицы измерения': measure}
+    products.append((len(products) + 1, product))
+    thing += 1
+analytics = {}
+for product in products:
+    for key, value in product[1].items():
+        if key in analytics:
+            analytics[key].append(value)
+        else:
+            analytics[key] = [value]
+for key, value in analytics.items():
+    print(key, ':', value)
+
