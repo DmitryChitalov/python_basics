@@ -18,3 +18,13 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+profit = float(input("Please enter your profit: "))
+loss = float(input("Please enter your loss: "))
+if profit < loss:
+    print("your company is unprofitable")
+else:
+    print("your company is profitable")
+    print("your profitability is: {:.2f}".format((profit-loss)/profit) )
+
+employee = int(input("Please enter number of employees: "))
+print("Profit of company for one employee ", (profit-loss)/employee)
