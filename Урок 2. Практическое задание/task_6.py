@@ -25,3 +25,27 @@
 “ед”: [“шт.”]
 }
 """
+
+print("Cтруктура данных - Товары.")
+number_items = int(input("Введите количество позиций вносимых в систему: "))
+n = 1
+products = []
+options = []
+data_analytics = {'Название': [], 'Цена': [], 'Количество': [], 'Единица измерения': []}
+while n <= number_items:
+    name_product = input(f'Введите название товара №{n}: ')
+    price_product = int(input(f'Введите цену товара №{n}: '))
+    amount_product = int(input(f'Введите количество товара №{n}: '))
+    unit_product = input(f'Введите единицу измерения товара №{n}: ')
+    options = dict({'Название': name_product, 'Цена': price_product, 'Количество': amount_product, 'Единица измерения': unit_product})
+    products.append((n, options))
+    n += 1
+    data_analytics.get('Название').append(name_product)
+    data_analytics.get('Цена').append(price_product)
+    data_analytics.get('Количество').append(amount_product)
+    data_analytics.get('Единица измерения').append(unit_product)
+
+print(f"Товары. {products}")
+print(f"Аналитика: {data_analytics}")
+
+
