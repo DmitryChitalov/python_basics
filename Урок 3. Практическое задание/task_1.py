@@ -17,3 +17,9 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def calculator(a, b):
+    try:
+        return a/b
+    except ZeroDivisionError as e:
+        print(f'Делить на ноль нельзя')
+print(calculator(int(input('Введите первое число: ')), int(input('Введите второе число: '))))
