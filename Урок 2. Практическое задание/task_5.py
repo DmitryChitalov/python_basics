@@ -15,3 +15,27 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_list = [7, 5, 3, 3, 2]
+print("Структура - Рейтинг. Для выхода введи число 0.")
+my_number = input('Введите натуральное число: ')
+
+while my_number != "0":
+    if my_number.isdigit():
+        my_number = int(my_number)
+        for i in my_list:
+            if my_number > i:
+                my_list.insert(my_list.index(i), my_number)
+                break
+            elif my_number == i:
+                tmp_list = list(reversed(my_list))
+                my_list.insert(len(my_list) - (tmp_list.index(i)), my_number)
+                break
+            elif my_list.index(i) == (len(my_list) - 1) and my_number < i:
+                my_list.append(my_number)
+                break
+        print(my_list)
+    else:
+        print("Неверный ввод!")
+    my_number = input('Введите натуральное число: ')
+
+print(f"Окончательный результат: {my_list}")
