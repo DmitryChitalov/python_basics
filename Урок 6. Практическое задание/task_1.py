@@ -20,26 +20,18 @@ import time
 
 class TrafficLight:
     __states = {'red': 7, 'yellow': 2, 'green': 8}
-    color = ''
 
     def change_color(self, color):
 
-        self.color = color
+        self.__color = color
         delay = TrafficLight.__states[color]
-        print(f'{self.color} - {delay}s')
+        print(f'{self.__color} - {delay}s')
         time.sleep(delay) 
 
-    def running(self, count):
-        counter = count
-        print('switch on')
-        while counter > 0:
-            self.change_color('red')
-            self.change_color('yellow')
-            self.change_color('green')
-            self.change_color('yellow')
-            counter -= 1
-        
-        print('switch off')
+    def running(self):
+        self.change_color('red')
+        self.change_color('yellow')
+        self.change_color('green')
 
 traffic_light = TrafficLight()
-traffic_light.running(2)
+traffic_light.running()
