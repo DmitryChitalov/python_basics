@@ -19,3 +19,16 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+distance = float(input("Please enter your distance, km: "))
+finish = float(input("Please enter your finish result, km: "))
+count_days = 1
+while distance < finish:
+    distance = distance * 1.1
+    count_days += 1
+print("Distance km: ", distance)
+print("Count of days: ", count_days)
+print(f"On {count_days} day sportsman reach finish {finish} km")
+
+
+
