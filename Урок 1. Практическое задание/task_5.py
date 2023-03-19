@@ -18,3 +18,17 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+potok_plus = int(input("введите выручку фирмы"))
+potok_minus = int(input("введите издержки фирмы"))
+if potok_plus > potok_minus:
+    pr = potok_plus - potok_minus
+    print(f" ваш финансовый результат - прибыль. Ее величина {pr}")
+    rent = pr / potok_plus
+    print(f" Рентабельность вашей выручки {rent}")
+    pers = int(input("Введите количество сотрудников "))
+    pr_pers=pr / pers
+    print(f" Прибыль в расчете на 1 сотрудника {pr_pers}")
+elif potok_plus < potok_minus:
+    print(f" ваш финансовый результат - убыток")
+elif potok_plus == potok_minus:
+    print(f" ваш финансовый результат - 0")
