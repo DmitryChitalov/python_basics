@@ -10,3 +10,12 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+chisl = int(input('Введите целое положительное число: '))
+k = chisl % 10
+chisl = chisl // 10
+while chisl > 0:
+   if chisl % 10 > k:
+       k = chisl % 10
+   chisl = chisl // 10
+print(k)
+
