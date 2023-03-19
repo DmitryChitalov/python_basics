@@ -6,5 +6,8 @@
 
 Пример:
 Введите число n: 3
-n + nn + nnn = 369
+n + nn + nnn = 39
 """
+n = int(input("Введите число n: "))
+resoult = n + n ** 2 + n ** 3
+print(f"n + nn + nnn = {resoult}")
