@@ -25,3 +25,32 @@
 
 Два класса: абстрактный и Clothes
 """
+
+from abc import ABC
+from abc import abstractmethod
+
+class Base(ABC):
+
+    @property
+    @abstractmethod
+    def get_volume(self):
+        ...
+
+class Clothes(Base):
+    
+    def __init__(self, v, h):
+        self.v = v
+        self.h = h
+
+    @property
+    def get_volume(self):
+        coat_rate = self.v / 6.5 + 0.5
+        costume_rate = 2 * self.h + 0.3
+        total_rate = coat_rate + costume_rate
+        print(f'Расход ткани на пальто = {coat_rate}')
+        print(f'Расход ткани на костюм = {costume_rate}')
+        print(f'Общий расход ткани = {total_rate}')
+        return total_rate
+
+clothes = Clothes(12, 5)
+print(clothes.get_volume)
