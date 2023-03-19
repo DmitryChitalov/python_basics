@@ -25,4 +25,4 @@ s = a + b
 print(s)
 
 user_name = input("Enter your user name and press Enter ")
-print("Вы ввели ",user_name)
+print(f"Вы ввели {user_name}")

@@ -9,4 +9,5 @@
 n + nn + nnn = 39
 """
 n = int(input("Введите число n: "))
-print ("n + nn + nnn =", n + n ** 2 + n ** 3)
+resoult = n + n ** 2 + n ** 3
+print(f"n + nn + nnn = {resoult}")
