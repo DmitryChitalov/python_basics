@@ -16,3 +16,16 @@ length (длина в метрах), width (ширина в метрах).
 
 Например: 20м*5000м*25кг*0.05м = 125000 кг = 125 т
 """
+
+class Road:
+    weight_rate = 25
+    def __init__(self, length, width):
+        self._length = length
+        self._width = width
+
+    def calculate_weight(self, height):
+        return self._length * self._width * Road.weight_rate * height
+
+road = Road(5000, 20)
+volume = road.calculate_weight(0.05)
+print(f'Итог: {volume / 1000} тонн')
