@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_list = ['Linkin Park', 'Meteora', 2016, 24999.99, True, None]
+for x in my_list:
+    print(type(x))
