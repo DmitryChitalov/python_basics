@@ -28,3 +28,25 @@
 8 10 12
 14 16 18
 """
+
+class Matrix:
+    def __init__(self, items):
+        self.items = items
+
+    def __str__(self):
+        return '\n'.join(map(str, self.items)).replace(',', '').replace('[', '').replace(']', '')
+
+    def __add__(self, other):
+        result = []
+        for i in range(len(self.items)):
+            line_sum = []
+            for j in range(len(self.items[i])):
+                line_sum.append(self.items[i][j] + other.items[i][j])
+            result.append(line_sum)
+        print(result)
+        return Matrix(result)
+    
+m1 = Matrix([[ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ]])
+print(m1)
+m2 = m1 + m1
+print(m2)
