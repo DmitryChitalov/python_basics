@@ -16,8 +16,5 @@
 <class 'NoneType'>
 """
 my_list = [12345, "text", 2.5, True, None]
-my_value = 0
-while my_value < len(my_list):
-    print(type(my_list[my_value]))
-    my_value += 1
-
+for element in my_list:
+    print(type(element))
