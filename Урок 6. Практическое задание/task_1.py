@@ -15,3 +15,27 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from itertools import cycle
+from time import sleep
+
+
+class TrafficLight:
+    __color__ = cycle([
+        ['Красный', 7],
+        ['Желтый', 2],
+        ['Зеленый', 5],
+        ['Желтый', 2]
+    ])
+
+    def running(self):
+        light = next(self.__color__)
+        print(f'Горит {light[0]} свет, осталось {light[1]} секунд')
+        sleep(light[1])
+
+
+traffic_light = TrafficLight()
+traffic_light.running()
+traffic_light.running()
+traffic_light.running()
+traffic_light.running()
