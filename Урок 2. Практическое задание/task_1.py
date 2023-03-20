@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+example_list = [132, "Dmitriy", 0.94, False, None]
+
+for i in example_list:
+    print(type(i))
