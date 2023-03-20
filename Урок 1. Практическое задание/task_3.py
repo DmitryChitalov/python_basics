@@ -8,8 +8,7 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
-n = 3
+n = input("Введите число n: ")
 nn = n + n
 nnn = n + n + n
-print(f"n + nn + nnn = {str(n)+str(nn)+str(nnn)}")
-
+print(f"n + nn + nnn = {int(n)+int(nn)+int(nnn)}")
