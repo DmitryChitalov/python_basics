@@ -6,3 +6,20 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+
+if len(argv) > 1:
+    name_s, working_hour, rate_s, bonus = argv
+    working_hour = int(working_hour)
+    rate_s = int(rate_s)
+    bonus = int(bonus)
+
+else:
+    working_hour = int(input("Введите время работы в часах: "))
+    rate_s = int(input("Введите стоимость ставки, за один час работы (руб.): "))
+    bonus = int(input("Введите размер премии (руб.): "))
+    res = working_hour * rate_s + bonus
+    print(f' Заработная плата сотрудника за расчетный период: {res}')
+
+

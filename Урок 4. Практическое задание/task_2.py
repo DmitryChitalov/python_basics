@@ -7,3 +7,18 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+my_num = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+
+# вариант без lc
+res_num_1 = []
+for ele in range(1, len(my_num)):
+    if my_num[ele] > my_num[ele - 1]:
+        res_num_1.append(my_num[ele])
+
+print(res_num_1)
+
+# вариант с lc
+res_num_2 = [my_num[ele] for ele in range(1, len(my_num))
+             if my_num[ele] > my_num[ele - 1]]
+print(res_num_2)
