@@ -13,20 +13,16 @@
 """
 #!/usr/bin/env python3
 user_input = input("Пожалуйста, введите целые числа через пробел: ")
-i = 0
 user_list = user_input.split()
-print(type(user_list))
-print(user_list)
 
 if len(user_list) % 2 == 0:
-    print(f"Вы ввели чётное количество чисел.")
+    print("Вы ввели чётное количество чисел.")
+    for i in range(0, len(user_list), 2):
+        user_list[i], user_list[i + 1] = user_list[i + 1], user_list[i]
+    print(f"Результат: {user_list}.")
 else:
-    print(f"Вы ввели нечётное количество чисел.")
-    odd_number = 
-
-while i < list_size:
-    user_input = input("Пожалуйста, введите значение: ")
-    user_list.append(user_input)
-    i = i + 1
-
-print(f"Мы с Питоном посчитали, что список будет таким: {user_list}")
+    last_odd_number = user_list[-1]
+    print(f"Вы ввели нечётное количество чисел. Последнее число в списке: {last_odd_number}")
+    for i in range(0, len(user_list) - 1, 2):
+        user_list[i], user_list[i + 1] = user_list[i + 1], user_list[i]
+    print(f"Результат: {user_list}.")
