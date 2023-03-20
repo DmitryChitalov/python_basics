@@ -8,3 +8,19 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+month_number = int(input("Введите номер месяца:"))
+if month_number - 1 < 12:
+# вариант решения: через list
+    month_list = ["зима", "зима", "весна", "весна", "весна", "лето", "лето", "лето", "осень", "осень", "осень", "зима"]
+    print(month_list[month_number - 1])
+else:
+    print("unknown month number")
+
+# вариант через dict
+month_dick = { 1:"зима", 2:"зима", 3:"весна", 4:"весна", 5:"весна", 6:"лето", 7:"лето", 8:"лето", 9:"осень", 10:"осень", 11:"осень", 12:"зима" }
+if month_number in month_dick.keys():
+   print(month_dick[month_number])
+else:
+   print("unknown month number")
+
+
