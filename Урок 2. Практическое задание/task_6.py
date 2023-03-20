@@ -25,3 +25,32 @@
 “ед”: [“шт.”]
 }
 """
+
+
+products = []
+my_parameters = {'название': '', 'цена': '', 'количество': '', 'eд': ''}
+index = 0
+count = int(input("введите количество товаров"))
+while index<count:
+    index += 1
+    my_parameters = {'название': '', 'цена': '', 'количество': '', 'eд': ''}
+    print("введите данные (%d) товара" % index)
+    for f in my_parameters.keys():
+        my_parameter = input(f'Input feature "{f}"')
+        my_parameters[f] = int(my_parameter) if (f == 'цена' or f == 'количество') else my_parameter
+    products.append((index, my_parameters))
+
+analitics = {
+    'название': [],
+    'цена': [],
+    'количество': [],
+    'eд': set()
+}
+
+for _, item in products:
+    analitics['название'].append(item['название'])
+    analitics['цена'].append(item['цена'])
+    analitics['количество'].append(item['количество'])
+    analitics['eд'].add(item['eд'])
+
+print(analitics)
