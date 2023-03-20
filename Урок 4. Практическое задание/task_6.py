@@ -12,3 +12,23 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+def ite():
+    a = int(input('Введите число: '))
+    from itertools import islice
+    from itertools import count
+
+    for i in islice(count(a), 10):
+        print(i)
+ite()
+
+
+def ite():
+    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    from itertools import islice
+    from itertools import cycle
+
+    for el in islice(cycle(list), 10): 
+        print(el)
+ite()
