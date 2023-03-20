@@ -10,3 +10,27 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+# n = input("Введите целое положительное число:")
+# i = 1
+# maxnumber = n[0]
+# while i < len(n):
+#     if n[i] > maxnumber:
+#         maxnumber = n[i]
+#     i += i
+# print(maxnumber)
+
+n = int(input("Введите целое положительное число:"))
+largest = 0
+while n:
+    r = n % 10
+
+    if r > largest:
+        largest = r
+
+    n = n // 10
+
+print(largest)
+
+
+
+
