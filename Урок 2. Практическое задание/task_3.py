@@ -11,8 +11,7 @@
 
 month_number = int(input("Введите номер месяца: "))
 
-list_months = [None,
-               'Январь',
+list_months = ['Январь',
                'Февраль',
                'Март',
                'Апрель',
@@ -38,5 +37,5 @@ dict_months = {1: 'Январь',
                11: 'Ноябрь',
                12: 'Декабрь'}
 
-print(f"Результат через список: {list_months[month_number]}")
+print(f"Результат через список: {list_months[month_number - 1]}")
 print(f"Результат через словарь: {dict_months.get(month_number)}")

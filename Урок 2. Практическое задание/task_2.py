@@ -13,7 +13,7 @@
 """
 
 task_numbers = input("Введите целые числа через пробел: ")
-task_list = list(task_numbers.split(' '))
+task_list = task_numbers.split(' ')
 list_elements = len(task_list)
 result_list = list()
 
