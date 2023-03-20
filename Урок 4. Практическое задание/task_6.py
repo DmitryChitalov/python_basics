@@ -37,4 +37,3 @@ for num in cycle(my_num):
         print(num)
         count += 1
 
-
