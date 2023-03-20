@@ -8,6 +8,6 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
-chisl = input('Введите целое положительное число: ')
-sum = int(chisl) + int(chisl+chisl) + int(chisl+chisl+chisl)
-print(sum)
+num = input('Введите целое положительное число: ')
+s = int(num) + int(num+num) + int(num+num+num)
+print(s)

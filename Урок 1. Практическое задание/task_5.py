@@ -22,10 +22,10 @@ vir = int(input('Введите выручку фирмы: '))
 izd = int(input('Введите издержки фирмы: '))
 prib = vir - izd
 if prib > 0:
-    print('Прибыль составляет: ', prib)
-    print('Значит, рентабельность выручки: ', prib/vir)
-else:
-    print('Убыток составляет: ', prib)
-kol = int(input('Введите количество сотрудников фирмы: '))
-prib_na_chel = prib/kol
-print('Прибыль фирмы в расчете на одного сотрудника составляет: ', prib_na_chel)
+    print(f'Прибыль составляет: {prib}')
+    print(f'Значит, рентабельность выручки: {prib/vir}')
+elif prib == 0:
+    print(f'Прибыли нет ( = {prib})')
+count = int(input('Введите количество сотрудников фирмы: '))
+prib_on_per = prib/count
+print(f'Прибыль фирмы в расчете на одного сотрудника составляет: {prib_on_per}')

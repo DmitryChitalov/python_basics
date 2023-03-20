@@ -12,4 +12,4 @@
 timein = int(input('Введите время в секундах: '))
 time_in_hour = timein / 3600
 time_in_minute = timein / 60
-print(f" {time_in_hour} : {time_in_minute} : {timein}")
+print(f" {time_in_hour} : {time_in_minute} : {timein} ")
