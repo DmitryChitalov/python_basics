@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+spisok = ("pen", 3, True, 3.14)
+for i in range(4):
+    print(type(spisok[i]))
+
