@@ -12,12 +12,21 @@
 Результат: 2 1 3
 """
 #!/usr/bin/env python3
-list_size = int(input("Пожалуйста, введите число от 4 до 7: "))
+user_input = input("Пожалуйста, введите целые числа через пробел: ")
 i = 0
-user_list = []
+user_list = user_input.split()
+print(type(user_list))
+print(user_list)
+
+if len(user_list) % 2 == 0:
+    print(f"Вы ввели чётное количество чисел.")
+else:
+    print(f"Вы ввели нечётное количество чисел.")
+    odd_number = 
+
 while i < list_size:
     user_input = input("Пожалуйста, введите значение: ")
     user_list.append(user_input)
     i = i + 1
 
-print(user_list)
+print(f"Мы с Питоном посчитали, что список будет таким: {user_list}")
