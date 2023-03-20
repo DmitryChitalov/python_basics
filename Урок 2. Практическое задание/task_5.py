@@ -15,3 +15,12 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_list = [7, 5, 3, 3, 2]
+while True:
+    a = input('Введите число от 1 до 10 или "g": ')
+    if a != 'g':
+        my_list.append(int(a))
+        my_list.sort(reverse=True)
+        print(my_list)
+    else:
+        break
