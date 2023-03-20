@@ -50,6 +50,16 @@ class Storehouse:
         except MyError as err:
             print(err)
 
+    @classmethod
+    def pull(cls, OfficeEq_, count_, dep_):
+        try:
+            if type(count_) is int:
+                cls.items.append({"Model": OfficeEq_, "Quantity": -count_, "Department": dep_})
+            else:
+                raise MyError("Число должно быть положительным целым!")
+        except MyError as err:
+            print(err)
+
 
 class OfficeEq:
     count = 0
@@ -92,5 +102,5 @@ printer001 = Printer("hp", "laserjet h2030", "china", "a100df781", "A3", True, "
 scaner001 = Scaner("canon", "lp200", "taiwan", "zxq9001jkk", "A4", True)
 StoreHouseCentral.push(printer001.lable, 5)
 StoreHouseCentral.push(scaner001.lable, 3.5)
-
+StoreHouseCentral.pull(printer001.lable, 3, "west-office")
 print(Storehouse.items)
