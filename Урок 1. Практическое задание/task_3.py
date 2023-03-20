@@ -9,15 +9,5 @@
 n + nn + nnn = 369
 """
 
-n = int(input("Введите целое положительное число n: "))
-if str(n).isdigit():
-    x = 0
-    m = n
-
-    while m > 0:
-        m //= 10
-        x += 1
-
-        print("Сумма n + nn + nnn = ", n + (n + n * 10 ** x) + (n + n * 10 ** x + n * 10 ** (2 * x)))
-else:
-    print("Вы ввели неправильное число")
+n = input("Введите целое положительное число n: ")
+print("Сумма n + nn + nnn = ", (int(n) + int(n + n) + int(n + n + n)))
