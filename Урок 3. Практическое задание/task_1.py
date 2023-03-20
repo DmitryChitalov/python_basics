@@ -17,3 +17,12 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def my_func (x, y):
+    try:
+        z = x / y
+        return z
+    except ZeroDivisionError:
+        return "Вы что? Пытаетесь делить на 0!"
+    except ValueError:
+        return "enter only number"
+print(my_func(int(input("Enter x = ")), int(input("Enter y = "))))
