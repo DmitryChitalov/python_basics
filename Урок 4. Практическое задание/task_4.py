@@ -7,5 +7,6 @@
 Результат: [23, 1, 3, 10, 4, 11]
 """
 my_sp = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
-res_sp = [ele for ele in my_sp if my_sp.count(ele) == 1]
-print(res_sp)
+print(f"Данные из исходного списка: {my_sp}")
+otv = [num for num in my_sp if my_sp.count(num) == 1]
+print(f"Ответ: Выведены числа не имеющие повторений и в порядке их следования в исходном списке:  {otv}")

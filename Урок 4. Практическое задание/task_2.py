@@ -7,18 +7,19 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
-my_num = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+my_sp = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
 
 
-# вариант без lc
-res_num_1 = []
-for ele in range(1, len(my_num)):
-    if my_num[ele] > my_num[ele - 1]:
-        res_num_1.append(my_num[ele])
+# ответ без использваония генератора выражения
+otv_1 = []
+for num in range(1, len(my_sp)):
+    if my_sp[num] > my_sp[num - 1]:
+        otv_1.append(my_sp[num])
 
-print(res_num_1)
+print(otv_1)
 
-# вариант с lc
-res_num_2 = [my_num[ele] for ele in range(1, len(my_num))
-             if my_num[ele] > my_num[ele - 1]]
-print(res_num_2)
+# ответ с использваонием генератора выражения
+otv_2 = [my_sp[num] for num in range(1, len(my_sp))
+             if my_sp[num] > my_sp[num - 1]]
+print(otv_2)
+

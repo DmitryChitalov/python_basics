@@ -13,18 +13,21 @@
 from sys import exit
 from re import match
 
+# функция для генерации последовательности факториалов от 1 до n
 def fact(n):
-    factorial = 1
-    counter = 0
+    factorial: int = 1
+    counter: int = 0
     while counter < n:
         counter += 1
         factorial *= counter
         yield factorial
 
 n = input("Введите целое положительное число: ")
+# проверка введенного значения (только цифры)
 if not match("^[0-9]*$",n):
     print(f"Ошибка, ожидается целое положительное число")
     exit()
 
+# вывод последовательности факториалов
 for el in fact(int(n)):
     print(f"{el} ")

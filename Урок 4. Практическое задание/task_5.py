@@ -8,11 +8,11 @@
 
 from functools import reduce
 
-my_num = [x for x in range(100, 1001, 2)]
+def my_num(num_1, num_2):
+    return num_1 * num_2
 
-print(my_num)
+my_list = [num_2 for num_2 in range(100, 1001, 2)]
+otv_1 = reduce(my_num, my_list)
 
-res = reduce(lambda item, item2: item * item2, my_num)
-
-print(f"Ответ: {res}")
-
+print(f'Список из четных чисел: {my_list}')
+print(f'Ответ перемножения всех элементов списка: {otv_1}')
