@@ -9,5 +9,6 @@
 n + nn + nnn = 369
 """
 
-number = int(input("Введите число n "))
-print("n + nn + nnn = " + str(number) + str(number + number) + str(number + number + number))
+number = input("Введите число n ")
+res = int(number) + int(number * 2) + int(number * 3)
+print(f"{number} + {number * 2} + {number * 3} = {res}")
