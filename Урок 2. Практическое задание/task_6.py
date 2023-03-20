@@ -25,3 +25,21 @@
 “ед”: [“шт.”]
 }
 """
+goods_number = int(input("?"))
+goods_list = []
+i = 1
+while i <= goods_number:
+    product_info = {"name": input("Введите название "), "price": input("Введите цена "),
+                    "quantity": input("Введите количество "), "measuring": input("Введите eд ")}
+    goods_list.append((i, product_info))
+    i += 1
+
+analitics = {"names": [], "prices": [], "quantityes": [], "measurings": []}
+for element in goods_list:
+    for value in element:
+        if type(value) is dict:
+            analitics["names"].append(value["name"])
+            analitics["prices"].append(value["price"])
+            analitics["quantityes"].append(value["quantity"])
+            analitics["measurings"].append(value["measuring"])
+print(analitics)

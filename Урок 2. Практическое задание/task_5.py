@@ -15,3 +15,9 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+numbers_list = [7, 5, 3, 3, 2]
+new_number = int(input("Введите целое число: "))
+numbers_list.append(new_number)
+numbers_list.sort(reverse=True)
+
+print(f"Пользователь ввел число {new_number}. Результат: {numbers_list}")
