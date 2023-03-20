@@ -12,3 +12,24 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+def gen1():
+    a = int(input('Введите стартовое число: '))
+    from itertools import islice
+    from itertools import count
+
+    for i in islice(count(a), 10):
+        print(i)
+gen1()
+
+
+
+def gen2():
+    list = [1, 3, 7, 10, 12, "этот список"]
+
+    from itertools import islice
+    from itertools import cycle
+
+    for el in islice(cycle(list), 10): #повторение элементов списка будет прекращено после 10ого повторения
+        print(el)
+gen2()

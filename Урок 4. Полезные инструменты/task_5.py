@@ -5,3 +5,10 @@
 Необходимо получить результат вычисления произведения всех элементов списка.
 Подсказка: использовать лямбда-функцию и функцию reduce().
 """
+
+list = [el for el in range(100, 1001) if el % 2 == 0]
+print("Список чётных числе от 100 до 1000: ", list) # список чисел
+from functools import reduce
+def my_func(el_p, el):
+    return el_p * el
+print(reduce(my_func, list)) #произведение чисел
