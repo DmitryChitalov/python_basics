@@ -10,4 +10,4 @@ n + nn + nnn = 369
 """
 number = int(input("Введите число n:\n"))
 
-print("n + n*n + n*n*n = ", (number+number*number+number*number*number))
+print("n + n*n + n*n*n = ", (str(number)+str(number*number)+str(number*number*number)))
