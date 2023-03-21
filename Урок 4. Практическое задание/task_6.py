@@ -12,3 +12,25 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+result_list = []
+# а) итератор, генерирующий целые числа, начиная с указанного
+
+start_num = int(input("Введите первое число списка: "))
+end_num = int(input("Введите последнее число списка: "))
+
+for i in count(start_num):
+    if i > end_num:
+        break
+    result_list.append(i)
+print(result_list)
+
+# б) итератор, повторяющий элементы некоторого списка, определенного заранее.
+counter = 0
+for item in cycle(result_list):
+    if counter >= len(result_list):
+        break
+    print(item)
+    counter += 1

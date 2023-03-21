@@ -25,3 +25,33 @@
 
 Два класса: абстрактный и Clothes
 """
+
+from abc import ABC, abstractmethod
+
+class AbsClassClothes(ABC):
+    @abstractmethod
+    def get_material_rate(self):
+        pass
+
+class Clothes(AbsClassClothes):
+    def __init__(self, name, size):
+        self.name = name
+        self.size = size
+
+    @property
+    def get_material_rate(self):
+        material_rate = 0.0
+        if self.name == 'Пальто':
+            material_rate = self.size / 6.5 + 0.5
+        elif self.name == 'Костюм':
+            material_rate = self.size * 2 + 0.3
+        else:
+            material_rate = 0
+        return material_rate
+
+suit = Clothes('Костюм', 10)
+coat = Clothes('Пальто', 5)
+
+print(f'Расход ткани на пальто = {round(coat.get_material_rate, 2)}')
+print(f'Расход ткани на костюм = {round(suit.get_material_rate, 2)}')
+print(f'Общий расход ткани = {round(suit.get_material_rate, 2) + round(coat.get_material_rate, 2)}')

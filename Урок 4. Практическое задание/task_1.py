@@ -6,3 +6,16 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+import sys
+
+script_name, name_v, rate_v, hours_v = sys.argv
+
+def calc_salary(hours, rate):
+    try:
+        print(f'Сотрудник {name_v} заработал {int(hours_v) * int(rate_v) * 1.30}')
+    except TypeError:
+        print('Неправильный тип объекта')
+        exit()
+
+calc_salary(hours_v, rate_v)

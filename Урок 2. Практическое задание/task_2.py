@@ -11,3 +11,12 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+my_list = input("Введите целые числа через пробел:").split(" ")
+even = 0
+uneven = 1
+while len(my_list) > uneven:
+    my_list[even], my_list[uneven] = my_list[uneven], my_list[even]
+    even += 2
+    uneven += 2
+print("Результат:", my_list)
