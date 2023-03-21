@@ -11,3 +11,13 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+hard_text = "some text"
+hard_number = 45
+some_text = input("Введите любой текст: ")
+some_number = int(input("Введите любую цифру: "))
+
+# переменные решил вывести с их типом для наглядности
+print(f"Первая переменная: {hard_text} {type(hard_text)} /"
+      f"\nВторая переменная: {hard_number} {type(hard_number)}"
+      f"\nВведённый текст: {some_text} {type(some_text)}"
+      f"\nВведённая цифра: {some_number} {type(some_number)}")
