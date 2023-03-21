@@ -15,3 +15,19 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+# Вариант 1
+my_list = list([1, 3, 4, 1, 8, 9, 7, 2])
+my_list.append(int(input("Введите новый элемент рейтинга (натуральное число):")))
+my_list.sort(reverse=True)  # сортировка дополненного списка с активированным признаком обратной сортировки
+print(my_list)
+
+# Вариант 2
+my_list1 = list([1, 3, 4, 1, 8, 9, 7, 2])
+my_list1.sort(reverse=True)
+new_el = int(input("Введите новый элемент рейтинга (натуральное число):"))
+for el in my_list1:
+    if new_el >= el:
+        my_list1.insert(my_list1.index(el), new_el)
+        break
+print(my_list1)
