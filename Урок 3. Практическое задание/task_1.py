@@ -17,3 +17,21 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+"""Функция деления чисел"""
+
+
+def division(a, b):
+    res = a / b
+    return res
+
+
+"""Запрос данных у пользователя, обнаружение деления на 0 и ввод не корректного значения"""
+try:
+    num_1 = float(input("Введите первое число: "))
+    num_2 = float(input("Введите второе число: "))
+    print(f"Результат деления: {division(num_1, num_2)}")  # вызов функции деления
+except ZeroDivisionError:  # проверка деления на 0
+    print("Вы что? Пытаетесь делить на 0!")
+except ValueError:  # проверка корректности ввода данных
+    print("Необходимо вводить цифры")
