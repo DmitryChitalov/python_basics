@@ -1,0 +1,7 @@
+Zebra   ООО   12000   4500
+Cube    JSC   19000   7600
+Star    CJSC  13500   3200
+Cloud   ООО   16200   2300
+Wind    IE    25400   15000
+Buzz    IE    5000    10000
+Poor    OOO   7500    8600
