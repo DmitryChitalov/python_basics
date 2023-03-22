@@ -8,3 +8,18 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def line(word):
+    example = []
+    for i in word:
+        i = i.capitalize()
+        example.append(i)
+    example_str = ' '.join(example)
+    return example_str
+
+
+user_str = input('Введите строку из латинских слов через пробел: ')
+user_list = user_str.split()
+
+print(line(user_list))

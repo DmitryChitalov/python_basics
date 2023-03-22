@@ -17,3 +17,23 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+# Программа запрашивает у пользователя 2 целых числа
+user_f_num = int(input('Введите первое число: '))
+user_s_num = int(input('Введите второе число: '))
+
+
+'''Функция выполняя код проверяет значения введенные пользователем и производит вычисления.
+    при втором значении равным 0 программа выдает ошибку '''
+def new_func(a, b):
+    try:
+        answer = user_f_num / user_s_num
+    except ZeroDivisionError:
+        answer = 'Вы что? Пытаетесь делить на 0!'
+    else:
+        answer = user_f_num / user_s_num
+
+    return answer
+
+
+# Выводим результат функции на экран
+print(new_func(user_f_num, user_s_num))
