@@ -19,3 +19,15 @@
 6-й день: 3,22
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 """
+
+start = 2
+finish = 3
+day = 1
+count = start
+print(day,"-й день: ", count)
+while count < finish :
+    count = count * 1.1
+    day = day + 1
+    print(day,"-й день: ", count)
+else:
+    print("на", day, "день спортсмен достиг результата 3 км")
