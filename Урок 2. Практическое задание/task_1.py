@@ -15,8 +15,3 @@
 <class 'bool'>
 <class 'NoneType'>
 """
-
-task_list = [123, "Hello world", 3.14, True, None]
-
-for el in task_list:
-    print(type(el))
