@@ -16,8 +16,5 @@
 <class 'NoneType'>
 """
 sp = [12, "Слово", 2.3, True, None]
-print(type(12))
-print(type("Слово"))
-print(type(2.3))
-print(type(True))
-print(type(None))
+for el in sp: #перебор списка
+    print(type(el)) #вывод типа элемента списка

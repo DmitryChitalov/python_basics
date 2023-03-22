@@ -25,3 +25,36 @@
 “ед”: [“шт.”]
 }
 """
+
+
+
+
+"""my_dict = input({f'Название: ': 'Samsung Galaxy', 'Цена: ': 20000, 'Количество: ': '3'})
+for key, value in my_dict.items():
+    print(f"{key} - {value}")"""
+"""data = dict()
+i = 0
+while i <= 2:
+    i = i + 1
+    name = input("Введите название устройства: ")
+    price = input("Введите цену устройства: ")
+    summ = input("Введите кол-во устройств: ")
+
+    data[i] = (f"{i} Устройство: {name}, Цена: {price}, Кол-во: {summ}")
+    print(data[i])"""
+
+m_list = [(1, {"название": "компьютер", "цена": 10000, "количество": 6, "eд": "шт."}),
+    (2, {"название": "МФУ", "цена": 5000, "количество": 5, "eд": "шт."}),
+    (3, {"название": "сканер", "цена": 3000, "количество": 5, "eд": "шт."})]
+name = []
+price = []
+summ = []
+unit = []
+all_dict = {}
+for i in range(len(m_list)):
+    name.append(m_list[i][1]["название"])
+    price.append(m_list[i][1]["цена"])
+    summ.append(m_list[i][1]["количество"])
+    unit.append(m_list[i][1]["eд"])
+all_dict.update({"название": name, "цена": price, "кол-во": summ, "ед": unit})
+print(all_dict)
