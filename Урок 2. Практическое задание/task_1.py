@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+random_list = [5, "string", 0.15, True, None]
+
+for value in random_list:
+    print(type(value))
