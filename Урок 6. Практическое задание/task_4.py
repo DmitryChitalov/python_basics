@@ -1,3 +1,74 @@
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        print(f"{self.color} {self.name} едет со скоростью {self.speed} км")
+
+    def stop(self):
+        print(f"{self.color} {self.name} становилась")
+
+    def turn(self, direction):
+        print(f"{self.color} {self.name} повернула на {direction}")
+
+    def show_speed(self):
+        if self.speed < 80:
+            pass
+        else:
+            print(f"{self.color} {self.name} превысила скорость")
+
+
+class TownCar(Car):
+    def show_speed(self):
+        if self.speed < 60:
+            pass
+        else:
+            print(f"{self.color} {self.name} превысила скорость")
+
+
+class SportCar(Car):
+    pass
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed < 40:
+            pass
+        else:
+            print(f"{self.color} {self.name} превысила скорость")
+
+
+class PoliceCar(Car):
+    pass
+
+
+a = TownCar(70, "Зеленая", "Лада", 80)
+a.go()
+a.show_speed()
+a.turn("лево")
+a.turn("право")
+a.stop()
+
+b = SportCar(75, "Желтый", "Ламборгини", 80)
+b.go()
+b.show_speed()
+b.turn("право")
+b.stop()
+
+d = PoliceCar(90, "Белая", "Буханка", 80)
+d.go()
+d.show_speed()
+d.turn("лево")
+d.turn("право")
+d.stop()
+
+c = WorkCar(45, "Серебрянная", "Тойота", 80)
+c.go()
+c.show_speed()
+
 """
 Задание 4.
 

@@ -1,3 +1,21 @@
+class Worker:
+    def __init__(self, name, surname, position, wage, bonus):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self._income = {"wage": wage, "bonus": bonus}
+        self._income = self._income["wage"] + self._income["bonus"]
+
+
+class Position(Worker):
+
+    def __str__(self):
+        return f"Работник - {self.name} {self.surname}    Доход - {self._income}"
+
+
+a = Position("Денис", "Иванов", "Админ", 50000, 60000)
+print(a)
+
 """
 Задание 3.
 

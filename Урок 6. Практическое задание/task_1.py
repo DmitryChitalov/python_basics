@@ -1,3 +1,25 @@
+import time
+
+
+class TrafficLight:
+    def __init__(self, color1, color2, color3):
+        self._color = [color1, color2, color3]
+        print(f"Горит {self._color[0]}")
+        time.sleep(7)
+        print(f"Горит {self._color[1]}")
+        time.sleep(2)
+        print(f"Горит {self._color[2]}")
+        time.sleep(5)
+        a = 1
+        while a == 1:
+            a = TrafficLight("Красный", "Желтый", "Зеленый")
+            print(a._color)
+
+
+a = TrafficLight("Красный", "Желтый", "Зеленый")
+print(a._color)
+
+# Зациклил световор для реализма.
 """
 Задание 1.
 
