@@ -10,6 +10,6 @@
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
 second = int(input("Введите время в секундах: "))
-hours = sec / 3600
-minute = sec / 60
-print(f"Время в формате ч:м:с - {hours} : {min} : {sec}")
+hours = second / 3600
+minute = second / 60
+print(f"Время в формате ч:м:с - {hours} : {minute} : {second}")
