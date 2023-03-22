@@ -17,3 +17,13 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def s_calc():
+    try:
+        a_val = int(input("Введите первое число: "))
+        b_val = float(input("Введите второе число: "))
+        s_calc = a_val / b_val
+        return s_calc
+    except ZeroDivisionError:
+        return " Вы что? На 0 делить нельзя!"
+
+print(s_calc())
