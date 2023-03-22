@@ -6,3 +6,13 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+all_sum = 0
+while True:
+    string_numbers = input("Введите строку чисел разделенных пробелом (для завершения введите end): ")
+    if string_numbers == "end":
+        break
+    list_numbers = string_numbers.split()
+    numbers_sum = sum([int(number) for number in list_numbers])
+    all_sum += numbers_sum
+    print(f"Текущая сумма: {all_sum}")
+print(f"Итоговая сумма: {all_sum}")
