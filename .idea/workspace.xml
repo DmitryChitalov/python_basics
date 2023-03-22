@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63bc7a86-7e84-42b6-8dc4-3cb4bb4ec213" name="Changes" comment="изиенил значения времени">
+      <change beforePath="$PROJECT_DIR$/Урок 1. Практическое задание/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Урок 1. Практическое задание/task_2.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8fb48223-dc7b-47f7-be4a-973eee2e305a" />
+        <option name="url" value="https://github.com/Asandrik86/python_basics.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NKlfMinzipDWNOLXTLhHoXXESm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/asandrik/python_basics&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63bc7a86-7e84-42b6-8dc4-3cb4bb4ec213" name="Changes" comment="" />
+      <created>1679420756359</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679420756359</updated>
+    </task>
+    <task id="LOCAL-00001" summary="done">
+      <created>1679422860525</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679422860525</updated>
+    </task>
+    <task id="LOCAL-00002" summary="done">
+      <created>1679423136826</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679423136826</updated>
+    </task>
+    <task id="LOCAL-00003" summary="done">
+      <created>1679423253145</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679423253145</updated>
+    </task>
+    <task id="LOCAL-00004" summary="done">
+      <created>1679423817038</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679423817038</updated>
+    </task>
+    <task id="LOCAL-00005" summary="done">
+      <created>1679423918462</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679423918462</updated>
+    </task>
+    <task id="LOCAL-00006" summary="done">
+      <created>1679424387607</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679424387607</updated>
+    </task>
+    <task id="LOCAL-00007" summary="done">
+      <created>1679424618464</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679424618464</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Сделал конкатенированную строку">
+      <created>1679472954467</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679472954467</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Поправил значения времени">
+      <created>1679473009223</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679473009223</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Поправил значения времени">
+      <created>1679473149054</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679473149054</updated>
+    </task>
+    <task id="LOCAL-00011" summary="сделал конкатенированную строку">
+      <created>1679473500784</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679473500784</updated>
+    </task>
+    <task id="LOCAL-00012" summary="изиенил значения времени">
+      <created>1679473530056</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679473530056</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="done" />
+    <MESSAGE value="Сделал конкатенированную строку" />
+    <MESSAGE value="Поправил значения времени" />
+    <MESSAGE value="сделал конкатенированную строку" />
+    <MESSAGE value="изиенил значения времени" />
+    <option name="LAST_COMMIT_MESSAGE" value="изиенил значения времени" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+</project>
