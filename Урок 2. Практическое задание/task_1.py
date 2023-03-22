@@ -17,7 +17,5 @@
 """
 #!/usr/bin/env python3
 user_list = [None, False, 0.12, "cord", 3]
-i = 0
-while i < len(user_list):
-    print(type(user_list[i]))
-    i = i + 1
+for i in user_list:
+    print(type(i))

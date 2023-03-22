@@ -10,8 +10,8 @@
 """
 #!/usr/bin/env python3
 month_number = int(input("Пожалуйста, введите номер месяца: "))
-month_list = ["Январь", "Фервраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+month_list = ["Зима", "Зима", "Весна", "Весна", "Весна", "Лето", "Лето", "Лето", "Осень", "Осень", "Осень", "Зима"]
 month_dict = dict(enumerate(month_list, start=1))
 
 print(f"Результат через список: {month_list[month_number - 1]}")
-print(f"Результат через словарь: {month_dict[month_number]}")
+print(f"Результат через словарь: {month_dict.get(month_number)}")

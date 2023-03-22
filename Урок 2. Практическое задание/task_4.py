@@ -15,8 +15,7 @@
 2. перерефриж
 """
 #!/usr/bin/env python3
-user_input = input("Пожалуйста, введите слова через пробел: ")
-user_list = user_input.split()
+user_list = input("Пожалуйста, введите слова через пробел: ").split()
 list_countdown = 1
 
 for i in user_list:

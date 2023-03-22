@@ -26,3 +26,34 @@
 }
 """
 #!/usr/bin/env python3
+general_list = []
+
+while True:
+    general_list.append((input("Номер товара: "), 
+        {"Название": input("Название: "),
+        "Цена": input("Цена: "),
+        "Количество": input("Количество: "),
+        "единицы": input("Единицы учёта: "),        
+        }))
+    q = input(": ")
+    if q == "":
+        break
+
+general_list = [(1, {“Название”: “компьютер”, “Цена”: 20000, “Количество”: 5, “единицы”: “шт.”}),
+                (2, {“Название”: “принтер”, “Цена”: 6000, “Количество”: 2, “единицы”: “шт.”}),
+                (3, {“Название”: “сканер”, “Цена”: 2000, “Количество”: 7, “единицы”: “шт.”})]
+
+wares_names = []
+wares_prices = []
+wares_amounts = []
+wares_units = []
+result_dict = {}
+
+for i in range(len(general_list)):
+    wares_names.append(general_list[i][1]['название'])
+    wares_prices.append(general_list[i][1]['цена'])
+    wares_amounts.append(general_list[i][1]['количество'])
+    wares_units.append(general_list[i][1]['единицы'])
+
+result_dict.update({'названия': wares_names, 'цены': wares_prices, 'количества': wares_amounts, 'единицы': wares_units})
+print(result_dict)
