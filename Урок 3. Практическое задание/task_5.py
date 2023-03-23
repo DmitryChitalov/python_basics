@@ -6,3 +6,16 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+print("специальный символ \"C\"")
+enter = True
+sum = 0
+while enter:
+    num_sequence = input("Введите строку чисел, разделенных пробелом и нажмите Enter").split()
+    for el in num_sequence:
+        if el != "C":
+            if int(el):
+                sum = sum + int(el)
+        else:
+            enter = False
+            break
+    print("Сумма = ", sum)
