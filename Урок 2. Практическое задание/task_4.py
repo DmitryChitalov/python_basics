@@ -14,10 +14,3 @@
 1. раз
 2. перерефриж
 """
-user_string = input('Введите несколько слов через пробел: ')
-word_list = user_string.split(' ')
-n = len(word_list)
-a = 0
-while a <= (n - 1):
-    print (a + 1, str(word_list[a])[0:10])
-    a = a + 1

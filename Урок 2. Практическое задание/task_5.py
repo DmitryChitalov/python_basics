@@ -15,10 +15,4 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
-my_list = [5, 4, 3, 2, 2]
-a = input ('Введите число: ')
-print(my_list)
-for i in range(1):
-    my_list.append(int(a))
-    my_list.sort(reverse=True)
-print(my_list)
+
