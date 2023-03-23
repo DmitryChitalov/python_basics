@@ -11,7 +11,7 @@ email: jackie@gmail.com, телефон: 01005321456
 
 def user_data (name_user, surname_user, year_of_birth_user, city_user, email_user, telephone_user):
     """
-    ФункциЯ, принимающая несколько параметров,описывающих данные пользователя.
+    Функция, принимающая несколько параметров,описывающих данные пользователя.
     :param name_user: Имя
     :param surname_user: Фамилия
     :param year_of_birth_user: Год рождения
