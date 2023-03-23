@@ -6,7 +6,13 @@
 test = open('test.txt', 'w')
 line = input('Ввод \n')
 while line:
-    test.writelines(line)
+    my_f.writelines(line)
     line = input('Ввод \n')
     if not line:
         break
+
+test.close()
+test = open('test.txt', 'r')
+content = test.readlines()
+print(content)
+test.close()
