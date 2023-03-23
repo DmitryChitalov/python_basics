@@ -5,3 +5,28 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    return (x ** y)
+
+
+print(my_func(float(input('Введите число: ')), int(input('ВВедите степень: '))))
+
+
+# первый вариант#
+
+
+def my_func(x, y):
+    a = 1
+    result = 1 / x
+    while a < abs(y):
+        result = result * (1 / x)
+        a += 1
+    return result
+
+
+print(my_func(float(input('Введите число: ')), int(input('ВВедите степень: '))))
+
+
+# второй вариант#
