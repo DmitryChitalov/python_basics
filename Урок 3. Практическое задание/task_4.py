@@ -5,3 +5,19 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+def my_func(x, y):
+    temp_variable = x
+    original_y = y
+    if y < 0:
+        while y < -1:
+            temp_variable = temp_variable * x
+            y += 1
+        print(f"числа {x} в степень {original_y} = {(1 / temp_variable):.3f}")
+    else:
+        while y > 1:
+            temp_variable = temp_variable * x
+            y -= 1
+        print(f"числа {x} в степень {original_y} = {temp_variable}")
+
+my_func(3, -2)
