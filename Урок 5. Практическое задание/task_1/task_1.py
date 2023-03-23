@@ -6,7 +6,8 @@
 test = open('test.txt', 'w')
 line = input('Ввод \n')
 while line:
-    my_f.writelines(line)
+    
+    test.writelines(line)
     line = input('Ввод \n')
     if not line:
         break
