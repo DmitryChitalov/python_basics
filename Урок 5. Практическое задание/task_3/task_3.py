@@ -8,3 +8,16 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+
+my_num = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
+
+my_n = []
+with open('Dz_3.txt', 'r', encoding='utf-8') as Dz:
+    for a in Dz:
+        a = a.split(' ', 1)
+        my_n.append(my_num[a[0]] + '  ' + a[1])
+    print(my_n)
+
+with open('Dz_3_rus.txt', 'w', encoding='utf-8') as Dz_3_rus:
+    Dz_3_rus.writelines(my_n)
+
