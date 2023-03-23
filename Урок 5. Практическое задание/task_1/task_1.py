@@ -10,7 +10,6 @@ while line:
     line = input('Ввод \n')
     if not line:
         break
-
 test.close()
 test = open('test.txt', 'r')
 content = test.readlines()
