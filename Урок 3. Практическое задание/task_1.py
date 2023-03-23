@@ -18,8 +18,8 @@ Process finished with exit code 0
 Process finished with exit code 0
 """
 #!/usr/bin/env python3
-user_input_a = int(input("Пожалуйста, ввдедите первое число: "))
-user_input_b = int(input("Пожалуйста, ввдедите второе число: "))
+user_input_a = int(input("Пожалуйста, введите первое число: "))
+user_input_b = int(input("Пожалуйста, введите второе число: "))
 
 def user_division(user_input_a, user_input_b):
     try:
