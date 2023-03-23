@@ -14,3 +14,9 @@
 1. раз
 2. перерефриж
 """
+words_list = input("Введите слова через пробел: ").split()
+for one_word in words_list:
+    if len(one_word) >= 10:
+        print(f"{words_list.index(one_word) + 1}. {one_word[:10]}")
+    else:
+        print(f"{words_list.index(one_word) + 1}. {one_word}")
