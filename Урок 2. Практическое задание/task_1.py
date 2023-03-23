@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+list = [1, "а", 34.6]
+print(type(list[0]))
+print(type(list[1]))
+print(type(list[2]))
