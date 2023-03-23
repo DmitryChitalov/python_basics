@@ -6,22 +6,31 @@
 Постараться придумать свой алгоритм без **
 """
 
+# Вариант 1
+'''
+def my_func(value1, value2):
+    return value1 ** value2
 
-def my_func():
-    x = int(input("Введите число для возведения в степень: "))
-    y = int(input("Введите стпень: "))
-    if y == 0:
-        return 1
-    elif y > 0:
-        result = x
-        for i in range(y - 1):
-            result *= x
-        return result
+
+first_number = int(input("Введите число для возведения в степень: "))
+second_number = int(input("Введите степень: "))
+print(my_func(first_number, second_number))
+'''
+
+
+# Вариант 2
+
+def my_func(value1, value2):
+    first_number = value1
+    if value2 > 0:
+        for elem in range(1, value2):
+            first_number *= value1
     else:
-        result = x
-        for i in range(abs(y) - 1):
-            result *= x
-        return 1 / result
+        for elem in range(1, value2, -1):
+            first_number /= value1
+    return first_number
 
 
-print(my_func())
+user_number1 = (input("Введите число для возведения в степень: "))
+user_number2 = int(input("Введите степень: "))
+print(my_func(user_number1, user_number2))

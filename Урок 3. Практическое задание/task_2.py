@@ -10,22 +10,6 @@ email: jackie@gmail.com, телефон: 01005321456
 """
 
 
-# Вариант 1
-def func_info():
-    user_name = input("Введите ваше имя: ")
-    user_surname = input("Введите вашу фамилию: ")
-    user_date_birth = input("Введите ваш год рождения: ")
-    user_city = input("Введите ваш город проживания: ")
-    user_email = input("Введите ваш email: ")
-    user_phone = input("Введите ваш телефон: ")
-    print(f"{user_name} {user_surname} {user_date_birth} года рождения, проживает в городе {user_city}, "
-          f"email: {user_email}, телефон: {user_phone}")
-
-
-func_info()
-
-# Вариант 2 (используя именованные аргументы)
-'''
 def user_info(name, surname, year_birth, city, email, phone):
     print(f"{name} {surname} {year_birth} года рождения, проживает в городе {city}. E-mail: {email}, телефон: {phone}")
 
@@ -37,4 +21,3 @@ city = input("Введите ваш город проживания: ")
 email = input("Введите ваш email: ")
 phone = input("Введите ваш номер телефона: ")
 user_info(name=name, surname=surname, year_birth=year_birth, city=city, email=email, phone=phone)
-'''
