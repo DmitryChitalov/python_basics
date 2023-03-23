@@ -8,3 +8,10 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+
+month_input = input("Введите номер месяца: ")
+month_dict = {'Зима': ["1", "2", "12"], 'Весна': ["3", "4", "5"], 'Лето': ["6", "7", "8"], 'Осень': ["9", "10", "11"]}
+for i in month_dict:
+    month_list = month_dict.get(i)
+    if month_list.count(month_input):
+        print(i)
