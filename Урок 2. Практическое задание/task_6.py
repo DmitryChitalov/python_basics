@@ -25,3 +25,33 @@
 “ед”: [“шт.”]
 }
 """
+
+product = []
+dict_product = {"название": [], "цена": [], "количество": [], "ед.": []}
+dict_product_set = {"название": {}, "цена": {}, "количество": {}, "ед.": {}}
+complete_input = ''
+seq_num = 0
+while True:
+    complete_input = input("Для завершения ввода введите q и нажмите Enter. "
+                           "Для начала ввода данных нажмите клавишу Enter. ")
+    if complete_input != 'q':
+        dict_product_curr = {"название": None, "цена": None, "количество": None, "ед.": None}
+        for key_product in dict_product_curr:
+            name = input(f"Введите {key_product} товара: ")
+            if (key_product == "Цена") or (key_product == "Количество"):
+                name = int(name)
+            dict_product_curr.update({key_product: name})
+            dict_product.get(key_product).append(name)
+        seq_num += 1
+        cor = (seq_num, dict_product_curr)
+        product.append(cor)
+    else:
+        break
+print("Пример готовой структуры данных ""Товары"": ")
+print(product)
+for key_product in dict_product:
+    cor = set(dict_product.get(key_product))
+    dict_product_set.update({key_product: cor})
+dict_product.clear()
+print("Пример итогового словаря: ")
+print(dict_product_set)

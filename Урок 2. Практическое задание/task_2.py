@@ -11,3 +11,18 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+dig_input = input("Введите целые числа через пробел: ")
+dig_list = dig_input.split()
+i = 0
+if not len(dig_list) % 2:
+    while i < (len(dig_list)):
+        dig_list[i], dig_list[i + 1] = dig_list[i + 1], dig_list[i]
+        i = i + 2
+else:
+    odd = dig_list.pop(-1)
+    while i < (len(dig_list)):
+        dig_list[i], dig_list[i + 1] = dig_list[i + 1], dig_list[i]
+        i = i + 2
+    dig_list.append(odd)
+print("Результат: ", dig_list)
