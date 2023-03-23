@@ -17,3 +17,18 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def func_division(first_value, second_value):
+    result = first_value / second_value
+    return result
+
+
+try:
+    first_number = int(input("Введите первое число: "))
+    second_number = int(input("Введите второе число: "))
+    print(func_division(first_number, second_number))
+except ZeroDivisionError:
+    print("Нельзя делить на 0!")
+except ValueError:
+    print("Вам нужно вводить числа!")
