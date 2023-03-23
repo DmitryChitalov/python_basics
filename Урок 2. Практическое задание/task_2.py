@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+list = input('Введите список через запятую: ').split(',')
+n = len(list)
+b = 0
+while b < ((n // 2) * 2):
+    list.insert(b, list[b + 1])
+    list.pop(b + 2)
+    b = b + 2
+print(list)
