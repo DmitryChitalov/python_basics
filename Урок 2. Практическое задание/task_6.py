@@ -25,3 +25,28 @@
 “ед”: [“шт.”]
 }
 """
+product = []
+for i in range(1, 4):
+    print(f"Заполняем информацию по {i}-му товару")
+    product_name = input("Название: ")
+    product_cost = int(input("Цена: "))
+    product_volume = int(input("Количество: "))
+    product_measure = input("Единица измерения: ")
+    product.append((i, {'название': product_name, 'цена': product_cost, 'количество': product_volume, 'eд': product_measure}))
+print(f"Исходный список товаров: {product}")
+product_names = []
+product_costs = []
+product_volumes = []
+product_measures = []
+for i in product:
+    product_names.append(i[1].get('название'))
+    product_costs.append(i[1].get('цена'))
+    product_volumes.append(i[1].get('количество'))
+    product_measures.append(i[1].get('eд'))
+statement = {
+    'название': list(set(product_names)),
+    'цена': list(set(product_costs)),
+    'количество': list(set(product_volumes)),
+    'eд': list(set(product_measures))
+}
+print(f"Отчет по списку товаров: {statement}")
