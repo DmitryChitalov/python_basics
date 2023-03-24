@@ -14,4 +14,4 @@ seconds = int(input("Enter time per seconds: "))
 hour = seconds / 3600
 min = seconds / 60 
 
-print(f"Время в формате ч:м:с - {hour}:{min}:{seconds}")
+print(f"Time in formate h:m:s - {hour}:{min}:{seconds}")
