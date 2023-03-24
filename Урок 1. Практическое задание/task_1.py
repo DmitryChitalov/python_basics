@@ -6,8 +6,13 @@
 строк и сохраните в переменные, выведите на экран.
 
 Пример:
-Ведите ваше имя: Василий
+Ведите ваше имя: Васили
 Ведите ваш пароль: vas
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+a = input("Enter your name: ")
+b = input("Enter your password: ")
+c = int(input("Enter your age: "))
+
+print("Your data for enter in account: name - " +a+ ", password - "+b+", age - " +str(c))
