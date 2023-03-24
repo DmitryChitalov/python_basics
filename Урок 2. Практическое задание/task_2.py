@@ -11,3 +11,12 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+my_string = input("Введите целые числа через пробел: ")
+my_list = my_string.split(" ")
+
+for indx in range(1, len(my_list)):
+    if indx % 2 != 0:
+        my_list[indx - 1], my_list[indx] = my_list[indx], my_list[indx - 1]
+
+print(f"Результат: {' '.join(my_list)}")

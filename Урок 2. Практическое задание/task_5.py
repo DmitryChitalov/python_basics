@@ -15,3 +15,18 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+my_rating = []
+
+while True:
+    print(f"Текущий рейтинг: {my_rating}")
+    new_el = input("Введите новый элемент рейтинга или пустую строку для завершения: ")
+    if new_el == "":
+        break
+    new_el = int(new_el)
+    for i, item in enumerate(my_rating):
+        if new_el > item:
+            my_rating.insert(i, new_el)
+            break
+    else:
+        my_rating.append(new_el)
