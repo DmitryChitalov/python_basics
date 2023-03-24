@@ -25,3 +25,38 @@
 “ед”: [“шт.”]
 }
 """
+
+products = []
+number = 0
+
+print("Введите одной строкой название товара, цену, количество и единицу измерения")
+print("В качестве разделителя используйте запятую")
+print("Для завершения введите пустую строку\n")
+
+while True:
+    number += 1
+    product = input(f'{number}-й товар: ').split(',')
+    if product == ['']:
+        break
+    products.append((number, {'Наименование': product[0],
+                              'Цена': int(product[1]),
+                              'Количество': int(product[2]),
+                              'Ед. изм.': product[3]}))
+
+products_dict = {}
+
+for i, el in enumerate(list(products[0][1].keys())):
+    products_dict[el] = []
+
+for i, el in enumerate(products_dict):
+    dict_list = []
+
+    for j, el_goods in enumerate(products):
+        key_val = el_goods[1].get(el)
+
+        if key_val not in dict_list:
+            dict_list.append(key_val)
+
+    products_dict[el] = dict_list
+
+print(products_dict)

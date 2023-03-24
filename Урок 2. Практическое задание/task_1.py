@@ -15,3 +15,23 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+my_test_list = [
+    5,
+    "string",
+    0.15,
+    True,
+    None,
+    complex(5,6),
+    [],
+    (),
+    {},
+    set(),
+    b'text',
+    bytearray(b"some text")]
+
+print(f"Для писка {my_test_list}")
+print("результат\n")
+
+for el in my_test_list:
+    print(type(el))
