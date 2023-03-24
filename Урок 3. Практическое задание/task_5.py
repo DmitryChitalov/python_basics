@@ -7,6 +7,15 @@
     ранее сумме и после этого завершить программу.
 """
 #!/usr/bin/env python3
-user_input = input("Пожалуйста, введите строку чисел, разделенных пробелом: ").split(' ')
+
+while True:
+    user_input = input("Пожалуйста, введите строку чисел, разделенных пробелом, или 'q' для выхода: ")
+    if user_input != 'q':
+        user_list.append(int(user_input))
+        user_list.sort(reverse=True)
+        print(user_list)
+    else:
+        break
+
 a = sum(user_input)
 print(f"Сумма чисел равна: {a}")

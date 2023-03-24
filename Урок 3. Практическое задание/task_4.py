@@ -11,10 +11,9 @@ user_input_y = int(input("Пожалуйста, введите целое отр
 print(f"Мы с Питоном возведем число {user_input_x} в степень {user_input_y}.")
 
 def my_func(user_input_x, user_input_y):
-    i = 0
-    while i <= user_input_y * -1:
+    while user_input_y < -1:
         user_input_x = user_input_x * user_input_x
-        i = i + 1
+        user_input_y = user_input_y + 1
     calc_result = 1.0 / user_input_x
     return calc_result
 
