@@ -18,3 +18,19 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+viruchka = input("Введите выручку фирмы:")
+izderjki = input("Введите издержки фирмы: ")
+if viruchka.isdigit() and izderjki.isdigit():
+    viruchka = int(viruchka)
+    izderjki = int(izderjki)
+    if viruchka > izderjki:
+        print(f"Финансовый результат - прибыль. Ее величина: {viruchka-izderjki}")
+        print(f"Рентабельность выручки = {izderjki / viruchka}")
+        sotrudniki = input("Введите численность сотрудников фирмы: ")
+        if sotrudniki.isdigit():
+            sotrudniki = int(sotrudniki)
+        print(f"Прибыль фирмы в расчете на одного сотрудника =  {(viruchka - izderjki) / sotrudniki}")
+    elif viruchka == izderjki:
+        print(f"Финансовый результат - в ноль. Прибыли нет.")
+    else:
+        print(f"Финансовый результат - задолженность. Ее величина: {viruchka-izderjki}")
