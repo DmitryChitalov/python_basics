@@ -5,3 +5,20 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def my_func(x,y):
+    return x ** y
+print(my_func(int(input('Число: ')), int(input('Степень: '))))
+
+
+
+def my_func_2(x, y):
+    counter = 1
+    result = 1 / x
+    while counter < abs(y):
+        result = result * (1 / x)
+        counter += 1
+    return result
+print(f'Вариантом 2: '
+      f'{my_func_2(int(input("Число: ")), int(input("Степень: ")))}')
+
+
