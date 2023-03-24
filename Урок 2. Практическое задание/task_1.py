@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+#!/usr/bin/env python3
+user_list = [None, False, 0.12, "cord", 3]
+for i in user_list:
+    print(type(i))

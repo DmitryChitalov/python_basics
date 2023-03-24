@@ -15,3 +15,13 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+#!/usr/bin/env python3
+user_list = [7, 5, 3, 3, 2]
+while True:
+    user_input = input("Введите оценку от 1 до 10 или 'q' для выхода: ")
+    if user_input != 'q':
+        user_list.append(int(user_input))
+        user_list.sort(reverse=True)
+        print(user_list)
+    else:
+        break

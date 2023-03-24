@@ -14,3 +14,10 @@
 1. раз
 2. перерефриж
 """
+#!/usr/bin/env python3
+user_list = input("Пожалуйста, введите слова через пробел: ").split()
+list_countdown = 1
+
+for i in user_list:
+    print(f"{list_countdown}. {i[:10]}")
+    list_countdown = list_countdown + 1

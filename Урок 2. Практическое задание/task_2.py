@@ -11,3 +11,28 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+#!/usr/bin/env python3
+user_list = input("Пожалуйста, введите целые числа через пробел: ").split(' ')
+i, j = 0, 1
+while len(user_list) > j:
+    user_list[i], user_list[j] = user_list[j], user_list[i]
+    i += 2
+    j += 2
+
+print(f"Результат: {user_list}.")
+
+
+# user_input = input("Пожалуйста, введите целые числа через пробел: ")
+# user_list = user_input.split()
+
+# if len(user_list) % 2 == 0:
+#     print("Вы ввели чётное количество чисел.")
+#     for i in range(0, len(user_list), 2):
+#         user_list[i], user_list[i + 1] = user_list[i + 1], user_list[i]
+#     print(f"Результат: {user_list}.")
+# else:
+#     last_odd_number = user_list[-1]
+#     print(f"Вы ввели нечётное количество чисел. Последнее число в списке: {last_odd_number}")
+#     for i in range(0, len(user_list) - 1, 2):
+#         user_list[i], user_list[i + 1] = user_list[i + 1], user_list[i]
+#     print(f"Результат: {user_list}.")
