@@ -1,3 +1,13 @@
+my_list = [7, 5, 3, 3, 2]
+while True:
+    n = input("Введите оценку от 0 до 10 (11 для выхода)")
+    if n != "11":
+        my_list.append(int(n))
+        my_list.sort(reverse=True)
+        print(my_list)
+    else:
+        break
+
 """
 5. Реализовать структуру «Рейтинг», представляющую собой не
 возрастающий набор натуральных чисел
