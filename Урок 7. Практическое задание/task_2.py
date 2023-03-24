@@ -1,3 +1,38 @@
+from abc import ABC, abstractmethod
+
+
+class MyabstractClass(ABC):
+    @abstractmethod
+    def coat(self):
+        pass
+
+
+class Clothes(MyabstractClass):
+    def __init__(self, v, h):
+        self.v = v
+        self.h = h
+
+    @property
+    def coat(self):
+        self.b1 = self.v / 6.5 + 0.5
+        print(f"Расход ткани на пальто - {round(self.b1, 2)}")
+
+    @property
+    def suit(self):
+        self.b2 = 2 * self.h + 0.3
+        print(f"Расход ткани на костюм - {round(self.b2, 2)}")
+
+    @property
+    def common(self):
+        b3 = self.b1 + self.b2
+        print(f"Общий расход ткани - {round(b3, 2)}")
+
+
+a = Clothes(5, 10)
+a.coat
+a.suit
+a.common
+
 """
 Задание 2.
 

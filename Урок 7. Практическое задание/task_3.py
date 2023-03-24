@@ -1,3 +1,40 @@
+class cell:
+    print("Создаем объекты клеток")
+
+    def __init__(self, quantity):
+        self.quantity = quantity
+
+    def __add__(self, param):
+        print("Складываем")
+        return self.quantity + param.quantity
+
+    def __sub__(self, param):
+        print("Вычитаем")
+        if self.quantity > param.quantity:
+            return self.quantity - param.quantity
+        elif self.quantity < param.quantity:
+            return "Разность отрицательна, поэтому операция не выполняется"
+
+    def __mul__(self, param):
+        print("Умножаем")
+        return self.quantity * param.quantity
+
+    def __truediv__(self, param):
+        print("Делим")
+        return self.quantity // param.quantity
+
+
+cella = cell(30)
+cellb = cell(25)
+cellc = cell(10)
+celld = cell(15)
+
+print(f"Сумма клеток - {(cella + cellb)}")
+print(f"Разность клеток - {(cellb - cella)}")
+print(f"Разность клеток - {(celld - cellc)}")
+print(f"Умножение клеток -{(cella * cellb)}")
+print(f"Деление клеток - {(cella / cellb)}")
+
 """
 Задание 3.
 
