@@ -1,3 +1,26 @@
+class Matrix:
+    def __init__(self, list1):
+        self.list1 = list1
+
+    def __str__(self):
+        print(f"{self.list1[0][0]} {self.list1[0][1]} {self.list1[0][2]}")
+        print(f"{self.list1[1][0]} {self.list1[1][1]} {self.list1[1][2]}")
+        print(f"{self.list1[2][0]} {self.list1[2][1]} {self.list1[2][2]}")
+        print(f"")
+        print(f"{self.list1[0][0]} {self.list1[0][1]} {self.list1[0][2]}")
+        print(f"{self.list1[1][0]} {self.list1[1][1]} {self.list1[1][2]}")
+        print(f"{self.list1[2][0]} {self.list1[2][1]} {self.list1[2][2]}")
+
+    def __add__(self):
+        for el, el2 in enumerate(self.list1):
+            list2 = [el2[0] + el2[0]], [el2[1] + el2[1]], [el2[2] + el2[2]]
+            print(f"{list2[0][0]} {list2[1][0]} {list2[2][0]}")
+
+
+a = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+a.__str__()
+print("")
+a.__add__()
 """
 Задание 1.
 
