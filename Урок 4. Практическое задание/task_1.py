@@ -6,3 +6,19 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+# Импортируем "argv" из "sys"
+from sys import argv
+
+# Передаем аргументы скрипту
+script_name, output_user, rate_user, reward = argv
+
+
+# Функция получает информацию о выработке в часах, ставке в час и премии. Выдает сумму зарплаты.
+def user_reward(a, b, c):
+    reward_summ = int(a) * int(b) + int(c)
+    return reward_summ
+
+
+# Выводим на экран информацию о зарплате
+print(user_reward(output_user, rate_user, reward))
