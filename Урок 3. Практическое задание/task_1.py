@@ -17,3 +17,12 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def div_2_number():
+    try:
+        a = int(input("введите 1 число "))
+        b = int(input("введите 2 число "))
+        return a / b
+    except ValueError:
+        return
+res = div_2_number()
+print(f"Результат деления равен {res}")
