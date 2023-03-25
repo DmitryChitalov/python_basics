@@ -12,3 +12,21 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+example_list = ['a', 'b', 'c', 'd', 'e', 'f']
+
+for i in count(3):
+    if i > 10:
+        break
+    else:
+        print(i)
+
+count = 0
+
+for i in cycle(example_list):
+    if count > len(example_list) * 1.5:
+        break
+    print(i)
+    count += 1.0
