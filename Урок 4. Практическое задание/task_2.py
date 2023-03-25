@@ -15,6 +15,6 @@ for i in range(len(initial_list) - 1):
     if initial_list[i] < initial_list[i + 1]:
         result_list.append(initial_list[i + 1])
 
-print(result_list[1:])
-result_with_lc_list = [i for i in range(initial_list) if initial_list[i] < initial_list[i + 1]]
-print(result_with_lc_list)
+print(f"Список без 'генераторного выражения': {result_list}")
+result_with_lc_list = [initial_list[i + 1] for i in range(len(initial_list) - 1) if initial_list[i] < initial_list[i + 1]]
+print(f"Список из 'генераторного выражения': {result_with_lc_list}")
