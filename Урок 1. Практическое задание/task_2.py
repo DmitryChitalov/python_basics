@@ -7,5 +7,11 @@
 
 Пример:
 Введите время в секундах: 3600
-Время в формате ч:м:с - 1.0 : 60.0 : 3600
+1.0 : 60.0 : 3600
 """
+
+seconds = int(input("Enter time per seconds: "))
+hour = seconds / 3600
+min = seconds / 60 
+
+print(f"Time in formate h:m:s - {hour}:{min}:{seconds}")
