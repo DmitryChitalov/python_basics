@@ -8,3 +8,11 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+
+def personal_data(name, surname, birthyear, city, email, phone):
+    return f"{name} {surname} {birthyear} года рождения, проживает в городе {city}, email: {email}, телефон: {phone}"
+
+
+print(personal_data(name='Иван', surname='Иванов', birthyear='1846', city='Москва', email='jackie@gmail.com',
+                    phone='01005321456'))
