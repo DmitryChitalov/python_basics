@@ -12,3 +12,49 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+
+def func_1(start, stop):
+    """
+    Функция генерирующая целые числа, начиная с указанного, используя функцию count()
+    :param start: Введите первое число спиcка
+    :param stop: Введите последнее число спиcка
+    :return: Список целых чисел
+    """
+    result = []
+    for i in count(start):
+        if i <= stop:
+            result.append(i)
+        else:
+            break
+    print(f"Список целых чисел: {result}")
+
+
+try:
+    first_number = int(input('Введите первое число спиcка: '))
+    end_number = int(input('Введите последнее число спиcка: '))
+except ValueError:
+    print("Ошибочный ввод!")
+else:
+    func_1(first_number, end_number)
+
+my_list = ['Привет ', 'Молли ']
+
+
+def func_2(list):
+    """
+        Функция повторяющая элементы некоторого списка, определенного заранее не более 10 раз, используя функцию cycle().
+        :return: Результат
+    """
+    n = 0
+    result = ""
+    for i in cycle(list):
+        if n >= 10:
+            break
+        result = result + str(i)
+        n += 1
+    print(f"Результат: {result}")
+
+
+func_2(my_list)
