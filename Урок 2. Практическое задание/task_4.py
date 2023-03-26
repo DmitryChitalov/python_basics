@@ -14,3 +14,10 @@
 1. раз
 2. перерефриж
 """
+user_string = input('Введите слова через пробел: ')
+words_in_List = user_string.split(" ")
+counter = 1
+for word in words_in_List:
+    print(f'{counter}. {word[:10]}')
+    counter += 1
+

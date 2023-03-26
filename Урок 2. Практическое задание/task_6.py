@@ -25,3 +25,44 @@
 “ед”: [“шт.”]
 }
 """
+
+analytics = {
+    'названия': [],
+    'цены': [],
+    'количества': [],
+    'ед': []
+}
+
+
+products = []
+name = 1
+counter = 0
+while name:
+
+    name = input('Введите название товара или нажмите Enter, чтобы закончить ввод данных: ')
+
+    if name == "":
+        break
+
+    cost = int(input('Введите стоимость товара: '))
+    count = int(input('Введите количество товара: '))
+    units = input('Введите единицу измерения: ')
+
+    info = {
+        'название': name,
+        'стоимость': cost,
+        'количество': count,
+        'единица измерения': units
+    }
+
+    analytics['названия'].append(name)
+    analytics['цены'].append(cost)
+    analytics['количества'].append(count)
+    analytics['ед'].append(units)
+
+    products.append((counter, info))
+
+    counter += 1
+
+print(products)
+print(analytics)
