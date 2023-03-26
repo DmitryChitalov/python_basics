@@ -15,3 +15,11 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_list2=[7,5,3,3,2]
+            print(my_list2)
+            change(my_list2,3)
+            print(my_list2)
+            change(my_list2,8)
+            print(my_list2)
+            change(my_list2,1)
+            print(my_list2)
