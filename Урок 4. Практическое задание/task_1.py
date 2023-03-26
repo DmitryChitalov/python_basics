@@ -6,3 +6,11 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+def salary():
+    try:
+        time, rate, bonus = map(float, argv[1:])
+        print(f"salary - {time * rate + bonus}")
+    except ValueError:
+        print("Введите три числа, а не символы и строку.")
+
