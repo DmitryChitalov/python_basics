@@ -40,7 +40,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Unnamed (1)">
     <configuration name="Unnamed (1)" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -125,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679344121749</updated>
       <workItem from="1679344123744" duration="3677000" />
-      <workItem from="1679347964773" duration="28208000" />
+      <workItem from="1679347964773" duration="28882000" />
     </task>
     <servers />
   </component>
