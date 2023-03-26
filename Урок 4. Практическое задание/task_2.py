@@ -7,3 +7,28 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+
+# Вариант 1
+def new_list(old_list):
+    """
+    Функция выводит элементы исходного списка, значения которых больше предыдущего элемента.
+    :param old_list: исходный список
+    :return: результат
+    """
+    result = [old_list[i + 1] for i in range(len(old_list) - 1) if int(old_list[i + 1]) > int(old_list[i])]
+    print(f"Результат через функцию: {result}")
+
+
+my_list = input('Введите числа через пробел: ').strip().split(' ')
+new_list(my_list)
+
+# Вариант 2
+my_new_list = [my_list[i + 1] for i in range(len(my_list) - 1) if int(my_list[i + 1]) > int(my_list[i])]
+print(f"Пример исходного списка: {my_list}")
+print(f"Результат: {my_new_list}")
+
+# Вариант 3
+generator = (my_list[i + 1] for i in range(len(my_list) - 1) if int(my_list[i + 1]) > int(my_list[i]))
+print(f"Результат через генератор: {list(generator)}")
+print(f"Результат через генератор (здесь должно быть пусто, так как это генератор): {list(generator)}")
