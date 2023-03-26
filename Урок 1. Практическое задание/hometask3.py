@@ -7,5 +7,5 @@
 # Введите число n: 3
 # n + nn + nnn = 369
 
-n = int(input('Enter n: '))
-print(n + int(str(n) * 2) + int(str(n) * 3))
+n = input("Введите число: ")
+print(f'Результат: {int(n) + int(n * 2) + int(n * 3)} ')
