@@ -8,3 +8,24 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+# Вариант 1
+def upper_words(some_string):
+    words = some_string.split()
+    upper_words = [word.capitalize() for word in words]
+    return " ".join(upper_words)
+
+
+some_string = input("Введите строку из слов на латинице, разделенных пробелом: ")
+final_string = upper_words(some_string)
+print(final_string)
+
+# Вариант 2
+'''
+def upper_words(some_string):
+    return some_string.title()
+some_string = input("Введите строку из слов на латинице, разделенных пробелом: ")
+final_string = upper_words(some_string)
+print(final_string)
+'''

@@ -18,3 +18,16 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+cash = int(input("Введите значение выручки: "))
+costs = int(input("Введите значение издержки: "))
+if cash > costs:
+    profit = cash - costs
+    print("Ваша чистая прибыль: ", profit)
+    workers = int(input("Сколько человек работает в вашей фирме? "))
+    bonus = profit / workers
+    print("Бонус для каждого сотрудника составит: ", bonus)
+elif cash == costs:
+    print("К сожалению, ваша прибыль равна убыткам")
+else:
+    loses = costs - cash
+    print("Ваши убытки: ", loses)

@@ -11,3 +11,12 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+number = 5
+some_text = "Some, text"
+print(number)
+print(some_text)
+
+user_name = input("Как вас зовут? ")
+user_age = input("Сколько вам лет? ")
+user_city = input("Из какого вы города? ")
+print(f"Ваше имя {user_name}! Ваш возраст {user_age}. Вы из города {user_city}.")
