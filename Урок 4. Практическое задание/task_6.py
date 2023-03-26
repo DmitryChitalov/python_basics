@@ -29,4 +29,3 @@ for el in cycle(my_list):
         break
     print(el)
     i += 1
-    
