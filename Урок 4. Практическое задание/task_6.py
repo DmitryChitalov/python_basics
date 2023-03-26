@@ -12,3 +12,20 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import cycle
+from itertools import count
+####### а) итератор, генерирующий целые числа, начиная с указанного,
+for el in count(3):
+    if el <= 10:
+        print(el)
+    else:
+        break
+####### б) итератор, повторяющий элементы некоторого списка, определенного заранее.
+
+my_list = [el for el in range(0,5)]
+i = 0
+for el in cycle(my_list):
+    if i == 25:
+        break
+    print(el)
+    i += 1

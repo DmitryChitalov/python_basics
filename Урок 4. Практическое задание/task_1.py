@@ -6,3 +6,8 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+name, hours, price_per_hour, bounty = argv
+
+print(f"расчет заработной платы сотрудника = {int(hours) * int(price_per_hour) + int(bounty)}")
