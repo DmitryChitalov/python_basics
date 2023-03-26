@@ -15,4 +15,4 @@ minutes = (time % 3600) // 60
 minutes_res = (minutes) if minutes > 10 else ('0' + str(minutes))
 seconds = (time % 3600) % 60
 seconds_res = (seconds) if seconds > 10 else ('0' + str(seconds))
-print('Время в формате ч:м:с - ', hours_res, ':', minutes_res, ':', seconds_res)
+print(f'Время в формате ч:м:с - ', hours_res, ':', minutes_res, ':', seconds_res)
