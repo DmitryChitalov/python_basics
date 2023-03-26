@@ -13,8 +13,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Урок 2. Практическое задание/task_5.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2NIGKo1VyQ4UUDjxD2j5HN9RKPs" />
   <component name="ProjectViewState">
@@ -119,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679344121749</updated>
       <workItem from="1679344123744" duration="3677000" />
-      <workItem from="1679347964773" duration="901000" />
+      <workItem from="1679347964773" duration="27526000" />
     </task>
     <servers />
   </component>
@@ -127,11 +133,11 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/python_basics$task_2.coverage" NAME="task_2 Coverage Results" MODIFIED="1679345215636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 1. Практическое задание" />
-    <SUITE FILE_PATH="coverage/python_basics$task_3.coverage" NAME="task_3 Coverage Results" MODIFIED="1679345478435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 1. Практическое задание" />
-    <SUITE FILE_PATH="coverage/python_basics$task_5.coverage" NAME="task_5 Coverage Results" MODIFIED="1679346019856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 1. Практическое задание" />
-    <SUITE FILE_PATH="coverage/python_basics$task_1.coverage" NAME="task_1 Coverage Results" MODIFIED="1679348943429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 2. Практическое задание" />
-    <SUITE FILE_PATH="coverage/python_basics$task_4.coverage" NAME="task_4 Coverage Results" MODIFIED="1679345910157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 1. Практическое задание" />
-    <SUITE FILE_PATH="coverage/python_basics$task_6.coverage" NAME="task_6 Coverage Results" MODIFIED="1679346425319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 1. Практическое задание" />
+    <SUITE FILE_PATH="coverage/python_basics$task_2.coverage" NAME="task_2 Coverage Results" MODIFIED="1679521417231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 2. Практическое задание" />
+    <SUITE FILE_PATH="coverage/python_basics$task_3.coverage" NAME="task_3 Coverage Results" MODIFIED="1679597197523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 2. Практическое задание" />
+    <SUITE FILE_PATH="coverage/python_basics$task_5.coverage" NAME="task_5 Coverage Results" MODIFIED="1679603712556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 2. Практическое задание" />
+    <SUITE FILE_PATH="coverage/python_basics$task_1.coverage" NAME="task_1 Coverage Results" MODIFIED="1679518980349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 2. Практическое задание" />
+    <SUITE FILE_PATH="coverage/python_basics$task_4.coverage" NAME="task_4 Coverage Results" MODIFIED="1679603187201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 2. Практическое задание" />
+    <SUITE FILE_PATH="coverage/python_basics$task_6.coverage" NAME="task_6 Coverage Results" MODIFIED="1679824039011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Урок 2. Практическое задание" />
   </component>
 </project>
