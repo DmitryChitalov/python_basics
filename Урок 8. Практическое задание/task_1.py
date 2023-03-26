@@ -21,12 +21,12 @@ class Date:
     year = 0
 
     @classmethod
-    def set_day_month_year(day_month_year):
+    def set_day_month_year(cls, day_month_year):
         Date.day_month_year = day_month_year
         if len(Date.day_month_year) == 8:
-            Date.day = int(Date.day_month_year[0:1])
-            Date.month = int(Date.day_month_year[2:3])
-            Date.year = int(Date.day_month_year[4:7])
+            Date.day = int(Date.day_month_year[0:2])
+            Date.month = int(Date.day_month_year[2:4])
+            Date.year = int(Date.day_month_year[4:8])
 
     @staticmethod
     def validate():
