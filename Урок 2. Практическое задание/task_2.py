@@ -11,3 +11,14 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+my_list = list(input("Введите целые числа через пробел: ").split(' '))
+num = len(my_list)
+i = 0
+if num % 2 != 0:
+    num -= 1    
+while i <= (num - 1):
+    k = my_list[i+1]
+    my_list[i+1] = my_list[i]
+    my_list[i] = k
+    i += 2
+print(f'Результат: {my_list}')
