@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+string_1 = list(input("Введите список : "))
+x = 0
+while x < (len(string_1) - 2):
+    y = string_1[x+2]
+    string_1[x+2] = string_1[x]
+    string_1[x] = y
+    x += 1
+print(string_1)

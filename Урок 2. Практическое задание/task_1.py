@@ -15,3 +15,8 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_list = [5, "string", 0.15, True, None]
+x = 0
+while x < 5:
+    print(type(my_list[x]))
+    x += 1

@@ -14,3 +14,9 @@
 1. раз
 2. перерефриж
 """
+string_1 = input("Введите текст:")
+list_1 = string_1.split()
+for i in list_1:
+    print(i[:10])
+
+#    print( f" {i} : {list_1[i]}")
