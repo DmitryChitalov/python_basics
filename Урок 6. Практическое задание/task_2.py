@@ -16,3 +16,20 @@ length (длина в метрах), width (ширина в метрах).
 
 Например: 20м*5000м*25кг*0.05м = 125000 кг = 125 т
 """
+class Road:
+    def xinit(self, xlength, xwidth):
+        self.xlength = xlength
+        self.xwidth = xwidth
+
+    def mass(self):
+        return self.xlength * self.xwidth
+
+
+class MassCount(Road):
+    def xinit(self, xlength, xwidth, volume):
+        super().xinit(xlength, xwidth)
+        self.volume = volume
+
+
+r = MassCount(25, 10000, 125)
+print(r.mass())
