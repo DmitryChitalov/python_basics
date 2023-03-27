@@ -17,3 +17,19 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def my_div():
+    try:
+        var_dividend = int(input("Введите первое число:"))  # переменная делимое
+        var_divider = int(input("Введите второе число:"))  # переменная делитель
+    except ValueError:  # проверка на возникновение ошибки типов данных (введено значение отличное от целого числа)
+        return "Ошибка типов введенных значений"
+    try:
+        var_res = var_dividend / var_divider
+        return var_res
+    except ZeroDivisionError:  # проверка на возникновение ошибки деления на нуль
+        return "Ошибка деления на нуль"
+
+
+print(my_div())

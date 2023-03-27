@@ -8,3 +8,12 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+
+def profile_func(v_name, v_surname, v_yob, v_city, v_mail, v_phone):
+    my_str = "года рождения, проживает в городе"
+    print(f"{v_name} {v_surname} {v_yob} {my_str} {v_city}, email: {v_mail}, телефон: {v_phone}")
+
+
+var_phone = 89991233222
+profile_func(v_name="Петр", v_surname="Петров", v_yob=1999, v_city="Челябинск", v_mail="etm@m.ru", v_phone=var_phone)
