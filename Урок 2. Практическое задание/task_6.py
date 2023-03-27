@@ -25,3 +25,31 @@
 “ед”: [“шт.”]
 }
 """
+
+i = 0
+data_base = []
+
+while True:
+    name = input('Название товара: ')
+    price = input('Цена: ')
+    quantity = input('Количество: ')
+    unit = input('Единица учета: ')
+    i += 1
+    data_base += [(i, {'название': name, 'цена': price, 'количество': quantity, 'ед': unit})]
+    stop = input("Ввести следующий товар? y/n: ")
+    if stop == "n":
+        break
+
+name = []
+price = []
+quantity = []
+unit = []
+resault = {}
+for i in range(len(data_base)):
+    name.append(data_base[i][1]["название"])
+    price.append(data_base[i][1]["цена"])
+    quantity.append(data_base[i][1]["количество"])
+    unit.append(data_base[i][1]["ед"])
+
+resault.update({"названия": name, "цены": price, "количество": quantity, "ед": unit})
+print(resault)
