@@ -30,8 +30,8 @@ class TrafficLight:
             sleep(value)
 
 
-Tra = TrafficLight(color={
+tra = TrafficLight(color={
     "красный": 7,
     "желтый": 2,
     "зеленый": 5})
-Tra.running()
+tra.running()

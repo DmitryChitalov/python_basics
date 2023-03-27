@@ -85,18 +85,18 @@ class PoliceCar(Car):
         if self.is_police == 'True':
             print(f'Автомобиль {PoliceCar.name} является полицейским')
 
-Lada = TownCar(95, 'Белая', 'Лада', True)
-print(Lada.go())
-print(f'Машина {Lada.name} разгоняется со скоростью {Lada.speed} км/ч')
+lada = TownCar(95, 'Белая', 'Лада', True)
+print(lada.go())
+print(f'Машина {lada.name} разгоняется со скоростью {lada.speed} км/ч')
 
-Spor_C = SportCar(227, 'Синий', 'Porsche 113', False)
-print(f'Если {Spor_C.go()},то {Lada.turn("направо")}')
-print(f'Когда {Spor_C.name} поехал со скоростью {Spor_C.speed} км/ч, то {Lada.stop()}')
+spor_c = SportCar(227, 'Синий', 'Porsche 113', False)
+print(f'Если {spor_c.go()},то {lada.turn("направо")}')
+print(f'Когда {spor_c.name} поехал со скоростью {spor_c.speed} км/ч, то {lada.stop()}')
 
-GAZ = WorkCar(70, 'Желтый', 'Газель', False)
-print(f'У автомобиля {GAZ.name} средняя скорость {GAZ.show_speed()}')
-print(f'{GAZ.name} имеет {GAZ.color} цвет')
+gaz = WorkCar(70, 'Желтый', 'Газель', False)
+print(f'У автомобиля {gaz.name} средняя скорость {gaz.show_speed()}')
+print(f'{gaz.name} имеет {gaz.color} цвет')
 
-LG_P = PoliceCar(200, 'Белый, надпись Полиция', 'Лада Гранта', True)
-print(f'Автомобиль - {LG_P.name}, полицейская машинка? {LG_P.is_police}')
-print(LG_P.show_speed())
+lg_p = PoliceCar(200, 'Белый, надпись Полиция', 'Лада Гранта', True)
+print(f'Автомобиль - {lg_p.name}, полицейская машинка? {lg_p.is_police}')
+print(lg_p.show_speed())

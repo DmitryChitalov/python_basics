@@ -34,5 +34,5 @@ class Road:
         print(f'Необходимо {res} тонн асфальта: ')
 
 
-res_Road = Road(20, 5000)
-res_Road.calc()
+res_road = Road(20, 5000)
+res_road.calc()
