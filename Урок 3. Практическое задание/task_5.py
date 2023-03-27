@@ -6,3 +6,24 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def str_sum(string, ind):
+    arr = string.split(" ")
+    a = []
+    try:
+        for el in arr:
+            ind = el
+            a.append(int(el))
+    except ValueError:
+        return sum(a), ind
+    return sum(a), ind
+
+
+two_sum = 0
+i = ''
+while i != 'ы':
+    enter = input('Введите числа через пробел (ы - чтобы остановить): ')
+    tmp, i = str_sum(enter, i)
+    two_sum += tmp
+    print(f'Ответ: {two_sum}')
