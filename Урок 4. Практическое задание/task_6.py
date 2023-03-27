@@ -12,3 +12,31 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+
+def generator_1():
+    a = int(input('Введите стартовое число: '))
+    from itertools import islice
+    from itertools import count
+
+    for i in islice(count(a), 10):
+        print(i)
+
+
+generator_1()
+
+
+####################
+
+
+def generator_2():
+    list = [5, 3, 3, 1, 0, 4, 2, 4, 7, 3]
+
+    from itertools import islice
+    from itertools import cycle
+
+    for el in islice(cycle(list), 10):
+        print(el)
+
+
+generator_2()
