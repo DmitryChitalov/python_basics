@@ -6,3 +6,15 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+count = 0
+while True:
+    numbers = input("Введите числа через пробел: ").split()
+    for value in numbers:
+        if value == "a":
+            print(count)
+            print("Завершение программы")
+            exit()
+        count += int(value)
+    print(count)
+
+

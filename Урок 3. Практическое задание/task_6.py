@@ -8,3 +8,15 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(word):
+    i = 0
+    split_word = word.split()
+    while i < len(split_word):
+        split_word[i] = split_word[i].capitalize()
+        i += 1
+    return " ".join(split_word)
+
+
+print(int_func("text upper case link"))
