@@ -15,3 +15,24 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from time import sleep
+
+class TrafficLight:
+    # создание атрибута color для класса TrafficLight
+    def __init__(self, color):
+        self._color = color
+
+    def running(self):
+        for key, value in self._color.items():
+            # загорается нужный цвет светофора (согласно задания по очереди красный, желтый, зеленый)
+            print(key)
+            # через заданое время, происходит переключение на следующий цвет (7с, 2с, 5с)
+            sleep(value)
+
+
+Tra = TrafficLight(color={
+    "Красный": 7,
+    "Желтый": 2,
+    "Зеленый": 5})
+Tra.running()
