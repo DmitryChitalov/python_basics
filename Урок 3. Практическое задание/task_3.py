@@ -5,3 +5,12 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+def my_func(x, y, z):
+    result = x + y + z - min([x, y, z])
+    print(f'Сумма наибольших аргументов = {result}')
+
+my_func(
+    int(input('1й аргумент: ')),
+    int(input('2й аргумент: ')),
+    int(input('3й аргумент: '))
+)

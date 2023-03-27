@@ -17,3 +17,12 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def del_func(x, y):
+    try:
+        return x / y
+    except ZeroDivisionError:
+        return 'Деление на 0 запрещено'
+
+x = float(input('Введите число 1: '))
+y = float(input('Введите число 2: '))
+print(del_func(x, y))

@@ -8,3 +8,9 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+def int_func(text):
+    my_list = []
+    for i in range(len(text)):
+        my_list.append(text[i][0:1].title() + text[i][1:])
+    return ' '.join(my_list)
+print(int_func(input('Введите предложение (все слова должны быть с маленькой буквы): ').split()))
