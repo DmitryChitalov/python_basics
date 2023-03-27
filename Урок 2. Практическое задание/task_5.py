@@ -15,3 +15,14 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_row = [12, 8, 7, 6, 4, 3, 2]
+your_number = int(input("Введите любое целое число "))
+
+for i in range(1, your_number + 1):
+    new_row = int(input("Введите еще одно число "))
+    if new_row > 0:
+        my_row.append(new_row)
+        my_row.sort(reverse = True)
+        print(f"Новый рейтинг: {my_row}")
+
+
