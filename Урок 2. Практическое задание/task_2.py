@@ -11,3 +11,7 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+elements = input("Введите целые числа через пробел").split()
+elements[:-1:2], elements[1::2] = elements[1::2], elements[:-1:2]
+print(elements)
+

@@ -15,8 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
-my_list = [{"set1": "Moscow", "set2": "Berlin"}, {"yellow", "green", "blue"}, None, -30, 'Phone', True, 10.2 , ['1' , '2']]
-
 def my_type(element):
     for element in my_list:
         print(type(element))
