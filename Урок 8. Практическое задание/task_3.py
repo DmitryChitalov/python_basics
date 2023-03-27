@@ -9,3 +9,24 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+class ValueError(Exception):
+    def __init__(self, msg):
+        self.msg = msg
+
+
+l = []
+while True:
+    i = input('Введите число: ')
+    if i != '':
+        try:
+            if not i.isnumeric():
+                raise ValueError('Вы ввели не число!')
+        except ValueError as err:
+            print(err)
+        else:
+            l.append(i)
+    else:
+        break
+
+print(l)

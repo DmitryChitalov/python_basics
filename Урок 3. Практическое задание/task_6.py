@@ -8,3 +8,6 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+int_func = lambda arg1: arg1.title()
+string = input('input string: ')
+print(int_func(string))
