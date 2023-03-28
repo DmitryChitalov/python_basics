@@ -18,4 +18,4 @@ while number // 10 > 0:
     number = number // 10
 if number > max_digit:
     max_digit = number
-print(f"Самая большая цифра в числе: {max_digit}")
+print(f"Максимальная цифра в числе: {max_digit}")

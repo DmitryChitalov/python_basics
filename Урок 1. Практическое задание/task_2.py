@@ -10,4 +10,4 @@
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
 sec_count = int(input("Введите время в секундах: "))
-print(f"{sec_count} секунд - это {sec_count // 3600}ч:{sec_count % 3600 // 60}м:{sec_count % 3600 % 60}с")
+print(f"{sec_count} секунд - {sec_count // 3600}ч:{sec_count % 3600 // 60}м:{sec_count % 3600 % 60}с")

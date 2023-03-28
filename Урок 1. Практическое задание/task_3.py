@@ -9,8 +9,6 @@
 n + nn + nnn = 369
 """
 n = int(input("Введите целое положительное число: "))
-if n > 0 and n * 10 % 10 == 0:
-    n_string = str(n)
-    print(f"{n_string}+{2 * n_string}+{3 * n_string}={n + int(2 * n_string) + int(3 * n_string)}")
-else:
-    print(f"{n} не является целым положительным числом")
+n_string = str(n)
+print(f"{n_string}+{2 * n_string}+{3 * n_string}={n + int(2 * n_string) + int(3 * n_string)}")
+
