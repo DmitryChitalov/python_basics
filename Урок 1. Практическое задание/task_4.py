@@ -10,3 +10,12 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+number = int(input("Введите целое положительное число: "))
+max_digit = 0
+while number // 10 > 0:
+    if number % 10 > max_digit:
+        max_digit = number % 10
+    number = number // 10
+if number > max_digit:
+    max_digit = number
+print(f"Самая большая цифра в числе: {max_digit}")
