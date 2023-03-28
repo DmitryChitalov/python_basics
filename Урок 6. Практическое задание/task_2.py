@@ -14,19 +14,20 @@ class NewEx(Exception):
 
 
 try:
-    var_min, var_max = int(input("Введите нижнюю границу поиска элементов: ")), int(
-        input("Введите верхнюю границу поиска элементов: "))
+    var_min, var_max = int(input("Введите нижнюю границу поиска элементов (min -10): ")), int(
+        input("Введите верхнюю границу поиска элементов (max 50): "))
     if var_min == var_max or var_min > var_max:
         raise NewEx()
     list_a = []
     for i in range(1, 15):
         list_a.append(randint(-10, 50))
-    print(list_a)
     list_b = []
-    for i in range(len(list_a)):
-        if list_a[i] < var_max and list_a[i] > var_min:
-            list_b.append(list_a[i])
-    print(list_b)
+    for i in list_a:
+        if var_min < i < var_max:
+            list_b.append(list_a.index(i))
+    print(
+        f"Индексы элементов списка {list_a} в диапазоне от {var_min} до {var_max} ")
+    print(*list_b)
 except ValueError:
     print("Ошибка ввода числа")
 except NewEx:
