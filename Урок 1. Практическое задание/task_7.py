@@ -7,7 +7,7 @@
 
 ticket_number = int(input("Введите номер билета: "))
 if 99_999 < ticket_number < 1_000_000:
-    if int(str(ticket_number)[0]) + int(str(ticket_number)[1]) + int(str(ticket_number)[2]) == int(str(ticket_number)[3]) + int(str(ticket_number)[4]) + int(str(ticket_number)[5]):
+    if ticket_number[:3] == ticket_number[3:]:
         print("Вы счастливчик!")
     else:
         print("Повезёт в другой раз")
