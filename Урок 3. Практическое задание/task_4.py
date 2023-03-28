@@ -5,3 +5,25 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+# Функция возведения числа в степень.
+    result = x
+    n = 1
+    while n < -y:
+        result = result * x
+        n = n + 1
+    result = 1 / result
+    return result
+
+try:
+    arg_x = float(input("Введите x - действительное положительное число: "))
+    arg_y = int(input("Введите y - целое отрицательное число: "))
+except ValueError:
+    print("Неверно. Ошибочный ввод!")
+else:
+    if arg_x > 0 and arg_y < 0:
+        print(f"Результат: {arg_x} в степени {arg_y} = {my_func(arg_x,arg_y)}")
+    else:
+        print("Вы ввели некорректные числа!")
