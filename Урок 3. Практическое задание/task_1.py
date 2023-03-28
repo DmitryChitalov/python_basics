@@ -19,17 +19,22 @@ Process finished with exit code 0
 """
 
 
-def my_div():
+def my_div(var_divd, var_divr):
     try:
-        var_dividend = int(input("Введите первое число:"))  # переменная делимое
-        var_divider = int(input("Введите второе число:"))  # переменная делитель
-    except ValueError:  # проверка на возникновение ошибки типов данных (введено значение отличное от целого числа)
-        return "Ошибка типов введенных значений"
-    try:
-        var_res = var_dividend / var_divider
+        var_res = var_divd / var_divr
         return var_res
     except ZeroDivisionError:  # проверка на возникновение ошибки деления на нуль
         return "Ошибка деления на нуль"
 
 
-print(my_div())
+error_check = True
+var_dividend = None
+var_divider = None
+try:
+    var_dividend = int(input("Введите первое число:"))  # переменная делимое
+    var_divider = int(input("Введите второе число:"))  # переменная делитель
+except ValueError:  # проверка на возникновение ошибки типов данных (введено значение отличное от целого числа)
+    print("Ошибка типов введенных значений. Необходимо ввести целое число.")
+    error_check = False
+if error_check:
+    print("Результат деления первого числа на второе: ", my_div(var_dividend, var_divider))
