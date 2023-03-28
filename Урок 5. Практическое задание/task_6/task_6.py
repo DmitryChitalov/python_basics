@@ -5,3 +5,18 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+
+subjects = {}
+
+#Lines = {"Информатика:   100(л)   50(пр)   20(лаб)\n","Физика:   30(л)   —   10(лаб)\n","Физкультура:   —   30(пр)\n"}
+
+with open("subjects.txt", encoding='utf-8') as file1:
+	Lines = file1.readlines()
+
+for line in Lines:
+	data = line.replace('(', ' ').split()
+
+	subjects[data[0][:-1]] = sum(int(i) for i in data if i.isdigit())
+
+print(subjects)

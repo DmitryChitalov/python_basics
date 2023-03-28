@@ -5,3 +5,9 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def calculator(a, b):
+    try:
+        return a/b
+    except ZeroDivisionError as e:
+        print(f'Вы что? Пытаетесь делить на 0!')
+print(calculator(int(input('Введите первое число: ')), int(input('Введите второе число: '))))
