@@ -7,3 +7,14 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+a = open('text4.txt', 'r', encoding='utf-8')
+sueldos = []
+for i in a:
+    name = i.split()[0]
+    salary = i.split()[-1]
+    salary = float(salary.replace(',', '.'))
+    sueldos.append(salary)
+    if salary < 20000:
+        print(f'У сотрудника "{name}" доход меньше 20 000.00 руб.')
+print("Cредняя зарплата в компании:", sum(sueldos) / len(sueldos))
