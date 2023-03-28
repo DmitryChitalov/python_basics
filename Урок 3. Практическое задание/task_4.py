@@ -5,3 +5,22 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def my_func(x, y):
+    my_multiply = x**y
+    return my_multiply
+
+
+print(my_func(1.025, -3))
+
+
+def my_func(x, y):
+    arg1 = x ** y
+    arg2 = 1
+    i = 1
+    while i <= abs(y):
+        arg2 *= x
+        i += 1
+
+    return arg1, 1 / arg2
+
+
