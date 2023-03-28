@@ -33,3 +33,4 @@ elif discriminant == 0:
     print(var_x, var_y)
 elif discriminant < 0:
     print("решений нет")
+
