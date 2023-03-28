@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def my_dev(num1, num2):
+    try:
+        result = num1 / num2
+    except ZeroDivisionError:
+        return "Вы что? Пытаетесь делить на 0!"
+    return result
+
+try:
+    first_num = int(input("Введите первое число: "))
+    second_num = int(input("Введите второе число: "))
+    print(my_dev(first_num, second_num))
+except ValueError:  # проверка корректности данных
+    print("Ошибка ввода данных!")

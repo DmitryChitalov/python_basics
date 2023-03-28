@@ -6,3 +6,28 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+"""Функция убирает пробелы по обеим сторонам если они есть
+проверяет на заполненность список, если пуст возвращает значение 0
+если не пуст делит значения по разделителю пробел и преобразует в тип float 
+суммирует значения в получившимся списке"""
+
+summ = 0
+stop_sign = ''
+
+def summing_func(string, list_index):
+    user_input_list = string.split(" ")
+    finished_list = []
+    try:
+        for i in user_input_list:
+            list_index = i
+            finished_list.append(int(i))
+    except ValueError:
+        return sum(finished_list), list_index
+    return sum(finished_list), list_index
+
+while stop_sign != "!":
+    user_input = input("Пожалуйста, введите строку чисел, разделенных пробелом, или '!' для выхода: ")
+    temporary_result, special_sign = summing_func(user_input, stop_sign)
+    summ = summ + temporary_result
+    print(f"Текущий результат: {summ}")
