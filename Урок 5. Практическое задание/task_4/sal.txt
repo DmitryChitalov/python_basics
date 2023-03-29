@@ -1,0 +1,4 @@
+Petrov 11300
+Zadornov 21010
+Rahimov 13900
+Lopatin 39000
