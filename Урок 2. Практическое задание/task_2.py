@@ -11,3 +11,12 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+my_list = input("Элементы списка: ").split()
+index_0 = 0
+index_1 = 1
+while len(my_list) > index_1:
+    my_list[index_0], my_list[index_1] = my_list[index_1], my_list[index_0]
+    index_0 += 2
+    index_1 += 2
+print("Измененный список:", my_list)

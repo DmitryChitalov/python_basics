@@ -15,3 +15,9 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+my_list = [4, 2, 3, 5, 5]
+new_el = int(input('Новый элемент: '))
+my_list.append(new_el)
+my_list.sort(reverse=True)
+print(f'Рейтинг: {my_list}')

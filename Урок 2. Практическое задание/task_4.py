@@ -14,3 +14,8 @@
 1. раз
 2. перерефриж
 """
+
+my_list = input('Введите несколько слов: ').split()
+for ind, el in enumerate(my_list, 1):
+    print(f'{ind}. {el[:10]}')
+    
