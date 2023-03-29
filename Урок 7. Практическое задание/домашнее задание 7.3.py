@@ -38,7 +38,7 @@ cell1 = Cell(15)
 cell2 = Cell(10)
 
 print((cell1 + cell2).make_order(5))
-print((cell1 - cell2).make_order(5)) # выводит: Ошибка! для cell1 = Cell(12) Разность количества ячеек двух клеток меньше или равна нулю.
+print((cell1 - cell2).make_order(5)) # выводит: Ошибка! для cell1 = Cell(12), а cell2 = Cell(15) Разность количества ячеек двух клеток меньше или равна нулю.
 print((cell1 * cell2).make_order(5))
 print((cell1 / cell2).make_order(5))
 
