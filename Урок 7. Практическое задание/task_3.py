@@ -100,3 +100,72 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __add__(self, other):
+        return f'Сумма клеток =({self.quantity + other.quantity})'
+
+    def __sub__(self, other):
+        if self.quantity > other.quantity:
+            return f'Разность клеток = ({self.quantity - other.quantity})'
+        else:
+            return 'Разность меньше или равна "0"'
+
+    def __mul__(self, other):
+        return f'Умножение клеток = ({self.quantity * other.quantity})'
+
+    def __truediv__(self, other):
+        return f'Деление клеток = ({self.quantity // other.quantity})'
+
+    def make_order(self, a):
+        result = []
+        for el in range(self.quantity):
+            result.append('*')
+            if (el + 1) % a == 0:
+                result.append('\n')
+        return ''.join(result)
+
+
+print("Создаем объекты клеток.")
+cell1 = Cell(23)
+cell2 = Cell(21)
+
+cell3 = Cell(13)
+cell4 = Cell(15)
+
+print()
+
+print("Складываем:")
+print(cell1 + cell2)
+
+print()
+
+print("Вычитаем:")
+print(cell2 - cell1)
+print(cell4 - cell3)
+
+print()
+
+print("Умножаем:")
+print(cell2 * cell1)
+
+print()
+
+print("Делим:")
+print(cell1 / cell2)
+
+print()
+
+print("Организация ячеек по рядам:")
+print("Организация ячеект для cell1")
+print(cell1.make_order(5))
+print("Организация ячеект для cell2")
+print(cell2.make_order(10))
+print("Организация ячеект для cell3")
+print(cell3.make_order(6))
+print("Организация ячеект для cell4")
+print(cell4.make_order(10))
