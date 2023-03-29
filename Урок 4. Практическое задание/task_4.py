@@ -6,3 +6,10 @@
 Пример исходного списка: [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11].
 Результат: [23, 1, 3, 10, 4, 11]
 """
+
+from random import randint
+
+src_list = [randint(0, 10) for i in range(10, randint(20, 30))]
+gen_list = [src_list[i] for i in range(0, len(src_list)) if src_list.count(src_list[i]) == 1]
+print(f"Исходный список:\n {src_list}")
+print(f"Сформированный список:\n {gen_list}")
