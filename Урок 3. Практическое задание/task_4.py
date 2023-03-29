@@ -5,3 +5,20 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+def my_func(x, y):
+    i = 1
+    number = x
+    if y == -1:
+        return 1 / number
+    while i > y:
+        number *= x
+        i -= 1
+    return 1 / number
+print(my_func(2, -1))
+
+
+
+
+
+
