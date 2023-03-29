@@ -7,3 +7,19 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+print("Вариант без генератора")
+list_u = [20, 4, 3, 5, 10, 44, 3, 67, 66, 54, 80]
+list_r = []
+for i in range(0, len(list_u)-1):
+    if (list_u[i+1]) > (list_u[i]):
+        list_r.append(list_u[i+1])
+print(list_u)
+print(list_r)
+print("Вариант с генератором")
+list_r2 = []
+list_r2 = [el for el in list_u if (list_u[el]) > (list_u[el-1])]
+print(list_r2)
+
+
+
+

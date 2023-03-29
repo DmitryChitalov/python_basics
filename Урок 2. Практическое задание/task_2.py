@@ -11,3 +11,15 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+spisok = input("введите элементы списка ").split()
+if len(spisok) % 2 == 0:
+    for i in range(0, len(spisok)-1, 2):
+        x = spisok[i+1]
+        spisok[i+1] = spisok[i]
+        spisok[i] = x
+else:
+    for i in range(0, len(spisok)-2, 2):
+        x = spisok[i+1]
+        spisok[i+1] = spisok[i]
+        spisok[i] = x
+print(spisok)

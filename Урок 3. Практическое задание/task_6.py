@@ -8,3 +8,10 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+def int_func(word_u):
+    word_u = word_u.title()
+    return print(f" {word_u} ", end="")
+stroka = input("введите предложение ").split()
+for i in range(0, len(stroka)):
+    x = stroka[i]
+    int_func(x)
