@@ -7,3 +7,17 @@
 Иванов 23543.12
 Петров 13749.32
 """
+pay_dict = {}
+"""Открываем файл на чтение проходим по строкам делим на 2 значения и добавляем в словарь"""
+with open("file.txt", "r", encoding="utf-8") as ext_file:
+    for line in ext_file:
+        (key, val) = line.split()
+        pay_dict[key] = float(val)
+"""Проходимся по словарю, ищем значения меньше 20 тысяч и выводим их ключи"""
+for key, val in pay_dict.items():
+    if val < 20000:
+        print(f"{key} получает зарплату меньше 20 000 рублей")
+"""Считаем среднее значение значений в словаре"""
+average_pay = sum(pay_dict.values()) / len(pay_dict)
+print(f"Средняя величина дохода всех сотрудников = {average_pay:.2f}")
+
