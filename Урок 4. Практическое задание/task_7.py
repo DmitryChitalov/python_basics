@@ -12,6 +12,10 @@
 """
 #!/usr/bin/env python3
 from itertools import count
+
+n = int(input("Целое неотрицательное число: "))
+i = 0
+
 def fact(n):
     factorial = 1
 
@@ -21,9 +25,6 @@ def fact(n):
 
         factorial = factorial * x
         yield factorial
-
-n = int(input("Целое неотрицательное число: "))
-i = 0
 
 for el in fact(n):
     i += 1
