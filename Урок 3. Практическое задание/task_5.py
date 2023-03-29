@@ -1,3 +1,23 @@
+def num_sum(*nums):
+    s = 0
+    pr = False
+    for num in nums:
+        try:
+            if num:
+                s += float(num)
+        except ValueError:
+            pr = True
+    return s, pr
+ob_sum = 0
+while True:
+    numbers_string = input('Введите строку чисел через пробел или символ для выхода: ').split(' ')
+    s, sv = num_sum(*numbers_string)
+    ob_sum += s
+    print(f'сумма {ob_sum}')
+
+    if sv:
+        break
+
 """
 5. Программа запрашивает у пользователя строку чисел, разделенных пробелом. При нажатии Enter должна
     выводиться сумма чисел. Пользователь может продолжить ввод чисел, разделенных пробелом и снова
