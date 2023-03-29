@@ -23,7 +23,7 @@ class TrafficLight:
     def running(self):
         i = 0
         while i < 3:
-            print(f'{TrafficLight.__color[i]}')
+            print(f'{obj.__color[i]}')
             if i == 0:
                 sleep(7)
             elif i == 1:
@@ -33,7 +33,7 @@ class TrafficLight:
             i += 1
 
 
-TrafficLight = TrafficLight()
-TrafficLight.running()
+obj = TrafficLight()
+obj.running()
 
 
