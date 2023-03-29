@@ -14,3 +14,6 @@ while step_number not in magic_numbers:
 
 search_result = [i for i in range(step_number, 241, step_number)]
 print(search_result)
+
+no_prestidigitation = [j for j in range(20, 240) if j % 20 == 0 or j % 21 == 0]
+print(f"Если без обмана, то: {no_prestidigitation}")

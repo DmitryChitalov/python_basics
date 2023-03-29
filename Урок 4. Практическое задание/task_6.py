@@ -33,3 +33,26 @@ if script_choice == 1:
 else:
     print(f"Отличный выбор. Питон вам предложит итератор, повторяющий элементы некоторого списка, определенного заранее (Леонид Якубович подмигивает).")
     print(f"Список в студию! {predetermined_list}.")
+
+from itertools import count, cycle
+
+list_int = []
+
+a = int(input("Первое в последовательности >>> "))
+n = int(input("Последнее в последовательности >>> "))
+
+for x in count(a):
+    if x > n:
+        break
+    print(x)
+    list_int.append(x)
+
+print()
+print(list_int)
+
+count = 0
+for item in cycle(list_int):
+    if count >= len(list_int):
+        break
+    print(item)
+    count += 1

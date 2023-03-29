@@ -18,6 +18,6 @@ for i in initial_list:
     else:
         pass
 
-lc_result_list = [i for i in initial_list if initial_list.count(i) < 2 ]
+lc_result_list = [i for i in initial_list if initial_list.count(i) == 1 ]
 print(loopy_result_list)
 print(lc_result_list)
