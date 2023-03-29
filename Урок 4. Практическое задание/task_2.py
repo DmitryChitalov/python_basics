@@ -7,3 +7,17 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+init_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+# Вариант 1 (c традиционным итератором)
+new_list_1 = []
+for el in range(1, len(init_list)):
+    if init_list[el] > init_list[el - 1]:
+        new_list_1.append(init_list[el])
+
+# Вариант 2 (со списковым включением)
+new_list = [init_list[el] for el in range(1, len(init_list)) if init_list[el] > init_list[el-1]]
+
+print(f"Исходный список: {init_list}")
+print(f"Результат (Вариант 1): {new_list_1}")
+print(f"Результат (Вариант 2): {new_list}")
