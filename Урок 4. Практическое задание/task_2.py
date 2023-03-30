@@ -7,3 +7,6 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+a_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+a = [a_list[el] for el in range(1, len(a_list)) if a_list[el] > a_list[el - 1]]
+print(a)
