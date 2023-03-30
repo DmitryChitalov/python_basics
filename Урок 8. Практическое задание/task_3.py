@@ -11,7 +11,8 @@
 """
 
 class MyException(Exception):
-    pass
+    def __init__(self, txt):
+        self.txt = txt
 
 array = []
 

@@ -37,9 +37,9 @@ class Date:
         elif (Date.day < 1 or Date.day > 31):
             print('День должен быть в диапазоне от 1 до 31')
         else:
-            print(f'{Date.day_month_year} - корректна')
+            print(f'Дата {Date.day_month_year} - корректна')
 
-Date.set_day_month_year('04052020')
+Date.set_day_month_year(input('Введите дату в формате ddmmyyyy: '))
 print(Date.day_month_year)
 print(Date.day, Date.month, Date.year)
 Date.validate()
