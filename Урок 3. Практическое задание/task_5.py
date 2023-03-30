@@ -6,3 +6,23 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def calculate(): 
+    k = -5
+    sum_of_num = 0
+    while k == -5:
+        my_str = input("Введите числа через пробел: ") 
+        i = my_str.find('!')
+        if i == 0:
+            print(f'Сумма чисел = {sum_of_num}')
+            return "Символ остановки найден в начале строки."
+            
+        my_str = my_str.replace('!', '')
+        my_list = list(my_str.split())    
+        for j in range(len(my_list)):
+            sum_of_num += int(my_list[j])  
+        print(f'Сумма чисел = {sum_of_num}')
+        if i != -1:
+            return "Символ остановки найден не в начале строки."
+             
+
+print(calculate())
