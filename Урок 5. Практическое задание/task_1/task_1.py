@@ -3,3 +3,12 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+file_name = input("укажите имя файла на английском, без расширения: ")
+file = open(file_name + ".txt", "a")
+while True:
+    entered_str = input("введите строку и нажмите Enter, если строка будет пустая это окончит ввод \n")
+    if entered_str == "":
+        break
+    else:
+        file.writelines(entered_str + "\n")
+file.close()
