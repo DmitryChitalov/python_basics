@@ -6,3 +6,26 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+allin = 0
+
+the_line = str(print("Начнем"))
+words = 0
+while the_line[0] != 100:
+    if the_line[0] == 'q':
+        print("конец")
+        break
+    else:
+        the_line = str(input("Введите что хотите или q для выхода: "))
+        words = the_line.split(' ')
+        for word in words:
+          try:
+            value = int(word)
+            allin += value
+
+          except:
+             pass
+
+print(allin)
+
