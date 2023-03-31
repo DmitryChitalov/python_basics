@@ -1,3 +1,10 @@
+my_str = input("Введите ваши ФИО: ")
+separated = my_str.split(' ')
+for num, el in enumerate(separated, 1):
+    if len(el) > 10:
+        el = el[0:10]
+    print(f"{num}. - {el}")
+
 """
 4. Пользователь вводит строку из нескольких слов,
 разделённых пробелами. Вывести каждое слово с новой строки.
