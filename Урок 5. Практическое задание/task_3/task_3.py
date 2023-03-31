@@ -15,14 +15,8 @@ print("Уточняю расположение файла вывода функ�
 
 
 input_data = open("./input_file3.txt", "r")
-lines_in_file = 0
-words_in_line = 0
-counting_lines = {}
+russian_dict = {"1": "один", "2": "два", "3": "три", "4": "четыре"}
 
-for i in input_data:
-    lines_in_file +=1
+with open("input_file3.txt", 'r') as source_file:
+    source_content = source_file.readline()
 
-
-print(f"{lines_in_file} и {words_in_line}.")
-
-input_file.close()

@@ -9,3 +9,5 @@ Wozniak 24225.47
 Raymond 18034.00
 Torvalds 30560.01
 van Rossum 9587.62
+
+firm_1   ООО   10000   5000

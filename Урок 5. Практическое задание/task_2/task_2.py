@@ -5,18 +5,17 @@
 #!/usr/bin/env python3
 import os
 os.getcwd()
-print("Уточняю расположение файла вывода функцией os.getcwd():", os.getcwd())
+print("Уточняю расположение файла функцией os.getcwd():", os.getcwd())
 
-
-input_data = open("./input_file2.txt", "r")
 lines_in_file = 0
 words_in_line = 0
 counting_lines = {}
 
-for i in input_data:
-    lines_in_file +=1
-
-
-print(f"{lines_in_file} и {words_in_line}.")
-
-input_file.close()
+with open("input_file2.txt", "r") as file:
+    file_data = file.readlines()
+    
+    for i in file_data:
+        words_in_line = len(file_data[lines_in_file].split(" "))
+        counting_lines.update({lines_in_file: words_in_line})
+        lines_in_file += 1
+        print(f"В строке {lines_in_file} Питон прочел {words_in_line} сл.")
