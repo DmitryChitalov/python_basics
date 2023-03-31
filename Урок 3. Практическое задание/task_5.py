@@ -19,4 +19,4 @@ def num_sum():
         if i == 'е' or i == 'e':  # Русская и англ. раскладка
             break
     return total_sum
-print(f'Сумма чисел равна: {num_sum()}')
+print(f'Сумма чисел равна: {num_sum()} ')

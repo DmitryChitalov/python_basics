@@ -13,7 +13,6 @@
 def grow_func():
     word = input('Введите слово с маленькой буквы: ').title()
     return word
-
 def grow_func_2():
     word = input('Введите несколько слов с маленькой буквы: ').title().split()
     return word

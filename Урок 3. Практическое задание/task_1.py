@@ -18,13 +18,15 @@ Process finished with exit code 0
 Process finished with exit code 0
 """
 
-def div():
-    x = float(input('Введите первое число: '))
-    y = float(input('Введите второе число: '))
-    return x / y
-
+def div(x, y):
+    try:
+        result = x/y
+    except ZeroDivisionError:
+        return 'Так нельзя!'
+    return result
 try:
-
-    print(div())
-except ZeroDivisionError:
-    print('Ты чего? Так нельзя')
+    num1 = float(input('Введите первое число: '))
+    num2 = float(input('Введите второе число: '))
+    print(div(num1, num2))
+except ValueError:
+    print('Введите только числа!')
