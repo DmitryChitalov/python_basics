@@ -6,20 +6,12 @@
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
 import re
-temp_list = []
+result = {}
 try:
     with open("source.txt") as f_obj:
         for line in f_obj:
-            temp_list.append(re.sub('(\(.{1,3}\)|\.|\—)', '', line).split())
+            result[line.split(':')[0]] = sum(map(lambda x: int(x), re.findall('\d+', line)))
 except IOError:
     print("проблема с открытием файла. возможно его нет")
 
-final_dict = {}
-for el in temp_list:
-    hours_sum = 0
-    i = 1
-    while i < len(el):
-        hours_sum += int(el[i])
-        i += 1
-    final_dict[el[0]] = hours_sum
-print(final_dict)
+print(result)
