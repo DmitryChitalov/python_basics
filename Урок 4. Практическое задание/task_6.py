@@ -12,3 +12,33 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+from sys import argv
+
+def iterator_range(begin, end):
+    my_list = []
+    for el in count(begin):
+        if el > end:
+            break
+        else:
+            print(el)
+            my_list.append(el)
+    return my_list
+
+
+def iterator_cycle(input_list, end_of_cycle):
+    my_list = []
+    iterator = 1
+    for el in cycle(input_list):
+        if iterator > end_of_cycle:
+            break
+        print(el)
+        my_list.append(el)
+        iterator = iterator + 1
+    return my_list
+
+script_name, begin_range, end_range, end_cycle = argv
+init_list = iterator_range(int(begin_range), int(end_range))
+print()
+iterator_cycle(init_list, int(end_cycle))
