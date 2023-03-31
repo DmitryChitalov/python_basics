@@ -3,3 +3,11 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+f = open('test.txt', 'w', encoding='utf-8')
+text = input()
+while text:
+    f.writelines(text + '\n')
+    text = input("Введите данные: ")
+    if text == "":
+        break
+f.close()
