@@ -10,3 +10,22 @@
 Подсказка: факториал числа n — произведение чисел от 1 до n.
 Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 """
+#!/usr/bin/env python3
+from itertools import count
+
+n = int(input("Целое неотрицательное число: "))
+i = 0
+
+def fact(n):
+    factorial = 1
+
+    for x in count(1):
+        if x > n:
+            break
+
+        factorial = factorial * x
+        yield factorial
+
+for el in fact(n):
+    i += 1
+    print(f"!{i} = {el}")
