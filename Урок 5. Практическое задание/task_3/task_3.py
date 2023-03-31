@@ -8,3 +8,16 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+count_dict = {"One": "Один", "Two": "Два", "Three": "Три", "Four": "Четыре"}
+f_obj = open("t3in.txt", encoding="utf8")
+f_obj1 = open("t3out.txt", "w")
+my_list = []
+
+for line in f_obj:
+    my_list = line.split()
+    my_list[0] = count_dict.get(my_list[0])
+    f_obj1.write(" ".join(my_list))
+    f_obj1.write("\n")
+
+f_obj.close()
+f_obj1.close()
