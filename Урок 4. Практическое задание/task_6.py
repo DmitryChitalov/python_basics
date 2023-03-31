@@ -12,3 +12,25 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from sys import argv
+from itertools import count
+from itertools import cycle
+
+
+script_name, number = argv
+
+# а) итератор, генерирующий целые числа, начиная с указанного,
+for el in count(int(number)):
+    if el > 10:
+        break
+    else:
+        print(el)
+
+# б) итератор, повторяющий элементы некоторого списка, определенного заранее.
+c = 1
+for el in cycle(number):
+    if c > len(number):
+        break
+    print(el)
+    c += 1
