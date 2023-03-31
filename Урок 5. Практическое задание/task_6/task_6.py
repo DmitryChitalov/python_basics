@@ -5,3 +5,13 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+import re
+result = {}
+try:
+    with open("source.txt") as f_obj:
+        for line in f_obj:
+            result[line.split(':')[0]] = sum(map(lambda x: int(x), re.findall('\d+', line)))
+except IOError:
+    print("проблема с открытием файла. возможно его нет")
+
+print(result)
