@@ -8,3 +8,13 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+
+numb = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
+with open('test3.txt', 'r', encoding='utf-8') as i:
+    eng = i.read()
+    ru = eng
+for k, b in numb.items():
+    ru = ru.replace(k, b)
+
+with open('test3ru.txt', 'w', encoding='UTF-8') as fru:
+    fru.write(ru)
