@@ -20,3 +20,8 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+print(audi.show_speed())
+print(oka.show_speed())
+print(ford.police())
+print(ford.show_speed())
