@@ -25,7 +25,7 @@ if __name__ == '__main__':
     try:
         print('Для выхода введите пустую строку.')
         strings = user_data()
-        with open('my_file.txt', 'w',encoding='utf-8') as string_obj:
+        with open('my_file.txt', 'w', encoding='utf-8') as string_obj:
             string_obj.write('\n'.join(strings))
     except IOError:
         print('Ошибка при вводе данных!')
