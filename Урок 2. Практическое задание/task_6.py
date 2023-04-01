@@ -25,3 +25,7 @@
 “ед”: [“шт.”]
 }
 """
+analytics[key].append(value)
+
+for key, value in analytics.items():
+    print(f"{key}: {list(set(value))}")
