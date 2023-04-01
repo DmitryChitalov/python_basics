@@ -17,3 +17,19 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def my_division(y1=1, y2=1):
+    div1 = y1 / y2
+    return div1
+
+
+x1 = int(input("Введите первое число: "))
+x2 = int(input("Введите второе число: "))
+if x2 > 0 or x2 < 0:
+    print(my_division(x1, x2))
+else:
+    x2 = int(input("Введите второе число, отличное от 0: "))
+    while (x2 == 0):
+        x2 = int(input("Введите второе число, отличное от 0: "))
+    print(my_division(x1, x2))
