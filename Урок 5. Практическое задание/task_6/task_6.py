@@ -5,3 +5,8 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+for line in init_f:
+        subject, lecture, practice, laboratory = line.split()
+        lessons[subject] = int(lecture) + int(practice) + int(laboratory)
+    print(f'Общее количество занятий по предмету: \n {lessons}')
