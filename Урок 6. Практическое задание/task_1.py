@@ -15,3 +15,6 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+TrafficLight = TrafficLight()
+TrafficLight.run()

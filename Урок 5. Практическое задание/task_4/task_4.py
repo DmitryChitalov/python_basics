@@ -7,3 +7,8 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+if int(i[1]) < 20000:
+            poor.append(i[0])
+        sal.append(i[1])
+print(f'Оклад меньше 20.000 {poor}, средний оклад {sum(map(int, sal)) / len(sal)}')
