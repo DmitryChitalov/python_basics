@@ -5,3 +5,36 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    res = 1
+    while y != 0:
+        res = res * x
+        y += 1
+    print(1 / res)
+
+
+while True:
+    try:
+        x = float(input('Введите действительное положительное число x: '))
+    except ValueError:
+        print('Некорректный ввод!!!')
+    else:
+        if x <= 0:
+            print('x - действительное положительное число!!!')
+        else:
+            break
+
+while True:
+    try:
+        y = int(input('Введите целое отрицательное число y: '))
+     except ValueError:
+        print('Некорректный ввод!!!')
+    else:
+        if y >= 0:
+            print('y - целое отрицательное число!!!')
+        else:
+            break
+
+my_func(x, y)
