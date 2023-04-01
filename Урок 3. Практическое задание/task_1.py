@@ -17,3 +17,8 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+try:
+    print(f"{a} / {b} = {my_div(a, b)}")
+except ZeroDivisionError:
+    print("Ошибка: деление на ноль")
