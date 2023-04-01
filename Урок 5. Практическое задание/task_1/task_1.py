@@ -3,3 +3,8 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+
+my_file.close()
+with open('my_file.txt', 'r', encoding='utf-8') as file:
+    content = file.read()
+    print (content)

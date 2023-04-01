@@ -7,3 +7,8 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+new_list = [my_list[el] for el in range(1, len(my_list)) if
+            my_list[el] > my_list[el - 1]]
+
+print(new_list)
