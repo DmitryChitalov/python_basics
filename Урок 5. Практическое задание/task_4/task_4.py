@@ -7,3 +7,16 @@
 Иванов 23543.12
 Петров 13749.32
 """
+file_u = open("salary.txt", "r")
+sum_u = 0
+z = 0 # для подсчета количества сотрудников
+for line in file_u:
+    x = line.split()
+    y = int(x[1])
+    z += 1 # считаем кол-во сотрудников
+    sum_u = sum_u + y
+    if y < 20000:
+        print(f" зп менее 20тр", {line})
+
+print("средняя зп равна ", sum_u/z)
+file_u.close()
