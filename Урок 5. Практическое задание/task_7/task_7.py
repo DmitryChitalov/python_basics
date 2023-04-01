@@ -9,3 +9,8 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+
+profit.update(pr)
+    print(f'Прибыль каждой компании - {profit}')
+with open('my_file.json', 'w') as write_js:
+    json.dump(profit, write_js)
