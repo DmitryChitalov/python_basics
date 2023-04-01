@@ -20,3 +20,61 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+import random
+
+x = ['Налево', 'Направо', 'Назад']
+
+
+class Car:
+    speed = 70
+    color = 'red'
+    name = 'Mazda'
+    is_police = True
+    random_turn = random.choice(x)
+
+    def go(self):
+        print('машина поехала')
+
+    def stop(self):
+        print('машина остановилась')
+
+    def turn(self):
+        print(f'машина повернула {self.random_turn}')
+
+    def show_speed(self):
+        print(f'Текущая скорость автомобиля - {self.speed} км/ч')
+
+
+class TownCar(Car):
+    def show_speed(self):
+        if self.speed > 60:
+            print('Превышение скорости')
+        else:
+            print('Превышения скорости нет')
+
+
+class SportCar(Car):
+    pass
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed > 40:
+            print('Превышение скорости')
+        else:
+            print('Превышения скорости нет')
+
+
+class PoliceCar(Car):
+    pass
+
+
+town_car = TownCar()
+sport_car = SportCar()
+work_car = WorkCar()
+police_car = PoliceCar()
+
+town_car.show_speed()
+work_car.show_speed()
+sport_car.show_speed()
+police_car.turn()
