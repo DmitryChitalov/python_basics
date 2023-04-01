@@ -5,8 +5,7 @@
 """
 #!/usr/bin/env python3
 import os
-os.getcwd()
-print("Уточняю расположение файла вывода функцией os.getcwd():", os.getcwd())
+print("Внимание, текущая папка:", os.getcwd())
 
 user_input = " "
 output_file = open("./output_file.txt", "w", encoding='utf-8')

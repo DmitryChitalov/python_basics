@@ -4,8 +4,7 @@
 """
 #!/usr/bin/env python3
 import os
-os.getcwd()
-print("Уточняю расположение файла функцией os.getcwd():", os.getcwd())
+print("Внимание, текущая папка:", os.getcwd())
 
 lines_in_file = 0
 words_in_line = 0

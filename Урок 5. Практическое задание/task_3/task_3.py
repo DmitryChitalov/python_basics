@@ -10,13 +10,26 @@ Four — 4
 """
 #!/usr/bin/env python3
 import os
-os.getcwd()
-print("Уточняю расположение файла вывода функцией os.getcwd():", os.getcwd())
+print("Внимание, текущая папка:", os.getcwd())
 
-
-input_data = open("./input_file3.txt", "r")
-russian_dict = {"1": "один", "2": "два", "3": "три", "4": "четыре"}
+russian_dict = {"One": "один", "Two": "два", "Three": "три", "Four": "четыре"}
+lines_count = 0
+lines_to_write = []
+interpreters_line = ""
 
 with open("input_file3.txt", 'r') as source_file:
-    source_content = source_file.readline()
+    source_content = source_file.readlines()
 
+    for i in source_content:
+        interpreters_line = (russian_dict.get(source_content[lines_count]), source_content[1:])
+        lines_count += 1
+        print(interpreters_line)
+
+# with open("output_file.txt", "w", encoding="UTF-8") as output_file:
+#     output_file.write(output_data)
+
+#     for i in source_content:
+#         output_data = open("output_file3.txt", "+a", encoding="UTF-8")
+#         output_data.write
+#         output_data.close()
+#         lines_count += 1

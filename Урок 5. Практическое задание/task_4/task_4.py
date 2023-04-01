@@ -8,3 +8,6 @@
 Петров 13749.32
 """
 #!/usr/bin/env python3
+import os
+print("Внимание, текущая папка:", os.getcwd())
+
