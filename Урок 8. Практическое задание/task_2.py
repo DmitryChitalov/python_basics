@@ -5,3 +5,8 @@
 Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
 в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 """
+
+div = DivisionByNull(10, 100)
+print(DivisionByNull.divide_by_null(10, 2.2))
+print(DivisionByNull.divide_by_null(10, 0.1))
+print(div.divide_by_null(100, 0))

@@ -9,3 +9,8 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+print(try_except.new_input())
+
+try_except = Error(1)
+print(try_except.new_input())

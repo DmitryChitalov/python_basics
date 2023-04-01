@@ -15,3 +15,8 @@
 П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
+
+a = Position('Peter', 'The Great', 'Beekeeper', 100000, 25000)
+print(a.get_full_name())
+print(a.position)
+print(a.get_total_income())
