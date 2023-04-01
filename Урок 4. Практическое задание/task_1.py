@@ -14,5 +14,5 @@ def simple_calc():
     b = float(input('Введите суммы оплаты труда за 1 час : '))
     c = float(input('Укажите размер премии - '))
     pay = a * b
-    return pay * c
+    return pay + c
 print(f'Размер заработной платы составил: {simple_calc() }')
