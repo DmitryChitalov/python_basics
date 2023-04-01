@@ -1,0 +1,10 @@
+Ivanov 13000
+Petrov 44000
+Simonov 51400
+Kostin 34500
+Vasilev 47350
+Koptin 19453
+Burunov 89100
+Baskov 17300
+Volkov 66260
+Lisin 42500
