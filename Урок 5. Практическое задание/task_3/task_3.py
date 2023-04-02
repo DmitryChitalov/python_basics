@@ -12,24 +12,18 @@ Four — 4
 import os
 print("Внимание, текущая папка:", os.getcwd())
 
-russian_dict = {"One": "один", "Two": "два", "Three": "три", "Four": "четыре"}
-lines_count = 0
-lines_to_write = []
-interpreters_line = ""
+russian_dict = {"One": "Один", "Two": "Два", "Three": "Три", "Four": "Четыре"}
+line_to_write = ""
+block_to_write = []
 
 with open("input_file3.txt", 'r') as source_file:
     source_content = source_file.readlines()
 
     for i in source_content:
-        interpreters_line = (russian_dict.get(source_content[lines_count]), source_content[1:])
-        lines_count += 1
-        print(interpreters_line)
-
-# with open("output_file.txt", "w", encoding="UTF-8") as output_file:
-#     output_file.write(output_data)
-
-#     for i in source_content:
-#         output_data = open("output_file3.txt", "+a", encoding="UTF-8")
-#         output_data.write
-#         output_data.close()
-#         lines_count += 1
+        line_to_write = russian_dict.get(i.split()[0]), " ".join(i.split()[1:])
+        line_to_write = " ".join(line_to_write)
+        block_to_write.append(line_to_write)
+        
+with open("output_file3.txt", "w", encoding="UTF-8") as output_file:
+    for j in block_to_write:
+        output_file.write(f"{j}\n")
