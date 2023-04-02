@@ -23,14 +23,17 @@ speed, color, name, is_police (булево).
 import random
 
 x = ['Налево', 'Направо', 'Назад']
+random_x = random.choice(x)
 
 
 class Car:
-    speed = 70
-    color = 'red'
-    name = 'Mazda'
-    is_police = True
-    random_turn = random.choice(x)
+
+    def __init__(self, speed, color, name, is_police, random_turn):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+        self.random_turn = random_turn
 
     def go(self):
         print('машина поехала')
@@ -69,10 +72,10 @@ class PoliceCar(Car):
     pass
 
 
-town_car = TownCar()
-sport_car = SportCar()
-work_car = WorkCar()
-police_car = PoliceCar()
+town_car = TownCar(60, 'red', 'Mazda', False, random_x)
+sport_car = SportCar(90, 'blue', 'Opel', False, random_x)
+work_car = WorkCar(30, 'black', 'Nissan', False, random_x)
+police_car = PoliceCar(60, 'red', 'Mazda', True, random_x)
 
 town_car.show_speed()
 work_car.show_speed()

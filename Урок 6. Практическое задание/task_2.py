@@ -19,17 +19,21 @@ length (длина в метрах), width (ширина в метрах).
 
 
 class Road:
+
+    mass_ = 25
+    thickness = 5
+
     def __init__(self, length, width):
         self.__length = length
         self.__width = width
 
-    def weight(self, mass_, thickness):
-        asphalt_mass = self.__length * self.__width * mass_ * thickness
+    def weight(self):
+        asphalt_mass = self.__length * self.__width * self.mass_ * self.thickness
 
         return print(
-            f'{self.__length}m * {self.__width}m * {mass_}kg * {thickness}sm = '
+            f'{self.__length}m * {self.__width}m * {self.mass_}kg * {self.thickness}sm = '
             f'{asphalt_mass} kg = {int(asphalt_mass / 1000)}t')
 
 
 task_2 = Road(20, 5000)
-task_2.weight(25, 5)
+task_2.weight()

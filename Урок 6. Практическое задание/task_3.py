@@ -19,10 +19,12 @@ d = {"wage": 10000, "bonus": 5000}
 
 
 class Worker:
-    name = "Владимир"
-    surname = "Валерьянов"
-    position = "Менеджер"
-    _income = d
+
+    def __init__(self, name, surname, position, _income):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self._income = _income
 
 
 class Position(Worker):
@@ -38,7 +40,7 @@ class Position(Worker):
                f'Зарплата сотрудника: {self._income["wage"] + self._income["bonus"]}'
 
 
-task_3 = Position()
+task_3 = Position('Vasya', 'Pupkin', 'Manager', d)
 task_3.get_full_name()
 task_3.get_total_income()
 print(task_3)

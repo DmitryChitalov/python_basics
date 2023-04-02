@@ -16,7 +16,7 @@
 
 
 class Stationery:
-    title = None
+    title = 'Лучшее что я рисовал в жизни!'
 
     def draw(self):
         print('Запуск отрисовки.')
