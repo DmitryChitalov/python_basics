@@ -7,3 +7,17 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+list_old = [2, 5, 7, 6, 1, 16, 8, 33, 301, 9, 66]
+
+# без генератора
+list_new_1 = []
+for el in range(1, len(list_old)):
+    if list_old[el] > list_old[el - 1]:
+        list_new_1.append(list_old[el])
+
+print(list_new_1)
+
+# с генератором
+list_new_2 = [list_old[el] for el in range(1, len(list_old)) if list_old[el] > list_old[el - 1]]
+
+print(list_new_2)
