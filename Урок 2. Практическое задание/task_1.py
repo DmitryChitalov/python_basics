@@ -12,7 +12,7 @@
 <class 'int'>
 <class 'str'>
 <class 'float'>
-<class 'bool'>
+<class 'bool'>:
 <class 'NoneType'>
 """
 
