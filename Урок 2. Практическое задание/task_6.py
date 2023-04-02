@@ -33,12 +33,14 @@ product_sort = {
     'кол-во': set([])
 }
 count_params = 0
-while count_params != 2:
+
+count_prod = int(input('Сколько продуктов будет?: '))
+while count_params != count_prod:
     count_params += 1
     name_product = input('\nВведите название продукта: ')
-    price_product = input('Введите цену продукта: ')
+    price_product = float(input('Введите цену продукта: '))
     type_quantity = 'шт.'
-    quantity_product = input(f'Введите кол-во {type_quantity} продукта: ')
+    quantity_product = int(input(f'Введите кол-во {type_quantity} продукта: '))
 
     params = (count_params, {
         'название': name_product,
