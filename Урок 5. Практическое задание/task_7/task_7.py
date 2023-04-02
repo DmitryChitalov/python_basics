@@ -19,7 +19,31 @@
 #!/usr/bin/env python3
 
 input_data = []
+winners_data = []
+profit_calc = []
+profitability_list = []
+counter = 0
+average_profit = []
 
 with open("input_file7.txt") as input_source:
     for i in input_source:
         input_data.append(i)
+
+    for j in input_data:
+        print(j.strip())
+        fiscal_data = j.split()
+        if int(fiscal_data[2]) > int(fiscal_data[3]):
+            winners_data.append(j.strip())
+
+    for k in winners_data:
+        profit_calc = k.split()
+        
+    for l in profit_calc:
+        single_profit = [m for m in profit_calc if (int(profit_calc[2]) - int(profit_calc[3]) > 0)]
+        profitability_list.append(single_profit)
+    
+    average_profit = sum(profitability_list) / len(winners_data)
+    
+    print(type(profitability_list), profitability_list)
+    
+    print(type(average_profit), average_profit)
