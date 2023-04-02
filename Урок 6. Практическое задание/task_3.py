@@ -12,6 +12,35 @@
 Проверить работу примера на реальных данных (создать экземпляры класса Position, передать данные,
 проверить значения атрибутов, вызвать методы экземпляров).
 
-П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
+П.С. попытайтесь добиться вывода информации о сотруднике также через перегрузку __str__
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
+d = {"wage": 10000, "bonus": 5000}
+
+
+class Worker:
+
+    def __init__(self, name, surname, position, _income):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self._income = _income
+
+
+class Position(Worker):
+
+    def get_full_name(self):
+        print(f'ФИО: {self.surname} {self.name} - {self.position}')
+
+    def get_total_income(self):
+        print(f'Зарплата сотрудника: {self._income["wage"] + self._income["bonus"]}')
+
+    def __str__(self):
+        return f'ФИО: {self.surname} {self.name} - {self.position} \n' \
+               f'Зарплата сотрудника: {self._income["wage"] + self._income["bonus"]}'
+
+
+task_3 = Position('Vasya', 'Pupkin', 'Manager', d)
+task_3.get_full_name()
+task_3.get_total_income()
+print(task_3)

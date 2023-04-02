@@ -20,3 +20,64 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+import random
+
+x = ['Налево', 'Направо', 'Назад']
+random_x = random.choice(x)
+
+
+class Car:
+
+    def __init__(self, speed, color, name, is_police, random_turn):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+        self.random_turn = random_turn
+
+    def go(self):
+        print('машина поехала')
+
+    def stop(self):
+        print('машина остановилась')
+
+    def turn(self):
+        print(f'машина повернула {self.random_turn}')
+
+    def show_speed(self):
+        print(f'Текущая скорость автомобиля - {self.speed} км/ч')
+
+
+class TownCar(Car):
+    def show_speed(self):
+        if self.speed > 60:
+            print('Превышение скорости')
+        else:
+            print('Превышения скорости нет')
+
+
+class SportCar(Car):
+    pass
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed > 40:
+            print('Превышение скорости')
+        else:
+            print('Превышения скорости нет')
+
+
+class PoliceCar(Car):
+    pass
+
+
+town_car = TownCar(60, 'red', 'Mazda', False, random_x)
+sport_car = SportCar(90, 'blue', 'Opel', False, random_x)
+work_car = WorkCar(30, 'black', 'Nissan', False, random_x)
+police_car = PoliceCar(60, 'red', 'Mazda', True, random_x)
+
+town_car.show_speed()
+work_car.show_speed()
+sport_car.show_speed()
+police_car.turn()
