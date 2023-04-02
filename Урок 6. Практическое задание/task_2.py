@@ -19,14 +19,15 @@ length (длина в метрах), width (ширина в метрах).
 
 
 class Road:
+    weight_cover_meter = 25
+    fatness = 0.05
+
     def __init__(self, length, width):
         self._length = length
         self._width = width
-        self.weight_cover_meter = 25
-        self.fatness = 0.05
 
     def asphalt_calculation(self):
-        return self._length * self._width * self.weight_cover_meter * self.fatness / 1000
+        return self._length * self._width * road.weight_cover_meter * road.fatness / 1000
 
 
 road = Road(20, 5000)
