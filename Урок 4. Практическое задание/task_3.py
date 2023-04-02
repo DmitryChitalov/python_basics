@@ -4,8 +4,6 @@
 Подсказка: использовать функцию range() и генераторное выражение.
 """
 
-if __name__ == '__main__':
-    result = (i for i in range(20, 241) if not i % 20 or not i % 21)
+list = [i for i in range(20, 240) if i % 20 == 0 or i % 21 == 0]
 
-    print(f"Is generator object: {result.__class__.__name__ == 'generator'}")
-    print(list(result))
+print("Список чисел кратных 20 или 21 в диапазоне [20..240): ", list)
