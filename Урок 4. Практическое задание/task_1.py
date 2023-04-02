@@ -13,9 +13,9 @@ f_obj, fio_sotr, vir_h, stav_h, prem = sys.argv
 
 def calculate_salary (vir_h, stav_h, prem):
     try:
-        print (f'Сотрудник {fio_sotr} заработал {(int(vir_h) * int(stav_h)) + int(prem)}')
+        print(f'Зарплата сотрудника {fio_sotr} составила {(int(vir_h) * int(stav_h)) + int(prem)}')
     except TypeError:
-        print ("Операция применена к объекту несоответствующего типа")
+        print("Операция не применима к объекту данного типа")
         exit()
 
 calculate_salary (vir_h, stav_h, prem)
