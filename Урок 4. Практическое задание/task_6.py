@@ -13,7 +13,7 @@
 при котором повторение элементов списка будет прекращено.
 """
 # 1
-from itertools import count
+from itertools import count, cycle
 
 for el in count(10):
     if el > 20:
@@ -22,8 +22,6 @@ for el in count(10):
         print(el)
 
 # 2
-from itertools import cycle
-
 a = 0
 for el1 in cycle("ВЕСНА"):
     if a > 10:
