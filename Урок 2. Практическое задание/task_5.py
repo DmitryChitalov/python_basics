@@ -15,3 +15,10 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+my_list = [5, 3, 3, 2, 1]
+user_enter = int(input('Пользователь ввел число: '))
+if user_enter >= 1:
+    my_list.append(user_enter)
+    my_list.sort(reverse=True)
+    print(f'Пользователь ввел число {user_enter}. Результат: {my_list}.')

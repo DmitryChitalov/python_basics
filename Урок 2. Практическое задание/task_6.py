@@ -25,3 +25,36 @@
 “ед”: [“шт.”]
 }
 """
+product_list = []
+product_sort = {
+    'название': set([]),
+    'цена': set([]),
+    'ед.': set([]),
+    'кол-во': set([])
+}
+count_params = 0
+while count_params != 2:
+    count_params += 1
+    name_product = input('\nВведите название продукта: ')
+    price_product = input('Введите цену продукта: ')
+    type_quantity = 'шт.'
+    quantity_product = input(f'Введите кол-во {type_quantity} продукта: ')
+
+    params = (count_params, {
+        'название': name_product,
+        'цена': price_product,
+        'ед.': type_quantity,
+        'кол-во': quantity_product
+    })
+    product_list.append(params)
+for count in range(count_params):
+    for name_ in product_list[count][1]:
+        product_sort[name_].add(product_list[count][1][name_])
+
+print('\nВывод готовой структуры')
+for count_product in range(count_params):
+    print(f'{product_list[count_product]}')
+
+print('\nВывод аналитики о товарах')
+for name_ in product_sort.keys():
+    print(f'{name_}: {product_sort[name_]}')
