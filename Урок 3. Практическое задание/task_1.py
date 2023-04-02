@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def div(*args):
+
+    try:
+        arg1 = int(input("Введите число "))
+        arg2 = int(input("Введите делитель "))
+        res = arg1 / arg2
+    
+    except ZeroDivisionError:
+        return "Вы что? Пытаетесь делить на 0"
+    return res
+  
+print(f'result  {div()}')

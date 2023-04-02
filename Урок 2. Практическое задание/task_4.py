@@ -14,3 +14,14 @@
 1. раз
 2. перерефриж
 """
+xstr = input("введите строку ")
+xword = []
+num = 1
+for el in range(xstr.count(' ') + 1):
+    xword = xstr.split()
+    if len(str(xword)) <= 10:
+        print(f" {num} {xword [el]}")
+        num += 1
+    else:
+        print(f" {num} {xword [el] [0:10]}")
+        num += 1

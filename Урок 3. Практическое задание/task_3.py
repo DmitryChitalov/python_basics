@@ -5,3 +5,11 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+def func(x , y, z):
+    if x >= z and y >= z:
+        return x + y
+    elif x > y and x < z:
+        return x + z
+    else:
+        return y + z
+print(f'{func(int(input("Введите первое число: ")), int(input("Введите второе число: ")), int(input("Введите третье число: ")))}')

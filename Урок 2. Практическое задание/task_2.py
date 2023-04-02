@@ -11,3 +11,13 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+ele_count = int(input("Введите количество элементов"))
+xlist = []
+i = 0
+el = 0
+while i < ele_count:
+    xlist.append(input("Введите следующее значение списка "))
+    i += 1
+for elem in range(int(len(xlist)/2)):
+        xlist[el], xlist[el + 1] = xlist [el + 1], xlist[el]
+        el += 2

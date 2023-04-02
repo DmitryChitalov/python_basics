@@ -6,3 +6,19 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+def sum ():
+    sum_res = 0
+    ext = False
+    while ext == False:
+        numb = input('Введите числа через пробел f- для выхода ').split()
+        res = 0
+        for el in range(len(numb)):
+            if numb[el] == 'f':
+                ext = True
+                break
+            else:
+                res = res + int(numb[el])
+        sum_res = sum_res + res
+        print(f'{sum_res}')
+    print(f'{sum_res}')
+sum()

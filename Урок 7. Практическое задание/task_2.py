@@ -25,3 +25,42 @@
 
 Два класса: абстрактный и Clothes
 """
+from abc import ABC, abstractmethod
+
+class WorkingForm(ABC):
+    @abstractmethod
+    def fabric_calculation(self):
+        pass
+
+class Coat(WorkingForm):
+    def __init__(self, v):
+        self.v = v
+    @property
+    def fabric_calculation(self):
+        V = self.v/6.5 + 0.5
+        return f'Расход ткани на пальто = {V}'
+
+class Suite(WorkingForm):
+    def __init__(self, h):
+        self.h = h
+    @property
+    def fabric_calculation(self):
+        H = 2*self.h + 0.3
+        return f'Расход ткани на костюм = {H}'
+       
+class TotalFabric(WorkingForm):
+    def __init__(self, v, h):
+        self.V = v
+        self.H = h
+
+    @property
+    def fabric_calculation(self):
+        all = (self.V/6.5 + 0.5) + (2*self.H + 0.3)
+        return f'Общий расход ткани = {all}'
+
+coat = Coat(130)
+suite = Suite(1)
+total = TotalFabric(130, 1)
+print(suite.fabric_calculation)
+print(coat.fabric_calculation)
+print(total.fabric_calculation)
