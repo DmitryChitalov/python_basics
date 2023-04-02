@@ -1,3 +1,12 @@
+def user (name, lastname, year_of_birthday, city, email, phone):
+    return print(f'Имя: {name}, фамилия: {lastname}, год рождения: {year_of_birthday}, город проживания: {city}, email: {email}, телефон: {phone}')
+user(name = input('Имя: '), lastname = input('Фамилия: '), year_of_birthday = input('Год рождения: '), city = input('Город проживания: '), email = input('email: '), phone=input('телефон: '))
+
+
+
+
+
+
 """
 2. Реализовать функцию, принимающую несколько параметров,
 описывающих данные пользователя: имя, фамилия, год рождения, город проживания, email, телефон.
