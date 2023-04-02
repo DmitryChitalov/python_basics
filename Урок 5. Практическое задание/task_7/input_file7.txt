@@ -1,13 +1,11 @@
-Turing 14414.84
-Ritchie 25017.37
-Thompson 10934.35
-Kernighan 16005.31
-Stroustrup 26025.39
-Berners-Lee 16670.65
-Knuth 14591.54
-Wozniak 24225.47
-Raymond 18034.00
-Torvalds 30560.01
-van Rossum 9587.62
-
-firm_1   ООО   10000   5000
+Turing ПАО 1441 484
+Ritchie ОАО 2501 1737
+Thompson ОАО 1093 435
+Kernighan ОАО 1600 531
+Stroustrup ЗАО 2602 2539
+Berners-Lee ООО 1667 2065
+Knuth ООО 1459 1540
+Wozniak ООО 2422 1547
+Raymond ЗАО 1803 400
+Torvalds ООО 3056 6001
+Eich ООО 958 762
