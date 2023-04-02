@@ -8,4 +8,4 @@ Knuth 14591.54
 Wozniak 24225.47
 Raymond 18034.00
 Torvalds 30560.01
-van Rossum 9587.62
+Eich 9587.62
