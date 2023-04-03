@@ -18,32 +18,41 @@
 """
 #!/usr/bin/env python3
 
+import json
+
 input_data = []
 winners_data = []
+data_per_business = {}
 profit_calc = []
 profitability_list = []
-counter = 0
-average_profit = []
+average_profit = 0
+average_profit_dict = {}
+happy_end = []
+
 
 with open("input_file7.txt") as input_source:
     for i in input_source:
         input_data.append(i)
 
     for j in input_data:
-        print(j.strip())
         fiscal_data = j.split()
+        data_per_business[fiscal_data[0]] = (int(fiscal_data[2]) - int(fiscal_data[3]))
         if int(fiscal_data[2]) > int(fiscal_data[3]):
             winners_data.append(j.strip())
-
+    
     for k in winners_data:
         profit_calc = k.split()
-        
-    for l in profit_calc:
-        single_profit = [m for m in profit_calc if (int(profit_calc[2]) - int(profit_calc[3]) > 0)]
+        single_profit = (int(profit_calc[2]) - int(profit_calc[3]))
         profitability_list.append(single_profit)
-    
-    average_profit = sum(profitability_list) / len(winners_data)
-    
-    print(type(profitability_list), profitability_list)
-    
-    print(type(average_profit), average_profit)
+                
+    average_profit = sum(profitability_list) / len(profitability_list)
+
+    average_profit_dict["average_profit"] = average_profit
+
+    happy_end = [data_per_business, average_profit_dict]
+
+json_format = json.dumps(happy_end)
+print(json_format)
+
+with open("output_file7.json", "w", encoding="UTF-8") as output_file:
+    json.dump(happy_end, output_file, ensure_ascii = False, indent = 4)

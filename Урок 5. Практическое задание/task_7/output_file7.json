@@ -1,0 +1,18 @@
+[
+    {
+        "Turing": 957,
+        "Ritchie": 764,
+        "Thompson": 658,
+        "Kernighan": 1069,
+        "Stroustrup": 63,
+        "Berners-Lee": -398,
+        "Knuth": -81,
+        "Wozniak": 875,
+        "Raymond": 1403,
+        "Torvalds": -2945,
+        "Eich": 196
+    },
+    {
+        "average_profit": 748.125
+    }
+]
