@@ -22,4 +22,4 @@ user_name = input('Введите имя пользователя: ')
 user_password = input('Введите пароль: ')
 user_age = input('Введите Ваш возраст: ')
 
-print('Ваши данные для входа в аккаунт: Имя -', user_name, '; Пароль -', user_password, '; Возраст -', user_age)
+print(f'Ваши данные для входа в аккаунт: Имя - {user_name}; Пароль - {user_password}; Возраст - {user_age};')
