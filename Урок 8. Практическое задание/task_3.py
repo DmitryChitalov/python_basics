@@ -9,3 +9,24 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+
+class CheckNumbers(Exception):
+    def __init__(self):
+        pass
+
+
+num_check_list = []
+num = input('Введите значение, для завершения ввода введите q: ')
+while num != 'q':
+    try:
+        if num.isnumeric() is True:
+            num_check_list.append(num)
+            num = input('Введите значение, для завершения ввода введите q: ')
+        else:
+            raise CheckNumbers()
+    except CheckNumbers:
+        print('Ошибка! Вы ввели строку, введите число.')
+        num = input('Введите значение массива, для прекращения ввода введите q: ')
+
+print(f'Полученный массив: {num_check_list}')
