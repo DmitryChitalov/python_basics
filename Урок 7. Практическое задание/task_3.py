@@ -27,13 +27,15 @@ class Worker:
 
 class Position(Worker):
 
+    def __str__(self):
+        return (f'Полное имя: {self.get_full_name()}. '
+                f'Доход: {self.get_total_income()}')
+
     def get_full_name(self):
         return (f'{self.name} {self.surname}')
 
     def get_total_income(self):
         return self._income['wage'] + self._income['bonus']
 
-
 personal = Position('Aliakse', 'Pchelkin', 'Trudyaga', 220, 15)
-print(f'Полное имя: {personal.get_full_name()}')
-print(f'Доход: {personal.get_total_income()} $$')
+print(personal)
