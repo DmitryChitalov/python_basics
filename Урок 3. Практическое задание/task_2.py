@@ -8,3 +8,14 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+# f_name = input('Введите имя: ')
+# l_name = input('Введите фамилию: ')
+# city = input('Введите город: ')
+# def second_func(f_name, l_name, city):
+#     print = f_name, l_name, " из города", city
+
+def func_2(name, l_name, city):
+    print(f"{name} {l_name} из города {city}")
+func_2(name = input('Введите имя: '), l_name = input('Введите фамилию: '), city = input('Введите город: '))
+
