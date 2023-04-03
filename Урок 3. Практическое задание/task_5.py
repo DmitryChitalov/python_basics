@@ -6,3 +6,26 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+quit_u = False
+def find_sum():
+    str_pr = input(" введите строку чисел, разделенных пробелом ").split()
+    if str_pr[len(str_pr) - 1] == "t":
+        global quit_u
+        quit_u = True
+        print("выходим")
+        str_pr = str_pr[:-1]
+        int_lst = [int(x) for x in str_pr]
+        return sum(int_lst)
+    else:
+        quit_u = False
+        print("не выходим")
+        int_lst = [int(x) for x in str_pr]
+        return sum(int_lst)
+x = 0
+while True:
+    x = x + find_sum()
+    print(f" сумма равна {x}")
+    if quit_u == True:
+        break
+
+
