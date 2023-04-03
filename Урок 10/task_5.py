@@ -10,12 +10,15 @@
 
 import subprocess
 import chardet
+import os
 
 for sites in ['yandex.ru', 'youtube.com']:
-    args = ['ping', sites]
-    subproc_ping = subprocess.Popen(args, stdout=subprocess.PIPE)
-    for line in subproc_ping.stdout:
+    ARGS = ['ping', sites]
+    YA_PING = subprocess.Popen(ARGS, stdout=subprocess.PIPE)
+    for line in YA_PING.stdout:
         result = chardet.detect(line)
         line = line.decode(result['encoding']).encode('utf-8')
         print(line.decode('utf-8'))
-exit()
+
+print(os.name)
+
