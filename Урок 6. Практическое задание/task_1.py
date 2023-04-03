@@ -15,3 +15,18 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+from itertools import cycle
+
+class TrafficLight:
+    def __init__(self):
+        self.__color = (('red', 5), ('yellow'), 2), ('green', 5))
+
+    def running(self):
+        '''работа светофора'''
+        for color, sec in cycle(self.__color):
+            print(color, '(wait {} sec)'.format(sec))
+            sleep(sec)
+
+traffic_light = TrafficLight()
+traffic_light.running
