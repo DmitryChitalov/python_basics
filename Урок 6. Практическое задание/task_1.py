@@ -20,7 +20,7 @@ from itertools import cycle
 
 class TrafficLight:
     def __init__(self):
-        self.__color = (('red', 5), ('yellow'), 2), ('green', 5))
+        self.__color = (('red', 5), ('yellow', 2), ('green', 5))
 
     def running(self):
         '''работа светофора'''
@@ -30,3 +30,7 @@ class TrafficLight:
 
 traffic_light = TrafficLight()
 traffic_light.running
+
+# for i in range(7, -1, -1):
+#     time.sleep(1)
+#     print(f'\r{i}', end='')
