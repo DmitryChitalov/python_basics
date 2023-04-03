@@ -1,0 +1,11 @@
+Turing 14414.84
+Ritchie 25017.37
+Thompson 10934.35
+Kernighan 16005.31
+Stroustrup 26025.39
+Berners-Lee 16670.65
+Knuth 14591.54
+Wozniak 24225.47
+Raymond 18034.00
+Torvalds 30560.01
+Eich 9587.62
