@@ -8,3 +8,21 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(text):
+    return text.title()
+
+
+def my_func(new_text):
+    result = ""
+
+    for text in new_text.split(" "):
+        result += int_func(text) + " "
+    return result
+
+
+new_text = input("Введите строку из слов разделенных пробелом: ")
+
+print(f"Вывод исходной строки с заглавными буквами в каждом слове: {my_func(new_text)}")
+

@@ -6,3 +6,27 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def my_func(*args):
+    score = 0
+    symbol = False
+    for i in args:
+        try:
+            if i:
+                score += int(i)
+        except ValueError:
+            symbol = True
+    return score, symbol
+
+
+total_sum = 0
+
+while True:
+    nums_list = input('Введите строку чисел, разделенных пробелом: ').split(' ')
+    summa, stop_symb = my_func(*nums_list)
+    total_sum += summa
+    print(f"Сумма чисел: {total_sum}")
+
+    if stop_symb:
+        break
