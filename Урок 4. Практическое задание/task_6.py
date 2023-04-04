@@ -12,3 +12,21 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+start_numb = int(input("Введите начальное число списка: "))
+end_numb = int(input("Введите конечное число списка: "))
+
+my_list = []
+for el in count(start_numb):
+    if el > end_numb:
+        break
+    my_list.append(el)
+print(my_list)
+
+for el in cycle(my_list):
+    if el >= end_numb:
+        print(el)
+        break
+    print(el)
