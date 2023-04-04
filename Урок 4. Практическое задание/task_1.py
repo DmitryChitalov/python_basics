@@ -6,3 +6,11 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+def wage_calculation():
+    job_time = float(input('Отработанно (час): '))
+    rate = float(input('Ставка в час (руб): '))
+    premial = float(input('Сумма премии (руб): '))
+    wage = job_time * rate + premial
+    print(f'Заработная плата сотрудника  {round(wage)} рублей {round(wage *100) %100} копеек')
+
+wage_calculation()
