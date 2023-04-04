@@ -5,3 +5,16 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(a, n):
+    res = 1
+    for i in range(abs(n)):
+        res *= a
+    if n <= 0:
+        return res
+    else:
+        return 1 / res
+
+
+print(my_func(float(input("Первое значение - ")), int(input("Второе значение - "))))
