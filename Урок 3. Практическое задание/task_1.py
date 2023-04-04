@@ -17,3 +17,11 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def division(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:  # Обработка ситуации деления на ноль
+        print("На ноль делить нельзя!")
+dividend = int(input('Введите делимое: '))
+divider = int(input('Введите делитель: '))
+print(division(dividend, divider))
