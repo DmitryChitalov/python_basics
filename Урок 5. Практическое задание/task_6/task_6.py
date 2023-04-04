@@ -5,3 +5,23 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+my_dict = dict()
+open_file = open("task_file6.txt", encoding="utf8")
+for line in open_file:
+    my_list = line.split(':')
+    hrs_all = 0
+    my_list_1 = my_list[1].split(' ')
+    for el in my_list_1:
+        if el != "":
+            try:
+                hrs_all += int("".join(st_el for st_el in el if st_el.isdecimal()))
+            except ValueError:
+                continue
+    my_dict.update({my_list[0]: hrs_all})
+
+open_file.close()
+print(my_dict.copy())
+
+"""
+{'Информатика': 170, 'Физика': 240, 'Физкультура': 260, 'Технология': 170, 'Литература': 30, 'ТВМС': 300, 'МатАн': 210}
+"""
