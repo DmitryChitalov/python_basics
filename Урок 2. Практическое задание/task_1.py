@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+example_list = [5, "string", 0.15, True, None, -456]
+for el in example_list:
+    print(type(el))

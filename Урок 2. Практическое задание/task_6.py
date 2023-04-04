@@ -25,3 +25,34 @@
 “ед”: [“шт.”]
 }
 """
+goods_num = 0
+goods_list = []
+continue_question = ''
+while continue_question != 'n':
+    print(f"Введите информацию о товаре {goods_num + 1}:")
+    goods_name = input("Название: ")
+    goods_price = int(input("Цена: "))
+    goods_qty = int(input("Количество: "))
+    goods_measure = input("Ед.: ")
+    goods_dict = {"Название": goods_name, "Цена": goods_price, "Количество": goods_qty, "Ед.": goods_measure}
+    goods_tuple = (goods_num + 1, goods_dict)
+    goods_list.append(goods_tuple)
+    continue_question = (input("Продолжить ввод (введите 'n', чтобы закончить): "))
+    goods_num += 1
+goods_counter = 0
+names_list = []
+price_list = []
+qty_list = []
+measure_list = []
+while goods_counter < goods_num:
+    goods_tuple = goods_list[goods_counter]
+    goods_dict = goods_tuple[1]
+    names_list.append(goods_dict.get('Название'))
+    price_list.append(goods_dict.get('Цена'))
+    qty_list.append(goods_dict.get('Количество'))
+    measure_list.append(goods_dict.get('Ед.'))
+    goods_counter += 1
+output_dict = {"Названия": names_list, "Цены": price_list, "Количества": qty_list, "Ед.": set(measure_list)}
+for key, value in output_dict.items():
+    print(key, ':', value)
+
