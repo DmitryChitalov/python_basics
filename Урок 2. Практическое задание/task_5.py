@@ -15,3 +15,18 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+my_list = [7, 5, 3, 3, 2]
+print("Текущий ряд чисел: ", end="")
+print(" ".join(str(el) for el in my_list))
+my_list.reverse()
+new_num = int(input("Введите новое число: "))
+counter = 0
+while counter < len(my_list):
+    if my_list[counter] < new_num:
+        counter += 1
+    else:
+        break
+my_list.insert(counter, new_num)
+my_list.reverse()
+print(f"Вы ввели число {new_num}, результат: ", end="")
+print(" ".join(str(el) for el in my_list))
