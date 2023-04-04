@@ -11,3 +11,13 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+a = int(input())
+b = chr(input())
+c = str(input())
+d = str(input())
+x = int(input())
+print(a)
+print(b)
+print(c)
+print(d)
+print(a + x)
