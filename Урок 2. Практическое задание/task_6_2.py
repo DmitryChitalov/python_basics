@@ -26,49 +26,19 @@
 }
 """
 products = []
-count = 1
-title, price, amount = None, None, None
+order = 1
+print(type(products))
 while True:
-
-    if title is None:
-        tmp = input('Введите название товара: ')
-        if not tmp.isalpha():
-            print('Наименование товара не может быть пустым и не должно быть пустым. Введите корректно.')
-            continue
-        title = tmp
-
-    if price is None:
-        tmp = input('Введите стоимость товара: ')
-        if not tmp.isdigit():
-            print('Цена должна быть числом. Введите корректно.')
-            continue
-        price = int(tmp)
-
-    if amount is None:
-        tmp = input('Введите количество: ')
-        if not tmp.isdigit():
-            print('Количество должно быть числом. Введите корректно.')
-            continue
-        amount = int(tmp)
-
-    tmp = input('Введите единицы измерения без точки: ')
-    if not tmp.isalpha():
-        print('Единица изменерения не может быть пустой, не может быть числом. Попробуйте еще раз.')
-        continue
-    unit = tmp
-
     products.append((
-        count,
+        order,
         {
-            'Название': title,
-            'Цена': price,
-            'Кол-во': amount,
-            'Ед.изм': f'{unit}.'
+            'Название': input('Название: '),
+            'Price': input('Цена: '),
+            'Кол-во': input('Кол-во: '),
+            'Ед.изм': input('Ед.изм: ')
         }
     ))
-
-    title, price, amount = None, None, None
-    count += 1
+    order += 1
 
     print(products)
 
