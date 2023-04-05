@@ -14,7 +14,6 @@ def int_func(str_2):
     str_2 = str_2.title()
     return str_2
 
-
 list_1 = str_1.split()
 print(list_1)
 for i in list_1:

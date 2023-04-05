@@ -15,7 +15,6 @@ if b < 0:
     b = b * (-1)
 print(b)
 
-
 def my_func(x, y):
     s = x
     for i in range(1, y):

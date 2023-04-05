@@ -20,6 +20,5 @@ def print_data(name_2, surname_2, year_of_birth_2, city_of_birth_2, email_2, pho
     print(f"Имя: {name_2}, Фамилия: {surname_2}, Год рождения: {year_of_birth_2}, Место рождения: {city_of_birth_2}, "
           f"Е-mail: {email_2},  Номер телефона: {phone_2}. ")
 
-
 print_data(name_2=name_1, surname_2=surname_1, year_of_birth_2=year_of_birth_1, city_of_birth_2=city_of_birth_1,
            email_2=email_1, phone_2=phone_1)

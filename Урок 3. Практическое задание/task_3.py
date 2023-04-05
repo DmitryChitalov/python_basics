@@ -12,7 +12,6 @@ arg_3 = int(input("Введите третье число: "))
 my_func = [arg_1, arg_2, arg_3]
 print(sum(sorted(my_func)[1:]))
 
-
 def my_func(arg1, arg2, arg3):
     if arg1 >= arg3 and arg2 >= arg3:
         return arg1 + arg2
