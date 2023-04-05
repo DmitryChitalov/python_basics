@@ -9,3 +9,26 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+
+import json
+
+finance = {}
+comp_finance = {}
+a = [comp_finance, finance]
+b = 0
+calc_comp = 0
+
+with open("nata7.txt", encoding='cp1251') as f:
+    for line in f:
+        name, form, salary, cost = line.split()
+        margin = float(salary) - float(cost)
+        if margin > 0:
+            calc_comp = calc_comp + 1
+            b = b + margin
+            comp_finance[name] = margin
+if calc_comp > 0:
+    finance["average_finance"] = b / calc_comp
+
+with open("nata7.json", "w", encoding='cp1251') as write_f:
+    json.dump(a, write_f)
+print(f"{comp_finance} {finance}")

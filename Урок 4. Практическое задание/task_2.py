@@ -4,6 +4,19 @@
 Подсказка: элементы, удовлетворяющие условию, оформить в виде списка.
 Пример исходного списка: [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55].
 Результат: [12, 44, 4, 10, 78, 123].
-
 Реализуйте вариант без и с генераторным выражением
 """
+list_old = [2, 5, 7, 6, 1, 16, 8, 33, 301, 9, 66]
+
+# без генератора
+list_new_1 = []
+for el in range(1, len(list_old)):
+    if list_old[el] > list_old[el - 1]:
+        list_new_1.append(list_old[el])
+
+print(list_new_1)
+
+# с генератором
+list_new_2 = [list_old[el] for el in range(1, len(list_old)) if list_old[el] > list_old[el - 1]]
+
+print(list_new_2)
