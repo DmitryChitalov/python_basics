@@ -7,3 +7,22 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+# Решение без LC
+
+my_list_1 = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+new_list_1 = []
+
+for i in range(1, len(my_list_1)):
+    if my_list_1[i] > my_list_1[i-1]:
+        (new_list_1.append(my_list_1[i]))
+
+print(f"Результат: {new_list_1}")
+
+
+# Решение с LC
+
+my_list_2 = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+new_list_2 = [my_list_2[i] for i in range(1, len(my_list_2)) if i > 0 and my_list_2[i] > my_list_2[i - 1]]
+
+print(f"Результат: {new_list_2}")

@@ -12,3 +12,27 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+
+from itertools import count, cycle
+my_list = []
+
+# Итератор, генерирующий целые числа, начиная с указанного
+
+i = 3
+j = 10
+
+for num in count(i):
+    if num > j:
+        break
+    print(num)
+    my_list.append(num)
+
+
+# Итератор, повторяющий элементы некоторого списка, определенного заранее
+count = 0
+for value in cycle([my_list]):
+    if count >= len(my_list):
+        break
+    print(value)
+    count += 1
