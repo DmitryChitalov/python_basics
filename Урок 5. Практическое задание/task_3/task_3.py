@@ -14,5 +14,5 @@ with open("nata3.txt", encoding='utf-8') as f:
         for key in dict_num.keys():
             str = str.replace(key, dict_num[key])
         print(str)
-        with open("nata3_1.txt", "a") as f_rus:
+        with open("nata3_1.txt", "a", encoding='utf-8') as f_rus:
             f_rus.write(f"\n {str}")
