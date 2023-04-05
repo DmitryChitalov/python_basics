@@ -17,3 +17,4 @@ with open("nata4.txt", "r", encoding='utf-8') as f:
            poor.append(i[0])
         sal.append(i[1])
 print(f'Оклад меньше 20000 {poor}, средний оклад {sum(map(int, sal)) / len(sal)}')
+
