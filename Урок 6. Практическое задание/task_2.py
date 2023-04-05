@@ -22,8 +22,8 @@ class Road:
         self._width = width
 
     def road_mass(self):
-        mass = self._length * self._width * 25 * 5 / 1000
+        mass = self._length * self._width * 25 * 0.05 / 1000
         return mass
 
-any_road = Road(20, 5000)
-print(any_road.road_mass(), 'т')
+some_road = Road(20, 5000)
+print(f"{some_road.road_mass():0.0f} т")
