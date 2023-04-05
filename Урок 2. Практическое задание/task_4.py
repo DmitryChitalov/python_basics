@@ -14,3 +14,8 @@
 1. раз
 2. перерефриж
 """
+my_list = list(input("Введите слова через пробел: ").split())
+counter = 1
+for el in my_list:
+    print(f"{counter}. {my_list[counter - 1][:10]}")
+    counter += 1
