@@ -18,26 +18,26 @@ class Stationery:
         self.title = title
 
     def draw(self):
-        print('Запуск отрисовки')
+        print("Запуск отрисовки")
 
 
 class Pen(Stationery):
     def draw(self):
-        print('Ручка пишет')
+        print("Ручка пишет")
 
 
 class Pencil(Stationery):
     def draw(self):
-        print('Карандаш рисует')
+        print("Карандаш рисует")
 
 
 class Handle(Stationery):
     def draw(self):
-        print('Маркер расчерчивает')
+        print("Маркер закрашивает")
 
-pen = Pen('Ручка')
-pencil = Pencil('Карандаш')
-handle = Handle('Маркер')
+pen = Pen("Ручка")
+pencil = Pencil("Карандаш")
+handle = Handle("Маркер")
 
 pen.draw()
 pencil.draw()
