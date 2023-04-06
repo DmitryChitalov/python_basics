@@ -25,3 +25,9 @@
 “ед”: [“шт.”]
 }
 """
+
+dict_list = ('название', 'цена', 'количество', 'eд')
+my_list = [(i_num, {i_key: input(f'{i_key}: ') for i_key in dict_list}) for i_num in range(1, 4)]
+print(my_list)
+result_dict = {i_key: [i_value.get(i_key) for i_num, i_value in my_list] for i_key in dict_list}
+print(result_dict)

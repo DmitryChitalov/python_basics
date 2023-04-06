@@ -6,3 +6,28 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def my_summ(input_list, last_result):
+    total_sum = sum(input_list, last_result)
+    return total_sum
+
+
+last_result = 0
+exit_flag = False
+while True:
+    user_list = input("Введите числа, разделенные пробелом (для выхода введите '*'): ").split()
+    new_list = []
+    for i in user_list:
+        if i == '*':
+            exit_flag = True
+            print("Введен специальный символ, завершение работы программы")
+            break
+        else:
+            new_list.append(int(i))
+    result = my_summ(new_list, last_result)
+    print(f"Сумма введенных чисел = {result}")
+    last_result = result
+
+    if exit_flag:
+        break
