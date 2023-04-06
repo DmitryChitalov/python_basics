@@ -28,3 +28,17 @@
 8 10 12
 14 16 18
 """
+class Matrix:
+    
+    def __init__(self, list_of_lists):
+        self.list_of_lists = list_of_lists
+
+    def __str__(self):
+        return 
+    
+    def __add__(self, first_matrix, second_matrix):
+        return first_matrix + second_matrix 
+
+first_matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+second_matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrix_sum = Matrix()
