@@ -17,3 +17,13 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def div(s_1,s_2):
+    try:
+        s_1, s_2= int(s_1), int(s_2)
+        div_num=s_1/ s_2
+    except ValueError:
+        return "Value Error"
+    except ZeroDivisionError:
+        return "Division by zero forbidden"
+    return round(div_num, 4)
+print(div(input("enter first number- "),input('enter second-')))
