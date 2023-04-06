@@ -16,23 +16,29 @@
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
 class Worker:
-    def __init__(self, name, surname, position, income):
+    
+    def __init__(self, name, surname, position):
         self.name = name
         self.surname = surname
         self.position = position
-        self._income_wage = income['wage']
-        self._income_bonus = income['bonus']
-
+        self._income = {"wage": 252525, "bonus": 131313}
 
 class Position(Worker):
 
     def get_full_name(self):
-        return f'{self.name} {self.surname} {self.position}'
+        print(f"Name: {self.name} {self.surname} ")
 
     def get_total_income(self):
-        return self._income_wage + self._income_bonus
+        print(f"Income: {sum(self._income.values())}")
+
+    def __str__(self):
+        full_name = (self.name + ' ' + self.surname)
+        and_income = sum(self._income.values())
+        x = ("Name: " + full_name + ", income: " + str(and_income))
+        return x
 
 
-pos = Position('Alex', 'Alexeev', 'senior', {"wage": 15155.15, "bonus": 14144.14})
-print(pos.get_full_name())
-print(pos.get_total_income())
+person = Position("Linus", "Torvalds", "engeneer")
+person.get_full_name()
+person.get_total_income()
+print(person.__str__())
