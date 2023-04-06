@@ -15,3 +15,21 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+from itertools import cycle
+
+
+class TrafficLight:
+    def __init__(self):
+        self.__color = {"red": 7, "yellow": 2, "green": 5}
+
+
+    def running(self):
+        print("Для остановки светофора нажмите Ctrl+C")
+        for color, delay in cycle(self.__color.items()):
+            print(color)
+            sleep(delay)
+            
+
+traffic_light = TrafficLight()
+traffic_light.running()
