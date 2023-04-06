@@ -21,39 +21,39 @@ speed, color, name, is_police (булево).
 Выполните вызов методов и также покажите результат.
 """
 class Car:
-    def __init__(self, speed, color, name, dredd):
+    def __init__(self, speed, color, name, is_police):
         self.speed = speed
         self.color = color
         self.name = name
-        self.dredd = dredd
+        self.is_police = is_police
 
     def go(self):
-        print('{} going on!'.format(self.name))
+        print('{} поехала!'.format(self.name))
 
     def stop(self):
-        print('{} stopped!'.format(self.name))
+        print('{} остановилась!'.format(self.name))
 
     def turn(self, direction):
-        print('{} is turning towards {}!'.format(self.name, direction))
+        print('{} повернула {}!'.format(self.name, direction))
 
     def show_speed(self):
-        print('Actual speed is: ', self.speed)
+        print('Текущая скорость: ', self.speed)
 
 
 class TownCar(Car):
     def show_speed(self):
         super().show_speed()
         if self.speed > 60:
-            print('Warning. You going too fast!')
+            print('Внимание! Вы превысили скорость.')
 
 class SportsCar(Car):
     pass
 
 class WorkCar(Car):
     def show_speed(self):
-        print('Actual speed is: ', self.speed)
+        print('Текущая скорость: ', self.speed)
         if self.speed > 40:
-            print('Warning. You going too fast!')
+            print('Внимание! Вы превысили скорость')
 
 
 class PoliceCar(Car):
@@ -62,10 +62,14 @@ class PoliceCar(Car):
 sports_car = SportsCar(240, 'Красная', 'Спортивная машина', False)
 town_car = TownCar(140, 'Серая', 'Городская машина', False)
 work_car = WorkCar(90, 'Жёлтая', 'Рабочая машина', False)
-police_car = PoliceCar(210, 'Чёрная', 'Полицейская машина', False)
+police_car = PoliceCar(210, 'Чёрная', 'Полицейская машина', True)
 
 sports_car.show_speed()
-town_car.show_speed()
+print()
+print(town_car.name)
+print()
 work_car.show_speed()
+print(work_car.name, work_car.color)
+print()
 police_car.show_speed()
-sports_car.turn('right')
+sports_car.turn('направо')
