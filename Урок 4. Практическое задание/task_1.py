@@ -6,3 +6,14 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv # импорт списка
+print("Выплата равна: ")
+
+
+def calc(a, b, c): #три переменные в функции
+    print(a * b + c)
+
+
+script, rate, hours, money = argv #принимаем аргументы
+
+calc(int(rate), int(hours), int(money))
