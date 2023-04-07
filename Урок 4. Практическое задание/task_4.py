@@ -6,3 +6,20 @@
 Пример исходного списка: [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11].
 Результат: [23, 1, 3, 10, 4, 11]
 """
+my_list = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+my3_list = []
+
+def my_gen(my2_list):
+    for i in range(len(my2_list)):
+        el = 0
+        for j in range(len(my2_list)):
+            if i != j:
+                if my2_list[i] == my2_list[j]:
+                    el += 1
+        if el == 0:
+            yield my2_list[i]
+
+my3_list=list(my_gen(my_list))
+print(my3_list)
+
+

@@ -12,3 +12,25 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+import itertools
+
+a = int(input("---------Введите начало ряда целых чисел : "))
+s1 = itertools.count(a)
+for i in s1:
+    if i > 20:
+        break
+    else:
+        print(i, end=" ")
+
+my_list = [int(s2) for s2 in input("\n Введите числа через пробел: ").split()]
+print(my_list)
+my2_list = itertools.cycle(my_list)
+x = 0
+for i in my2_list:
+    if x > 25:
+        break
+    else:
+        print(i, end=" ")
+        x += 1
+
+

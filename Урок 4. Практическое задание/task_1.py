@@ -6,3 +6,16 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+#import script1
+
+from sys import argv
+
+script_name, a1, b1, c1 = argv
+def show_money(a, b, c):
+    print("----------------->Идет расчет<--------------")
+
+    sum1 = int(a) * int(b) + int(c)
+    return sum1
+
+print (script_name)
+print (show_money(a1, b1, c1))
