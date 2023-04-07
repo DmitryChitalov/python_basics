@@ -15,3 +15,31 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+a = [5, "string", 'три', True, False, None, 0.15, [100, '8', 'тысяча']]
+
+print('Список a: ', a)
+print('Длина списка a:', len(a))
+
+print('\n Перебор списка с использованием range:')
+for i in range(len(a)):
+    print(f'{i}-ый элемент списка имеет тип {type(a[i])} и равен {a[i]}')
+
+print('\n Перебор списка с использованием enumerate:')
+for i, el in enumerate(a):
+    print(f'{i}-ый элемент списка имеет тип {type(el)} и равен {el}')
+
+print('\n Проверка типа элементов списка при помощи isinstance()')
+for i in range(len(a)):
+    if isinstance(a[i], int):
+        print(f'Тип {i}-ого элемента списка является целочисленным')
+    elif isinstance(a[i], str):
+        print(f'Тип {i}-ого элемента списка является строковым')
+    elif isinstance(a[i], float):
+        print(f'Тип {i}-ого элемента списка является числом с плавающей запятой')
+    elif isinstance(a[i], list):
+        print(f'Тип {i}-ого элемента списка является списком')
+    else:
+        print(f'Тип {i}-ого элемента списка является {type(a[i])}')
+
+print('\n Перевернутый список: ', a[::-1])

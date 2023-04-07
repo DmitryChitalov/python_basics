@@ -11,3 +11,21 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+my_list = input("Введите элементы списка: ").split()
+
+while True:
+    element = input('Введите элемент списка: ')
+    if element == '':
+        break
+    my_list.append(element)
+
+print('Список до переворачивания элементов:   ', my_list)
+
+for i in range(0, len(my_list), 2):
+    if i == len(my_list)-1:
+        # Количество элементов в списке нечетное, последний элемент останется на своем месте
+        break
+    my_list[i], my_list[i+1] = my_list[i+1], my_list[i]
+
+print('Список после переворачивания элементов:', my_list)
