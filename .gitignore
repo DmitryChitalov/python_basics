@@ -2,3 +2,7 @@
 venv/*
 .idea/workspace.xml
 .idea/*
+/shelf/
+/workspace.xml
+venv/
+
