@@ -5,3 +5,20 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+import re
+
+with open("text.txt", "r", encoding="utf-8") as f_obj:
+    result = {}
+    while True:
+        content = f_obj.readline()
+        if content == "":
+            break
+        content_without_brackets = re.sub(r'\([^()]*\)', '', content)
+        content_split = content_without_brackets.split(" ")
+        content_split = [line.rstrip() for line in content_split]
+        content_numbers_split = [content_split[el] for el in range(1, len(content_split))]
+        content_numbers = list(map(int, content_numbers_split))
+        title = content_split[0].replace(":", "")
+        result[title] = sum(content_numbers)
+    print(result)
+
