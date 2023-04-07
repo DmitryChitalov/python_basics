@@ -15,3 +15,32 @@
 П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
+class Worker:
+    _income = {}
+
+    def __init__(self, name, s_name, position, wage, bonus):
+        self.name = name
+        self.s_name = s_name
+        self.position = position
+        self._income["wage"] = wage
+        self._income["bonus"] = bonus
+
+
+class Position(Worker):
+    def __init__(self, name, s_name, position, wage, bonus):
+        super().__init__(name, s_name, position, wage, bonus)
+
+    def get_full_name(self):
+        return f'Полное имя: {self.name} {self.s_name}'
+
+    def get_total_income(self):
+        return f'Совокупный доход: {sum(self._income.values())}$'
+
+    def __str__(self):
+        return f'{self.get_full_name()}, {self.get_total_income()}'
+
+
+worker_1 = Position('Сильвестр', 'Сталлоне', 'Актёр', 1000000, 50000)
+print(worker_1.get_full_name())
+print(worker_1.get_total_income())
+print(worker_1)
