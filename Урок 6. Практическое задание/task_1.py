@@ -15,3 +15,42 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+# Доп. усложнение задачи: начальный сигнал светофора и время включения зеленого сигнала вводится пользователем.
+
+from time import sleep
+import sys
+
+
+class TrafficLight:
+
+    # методы класса
+    def __init__(self, in_color, g_time):
+        self.__color = in_color  # начальный цвет светофора
+        self.__g_delay = g_time  # время работы зеленого сигнала
+
+    def running(self):
+        print("Начало работы светофора. Работа будет автоматически завершена после 10 переключений.")
+        print(self.__color)
+        color_chain = ["красный", "желтый", "зеленый"]  # последовательность переключений сигналов
+        init_index = color_chain.index(self.__color)
+        sleep_dict = {0: 7, 1: 2, 2: self.__g_delay}  # задержки переключений сигнала (в сек.) в зависимости от цвета
+        cnt = 1  # счетчик переключений светофора
+        while True:
+            sleep(sleep_dict.get(init_index))
+            if init_index == 2:
+                init_index = 0
+            else:
+                init_index += 1
+            print(color_chain[init_index])
+            cnt += 1
+            if cnt >= 10:
+                sys.exit(0)
+
+
+color_dict = {1: "красный", 2: "желтый", 3: "зеленый"}
+inp_color = int(input("Введите начальный цвет светофора: 1 - красный, 2 - желтый, 3 - зеленый >>>"))
+init_color = color_dict.get(inp_color)
+green_time = int(input("Введите время работы зеленого сигнала: "))
+obj_tl = TrafficLight(init_color, green_time)
+obj_tl.running()
