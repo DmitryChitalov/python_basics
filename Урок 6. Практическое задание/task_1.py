@@ -15,3 +15,30 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+from time import sleep
+
+
+class TrafficLight:
+    """
+    Имитация работы светофора
+    Attributes:
+        __color Режим светофора
+    """
+    __color = ''
+
+    def running(self):
+        """
+        Переключение светофора: красный, желтый, зеленый, красный...
+        :return:
+        """
+        colors = (('красный', 7), ('желтый', 2), ('зеленый', 12))
+        while True:
+            for i in colors:
+                self.__color = i[0]
+                print(self.__color)
+                sleep(i[1])
+
+
+traffic_light = TrafficLight()
+traffic_light.running()
