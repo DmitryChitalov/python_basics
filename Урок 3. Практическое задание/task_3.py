@@ -5,3 +5,9 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+def my_func(arg_1, arg_2, arg_3):
+    return max(arg_1, arg_2, arg_3) + max(min(arg_1, arg_2), min(arg_1, arg_3), min(arg_2, arg_3))
+
+
+print(my_func(10, 20, 30))
