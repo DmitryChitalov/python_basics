@@ -8,3 +8,13 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+def int_func(my_word):
+    return my_word.title()
+
+
+print(int_func('dog'))
+
+my_list = input('Напишите слова на английском языке маленькими буквами: ').split()
+for i in range(0, len(my_list)):
+    print(int_func(my_list[i]), end=' ')

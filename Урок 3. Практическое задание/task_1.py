@@ -17,3 +17,16 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+arg_1 = int(input('Число 1: '))
+arg_2 = int(input('Число 2: '))
+
+
+def my_func():
+    try:
+        return arg_1 / arg_2
+    except ZeroDivisionError:
+        return 'На 0 делить нельзя!'
+
+
+print(my_func())
