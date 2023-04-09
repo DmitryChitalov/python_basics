@@ -7,3 +7,14 @@
 Иванов 23543.12
 Петров 13749.32
 """
+with open('Data.txt', 'r', encoding='utf-8') as my_file:
+    pay = []
+    less = []
+    new_list = my_file.read().split('\n')
+    for i in new_list:
+        i = i.split()
+        if int(i[1]) < 20000:
+            less.append(i[0])
+        pay.append(i[1])
+print(f'Меньше 20 тысяч получают {less}, средний доход сотрудников составляет {sum(map(int, pay)) / len(pay)}')
+
