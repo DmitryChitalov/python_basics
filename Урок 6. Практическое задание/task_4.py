@@ -1,22 +1,58 @@
-"""
-Задание 4.
+class Car:
+    def __init__(self, speed, color, name, is_police=False):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
 
-Реализуйте базовый класс Car. У данного класса должны быть следующие публичные атрибуты:
-speed, color, name, is_police (булево).
+    def go(self):
+        print(f"{self.name} движется")
 
-А также публичные методы: go, stop, turn(direction),
-которые должны сообщать, что машина поехала, остановилась, повернула (куда).
+    def stop(self):
+        print(f"{self.name} остановился")
 
-Опишите несколько дочерних классов: TownCar, SportCar, WorkCar, PoliceCar.
+    def turn(self, direction):
+        print(f"{self.name} повернул {direction}")
 
-Добавьте в базовый класс публичный метод show_speed,
-который должен показывать текущую скорость автомобиля.
+    def show_speed(self):
+        print(f"Текущая скорость {self.name} ровна {self.speed}")
 
-Для классов TownCar и WorkCar переопределите метод show_speed.
-При значении скорости свыше 60 (TownCar)
-и 40 (WorkCar) должно выводиться сообщение о превышении скорости.
 
-Создайте экземпляры классов, передайте значения атрибутов.
-Выполните доступ к атрибутам, выведите результат.
-Выполните вызов методов и также покажите результат.
-"""
+class TownCar(Car):
+    def show_speed(self):
+        if self.speed > 60:
+            print(f"{self.name} разгоняется! Текущая скорость ровна {self.speed}")
+        else:
+            print(f"Текущая скорость {self.name} ровна {self.speed}")
+
+
+class SportCar(Car):
+    pass
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed > 40:
+            print(f"{self.name} разгоняется! Текущая скорость ровна {self.speed}")
+        else:
+            print(f"Текущая скорость {self.name} ровна {self.speed}")
+
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, True)
+
+
+car1 = TownCar(70, 'red', 'Toyota')
+car2 = SportCar(120, 'blue', 'Porsche')
+car3 = WorkCar(50, 'white', 'Ford')
+car4 = PoliceCar(90, 'black', 'Chevrolet')
+
+car1.go()
+car2.turn('на право')
+car3.show_speed()
+print(car4.is_police)
+
+car1.show_speed()
+car3.show_speed()
+
