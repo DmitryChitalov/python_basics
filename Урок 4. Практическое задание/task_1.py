@@ -6,3 +6,8 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+filename, productivity, hourlyrate, premium = argv
+salary = int(productivity) * int(hourlyrate) + int(premium)
+print(f'Заработная плата = {salary}')
