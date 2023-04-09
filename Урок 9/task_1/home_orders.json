@@ -8,18 +8,18 @@
             "date": "14.07"
         },
         {
-            "item": "pochki",
-            "quantity": "2",
-            "price": "200$",
-            "buyer": "KtoNIbud",
-            "date": "2025"
+            "item": "Принтер",
+            "quantity": 3,
+            "price": 1400,
+            "buyer": "Алексей",
+            "date": "12.13.1444"
         },
         {
             "item": "Принтер",
-            "quantity": "5",
-            "price": "1400",
+            "quantity": 3,
+            "price": 4,
             "buyer": "Алексей",
-            "date": "14.1988"
+            "date": "12.2.1998"
         }
     ]
 }
