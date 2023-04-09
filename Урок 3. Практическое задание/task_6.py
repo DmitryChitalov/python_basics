@@ -10,24 +10,20 @@
 """
 
 
-def int_func(texts):
+def int_func(int_text):
     """
-    Принимает на вход список из букв в нижнем регистре,
-    возводит в текст разделенный пробелом с заглавной буквой всех слов.
-    :param texts: Список слов в нижнем регистре
-    :return: Возвращает текст разделенный пробелом с заглавной буквой всех слов.
+    Функция принимает текст с нижним регистром и делает все буквы заглавными
+    :param int_text: переменная str
+    :return: возвращает все заглавные
     """
-    text_list = []
-    for elem in texts:
-        text_list.append(elem.title())
-    text = ' '.join(text_list)
-    return text
+    return int_text.strip().title()
 
 
 while True:
     enter_text = input('Введите текст в нижнем регистре: ')
+
     if enter_text.islower():
-        print(int_func(enter_text.split()))
+        print(int_func(enter_text))
         break
     else:
         print('Ошибка ввода, попробуйте еще раз\n')
