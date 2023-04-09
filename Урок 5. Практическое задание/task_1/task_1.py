@@ -3,3 +3,10 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+
+with open('new_file.txt', 'w') as file:
+    while True:
+        new_file = input('Введите текст: ')
+        file.write(new_file + '\n')
+        if not new_file:
+            break
