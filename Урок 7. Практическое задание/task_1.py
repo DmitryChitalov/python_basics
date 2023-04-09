@@ -28,3 +28,37 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+
+    def __init__(self, list_1):
+        self.list_1 = list_1
+
+    def print_all_result(self):
+        print(self.list_1)
+
+    def __add__(self, other):
+
+        sum_matrix = []
+        for i in range(len(self.list_1)):
+            for a in range(len(self.list_1[i])):
+                sum_matrix.append(self.list_1[i][a] + other.list_1[i][a])
+        new_list = [sum_matrix[i:i + 3] for i in range(0, len(sum_matrix), 3)]
+        return Matrix(new_list)
+
+    def __str__(self):
+        empty_str_1 = ""
+        for i in self.list_1:
+            b = [str(el) for el in i]
+            empty_str_1 += f'{" ".join(b)}\n'
+
+        return f'{empty_str_1}\n'
+
+
+obj = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+obj_2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(obj)
+print(obj_2)
+obj_3 = obj + obj_2
+print(obj_3)

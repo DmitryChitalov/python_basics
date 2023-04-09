@@ -25,3 +25,25 @@
 
 Два класса: абстрактный и Clothes
 """
+
+
+class Clothes:
+
+    def __init__(self, v, h):
+        self.v = v
+        self.h = h
+
+    @property
+    def result(self):
+        result_coat = self.v / 6.5 + 0.5
+        result_suit = self.h * 2 + 0.3
+        result_coat_corr = round(result_coat, 2)
+        result_suit_corr = round(result_suit, 2)
+
+        return f'Расход ткани на пальто = {result_coat_corr}\n' \
+               f'Расход ткани на костюм = {result_suit_corr}\n' \
+               f'Суммарный расход ткани = {result_coat_corr + result_suit_corr}'
+
+
+obj = Clothes(10, 14)
+print(obj.result)
