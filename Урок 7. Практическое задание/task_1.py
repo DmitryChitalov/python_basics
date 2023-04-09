@@ -28,3 +28,27 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    new_matrix = {'el': []}
+
+    def __init__(self, matrix_list):
+        self.matrix = matrix_list
+
+    def __add__(self, other):
+        self.new_matrix['el'] = [[a + b for a, b in zip(i[0], i[1])] for i in zip(self.matrix, other.matrix)]
+        return self.__str__(self.new_matrix['el'])
+
+    def __str__(self, el=None):
+        if not el:
+            return '\n'.join([' '.join(map(str, i)) for i in self.matrix])
+        else:
+            return '\n'.join([' '.join(map(str, i)) for i in el])
+
+
+matrix_1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matrix_2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+print(f"Матрица 1:\n{matrix_1}\nМатрица 2:\n{matrix_2}")
+print(f"Сумма матриц:\n{matrix_1 + matrix_2}\n")
