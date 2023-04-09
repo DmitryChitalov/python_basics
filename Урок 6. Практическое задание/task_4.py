@@ -20,3 +20,91 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+
+class Car:
+
+    def __init__(self, speed, color, brand, is_police):
+        self.speed = speed
+        self.color = color
+        self.brand = brand
+        self.is_police = is_police
+
+    def go(self):
+        print(f"Автомобиль {self.brand} начал движение")
+
+    def stop(self):
+        print(f"Автомобиль {self.brand} остановился")
+
+    def turn(self, direction):
+        print(f'Автомобиль {self.brand} повернул {direction}')
+
+    def show_speed(self):
+        print(f'Текущая скорость {self.brand}: {self.speed} км/ч')
+
+    def police(self):
+        if self.is_police:
+            print(f'{self.brand} - полицейский автомобиль')
+        else:
+            print(f'{self.brand} - гражданский автомобиль')
+
+
+class TownCar(Car):
+    def __init__(self, speed, color, brand, is_police):
+        super().__init__(speed, color, brand, is_police)
+
+    def show_speed(self):
+        super().show_speed()
+        if self.speed > 60:
+            print('Превышение скорости!')
+
+
+class SportCar(Car):
+    def __init__(self, speed, color, brand, is_police):
+        super().__init__(speed, color, brand, is_police)
+
+
+class WorkCar(Car):
+    def __init__(self, speed, color, brand, is_police):
+        super().__init__(speed, color, brand, is_police)
+
+    def show_speed(self):
+        super().show_speed()
+        if self.speed > 40:
+            print('Превышение скорости!')
+
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, brand, is_police):
+        super().__init__(speed, color, brand, is_police)
+
+
+tc = TownCar(61, 'red', 'Mazda', False)
+sc = SportCar(120, 'yellow', 'Porshe', False)
+wc = WorkCar(45, 'grey', 'VW', False)
+pc = PoliceCar(100, 'blue', 'Ford', True)
+
+tc.go()
+sc.go()
+wc.go()
+pc.go()
+
+tc.turn("направо")
+sc.turn("налево")
+wc.turn("обратно")
+pc.turn("направо")
+
+tc.show_speed()
+sc.show_speed()
+wc.show_speed()
+pc.show_speed()
+
+tc.police()
+sc.police()
+wc.police()
+pc.police()
+
+tc.stop()
+sc.stop()
+wc.stop()
+pc.stop()
