@@ -5,3 +5,21 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+result = {}
+with open('curriculum.txt', 'r') as file:
+    for line in file:
+        subject = line.split(':')[0]
+        program = line.split(':')[1]
+        program = program.replace("(л)", "")
+        program = program.replace("(пр)", "")
+        program = program.replace("(лаб)", "")
+        program = program.split()
+        count_lessons = 0
+        for el in program:
+            try:
+                count_lessons += int(eval(el))
+            except:
+                continue
+        result.update({subject: count_lessons})
+
+print(result)
