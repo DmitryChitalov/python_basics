@@ -11,6 +11,7 @@ class MyMeta(type):
     def __call__(cls, *args):
         if cls.obj is None:
             cls.obj = super().__call__(*args)
+
             return cls.obj
         else:
             return cls.obj

@@ -7,7 +7,6 @@
 
 import json
 import time
-import string
 
 
 # Как ещё можно реализовать повторный ввод ?
