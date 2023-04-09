@@ -28,3 +28,39 @@
 8 10 12
 14 16 18
 """
+
+class Matrix:
+
+    def __init__(self, params):
+        self.values = params
+
+    def __str__(self):
+        line = ''
+        for elem in self.values:
+            line += ' '.join(map(str,elem)) + '\n'
+        return line
+
+    def __add__(self, other):
+        try:
+            result = []
+            for i in range(len(self.values)):
+                temp_element = []
+                for j in range(len(self.values[i])):
+                    temp_element.append(self.values[i][j] + other.values[i][j])
+                result.append(temp_element)
+        except IndexError:
+            return "matrix are not the same size"
+        except TypeError:
+            return "can't make sum of different types"
+        except:
+            return "Unkonw error"
+        return result
+
+
+obj1 = Matrix([[6, 7, 8], [4, 5, 6]])
+print(obj1)
+print("_____")
+obj2 = Matrix([[1, 2, 3], [4, 5, 6]])
+print(obj2)
+print("=====")
+print(obj1 + obj2)
