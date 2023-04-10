@@ -8,3 +8,13 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+def capitalize(val):
+    return val[0].upper() + val[1:]
+
+
+str = 'qwe qwe'
+res = []
+for s in str.split():
+    res.append(capitalize(s))
+
+print(' '.join(res))
