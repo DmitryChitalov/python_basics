@@ -20,3 +20,10 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+class Car:
+    def _init__(self, speed, color, name, _is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = _is_police
