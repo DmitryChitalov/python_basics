@@ -6,3 +6,9 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+file_name, work_hours, pay_hour, bonus = argv
+salary = int(work_hours) * int(pay_hour)
+pay_all = salary+int(bonus)
+print(f'Ваша зарплата: {salary}\nВаша премия: {bonus}\nВыплата без удержаний: {pay_all}')

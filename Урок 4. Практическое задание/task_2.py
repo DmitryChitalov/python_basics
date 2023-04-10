@@ -7,3 +7,17 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+
+sym_lst = [144, 3, 33, 32, 11, 44, 144]  # Исходный список
+
+result_lc = [sym_lst[inx] for inx in range(1, len(sym_lst)) if sym_lst[inx-1] < sym_lst[inx]]
+
+result = []
+for inx_i in range(1, len(sym_lst)):
+    if sym_lst[inx_i - 1] < sym_lst[inx_i]:
+        result.append(sym_lst[inx_i])
+
+print(f'Наш список - {sym_lst}\n'
+      f'Результат (LC)- {result_lc}\n'
+      f'Результат - {result}')
