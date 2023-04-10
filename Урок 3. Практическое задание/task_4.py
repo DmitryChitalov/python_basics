@@ -5,3 +5,20 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    return x ** y
+
+
+def my_func_2(x, y):
+    counter = 1
+    result = 1 / x
+    while counter < abs(y):
+        result = result * (1 / x)
+        counter += 1
+    return result
+
+
+print(my_func(9.0, -2))
+print(my_func_2(9.0, -2))
