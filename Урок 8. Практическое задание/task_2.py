@@ -22,4 +22,3 @@ except MyException as err:
 else:
     print(f'result of devision is {number/devider:.2f}')
 
-    
