@@ -47,21 +47,19 @@ while True:
 goods_dict = {}
 
 for i, el in enumerate(list(goods[0][1].keys())):
-        goods_dict[el] = []
+    goods_dict[el] = []
 
 for i, el in enumerate(goods_dict):
-       dict_list = []
+    dict_list = []
 
-for j, el_goods in enumerate(goods):
+    for j, el_goods in enumerate(goods):
         key_val = el_goods[1].get(el)
 
         # Добавляем, только если значения нет в списке
         if key_val not in dict_list:
             dict_list.append(key_val)
 
-    # Записываем в результирующий словарь значение текущего ключа
+        # Записываем в результирующий словарь значение текущего ключа
         goods_dict[el] = dict_list
 
 print(goods_dict)
-
-
