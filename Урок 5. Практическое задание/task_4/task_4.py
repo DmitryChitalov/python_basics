@@ -7,3 +7,19 @@
 Иванов 23543.12
 Петров 13749.32
 """
+out_f = open(r'D:\DevOps\Python\Урок5\test5.txt', "r")
+less_20k = [] #список у кого меньше оклад
+all_people = 0 # кол-во людей
+all_salary = 0 # сумма всех окладов
+for line in out_f:
+    name, salary = line.strip().split(" ") # строку делим на две части
+    salary = float(salary) # превращаем текст в число
+    all_salary = all_salary + salary
+    all_people = all_people + 1
+    if salary < 20000: # если число меньше 20к
+        less_20k.append(name) # добавляем в список имя
+print("Меньше 20к у: ", )
+for name in less_20k: # пока имя в списке выыодим его
+    print(name)
+itog = all_salary / all_people
+print(f"Средний доход: {itog}")

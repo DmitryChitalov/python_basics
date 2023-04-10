@@ -9,3 +9,35 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+import json
+
+with open(r'D:\DevOps\Python\Урок5\less7.txt', 'r') as import_f:
+    profits = {}  # прибыль каждой компании
+
+    total_profit = 0  # общая прибыль всех
+
+    num_firm = 0  # кол-во компаний, с прибылью
+
+    for line in import_f:
+
+        data = line.strip().split()
+
+        profit = int(data[2]) - int(data[3])  # вычисляем прибыль
+
+        profits[data[0]] = profit# добавляем прибыль для текущей компании
+
+        if profit > 0:  # если компания получила прибыль
+            num_firm += 1
+
+            total_profit += profit  # добавляем прибыль
+
+    if num_firm > 0:  # если есть компании с прибылью
+        medi_profit = total_profit / num_firm
+    else:
+        medi_profit = 0
+
+    result = [profits, {'average income': medi_profit}]
+
+
+with open(r'D:\DevOps\Python\Урок5\less7.json', 'w') as import_f:# сохраняем результаты в файл json
+    json.dump(result, import_f)

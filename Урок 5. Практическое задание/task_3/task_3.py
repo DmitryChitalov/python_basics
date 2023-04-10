@@ -8,3 +8,16 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+f_obj = open(r"D:\DevOps\Python\Урок5\test3.txt", "r")
+s_obj = open(r"D:\DevOps\Python\Урок5\test4.txt", "w")
+
+for line in f_obj:
+  line = line.replace("One", "один")
+  line = line.replace("Two", "два")
+  line = line.replace("Three", "три")
+  line = line.replace("Four", "четыре")
+  s_obj.write(line)
+
+
+f_obj.close()
+s_obj.close()
