@@ -16,19 +16,19 @@ length (длина в метрах), width (ширина в метрах).
 
 Например: 20м*5000м*25кг*0.05м = 125000 кг = 125 т
 """
-class Road:
-    mass = 25
-    thickn = 0.05
+class Road: # создали класс Дорога
+    mass = 25 #указали атрибут массы 25
+    thickn = 0.05 # указали атрибут толщины 
 
-    def __init__(self, length, width):
-        self._length = length
+    def __init__(self, length, width): #вызвали инструкцию с указанием на функцию и задали атрибуты которые будут указаны
+        self._length = length #задали обращение
         self._width = width
 
-    def calc(self):
-        dec = (self._length * self._width * Road.mass * Road.thickn) / 1000
+    def calc(self): #вызвали функцию калькулятора
+        dec = (self._length * self._width * Road.mass * Road.thickn) / 1000 #задал переменную dec и всё умножил
 
-        print(f'Нужно будет {dec} тонн.')
+        print(f'Нужно будет {dec} тонн.') #вывел значение из переменной dec
 
 
-r_obj = Road(20, 5000)
-r_obj.calc()
+k = Road(20, 5000) # будет обращаться с первых к последующим атрибутам которые были заданы выше при сложении
+k.calc() 
