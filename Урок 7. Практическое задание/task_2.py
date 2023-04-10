@@ -25,3 +25,65 @@
 
 Два класса: абстрактный и Clothes
 """
+from abc import ABC, abstractmethod
+
+
+class Factory(ABC):
+    @abstractmethod
+    def calc_consumption(self):
+        pass
+
+
+class Clothes(Factory):
+    _v = None
+    _h = None
+
+    @property
+    def size(self):
+        return self._v
+
+    @size.setter
+    def size(self, value):
+        self._v = value
+        self._h = None
+
+    @property
+    def height(self):
+        return self._h
+
+    @height.setter
+    def height(self, value):
+        self._h = value
+        self._v = None
+
+    def __init__(self, v=None, h=None):
+        self._v = v
+        self._h = h
+        pass
+
+    def calc_consumption(self):
+
+        if self._v is None and self._h is None:
+            raise Exception("'v' or 'h' are not set")
+
+        res = 0
+        if self._v is not None:
+            res = self._v / 6.5 + 0.5
+        if self._h is not None:
+            res = self._h * 2 + 0.3
+
+        return res
+
+    def __add__(self, other):
+        return self.calc_consumption() + other.calc_consumption()
+
+
+coat = Clothes()
+coat.size = 5.005
+
+suite = Clothes()
+suite.height = 10
+
+total = coat + suite
+
+print(f"Total consumption: {total}")
