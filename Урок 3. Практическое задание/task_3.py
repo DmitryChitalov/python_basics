@@ -5,3 +5,25 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+entered_list = input("Введите 3 числа через пробел: ").split()
+numbers_list = [int(i) for i in entered_list]
+print(f"Введенный спсиок чисел: {numbers_list}")
+
+
+def max_sum_sort(list1):
+    """
+    сортируем и суммируем 2 и 1 элементы списка
+    """
+    list1.sort()
+    return list1[2] + list1[1]
+
+
+def max_sum(list1):
+    """
+    Из суммы всех трех элементов вычитаем минимальный
+    """
+    return sum(list1) - min(list1)
+
+
+print(f"сумма максимальных чисел (используя сортировку): {max_sum_sort(numbers_list)}")
+print(f"сумма максимальных чисел (не используя сортировку): {max_sum(numbers_list)}")
