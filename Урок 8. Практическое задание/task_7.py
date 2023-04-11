@@ -6,3 +6,21 @@
 создав экземпляры класса (комплексные числа) и выполнив сложение и умножение созданных экземпляров.
 Проверьте корректность полученного результата.
 """
+
+
+class Number:
+    def __init__(self, number):
+        self.number = number
+
+    def __add__(self, other):
+        return f'Результат = ({self.number + other.number})'
+
+    def __mul__(self, other):
+        return f'Результат = ({self.number * other.number})'
+
+
+obj_1 = Number(10)
+obj_2 = Number(5)
+
+print(obj_1 + obj_2)
+print(obj_1 * obj_2)
