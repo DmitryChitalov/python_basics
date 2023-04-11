@@ -12,3 +12,22 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count
+
+for el in count(int(input('Введите стартовое число '))):
+    if el > 100:
+        break
+    else:
+        print(el)
+
+from itertools import cycle
+
+my_list = [True, 'ABC', 123, None]
+i = 0
+for el in cycle(my_list):
+    if i > 10:
+        break
+    else:
+        i += 1
+        print(el)
