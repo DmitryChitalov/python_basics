@@ -7,24 +7,24 @@
 Проверьте корректность полученного результата.
 """
 
-class ComplexNumbers:
-    def __init__(self, first_value, second_value):
-        self.first_value = first_value
-        self.second_value = second_value
+class ComplexusNumbers:
+    def __init__(self, first_real_number, second_real_number):
+        self.first_real_number = first_real_number
+        self.second_real_number = second_real_number
 
-    def __add__(self, other):
-        return ComplexNumbers(self.first_value + other.first_value, self.second_value + other.second_value)
+    def __add__(self, auxiliary):
+        return ComplexusNumbers(self.first_real_number + auxiliary.first_real_number, self.second_real_number + auxiliary.second_real_number)
 
-    def __mul__(self, other):
-        return ComplexNumbers(self.first_value * other.first_value - self.second_value * other.second_value,
-                              self.first_value * other.second_value + self.second_value * other.first_value)
+    def __mul__(self, auxiliary):
+        return ComplexusNumbers(self.first_real_number * auxiliary.first_real_number - self.second_real_number * auxiliary.second_real_number,
+                              self.first_real_number * auxiliary.second_real_number + self.second_real_number * auxiliary.first_real_number)
 
 
-first_complex_numbers = ComplexNumbers(44, 55)
-second_complex_numbers = ComplexNumbers(22, 33)
+first_complexus_numbers = ComplexusNumbers(114, 48)
+second_complexus_numbers = ComplexusNumbers(55, 115)
 
-result_addition = first_complex_numbers + second_complex_numbers
-result_multiplication = first_complex_numbers * second_complex_numbers
+result_addition = first_complexus_numbers + second_complexus_numbers
+result_multiplication = first_complexus_numbers * second_complexus_numbers
 
-print(f'Результат сложения: {result_addition.first_value}, {result_addition.second_value}')
-print(f'Результат умножения: {result_multiplication.first_value}, {result_multiplication.second_value}')
+print(f'Результат сложения: {result_addition.first_real_number}, {result_addition.second_real_number}')
+print(f'Результат умножения: {result_multiplication.first_real_number}, {result_multiplication.second_real_number}')
