@@ -28,28 +28,32 @@
 from abc import ABC, abstractmethod
 
 class Clothes(ABC):
-    def __init__(self, param):
-        self.param = param
-
     @abstractmethod
-    def calculate(self):
+    def textile_wastage(self):
         pass
 
-
-class Coat(Clothes):
-
-    @property
-    def calculate(self):
-        return round((self.param / 6.5) + 0.5)
-
-
-class Suit(Clothes):
+class NeoCoat(Clothes):
+    def __init__(self, size):
+        self.size = size
 
     @property
-    def calculate(self):
-        return round((2 * self.param) + 0.3)
+    def textile_wastage(self):
+        coat_result = round(self.size / 6.5 + 0.5, 1)
+        return coat_result
+        
+class AgentSuit(Clothes):
+    def __init__(self, height):
+        self.height = height
 
-coat = Coat(45)
-suit = Suit(185)
-print(coat.calculate)
-print(suit.calculate)
+    @property
+    def textile_wastage(self):
+        suit_result = round(2 * self.height + 0.3, 1)
+        return suit_result
+
+mr_anderson = NeoCoat(51)
+agent_smith = AgentSuit(56)
+total_textile_wastage = mr_anderson.textile_wastage + agent_smith.textile_wastage
+
+print(f'Расход ткани на пальто: {mr_anderson.textile_wastage}')
+print(f'Расход ткани на костюм: {agent_smith.textile_wastage}')
+print(f'Общий расход ткани: {total_textile_wastage}')
