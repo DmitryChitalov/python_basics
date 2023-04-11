@@ -25,3 +25,35 @@
 
 Два класса: абстрактный и Clothes
 """
+from abc import ABC, abstractmethod
+
+class Clothes(ABC):
+    @abstractmethod
+    def textile_wastage(self):
+        pass
+
+class NeoCoat(Clothes):
+    def __init__(self, size):
+        self.size = size
+
+    @property
+    def textile_wastage(self):
+        coat_result = round(self.size / 6.5 + 0.5, 1)
+        return coat_result
+        
+class AgentSuit(Clothes):
+    def __init__(self, height):
+        self.height = height
+
+    @property
+    def textile_wastage(self):
+        suit_result = round(2 * self.height + 0.3, 1)
+        return suit_result
+
+mr_anderson = NeoCoat(51)
+agent_smith = AgentSuit(56)
+total_textile_wastage = mr_anderson.textile_wastage + agent_smith.textile_wastage
+
+print(f'Расход ткани на пальто: {mr_anderson.textile_wastage}')
+print(f'Расход ткани на костюм: {agent_smith.textile_wastage}')
+print(f'Общий расход ткани: {total_textile_wastage}')

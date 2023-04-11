@@ -100,3 +100,91 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+# class Cell:
+#     def __init__(self, nums):
+#         self.nums = nums
+
+#     def make_order(self, rows):
+#         return '\n'.join(['*' * rows for _ in range(self.nums // rows)]) \
+#                 + '\n' + '*' * (self.nums % rows)
+
+#     def __str__(self):
+#         return str(self.nums)
+
+#     def __add__(self, other):
+#         return 'Sum of cells is: ' + str(self.nums + other.nums)
+
+#     def __sub__(self, other):
+#         return self.nums - other.nums if self.nums - other.nums > 0 \
+#             else 'Ячеек в первой клетке меньше или равно втрой, вычитание невозможно.'
+
+#     def __mul__(self, other):
+#         return 'Multy of cells is: ' + str(self.nums * other.nums)
+
+#     def __truediv__(self, other):
+#         return 'Truediv od cells is: ' + str(round(self.nums / other.nums))
+
+# #
+# cell_1 = Cell(10)
+# cell_2 = Cell(34)
+# print(cell_1)
+# print(cell_1 + cell_2)
+# print(cell_2.make_order(10))
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __str__(self):
+        return str(self.quantity)
+
+    def __add__(self, other):
+        return Cell(self.quantity + other.quantity)
+
+    def __sub__(self, other):
+        result = self.quantity - other.quantity
+        if result <= 0:
+            return "Разность отрицательна, операция невыполнима."
+        else:
+            return Cell(result)
+
+    def __mul__(self, other):
+        return Cell(self.quantity * other.quantity)
+
+    def __truediv__(self, other):
+        return Cell(round(self.quantity // other.quantity))
+
+    def make_order(self, n):
+        result = []
+        for el in range(self.quantity):
+            result.append("*")
+            if el != 0 and el % n == 0:
+                result.append("\\n")
+        return ''.join(result)
+
+
+print("Создаем объекты клеток")
+cell1 = Cell(30)
+cell2 = Cell(25)
+cell3 = Cell(10)
+cell4 = Cell(15)
+
+print("Складываем")
+print(f"Сумма клеток: {cell1 + cell2}")
+
+print("Вычитаем")
+print(f"Разность клеток: {cell2 - cell1}")
+print(f"Разность клеток: {cell4 - cell3}")
+
+print("Умножаем")
+print(f"Умножение клеток: {cell2 * cell1}")
+
+print("Делим")
+print(f"Деление клеток: {cell1 / cell2}")
+
+print("Организация ячеек по рядам")
+print(cell1.make_order(5))
+print(cell2.make_order(10))
+print(cell3.make_order(5))
+print(cell4.make_order(10))
