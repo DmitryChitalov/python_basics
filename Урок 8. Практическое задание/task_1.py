@@ -13,24 +13,39 @@
 и года (например, месяц — от 1 до 12). Проверить работу полученной структуры на реальных данных.
 """
 class Date:
-    day_month_year = ""
+    day_month_year = " "
 
     @classmethod
-    def set_date(self, date):
+    def input_date(self, date):
         day, month, year = map(int, date.split("."))
         self.day_month_year = (day, month, year)
 
     @staticmethod
-    def valid_date(date):
+    def date_validation(date):
         day, month, year = map(int, date.split('.'))
-        if month < 1 or month > 12 or day < 1 or day > 31 or month == 2 and day > 29 \
-                or month in [4, 6, 9, 11] and day > 30:
-            return print("Неверная дата!")
+        if 0 <= year and 0 < month < 13 and 0 < day < 32:
+
+            if year % 4 == 0:
+                if month == 2:
+                    if day < 30:
+                        print("Дата верна.")
+                    else:
+                        print("Невозможная дата.")
+
+            elif month == 2:
+                if day < 29:
+                    print("Дата верна.")
+                else:
+                    print("Невозможная дата.")
+            elif year % 4 != 0 and month != 2:
+                print("Дата верна.")
+
         else:
-            return print("Дата верна!")
+            print("Невозможная дата.")
 
 
-Date.set_date("09.04.2023")
-print(Date.valid_date("09.04.2023"))
-day, month, year = Date.day_month_year
-print(day, month, year)
+intput_to_check = ["31.12.2022", "11.04.2023", "11.04.-2023", "11.14.2023", "-3.14.2023", "29.02.2023"]
+
+for i in intput_to_check:
+    print(f"\nПроверяем дату: {i}")
+    Date.date_validation(i)
