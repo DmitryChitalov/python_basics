@@ -32,3 +32,17 @@ def my_func(*args):
     return res
 
 print(f'result  {my_func()}')
+
+
+def divide(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        return
+    return result
+try:
+    n1 = int(input('a'))
+    n2 = int(input('b'))
+    print(f'a/b = {my_func(n1, n2)}')
+except ValueError:
+    print('error')
