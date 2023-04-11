@@ -22,5 +22,16 @@
 # except ValueError:
 #     print("Вам нужно вводить числа!")
 
-class CustomZeroDivisionException(Exception):
+class CustomZeroDivisionError(Exception):
+    # def __init__(self, user_divisor):
+    #     self.user_divisor = user_divisor
+    pass
 
+try:
+    user_input = input("Пожалуйста, введите два числа через пробел для операции деления: ")
+    user_input = user_input.split(" ")
+    if int(user_input[1]) == 0:
+        raise CustomZeroDivisionError()
+    print(f"Результат деления: {a / b}")
+except:
+    print(f"Вы ввели {b} в качестве делителя. Делить на ноль нельзя.")
