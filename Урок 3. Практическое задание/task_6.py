@@ -8,3 +8,10 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+input_text = input('Напишите текст, который нужно преобразовать: ')
+def int_func(input_text):
+    text_list = input_text.split(' ')
+    result = [el.title() for el in text_list]
+    return " ".join(result)
+
+print(int_func(input_text))
