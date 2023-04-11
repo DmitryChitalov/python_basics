@@ -28,5 +28,5 @@ class Road():
 
 r = Road(5000, 20)
 r.mass = 25.3
-r.thickness = 5
+r.thickness = 5 # in santimeters
 print(r.calc_mass())
