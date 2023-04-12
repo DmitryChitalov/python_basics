@@ -122,7 +122,7 @@ class Cell:
         for i in range(int(self.quantity / row)):
             result += '*' * row + '\n'
         result += '*' * (self.quantity % row) + '\n'
-        return f'Организация ячеек по рядам \n{result}'
+        return f'Организация ячеек по рядам: \n{result}'
 
 cell_1 = Cell(36)
 cell_2 = Cell(4)
