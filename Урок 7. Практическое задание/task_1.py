@@ -28,3 +28,25 @@
 8 10 12
 14 16 18
 """
+class Matrix:
+    def __init__(self, spis):
+        self.spis = spis
+
+    def __str__(self):
+        for row in self.spis:
+            for n in row:
+                print(f"{n:4}", end="")
+            print()
+        return ''
+
+
+    def __add__(self, other):
+        for n in range(len(self.spis)):
+            for n_2 in range(len(other.spis[n])):
+                self.spis[n][n_2] = self.spis[n][n_2] + other.spis[n][n_2]
+        return Matrix.__str__(self)
+
+
+m1 = Matrix([[-2, 1, 3], [4, 2, 1], [-1, 0, 2], [0, 2, -1]])
+m2 = Matrix([[-1, 0, 2], [0, -1, 2], [3, 1, -2], [1, -2, 4]])
+print(m1.__add__(m2))
