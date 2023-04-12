@@ -25,3 +25,7 @@
 
 Два класса: абстрактный и Clothes
 """
+coat_suit = Clothes2(50)
+print(f"Расход ткани на пальто = {coat_suit.coat}")
+print(f"Расход ткани на пальто = {coat_suit.suit}")
+print(f"суммарного расхода ткани на производство одежды = {coat_suit.coat + coat_suit.suit}")
