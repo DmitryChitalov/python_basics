@@ -1,27 +1,44 @@
-"""
-Задание 2.
+from abc import ABC, abstractmethod
 
-Реализовать проект расчета суммарного расхода ткани на производство одежды.
 
-Единственный класс этого проекта — одежда (класс Clothes).
+class Clothes(ABC):
+    @abstractmethod
+    def fabric_consumption(self):
+        pass
 
-К типам одежды в этом проекте относятся пальто и костюм.
 
-У этих типов одежды существуют параметры:
-размер (для пальто) и рост (для костюма). Это могут быть обычные числа: v и h, соответственно.
+class Coat(Clothes):
+    def __init__(self, size):
+        self.size = size
 
-Для определения расхода ткани по каждому типу одежды использовать формулы: для пальто (v/6.5 + 0.5),
-для костюма (2*h + 0.3). Проверить работу этих методов на реальных данных.
+    @property
+    def fabric_consumption(self):
+        return round(self.size / 6.5 + 0.5, 2)
 
-Реализовать общий подсчет расхода ткани.
-Проверить на практике полученные на этом уроке знания: реализовать
-абстрактный класс для единственного класса проекта,
-проверить на практике работу декоратора @property
 
-Пример:
-Расход ткани на пальто = 1.27
-Расход ткани на костюм = 20.30
-Общий расход ткани = 21.57
+class Suit(Clothes):
+    def __init__(self, height):
+        self.height = height
 
-Два класса: абстрактный и Clothes
-"""
+    @property
+    def fabric_consumption(self):
+        return round(2 * self.height + 0.3, 2)
+
+
+class TotalFabricConsumption:
+    def __init__(self, clothes):
+        self.clothes = clothes
+
+    def total_fabric_consumption(self):
+        return round(sum([item.fabric_consumption for item in self.clothes]), 2)
+
+
+coat = Coat(52)
+suit = Suit(1.8)
+
+print(f"Расход ткани на пальто = {coat.fabric_consumption}")
+print(f"Расход ткани на костюм = {suit.fabric_consumption}")
+
+total_consumption = TotalFabricConsumption([coat, suit])
+print(f"Общий расход ткани = {total_consumption.total_fabric_consumption()}")
+
