@@ -28,3 +28,23 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, list_1, list_2):
+
+        self.list_1 = list_1
+        self.list_2 = list_2
+
+        list_1 = [[1, 2, 3]
+                  [4, 5, 6]
+                  [7, 8, 9]]
+
+        list_2 = [[1, 2, 3]
+                  [4, 5, 6]
+                  [7, 8, 9]]
+
+    def __str__(self, list_1, list_2):
+
+        return list_1, list_2
+
