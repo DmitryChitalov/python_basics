@@ -100,3 +100,34 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = int(quantity)
+
+    def __add__(self, other):
+        return f'Складываем, размер клетки равен: {self.quantity + other.quantity}'
+
+    def __sub__(self, other):
+        sub = self.quantity - other.quantity
+        return f'Вычитаем, размер клетки: {sub}' if sub > 0 else 'клетки нет'
+
+    def __truediv__(self, other):
+        return f'Делим, размер клетки: {self.quantity // other.quantity}'
+
+    def __mul__(self, other):
+        return f'Умножаем, размер клетки: {self.quantity * other.quantity}'
+
+    def make_order(self, row):
+        result = ''
+        for i in range(int(self.quantity / row)):
+            result += '*' * row + '\n'
+        result += '*' * (self.quantity % row) + '\n'
+        return f'Организация ячеек по рядам: \n{result}'
+
+cell_1 = Cell(36)
+cell_2 = Cell(4)
+print(cell_1 + cell_2)
+print(cell_1 - cell_2)
+print(cell_1 / cell_2)
+print(cell_1 * cell_2)
+print(cell_1.make_order(3))
