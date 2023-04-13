@@ -29,7 +29,7 @@
 14 16 18
 """
 
-#1 
+#1
 class Matrix:
     def __init__(self, list_1, list_2):
 
@@ -50,7 +50,10 @@ class Matrix:
             for j in range(len(list_1[0])):
                 result[i][j] = list_1[i][j] + list_2[i][j]
                 print(result)
-                
+
+m = Matrix('', '')
+print(m.list_1)
+print(m.list_2)
     
 #2
 
