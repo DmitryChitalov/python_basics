@@ -7,3 +7,7 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+my_list = [29, 17, 8, 23, 4, 7, 12, 348, 118, 121]
+result_list = [my_list[i] for i in range(1, len(my_list)) if my_list[i - 1] < my_list[i]]
+print(result_list)
