@@ -28,3 +28,35 @@
 8 10 12
 14 16 18
 """
+
+
+class Matrix:
+    def __init__(self, matrix):
+        self.matrix = matrix
+
+    def __str__(self):
+        my_list = ""
+        for el in self.matrix:
+            my_list += " ".join(map(str,el)) + "\n"
+            return my_list
+
+    def __add__(self, other):
+        m_sum = []
+        for el1, el2 in zip(self.matrix, other.matrix):
+            ind_sum = []
+            for ind1, ind2 in zip(el1, el2):
+
+                ind_sum.append(int(ind1) + int(ind2))
+                m_sum.append(ind_sum)
+            return Matrix(m_sum)
+
+matrix1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matrix2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+print(f"Матрица1: \n{matrix1}")
+print(f"Матрица2: \n{matrix2}")
+print(f"Сумма матриц 1 и 2: \n{matrix1 + matrix2}")
+
+
+
+
