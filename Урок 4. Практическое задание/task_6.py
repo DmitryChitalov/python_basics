@@ -23,13 +23,11 @@ def get_repeated(iterable: Iterable, count: int):
     if count < 0:
         raise ValueError(f"count 'can't be less than 0")
 
-    # убираем брекется и получаем стандартный режим работы sycle
     iterator = cycle([iterable])
 
     while count:
         yield next(iterator)
         count -= 1
-
 
 if __name__ == '__main__':
     source_list = [1, 2, 3]
