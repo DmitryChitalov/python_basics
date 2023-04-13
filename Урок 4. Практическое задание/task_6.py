@@ -12,3 +12,19 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+for i in count(2):
+    if i > 11:
+        break
+    else:
+        print(i)
+
+my_list = [10, 10, 3, 9, 5, 4, 30, 30]
+c = 0
+for i in cycle(my_list):
+    if c > 10:
+        break
+    print(i)
+    c += 1
