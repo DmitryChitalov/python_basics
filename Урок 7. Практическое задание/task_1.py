@@ -28,3 +28,33 @@
 8 10 12
 14 16 18
 """
+class Matrix:
+
+    def __init__(self, list):
+        self.list = list
+
+    def __add__(self, other):
+        matrix_res = [[0, 0, 0],
+                      [0, 0, 0],
+                      [0, 0, 0]]
+
+        for i in range(len(self.list)):
+            for j in range(len(other.list[i])):
+                matrix_res[i][j] = self.list[i][j] + other.list[i][j]
+
+        return Matrix(matrix_res)
+    
+    def __str__(self):
+        return '\n'.join(['\t'.join([str(j) for j in i]) for i in self.list])
+
+
+my_list = [[1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9]]
+my_list2 = [[1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]]
+
+obj = Matrix(my_list)
+obj1 = Matrix(my_list2)
+print(obj+obj1)
