@@ -1,0 +1,4 @@
+firm_1   OOO   12200   9010
+firm_2   PAO   5000   10234
+firm_3   IP   10030   5678
+firm_4   ZAO   10000   1111

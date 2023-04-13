@@ -7,3 +7,13 @@
 Иванов 23543.12
 Петров 13749.32
 """
+all_salary = []
+with open("test4.txt") as file:
+    for x in file:
+        user = x.split()[0]
+        salary = x.split()[-1]
+        salary = float(salary.replace(',', '.'))
+        all_salary.append(salary)
+        if salary < 20000:
+            print(user)
+print("средняя зарплата:", sum(all_salary) / len(all_salary))
