@@ -12,3 +12,25 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+import itertools #пришлось импортировать в файл,без этого функция не подхватывалась
+from itertools import count
+
+
+for el in count(int(input(" Insert"))):
+    if el > 10:
+        break
+    else:
+        print(el)
+
+
+l1 = "B Y C Y C L E "
+l2 = itertools.cycle(l1)
+c = 0
+for el in l2:
+    if c > 28:
+        break
+    else:
+        print(el, end="")
+        c += 1
+        
+        
