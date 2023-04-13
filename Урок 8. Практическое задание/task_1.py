@@ -12,3 +12,28 @@
 Второй, с декоратором @staticmethod, должен проводить валидацию числа, месяца
 и года (например, месяц — от 1 до 12). Проверить работу полученной структуры на реальных данных.
 """
+
+
+class Data:
+    day_month_year = "32.13.-1988"  # на уровне класса определяю атрибут и присваиваю ему значение
+
+    """Извлекаю число, месяц, год, преобразовываю их тип к типу «Число» и делаю атрибутами класса."""
+    @classmethod
+    def split_int(cls):
+        data_num = [int(el) for el in cls.day_month_year.split(".")]
+        cls.day_num, cls.month_num, cls.year_num = data_num
+
+    """провожу валидацию числа, месяца и года"""
+    @staticmethod
+    def check_data():
+        if Data.day_num > 31 or Data.day_num < 0:
+            print("Такого дня в месяце нет")
+        if Data.month_num > 12 or Data.month_num < 0:
+            print("Такого месяца в году нет")
+        if 0 > Data.year_num:
+            print("Это случилось до начала текущего летоисчисления")
+
+
+Data.split_int()
+Data.check_data()
+
