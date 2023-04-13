@@ -100,3 +100,40 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell: #класс клетка с параметром
+    def __init__(self, quantity):
+
+        self.quantity = quantity
+
+    def __add__(self, other):# метод сложение
+        summ = self.quantity + other.quantity
+        return Cell(summ)
+
+    def __sub__(self, other):# метод вычитания
+        diff = self.quantity - other.quantity
+        if diff > 0:
+            return Cell(diff)
+        else:
+            raise ValueError("Разность получилась отрицательная, вторая клетка должна быть меньше первой")
+
+    def __mul__(self, other):# метод умножение
+        mult = self.quantity * other.quantity
+        return Cell(mult)
+    def __truediv__(self, other):# метод деления
+        divi = self.quantity // other.quantity
+        return Cell(divi)
+
+# объекты класса Cell c параметрами
+
+cell1 = Cell(20)
+cell2 = Cell(10)
+# арифметические операции с клетками
+cell3 = cell1 + cell2
+cell4 = cell1 - cell2
+cell5 = cell1 * cell2
+cell6 = cell1 / cell2
+
+print(cell3.quantity)
+print(cell4.quantity)
+print(cell5.quantity)
+print(cell6.quantity)
