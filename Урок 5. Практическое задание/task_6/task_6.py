@@ -5,3 +5,17 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+import re
+
+res = {}
+fr = open("table.txt", "r")
+for line in fr:
+    splited = line.split(":")
+    subject, counts = splited
+    nums = re.findall(r'\d+', counts)
+    count = sum(int(x) for x in nums)
+    res[subject] = count
+
+print(res)
+
+fr.close()

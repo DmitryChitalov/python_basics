@@ -28,3 +28,25 @@
 8 10 12
 14 16 18
 """
+
+class Matrix:
+    matr = []
+
+    def __init__(self, matr=[]):
+        self.matr = matr
+        pass
+
+    def __str__(self):
+        lines = []
+        for row in self.matr:
+            lines.append("\t".join([str(x) for x in row]))
+        return "\n".join(lines)
+
+    def __add__(self, other):
+        result = [[self.matr[i][j] + other.matr[i][j] for j in range(len(self.matr[0]))] for i in range(len(self.matr))]
+        return Matrix(result)
+
+
+matr1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matr = matr1 + matr1
+print(matr)

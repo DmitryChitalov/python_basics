@@ -13,3 +13,37 @@
 Для каждого из классов метод должен выводить уникальное сообщение.
 Создать экземпляры классов и проверить, что выведет описанный метод для каждого экземпляра.
 """
+
+class Stationery:
+    title = ''
+
+    def draw(self):
+        pass
+
+
+class Pen(Stationery):
+    def draw(self):
+        print(f"Draw '{self.title}' by Pen")
+
+
+class Pencil(Stationery):
+    def draw(self):
+        print(f"Draw '{self.title}' by Pencil")
+
+
+class Handle(Stationery):
+    def draw(self):
+        print(f"Draw '{self.title}' by Handle")
+
+
+pen = Pen()
+pen.title = 'Story book'
+pen.draw()
+
+pencil = Pencil()
+pencil.title = 'draft'
+pencil.draw()
+
+handle = Handle()
+handle.title = 'PERMANENT'
+handle.draw()

@@ -3,3 +3,12 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+f = open("content.txt", "a")
+
+while True:
+    name = input("Enter line: ")
+    if name == '':
+        break
+    f.write(name + "\n")
+
+f.close()

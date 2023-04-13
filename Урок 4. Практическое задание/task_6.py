@@ -12,3 +12,26 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import cycle, count
+
+
+def use_count(start, stop):
+    counter = count(start)
+    for i in counter:
+        print(i)
+        if i >= stop:
+            break
+
+
+def use_cycle(lst, repeat_list_times):
+    cycler = cycle(lst)
+    counter = 0
+    while True:
+        print(next(cycler))
+        counter += 1
+        if counter >= repeat_list_times * len(lst):
+            break
+
+
+use_count(3, 10)
+use_cycle(range(3), 3)
