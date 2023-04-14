@@ -100,3 +100,73 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+class Cell:
+
+    def __init__(self, quantity):   # количество ячеек клетки (целое число)
+        self.quantity = quantity
+        self.ryad = 5
+
+    def __add__(self, other):   # увеличение
+        return self.quantity + other.quantity
+
+    def __sub__(self, other):   # вычитание
+        if self.quantity < other.quantity:
+            print("Разность отрицательна, поэтому операция не выполняется")
+        else:
+            return self.quantity - other.quantity
+
+    def __mul__(self, other):    # умножение
+        return self.quantity * other.quantity
+
+    def __truediv__(self, other):    # целочисленное (с округлением до целого) деление
+        return self.quantity // other.quantity
+
+    def make_order(self, num_cell):  # принимающий экземпляр класса и количество ячеек в ряду. Данный метод позволяет организовать ячейки по рядам.
+        res_line = ""
+        if self.quantity < num_cell:
+            res_line = "*" * self.quantity
+        else:
+            i = 0
+            while i < (self.quantity // num_cell):
+                res_line += "*" * num_cell + "\n"
+                i += 1
+            res_line += "*" * (self.quantity % num_cell)
+        return res_line
+
+
+quantity1 = int(input(f"Введите количество ячеек клетки 1: "))
+quantity2 = int(input(f"Введите количество ячеек клетки 2: "))
+quantity3 = int(input(f"Введите количество ячеек клетки 3: "))
+quantity4 = int(input(f"Введите количество ячеек клетки 4: "))
+
+print("Создаем объекты клеток 1 и 2")
+cell1 = Cell(quantity1)
+cell2 = Cell(quantity2)
+print("Создаем объекты клеток 3 и 4")
+cell3 = Cell(quantity3)
+cell4 = Cell(quantity4)
+
+print(f"Складываем")
+print(f"Сумма клеток 1 и 2 = {cell1 + cell2}")
+print(f"Сумма клеток 3 и 4 = {cell3 + cell4}")
+
+print(f"Вычитаем")
+print(f"Разность клеток 2 и 1 = {cell2 - cell1}")
+print(f"Разность клеток 4 и 3 = {cell4 - cell3}")
+
+print("Умножаем")
+print(f"Умножение клеток 2 на 1 = {cell2 * cell1}")
+
+print("Делим")
+print(f"Деление клеток 1 на 2 = {cell1 / cell2}")
+
+print("Организация ячеек по рядам")
+num_cell1 = int(input(f"Введите количество ячеек клетки 1: "))
+num_cell2 = int(input(f"Введите количество ячеек клетки 2: "))
+num_cell3 = int(input(f"Введите количество ячеек клетки 3: "))
+num_cell4 = int(input(f"Введите количество ячеек клетки 4: "))
+print(f"Результат оганизации ячеек 1й клетки в {num_cell1} рядов\n{cell1.make_order(num_cell1)}")
+print(f"Результат оганизации ячеек 2й клетки в {num_cell2} рядов\n{cell2.make_order(num_cell2)}")
+print(f"Результат оганизации ячеек 3й клетки в {num_cell3} рядов\n{cell3.make_order(num_cell3)}")
+print(f"Результат оганизации ячеек 4й клетки в {num_cell4} рядов\n{cell4.make_order(num_cell4)}")

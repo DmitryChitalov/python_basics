@@ -15,3 +15,24 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+from time import sleep
+
+
+class TrafficLight:
+
+    # метод класса
+    def __init__(self, color):
+        self._color = color  # определяем приватный атрибут класса
+
+    # метод класса
+    def running(self):
+        for key, value in self._color.items():
+            print(f"Цвет: {key}, Время: {value}")
+            sleep(value)
+
+
+obj = TrafficLight(color={
+    "Красный": 7,
+    "Желтый": 2,
+    "Зеленый": 7})
+obj.running()

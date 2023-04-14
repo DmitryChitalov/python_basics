@@ -11,3 +11,12 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+string = input("Введите целые числа через пробел: ").split()
+str_reverse = []
+for el in string:
+    if len(str_reverse) % 2 == 0:
+        str_reverse.append(el)
+    else:
+        str_reverse.insert(len(str_reverse) - 1, el)
+print(str_reverse)
