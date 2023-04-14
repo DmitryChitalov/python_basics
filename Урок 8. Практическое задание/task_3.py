@@ -22,24 +22,21 @@
 При этом работа скрипта не должна завершаться.
 """
 class AcceptOnlyNumbersError(Exception):
-    def __init__(self, message_error="Принимаются только числа."):
-        self.message_error = message_error
-        super().__init__(self.message_error)
+    def __init__(self, txt):
+        self.txt = txt
 
 
-def my_list():
-    numbers_list = []
-    while True:
-        try:
-            my_value = input("Введите число, или 'end' для завершения: ")
-            if my_value == "end":
-                break
-            if not my_value.isdigit():
-                raise AcceptOnlyNumbersError
-            numbers_list.append(int(my_value))
-        except AcceptOnlyNumbersError as my_error:
-            print(my_error)
-    return numbers_list
+numbers_list = []
+while True:
+    try:
+        input_number = input("Введите, пожалуйста, число или 'stop' для остановки: ")
+        if input_number == 'stop':
+            break
+        elif input_number.isdigit():
+            numbers_list.append(int(input_number))
+        else:
+            raise AcceptOnlyNumbersError("На ввод принимаются только числа.")
+    except AcceptOnlyNumbersError as error_message:
+        print(error_message.txt)
 
-
-print(my_list())
+print(numbers_list)
