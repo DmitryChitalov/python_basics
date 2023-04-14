@@ -8,3 +8,10 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+
+words_list = ("Один", "Два", "Три", "Четыре")
+with open("text_eng.txt") as my_file_eng:
+    with open("text_ru.txt", "w+") as my_file_ru:
+        for i in my_file_eng:
+            word = int(i.split()[-1])
+            my_file_ru.write(words_list[word-1]+' - ' + str(word) + "\n")
