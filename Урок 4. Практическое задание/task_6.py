@@ -35,6 +35,7 @@ def repeating_elements(input_list, counter):
     return out_list
 
 
-my_list = integer_generator(3, 10)
-print(my_list)
-print(repeating_elements(my_list, 10))
+if __name__ == "__main__":
+    my_list = integer_generator(3, 10)
+    print(my_list)
+    print(repeating_elements(my_list, 10))

@@ -8,5 +8,5 @@
 def find_multiples_of_numbers(start_number, end_number):
     return [i for i in range(start_number, end_number + 1) if i % 20 == 0 or i % 21 == 0]
 
-
-print(find_multiples_of_numbers(20, 240))
+if __name__ == "__main__":
+    print(find_multiples_of_numbers(20, 240))

@@ -12,8 +12,9 @@
 def convert_list(input_list):
     """ Возыращает элементы исходного списка, значения которых больше предыдущего элемента
     """
-    return [a for i, a in enumerate(input_list) if i > 0 and a > input_list[i - 1]]
+    return [a for i, a in enumerate(
+        input_list) if i > 0 and a > input_list[i - 1]]
 
-
-list_of_number = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-print(convert_list(list_of_number))
+if __name__ == "__main__":
+    list_of_number = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+    print(convert_list(list_of_number))

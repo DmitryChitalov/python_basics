@@ -19,5 +19,6 @@ def my_factorial(n):
         yield x
 
 
-for num in my_factorial(25):
-    print(num)
+if __name__ == "__main__":
+    for num in my_factorial(25):
+        print(num)

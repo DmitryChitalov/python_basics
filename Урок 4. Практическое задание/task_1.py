@@ -25,6 +25,11 @@ if __name__ == "__main__":
     else:
         try:
             num = [float(_) for _ in argv[1:]]
-            print(employee_salary_calculation(float(argv[1]), float(argv[2]), float(argv[3])))
+            print(
+                employee_salary_calculation(
+                    float(
+                        argv[1]), float(
+                        argv[2]), float(
+                        argv[3])))
         except ValueError:
             print('Вы ввели не числовой параметр')
