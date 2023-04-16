@@ -10,3 +10,12 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+
+def max_dig(n, radix=10):
+    if n < radix:
+        return n
+    else:
+        return (max(n % radix, max_dig(n // radix)))
+
+
+print(max_dig(123456789))

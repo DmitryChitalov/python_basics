@@ -8,3 +8,14 @@
 Результат через список: Осень
 Результат через словарь: Осень
 """
+
+month_list = [['Vesna', 3, 4, 5], ['Leto', 6, 7, 8], ['Osen', 9, 10, 11], ['Zima', 12, 1, 2],]
+month_number = int(input('Введите номер месяца от 1 до 12: '))
+if month_number in range(1, 13):
+    for i, el in enumerate(month_list):
+        if month_number in el[1:4]:
+            print(f'Введённый номер месяца будет к {el[0]}')
+            break
+        else:
+            print('Неправильно ввели')
+
