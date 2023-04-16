@@ -7,3 +7,15 @@
 Иванов 23543.12
 Петров 13749.32
 """
+with open('sal.txt', 'r') as fp:
+    sal = []
+    poor = []
+    all_list = fp.read().split('\n')
+    for i in all_list:
+        i = i.split()
+        if int(i[1]) < 20000:
+            poor.append(i[0])
+        sal.append(i[1])
+
+print(
+    f'Оклад меньше 20.000 {poor}, средний оклад {sum(map(int, sal)) / len(sal)}')
