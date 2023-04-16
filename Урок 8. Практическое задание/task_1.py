@@ -16,9 +16,7 @@
 
 class Data:
     def __init__(self, day_month_year):
-        # self.day = day
-        # self.month = month
-        # self.year = year
+
         self.day_month_year = str(day_month_year)
 
     @classmethod
