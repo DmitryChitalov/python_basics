@@ -10,22 +10,18 @@
 
 "Без генератора"
 
-import random
+primary_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
 
-list1 = random.sample(range(1, 1000), 20)  # генерирует числа от 1 до 1000, всего этих чисел 20
-print(list1)
-list2 = []
-for el in range(len(list1) - 1):
-    if list1[el] < list1[el + 1]:
-        list2.append(list1[el + 1])
-print(list2)
+res_list_1 = []
+for el in range(1, len(primary_list)):
+    if primary_list[el] > primary_list[el - 1]:
+        res_list_1.append(primary_list[el])
+
+print(res_list_1)
 
 "С генератором"
 
-result_list = []
-list = [int(i) for i in input("Введите чисела разделяя их пробелом: ").split()]
-for i in range(1, len(list)):
-    if list[i] > list[i - 1]:
-        (result_list.append(list[i]))
-print("Исходный список: ", list)
-print("Список, элементы которого больше предыдущего: ", result_list)
+res_list_2 = [primary_list[el] for el in range(
+    1, len(primary_list)) if primary_list[el] > primary_list[el - 1]]
+
+print(res_list_2)
