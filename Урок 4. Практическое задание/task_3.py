@@ -3,3 +3,10 @@
 Необходимо решить задание в одну строку.
 Подсказка: использовать функцию range() и генераторное выражение.
 """
+
+
+def find_multiples_of_numbers(start_number, end_number):
+    return [i for i in range(start_number, end_number + 1) if i % 20 == 0 or i % 21 == 0]
+
+
+print(find_multiples_of_numbers(20, 240))

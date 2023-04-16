@@ -12,3 +12,29 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+
+def integer_generator(start_number, end_number):
+    out_list = []
+    for el in count(start_number):
+        if el > end_number:
+            break
+        out_list.append(el)
+    return out_list
+
+
+def repeating_elements(input_list, counter):
+    ex = 1
+    out_list = []
+    for i in cycle(input_list):
+        if ex > counter:
+            break
+        ex += 1
+        out_list.append(i)
+    return out_list
+
+
+my_list = integer_generator(3, 10)
+print(my_list)
+print(repeating_elements(my_list, 10))
