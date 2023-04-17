@@ -24,7 +24,7 @@ first_result = int(input('Введите результат первого дн�
 need_result = int(input('Введите нужный результат: '))
 n = 1
 while first_result < need_result:
-    print(str(n), '-й день:', str(round(first_result, 2)))
+    print(f"{n} -й день: {round(first_result, 2)}")
     first_result = first_result + (first_result * 0.1)
     n = n + 1
-print(str(n), '-й день:', str(round(first_result, 2)))
+print(f"{n} -й день: {round(first_result, 2)}")

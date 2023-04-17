@@ -31,5 +31,7 @@ if profit > loss:
     clear_for_person = float(clear_profit / people)
     print(
         'Прибыль фирмы в расчете на одного сотрудника: %s' % clear_for_person)
+elif profit == loss:
+    print('Фирма ничего не зарабатывает')
 else:
     print('Фирма работает в убыток')
