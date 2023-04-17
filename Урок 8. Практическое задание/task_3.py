@@ -9,3 +9,22 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+class ExampleError(Exception):
+    def __init__(self, a):
+        self.a = a
+
+num = []
+
+for i in range(5):
+    us = input('Введите число: ')
+
+    try:
+        if us.isdigit():
+            num.append(int(us))
+        else:
+            raise ExampleError('Ошибка! Это не число')
+    except ExampleError as err:
+        print(err)
+
+
+print(num)
