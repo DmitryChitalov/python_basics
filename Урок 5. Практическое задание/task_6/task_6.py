@@ -5,3 +5,11 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+lessons_dict = {}
+with open("lessons.txt", encoding='utf-8') as f_obj:
+    content = f_obj.readlines()
+for line in content:
+    lessons_list = line.replace('(', ' ').split()
+    lessons_dict[lessons_list[0][:-1]] = sum(int(i) for i in lessons_list if i.isdigit())
+print(lessons_dict)
