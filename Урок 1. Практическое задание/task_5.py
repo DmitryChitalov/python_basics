@@ -18,3 +18,20 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+profit = int(input('Введите значение прибыли: '))
+loss = int(input('Введите значение издержек: '))
+people = int(input('Ввдите количество работников: '))
+if profit > loss:
+    print('Выручка больше издержек')
+    clear_profit = profit - loss
+    rent = clear_profit / profit
+    print('Рентабельность {} выручки {}: {:.2f}'
+          .format('нашей', 'составила', rent))
+    clear_for_person = float(clear_profit / people)
+    print(
+        'Прибыль фирмы в расчете на одного сотрудника: %s' % clear_for_person)
+elif profit == loss:
+    print('Фирма ничего не зарабатывает')
+else:
+    print('Фирма работает в убыток')
