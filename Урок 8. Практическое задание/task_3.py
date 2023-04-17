@@ -9,3 +9,24 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+class ExceptionError:
+
+    @staticmethod
+    def input_number():
+        my_list = []
+       
+        while True:
+            try:
+                number = int(input('Введите числа для заполнения списка '))
+                my_list.append(number)
+                print(f'Текущий список: {my_list} \n')
+            except:
+                print(f"Некорректный ввод! Пожалуйста, вводите только числа \n")
+                
+                request = input(f'Если вы хотите попробовать ввести еще, введите для продолжение соответственно -  Y/N \n ')
+                if request== 'Y' or request == 'y':
+                    pass
+                else:
+                    return f'Окончание ввода'
+
+print(ExceptionError.input_number())
