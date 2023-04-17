@@ -7,3 +7,11 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+my_dict = {'One': 'Один', 'Two': 'Два', 'Three': 'Три', 'Four': 'Четыре'}
+with open('numerals.txt', encoding='utf-8') as f_obj:
+    content = f_obj.read()
+    for key, value in my_dict.items():
+        content = content.replace(key, value)
+with open("Числительные.txt", "w", encoding='utf-8') as out_f:
+    out_f.write(content)
