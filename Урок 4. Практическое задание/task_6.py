@@ -12,3 +12,29 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+#a)
+from itertools import count, cycle #создает равномерную последовательность
+list_int = []
+
+a = int(input("Введите первое число "))
+b = int(input("Введите последнее число "))
+
+for x in count(a): #пока х входит в
+    if x > b: # если выполняется условие - прерываем
+      break
+    print(x)
+    list_int.append(x) # добавляем элемент в конец списка
+
+#b)
+from itertools import count, cycle
+list_int = [1, 2, 3, 4, 5, 6]
+
+print()
+print(list_int)
+
+count = 0
+for item in cycle(list_int): # перебор списка
+    if count >= len(list_int): #если больше длины списка прерываем иначе выводим элемент
+        break
+    print(item)
+    count += 1

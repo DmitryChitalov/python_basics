@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+sp = [12, "Слово", 2.3, True, None]
+for el in sp: #перебор списка
+    print(type(el)) #вывод типа элемента списка

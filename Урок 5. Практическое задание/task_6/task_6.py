@@ -5,3 +5,27 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+input_file = open(r'D:\DevOps\Python\Урок5\less6.txt', "r")
+sub_less = {}  # словарь для хранения кол-ва занятий по каждому предмету
+for line in input_file:  # цикл по строкам файла
+    subject, lessons = line.strip().split(':')  # делим строку на название предмета и кол-во занятий
+    lessons_list = lessons.split()  # список для хранения кол-ва лекций, практики и лабораторных
+    # переменные для количества лекций, практики и лабораторных
+    lec = 0
+    pract = 0
+    labs = 0
+    for lesson in lessons_list:  # проходим по списку занятий и вычисляем количество каждого типа занятий
+        if '(l)' in lesson:
+            lec = int(lesson.split('(l)')[0])
+        elif '(pr)' in lesson:
+            pract = int(lesson.split('(pr)')[0])
+        elif '(lab)' in lesson:
+            labs = int(lesson.split('(lab)')[0])
+
+    total_lessons = lec + pract + labs  # считаем количество занятий у предмета
+
+    sub_less[subject] = total_lessons  # добавляем предмет и общее количество занятий в словарь
+
+print(sub_less)
+
+input_file.close()

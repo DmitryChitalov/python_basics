@@ -15,3 +15,19 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+
+class TrafficLight: #создаем класс
+    def __init__(self):
+        self.__color = "red" # переменная приватная, color с красным цветом
+
+    def running(self): #публичный метод running
+        print("Red light")
+        time.sleep(5)#ждем 5 секунд
+        print("Yellow light")
+        time.sleep(2)
+        print("Green light")
+        time.sleep(5)
+
+tl = TrafficLight() #экземпляр класса с переменной color в красном цвете
+tl.running() #вызов метода running

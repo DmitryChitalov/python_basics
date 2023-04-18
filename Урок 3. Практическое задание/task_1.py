@@ -17,3 +17,19 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+def s_calc():
+    x = float(input("Укажите x: "))
+    y = float(input("Укажите y: "))
+    if y == 0:
+        print("ВВедите число != 0")
+        y = float(input("Введите y: "))
+        z = x // y
+    else:
+        z = x // y
+    return z
+
+
+al = s_calc()
+print(al)

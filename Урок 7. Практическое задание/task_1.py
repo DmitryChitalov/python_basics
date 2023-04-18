@@ -28,3 +28,30 @@
 8 10 12
 14 16 18
 """
+class Matrix:
+    def __init__(self, data):
+        self.data = data
+
+    def __str__(self): #разделяем числа пробелами и строки переносами
+        return '\n'.join([' '.join(map(str, row)) for row in self.data])
+
+    def __add__(self, two):# сложение матриц
+
+        result = []
+        for i in range(len(self.data[0])): #проходим строки
+            row = []
+            for j in range(len(two.data[0])): #проходим столбцы
+                row.append(self.data[i][j] + two.data[i][j])# в конец списка сумму элементов
+            result.append(row)
+
+        return Matrix(result)
+
+#оздаём две матрицы с помощью класса Matrix
+matrix1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matrix2 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+#вывод матриц на экран в нормальном виде
+print(matrix1)
+print(matrix2)
+
+sum_matrix = matrix1 + matrix2
+print(sum_matrix)
