@@ -5,3 +5,33 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+
+def hours_count(arg_list):
+    """
+    Фунцкия считает сумму всех чисел, входящих в элементы входного списка, пропуская "0" элемент,
+    Предварительно записывает в список с числами
+    """
+    num_list = []
+    num = ''
+    for i in range(1, len(arg_list)):
+        for char in arg_list[i]:
+            if char.isdigit():
+                num = num + char
+            else:
+                if num != '':
+                    num_list.append(int(num))
+                    num = ''
+        if num != '':
+            num_list.append(int(num))
+    return sum(num_list)
+
+
+my_dict = dict()
+with open("input_file.txt", "r", encoding='utf-8') as f_obj:
+    while True:
+        line = list(f_obj.readline().split())
+        if not line:
+            break
+        my_dict.update({line[0][:-1]: hours_count(line)})
+print(my_dict)
