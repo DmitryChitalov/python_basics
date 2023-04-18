@@ -25,3 +25,43 @@
 
 Два класса: абстрактный и Clothes
 """
+class cloth:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def get_total_topcoat(self):
+        return self.width / 6.5 + 0.5
+
+    def get_total_сostume(self):
+        return self.height * 2 + 0.3
+
+    @property
+    def get_full_total(self):
+        return str(f'Общие затраты ткани: {(self.width / 6.5 + 0.5) + (self.height * 2 + 0.3)}')
+
+
+class Topcoat(cloth):
+    def __init__(self, width, height):
+        super().__init__(width, height)
+        self.total_topcoat = self.width / 6.5 + 0.5
+
+    def __str__(self):
+        return f'Зараты ткани на пальто: {self.total_topcoat}'
+
+
+class Сostume(cloth):
+    def __init__(self, width, height):
+        super().__init__(width, height)
+        self.total_costume = self.height * 2 + 0.3
+
+    def __str__(self):
+        return f'Затраты ткани на костюм: {self.total_costume}'
+
+
+topcoat = Topcoat(40, 1.4)
+costume = Сostume(17, 1.7)
+print(topcoat)
+print(costume)
+print(f'{topcoat.get_full_total} на пальто')
+print(f'{costume.get_full_total} на костюм')
