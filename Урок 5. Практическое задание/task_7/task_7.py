@@ -9,3 +9,23 @@
 [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 Подсказка: использовать менеджер контекста.
 """
+import json
+
+sum_of_profit = 0
+firms_dict = dict()
+profit_counter = 0
+list_firms = list()
+with open("input_file.txt", "r", encoding='utf-8') as f_obj:
+    while True:
+        line = list(f_obj.readline().split())
+        if not line:
+            break
+        if int(line[2]) > int(line[3]):
+            sum_of_profit += int(line[2]) - int(line[3])
+            profit_counter += 1
+        firms_dict.update({line[0]: int(line[2]) - int(line[3])})
+list_firms.append(firms_dict)
+list_firms.append(dict(average_profit=sum_of_profit / profit_counter))
+print(list_firms)
+with open("output_file.json", "w", encoding='utf-8') as f_obj:
+    json.dump(list_firms, f_obj)
