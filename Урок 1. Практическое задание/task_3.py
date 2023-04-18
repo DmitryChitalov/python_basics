@@ -8,3 +8,14 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+n = int(input('Введите число n:'))
+
+#Создаем промежуточные переменные nn и nnn
+nn = int(str(n) + str(n))
+nnn = int(str(n) + str(n) + str(n))
+
+#Считаем итог (по идее оба пункта можно свести в одну формулу)
+resault = n + nn + nnn
+
+print('n + nn + nnn =', resault)
