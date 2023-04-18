@@ -7,3 +7,14 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+from functools import reduce
+def generate_new_list(origin_list):
+    new_list = []
+    for i in range(0,len(origin_list)-1):
+        if origin_list[i+1] > origin_list[i]:
+            new_list.append(origin_list[i+1])
+    return new_list
+
+
+origin_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+print(generate_new_list(origin_list))

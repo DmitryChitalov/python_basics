@@ -12,3 +12,20 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+# A
+from itertools import count, cycle
+
+for el in count(10):
+    if el > 20:
+        break
+    else:
+        print(el)
+
+# B
+list = [x for x in 'homework']
+с = 0
+for el in cycle(list):
+    if с > 15:
+        break
+    print(el)
+    с += 1

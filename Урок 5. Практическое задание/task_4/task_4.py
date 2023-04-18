@@ -7,3 +7,13 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+salaries = []
+staf_counter = 0
+with open('salary.txt', 'r') as file:
+    for line in file:
+        salary = float(line.split()[1])
+        salaries.append(salary)
+        staf_counter += 1
+
+print(f'Средняя зарплата в ООО"Ромашка": {sum(salaries) / staf_counter}')

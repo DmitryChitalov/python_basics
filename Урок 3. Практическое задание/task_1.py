@@ -17,3 +17,14 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def devision(arg1, arg2):
+
+    try:
+        print(f'Результат деления {arg1 / arg2}')
+    except:
+        print('Вы что? Пытаетесь делить на 0!')
+
+
+input_1 = float(input('Ведите делимое '))
+input_2 = float(input('Введите делитель '))
+devision(input_1, input_2)
