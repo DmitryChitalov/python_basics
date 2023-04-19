@@ -7,3 +7,7 @@
 Иванов 23543.12
 Петров 13749.32
 """
+file = open('test.txt', "r", encoding='utf-8')
+for line in file:
+    if float(line.split()[1]) < 20000:
+        print(line.split()[0])
