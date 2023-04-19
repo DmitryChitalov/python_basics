@@ -9,3 +9,17 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+class OwnError(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+inp = ''
+data = []
+while inp != 'stop':
+    inp = input('Write integer to add to your list or insert stop, to finish work: ')
+    try:
+        data.append(int(inp))
+    except OwnError as err:
+        raise OwnError("Thi is not integer")
+    except:
+        continue
+print(data)

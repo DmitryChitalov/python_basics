@@ -100,3 +100,45 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+class Cell:
+
+    def __init__(self, quantity: int):
+        self.quantity = quantity
+
+    def __add__(self, other):
+        new_cell = Cell(self.quantity + other.quantity)
+        return new_cell
+
+    def __sub__(self, other):
+        max_quantity = max(self.quantity, other.quantity)
+        min_quantity = min(self.quantity, other.quantity)
+        return Cell(max_quantity - min_quantity)
+
+    def __mul__(self, other):
+        return Cell(self.quantity * other.quantity)
+
+    def __truediv__(self, other):
+        return Cell(self.quantity // other.quantity)
+
+    def make_order(self, count):
+        count_full_arrays = self.quantity // count
+        leftover = self.quantity % count
+        result = ''
+        for i in range(count_full_arrays):
+            result += '*'*count
+            result += '\n'
+        result += '*'*leftover
+        return result
+
+    def __str__(self):
+        return f'Size of result cell is {self.quantity}'
+
+
+cell_1 = Cell(13)
+cell_2 = Cell(2)
+
+print(cell_1 + cell_2)
+print(cell_1 - cell_2)
+print(cell_1 * cell_2)
+print(cell_1 / cell_2)
+print(cell_1.make_order(3))
