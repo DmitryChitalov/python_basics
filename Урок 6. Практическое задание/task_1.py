@@ -15,3 +15,19 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+import time
+class TraficLights:
+    __color = ''
+    def running(self):
+        while True:
+            __color = 'Красный'
+            print(f'{__color}')
+            time.sleep(7)
+            __color = 'Жетлый'
+            print(f'{__color}')
+            time.sleep(2)
+            __color = 'Зеленый'
+            print(f'{__color}')
+            time.sleep(5)
+obj = TraficLights()
+obj.running()
