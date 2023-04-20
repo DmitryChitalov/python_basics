@@ -15,3 +15,37 @@
 П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
+
+
+class Worker:
+
+    def __init__(self, name, surname, position, wage, bonus):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self._income = {"Wage": wage, "Bonus": bonus}
+
+
+class Position(Worker):
+    def __init__(self, name, surname, position, wage, bonus):
+        super().__init__(name, surname, position, wage, bonus)
+
+    def get_full_name(self):
+        print(f"{self.name} {self.surname} - {self.position}")
+
+    def get_total_income(self):
+        print(f"Общий оход - {self._income.get('Wage')} + {self._income.get('Bonus')} ="
+              f" {self._income.get('Wage') + self._income.get('Bonus')} р.")
+
+    # Определяем перегрузку:
+    def __str__(self):
+        return f"{self.name} {self.surname} - {self.position} \nОбщий доход - " \
+               f"{self._income.get('Wage')} + {self._income.get('Bonus')} = " \
+               f"{self._income.get('Wage') + self._income.get('Bonus')} р."
+
+
+my_worker = Position('Иван', 'Иванов', 'Директор', 10000, 2222)
+my_worker.get_full_name()
+my_worker.get_total_income()
+my_worker2 = Position('Петр', 'Петров', 'Менеджер', 5000, 1111)
+print(my_worker2)
