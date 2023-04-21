@@ -5,3 +5,15 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+with open('task_6.txt') as read_file:
+    res_dict = {}
+    all_read_lines = read_file.readlines()
+    for line in all_read_lines:
+        if len(line):
+            subject = line.split()
+            hours_sum = 0
+            for hours in subject[1:]:
+                if len(hours) > 1:
+                    hours_sum += int(hours.split('(')[0])
+            res_dict[subject[0]] = hours_sum
+    print(f'\t{res_dict}\n')

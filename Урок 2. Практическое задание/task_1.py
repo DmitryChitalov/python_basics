@@ -15,3 +15,10 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+new_list = [77, None, -90, 'True', True, 7.40]
+def new_type(el):
+    for el in range(len(new_list)):
+        print(type(new_list[el]))
+    return
+new_type(new_list)
