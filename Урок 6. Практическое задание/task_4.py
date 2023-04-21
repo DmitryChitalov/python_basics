@@ -20,3 +20,77 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+
+class Car:
+
+    def __init__(self, name, speed, color, is_police=False):
+        self.name = name
+        self.speed = speed
+        self.color = color
+        self.is_police = is_police
+
+    def go(self, speed):
+        self.speed = speed
+        return f'Машина {self.name} поехала.'
+
+    def stop(self):
+        self.speed = 0
+        return f'Машина {self.name} остановилась.'
+
+    def turn(self, direction):
+        if direction == "лево" or direction == "право":
+            return f'Машина {self.name} повернула на {direction}'
+        else:
+            return f'Могу повернуть только на "лево" или на "право"'
+
+    def show_speed(self):
+        return f'Текущая скорость автомобиля: {self.speed}'
+
+
+class TownCar(Car):
+
+    def show_speed(self):
+        if self.speed > 60:
+            return f'Вы превысили скорость!'
+        else:
+            return f'Текущая скорость автомобиля: {self.speed}'
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed > 40:
+            return f'Вы превысили скорость!'
+        else:
+            return f'Текущая скорость автомобиля: {self.speed}'
+
+
+town_car = TownCar('Жигули', 0, 'синий')
+print(town_car.go(10))
+print(town_car.show_speed())
+print(town_car.go(50))
+print(town_car.show_speed())
+print(town_car.turn("лево"))
+print(town_car.turn("право"))
+print(town_car.turn("назад"))
+print(town_car.show_speed())
+print(town_car.go(65))
+print(town_car.show_speed())
+print(town_car.stop())
+print(town_car.show_speed())
+
+print()
+
+work_car = WorkCar('Волга', 0, 'белый', True)
+print(work_car.go(10))
+print(work_car.show_speed())
+print(work_car.go(50))
+print(work_car.show_speed())
+print(work_car.go(40))
+print(work_car.show_speed())
+print(work_car.turn("лево"))
+print(work_car.turn("право"))
+print(work_car.turn("назад"))
+print(work_car.show_speed())
+print(work_car.stop())
+print(work_car.show_speed())

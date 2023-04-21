@@ -16,3 +16,25 @@ length (длина в метрах), width (ширина в метрах).
 
 Например: 20м*5000м*25кг*0.05м = 125000 кг = 125 т
 """
+
+
+class Road:
+
+    def __init__(self, length, width):
+        self._length = length
+        self._width = width
+
+    def asphalt_mass(self, weight, height):
+        return self._length * self._width * weight * height
+
+
+length = int(input("Введите длину дорожного полотна (в м): "))
+width = int(input("Введите ширину дорожного полотна (в м): "))
+weight = int(input(
+    "Введите массу асфальта для покрытия одного кв метра дороги асфальтом, толщиной в 1 см (в кг): "))
+height = int(
+    input("Введите необходимую толщину дорожного полотна (в см): ")) / 100
+my_road = Road(length, width)
+need_mass = round(my_road.asphalt_mass(weight, height))
+
+print(f'Необходимо {need_mass} кг = {need_mass / 1000} т массы асфальта')
