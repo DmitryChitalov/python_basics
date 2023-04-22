@@ -19,17 +19,24 @@ length (длина в метрах), width (ширина в метрах).
 
 
 class Road:
-    _length = None
-    _width = None
 
-    def mass_of_asphalt(self, mass, thickness):
-        print(f'Масса асфальта {self._length * self._width * mass * thickness} кг = '
-              f'{self._length * self._width * mass * thickness / 1000} т')
+    thickness = 0.05
+    weight = 25
 
-    def __init__(self, _length, _width):
-        self._length = _length
-        self._width = _width
+    def __init__(self, length, width):
+        self.__length = length
+        self.__width = width
+
+    def asphalt_weight(self, length, width):
+        if not length:
+            length = self.__length
+        if not width:
+            width = self.__width
+        asphalt_weight = int(length) * int(width) * self.weight * self.thickness
+        print(f'\nМасса асфальта для покрытия дорожного полотна длиной {length} метров и шириной {width} метров ' 
+              f'равна {asphalt_weight} кг = {asphalt_weight//1000} т')
 
 
-asphalt = Road(20, 5000)
-asphalt.mass_of_asphalt(25, 0.05)
+example_road = Road('5000', '20')
+example_road.asphalt_weight('', '')
+example_road.asphalt_weight(10000, 50)

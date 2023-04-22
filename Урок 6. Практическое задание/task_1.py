@@ -20,7 +20,7 @@ import time
 
 
 class TrafficLight:
-    __color = None
+    color = None
 
     def __init__(self, r_time: int, y_time: int, g_time: int):
         self.r_time = r_time
@@ -32,14 +32,14 @@ class TrafficLight:
             i = 1
             while i <= (self.r_time + self.y_time + self.g_time):
                 if i in range(1, self.r_time + 1):
-                    self.__color = ("Red")
-                    print(f"{i} {self.__color}")
+                    self.color = ("Red")
+                    print(f"{i} {self.color}")
                 elif i in range(self.r_time, self.r_time + self.y_time + 1):
-                    self.__color = ("Yellow")
-                    print(f"{i} {self.__color}")
+                    self.color = ("Yellow")
+                    print(f"{i} {self.color}")
                 elif i in range(self.r_time + self.y_time, self.r_time + self.y_time + self.g_time + 1):
-                    self.__color = ("Green")
-                    print(f"{i} {self.__color}")
+                    self.color = ("Green")
+                    print(f"{i} {self.color}")
                 time.sleep(1)
                 i += 1
 
