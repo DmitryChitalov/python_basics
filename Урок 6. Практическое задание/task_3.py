@@ -27,14 +27,17 @@ class Worker:
 
 class Position(Worker):
     def get_full_name(self):
-        print(f'Имя: {self.name}\n'
-              f'Фамилия: {self.surname}\n'
-              f'Должность: {self.position}\n')
+        return (f'Имя: {self.name}\n'
+                f'Фамилия: {self.surname}\n'
+                f'Должность: {self.position}\n')
 
     def get_total_income(self):
-        print(f'Доход {self.name}: {self._income["wage"] + self._income["bonus"]}')
+        return f'Доход {self.name}: {self._income["wage"] + self._income["bonus"]}'
+
+    def __str__(self):
+        return f'{self.get_full_name()}' \
+               f'{self.get_total_income()}'
 
 
 bob = Position('Bob', 'Bobis', 'Engineer', 10000, 5000)
-bob.get_full_name()
-bob.get_total_income()
+print(bob)
