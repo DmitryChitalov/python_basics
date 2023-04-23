@@ -100,3 +100,39 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+class Cell:
+    def __init__(self, quantity):
+        self.quantity = quantity
+
+    def __add__(self, other):
+        return self.quantity + other.quantity
+
+    def __sub__(self, other):
+        if self.quantity < other.quantity:
+            print('Операция невозможна')
+        else:
+            return self.quantity - other.quantity
+
+    def __mul__(self, other):
+        return self.quantity * other.quantity
+
+    def __truediv__(self, other):
+        return self.quantity // other.quantity
+
+    def make_order(self, num):
+        rows = []
+        for i in range(self.quantity):
+            rows.append('*')
+            if (i + 1) % num == 0:
+                rows.append('\n')
+        return ''.join(rows)
+
+
+cell_1 = Cell(22)
+cell_2 = Cell(10)
+print(f'Сумма клеток: {cell_1 + cell_2}')
+print(f'Разность клеток: {cell_1 - cell_2}')
+print(f'Общая клетка содержит {cell_1 * cell_2} ячеек')
+print(f'Ячеек в общей клетке: {cell_1 / cell_2}')
+print(f'Ячейки по рядам: {cell_1.make_order(5)}, {cell_2.make_order(5)}')
