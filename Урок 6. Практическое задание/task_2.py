@@ -19,21 +19,18 @@ length (длина в метрах), width (ширина в метрах).
 
 
 class Road:
-    def __init__(self, length, width, mass_road, thickness):
+    mass_road = 25
+    thickness = 0.05
+
+    def __init__(self, length, width):
         self.__length = length
         self.__width = width
-        self.mass_road = mass_road
-        self.thickness = thickness
 
-    def sum_road(self):
-        res = self.__length * self.__width * self.mass_road * self.thickness
-        print(f'{self.__length}м*{self.__width}м*{self.mass_road}кг*{self.thickness}м = {res} кг = {res // 1000} т')
+    def __str__(self):
+        result = self.__length * self.__width * self.mass_road * self.thickness
+        return f'{self.__length}м*{self.__width}м*{self.mass_road}кг*{self.thickness}м = ' \
+               f'{result} кг = {result / 1000} т'
 
 
-user_length = int(input('Укажите длину асфальта (в метрах): '))
-user_width = int(input('Укажите ширину асфальта (в метрах): '))
-user_mass = int(input('Укажите массу асфальта (в кг): '))
-user_thickness = float(input('Укажите толщину полотна (в метрах): '))
-
-r = Road(user_length, user_width, user_mass, user_thickness)
-r.sum_road()
+rd = Road(20, 5000)
+print(rd)

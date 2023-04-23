@@ -20,37 +20,37 @@ class Stationery:
         self.title = title
 
     def draw(self):
-        return 'Запуск отрисовки.'
+        print('Запуск отрисовки.')
 
 
 class Pen(Stationery):
-    def __init__(self):
-        super().__init__("Pen")
+    def __init__(self, title):
+        super().__init__(title)
 
     def draw(self):
-        return 'Запуск отрисовки Ручкой'
+        print(f'Инструмент - {self.title}')
 
 
 class Pencil(Stationery):
-    def __init__(self):
-        super().__init__("Pencil")
+    def __init__(self, title):
+        super().__init__(title)
 
     def draw(self):
-        return 'Запуск отрисовки Карандашом'
+        print(f'Инструмент - {self.title}')
 
 
 class Handle(Stationery):
-    def __init__(self):
-        super().__init__("Handle")
+    def __init__(self, title):
+        super().__init__(title)
 
     def draw(self):
-        return 'Запуск отрисовки Маркером'
+        print(f'Инструмент - {self.title}')
 
 
-obj_pen = Pen()
-obj_pencil = Pencil()
-obj_handle = Handle()
+handle = Handle('Маркер')
+pen = Pen('Ручка')
+pencil = Pencil('Карандаш')
 
-print(obj_pen.draw())
-print(obj_pencil.draw())
-print(obj_handle.draw())
+handle.draw()
+pen.draw()
+pencil.draw()

@@ -5,7 +5,7 @@
 и определить у него один приватный атрибут color (цвет) и публичный метод running (запуск).
 
 В рамках метода running реализовать переключение светофора в режимы:
-красный, желтый, зеленый. Продолжительность первого состояния (красный)
+окрасный, желтый, зеленый. Продлжительность первого состояния (красный)
 составляет 7 секунд, второго (желтый) — 2 секунды, третьего (зеленый) —
 на ваше усмотрение.
 Для имитации "горения" каждого цвета испольщуйте ф-цию sleep модуля time
@@ -15,36 +15,37 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
-
 from time import sleep
 
 
-class Traffic_light:
+def time_color(time_light, color):
+    while time_light != 1:
+        time_light -= 1
+        sleep(1)
+        print(f'Цвет светофора - {color}. Осталось времени {time_light} sec')
+
+
+class TrafficLight:
     def __init__(self, color):
         self.__color = color
 
     def running(self):
-        def time_color(count):
-            while count != 1:
-                sleep(1)
-                count -= 1
-                print(f'color = {self.__color}. time = {count}')
+        for i in range(3):
+            if self.__color == 'зеленый':
+                count = 10
+                time_color(count, self.__color)
+                self.__color = 'красный'
 
-        if self.__color == 'red':
-            count_time = 8
-            time_color(count_time)
-            self.__color = 'yellow'
+            elif self.__color == 'желтый':
+                count = 3
+                time_color(count, self.__color)
+                self.__color = 'зеленый'
 
-        if self.__color == 'yellow':
-            count_time = 3
-            time_color(count_time)
-            self.__color = 'green'
-
-        if self.__color == 'green':
-            count_time = 15
-            time_color(count_time)
-            self.__color = 'red'
+            elif self.__color == 'красный':
+                count = 8
+                time_color(count, self.__color)
+                self.__color = 'желтый'
 
 
-run = Traffic_light('red')
-run.running()
+tr = TrafficLight('зеленый')
+tr.running()
