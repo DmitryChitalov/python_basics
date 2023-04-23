@@ -15,3 +15,24 @@
 П.С. попытайтесь добить вывода информации о сотруднике также через перегрузку __str__
 __str__(self) - вызывается функциями str, print и format. Возвращает строковое представление объекта.
 """
+class Woker:
+    def __init__(self, position2, name2, surname2, income2):
+        self.position = position2
+        self.name = name2
+        self.surname = surname2
+        self._income = income2
+
+class Position(Woker):
+    def get_full_name(self):
+        print(f"Сотрудник {self.surname} {self.name}")
+
+    def get_total_income(self):
+        a = self._income["Wagw"]
+        b = self._income["Bonus"]
+        print(f"Зарплата {a*12+b}")
+        return a*12+b
+
+income3 = {"Wagw": 20000, "Bonus": 31000}
+a = Position("кассир", "Иван", "Петров", income3)
+a.get_full_name()
+a.get_total_income()

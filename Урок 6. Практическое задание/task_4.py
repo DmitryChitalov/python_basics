@@ -20,3 +20,70 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        print(f"Машина {self.name} начала движение")
+
+    def stop(self):
+        print(f"Машина {self.name} прекратила движение")
+
+    def turn(self, direction):
+        if direction == "l":
+            print(f"Машина {self.name}  повернула налево")
+        elif direction == "r":
+            print(f"Машина {self.name}  повернула направо")
+        else:
+            print(f"Машина {self.name}  продолжает движение прямо")
+
+    def show_speed(self):
+        print(f"Машина {self.name} едет со скоростью {self.speed} км/ч")
+
+
+class TownCar(Car):
+    def show_speed(self):
+        if self.speed >= 60:
+            print(f"TownCar {self.name} едет со скоростью {self.speed} км/ч, вы нарушаете правила "
+                  f"ограничения скорости движения 60 км/ч")
+        else:
+            print(f"TownCar {self.name} едет со скоростью {self.speed} км/ч")
+
+
+class SportCar(Car):
+    def show_speed(self):
+        print(f"SportCar {self.name} едет со скоростью {self.speed} км/ч")
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed >= 40:
+            print(f"WorkCar {self.name} едет со скоростью {self.speed} км/ч, вы нарушаете правила "
+                  f"ограничения скорости движения 40 км/ч")
+        else:
+            print(f"WorkCar {self.name} едет со скоростью {self.speed} км/ч")
+
+
+class PoliceCar(Car):
+    def show_speed(self):
+        print(f"PoliceCar {self.name} едет со скоростью {self.speed} км/ч")
+
+
+a = TownCar(65, "белый", "AUDI", 0)
+b = SportCar(95, "красный", "Mazda", 0)
+c = WorkCar(45, "красный", "Mazda", 0)
+d = PoliceCar(35, "синий", "УАЗ", 1)
+a.go()
+a.turn("l")
+a.turn("r")
+a.show_speed()
+b.show_speed()
+c.show_speed()
+d.show_speed()
+a.stop()
