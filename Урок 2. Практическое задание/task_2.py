@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+my_list = input(f"Введите целые числа через пробел: ").split(' ')
+print('Список до обмена элементов:   ', my_list)
+for i in range(0, len(my_list), 2):
+    if i == len(my_list)-1:
+        break
+    my_list[i], my_list[i+1] = my_list[i+1], my_list[i]
+print('Список после обмена элементов:', my_list)
