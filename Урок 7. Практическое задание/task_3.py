@@ -100,3 +100,57 @@ print(cell2.make_order(10))
 *****\n *****\n *****\n *****\n *****\n *****\n
 **********\n **********\n *****
 """
+
+
+class Cell:
+    def __init__(self, x):
+        self.x = x
+
+    def __add__(self, other):
+        self.x + other.x
+        return Cell(self.x + other.x)
+
+    def __sub__(self, other):
+        if self.x > other.x:
+            return Cell(self.x - other.x)
+        else:
+            print("Вычитание не возможно")
+            return Cell(0)
+
+    def __mul__(self, other):
+        if self.x != 0 or other.x != 0:
+            return Cell(self.x * other.x)
+        else:
+            print("Умножение не возможно")
+            return Cell(0)
+    def __truediv__(self, other):
+        if self.x != 0 or other.x != 0:
+            return Cell(self.x // other.x)
+        else:
+            print("Деление не возможно")
+            return Cell(0)
+    def make_order(self):
+        j = 0
+        for i in range(self.x):
+            if j <= 5:
+                print("*", end='')
+                j += 1
+            elif j > 5:
+                print(r"\n", end='')
+                print("*", end='')
+                j = 0
+        print()
+        print(self.x)
+
+
+
+a = Cell(40)
+b = Cell(20)
+c = a + b
+c.make_order()
+r = a - b
+r.make_order()
+um = a * b
+um.make_order()
+de = a / b
+de.make_order()
