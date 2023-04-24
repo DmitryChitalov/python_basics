@@ -55,7 +55,6 @@ class Clothes:
         print(" ", self.h)
         return 2 * self.h + 0.3
 
-
 a = Clothes(3.5, 4)
 print("Расход ткани на пальто =", a.coat)
 print("Расход ткани на костюм =", a.suit)

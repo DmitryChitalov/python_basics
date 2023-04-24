@@ -143,6 +143,7 @@ class Cell:
         print(self.x)
 
 
+
 a = Cell(40)
 b = Cell(20)
 c = a + b
