@@ -59,3 +59,4 @@ men = Suit(1.78)
 print(f'Расход ткани на пальто = {woman.cloth:.2f}')
 print(f'Расход ткани на костюм = {men.cloth:.2f}')
 print(f'Общий расход ткани = {woman.cloth + men.cloth:.2f}')
+

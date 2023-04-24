@@ -161,3 +161,4 @@ print('Организация ячеек по рядам')
 print()
 print(cell1.make_order(5))
 print(cell2.make_order(10))
+
