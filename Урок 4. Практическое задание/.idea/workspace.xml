@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="756e19df-10cd-4e6e-b2c3-0c1841e65874" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Урок 4. Практическое задание.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_7.py" afterDir="false" />
-    </list>
+    <list default="true" id="756e19df-10cd-4e6e-b2c3-0c1841e65874" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +23,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Projects git/python_basics/Урок 4. Практическое задание"
+    "last_opened_file_path": "C:/Projects git/python_basics/Урок 5. Практическое задание"
   }
 }]]></component>
   <component name="RecentsManager">
