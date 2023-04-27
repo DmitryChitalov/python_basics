@@ -7,3 +7,15 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+my_list = [16, 6, 6, 7, 15, 9, 26]
+
+my_new_list = []
+for el in range(1, len(my_list)):
+    if my_list[el-1] < my_list[el]:
+        my_new_list.append(my_list[el])
+
+my_new_list_lc = [el for num, el in enumerate(my_list) if my_list[num - 1] < my_list[num]]
+print(f'Исходный список: {my_list}')
+print(f'Результат: {my_new_list}')
+print(f'Результат: {my_new_list_lc}')
