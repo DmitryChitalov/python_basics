@@ -15,3 +15,21 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+my_l = []  # создание пустого списка
+
+# заполнение списка различными типами данных
+my_l.append(5)
+my_l.append(5.10)
+my_l.append('string')
+my_l.append([5, 5.10, 'string'])
+my_l.append({1, 5, 6, 7, 9, 10, 4})
+my_l.append(frozenset([1, 3, 3, 5, 8, 5, 4]))
+my_l.append(complex(3, -2))
+my_l.append(None)
+my_l.append(True)
+my_l.append(b'Byte text')
+my_l.append(bytearray(b'Byte text'))
+
+# вывод типа данных для каждого элемента списка
+for i in my_l:
+    print(i, type(i))

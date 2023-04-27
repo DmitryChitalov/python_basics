@@ -9,5 +9,9 @@
 Результат: 2 1 4 3
 
 Введите целые числа через пробел: 1 2 3
-Результат: 2 1 3
-"""
+###
+elements = int(input("Введите количество элементов в списке: "))
+my_list_1 = [input(f"Введите {i + 1} элемент списка: ") for i in range(elements)]
+for i in range(0, len(my_list_1) - 1, 2):
+    my_list_1[i], my_list_1[i + 1] = my_list_1[i + 1], my_list_1[i]
+print(my_list_1)
