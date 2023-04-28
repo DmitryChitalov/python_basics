@@ -9,3 +9,19 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+class My_div(Exception):
+    def __init__(self, b):
+        self.b = b
+a = input("Введите список числе :").split()
+try:
+    for i in range(len(a)):
+        if a[i].isdigit() == False:
+             raise My_div(f"Вы ввели {a[i]} это не число")
+#except ValueError:
+#   print("Вы ввели не число")
+except My_div as err:
+    print(err)
+else:
+    print(a)
+finally:
+    print("Программа завершена")
