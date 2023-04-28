@@ -20,3 +20,53 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+    def go(self):
+        return f'{self.name} начинает движение'
+    def stop(self):
+        return f'{self.name} останавливается'
+    def turn_right(self):
+        return f'{self.name} поворачивает направо'
+    def turn_left(self):
+        return f'{self.name} поворачивает налево'
+    def show_speed(self):
+        return f'Текущая скорость автомобиля {self.name} - {self.speed}'
+
+class TownCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+    def show_speed(self):
+        print(f'Текущая скорость автомобиля {self.name} - {self.speed}')
+        if self.speed > 60:
+            return f'Автомобиль {self.name} превысил скорость'
+
+class SportCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+class WorkCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+    def show_speed(self):
+        print(f'Текущая скорость автомобиля {self.name} - {self.speed}')
+        if self.speed > 40:
+            return f'Автомобиль {self.name} превысил скорость'
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+audi = SportCar(200, 'Желтый', 'Audi', 'Не полицейский')
+hyundai = TownCar(90, 'Красный', 'Hyundai', 'Не полицейский')
+mercedes = WorkCar(70, 'Серебристый', 'Mercedes', 'Полицейский')
+corvette = PoliceCar(110, 'Коричневый',  'Corvette', 'Полицейский')
+print(audi.turn_left())
+print(corvette.stop())
+print(f'Цвет {hyundai.name} - {hyundai.color}')
+print(mercedes.show_speed())
+print(hyundai.show_speed())

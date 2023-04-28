@@ -12,3 +12,22 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count
+from itertools import cycle
+from sys import argv
+# a)
+script_name, num = argv
+for i in count(int(num)):
+    if i > 10:
+        break
+    else:
+        print(i)
+# b)
+list_1 = [1, 2, 3, 4, 5]
+x = 1
+rep = cycle(list_1)
+for j in rep:
+    print(j)
+    if x > 10:
+        break
+    x += 1
