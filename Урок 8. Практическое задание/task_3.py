@@ -9,3 +9,19 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+class MyOwnExc(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+num_lst = []
+while True:
+    try:
+        elem = input("Введите число или s для завершения: ")
+        if elem == 's':
+            break
+        elif elem.isdigit():
+            num_lst.append(int(elem))
+        else:
+            raise MyOwnExc("Вы ввели не число, повторите ввод")
+    except MyOwnExc:
+        print('Ошибка, вы ввели не число!')
+print(num_lst)
