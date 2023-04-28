@@ -10,13 +10,13 @@
 
 
 def my_sum(my_list):
-    summa = 0
+    sum_item = 0
     for item in my_list:
         try:
-            summa += float(item)
+            sum_item += float(item)
         except ValueError:
             continue
-    return summa
+    return sum_item
 
 
 sum_num = 0
