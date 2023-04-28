@@ -14,6 +14,18 @@ Process finished with exit code 0
 Введите первое число: 10
 Введите второе число: 10
 1.0
-
 Process finished with exit code 0
 """
+
+
+def my_div(a, b):
+    try:
+        a // b
+    except ZeroDivisionError:
+        return print('На ноль делить нельзя')
+    return print(a // b)
+
+
+d = float(input('Введите первое число: '))
+e = float(input('Введите второе число: '))
+my_div(d, e)
