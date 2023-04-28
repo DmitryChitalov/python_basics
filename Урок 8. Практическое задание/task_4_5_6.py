@@ -70,3 +70,5 @@ class Xerox(OfficeEquipment):
 
 pr_by = Printer('Red', 'MXX', 13)
 print(pr_by)
+
+# В процессе, вышлю конечный результат
