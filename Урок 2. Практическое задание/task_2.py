@@ -11,3 +11,11 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+my_list = list(map(int,input().strip().split()))
+for i in range(len(my_list)):
+    if i % 2 != 0:
+        x = my_list[i]
+        my_list[i] = my_list[i - 1]
+        my_list[i - 1] = x
+print(my_list)

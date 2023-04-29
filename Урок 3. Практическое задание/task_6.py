@@ -8,3 +8,16 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+def change_register(my_str):
+    s = []
+    for word in my_str.split(' '):
+        if not word.istitle():
+            word = word[0].upper() + word[1:].lower()
+            s.append(word)
+        else:
+            s.append(word)
+    return ' '.join(s)
+
+print(change_register("проверка"))
+
+#не успел

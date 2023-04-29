@@ -3,3 +3,12 @@
 записать в него построчно данные, вводимые пользователем.
 Об окончании ввода данных свидетельствует пустая строка.
 """
+a=[]
+i=True
+while i:
+   i=input()
+   if i: a.append(i)
+with open(r"test.txt", "w") as file:
+    for  line in a:
+        file.write(line + '\n')
+

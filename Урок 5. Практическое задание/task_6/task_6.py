@@ -5,3 +5,21 @@
                                         Физкультура:   —   30(пр)   —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+words = []
+my_dict = {}
+value_1 = ""
+sum_1 = 0
+iteration = 0
+with open("test.txt", "r", encoding='utf-8') as my_file:
+    text_file2 = my_file.readlines()
+for el in text_file2:
+    words = el.split()
+    for i in range(1, len(words)):
+        value_1 = words[i].split('(')
+        if value_1[0].isdecimal():
+            sum_1 += int(value_1[0])
+    my_dict[words[0]] = sum_1
+    sum_1 = 0
+
+print(my_dict)
+

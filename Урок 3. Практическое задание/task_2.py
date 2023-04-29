@@ -8,3 +8,7 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+def params (name, surname, year, city, mail, phone):
+    print((f"{name} {surname} {year} года рождения, проживает в городе {city}, email: {mail}, телефон: {phone}"))
+
+params(name = "Иван", surname = "Иванов", year = 1846, city = "Москва", mail = "jackie@gmail.com", phone = "01005321456")

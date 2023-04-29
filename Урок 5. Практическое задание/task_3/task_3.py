@@ -8,3 +8,16 @@ Four — 4
 При этом английские числительные должны заменяться на русские.
 Новый блок строк должен записываться в новый текстовый файл.
 """
+file = open('test.txt', "r", encoding='utf-8')
+fout = open("test2.txt", "wt", encoding='utf-8')
+for line in file:
+    fout.write(line.replace('One', 'Один').replace('Two', 'Два').replace('Three', 'Три').replace('Four', 'Четыре'))
+file.close()
+fout.close()
+
+
+
+
+
+
+
