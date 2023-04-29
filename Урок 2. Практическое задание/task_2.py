@@ -11,3 +11,15 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+result = ''
+user_nums = input('Введите целые числа через пробел: ').split()
+itter_count = len(user_nums) // 2
+
+for i_step in range(1, itter_count * 2 + 1, 2):
+    user_nums[i_step], user_nums[i_step-1] = user_nums[i_step-1], user_nums[i_step]
+
+for i_count in user_nums:
+    result = result + f'{i_count} '
+result = result.strip()
+print(f'Результат: {result}')

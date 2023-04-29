@@ -12,3 +12,23 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+print('Вариант 1:')
+start_num = int(input('Введите начальное число: '))
+end_num = int(input('Введите конечное число: '))
+iter_a = 0
+for num in count(start_num):
+    if num == end_num:
+        break
+    print(iter_a)
+    iter_a += 1
+
+print('\nВариант 2:')
+old_list = [3, 23, 51, 0, -24, 4]  # Определенный заранее список
+iter_b = 0
+for num in cycle(old_list):
+    if len(old_list) == iter_b:
+        break
+    print(iter_b)
+    iter_b += 1
