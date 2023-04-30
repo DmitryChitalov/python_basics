@@ -8,23 +8,23 @@
 """
 
 
-class my_complex:
+class MyComplex:
     def __init__(self, a, b):
         self.a = a
         self.b = b
 
     def __add__(self, other):
-        return my_complex(self.a + other.a, self.b + other.b)
+        return MyComplex(self.a + other.a, self.b + other.b)
 
     def __str__(self):
         return f"{self.a}+{self.b}i"
 
     def __mul__(self, other):
-        return my_complex(self.a * other.a - self.b * other.b, self.a * other.b + other.a * self.b)
+        return MyComplex(self.a * other.a - self.b * other.b, self.a * other.b + other.a * self.b)
 
 
-number1 = my_complex(1, 2)
-number2 = my_complex(2, 3)
+number1 = MyComplex(1, 2)
+number2 = MyComplex(2, 3)
 print(f"Первое комплексное число: {number1}")
 print(f"Второе комплексное число: {number2}")
 print(f"Сумма чисел: {number1 + number2}")

@@ -21,44 +21,44 @@
 """
 
 
-class store:
+class TechStore:
     store_dict = {}
 
-    def reception(self, technic):
-        print(f"Добавляем на склад {technic} укажите количество :", end='')
+    @staticmethod
+    def reception(new_tech):
+        print(f"Добавляем на склад {new_tech} укажите количество :", end='')
         try:
             quantity = int(input())
             el_q = 0
-            for el in self.store_dict.keys():
-                if el == technic:
-                    el_q = self.store_dict.get(technic)
-            self.store_dict.update({technic: quantity + el_q})
+            for el in TechStore.store_dict.keys():
+                if el == new_tech:
+                    el_q = TechStore.store_dict.get(new_tech)
+            TechStore.store_dict.update({new_tech: quantity + el_q})
         except ValueError:
             print("Необходимо вводить целые числа!!")
 
-    def transfer(self, technic, quantity, company_name):
-        self.quantity = quantity
-        self.company_name = company_name
-        print(f"Пытаемся переместить в: '{company_name}' {technic} в количестве {quantity} штук")
+    @staticmethod
+    def transfer(store_tech, quantity, company_name):
+        print(f"Пытаемся переместить в: '{company_name}' {store_tech} в количестве {quantity} штук")
         el_q = 0
-        for el in self.store_dict.keys():
-            if el == technic:
-                el_q = self.store_dict.get(technic)
+        for el in TechStore.store_dict.keys():
+            if el == store_tech:
+                el_q = TechStore.store_dict.get(store_tech)
         if el_q > quantity:
-            self.store_dict.update({technic: el_q - quantity})
-            print(f"Отправляем в компанию {company_name} {technic}, "
-                  f"{self.quantity} штук")
+            TechStore.store_dict.update({store_tech: el_q - quantity})
+            print(f"Успешно переместили в компанию {company_name} {store_tech}, "
+                  f"{quantity} штук, остаток на складе {el_q - quantity} штук")
         else:
-            print(f"Такого количества: {quantity} техники:{technic} нет на складе")
+            print(f"Такого количества: {quantity} техники:{store_tech} нет на складе, остаток {el_q} штук")
 
-    def store_state(self):
+    @staticmethod
+    def store_state():
         print("Состояние склада:")
+        for el in TechStore.store_dict:
+            print(f"{el}, количество: {TechStore.store_dict[el]}")
 
-        for el in self.store_dict:
-            print(f"{el}, количество: {self.store_dict[el]}")
 
-
-class technic:
+class Technic:
     def __init__(self, tech_type, manufacturer, model, price):
         self.tech_type = tech_type
         self.manufacturer = manufacturer
@@ -69,36 +69,36 @@ class technic:
         return f"{self.tech_type}, {self.manufacturer} {self.model}"
 
 
-class printer(technic):
+class Printer(Technic):
     def __init__(self, manufacturer, model, price, colour_capable, max_resolution):
-        technic.tech_type = 'Принтер'
-        super().__init__(technic.tech_type, manufacturer, model, price)
+        Technic.tech_type = 'Принтер'
+        super().__init__(Technic.tech_type, manufacturer, model, price)
         self.colour_capable = colour_capable
         self.max_resolution = max_resolution
 
 
-class scaner(technic):
+class Scaner(Technic):
     def __init__(self, manufacturer, model, price, max_resolution, auto_feeder):
-        technic.tech_type = 'Сканер'
-        super().__init__(technic.tech_type, manufacturer, model, price)
+        Technic.tech_type = 'Сканер'
+        super().__init__(Technic.tech_type, manufacturer, model, price)
         self.max_resolution = max_resolution
         self.auto_feeder = auto_feeder
 
 
-class xerox(technic):
+class Xerox(Technic):
     def __init__(self, manufacturer, model, price, max_resolution, colour_capable, auto_feeder):
-        technic.tech_type = 'Ксерокс'
-        super().__init__(technic.tech_type, manufacturer, model, price)
+        Technic.tech_type = 'Ксерокс'
+        super().__init__(Technic.tech_type, manufacturer, model, price)
         self.max_resolution = max_resolution
         self.colour_capable = colour_capable
         self.auto_feeder = auto_feeder
 
 
-printer1 = printer('Epson', '3170', 2000, 'BW', '4800x4800')
-printer2 = printer('Canon', '2170', 2000, 'BW', '4800x4800')
-scaner1 = scaner('Canon', 'EasyScan', 2000, '4800x4800', 'auto_feeder')
-xerox1 = xerox('XEROX', 'WorkCentre 2500', 2000, '2400x4800', 'BW', 'auto_feeder')
-my_store = store()
+printer1 = Printer('Epson', '3170', 2000, 'BW', '4800x4800')
+printer2 = Printer('Canon', '2170', 2000, 'BW', '4800x4800')
+scaner1 = Scaner('Canon', 'EasyScan', 2000, '4800x4800', 'auto_feeder')
+xerox1 = Xerox('XEROX', 'WorkCentre 2500', 2000, '2400x4800', 'BW', 'auto_feeder')
+my_store = TechStore()
 my_store.reception(printer1)
 my_store.reception(printer1)
 my_store.reception(printer1)
