@@ -20,3 +20,77 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+class Car:
+
+    def __init__(self, speed, color, name, is_police):
+        try:
+            self.speed = speed
+            self.color = color
+            self.name = name
+            self.is_police = bool(is_police)
+        except BaseException:
+            return "Error. Please, enter data."
+            exit(-1)
+
+    def go(self):
+        return "Go."
+
+    def stop(self):
+        return "Stop."
+
+    def turn_left(self):
+        return "Turn left."
+
+    def turn_right(self):
+        return "Turn right."
+
+    def show_speed(self):
+        print("Machine normal speed.")
+
+
+class TownCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        if self.speed > 40:
+            return "Over speed."
+        else:
+            return "Normal speed"
+
+
+class SportCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+
+class WorkCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        if self.speed > 60:
+            return "Over speed."
+        else:
+            return "Normal speed"
+
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+
+vaz = SportCar(100, 'Red', 'vaz', False)
+toyta = TownCar(30, 'White', 'toyta', True)
+porche = WorkCar(70, 'Rose', 'porche', False)
+kia = PoliceCar(110, 'Blue',  'kia', True)
+
+
+print(vaz.turn_left())
+print(toyta.turn_right())
+print(porche.stop())
+print(kia.go())
+print(porche.is_police)
+print(kia.is_police)
+print(porche.show_speed())
+print(kia.show_speed())

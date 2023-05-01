@@ -7,3 +7,25 @@
 Иванов 23543.12
 Петров 13749.32
 """
+# -*- coding: utf-8 -*-
+def generator_file3():
+    f_file_open = open('z4.txt', 'w')
+    data_list = [
+                'Иванов 23543.12',
+                'Петров 16659.74',
+                'Сидоров 14568.32',
+                'Тютчев 28764.12',
+                'Пушкин 23464.64',
+                'Лермонтов 19359.95',
+                'Крылов 34234.96',
+                'Шкин 425.73',
+                'Булгаков 15457.29',
+                'Рабочий 856.48',
+                ]
+    data = [
+        f_file_open.write(str(data_list[i]) + "\n") for i in range(len(data_list))
+    ]
+    f_file_open.close()
+
+
+generator_file3()

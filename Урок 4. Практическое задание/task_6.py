@@ -12,3 +12,11 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+v_start = int(input('Start number: '))
+
+for i in count(v_start):
+    if i < v_stop:
+        print(i)
+    else:
+        break
+del i
