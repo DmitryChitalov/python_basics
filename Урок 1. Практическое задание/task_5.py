@@ -18,3 +18,16 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+revenue = float(input('Введите доход: '))
+expenses = float(input('Введите издержки: '))
+
+if revenue > expenses:
+    profit = revenue - expenses
+    print('Организация прибыльна')
+    employees = int(input('Введите число сотрудников: '))
+    print(f'Прибыль на сотрудника: {(profit/employees):.2f}')
+elif revenue == expenses:
+    print('Доходы равны расходам')
+else:
+    print('Организация не прибыльна')
