@@ -25,3 +25,26 @@
 “ед”: [“шт.”]
 }
 """
+
+goods = []
+analytics = {'name': [], 'price': [], 'quantity': [], 'unit': []}
+for i in range(1, 4):
+    goods.append(
+        (i, {
+             'name': input("Введите наименование товара: "),
+             'price': float(input("Введите стоимость товара: ")),
+             'quantity': int(input("Введите количество товара: ")),
+             'unit': input("Введите единицу измерения товара: ")
+         })
+    )
+for product in goods:
+    analytics['name'].append(product[1]['name'])
+    analytics['price'].append(product[1]['price'])
+    analytics['quantity'].append(product[1]['quantity'])
+    analytics['unit'].append(product[1]['unit'])
+print('Список товаров: ')
+for f in goods:
+    print(f)
+print('Список аналитики: ')
+for key, value in analytics.items():
+    print(key, ':', value)
