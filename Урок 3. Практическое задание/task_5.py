@@ -6,3 +6,24 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def my_sum(my_list):
+    sum_item = 0
+    for item in my_list:
+        try:
+            sum_item += float(item)
+        except ValueError:
+            continue
+    return sum_item
+
+
+sum_num = 0
+while True:
+    sting = input(f"Введите последовательность чисел через пробел. "
+                  f"Введите 'q' для выхода.\n").split(' ')
+    sum_num += my_sum(sting)
+    if sum_num != 0:
+        print(f"Сумма чисел: {sum_num}")
+    if sting.count('q') > 0:
+        break
