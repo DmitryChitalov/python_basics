@@ -1,10 +1,8 @@
-"""
-2. Реализовать функцию, принимающую несколько параметров,
-описывающих данные пользователя: имя, фамилия, год рождения, город проживания, email, телефон.
-Функция должна принимать параметры как именованные аргументы.
-Реализовать вывод данных о пользователе одной строкой.
+def user_data_to_string(name, surname, year, city, email, phone):
+    return ', '.join([name, surname, year, city, email, phone])
 
-Пример:
-Иван Иванов 1846 года рождения, проживает в городе Москва,
-email: jackie@gmail.com, телефон: 01005321456
-"""
+
+result = user_data_to_string(name='Artur', surname='Morozov', year='1988',
+                            city='Kazan', email='Artur_1.0@mail.ru', phone='89274253820')
+
+print(result)

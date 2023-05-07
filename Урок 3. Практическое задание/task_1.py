@@ -1,19 +1,14 @@
-"""
-1. Реализовать функцию, принимающую два числа (позиционные аргументы)
-и выполняющую их деление. Числа запрашивать у пользователя,
-предусмотреть обработку ситуации деления на ноль (try except).
+def division(a, b):
+    try:
+        c = a / b
+        return c
+    except:
+        return 'Incorrect data'
 
-Пример:
-Введите первое число: 10
-Введите второе число: 0
-Вы что? Пытаетесь делить на 0!
 
-Process finished with exit code 0
 
-Пример:
-Введите первое число: 10
-Введите второе число: 10
-1.0
+a = int(input('Input "a": '))
+b = int(input('Input "b": '))
+result = division(a, b)
 
-Process finished with exit code 0
-"""
+print('Result:', result)
