@@ -8,3 +8,16 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(word):
+    word_new = word.capitalize()
+    return word_new
+
+
+words = input('Введите через пробел латинские слова в нижнем регистре: ')
+list1 = words.split(' ')
+list2 = []
+for i in range(len(list1)):
+    list2.append(int_func(list1[i]))
+print(list2)
