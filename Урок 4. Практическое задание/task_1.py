@@ -6,11 +6,19 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+from sys import argv
+
+script_name, production, rate_in_hours, bonus = argv
 
 
-def zp(a, b, c):
-    employee_zp = float((a*b)+c)
-    return employee_zp
+def salary(a, b, c):
+    try:
+        print('Выработка в часах: ', a)
+        print('Ставка в час: ', b)
+        print("Премия: ", c)
+        print((float(a)*float(b))+float(c))
+    except TypeError:
+        print('Ошибка ввода параметров')
 
 
-print(f"Зарплата сотрудника Иванова ИИ: {zp(48, 110, 5000)} рублей")
+salary(production, rate_in_hours, bonus)

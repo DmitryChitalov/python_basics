@@ -7,3 +7,17 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+print(f"Исходный список: {my_list}")
+
+mew_list1 = []
+for el in range(1, len(my_list)):
+    if my_list[el] > my_list[el - 1]:
+        mew_list1.append(my_list[el])
+print(f'Результат без генераторного выражения: {mew_list1}')
+
+new_list2 = [my_list[x]
+             for x in range(1, len(my_list))
+             if my_list[x] > my_list[x - 1]]
+print(f"Результат с генераторным выражением: {new_list2}")
