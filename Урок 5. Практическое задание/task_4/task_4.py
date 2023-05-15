@@ -1,9 +1,15 @@
-"""
-3. Создать текстовый файл (не программно), построчно записать фамилии сотрудников
-и величину их окладов (не менее 10 строк). Определить, кто из сотрудников имеет оклад менее 20 тыс.,
-вывести фамилии этих сотрудников. Выполнить подсчет средней величины дохода сотрудников.
-Пример файла:
+my_file = open('file04.txt', 'r', encoding='utf-8')
+content = my_file.readlines()
 
-Иванов 23543.12
-Петров 13749.32
-"""
+summary = 0
+names = []
+
+for line in content:
+    line_split = line.split()
+    summary += float(line_split[1])
+    if float(line_split[1]) < 20000.00:
+        names.append(line_split[0])
+my_file.close()
+
+print('Names:', ', '.join(names))
+print('Avg:', summary/len(content))
