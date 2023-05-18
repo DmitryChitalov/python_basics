@@ -2,7 +2,8 @@
 Задание 1.
 
 Создать класс TrafficLight (светофор)
-и определить у него один приватный атрибут color (цвет) и публичный метод running (запуск).
+и определить у него один приватный атрибут color (цвет) и публичный метод
+running (запуск).
 
 В рамках метода running реализовать переключение светофора в режимы:
 красный, желтый, зеленый. Продолжительность первого состояния (красный)
@@ -15,3 +16,31 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+import time
+
+
+class TrafficLight:
+
+    __color = ['red', 'yellow', 'green']
+
+#    def running(self):
+#        while True:
+
+    @staticmethod
+    def running():
+        i = 0
+#        while i != 3:
+        while i != 3:
+            print(TrafficLight.__color[i])
+            if i == 0:
+                time.sleep(7)
+            elif i == 1:
+                time.sleep(2)
+            elif i == 2:
+                time.sleep(3)
+            i += 1
+
+
+t = TrafficLight()
+t.running()
