@@ -20,11 +20,12 @@ length (длина в метрах), width (ширина в метрах).
 
 class Road:
 
+    weight = 25
+    height = 0.05
+
     def __init__(self, length, width):
         self._length = length
         self._width = width
-        self.weight = 25
-        self.height = 0.05
 
     def asphalt_mass(self):
         asphalt_mass = self._length * self._width * self.weight * self.height
