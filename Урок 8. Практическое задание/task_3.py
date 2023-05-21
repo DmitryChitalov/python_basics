@@ -9,3 +9,24 @@
 
 Класс-исключение должен контролировать типы данных элементов списка.
 """
+
+
+class Number(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+list = []
+while True:
+    a = input('Введите число и для выхода q ')
+    if a != 'q':
+        try:
+            if not a.isnumeric():
+                raise Number('число!')
+        except Number:
+            print('Нужно вводить только числа!')
+        else:
+            list.append(a)
+    else:
+        print('Остановлено')
+        break
+print(f'Готово: {list}')
