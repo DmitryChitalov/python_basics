@@ -8,3 +8,8 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+
+n = input('Введите число n: ')
+a = int(n + n)
+b = int(n + n + n)
+print((int(n)) + a + b)
