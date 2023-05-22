@@ -1,4 +1,6 @@
-"""
-2)	Создать текстовый файл (не программно), сохранить в нем несколько строк,
-выполнить подсчет количества строк, количества слов в каждой строке.
-"""
+file01 = open('file02.txt', 'r')
+content = file01.readlines()
+print('Lines:', len(content))
+for i in range(len(content)):
+    print(f'line {i+1} - {len(content[i].split())} words')
+file01.close()
