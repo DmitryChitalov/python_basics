@@ -18,3 +18,14 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+revenue = int(input('Введите выручку фирмы: '))
+costs = int(input('Введите издержки фирмы: '))
+if revenue > costs:
+    profitability = ((revenue - costs)/revenue)*100
+    emp_number = int(input('Введите число сотрудников компании: '))
+    profit_per_person = (revenue - costs)/emp_number
+    print(f"Рентабельность компании равна {profitability}%. Прибыль в расчёте на каждого сотрудника равна {profit_per_person} рублей.")
+elif revenue < costs:
+    print('Компания работает в убыток')
+else:
+    print('Компания работает в ноль')

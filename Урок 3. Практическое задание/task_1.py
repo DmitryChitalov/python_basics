@@ -17,3 +17,12 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+def calc_1():
+    try:
+        arg1 = int(input('Введите первое число: '))
+        arg2 = int(input('Введите второе число: '))
+    except ZeroDivisionError:
+        return print('Делить на 0 нельзя')
+    res_1: int = arg1 // arg2
+    return res_1
+print (calc_1())
