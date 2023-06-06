@@ -1,21 +1,55 @@
-"""
-4. Начните работу над проектом «Склад оргтехники». Создайте класс, описывающий склад.
-А также класс «Оргтехника», который будет базовым для классов-наследников.
-Эти классы — конкретные типы оргтехники (принтер, сканер, ксерокс).
-В базовом классе определить параметры, общие для приведенных типов.
-В классах-наследниках реализовать параметры, уникальные для каждого типа оргтехники.
+class Warehouse:
+    def __init__(self):
+        self.inventory = []
+    def add_item(self, item):
+        self.inventory.append(item)
+    def remove_item(self, item):
+        self.inventory.remove(item)
 
-5. Продолжить работу над четвертым заданием.
-Разработать методы, отвечающие за приём оргтехники на
-склад и передачу в определенное подразделение компании.
-Для хранения данных о наименовании и
-количестве единиц оргтехники, а также других данных,
-можно использовать любую подходящую структуру, например словарь.
+class OfficeEquipment:
+    def __init__(self, brand, model, price):
+        self.brand = brand
+        self.model = model
+        self.price = price
 
-6. Продолжить работу над пятым заданием. Р
-еализуйте механизм валидации вводимых пользователем данных.
-Например, для указания количества принтеров,
-отправленных на склад, нельзя использовать строковый тип данных.
-Подсказка: постарайтесь по возможности реализовать в проекте
-«Склад оргтехники» максимум возможностей, изученных на уроках по ООП.
-"""
+class Printer(OfficeEquipment):
+    def __init__(self, brand, model, price, print_speed):
+        super().__init__(brand, model, price)
+        self.print_speed = print_speed
+
+class Scanner(OfficeEquipment):
+    def __init__(self, brand, model, price, resolution):
+        super().__init__(brand, model, price)
+        self.resolution = resolution
+
+
+class Xerox(OfficeEquipment):
+    def __init__(self, brand, model, price, copying_speed):
+        super().__init__(brand, model, price)
+        self.copying_speed = copying_speed
+
+warehouse = Warehouse()
+
+# Создаем оргтехнику разных типов
+printer = Printer("HP", "LaserJet", 200, "20 ppm")
+scanner = Scanner("Epson", "Perfection", 150, "1200 dpi")
+xerox = Xerox("Canon", "ImageRunner", 500, "50 cpm")
+
+# Добавляем оргтехнику на склад
+warehouse.add_item(printer)
+warehouse.add_item(scanner)
+warehouse.add_item(xerox)
+
+# Удаляем оргтехнику со склада
+warehouse.remove_item(printer)
+
+# Выводим информацию
+for item in warehouse.inventory:
+    print(f"{item.brand} {item.model} - Цена: {item.price}")
+    if isinstance(item, Printer):
+        print(f"Скорость печати: {item.print_speed}")
+    elif isinstance(item, Scanner):
+        print(f"Разрешение: {item.resolution}")
+    elif isinstance(item, Xerox):
+        print(f"Скорость копирования: {item.copying_speed}")
+    print()

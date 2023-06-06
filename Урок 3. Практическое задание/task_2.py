@@ -8,3 +8,11 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+name = input("Введите Имя и Фамилию через пробел (Пример: Александр Македонский) ")
+age = input("Введите свой год рождения (Пример: 2000) ")
+city = input("Введите свой город (Пример: Евпатория) ")
+mail = input("Введите email ")
+phone = input("Введите номер телефона")
+def func(name, age, city, mail, phone):
+    return ' '.join([name + age + city + mail + phone])
+print (func(name, age, city, mail, phone))
