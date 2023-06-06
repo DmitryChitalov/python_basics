@@ -1,7 +1,17 @@
-"""
-Задание 2.
+class DivisionByZeroError(Exception):
+    pass
 
-Создайте собственный!!! класс-исключение, обрабатывающий ситуацию деления на нуль.
-Проверьте его работу на данных, вводимых пользователем. При вводе пользователем нуля
-в качестве делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
-"""
+try:
+    dividend = int(input("Введите делимое: "))
+    divisor = int(input("Введите делитель: "))
+
+    if divisor == 0:
+        raise DivisionByZeroError("Деление на ноль запрещено")
+
+    result = dividend / divisor
+    print("Результат деления:", result)
+
+except ValueError:
+    print("Ошибка: Введите целое число")
+except DivisionByZeroError as e:
+    print("Ошибка:", e)
