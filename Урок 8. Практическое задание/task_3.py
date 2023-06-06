@@ -1,11 +1,21 @@
-"""
-Задание 3.
+class OnlyNumbersError(Exception):
+    pass
 
-Создайте собственный класс-исключение,
-который должен проверять содержимое списка на наличие только чисел.
+numbers = []
+while True:
+    try:
+        user_input = input("Введите число (для остановки введите 'stop'): ")
+        if user_input == "stop":
+            break
 
-Проверить работу исключения на реальном примере. Необходимо запрашивать у пользователя данные и заполнять
-список только числами.
+        number = float(user_input)
+        if not number.is_integer():
+            raise OnlyNumbersError("Допускаются только целые числа")
+        numbers.append(int(number))
 
-Класс-исключение должен контролировать типы данных элементов списка.
-"""
+    except ValueError:
+        print("Ошибка: Введите число")
+    except OnlyNumbersError as e:
+        print("Ошибка:", e)
+
+print("Список чисел:", numbers)
