@@ -27,15 +27,15 @@ class MyException(Exception):
 int_lst = []
 while True:
     try:
-        inp_data = input("Ввести число для cписка (для выходa введите / ) : ")
+        input_data = input("Ввести число для cписка (для выходa введите / ) : ")
 
-        if inp_data == "/":
+        if input_data == "/":
             break
 
-        if not Is_integer(inp_data):
-            raise MyException(inp_data)
+        if not Is_integer(input_data):
+            raise MyException(input_data)
             
-        int_lst.append(int(inp_data))
+        int_lst.append(int(input_data))
     except MyException as err:
         print("Введено не число, повторите попытку")
 
