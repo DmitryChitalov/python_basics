@@ -18,3 +18,16 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+revenue = float(input("Какая у вас выручка?\n"))
+costs = float(input("Каковы издержки фирмы?\n"))
+
+if revenue > costs:
+    profit = revenue - costs
+    staff = int(input("Введите количество сотрудников:\n"))
+    staff_profit = profit / staff
+    print(f"Прибыль на одного сотрудника компании равна:" "{:.2f}".format(staff_profit) + " рублей.")
+elif revenue < costs:
+    print("Издержки привышают доход")
+elif revenue == costs:
+    print("Издержки равны доходу")
