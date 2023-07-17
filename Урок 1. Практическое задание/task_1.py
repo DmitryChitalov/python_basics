@@ -11,3 +11,13 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 """
+
+first = 10
+second = 12
+print(first)
+
+second = input("Введите целое число\n")
+print(first + int(second))
+name = input("Как вас зовут?\n")
+prompt = "Вас зовут "
+print(prompt + name)
