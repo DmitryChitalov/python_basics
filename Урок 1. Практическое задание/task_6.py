@@ -22,8 +22,9 @@
 
 a = int(input("Введите параметр a\n"))
 b = int(input("Введите параметр b\n"))
-dayCount = 0
+daycount = 1
 while a < b:
-    a = a * 1.2
-    dayCount += 1
-print(dayCount)
+    a = a * 1.1
+    daycount += 1
+    print(a)
+print(daycount)

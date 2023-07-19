@@ -10,4 +10,5 @@ n + nn + nnn = 369
 """
 
 n = input("Введите число n\n")
-print("{0} + {0}{0} + {0}{0}{0} = ".format(n), int(n) + int(n * 2) + int(n * 3))
+print(f"{n} + {n}{n} + {n}{n}{n} = {int(n) + int(n * 2) + int(n * 3)}")
+#print("{0} + {0}{0} + {0}{0}{0} = ".format(n), int(n) + int(n * 2) + int(n * 3))
