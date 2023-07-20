@@ -14,3 +14,8 @@
 1. раз
 2. перерефриж
 """
+
+prompt = 0
+for i in input("Введите слова через пробел: ").split():
+    prompt += 1
+    print(f"{prompt}. {i[:10]}")
