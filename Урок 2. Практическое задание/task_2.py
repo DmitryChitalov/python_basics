@@ -11,3 +11,14 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+user_input_list = list(input("Введите значения: ").split())
+
+user_list = []
+
+for i in range(0, len(user_input_list), 2):
+    j = i + 2
+    a = user_input_list[i:j]
+    a.reverse()
+    user_list.extend(a)
+print(user_list)
