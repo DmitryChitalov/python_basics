@@ -25,3 +25,45 @@
 “ед”: [“шт.”]
 }
 """
+
+goods = []
+goods_num = 1
+
+anal_dic = {
+    "Наименование:": [],
+    "Цена:": [],
+    "Количество:": [],
+    "Ед. измерения:": []
+}
+
+while True:
+    input_name = input("Введите наименование товара: ")
+    input_price = float(input("Введите цену товара: "))
+    input_quantity = int(input("Введите количество товара: "))
+    input_unit = input("Введите еденицу измерения товара: ")
+
+    summary_input = {
+        "Наименование:": input_name,
+        "Цена:": input_price,
+        "Количество:": input_quantity,
+        "Ед. измерения:": input_unit
+    }
+
+    summary_goods = (goods_num, summary_input)
+    goods.append(summary_goods)
+
+    for key, value in summary_input.items():
+        i = anal_dic.get(key)
+        if value in i:
+            continue
+        i.append(value)
+        continue
+
+    goods_num += 1
+
+    question_for_exit = input("Закончить ввод?\n").lower()
+    if question_for_exit == "да":
+        print("\n",goods)
+        break
+
+    print("\n",goods)
