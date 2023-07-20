@@ -11,3 +11,10 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+
+lst = [int(i) for i in input("Введите целые числа через пробел: ").split()]
+for i in range(len(lst) // 2):
+    lst[i * 2] = lst[i * 2] + lst[i * 2 + 1]
+    lst[i * 2 + 1] = lst[i * 2] - lst[i * 2 + 1]
+    lst[i * 2] = lst[i * 2] - lst[i * 2 + 1]
+print(lst)

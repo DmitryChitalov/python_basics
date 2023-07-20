@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+lst = [423, "second", 453.43, False, None, [12, 23]]
+for i in range(len(lst)):
+    print(type(lst[i]))
