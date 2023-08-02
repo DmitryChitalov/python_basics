@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def division(arg):
+    try:
+        dividend, divider = [int(_) for _ in arg]
+        return f'{dividend / divider:.2f}'
+    except ZeroDivisionError:
+        print('Вы что? Пытаетесь делить на 0!')
+    except ValueError:
+        print('Не хватает значения')
+
+
+print(division(input('Введите делимое и делитель: ').split()))

@@ -8,3 +8,9 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+def my_func(**kwargs):
+    print(' '.join(str(i) for i in kwargs.values()))
+
+
+my_func(name='Андрей', surname='Чинцов', birth_year='1980', city='Москва', email='123@mail.ru', tel='+7000-00-00')
