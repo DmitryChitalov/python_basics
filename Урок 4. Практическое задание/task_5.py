@@ -8,7 +8,7 @@
 
 from functools import reduce
 
-my_list = [el for el in range(100, 1000, 2)]
+my_list = [el for el in range(100, 1001, 2)]
 result = reduce(lambda el, el2: el * el2, my_list)
 
 print(f"{result}")
