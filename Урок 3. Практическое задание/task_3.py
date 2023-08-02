@@ -5,3 +5,11 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+
+def my_func(arg_1, arg_2, arg_3):
+    arr = [arg_1, arg_2, arg_3]
+    a = list(filter(lambda x: x != max(arr), arr))
+    return max(arr) + max(a)
+
+
+print(my_func(10, 70, 55))
