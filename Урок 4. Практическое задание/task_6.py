@@ -12,3 +12,28 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+
+from itertools import count, cycle
+
+a = int(input('\nВведите начальное число: '))
+b = int(input('\nВведите последенее число: \n'))
+
+my_list = []
+for a in count(a):
+    if a > b:
+        break
+    else:
+        print(a)
+        my_list.append(a)
+
+print(f'\nИтоговая последовательность: {my_list}')
+
+print(f'\nКоличество символов: {len(my_list)}\n')
+
+i = 0
+for el in cycle(my_list):
+    if i > len(my_list) * 2:
+        break
+    else:
+        print(i)
+        i += 1

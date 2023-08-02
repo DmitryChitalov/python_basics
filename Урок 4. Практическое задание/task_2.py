@@ -7,3 +7,14 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+def my_func(lst):
+    result = [lst[i + 1] for i in range(len(lst) - 1) if int(lst[i + 1]) > int(lst[i])]
+    print(f"Результат (функция): {result}")
+
+
+my_list = input('Введите числа через пробел: ').strip().split(' ')
+my_func(my_list)
+
+gen = (my_list[i + 1] for i in range(len(my_list) - 1) if int(my_list[i + 1]) > int(my_list[i]))
+print(f"Результат (генератор): {list(gen)}")
