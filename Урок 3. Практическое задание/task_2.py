@@ -8,3 +8,11 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+
+
+def to_print(name, surname, year, city, email, phone):
+    return f"{name} {surname} {year} года рождения, проживает в городе {city}, email: {email}, телефон: {phone}"
+
+
+creds = input("Введите данные о пользователе через пробел: ").split()
+print(to_print(phone=creds[5], name=creds[0], surname=creds[1], year=creds[2], city=creds[3], email=creds[4]))

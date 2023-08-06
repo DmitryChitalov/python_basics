@@ -6,3 +6,19 @@
     символ введен после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
     ранее сумме и после этого завершить программу.
 """
+
+
+def my_func():
+    result = 0
+    while True:
+        for i in input("Введите целые числа через пробел: ").split():
+            if i == "*":
+                print(result)
+                print("Остановка")
+                return
+            else:
+                result = result + int(i)
+        print(result)
+
+
+my_func()
