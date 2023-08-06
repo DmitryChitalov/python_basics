@@ -5,3 +5,18 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+
+
+def my_func(x, y):
+    result = x
+    if y == 0:
+        return 1
+    for i in range(-y - 1):
+        result = result * x
+    return 1 / result
+
+
+x = int(input("Введите число: "))
+power = int(input("Введите степень: "))
+print(my_func(x, power))
+
