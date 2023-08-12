@@ -6,3 +6,8 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+from sys import argv
+_, hours, salary, bonus = argv
+
+print(int(hours) * int(salary) + int(bonus))
