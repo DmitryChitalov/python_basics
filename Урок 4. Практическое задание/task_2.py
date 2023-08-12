@@ -7,3 +7,17 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+# С генераторным выражением
+my_list = [int(el) for el in input("Введите числа через пробел: ").split()]
+result_list = [my_list[i + 1] for i in range(len(my_list) - 1) if my_list[i + 1] > my_list[i]]
+print(result_list)
+
+# Без генераторного выражения
+input_text = input("Введите числа через пробел: ").split()
+new_result_list = []
+for el in input_text:
+    int(el)
+for i in range(len(input_text) - 1):
+    if input_text[i + 1] > input_text[i]: new_result_list.append(input_text[i + 1])
+print(result_list)
