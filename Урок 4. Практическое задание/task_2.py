@@ -7,3 +7,7 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+list_first = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+list_result = [k for i, j in enumerate(list_first) for k in list_first[i + 1:i + 2] if k > j]
+print(list_result)
