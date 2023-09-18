@@ -9,3 +9,14 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+
+
+secs = int(input("Введите общее время тренировки в секундах: "))
+minuts = secs // 60
+hours = minuts // 60
+secs = secs % 60
+minuts = minuts % minuts
+print(f"Время в формате ч:м:с - {hours} : {minuts} : {secs}")
+
+
+

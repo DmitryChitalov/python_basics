@@ -15,3 +15,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+
+my_list = [17, 'september', 1986, 2.5, ['12345'], (tuple('abcdefg')), (dict(key_1='cat', key_2='кошка')), True, None]
+for el in my_list:
+    print(type(el))  # Вывести тип данных каждого элемента из списка my_list
