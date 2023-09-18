@@ -15,3 +15,26 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+num_s = [7, 5, 6, 4, 3, 2]
+index = 0
+a = int(input("Ведите число:\n"))
+while index < 6:
+    if a > (num_s[index]):
+        num_s.insert(index, a)
+        print(num_s)
+        break
+    if a == (num_s[index]):
+        index = index + 1
+        num_s.insert(index, a)
+        print(num_s)
+        break
+    if a < (num_s[index]):
+        index = index + 1
+    continue
+
+if a == 1:
+    num_s.insert(index, a)
+    print(num_s)
+if a == 0:
+    num_s.insert(index, a)
+    print(num_s)
