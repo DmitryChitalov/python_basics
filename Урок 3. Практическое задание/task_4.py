@@ -5,3 +5,18 @@
 ВНИМАНИЕ: использование встроенной функции = задание не принято
 Постараться придумать свой алгоритм без **
 """
+def my_func(x, y):
+    """
+    Функция возведения числа x в степень y без использования встроенной функции
+    """
+    if y == 0:
+        return 1
+    result = 1
+    for i in range(abs(y)):
+        result *= x
+    if y < 0:
+        result = 1 / result
+    return result
+
+result = my_func(2, -3)
+print(result)  

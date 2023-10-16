@@ -8,3 +8,12 @@
 Иван Иванов 1846 года рождения, проживает в городе Москва,
 email: jackie@gmail.com, телефон: 01005321456
 """
+def print_user_info(first_name, last_name, birth_year, city, email, phone):
+    
+    print(f"{first_name} {last_name} {birth_year} года рождения, проживает в городе {city}, "
+          f"email: {email}, телефон: {phone}")
+
+
+# Пример использования функции:
+print_user_info(first_name="Иван", last_name="Иванов", birth_year=1846, city="Москва",
+                email="jackie@gmail.com", phone="01005321456")
