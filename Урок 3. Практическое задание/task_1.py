@@ -17,3 +17,15 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+def divisible_divisor_quotient():
+    int_1 = int(input("Введите делимое: ")) #запрашивает у пользователя 1-е число
+    int_2 = int(input("Введите делитель: ")) #запрашивает 2-е число - делитель
+    if int_2 == 0:
+        print("На 0 делить нельзя") #Если в качесвт делителея будет 0 будет сообщение "На 0 делить нельзя"
+    print(f'результат: {int_1 / int_2}') #Выводит результат - частное
+
+divisible_divisor_quotient()
+
+
+
