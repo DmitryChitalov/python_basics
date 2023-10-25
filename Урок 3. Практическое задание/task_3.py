@@ -5,3 +5,30 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+#1-й спослоб
+def my_func_1(numb_1, numb_2, numb_3): #функция принимает целые и натуральные числа
+    numbers = [numb_1, numb_2, numb_3]
+    numbers.sort() #сортировка списка по возростанию
+    print(f"Отсортированный список: \n {numbers}") #выводит отсортированый список
+    sum = numbers[1] + numbers[2] #сумирует два наибольших числа
+    print(f"Сумма двух наибольших чисел: \n {sum}") #вывыодит сумму двух наибольших чисел
+    return sum
+
+#2-ой способ
+def my_func_2(numb_1, numb_2, numb_3): #функция принимает целые и натуральные числа
+    numbers = [numb_1, numb_2, numb_3]
+
+    #сравниваем числа друг сдругом по очереди и находим
+    #два наибольших числа и сумируем их
+    if numb_1 > numb_2:
+        if numb_2 > numb_3:
+            sum = numb_1 + numb_2
+        else: sum = numb_1 + numb_3
+    elif numb_1 > numb_3:
+        sum = numb_1 + numb_2
+    else: sum = numb_2 + numb_3
+    return sum
+
+my_func_2(6, 12, 2)
+
+
