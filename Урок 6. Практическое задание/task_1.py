@@ -15,3 +15,21 @@
 
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
+
+
+from time import sleep
+class TrafficLight:
+    __color = ["красный", "жёлтый", "зеленый"]
+
+    def running(self):
+        for el in TrafficLight.__color:
+            print(el)
+            if el == "красный":
+                sleep(1)
+            elif el == "жёлтый":
+                sleep(2)
+            else:
+                sleep(1)
+
+sirius55 = TrafficLight()
+sirius55.running()
