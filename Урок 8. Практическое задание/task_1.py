@@ -12,3 +12,38 @@
 Второй, с декоратором @staticmethod, должен проводить валидацию числа, месяца
 и года (например, месяц — от 1 до 12). Проверить работу полученной структуры на реальных данных.
 """
+
+
+#создание класса
+class Date:
+
+    #Создание функции по преобразованию даты из типа данных str в int
+    @classmethod
+    def date_int(cls, day_month_year):
+        global day, month, year
+        day = int(day_month_year[0:2])
+        month = int(day_month_year[3:5])
+        year = int(day_month_year[6:])
+        date = day, month, year
+        return date
+
+    #СОздание функции по валидации даты. Числа не должны быть больше 31, месяца не должны быть больше 12, года не должны быть больше 2500
+    @staticmethod
+    def valid_date():
+        if day > 31:
+            print("Дата не корректная")
+        elif month > 12:
+            print("Дата не корректная")
+        elif year > 2500:
+            print("Дата не корректная")
+        else:
+            print("Дата корректная")
+
+#Проверка работы класса и его методов без создания экземпляра класса
+print(Date.date_int("17-09-1986"))
+Date.valid_date()
+
+#Проверка работы класса и его методов при создании экземпляра класса
+may_date = Date()
+print(may_date.date_int("01-01-2501"))
+may_date.valid_date()
